@@ -9,13 +9,12 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Validation\ValidationException;
-use Inertia\Inertia;
 
 class AuthController extends Controller
 {
   public function showLogin()
   {
-    return Inertia::render('login');
+    return view('login');
   }
 
   public function login()
@@ -38,7 +37,7 @@ class AuthController extends Controller
 
   public function showForgotPassword()
   {
-    return Inertia::render('forgot-password');
+    return view('forgot-password');
   }
 
   public function forgotPassword()
@@ -56,7 +55,7 @@ class AuthController extends Controller
 
   public function showResetPassword(string $token)
   {
-    return Inertia::render('reset-password', [
+    return view('reset-password', [
       'email' => request()->email,
       'token' => $token
     ]);
