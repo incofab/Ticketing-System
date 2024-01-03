@@ -21,6 +21,7 @@ return new class extends Migration {
       $table->text('description')->nullable();
       $table->text('features')->nullable();
       $table->string('status')->default(SeatStatus::Available);
+      $table->softDeletes();
       $table->timestamps();
 
       $table

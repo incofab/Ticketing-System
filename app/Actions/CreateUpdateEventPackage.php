@@ -15,7 +15,7 @@ class CreateUpdateEventPackage
     $createdPackages = [];
     foreach ($eventPackagesData as $key => $eventPackage) {
       $createdPackages[] = $event
-        ->eventPrices()
+        ->eventPackages()
         ->updateOrCreate(
           ['seat_section_id' => $eventPackage['seat_section_id']],
           $eventPackage

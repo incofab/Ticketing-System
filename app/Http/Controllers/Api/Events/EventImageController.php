@@ -19,7 +19,11 @@ class EventImageController extends Controller
       'image' => ['required', 'file'],
       'reference' => ['required', 'string', 'unique:event_images,reference']
     ]);
-    $eventImage = EventImage::query()->create([...$data, 'image' => null]);
+    $eventImage = EventImage::query()->create([
+      ...$data,
+      'user_id' => currentUser()?->id,
+      'image' => null
+    ]);
     $imagePath = $request->image->store(
       "event_{$data['event_id']}",
       's3_public'

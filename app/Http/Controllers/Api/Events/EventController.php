@@ -39,14 +39,14 @@ class EventController extends Controller
         'required',
         'string',
         'max:255',
-        Rule::unique('eventz', 'title')->where(
+        Rule::unique('events', 'title')->where(
           'event_season_id',
           $eventSeason->id
         )
       ],
       'description' => ['nullable', 'string'],
       'start_time' => ['sometimes', 'required', 'date'],
-      'end_time' => ['sometimes', 'date', 'gt:start_time'],
+      'end_time' => ['sometimes', 'date', 'after:start_time'],
       'home_team' => ['nullable', 'string'],
       'away_team' => ['nullable', 'string'],
       'event_packages' => ['nullable', 'array', 'min:1'],
@@ -57,7 +57,7 @@ class EventController extends Controller
       'event_packages.*.price' => ['required', 'numeric']
     ]);
 
-    $event = $eventSeason->eventSeasons()->create(
+    $event = $eventSeason->events()->create(
       collect($data)
         ->except('event_packages')
         ->toArray()
@@ -73,13 +73,13 @@ class EventController extends Controller
         'required',
         'string',
         'max:255',
-        Rule::unique('eventz', 'title')
+        Rule::unique('events', 'title')
           ->where('event_season_id', $event->event_season_id)
           ->ignore($event->id, 'id')
       ],
       'description' => ['nullable', 'string'],
       'start_time' => ['sometimes', 'required', 'date'],
-      'end_time' => ['sometimes', 'date', 'gt:start_time'],
+      'end_time' => ['sometimes', 'date', 'after:start_time'],
       'home_team' => ['nullable', 'string'],
       'away_team' => ['nullable', 'string']
     ]);

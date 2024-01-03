@@ -23,6 +23,7 @@ return new class extends Migration {
       $table->string('home_team')->nullable(true);
       $table->string('away_team')->nullable(true);
 
+      $table->softDeletes();
       $table->timestamps();
 
       $table

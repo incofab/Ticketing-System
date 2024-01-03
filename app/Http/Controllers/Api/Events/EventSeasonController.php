@@ -46,7 +46,7 @@ class EventSeasonController extends Controller
       ],
       'description' => ['nullable', 'string'],
       'date_from' => ['sometimes', 'required_with:date_to', 'date'],
-      'date_to' => ['sometimes', 'date', 'gt:date_from']
+      'date_to' => ['sometimes', 'date', 'after:date_from']
     ]);
 
     $eventSeason = $eventCategory->eventSeasons()->create($data);
@@ -67,7 +67,7 @@ class EventSeasonController extends Controller
       ],
       'description' => ['nullable', 'string'],
       'date_from' => ['sometimes', 'required_with:date_to', 'date'],
-      'date_to' => ['sometimes', 'date', 'gt:date_from']
+      'date_to' => ['sometimes', 'date', 'after:date_from']
     ]);
 
     $eventSeason->fill($data)->save();

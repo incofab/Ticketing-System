@@ -19,6 +19,7 @@ return new class extends Migration {
       $table->unsignedBigInteger('seat_section_id');
       $table->float('price', 10, 2);
       $table->unsignedInteger('quantity_sold')->default(0);
+      $table->softDeletes();
       $table->timestamps();
 
       $table

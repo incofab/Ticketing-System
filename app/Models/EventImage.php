@@ -11,7 +11,8 @@ class EventImage extends Model
 
   protected $guarded = [];
   protected $casts = [
-    'event_id' => 'integer'
+    'event_id' => 'integer',
+    'user_id' => 'integer'
   ];
 
   function event()
