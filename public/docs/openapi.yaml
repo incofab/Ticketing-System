@@ -1,0 +1,1694 @@
+openapi: 3.0.3
+info:
+  title: 'Rangers Ticketing System'
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/login:
+    post:
+      summary: ''
+      operationId: postApiLogin
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                phone:
+                  type: string
+                  description: ''
+                  example: quis
+                password:
+                  type: string
+                  description: ''
+                  example: 'ISNJQ=h"''}}aSE'
+              required:
+                - phone
+                - password
+      security: []
+  /api/register:
+    post:
+      summary: ''
+      operationId: postApiRegister
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Authentication
+      security: []
+  /api/logout:
+    get:
+      summary: ''
+      operationId: getApiLogout
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Authentication
+      security: []
+  /api/event-image/store:
+    post:
+      summary: ''
+      operationId: postApiEventImageStore
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Event Images'
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                event_id:
+                  type: string
+                  description: ''
+                  example: laudantium
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be a file.'
+                reference:
+                  type: string
+                  description: ''
+                  example: laborum
+              required:
+                - event_id
+                - image
+                - reference
+      security: []
+  '/api/event-image/{eventImage_id}/destroy':
+    post:
+      summary: ''
+      operationId: postApiEventImageEventImage_idDestroy
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Event Images'
+      security: []
+    parameters:
+      -
+        in: path
+        name: eventImage_id
+        description: 'The ID of the eventImage.'
+        example: 14
+        required: true
+        schema:
+          type: integer
+  /api/event-packages/index:
+    get:
+      summary: ''
+      operationId: getApiEventPackagesIndex
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: ''
+                  data:
+                    current_page: 1
+                    data:
+                      -
+                        id: 1
+                        event_id: 1
+                        seat_section_id: 1
+                        price: 8706.4
+                        quantity_sold: 0
+                        created_at: '2024-01-03T12:32:25.000000Z'
+                        updated_at: '2024-01-03T12:32:25.000000Z'
+                      -
+                        id: 2
+                        event_id: 2
+                        seat_section_id: 2
+                        price: 8009.2
+                        quantity_sold: 0
+                        created_at: '2024-01-03T12:32:25.000000Z'
+                        updated_at: '2024-01-03T12:32:25.000000Z'
+                      -
+                        id: 3
+                        event_id: 3
+                        seat_section_id: 3
+                        price: 4855.3
+                        quantity_sold: 0
+                        created_at: '2024-01-03T12:32:25.000000Z'
+                        updated_at: '2024-01-03T12:32:25.000000Z'
+                      -
+                        id: 4
+                        event_id: 4
+                        seat_section_id: 5
+                        price: 7031.9
+                        quantity_sold: 0
+                        created_at: '2024-01-03T12:32:25.000000Z'
+                        updated_at: '2024-01-03T12:32:25.000000Z'
+                      -
+                        id: 5
+                        event_id: 5
+                        seat_section_id: 6
+                        price: 7712
+                        quantity_sold: 0
+                        created_at: '2024-01-03T12:32:25.000000Z'
+                        updated_at: '2024-01-03T12:32:25.000000Z'
+                      -
+                        id: 6
+                        event_id: 6
+                        seat_section_id: 7
+                        price: 5415.7
+                        quantity_sold: 0
+                        created_at: '2024-01-03T12:32:25.000000Z'
+                        updated_at: '2024-01-03T12:32:25.000000Z'
+                      -
+                        id: 7
+                        event_id: 7
+                        seat_section_id: 9
+                        price: 2010.4
+                        quantity_sold: 0
+                        created_at: '2024-01-03T12:32:25.000000Z'
+                        updated_at: '2024-01-03T12:32:25.000000Z'
+                      -
+                        id: 8
+                        event_id: 8
+                        seat_section_id: 10
+                        price: 1153
+                        quantity_sold: 0
+                        created_at: '2024-01-03T12:32:25.000000Z'
+                        updated_at: '2024-01-03T12:32:25.000000Z'
+                      -
+                        id: 9
+                        event_id: 9
+                        seat_section_id: 11
+                        price: 2885.1
+                        quantity_sold: 0
+                        created_at: '2024-01-03T12:32:25.000000Z'
+                        updated_at: '2024-01-03T12:32:25.000000Z'
+                      -
+                        id: 10
+                        event_id: 10
+                        seat_section_id: 13
+                        price: 8893
+                        quantity_sold: 0
+                        created_at: '2024-01-03T12:32:25.000000Z'
+                        updated_at: '2024-01-03T12:32:25.000000Z'
+                      -
+                        id: 11
+                        event_id: 11
+                        seat_section_id: 14
+                        price: 8946.9
+                        quantity_sold: 0
+                        created_at: '2024-01-03T12:32:25.000000Z'
+                        updated_at: '2024-01-03T12:32:25.000000Z'
+                      -
+                        id: 12
+                        event_id: 12
+                        seat_section_id: 15
+                        price: 4512.1
+                        quantity_sold: 0
+                        created_at: '2024-01-03T12:32:25.000000Z'
+                        updated_at: '2024-01-03T12:32:25.000000Z'
+                      -
+                        id: 13
+                        event_id: 13
+                        seat_section_id: 17
+                        price: 1374.3
+                        quantity_sold: 0
+                        created_at: '2024-01-03T12:32:25.000000Z'
+                        updated_at: '2024-01-03T12:32:25.000000Z'
+                      -
+                        id: 14
+                        event_id: 14
+                        seat_section_id: 18
+                        price: 7857.7
+                        quantity_sold: 0
+                        created_at: '2024-01-03T12:32:25.000000Z'
+                        updated_at: '2024-01-03T12:32:25.000000Z'
+                      -
+                        id: 15
+                        event_id: 15
+                        seat_section_id: 19
+                        price: 3324.2
+                        quantity_sold: 0
+                        created_at: '2024-01-03T12:32:25.000000Z'
+                        updated_at: '2024-01-03T12:32:25.000000Z'
+                    first_page_url: 'http://localhost/api/event-packages/index?page=1'
+                    from: 1
+                    last_page: 1
+                    last_page_url: 'http://localhost/api/event-packages/index?page=1'
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost/api/event-packages/index?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    next_page_url: null
+                    path: 'http://localhost/api/event-packages/index'
+                    per_page: 100
+                    prev_page_url: null
+                    to: 15
+                    total: 15
+                properties:
+                  message:
+                    type: string
+                    example: ''
+                  data:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      data:
+                        type: array
+                        example:
+                          -
+                            id: 1
+                            event_id: 1
+                            seat_section_id: 1
+                            price: 8706.4
+                            quantity_sold: 0
+                            created_at: '2024-01-03T12:32:25.000000Z'
+                            updated_at: '2024-01-03T12:32:25.000000Z'
+                          -
+                            id: 2
+                            event_id: 2
+                            seat_section_id: 2
+                            price: 8009.2
+                            quantity_sold: 0
+                            created_at: '2024-01-03T12:32:25.000000Z'
+                            updated_at: '2024-01-03T12:32:25.000000Z'
+                          -
+                            id: 3
+                            event_id: 3
+                            seat_section_id: 3
+                            price: 4855.3
+                            quantity_sold: 0
+                            created_at: '2024-01-03T12:32:25.000000Z'
+                            updated_at: '2024-01-03T12:32:25.000000Z'
+                          -
+                            id: 4
+                            event_id: 4
+                            seat_section_id: 5
+                            price: 7031.9
+                            quantity_sold: 0
+                            created_at: '2024-01-03T12:32:25.000000Z'
+                            updated_at: '2024-01-03T12:32:25.000000Z'
+                          -
+                            id: 5
+                            event_id: 5
+                            seat_section_id: 6
+                            price: 7712
+                            quantity_sold: 0
+                            created_at: '2024-01-03T12:32:25.000000Z'
+                            updated_at: '2024-01-03T12:32:25.000000Z'
+                          -
+                            id: 6
+                            event_id: 6
+                            seat_section_id: 7
+                            price: 5415.7
+                            quantity_sold: 0
+                            created_at: '2024-01-03T12:32:25.000000Z'
+                            updated_at: '2024-01-03T12:32:25.000000Z'
+                          -
+                            id: 7
+                            event_id: 7
+                            seat_section_id: 9
+                            price: 2010.4
+                            quantity_sold: 0
+                            created_at: '2024-01-03T12:32:25.000000Z'
+                            updated_at: '2024-01-03T12:32:25.000000Z'
+                          -
+                            id: 8
+                            event_id: 8
+                            seat_section_id: 10
+                            price: 1153
+                            quantity_sold: 0
+                            created_at: '2024-01-03T12:32:25.000000Z'
+                            updated_at: '2024-01-03T12:32:25.000000Z'
+                          -
+                            id: 9
+                            event_id: 9
+                            seat_section_id: 11
+                            price: 2885.1
+                            quantity_sold: 0
+                            created_at: '2024-01-03T12:32:25.000000Z'
+                            updated_at: '2024-01-03T12:32:25.000000Z'
+                          -
+                            id: 10
+                            event_id: 10
+                            seat_section_id: 13
+                            price: 8893
+                            quantity_sold: 0
+                            created_at: '2024-01-03T12:32:25.000000Z'
+                            updated_at: '2024-01-03T12:32:25.000000Z'
+                          -
+                            id: 11
+                            event_id: 11
+                            seat_section_id: 14
+                            price: 8946.9
+                            quantity_sold: 0
+                            created_at: '2024-01-03T12:32:25.000000Z'
+                            updated_at: '2024-01-03T12:32:25.000000Z'
+                          -
+                            id: 12
+                            event_id: 12
+                            seat_section_id: 15
+                            price: 4512.1
+                            quantity_sold: 0
+                            created_at: '2024-01-03T12:32:25.000000Z'
+                            updated_at: '2024-01-03T12:32:25.000000Z'
+                          -
+                            id: 13
+                            event_id: 13
+                            seat_section_id: 17
+                            price: 1374.3
+                            quantity_sold: 0
+                            created_at: '2024-01-03T12:32:25.000000Z'
+                            updated_at: '2024-01-03T12:32:25.000000Z'
+                          -
+                            id: 14
+                            event_id: 14
+                            seat_section_id: 18
+                            price: 7857.7
+                            quantity_sold: 0
+                            created_at: '2024-01-03T12:32:25.000000Z'
+                            updated_at: '2024-01-03T12:32:25.000000Z'
+                          -
+                            id: 15
+                            event_id: 15
+                            seat_section_id: 19
+                            price: 3324.2
+                            quantity_sold: 0
+                            created_at: '2024-01-03T12:32:25.000000Z'
+                            updated_at: '2024-01-03T12:32:25.000000Z'
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 1
+                            event_id:
+                              type: integer
+                              example: 1
+                            seat_section_id:
+                              type: integer
+                              example: 1
+                            price:
+                              type: number
+                              example: 8706.4
+                            quantity_sold:
+                              type: integer
+                              example: 0
+                            created_at:
+                              type: string
+                              example: '2024-01-03T12:32:25.000000Z'
+                            updated_at:
+                              type: string
+                              example: '2024-01-03T12:32:25.000000Z'
+                      first_page_url:
+                        type: string
+                        example: 'http://localhost/api/event-packages/index?page=1'
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 1
+                      last_page_url:
+                        type: string
+                        example: 'http://localhost/api/event-packages/index?page=1'
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://localhost/api/event-packages/index?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      next_page_url:
+                        type: string
+                        example: null
+                      path:
+                        type: string
+                        example: 'http://localhost/api/event-packages/index'
+                      per_page:
+                        type: integer
+                        example: 100
+                      prev_page_url:
+                        type: string
+                        example: null
+                      to:
+                        type: integer
+                        example: 15
+                      total:
+                        type: integer
+                        example: 15
+      tags:
+        - 'Event Packages'
+      security: []
+  '/api/event-packages/events/{event_id}/store':
+    post:
+      summary: ''
+      operationId: postApiEventPackagesEventsEvent_idStore
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Event Packages'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                seat_section_id:
+                  type: string
+                  description: ''
+                  example: est
+                price:
+                  type: number
+                  description: ''
+                  example: 36185.563973426
+              required:
+                - seat_section_id
+                - price
+      security: []
+    parameters:
+      -
+        in: path
+        name: event_id
+        description: 'The ID of the event.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/event-packages/{eventPackage_id}/destroy':
+    post:
+      summary: ''
+      operationId: postApiEventPackagesEventPackage_idDestroy
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Event Packages'
+      security: []
+    parameters:
+      -
+        in: path
+        name: eventPackage_id
+        description: 'The ID of the eventPackage.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/event-seasons/index/{eventCategory}':
+    get:
+      summary: ''
+      operationId: getApiEventSeasonsIndexEventCategory
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: ''
+                  data:
+                    current_page: 1
+                    data:
+                      -
+                        id: 1
+                        event_category_id: 1
+                        title: 'Adipisci quod esse est est molestiae iure magni.'
+                        description: 'Eum incidunt sapiente beatae qui magni rerum eaque quia magnam.'
+                        date_from: '2024-02-03T12:32:25.000000Z'
+                        date_to: '2024-05-03T12:32:25.000000Z'
+                        status: null
+                        created_at: '2024-01-03T12:32:25.000000Z'
+                        updated_at: '2024-01-03T12:32:25.000000Z'
+                    first_page_url: 'http://localhost/api/event-seasons/index/1?page=1'
+                    from: 1
+                    last_page: 1
+                    last_page_url: 'http://localhost/api/event-seasons/index/1?page=1'
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost/api/event-seasons/index/1?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    next_page_url: null
+                    path: 'http://localhost/api/event-seasons/index/1'
+                    per_page: 100
+                    prev_page_url: null
+                    to: 1
+                    total: 1
+                properties:
+                  message:
+                    type: string
+                    example: ''
+                  data:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      data:
+                        type: array
+                        example:
+                          -
+                            id: 1
+                            event_category_id: 1
+                            title: 'Adipisci quod esse est est molestiae iure magni.'
+                            description: 'Eum incidunt sapiente beatae qui magni rerum eaque quia magnam.'
+                            date_from: '2024-02-03T12:32:25.000000Z'
+                            date_to: '2024-05-03T12:32:25.000000Z'
+                            status: null
+                            created_at: '2024-01-03T12:32:25.000000Z'
+                            updated_at: '2024-01-03T12:32:25.000000Z'
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 1
+                            event_category_id:
+                              type: integer
+                              example: 1
+                            title:
+                              type: string
+                              example: 'Adipisci quod esse est est molestiae iure magni.'
+                            description:
+                              type: string
+                              example: 'Eum incidunt sapiente beatae qui magni rerum eaque quia magnam.'
+                            date_from:
+                              type: string
+                              example: '2024-02-03T12:32:25.000000Z'
+                            date_to:
+                              type: string
+                              example: '2024-05-03T12:32:25.000000Z'
+                            status:
+                              type: string
+                              example: null
+                            created_at:
+                              type: string
+                              example: '2024-01-03T12:32:25.000000Z'
+                            updated_at:
+                              type: string
+                              example: '2024-01-03T12:32:25.000000Z'
+                      first_page_url:
+                        type: string
+                        example: 'http://localhost/api/event-seasons/index/1?page=1'
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 1
+                      last_page_url:
+                        type: string
+                        example: 'http://localhost/api/event-seasons/index/1?page=1'
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://localhost/api/event-seasons/index/1?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      next_page_url:
+                        type: string
+                        example: null
+                      path:
+                        type: string
+                        example: 'http://localhost/api/event-seasons/index/1'
+                      per_page:
+                        type: integer
+                        example: 100
+                      prev_page_url:
+                        type: string
+                        example: null
+                      to:
+                        type: integer
+                        example: 1
+                      total:
+                        type: integer
+                        example: 1
+      tags:
+        - 'Event Seasons'
+      security: []
+    parameters:
+      -
+        in: path
+        name: eventCategory
+        description: 'Optional parameter.'
+        required: true
+        schema:
+          type: integer
+        examples:
+          omitted:
+            summary: 'When the value is omitted'
+            value: ''
+          present:
+            summary: 'When the value is present'
+            value: 1
+  '/api/event-seasons/upcoming/{eventCategory}':
+    get:
+      summary: ''
+      operationId: getApiEventSeasonsUpcomingEventCategory
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: ''
+                  data:
+                    current_page: 1
+                    data:
+                      -
+                        id: 1
+                        event_category_id: 1
+                        title: 'Adipisci quod esse est est molestiae iure magni.'
+                        description: 'Eum incidunt sapiente beatae qui magni rerum eaque quia magnam.'
+                        date_from: '2024-02-03T12:32:25.000000Z'
+                        date_to: '2024-05-03T12:32:25.000000Z'
+                        status: null
+                        created_at: '2024-01-03T12:32:25.000000Z'
+                        updated_at: '2024-01-03T12:32:25.000000Z'
+                    first_page_url: 'http://localhost/api/event-seasons/upcoming/1?page=1'
+                    from: 1
+                    last_page: 1
+                    last_page_url: 'http://localhost/api/event-seasons/upcoming/1?page=1'
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost/api/event-seasons/upcoming/1?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    next_page_url: null
+                    path: 'http://localhost/api/event-seasons/upcoming/1'
+                    per_page: 100
+                    prev_page_url: null
+                    to: 1
+                    total: 1
+                properties:
+                  message:
+                    type: string
+                    example: ''
+                  data:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      data:
+                        type: array
+                        example:
+                          -
+                            id: 1
+                            event_category_id: 1
+                            title: 'Adipisci quod esse est est molestiae iure magni.'
+                            description: 'Eum incidunt sapiente beatae qui magni rerum eaque quia magnam.'
+                            date_from: '2024-02-03T12:32:25.000000Z'
+                            date_to: '2024-05-03T12:32:25.000000Z'
+                            status: null
+                            created_at: '2024-01-03T12:32:25.000000Z'
+                            updated_at: '2024-01-03T12:32:25.000000Z'
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 1
+                            event_category_id:
+                              type: integer
+                              example: 1
+                            title:
+                              type: string
+                              example: 'Adipisci quod esse est est molestiae iure magni.'
+                            description:
+                              type: string
+                              example: 'Eum incidunt sapiente beatae qui magni rerum eaque quia magnam.'
+                            date_from:
+                              type: string
+                              example: '2024-02-03T12:32:25.000000Z'
+                            date_to:
+                              type: string
+                              example: '2024-05-03T12:32:25.000000Z'
+                            status:
+                              type: string
+                              example: null
+                            created_at:
+                              type: string
+                              example: '2024-01-03T12:32:25.000000Z'
+                            updated_at:
+                              type: string
+                              example: '2024-01-03T12:32:25.000000Z'
+                      first_page_url:
+                        type: string
+                        example: 'http://localhost/api/event-seasons/upcoming/1?page=1'
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 1
+                      last_page_url:
+                        type: string
+                        example: 'http://localhost/api/event-seasons/upcoming/1?page=1'
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://localhost/api/event-seasons/upcoming/1?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      next_page_url:
+                        type: string
+                        example: null
+                      path:
+                        type: string
+                        example: 'http://localhost/api/event-seasons/upcoming/1'
+                      per_page:
+                        type: integer
+                        example: 100
+                      prev_page_url:
+                        type: string
+                        example: null
+                      to:
+                        type: integer
+                        example: 1
+                      total:
+                        type: integer
+                        example: 1
+      tags:
+        - 'Event Seasons'
+      security: []
+    parameters:
+      -
+        in: path
+        name: eventCategory
+        description: 'Optional parameter.'
+        required: true
+        schema:
+          type: integer
+        examples:
+          omitted:
+            summary: 'When the value is omitted'
+            value: ''
+          present:
+            summary: 'When the value is present'
+            value: 1
+  '/api/event-seasons/event-category/{eventCategory_id}/store':
+    post:
+      summary: ''
+      operationId: postApiEventSeasonsEventCategoryEventCategory_idStore
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Event Seasons'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: iu
+                description:
+                  type: string
+                  description: ''
+                  example: 'At ducimus cumque dolorem velit.'
+                date_from:
+                  type: string
+                  description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
+                  example: '2024-01-03T13:41:01'
+                date_to:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2024-01-03T13:41:01'
+              required:
+                - title
+      security: []
+    parameters:
+      -
+        in: path
+        name: eventCategory_id
+        description: 'The ID of the eventCategory.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/event-seasons/{eventSeason_id}/update':
+    post:
+      summary: ''
+      operationId: postApiEventSeasonsEventSeason_idUpdate
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Event Seasons'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: hhbesdrfhfe
+                description:
+                  type: string
+                  description: ''
+                  example: 'Optio fugiat quis provident et saepe.'
+                date_from:
+                  type: string
+                  description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
+                  example: '2024-01-03T13:41:01'
+                date_to:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2024-01-03T13:41:01'
+              required:
+                - title
+      security: []
+    parameters:
+      -
+        in: path
+        name: eventSeason_id
+        description: 'The ID of the eventSeason.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/event-seasons/{eventSeason_id}/destroy':
+    post:
+      summary: ''
+      operationId: postApiEventSeasonsEventSeason_idDestroy
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Event Seasons'
+      security: []
+    parameters:
+      -
+        in: path
+        name: eventSeason_id
+        description: 'The ID of the eventSeason.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/events/index/{eventSeason}':
+    get:
+      summary: ''
+      operationId: getApiEventsIndexEventSeason
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: ''
+                  data:
+                    current_page: 1
+                    data:
+                      -
+                        id: 1
+                        event_season_id: 1
+                        title: 'Porro recusandae nisi qui pariatur iste voluptas doloribus doloremque.'
+                        description: 'Debitis et asperiores ab eos omnis temporibus ea aut doloribus consequatur molestiae rerum iure.'
+                        start_time: '2024-03-03T12:32:25.000000Z'
+                        end_time: '2024-04-03T12:32:25.000000Z'
+                        home_team: labore
+                        away_team: autem
+                        created_at: '2024-01-03T12:32:25.000000Z'
+                        updated_at: '2024-01-03T12:32:25.000000Z'
+                        event_images: []
+                        event_packages:
+                          -
+                            id: 1
+                            event_id: 1
+                            seat_section_id: 1
+                            price: 8706.4
+                            quantity_sold: 0
+                            created_at: '2024-01-03T12:32:25.000000Z'
+                            updated_at: '2024-01-03T12:32:25.000000Z'
+                    first_page_url: 'http://localhost/api/events/index/1?page=1'
+                    from: 1
+                    last_page: 1
+                    last_page_url: 'http://localhost/api/events/index/1?page=1'
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost/api/events/index/1?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    next_page_url: null
+                    path: 'http://localhost/api/events/index/1'
+                    per_page: 100
+                    prev_page_url: null
+                    to: 1
+                    total: 1
+                properties:
+                  message:
+                    type: string
+                    example: ''
+                  data:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      data:
+                        type: array
+                        example:
+                          -
+                            id: 1
+                            event_season_id: 1
+                            title: 'Porro recusandae nisi qui pariatur iste voluptas doloribus doloremque.'
+                            description: 'Debitis et asperiores ab eos omnis temporibus ea aut doloribus consequatur molestiae rerum iure.'
+                            start_time: '2024-03-03T12:32:25.000000Z'
+                            end_time: '2024-04-03T12:32:25.000000Z'
+                            home_team: labore
+                            away_team: autem
+                            created_at: '2024-01-03T12:32:25.000000Z'
+                            updated_at: '2024-01-03T12:32:25.000000Z'
+                            event_images: []
+                            event_packages:
+                              -
+                                id: 1
+                                event_id: 1
+                                seat_section_id: 1
+                                price: 8706.4
+                                quantity_sold: 0
+                                created_at: '2024-01-03T12:32:25.000000Z'
+                                updated_at: '2024-01-03T12:32:25.000000Z'
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 1
+                            event_season_id:
+                              type: integer
+                              example: 1
+                            title:
+                              type: string
+                              example: 'Porro recusandae nisi qui pariatur iste voluptas doloribus doloremque.'
+                            description:
+                              type: string
+                              example: 'Debitis et asperiores ab eos omnis temporibus ea aut doloribus consequatur molestiae rerum iure.'
+                            start_time:
+                              type: string
+                              example: '2024-03-03T12:32:25.000000Z'
+                            end_time:
+                              type: string
+                              example: '2024-04-03T12:32:25.000000Z'
+                            home_team:
+                              type: string
+                              example: labore
+                            away_team:
+                              type: string
+                              example: autem
+                            created_at:
+                              type: string
+                              example: '2024-01-03T12:32:25.000000Z'
+                            updated_at:
+                              type: string
+                              example: '2024-01-03T12:32:25.000000Z'
+                            event_images:
+                              type: array
+                              example: []
+                            event_packages:
+                              type: array
+                              example:
+                                -
+                                  id: 1
+                                  event_id: 1
+                                  seat_section_id: 1
+                                  price: 8706.4
+                                  quantity_sold: 0
+                                  created_at: '2024-01-03T12:32:25.000000Z'
+                                  updated_at: '2024-01-03T12:32:25.000000Z'
+                              items:
+                                type: object
+                                properties:
+                                  id:
+                                    type: integer
+                                    example: 1
+                                  event_id:
+                                    type: integer
+                                    example: 1
+                                  seat_section_id:
+                                    type: integer
+                                    example: 1
+                                  price:
+                                    type: number
+                                    example: 8706.4
+                                  quantity_sold:
+                                    type: integer
+                                    example: 0
+                                  created_at:
+                                    type: string
+                                    example: '2024-01-03T12:32:25.000000Z'
+                                  updated_at:
+                                    type: string
+                                    example: '2024-01-03T12:32:25.000000Z'
+                      first_page_url:
+                        type: string
+                        example: 'http://localhost/api/events/index/1?page=1'
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 1
+                      last_page_url:
+                        type: string
+                        example: 'http://localhost/api/events/index/1?page=1'
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://localhost/api/events/index/1?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      next_page_url:
+                        type: string
+                        example: null
+                      path:
+                        type: string
+                        example: 'http://localhost/api/events/index/1'
+                      per_page:
+                        type: integer
+                        example: 100
+                      prev_page_url:
+                        type: string
+                        example: null
+                      to:
+                        type: integer
+                        example: 1
+                      total:
+                        type: integer
+                        example: 1
+      tags:
+        - Events
+      security: []
+    parameters:
+      -
+        in: path
+        name: eventSeason
+        description: 'Optional parameter.'
+        required: true
+        schema:
+          type: integer
+        examples:
+          omitted:
+            summary: 'When the value is omitted'
+            value: ''
+          present:
+            summary: 'When the value is present'
+            value: 1
+  '/api/events/upcoming/{eventSeason}':
+    get:
+      summary: ''
+      operationId: getApiEventsUpcomingEventSeason
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: ''
+                  data:
+                    current_page: 1
+                    data:
+                      -
+                        id: 1
+                        event_season_id: 1
+                        title: 'Porro recusandae nisi qui pariatur iste voluptas doloribus doloremque.'
+                        description: 'Debitis et asperiores ab eos omnis temporibus ea aut doloribus consequatur molestiae rerum iure.'
+                        start_time: '2024-03-03T12:32:25.000000Z'
+                        end_time: '2024-04-03T12:32:25.000000Z'
+                        home_team: labore
+                        away_team: autem
+                        created_at: '2024-01-03T12:32:25.000000Z'
+                        updated_at: '2024-01-03T12:32:25.000000Z'
+                    first_page_url: 'http://localhost/api/events/upcoming/1?page=1'
+                    from: 1
+                    last_page: 1
+                    last_page_url: 'http://localhost/api/events/upcoming/1?page=1'
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost/api/events/upcoming/1?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    next_page_url: null
+                    path: 'http://localhost/api/events/upcoming/1'
+                    per_page: 100
+                    prev_page_url: null
+                    to: 1
+                    total: 1
+                properties:
+                  message:
+                    type: string
+                    example: ''
+                  data:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      data:
+                        type: array
+                        example:
+                          -
+                            id: 1
+                            event_season_id: 1
+                            title: 'Porro recusandae nisi qui pariatur iste voluptas doloribus doloremque.'
+                            description: 'Debitis et asperiores ab eos omnis temporibus ea aut doloribus consequatur molestiae rerum iure.'
+                            start_time: '2024-03-03T12:32:25.000000Z'
+                            end_time: '2024-04-03T12:32:25.000000Z'
+                            home_team: labore
+                            away_team: autem
+                            created_at: '2024-01-03T12:32:25.000000Z'
+                            updated_at: '2024-01-03T12:32:25.000000Z'
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 1
+                            event_season_id:
+                              type: integer
+                              example: 1
+                            title:
+                              type: string
+                              example: 'Porro recusandae nisi qui pariatur iste voluptas doloribus doloremque.'
+                            description:
+                              type: string
+                              example: 'Debitis et asperiores ab eos omnis temporibus ea aut doloribus consequatur molestiae rerum iure.'
+                            start_time:
+                              type: string
+                              example: '2024-03-03T12:32:25.000000Z'
+                            end_time:
+                              type: string
+                              example: '2024-04-03T12:32:25.000000Z'
+                            home_team:
+                              type: string
+                              example: labore
+                            away_team:
+                              type: string
+                              example: autem
+                            created_at:
+                              type: string
+                              example: '2024-01-03T12:32:25.000000Z'
+                            updated_at:
+                              type: string
+                              example: '2024-01-03T12:32:25.000000Z'
+                      first_page_url:
+                        type: string
+                        example: 'http://localhost/api/events/upcoming/1?page=1'
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 1
+                      last_page_url:
+                        type: string
+                        example: 'http://localhost/api/events/upcoming/1?page=1'
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://localhost/api/events/upcoming/1?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      next_page_url:
+                        type: string
+                        example: null
+                      path:
+                        type: string
+                        example: 'http://localhost/api/events/upcoming/1'
+                      per_page:
+                        type: integer
+                        example: 100
+                      prev_page_url:
+                        type: string
+                        example: null
+                      to:
+                        type: integer
+                        example: 1
+                      total:
+                        type: integer
+                        example: 1
+      tags:
+        - Events
+      security: []
+    parameters:
+      -
+        in: path
+        name: eventSeason
+        description: 'Optional parameter.'
+        required: true
+        schema:
+          type: integer
+        examples:
+          omitted:
+            summary: 'When the value is omitted'
+            value: ''
+          present:
+            summary: 'When the value is present'
+            value: 1
+  '/api/events/event-seasons/{eventSeason_id}/store':
+    post:
+      summary: ''
+      operationId: postApiEventsEventSeasonsEventSeason_idStore
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Events
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: jpnpzebzwetpchm
+                description:
+                  type: string
+                  description: ''
+                  example: 'Repellat eum nemo dolor recusandae.'
+                start_time:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2024-01-03T13:41:01'
+                end_time:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2024-01-03T13:41:01'
+                home_team:
+                  type: string
+                  description: ''
+                  example: cumque
+                away_team:
+                  type: string
+                  description: ''
+                  example: dolorem
+                event_packages:
+                  type: array
+                  description: 'Must have at least 1 items.'
+                  example: lyllnwcqhfeelaqndxilmjcpwwvmpwoynobaptbwdbfzvzamfiintacplmihnx
+                  items:
+                    type: string
+              required:
+                - title
+                - start_time
+      security: []
+    parameters:
+      -
+        in: path
+        name: eventSeason_id
+        description: 'The ID of the eventSeason.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/events/{id}/update':
+    post:
+      summary: ''
+      operationId: postApiEventsIdUpdate
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Events
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: erhrcjmriytmtwxlkkgz
+                description:
+                  type: string
+                  description: ''
+                  example: 'Voluptatibus aliquam sint cum quis exercitationem tempora.'
+                start_time:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2024-01-03T13:41:01'
+                end_time:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2024-01-03T13:41:01'
+                home_team:
+                  type: string
+                  description: ''
+                  example: ex
+                away_team:
+                  type: string
+                  description: ''
+                  example: commodi
+              required:
+                - title
+                - start_time
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the event.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/events/{id}/destroy':
+    post:
+      summary: ''
+      operationId: postApiEventsIdDestroy
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Events
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the event.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/tickets/init-payment:
+    post:
+      summary: ''
+      operationId: postApiTicketsInitPayment
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Tickets
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                merchant:
+                  type: string
+                  description: ''
+                  example: facilis
+                callback_url:
+                  type: string
+                  description: ''
+                  example: 'http://kreiger.net/'
+                quantity:
+                  type: integer
+                  description: 'Must be at least 1.'
+                  example: 84
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: cyljfwzxnijineimuuo
+                phone:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: nggmgclddxsnxadttstsod
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: rbalistreri@example.org
+              required:
+                - merchant
+                - quantity
+      security: []
+  /api/tickets/confirm-payment:
+    post:
+      summary: ''
+      operationId: postApiTicketsConfirmPayment
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Tickets
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                reference:
+                  type: string
+                  description: ''
+                  example: facilis
+              required:
+                - reference
+      security: []
+  /api/tickets/generate-ticket:
+    post:
+      summary: ''
+      operationId: postApiTicketsGenerateTicket
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Tickets
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                reference:
+                  type: string
+                  description: ''
+                  example: reiciendis
+                seat_ids:
+                  type: array
+                  description: ''
+                  example:
+                    - voluptatem
+                  items:
+                    type: string
+              required:
+                - reference
+                - seat_ids
+      security: []
+tags:
+  -
+    name: Authentication
+    description: ''
+  -
+    name: 'Event Images'
+    description: ''
+  -
+    name: 'Event Packages'
+    description: ''
+  -
+    name: 'Event Seasons'
+    description: ''
+  -
+    name: Events
+    description: ''
+  -
+    name: Tickets
+    description: ''

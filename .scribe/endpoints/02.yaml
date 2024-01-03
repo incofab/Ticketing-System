@@ -1,0 +1,373 @@
+name: Events
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: 'api/events/index/{eventSeason?}'
+    metadata:
+      groupName: Events
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      eventSeason:
+        name: eventSeason
+        description: ''
+        required: false
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      eventSeason: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"message":"","data":{"current_page":1,"data":[{"id":1,"event_season_id":1,"title":"Porro recusandae nisi qui pariatur iste voluptas doloribus doloremque.","description":"Debitis et asperiores ab eos omnis temporibus ea aut doloribus consequatur molestiae rerum iure.","start_time":"2024-03-03T12:32:25.000000Z","end_time":"2024-04-03T12:32:25.000000Z","home_team":"labore","away_team":"autem","created_at":"2024-01-03T12:32:25.000000Z","updated_at":"2024-01-03T12:32:25.000000Z","event_images":[],"event_packages":[{"id":1,"event_id":1,"seat_section_id":1,"price":8706.4,"quantity_sold":0,"created_at":"2024-01-03T12:32:25.000000Z","updated_at":"2024-01-03T12:32:25.000000Z"}]}],"first_page_url":"http:\/\/localhost\/api\/events\/index\/1?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/events\/index\/1?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/events\/index\/1?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/events\/index\/1","per_page":100,"prev_page_url":null,"to":1,"total":1}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '59'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/events/upcoming/{eventSeason?}'
+    metadata:
+      groupName: Events
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      eventSeason:
+        name: eventSeason
+        description: ''
+        required: false
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      eventSeason: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"message":"","data":{"current_page":1,"data":[{"id":1,"event_season_id":1,"title":"Porro recusandae nisi qui pariatur iste voluptas doloribus doloremque.","description":"Debitis et asperiores ab eos omnis temporibus ea aut doloribus consequatur molestiae rerum iure.","start_time":"2024-03-03T12:32:25.000000Z","end_time":"2024-04-03T12:32:25.000000Z","home_team":"labore","away_team":"autem","created_at":"2024-01-03T12:32:25.000000Z","updated_at":"2024-01-03T12:32:25.000000Z"}],"first_page_url":"http:\/\/localhost\/api\/events\/upcoming\/1?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/events\/upcoming\/1?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/events\/upcoming\/1?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/events\/upcoming\/1","per_page":100,"prev_page_url":null,"to":1,"total":1}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '59'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/events/event-seasons/{eventSeason_id}/store'
+    metadata:
+      groupName: Events
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      eventSeason_id:
+        name: eventSeason_id
+        description: 'The ID of the eventSeason.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      eventSeason_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: jpnpzebzwetpchm
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: false
+        example: 'Repellat eum nemo dolor recusandae.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      start_time:
+        name: start_time
+        description: 'Must be a valid date.'
+        required: true
+        example: '2024-01-03T13:41:01'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      end_time:
+        name: end_time
+        description: 'Must be a valid date.'
+        required: false
+        example: '2024-01-03T13:41:01'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      home_team:
+        name: home_team
+        description: ''
+        required: false
+        example: cumque
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      away_team:
+        name: away_team
+        description: ''
+        required: false
+        example: dolorem
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      event_packages:
+        name: event_packages
+        description: 'Must have at least 1 items.'
+        required: false
+        example: lyllnwcqhfeelaqndxilmjcpwwvmpwoynobaptbwdbfzvzamfiintacplmihnx
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      'event_packages[].seat_section_id':
+        name: 'event_packages[].seat_section_id'
+        description: ''
+        required: true
+        example: nihil
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      'event_packages[].price':
+        name: 'event_packages[].price'
+        description: ''
+        required: true
+        example: 3.59
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      title: jpnpzebzwetpchm
+      description: 'Repellat eum nemo dolor recusandae.'
+      start_time: '2024-01-03T13:41:01'
+      end_time: '2024-01-03T13:41:01'
+      home_team: cumque
+      away_team: dolorem
+      event_packages: lyllnwcqhfeelaqndxilmjcpwwvmpwoynobaptbwdbfzvzamfiintacplmihnx
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/events/{id}/update'
+    metadata:
+      groupName: Events
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the event.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: erhrcjmriytmtwxlkkgz
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: false
+        example: 'Voluptatibus aliquam sint cum quis exercitationem tempora.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      start_time:
+        name: start_time
+        description: 'Must be a valid date.'
+        required: true
+        example: '2024-01-03T13:41:01'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      end_time:
+        name: end_time
+        description: 'Must be a valid date.'
+        required: false
+        example: '2024-01-03T13:41:01'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      home_team:
+        name: home_team
+        description: ''
+        required: false
+        example: ex
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      away_team:
+        name: away_team
+        description: ''
+        required: false
+        example: commodi
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      title: erhrcjmriytmtwxlkkgz
+      description: 'Voluptatibus aliquam sint cum quis exercitationem tempora.'
+      start_time: '2024-01-03T13:41:01'
+      end_time: '2024-01-03T13:41:01'
+      home_team: ex
+      away_team: commodi
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/events/{id}/destroy'
+    metadata:
+      groupName: Events
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the event.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

@@ -1,0 +1,958 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost"
+        }
+    ],
+    "info": {
+        "name": "Rangers Ticketing System",
+        "_postman_id": "213cf304-6211-42c5-b40e-da1f24993c1f",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Authentication",
+            "description": "",
+            "item": [
+                {
+                    "name": "POST api\/login",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"phone\":\"quis\",\"password\":\"ISNJQ=h\\\"'}}aSE\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/register",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/register",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/register"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET api\/logout",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/logout",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/logout"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Event Images",
+            "description": "",
+            "item": [
+                {
+                    "name": "POST api\/event-image\/store",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/event-image\/store",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/event-image\/store"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "event_id",
+                                    "value": "laudantium",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "reference",
+                                    "value": "laborum",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "image",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/event-image\/{eventImage_id}\/destroy",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/event-image\/:eventImage_id\/destroy",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/event-image\/:eventImage_id\/destroy",
+                            "variable": [
+                                {
+                                    "id": "eventImage_id",
+                                    "key": "eventImage_id",
+                                    "value": "14",
+                                    "description": "The ID of the eventImage."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Event Packages",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/event-packages\/index",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/event-packages\/index",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/event-packages\/index"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"message\":\"\",\"data\":{\"current_page\":1,\"data\":[{\"id\":1,\"event_id\":1,\"seat_section_id\":1,\"price\":8706.4,\"quantity_sold\":0,\"created_at\":\"2024-01-03T12:32:25.000000Z\",\"updated_at\":\"2024-01-03T12:32:25.000000Z\"},{\"id\":2,\"event_id\":2,\"seat_section_id\":2,\"price\":8009.2,\"quantity_sold\":0,\"created_at\":\"2024-01-03T12:32:25.000000Z\",\"updated_at\":\"2024-01-03T12:32:25.000000Z\"},{\"id\":3,\"event_id\":3,\"seat_section_id\":3,\"price\":4855.3,\"quantity_sold\":0,\"created_at\":\"2024-01-03T12:32:25.000000Z\",\"updated_at\":\"2024-01-03T12:32:25.000000Z\"},{\"id\":4,\"event_id\":4,\"seat_section_id\":5,\"price\":7031.9,\"quantity_sold\":0,\"created_at\":\"2024-01-03T12:32:25.000000Z\",\"updated_at\":\"2024-01-03T12:32:25.000000Z\"},{\"id\":5,\"event_id\":5,\"seat_section_id\":6,\"price\":7712,\"quantity_sold\":0,\"created_at\":\"2024-01-03T12:32:25.000000Z\",\"updated_at\":\"2024-01-03T12:32:25.000000Z\"},{\"id\":6,\"event_id\":6,\"seat_section_id\":7,\"price\":5415.7,\"quantity_sold\":0,\"created_at\":\"2024-01-03T12:32:25.000000Z\",\"updated_at\":\"2024-01-03T12:32:25.000000Z\"},{\"id\":7,\"event_id\":7,\"seat_section_id\":9,\"price\":2010.4,\"quantity_sold\":0,\"created_at\":\"2024-01-03T12:32:25.000000Z\",\"updated_at\":\"2024-01-03T12:32:25.000000Z\"},{\"id\":8,\"event_id\":8,\"seat_section_id\":10,\"price\":1153,\"quantity_sold\":0,\"created_at\":\"2024-01-03T12:32:25.000000Z\",\"updated_at\":\"2024-01-03T12:32:25.000000Z\"},{\"id\":9,\"event_id\":9,\"seat_section_id\":11,\"price\":2885.1,\"quantity_sold\":0,\"created_at\":\"2024-01-03T12:32:25.000000Z\",\"updated_at\":\"2024-01-03T12:32:25.000000Z\"},{\"id\":10,\"event_id\":10,\"seat_section_id\":13,\"price\":8893,\"quantity_sold\":0,\"created_at\":\"2024-01-03T12:32:25.000000Z\",\"updated_at\":\"2024-01-03T12:32:25.000000Z\"},{\"id\":11,\"event_id\":11,\"seat_section_id\":14,\"price\":8946.9,\"quantity_sold\":0,\"created_at\":\"2024-01-03T12:32:25.000000Z\",\"updated_at\":\"2024-01-03T12:32:25.000000Z\"},{\"id\":12,\"event_id\":12,\"seat_section_id\":15,\"price\":4512.1,\"quantity_sold\":0,\"created_at\":\"2024-01-03T12:32:25.000000Z\",\"updated_at\":\"2024-01-03T12:32:25.000000Z\"},{\"id\":13,\"event_id\":13,\"seat_section_id\":17,\"price\":1374.3,\"quantity_sold\":0,\"created_at\":\"2024-01-03T12:32:25.000000Z\",\"updated_at\":\"2024-01-03T12:32:25.000000Z\"},{\"id\":14,\"event_id\":14,\"seat_section_id\":18,\"price\":7857.7,\"quantity_sold\":0,\"created_at\":\"2024-01-03T12:32:25.000000Z\",\"updated_at\":\"2024-01-03T12:32:25.000000Z\"},{\"id\":15,\"event_id\":15,\"seat_section_id\":19,\"price\":3324.2,\"quantity_sold\":0,\"created_at\":\"2024-01-03T12:32:25.000000Z\",\"updated_at\":\"2024-01-03T12:32:25.000000Z\"}],\"first_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/event-packages\\\/index?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/event-packages\\\/index?page=1\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/event-packages\\\/index?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost\\\/api\\\/event-packages\\\/index\",\"per_page\":100,\"prev_page_url\":null,\"to\":15,\"total\":15}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/event-packages\/events\/{event_id}\/store",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/event-packages\/events\/:event_id\/store",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/event-packages\/events\/:event_id\/store",
+                            "variable": [
+                                {
+                                    "id": "event_id",
+                                    "key": "event_id",
+                                    "value": "1",
+                                    "description": "The ID of the event."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"seat_section_id\":\"est\",\"price\":36185.563973426}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/event-packages\/{eventPackage_id}\/destroy",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/event-packages\/:eventPackage_id\/destroy",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/event-packages\/:eventPackage_id\/destroy",
+                            "variable": [
+                                {
+                                    "id": "eventPackage_id",
+                                    "key": "eventPackage_id",
+                                    "value": "1",
+                                    "description": "The ID of the eventPackage."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Event Seasons",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/event-seasons\/index\/{eventCategory?}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/event-seasons\/index\/:eventCategory",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/event-seasons\/index\/:eventCategory",
+                            "variable": [
+                                {
+                                    "id": "eventCategory",
+                                    "key": "eventCategory",
+                                    "value": "1",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"message\":\"\",\"data\":{\"current_page\":1,\"data\":[{\"id\":1,\"event_category_id\":1,\"title\":\"Adipisci quod esse est est molestiae iure magni.\",\"description\":\"Eum incidunt sapiente beatae qui magni rerum eaque quia magnam.\",\"date_from\":\"2024-02-03T12:32:25.000000Z\",\"date_to\":\"2024-05-03T12:32:25.000000Z\",\"status\":null,\"created_at\":\"2024-01-03T12:32:25.000000Z\",\"updated_at\":\"2024-01-03T12:32:25.000000Z\"}],\"first_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/event-seasons\\\/index\\\/1?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/event-seasons\\\/index\\\/1?page=1\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/event-seasons\\\/index\\\/1?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost\\\/api\\\/event-seasons\\\/index\\\/1\",\"per_page\":100,\"prev_page_url\":null,\"to\":1,\"total\":1}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/event-seasons\/upcoming\/{eventCategory?}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/event-seasons\/upcoming\/:eventCategory",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/event-seasons\/upcoming\/:eventCategory",
+                            "variable": [
+                                {
+                                    "id": "eventCategory",
+                                    "key": "eventCategory",
+                                    "value": "1",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"message\":\"\",\"data\":{\"current_page\":1,\"data\":[{\"id\":1,\"event_category_id\":1,\"title\":\"Adipisci quod esse est est molestiae iure magni.\",\"description\":\"Eum incidunt sapiente beatae qui magni rerum eaque quia magnam.\",\"date_from\":\"2024-02-03T12:32:25.000000Z\",\"date_to\":\"2024-05-03T12:32:25.000000Z\",\"status\":null,\"created_at\":\"2024-01-03T12:32:25.000000Z\",\"updated_at\":\"2024-01-03T12:32:25.000000Z\"}],\"first_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/event-seasons\\\/upcoming\\\/1?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/event-seasons\\\/upcoming\\\/1?page=1\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/event-seasons\\\/upcoming\\\/1?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost\\\/api\\\/event-seasons\\\/upcoming\\\/1\",\"per_page\":100,\"prev_page_url\":null,\"to\":1,\"total\":1}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/event-seasons\/event-category\/{eventCategory_id}\/store",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/event-seasons\/event-category\/:eventCategory_id\/store",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/event-seasons\/event-category\/:eventCategory_id\/store",
+                            "variable": [
+                                {
+                                    "id": "eventCategory_id",
+                                    "key": "eventCategory_id",
+                                    "value": "1",
+                                    "description": "The ID of the eventCategory."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"iu\",\"description\":\"At ducimus cumque dolorem velit.\",\"date_from\":\"2024-01-03T13:41:01\",\"date_to\":\"2024-01-03T13:41:01\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/event-seasons\/{eventSeason_id}\/update",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/event-seasons\/:eventSeason_id\/update",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/event-seasons\/:eventSeason_id\/update",
+                            "variable": [
+                                {
+                                    "id": "eventSeason_id",
+                                    "key": "eventSeason_id",
+                                    "value": "1",
+                                    "description": "The ID of the eventSeason."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"hhbesdrfhfe\",\"description\":\"Optio fugiat quis provident et saepe.\",\"date_from\":\"2024-01-03T13:41:01\",\"date_to\":\"2024-01-03T13:41:01\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/event-seasons\/{eventSeason_id}\/destroy",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/event-seasons\/:eventSeason_id\/destroy",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/event-seasons\/:eventSeason_id\/destroy",
+                            "variable": [
+                                {
+                                    "id": "eventSeason_id",
+                                    "key": "eventSeason_id",
+                                    "value": "1",
+                                    "description": "The ID of the eventSeason."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Events",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/events\/index\/{eventSeason?}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/events\/index\/:eventSeason",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/events\/index\/:eventSeason",
+                            "variable": [
+                                {
+                                    "id": "eventSeason",
+                                    "key": "eventSeason",
+                                    "value": "1",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"message\":\"\",\"data\":{\"current_page\":1,\"data\":[{\"id\":1,\"event_season_id\":1,\"title\":\"Porro recusandae nisi qui pariatur iste voluptas doloribus doloremque.\",\"description\":\"Debitis et asperiores ab eos omnis temporibus ea aut doloribus consequatur molestiae rerum iure.\",\"start_time\":\"2024-03-03T12:32:25.000000Z\",\"end_time\":\"2024-04-03T12:32:25.000000Z\",\"home_team\":\"labore\",\"away_team\":\"autem\",\"created_at\":\"2024-01-03T12:32:25.000000Z\",\"updated_at\":\"2024-01-03T12:32:25.000000Z\",\"event_images\":[],\"event_packages\":[{\"id\":1,\"event_id\":1,\"seat_section_id\":1,\"price\":8706.4,\"quantity_sold\":0,\"created_at\":\"2024-01-03T12:32:25.000000Z\",\"updated_at\":\"2024-01-03T12:32:25.000000Z\"}]}],\"first_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/events\\\/index\\\/1?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/events\\\/index\\\/1?page=1\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/events\\\/index\\\/1?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost\\\/api\\\/events\\\/index\\\/1\",\"per_page\":100,\"prev_page_url\":null,\"to\":1,\"total\":1}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/events\/upcoming\/{eventSeason?}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/events\/upcoming\/:eventSeason",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/events\/upcoming\/:eventSeason",
+                            "variable": [
+                                {
+                                    "id": "eventSeason",
+                                    "key": "eventSeason",
+                                    "value": "1",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"message\":\"\",\"data\":{\"current_page\":1,\"data\":[{\"id\":1,\"event_season_id\":1,\"title\":\"Porro recusandae nisi qui pariatur iste voluptas doloribus doloremque.\",\"description\":\"Debitis et asperiores ab eos omnis temporibus ea aut doloribus consequatur molestiae rerum iure.\",\"start_time\":\"2024-03-03T12:32:25.000000Z\",\"end_time\":\"2024-04-03T12:32:25.000000Z\",\"home_team\":\"labore\",\"away_team\":\"autem\",\"created_at\":\"2024-01-03T12:32:25.000000Z\",\"updated_at\":\"2024-01-03T12:32:25.000000Z\"}],\"first_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/events\\\/upcoming\\\/1?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/events\\\/upcoming\\\/1?page=1\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/events\\\/upcoming\\\/1?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost\\\/api\\\/events\\\/upcoming\\\/1\",\"per_page\":100,\"prev_page_url\":null,\"to\":1,\"total\":1}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/events\/event-seasons\/{eventSeason_id}\/store",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/events\/event-seasons\/:eventSeason_id\/store",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/events\/event-seasons\/:eventSeason_id\/store",
+                            "variable": [
+                                {
+                                    "id": "eventSeason_id",
+                                    "key": "eventSeason_id",
+                                    "value": "1",
+                                    "description": "The ID of the eventSeason."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"jpnpzebzwetpchm\",\"description\":\"Repellat eum nemo dolor recusandae.\",\"start_time\":\"2024-01-03T13:41:01\",\"end_time\":\"2024-01-03T13:41:01\",\"home_team\":\"cumque\",\"away_team\":\"dolorem\",\"event_packages\":\"lyllnwcqhfeelaqndxilmjcpwwvmpwoynobaptbwdbfzvzamfiintacplmihnx\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/events\/{id}\/update",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/events\/:id\/update",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/events\/:id\/update",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the event."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"erhrcjmriytmtwxlkkgz\",\"description\":\"Voluptatibus aliquam sint cum quis exercitationem tempora.\",\"start_time\":\"2024-01-03T13:41:01\",\"end_time\":\"2024-01-03T13:41:01\",\"home_team\":\"ex\",\"away_team\":\"commodi\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/events\/{id}\/destroy",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/events\/:id\/destroy",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/events\/:id\/destroy",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the event."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Tickets",
+            "description": "",
+            "item": [
+                {
+                    "name": "POST api\/tickets\/init-payment",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tickets\/init-payment",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tickets\/init-payment"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"merchant\":\"facilis\",\"callback_url\":\"http:\\\/\\\/kreiger.net\\\/\",\"quantity\":84,\"name\":\"cyljfwzxnijineimuuo\",\"phone\":\"nggmgclddxsnxadttstsod\",\"email\":\"rbalistreri@example.org\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/tickets\/confirm-payment",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tickets\/confirm-payment",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tickets\/confirm-payment"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"reference\":\"facilis\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/tickets\/generate-ticket",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tickets\/generate-ticket",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tickets\/generate-ticket"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"reference\":\"reiciendis\",\"seat_ids\":[\"voluptatem\"]}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

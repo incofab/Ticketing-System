@@ -1,0 +1,3705 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Rangers Ticketing System Documentation</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../docs/css/theme-default.style.css" media="screen">
+    <link rel="stylesheet" href="../docs/css/theme-default.print.css" media="print">
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/obsidian.min.css">
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jets/0.14.1/jets.min.js"></script>
+
+    <style id="language-style">
+        /* starts out as display none and is replaced with js later  */
+                    body .content .bash-example code { display: none; }
+                    body .content .javascript-example code { display: none; }
+            </style>
+
+    <script>
+        var tryItOutBaseUrl = "http://localhost";
+        var useCsrf = Boolean();
+        var csrfUrl = "/sanctum/csrf-cookie";
+    </script>
+    <script src="../docs/js/tryitout-4.29.0.js"></script>
+
+    <script src="../docs/js/theme-default-4.29.0.js"></script>
+
+</head>
+
+<body data-languages="[&quot;bash&quot;,&quot;javascript&quot;]">
+
+<a href="#" id="nav-button">
+    <span>
+        MENU
+        <img src="../docs/images/navbar.png" alt="navbar-image"/>
+    </span>
+</a>
+<div class="tocify-wrapper">
+    
+            <div class="lang-selector">
+                                            <button type="button" class="lang-button" data-language-name="bash">bash</button>
+                                            <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
+                    </div>
+    
+    <div class="search">
+        <input type="text" class="search" id="input-search" placeholder="Search">
+    </div>
+
+    <div id="toc">
+                    <ul id="tocify-header-introduction" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="introduction">
+                    <a href="#introduction">Introduction</a>
+                </li>
+                            </ul>
+                    <ul id="tocify-header-authenticating-requests" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="authenticating-requests">
+                    <a href="#authenticating-requests">Authenticating requests</a>
+                </li>
+                            </ul>
+                    <ul id="tocify-header-authentication" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="authentication">
+                    <a href="#authentication">Authentication</a>
+                </li>
+                                    <ul id="tocify-subheader-authentication" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="authentication-POSTapi-login">
+                                <a href="#authentication-POSTapi-login">POST api/login</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="authentication-POSTapi-register">
+                                <a href="#authentication-POSTapi-register">POST api/register</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="authentication-GETapi-logout">
+                                <a href="#authentication-GETapi-logout">GET api/logout</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+                    <ul id="tocify-header-event-images" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="event-images">
+                    <a href="#event-images">Event Images</a>
+                </li>
+                                    <ul id="tocify-subheader-event-images" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="event-images-POSTapi-event-image-store">
+                                <a href="#event-images-POSTapi-event-image-store">POST api/event-image/store</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="event-images-POSTapi-event-image--eventImage_id--destroy">
+                                <a href="#event-images-POSTapi-event-image--eventImage_id--destroy">POST api/event-image/{eventImage_id}/destroy</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+                    <ul id="tocify-header-event-packages" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="event-packages">
+                    <a href="#event-packages">Event Packages</a>
+                </li>
+                                    <ul id="tocify-subheader-event-packages" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="event-packages-GETapi-event-packages-index">
+                                <a href="#event-packages-GETapi-event-packages-index">GET api/event-packages/index</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="event-packages-POSTapi-event-packages-events--event_id--store">
+                                <a href="#event-packages-POSTapi-event-packages-events--event_id--store">POST api/event-packages/events/{event_id}/store</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="event-packages-POSTapi-event-packages--eventPackage_id--destroy">
+                                <a href="#event-packages-POSTapi-event-packages--eventPackage_id--destroy">POST api/event-packages/{eventPackage_id}/destroy</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+                    <ul id="tocify-header-event-seasons" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="event-seasons">
+                    <a href="#event-seasons">Event Seasons</a>
+                </li>
+                                    <ul id="tocify-subheader-event-seasons" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="event-seasons-GETapi-event-seasons-index--eventCategory--">
+                                <a href="#event-seasons-GETapi-event-seasons-index--eventCategory--">GET api/event-seasons/index/{eventCategory?}</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="event-seasons-GETapi-event-seasons-upcoming--eventCategory--">
+                                <a href="#event-seasons-GETapi-event-seasons-upcoming--eventCategory--">GET api/event-seasons/upcoming/{eventCategory?}</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="event-seasons-POSTapi-event-seasons-event-category--eventCategory_id--store">
+                                <a href="#event-seasons-POSTapi-event-seasons-event-category--eventCategory_id--store">POST api/event-seasons/event-category/{eventCategory_id}/store</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="event-seasons-POSTapi-event-seasons--eventSeason_id--update">
+                                <a href="#event-seasons-POSTapi-event-seasons--eventSeason_id--update">POST api/event-seasons/{eventSeason_id}/update</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="event-seasons-POSTapi-event-seasons--eventSeason_id--destroy">
+                                <a href="#event-seasons-POSTapi-event-seasons--eventSeason_id--destroy">POST api/event-seasons/{eventSeason_id}/destroy</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+                    <ul id="tocify-header-events" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="events">
+                    <a href="#events">Events</a>
+                </li>
+                                    <ul id="tocify-subheader-events" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="events-GETapi-events-index--eventSeason--">
+                                <a href="#events-GETapi-events-index--eventSeason--">GET api/events/index/{eventSeason?}</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="events-GETapi-events-upcoming--eventSeason--">
+                                <a href="#events-GETapi-events-upcoming--eventSeason--">GET api/events/upcoming/{eventSeason?}</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="events-POSTapi-events-event-seasons--eventSeason_id--store">
+                                <a href="#events-POSTapi-events-event-seasons--eventSeason_id--store">POST api/events/event-seasons/{eventSeason_id}/store</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="events-POSTapi-events--id--update">
+                                <a href="#events-POSTapi-events--id--update">POST api/events/{id}/update</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="events-POSTapi-events--id--destroy">
+                                <a href="#events-POSTapi-events--id--destroy">POST api/events/{id}/destroy</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+                    <ul id="tocify-header-tickets" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="tickets">
+                    <a href="#tickets">Tickets</a>
+                </li>
+                                    <ul id="tocify-subheader-tickets" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="tickets-POSTapi-tickets-init-payment">
+                                <a href="#tickets-POSTapi-tickets-init-payment">POST api/tickets/init-payment</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="tickets-POSTapi-tickets-confirm-payment">
+                                <a href="#tickets-POSTapi-tickets-confirm-payment">POST api/tickets/confirm-payment</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="tickets-POSTapi-tickets-generate-ticket">
+                                <a href="#tickets-POSTapi-tickets-generate-ticket">POST api/tickets/generate-ticket</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+            </div>
+
+    <ul class="toc-footer" id="toc-footer">
+                    <li style="padding-bottom: 5px;"><a href="../docs/collection.json">View Postman collection</a></li>
+                            <li style="padding-bottom: 5px;"><a href="../docs/openapi.yaml">View OpenAPI spec</a></li>
+                <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
+    </ul>
+
+    <ul class="toc-footer" id="last-updated">
+        <li>Last updated: January 3, 2024</li>
+    </ul>
+</div>
+
+<div class="page-wrapper">
+    <div class="dark-box"></div>
+    <div class="content">
+        <h1 id="introduction">Introduction</h1>
+<aside>
+    <strong>Base URL</strong>: <code>http://localhost</code>
+</aside>
+<p>This documentation aims to provide all the information you need to work with our API.</p>
+<aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
+You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
+
+        <h1 id="authenticating-requests">Authenticating requests</h1>
+<p>This API is not authenticated.</p>
+
+        <h1 id="authentication">Authentication</h1>
+
+    
+
+                                <h2 id="authentication-POSTapi-login">POST api/login</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-login">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/login" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"phone\": \"quis\",
+    \"password\": \"ISNJQ=h\\\"\'}}aSE\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/login"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "phone": "quis",
+    "password": "ISNJQ=h\"'}}aSE"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-login">
+</span>
+<span id="execution-results-POSTapi-login" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-login"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-login"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-login" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-login">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-login" data-method="POST"
+      data-path="api/login"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-login', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-login"
+                    onclick="tryItOut('POSTapi-login');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-login"
+                    onclick="cancelTryOut('POSTapi-login');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-login"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/login</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-login"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-login"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>phone</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="phone"                data-endpoint="POSTapi-login"
+               value="quis"
+               data-component="body">
+    <br>
+<p>Example: <code>quis</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="password"                data-endpoint="POSTapi-login"
+               value="ISNJQ=h"'}}aSE"
+               data-component="body">
+    <br>
+<p>Example: <code>ISNJQ=h"'}}aSE</code></p>
+        </div>
+        </form>
+
+                    <h2 id="authentication-POSTapi-register">POST api/register</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-register">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/register" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/register"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-register">
+</span>
+<span id="execution-results-POSTapi-register" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-register"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-register"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-register" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-register">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-register" data-method="POST"
+      data-path="api/register"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-register', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-register"
+                    onclick="tryItOut('POSTapi-register');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-register"
+                    onclick="cancelTryOut('POSTapi-register');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-register"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/register</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-register"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-register"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="authentication-GETapi-logout">GET api/logout</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-logout">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/logout" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/logout"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-logout">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-logout" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-logout"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-logout"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-logout" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-logout">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-logout" data-method="GET"
+      data-path="api/logout"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-logout', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-logout"
+                    onclick="tryItOut('GETapi-logout');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-logout"
+                    onclick="cancelTryOut('GETapi-logout');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-logout"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/logout</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-logout"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-logout"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                <h1 id="event-images">Event Images</h1>
+
+    
+
+                                <h2 id="event-images-POSTapi-event-image-store">POST api/event-image/store</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-event-image-store">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/event-image/store" \
+    --header "Content-Type: multipart/form-data" \
+    --header "Accept: application/json" \
+    --form "event_id=laudantium"\
+    --form "reference=laborum"\
+    --form "image=@/tmp/phpeLcyst" </code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/event-image/store"
+);
+
+const headers = {
+    "Content-Type": "multipart/form-data",
+    "Accept": "application/json",
+};
+
+const body = new FormData();
+body.append('event_id', 'laudantium');
+body.append('reference', 'laborum');
+body.append('image', document.querySelector('input[name="image"]').files[0]);
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-event-image-store">
+</span>
+<span id="execution-results-POSTapi-event-image-store" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-event-image-store"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-event-image-store"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-event-image-store" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-event-image-store">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-event-image-store" data-method="POST"
+      data-path="api/event-image/store"
+      data-authed="0"
+      data-hasfiles="1"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-event-image-store', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-event-image-store"
+                    onclick="tryItOut('POSTapi-event-image-store');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-event-image-store"
+                    onclick="cancelTryOut('POSTapi-event-image-store');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-event-image-store"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/event-image/store</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-event-image-store"
+               value="multipart/form-data"
+               data-component="header">
+    <br>
+<p>Example: <code>multipart/form-data</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-event-image-store"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>event_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="event_id"                data-endpoint="POSTapi-event-image-store"
+               value="laudantium"
+               data-component="body">
+    <br>
+<p>Example: <code>laudantium</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>image</code></b>&nbsp;&nbsp;
+<small>file</small>&nbsp;
+ &nbsp;
+                <input type="file" style="display: none"
+                              name="image"                data-endpoint="POSTapi-event-image-store"
+               value=""
+               data-component="body">
+    <br>
+<p>Must be a file. Example: <code>/tmp/phpeLcyst</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>reference</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="reference"                data-endpoint="POSTapi-event-image-store"
+               value="laborum"
+               data-component="body">
+    <br>
+<p>Example: <code>laborum</code></p>
+        </div>
+        </form>
+
+                    <h2 id="event-images-POSTapi-event-image--eventImage_id--destroy">POST api/event-image/{eventImage_id}/destroy</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-event-image--eventImage_id--destroy">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/event-image/14/destroy" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/event-image/14/destroy"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-event-image--eventImage_id--destroy">
+</span>
+<span id="execution-results-POSTapi-event-image--eventImage_id--destroy" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-event-image--eventImage_id--destroy"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-event-image--eventImage_id--destroy"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-event-image--eventImage_id--destroy" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-event-image--eventImage_id--destroy">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-event-image--eventImage_id--destroy" data-method="POST"
+      data-path="api/event-image/{eventImage_id}/destroy"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-event-image--eventImage_id--destroy', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-event-image--eventImage_id--destroy"
+                    onclick="tryItOut('POSTapi-event-image--eventImage_id--destroy');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-event-image--eventImage_id--destroy"
+                    onclick="cancelTryOut('POSTapi-event-image--eventImage_id--destroy');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-event-image--eventImage_id--destroy"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/event-image/{eventImage_id}/destroy</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-event-image--eventImage_id--destroy"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-event-image--eventImage_id--destroy"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>eventImage_id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="eventImage_id"                data-endpoint="POSTapi-event-image--eventImage_id--destroy"
+               value="14"
+               data-component="url">
+    <br>
+<p>The ID of the eventImage. Example: <code>14</code></p>
+            </div>
+                    </form>
+
+                <h1 id="event-packages">Event Packages</h1>
+
+    
+
+                                <h2 id="event-packages-GETapi-event-packages-index">GET api/event-packages/index</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-event-packages-index">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/event-packages/index" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/event-packages/index"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-event-packages-index">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 59
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;&quot;,
+    &quot;data&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;data&quot;: [
+            {
+                &quot;id&quot;: 1,
+                &quot;event_id&quot;: 1,
+                &quot;seat_section_id&quot;: 1,
+                &quot;price&quot;: 8706.4,
+                &quot;quantity_sold&quot;: 0,
+                &quot;created_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 2,
+                &quot;event_id&quot;: 2,
+                &quot;seat_section_id&quot;: 2,
+                &quot;price&quot;: 8009.2,
+                &quot;quantity_sold&quot;: 0,
+                &quot;created_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 3,
+                &quot;event_id&quot;: 3,
+                &quot;seat_section_id&quot;: 3,
+                &quot;price&quot;: 4855.3,
+                &quot;quantity_sold&quot;: 0,
+                &quot;created_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 4,
+                &quot;event_id&quot;: 4,
+                &quot;seat_section_id&quot;: 5,
+                &quot;price&quot;: 7031.9,
+                &quot;quantity_sold&quot;: 0,
+                &quot;created_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 5,
+                &quot;event_id&quot;: 5,
+                &quot;seat_section_id&quot;: 6,
+                &quot;price&quot;: 7712,
+                &quot;quantity_sold&quot;: 0,
+                &quot;created_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 6,
+                &quot;event_id&quot;: 6,
+                &quot;seat_section_id&quot;: 7,
+                &quot;price&quot;: 5415.7,
+                &quot;quantity_sold&quot;: 0,
+                &quot;created_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 7,
+                &quot;event_id&quot;: 7,
+                &quot;seat_section_id&quot;: 9,
+                &quot;price&quot;: 2010.4,
+                &quot;quantity_sold&quot;: 0,
+                &quot;created_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 8,
+                &quot;event_id&quot;: 8,
+                &quot;seat_section_id&quot;: 10,
+                &quot;price&quot;: 1153,
+                &quot;quantity_sold&quot;: 0,
+                &quot;created_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 9,
+                &quot;event_id&quot;: 9,
+                &quot;seat_section_id&quot;: 11,
+                &quot;price&quot;: 2885.1,
+                &quot;quantity_sold&quot;: 0,
+                &quot;created_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 10,
+                &quot;event_id&quot;: 10,
+                &quot;seat_section_id&quot;: 13,
+                &quot;price&quot;: 8893,
+                &quot;quantity_sold&quot;: 0,
+                &quot;created_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 11,
+                &quot;event_id&quot;: 11,
+                &quot;seat_section_id&quot;: 14,
+                &quot;price&quot;: 8946.9,
+                &quot;quantity_sold&quot;: 0,
+                &quot;created_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 12,
+                &quot;event_id&quot;: 12,
+                &quot;seat_section_id&quot;: 15,
+                &quot;price&quot;: 4512.1,
+                &quot;quantity_sold&quot;: 0,
+                &quot;created_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 13,
+                &quot;event_id&quot;: 13,
+                &quot;seat_section_id&quot;: 17,
+                &quot;price&quot;: 1374.3,
+                &quot;quantity_sold&quot;: 0,
+                &quot;created_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 14,
+                &quot;event_id&quot;: 14,
+                &quot;seat_section_id&quot;: 18,
+                &quot;price&quot;: 7857.7,
+                &quot;quantity_sold&quot;: 0,
+                &quot;created_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 15,
+                &quot;event_id&quot;: 15,
+                &quot;seat_section_id&quot;: 19,
+                &quot;price&quot;: 3324.2,
+                &quot;quantity_sold&quot;: 0,
+                &quot;created_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;
+            }
+        ],
+        &quot;first_page_url&quot;: &quot;http://localhost/api/event-packages/index?page=1&quot;,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 1,
+        &quot;last_page_url&quot;: &quot;http://localhost/api/event-packages/index?page=1&quot;,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost/api/event-packages/index?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;next_page_url&quot;: null,
+        &quot;path&quot;: &quot;http://localhost/api/event-packages/index&quot;,
+        &quot;per_page&quot;: 100,
+        &quot;prev_page_url&quot;: null,
+        &quot;to&quot;: 15,
+        &quot;total&quot;: 15
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-event-packages-index" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-event-packages-index"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-event-packages-index"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-event-packages-index" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-event-packages-index">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-event-packages-index" data-method="GET"
+      data-path="api/event-packages/index"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-event-packages-index', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-event-packages-index"
+                    onclick="tryItOut('GETapi-event-packages-index');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-event-packages-index"
+                    onclick="cancelTryOut('GETapi-event-packages-index');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-event-packages-index"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/event-packages/index</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-event-packages-index"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-event-packages-index"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="event-packages-POSTapi-event-packages-events--event_id--store">POST api/event-packages/events/{event_id}/store</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-event-packages-events--event_id--store">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/event-packages/events/1/store" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"seat_section_id\": \"est\",
+    \"price\": 36185.563973426
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/event-packages/events/1/store"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "seat_section_id": "est",
+    "price": 36185.563973426
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-event-packages-events--event_id--store">
+</span>
+<span id="execution-results-POSTapi-event-packages-events--event_id--store" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-event-packages-events--event_id--store"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-event-packages-events--event_id--store"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-event-packages-events--event_id--store" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-event-packages-events--event_id--store">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-event-packages-events--event_id--store" data-method="POST"
+      data-path="api/event-packages/events/{event_id}/store"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-event-packages-events--event_id--store', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-event-packages-events--event_id--store"
+                    onclick="tryItOut('POSTapi-event-packages-events--event_id--store');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-event-packages-events--event_id--store"
+                    onclick="cancelTryOut('POSTapi-event-packages-events--event_id--store');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-event-packages-events--event_id--store"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/event-packages/events/{event_id}/store</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-event-packages-events--event_id--store"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-event-packages-events--event_id--store"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>event_id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="event_id"                data-endpoint="POSTapi-event-packages-events--event_id--store"
+               value="1"
+               data-component="url">
+    <br>
+<p>The ID of the event. Example: <code>1</code></p>
+            </div>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>seat_section_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="seat_section_id"                data-endpoint="POSTapi-event-packages-events--event_id--store"
+               value="est"
+               data-component="body">
+    <br>
+<p>Example: <code>est</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>price</code></b>&nbsp;&nbsp;
+<small>number</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="price"                data-endpoint="POSTapi-event-packages-events--event_id--store"
+               value="36185.563973426"
+               data-component="body">
+    <br>
+<p>Example: <code>36185.563973426</code></p>
+        </div>
+        </form>
+
+                    <h2 id="event-packages-POSTapi-event-packages--eventPackage_id--destroy">POST api/event-packages/{eventPackage_id}/destroy</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-event-packages--eventPackage_id--destroy">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/event-packages/1/destroy" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/event-packages/1/destroy"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-event-packages--eventPackage_id--destroy">
+</span>
+<span id="execution-results-POSTapi-event-packages--eventPackage_id--destroy" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-event-packages--eventPackage_id--destroy"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-event-packages--eventPackage_id--destroy"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-event-packages--eventPackage_id--destroy" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-event-packages--eventPackage_id--destroy">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-event-packages--eventPackage_id--destroy" data-method="POST"
+      data-path="api/event-packages/{eventPackage_id}/destroy"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-event-packages--eventPackage_id--destroy', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-event-packages--eventPackage_id--destroy"
+                    onclick="tryItOut('POSTapi-event-packages--eventPackage_id--destroy');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-event-packages--eventPackage_id--destroy"
+                    onclick="cancelTryOut('POSTapi-event-packages--eventPackage_id--destroy');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-event-packages--eventPackage_id--destroy"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/event-packages/{eventPackage_id}/destroy</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-event-packages--eventPackage_id--destroy"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-event-packages--eventPackage_id--destroy"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>eventPackage_id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="eventPackage_id"                data-endpoint="POSTapi-event-packages--eventPackage_id--destroy"
+               value="1"
+               data-component="url">
+    <br>
+<p>The ID of the eventPackage. Example: <code>1</code></p>
+            </div>
+                    </form>
+
+                <h1 id="event-seasons">Event Seasons</h1>
+
+    
+
+                                <h2 id="event-seasons-GETapi-event-seasons-index--eventCategory--">GET api/event-seasons/index/{eventCategory?}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-event-seasons-index--eventCategory--">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/event-seasons/index/1" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/event-seasons/index/1"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-event-seasons-index--eventCategory--">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 59
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;&quot;,
+    &quot;data&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;data&quot;: [
+            {
+                &quot;id&quot;: 1,
+                &quot;event_category_id&quot;: 1,
+                &quot;title&quot;: &quot;Adipisci quod esse est est molestiae iure magni.&quot;,
+                &quot;description&quot;: &quot;Eum incidunt sapiente beatae qui magni rerum eaque quia magnam.&quot;,
+                &quot;date_from&quot;: &quot;2024-02-03T12:32:25.000000Z&quot;,
+                &quot;date_to&quot;: &quot;2024-05-03T12:32:25.000000Z&quot;,
+                &quot;status&quot;: null,
+                &quot;created_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;
+            }
+        ],
+        &quot;first_page_url&quot;: &quot;http://localhost/api/event-seasons/index/1?page=1&quot;,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 1,
+        &quot;last_page_url&quot;: &quot;http://localhost/api/event-seasons/index/1?page=1&quot;,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost/api/event-seasons/index/1?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;next_page_url&quot;: null,
+        &quot;path&quot;: &quot;http://localhost/api/event-seasons/index/1&quot;,
+        &quot;per_page&quot;: 100,
+        &quot;prev_page_url&quot;: null,
+        &quot;to&quot;: 1,
+        &quot;total&quot;: 1
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-event-seasons-index--eventCategory--" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-event-seasons-index--eventCategory--"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-event-seasons-index--eventCategory--"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-event-seasons-index--eventCategory--" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-event-seasons-index--eventCategory--">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-event-seasons-index--eventCategory--" data-method="GET"
+      data-path="api/event-seasons/index/{eventCategory?}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-event-seasons-index--eventCategory--', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-event-seasons-index--eventCategory--"
+                    onclick="tryItOut('GETapi-event-seasons-index--eventCategory--');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-event-seasons-index--eventCategory--"
+                    onclick="cancelTryOut('GETapi-event-seasons-index--eventCategory--');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-event-seasons-index--eventCategory--"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/event-seasons/index/{eventCategory?}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-event-seasons-index--eventCategory--"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-event-seasons-index--eventCategory--"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>eventCategory</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="eventCategory"                data-endpoint="GETapi-event-seasons-index--eventCategory--"
+               value="1"
+               data-component="url">
+    <br>
+<p>Example: <code>1</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="event-seasons-GETapi-event-seasons-upcoming--eventCategory--">GET api/event-seasons/upcoming/{eventCategory?}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-event-seasons-upcoming--eventCategory--">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/event-seasons/upcoming/1" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/event-seasons/upcoming/1"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-event-seasons-upcoming--eventCategory--">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 59
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;&quot;,
+    &quot;data&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;data&quot;: [
+            {
+                &quot;id&quot;: 1,
+                &quot;event_category_id&quot;: 1,
+                &quot;title&quot;: &quot;Adipisci quod esse est est molestiae iure magni.&quot;,
+                &quot;description&quot;: &quot;Eum incidunt sapiente beatae qui magni rerum eaque quia magnam.&quot;,
+                &quot;date_from&quot;: &quot;2024-02-03T12:32:25.000000Z&quot;,
+                &quot;date_to&quot;: &quot;2024-05-03T12:32:25.000000Z&quot;,
+                &quot;status&quot;: null,
+                &quot;created_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;
+            }
+        ],
+        &quot;first_page_url&quot;: &quot;http://localhost/api/event-seasons/upcoming/1?page=1&quot;,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 1,
+        &quot;last_page_url&quot;: &quot;http://localhost/api/event-seasons/upcoming/1?page=1&quot;,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost/api/event-seasons/upcoming/1?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;next_page_url&quot;: null,
+        &quot;path&quot;: &quot;http://localhost/api/event-seasons/upcoming/1&quot;,
+        &quot;per_page&quot;: 100,
+        &quot;prev_page_url&quot;: null,
+        &quot;to&quot;: 1,
+        &quot;total&quot;: 1
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-event-seasons-upcoming--eventCategory--" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-event-seasons-upcoming--eventCategory--"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-event-seasons-upcoming--eventCategory--"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-event-seasons-upcoming--eventCategory--" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-event-seasons-upcoming--eventCategory--">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-event-seasons-upcoming--eventCategory--" data-method="GET"
+      data-path="api/event-seasons/upcoming/{eventCategory?}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-event-seasons-upcoming--eventCategory--', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-event-seasons-upcoming--eventCategory--"
+                    onclick="tryItOut('GETapi-event-seasons-upcoming--eventCategory--');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-event-seasons-upcoming--eventCategory--"
+                    onclick="cancelTryOut('GETapi-event-seasons-upcoming--eventCategory--');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-event-seasons-upcoming--eventCategory--"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/event-seasons/upcoming/{eventCategory?}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-event-seasons-upcoming--eventCategory--"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-event-seasons-upcoming--eventCategory--"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>eventCategory</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="eventCategory"                data-endpoint="GETapi-event-seasons-upcoming--eventCategory--"
+               value="1"
+               data-component="url">
+    <br>
+<p>Example: <code>1</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="event-seasons-POSTapi-event-seasons-event-category--eventCategory_id--store">POST api/event-seasons/event-category/{eventCategory_id}/store</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-event-seasons-event-category--eventCategory_id--store">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/event-seasons/event-category/1/store" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"title\": \"iu\",
+    \"description\": \"At ducimus cumque dolorem velit.\",
+    \"date_from\": \"2024-01-03T13:41:01\",
+    \"date_to\": \"2024-01-03T13:41:01\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/event-seasons/event-category/1/store"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "title": "iu",
+    "description": "At ducimus cumque dolorem velit.",
+    "date_from": "2024-01-03T13:41:01",
+    "date_to": "2024-01-03T13:41:01"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-event-seasons-event-category--eventCategory_id--store">
+</span>
+<span id="execution-results-POSTapi-event-seasons-event-category--eventCategory_id--store" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-event-seasons-event-category--eventCategory_id--store"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-event-seasons-event-category--eventCategory_id--store"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-event-seasons-event-category--eventCategory_id--store" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-event-seasons-event-category--eventCategory_id--store">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-event-seasons-event-category--eventCategory_id--store" data-method="POST"
+      data-path="api/event-seasons/event-category/{eventCategory_id}/store"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-event-seasons-event-category--eventCategory_id--store', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-event-seasons-event-category--eventCategory_id--store"
+                    onclick="tryItOut('POSTapi-event-seasons-event-category--eventCategory_id--store');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-event-seasons-event-category--eventCategory_id--store"
+                    onclick="cancelTryOut('POSTapi-event-seasons-event-category--eventCategory_id--store');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-event-seasons-event-category--eventCategory_id--store"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/event-seasons/event-category/{eventCategory_id}/store</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-event-seasons-event-category--eventCategory_id--store"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-event-seasons-event-category--eventCategory_id--store"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>eventCategory_id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="eventCategory_id"                data-endpoint="POSTapi-event-seasons-event-category--eventCategory_id--store"
+               value="1"
+               data-component="url">
+    <br>
+<p>The ID of the eventCategory. Example: <code>1</code></p>
+            </div>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>title</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="title"                data-endpoint="POSTapi-event-seasons-event-category--eventCategory_id--store"
+               value="iu"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>iu</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="description"                data-endpoint="POSTapi-event-seasons-event-category--eventCategory_id--store"
+               value="At ducimus cumque dolorem velit."
+               data-component="body">
+    <br>
+<p>Example: <code>At ducimus cumque dolorem velit.</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>date_from</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="date_from"                data-endpoint="POSTapi-event-seasons-event-category--eventCategory_id--store"
+               value="2024-01-03T13:41:01"
+               data-component="body">
+    <br>
+<p>This field is required when <code>date_to</code> is present.  Must be a valid date. Example: <code>2024-01-03T13:41:01</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>date_to</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="date_to"                data-endpoint="POSTapi-event-seasons-event-category--eventCategory_id--store"
+               value="2024-01-03T13:41:01"
+               data-component="body">
+    <br>
+<p>Must be a valid date. Example: <code>2024-01-03T13:41:01</code></p>
+        </div>
+        </form>
+
+                    <h2 id="event-seasons-POSTapi-event-seasons--eventSeason_id--update">POST api/event-seasons/{eventSeason_id}/update</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-event-seasons--eventSeason_id--update">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/event-seasons/1/update" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"title\": \"hhbesdrfhfe\",
+    \"description\": \"Optio fugiat quis provident et saepe.\",
+    \"date_from\": \"2024-01-03T13:41:01\",
+    \"date_to\": \"2024-01-03T13:41:01\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/event-seasons/1/update"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "title": "hhbesdrfhfe",
+    "description": "Optio fugiat quis provident et saepe.",
+    "date_from": "2024-01-03T13:41:01",
+    "date_to": "2024-01-03T13:41:01"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-event-seasons--eventSeason_id--update">
+</span>
+<span id="execution-results-POSTapi-event-seasons--eventSeason_id--update" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-event-seasons--eventSeason_id--update"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-event-seasons--eventSeason_id--update"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-event-seasons--eventSeason_id--update" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-event-seasons--eventSeason_id--update">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-event-seasons--eventSeason_id--update" data-method="POST"
+      data-path="api/event-seasons/{eventSeason_id}/update"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-event-seasons--eventSeason_id--update', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-event-seasons--eventSeason_id--update"
+                    onclick="tryItOut('POSTapi-event-seasons--eventSeason_id--update');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-event-seasons--eventSeason_id--update"
+                    onclick="cancelTryOut('POSTapi-event-seasons--eventSeason_id--update');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-event-seasons--eventSeason_id--update"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/event-seasons/{eventSeason_id}/update</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-event-seasons--eventSeason_id--update"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-event-seasons--eventSeason_id--update"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>eventSeason_id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="eventSeason_id"                data-endpoint="POSTapi-event-seasons--eventSeason_id--update"
+               value="1"
+               data-component="url">
+    <br>
+<p>The ID of the eventSeason. Example: <code>1</code></p>
+            </div>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>title</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="title"                data-endpoint="POSTapi-event-seasons--eventSeason_id--update"
+               value="hhbesdrfhfe"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>hhbesdrfhfe</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="description"                data-endpoint="POSTapi-event-seasons--eventSeason_id--update"
+               value="Optio fugiat quis provident et saepe."
+               data-component="body">
+    <br>
+<p>Example: <code>Optio fugiat quis provident et saepe.</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>date_from</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="date_from"                data-endpoint="POSTapi-event-seasons--eventSeason_id--update"
+               value="2024-01-03T13:41:01"
+               data-component="body">
+    <br>
+<p>This field is required when <code>date_to</code> is present.  Must be a valid date. Example: <code>2024-01-03T13:41:01</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>date_to</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="date_to"                data-endpoint="POSTapi-event-seasons--eventSeason_id--update"
+               value="2024-01-03T13:41:01"
+               data-component="body">
+    <br>
+<p>Must be a valid date. Example: <code>2024-01-03T13:41:01</code></p>
+        </div>
+        </form>
+
+                    <h2 id="event-seasons-POSTapi-event-seasons--eventSeason_id--destroy">POST api/event-seasons/{eventSeason_id}/destroy</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-event-seasons--eventSeason_id--destroy">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/event-seasons/1/destroy" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/event-seasons/1/destroy"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-event-seasons--eventSeason_id--destroy">
+</span>
+<span id="execution-results-POSTapi-event-seasons--eventSeason_id--destroy" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-event-seasons--eventSeason_id--destroy"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-event-seasons--eventSeason_id--destroy"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-event-seasons--eventSeason_id--destroy" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-event-seasons--eventSeason_id--destroy">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-event-seasons--eventSeason_id--destroy" data-method="POST"
+      data-path="api/event-seasons/{eventSeason_id}/destroy"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-event-seasons--eventSeason_id--destroy', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-event-seasons--eventSeason_id--destroy"
+                    onclick="tryItOut('POSTapi-event-seasons--eventSeason_id--destroy');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-event-seasons--eventSeason_id--destroy"
+                    onclick="cancelTryOut('POSTapi-event-seasons--eventSeason_id--destroy');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-event-seasons--eventSeason_id--destroy"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/event-seasons/{eventSeason_id}/destroy</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-event-seasons--eventSeason_id--destroy"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-event-seasons--eventSeason_id--destroy"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>eventSeason_id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="eventSeason_id"                data-endpoint="POSTapi-event-seasons--eventSeason_id--destroy"
+               value="1"
+               data-component="url">
+    <br>
+<p>The ID of the eventSeason. Example: <code>1</code></p>
+            </div>
+                    </form>
+
+                <h1 id="events">Events</h1>
+
+    
+
+                                <h2 id="events-GETapi-events-index--eventSeason--">GET api/events/index/{eventSeason?}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-events-index--eventSeason--">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/events/index/1" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/events/index/1"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-events-index--eventSeason--">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 59
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;&quot;,
+    &quot;data&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;data&quot;: [
+            {
+                &quot;id&quot;: 1,
+                &quot;event_season_id&quot;: 1,
+                &quot;title&quot;: &quot;Porro recusandae nisi qui pariatur iste voluptas doloribus doloremque.&quot;,
+                &quot;description&quot;: &quot;Debitis et asperiores ab eos omnis temporibus ea aut doloribus consequatur molestiae rerum iure.&quot;,
+                &quot;start_time&quot;: &quot;2024-03-03T12:32:25.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2024-04-03T12:32:25.000000Z&quot;,
+                &quot;home_team&quot;: &quot;labore&quot;,
+                &quot;away_team&quot;: &quot;autem&quot;,
+                &quot;created_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;,
+                &quot;event_images&quot;: [],
+                &quot;event_packages&quot;: [
+                    {
+                        &quot;id&quot;: 1,
+                        &quot;event_id&quot;: 1,
+                        &quot;seat_section_id&quot;: 1,
+                        &quot;price&quot;: 8706.4,
+                        &quot;quantity_sold&quot;: 0,
+                        &quot;created_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;
+                    }
+                ]
+            }
+        ],
+        &quot;first_page_url&quot;: &quot;http://localhost/api/events/index/1?page=1&quot;,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 1,
+        &quot;last_page_url&quot;: &quot;http://localhost/api/events/index/1?page=1&quot;,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost/api/events/index/1?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;next_page_url&quot;: null,
+        &quot;path&quot;: &quot;http://localhost/api/events/index/1&quot;,
+        &quot;per_page&quot;: 100,
+        &quot;prev_page_url&quot;: null,
+        &quot;to&quot;: 1,
+        &quot;total&quot;: 1
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-events-index--eventSeason--" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-events-index--eventSeason--"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-events-index--eventSeason--"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-events-index--eventSeason--" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-events-index--eventSeason--">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-events-index--eventSeason--" data-method="GET"
+      data-path="api/events/index/{eventSeason?}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-events-index--eventSeason--', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-events-index--eventSeason--"
+                    onclick="tryItOut('GETapi-events-index--eventSeason--');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-events-index--eventSeason--"
+                    onclick="cancelTryOut('GETapi-events-index--eventSeason--');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-events-index--eventSeason--"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/events/index/{eventSeason?}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-events-index--eventSeason--"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-events-index--eventSeason--"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>eventSeason</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="eventSeason"                data-endpoint="GETapi-events-index--eventSeason--"
+               value="1"
+               data-component="url">
+    <br>
+<p>Example: <code>1</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="events-GETapi-events-upcoming--eventSeason--">GET api/events/upcoming/{eventSeason?}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-events-upcoming--eventSeason--">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/events/upcoming/1" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/events/upcoming/1"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-events-upcoming--eventSeason--">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 59
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;&quot;,
+    &quot;data&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;data&quot;: [
+            {
+                &quot;id&quot;: 1,
+                &quot;event_season_id&quot;: 1,
+                &quot;title&quot;: &quot;Porro recusandae nisi qui pariatur iste voluptas doloribus doloremque.&quot;,
+                &quot;description&quot;: &quot;Debitis et asperiores ab eos omnis temporibus ea aut doloribus consequatur molestiae rerum iure.&quot;,
+                &quot;start_time&quot;: &quot;2024-03-03T12:32:25.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2024-04-03T12:32:25.000000Z&quot;,
+                &quot;home_team&quot;: &quot;labore&quot;,
+                &quot;away_team&quot;: &quot;autem&quot;,
+                &quot;created_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2024-01-03T12:32:25.000000Z&quot;
+            }
+        ],
+        &quot;first_page_url&quot;: &quot;http://localhost/api/events/upcoming/1?page=1&quot;,
+        &quot;from&quot;: 1,
+        &quot;last_page&quot;: 1,
+        &quot;last_page_url&quot;: &quot;http://localhost/api/events/upcoming/1?page=1&quot;,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost/api/events/upcoming/1?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;next_page_url&quot;: null,
+        &quot;path&quot;: &quot;http://localhost/api/events/upcoming/1&quot;,
+        &quot;per_page&quot;: 100,
+        &quot;prev_page_url&quot;: null,
+        &quot;to&quot;: 1,
+        &quot;total&quot;: 1
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-events-upcoming--eventSeason--" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-events-upcoming--eventSeason--"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-events-upcoming--eventSeason--"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-events-upcoming--eventSeason--" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-events-upcoming--eventSeason--">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-events-upcoming--eventSeason--" data-method="GET"
+      data-path="api/events/upcoming/{eventSeason?}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-events-upcoming--eventSeason--', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-events-upcoming--eventSeason--"
+                    onclick="tryItOut('GETapi-events-upcoming--eventSeason--');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-events-upcoming--eventSeason--"
+                    onclick="cancelTryOut('GETapi-events-upcoming--eventSeason--');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-events-upcoming--eventSeason--"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/events/upcoming/{eventSeason?}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-events-upcoming--eventSeason--"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-events-upcoming--eventSeason--"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>eventSeason</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="eventSeason"                data-endpoint="GETapi-events-upcoming--eventSeason--"
+               value="1"
+               data-component="url">
+    <br>
+<p>Example: <code>1</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="events-POSTapi-events-event-seasons--eventSeason_id--store">POST api/events/event-seasons/{eventSeason_id}/store</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-events-event-seasons--eventSeason_id--store">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/events/event-seasons/1/store" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"title\": \"jpnpzebzwetpchm\",
+    \"description\": \"Repellat eum nemo dolor recusandae.\",
+    \"start_time\": \"2024-01-03T13:41:01\",
+    \"end_time\": \"2024-01-03T13:41:01\",
+    \"home_team\": \"cumque\",
+    \"away_team\": \"dolorem\",
+    \"event_packages\": \"lyllnwcqhfeelaqndxilmjcpwwvmpwoynobaptbwdbfzvzamfiintacplmihnx\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/events/event-seasons/1/store"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "title": "jpnpzebzwetpchm",
+    "description": "Repellat eum nemo dolor recusandae.",
+    "start_time": "2024-01-03T13:41:01",
+    "end_time": "2024-01-03T13:41:01",
+    "home_team": "cumque",
+    "away_team": "dolorem",
+    "event_packages": "lyllnwcqhfeelaqndxilmjcpwwvmpwoynobaptbwdbfzvzamfiintacplmihnx"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-events-event-seasons--eventSeason_id--store">
+</span>
+<span id="execution-results-POSTapi-events-event-seasons--eventSeason_id--store" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-events-event-seasons--eventSeason_id--store"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-events-event-seasons--eventSeason_id--store"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-events-event-seasons--eventSeason_id--store" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-events-event-seasons--eventSeason_id--store">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-events-event-seasons--eventSeason_id--store" data-method="POST"
+      data-path="api/events/event-seasons/{eventSeason_id}/store"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-events-event-seasons--eventSeason_id--store', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-events-event-seasons--eventSeason_id--store"
+                    onclick="tryItOut('POSTapi-events-event-seasons--eventSeason_id--store');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-events-event-seasons--eventSeason_id--store"
+                    onclick="cancelTryOut('POSTapi-events-event-seasons--eventSeason_id--store');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-events-event-seasons--eventSeason_id--store"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/events/event-seasons/{eventSeason_id}/store</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-events-event-seasons--eventSeason_id--store"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-events-event-seasons--eventSeason_id--store"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>eventSeason_id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="eventSeason_id"                data-endpoint="POSTapi-events-event-seasons--eventSeason_id--store"
+               value="1"
+               data-component="url">
+    <br>
+<p>The ID of the eventSeason. Example: <code>1</code></p>
+            </div>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>title</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="title"                data-endpoint="POSTapi-events-event-seasons--eventSeason_id--store"
+               value="jpnpzebzwetpchm"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>jpnpzebzwetpchm</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="description"                data-endpoint="POSTapi-events-event-seasons--eventSeason_id--store"
+               value="Repellat eum nemo dolor recusandae."
+               data-component="body">
+    <br>
+<p>Example: <code>Repellat eum nemo dolor recusandae.</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>start_time</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="start_time"                data-endpoint="POSTapi-events-event-seasons--eventSeason_id--store"
+               value="2024-01-03T13:41:01"
+               data-component="body">
+    <br>
+<p>Must be a valid date. Example: <code>2024-01-03T13:41:01</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>end_time</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="end_time"                data-endpoint="POSTapi-events-event-seasons--eventSeason_id--store"
+               value="2024-01-03T13:41:01"
+               data-component="body">
+    <br>
+<p>Must be a valid date. Example: <code>2024-01-03T13:41:01</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>home_team</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="home_team"                data-endpoint="POSTapi-events-event-seasons--eventSeason_id--store"
+               value="cumque"
+               data-component="body">
+    <br>
+<p>Example: <code>cumque</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>away_team</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="away_team"                data-endpoint="POSTapi-events-event-seasons--eventSeason_id--store"
+               value="dolorem"
+               data-component="body">
+    <br>
+<p>Example: <code>dolorem</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+        <details>
+            <summary style="padding-bottom: 10px;">
+                <b style="line-height: 2;"><code>event_packages</code></b>&nbsp;&nbsp;
+<small>string[]</small>&nbsp;
+<i>optional</i> &nbsp;
+<br>
+<p>Must have at least 1 items. Example: <code>lyllnwcqhfeelaqndxilmjcpwwvmpwoynobaptbwdbfzvzamfiintacplmihnx</code></p>
+            </summary>
+                                                <div style="margin-left: 14px; clear: unset;">
+                        <b style="line-height: 2;"><code>seat_section_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="event_packages.0.seat_section_id"                data-endpoint="POSTapi-events-event-seasons--eventSeason_id--store"
+               value="nihil"
+               data-component="body">
+    <br>
+<p>Example: <code>nihil</code></p>
+                    </div>
+                                                                <div style="margin-left: 14px; clear: unset;">
+                        <b style="line-height: 2;"><code>price</code></b>&nbsp;&nbsp;
+<small>number</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="event_packages.0.price"                data-endpoint="POSTapi-events-event-seasons--eventSeason_id--store"
+               value="3.59"
+               data-component="body">
+    <br>
+<p>Example: <code>3.59</code></p>
+                    </div>
+                                    </details>
+        </div>
+        </form>
+
+                    <h2 id="events-POSTapi-events--id--update">POST api/events/{id}/update</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-events--id--update">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/events/1/update" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"title\": \"erhrcjmriytmtwxlkkgz\",
+    \"description\": \"Voluptatibus aliquam sint cum quis exercitationem tempora.\",
+    \"start_time\": \"2024-01-03T13:41:01\",
+    \"end_time\": \"2024-01-03T13:41:01\",
+    \"home_team\": \"ex\",
+    \"away_team\": \"commodi\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/events/1/update"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "title": "erhrcjmriytmtwxlkkgz",
+    "description": "Voluptatibus aliquam sint cum quis exercitationem tempora.",
+    "start_time": "2024-01-03T13:41:01",
+    "end_time": "2024-01-03T13:41:01",
+    "home_team": "ex",
+    "away_team": "commodi"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-events--id--update">
+</span>
+<span id="execution-results-POSTapi-events--id--update" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-events--id--update"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-events--id--update"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-events--id--update" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-events--id--update">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-events--id--update" data-method="POST"
+      data-path="api/events/{id}/update"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-events--id--update', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-events--id--update"
+                    onclick="tryItOut('POSTapi-events--id--update');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-events--id--update"
+                    onclick="cancelTryOut('POSTapi-events--id--update');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-events--id--update"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/events/{id}/update</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-events--id--update"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-events--id--update"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="POSTapi-events--id--update"
+               value="1"
+               data-component="url">
+    <br>
+<p>The ID of the event. Example: <code>1</code></p>
+            </div>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>title</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="title"                data-endpoint="POSTapi-events--id--update"
+               value="erhrcjmriytmtwxlkkgz"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>erhrcjmriytmtwxlkkgz</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="description"                data-endpoint="POSTapi-events--id--update"
+               value="Voluptatibus aliquam sint cum quis exercitationem tempora."
+               data-component="body">
+    <br>
+<p>Example: <code>Voluptatibus aliquam sint cum quis exercitationem tempora.</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>start_time</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="start_time"                data-endpoint="POSTapi-events--id--update"
+               value="2024-01-03T13:41:01"
+               data-component="body">
+    <br>
+<p>Must be a valid date. Example: <code>2024-01-03T13:41:01</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>end_time</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="end_time"                data-endpoint="POSTapi-events--id--update"
+               value="2024-01-03T13:41:01"
+               data-component="body">
+    <br>
+<p>Must be a valid date. Example: <code>2024-01-03T13:41:01</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>home_team</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="home_team"                data-endpoint="POSTapi-events--id--update"
+               value="ex"
+               data-component="body">
+    <br>
+<p>Example: <code>ex</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>away_team</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="away_team"                data-endpoint="POSTapi-events--id--update"
+               value="commodi"
+               data-component="body">
+    <br>
+<p>Example: <code>commodi</code></p>
+        </div>
+        </form>
+
+                    <h2 id="events-POSTapi-events--id--destroy">POST api/events/{id}/destroy</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-events--id--destroy">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/events/1/destroy" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/events/1/destroy"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-events--id--destroy">
+</span>
+<span id="execution-results-POSTapi-events--id--destroy" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-events--id--destroy"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-events--id--destroy"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-events--id--destroy" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-events--id--destroy">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-events--id--destroy" data-method="POST"
+      data-path="api/events/{id}/destroy"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-events--id--destroy', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-events--id--destroy"
+                    onclick="tryItOut('POSTapi-events--id--destroy');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-events--id--destroy"
+                    onclick="cancelTryOut('POSTapi-events--id--destroy');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-events--id--destroy"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/events/{id}/destroy</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-events--id--destroy"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-events--id--destroy"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="POSTapi-events--id--destroy"
+               value="1"
+               data-component="url">
+    <br>
+<p>The ID of the event. Example: <code>1</code></p>
+            </div>
+                    </form>
+
+                <h1 id="tickets">Tickets</h1>
+
+    
+
+                                <h2 id="tickets-POSTapi-tickets-init-payment">POST api/tickets/init-payment</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-tickets-init-payment">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/tickets/init-payment" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"merchant\": \"facilis\",
+    \"callback_url\": \"http:\\/\\/kreiger.net\\/\",
+    \"quantity\": 84,
+    \"name\": \"cyljfwzxnijineimuuo\",
+    \"phone\": \"nggmgclddxsnxadttstsod\",
+    \"email\": \"rbalistreri@example.org\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/tickets/init-payment"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "merchant": "facilis",
+    "callback_url": "http:\/\/kreiger.net\/",
+    "quantity": 84,
+    "name": "cyljfwzxnijineimuuo",
+    "phone": "nggmgclddxsnxadttstsod",
+    "email": "rbalistreri@example.org"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-tickets-init-payment">
+</span>
+<span id="execution-results-POSTapi-tickets-init-payment" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-tickets-init-payment"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-tickets-init-payment"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-tickets-init-payment" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-tickets-init-payment">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-tickets-init-payment" data-method="POST"
+      data-path="api/tickets/init-payment"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-tickets-init-payment', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-tickets-init-payment"
+                    onclick="tryItOut('POSTapi-tickets-init-payment');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-tickets-init-payment"
+                    onclick="cancelTryOut('POSTapi-tickets-init-payment');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-tickets-init-payment"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/tickets/init-payment</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-tickets-init-payment"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-tickets-init-payment"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>merchant</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="merchant"                data-endpoint="POSTapi-tickets-init-payment"
+               value="facilis"
+               data-component="body">
+    <br>
+<p>Example: <code>facilis</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>callback_url</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="callback_url"                data-endpoint="POSTapi-tickets-init-payment"
+               value="http://kreiger.net/"
+               data-component="body">
+    <br>
+<p>Example: <code>http://kreiger.net/</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>quantity</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="quantity"                data-endpoint="POSTapi-tickets-init-payment"
+               value="84"
+               data-component="body">
+    <br>
+<p>Must be at least 1. Example: <code>84</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="name"                data-endpoint="POSTapi-tickets-init-payment"
+               value="cyljfwzxnijineimuuo"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>cyljfwzxnijineimuuo</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>phone</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="phone"                data-endpoint="POSTapi-tickets-init-payment"
+               value="nggmgclddxsnxadttstsod"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>nggmgclddxsnxadttstsod</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="email"                data-endpoint="POSTapi-tickets-init-payment"
+               value="rbalistreri@example.org"
+               data-component="body">
+    <br>
+<p>Must be a valid email address. Must not be greater than 255 characters. Example: <code>rbalistreri@example.org</code></p>
+        </div>
+        </form>
+
+                    <h2 id="tickets-POSTapi-tickets-confirm-payment">POST api/tickets/confirm-payment</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-tickets-confirm-payment">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/tickets/confirm-payment" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"reference\": \"facilis\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/tickets/confirm-payment"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "reference": "facilis"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-tickets-confirm-payment">
+</span>
+<span id="execution-results-POSTapi-tickets-confirm-payment" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-tickets-confirm-payment"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-tickets-confirm-payment"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-tickets-confirm-payment" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-tickets-confirm-payment">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-tickets-confirm-payment" data-method="POST"
+      data-path="api/tickets/confirm-payment"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-tickets-confirm-payment', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-tickets-confirm-payment"
+                    onclick="tryItOut('POSTapi-tickets-confirm-payment');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-tickets-confirm-payment"
+                    onclick="cancelTryOut('POSTapi-tickets-confirm-payment');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-tickets-confirm-payment"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/tickets/confirm-payment</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-tickets-confirm-payment"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-tickets-confirm-payment"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>reference</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="reference"                data-endpoint="POSTapi-tickets-confirm-payment"
+               value="facilis"
+               data-component="body">
+    <br>
+<p>Example: <code>facilis</code></p>
+        </div>
+        </form>
+
+                    <h2 id="tickets-POSTapi-tickets-generate-ticket">POST api/tickets/generate-ticket</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-tickets-generate-ticket">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost/api/tickets/generate-ticket" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"reference\": \"reiciendis\",
+    \"seat_ids\": [
+        \"voluptatem\"
+    ]
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/tickets/generate-ticket"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "reference": "reiciendis",
+    "seat_ids": [
+        "voluptatem"
+    ]
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-tickets-generate-ticket">
+</span>
+<span id="execution-results-POSTapi-tickets-generate-ticket" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-tickets-generate-ticket"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-tickets-generate-ticket"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-tickets-generate-ticket" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-tickets-generate-ticket">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-tickets-generate-ticket" data-method="POST"
+      data-path="api/tickets/generate-ticket"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-tickets-generate-ticket', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-tickets-generate-ticket"
+                    onclick="tryItOut('POSTapi-tickets-generate-ticket');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-tickets-generate-ticket"
+                    onclick="cancelTryOut('POSTapi-tickets-generate-ticket');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-tickets-generate-ticket"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/tickets/generate-ticket</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-tickets-generate-ticket"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-tickets-generate-ticket"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>reference</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="reference"                data-endpoint="POSTapi-tickets-generate-ticket"
+               value="reiciendis"
+               data-component="body">
+    <br>
+<p>Example: <code>reiciendis</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>seat_ids</code></b>&nbsp;&nbsp;
+<small>string[]</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="seat_ids[0]"                data-endpoint="POSTapi-tickets-generate-ticket"
+               data-component="body">
+        <input type="text" style="display: none"
+               name="seat_ids[1]"                data-endpoint="POSTapi-tickets-generate-ticket"
+               data-component="body">
+    <br>
+
+        </div>
+        </form>
+
+            
+
+        
+    </div>
+    <div class="dark-box">
+                    <div class="lang-selector">
+                                                        <button type="button" class="lang-button" data-language-name="bash">bash</button>
+                                                        <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
+                            </div>
+            </div>
+</div>
+</body>
+</html>
