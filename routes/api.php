@@ -58,7 +58,10 @@ Route::group(['prefix' => 'event-packages'], function () {
 });
 
 Route::group(['prefix' => 'tickets'], function () {
-    Route::post('/init-payment', Tickets\InitTicketPurchaseController::class)->name('tickets.init-payment');
+    Route::post('/init-payment/{eventPackage}', Tickets\InitTicketPurchaseController::class)->name('tickets.init-payment');
     Route::post('/confirm-payment', Tickets\ConfirmPaymentController::class)->name('tickets.confirm-payment');
     Route::post('/generate-ticket', Tickets\GenerateTicketController::class)->name('tickets.generate');
+    Route::group(['middleware' => ['auth:sanctum']], function () {
+        Route::post('/verify', Tickets\VerifyTicketController::class)->name('tickets.verify');
+    });
 });

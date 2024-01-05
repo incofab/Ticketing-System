@@ -28,7 +28,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: quis
+        example: hic
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -37,14 +37,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: 'ISNJQ=h"''}}aSE'
+        example: 'uh-[J<j'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      phone: quis
-      password: 'ISNJQ=h"''}}aSE'
+      phone: hic
+      password: 'uh-[J<j'
     fileParameters: []
     responses: []
     responseFields: []

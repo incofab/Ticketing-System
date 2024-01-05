@@ -45,6 +45,6 @@ class EventPackage extends Model
 
   function ticketPayments()
   {
-    return $this->belongsTo(TicketPayment::class);
+    return $this->hasMany(TicketPayment::class);
   }
 }

@@ -26,8 +26,9 @@ class PaymentPaystack extends PaymentMerchant
 
   function verify(PaymentReference $paymentReference): Res
   {
-    return (new PaystackHelper())->verifyReference(
+    $ret = (new PaystackHelper())->verifyReference(
       $paymentReference->reference
     );
+    return $ret;
   }
 }

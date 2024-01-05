@@ -59,7 +59,7 @@ class InitTicketPurchaseController extends Controller
 
     $ticketPayment = $eventPackage->ticketPayments()->create([
       ...collect($data)
-        ->except('callback_url')
+        ->except('callback_url', 'merchant')
         ->toArray(),
       'user_id' => currentUser()?->id
     ]);

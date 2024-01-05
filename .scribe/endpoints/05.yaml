@@ -4,7 +4,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/tickets/init-payment
+    uri: 'api/tickets/init-payment/{eventPackage_id}'
     metadata:
       groupName: Tickets
       groupDescription: ''
@@ -17,8 +17,18 @@ endpoints:
     headers:
       Content-Type: application/json
       Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
+    urlParameters:
+      eventPackage_id:
+        name: eventPackage_id
+        description: 'The ID of the eventPackage.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      eventPackage_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -26,7 +36,7 @@ endpoints:
         name: merchant
         description: ''
         required: true
-        example: facilis
+        example: dolor
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -35,7 +45,7 @@ endpoints:
         name: callback_url
         description: ''
         required: false
-        example: 'http://kreiger.net/'
+        example: 'http://collier.net/excepturi-dignissimos-modi-perspiciatis-atque-dolores'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -44,7 +54,7 @@ endpoints:
         name: quantity
         description: 'Must be at least 1.'
         required: true
-        example: 84
+        example: 60
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -53,7 +63,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: cyljfwzxnijineimuuo
+        example: rixgyusgdktmavpqhqidrt
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -62,7 +72,7 @@ endpoints:
         name: phone
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: nggmgclddxsnxadttstsod
+        example: tmwnofcfqphtbnknjcoqqichs
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -71,18 +81,18 @@ endpoints:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: false
-        example: rbalistreri@example.org
+        example: marcos.barton@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      merchant: facilis
-      callback_url: 'http://kreiger.net/'
-      quantity: 84
-      name: cyljfwzxnijineimuuo
-      phone: nggmgclddxsnxadttstsod
-      email: rbalistreri@example.org
+      merchant: dolor
+      callback_url: 'http://collier.net/excepturi-dignissimos-modi-perspiciatis-atque-dolores'
+      quantity: 60
+      name: rixgyusgdktmavpqhqidrt
+      phone: tmwnofcfqphtbnknjcoqqichs
+      email: marcos.barton@example.com
     fileParameters: []
     responses: []
     responseFields: []
@@ -116,13 +126,13 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: facilis
+        example: ipsa
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      reference: facilis
+      reference: ipsa
     fileParameters: []
     responses: []
     responseFields: []
@@ -156,7 +166,7 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: reiciendis
+        example: porro
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -166,15 +176,75 @@ endpoints:
         description: ''
         required: true
         example:
-          - voluptatem
+          - et
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      reference: reiciendis
+      reference: porro
       seat_ids:
-        - voluptatem
+        - et
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/tickets/verify
+    metadata:
+      groupName: Tickets
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      ticket_id:
+        name: ticket_id
+        description: ''
+        required: true
+        example: 19
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      reference:
+        name: reference
+        description: ''
+        required: true
+        example: molestiae
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      device_no:
+        name: device_no
+        description: ''
+        required: true
+        example: officiis
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      ticket_id: 19
+      reference: molestiae
+      device_no: officiis
     fileParameters: []
     responses: []
     responseFields: []

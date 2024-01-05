@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Enums\PaymentMerchantType;
 use App\Enums\PaymentReferenceStatus;
+use Illuminate\Database\Eloquent\Casts\AsArrayObject;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Str;
@@ -17,7 +18,8 @@ class PaymentReference extends Model
     'paymentable_id' => 'integer',
     'user_id' => 'integer',
     'merchant' => PaymentMerchantType::class,
-    'status' => PaymentReferenceStatus::class
+    'status' => PaymentReferenceStatus::class,
+    'content' => AsArrayObject::class
   ];
 
   static function generateReference()

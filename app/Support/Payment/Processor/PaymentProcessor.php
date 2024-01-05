@@ -35,13 +35,15 @@ abstract class PaymentProcessor
 
     if (!$ret->isSuccessful()) {
       return throw ValidationException::withMessages([
-        'error' => $ret['message']
+        'error' => $ret->message
       ]);
     }
 
-    $amount = $ret['amount'];
+    $amount = $ret->amount;
     if ($amount < $this->paymentReference->amount) {
-      return throw ValidationException::withMessages($ret->toArray());
+      return throw ValidationException::withMessages([
+        'message' => "Payment insufficient: Paid: $amount, Expected: {$this->paymentReference->amount}"
+      ]);
     }
   }
 

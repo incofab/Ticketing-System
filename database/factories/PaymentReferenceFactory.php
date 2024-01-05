@@ -15,7 +15,8 @@ class PaymentReferenceFactory extends Factory
   {
     return [
       'reference' => Str::orderedUuid(),
-      'amount' => fake()->randomFloat(2, 10000, 100000)
+      'amount' => fake()->randomFloat(2, 10000, 100000),
+      'status' => PaymentReferenceStatus::Pending
     ];
   }
 

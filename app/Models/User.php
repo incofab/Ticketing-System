@@ -2,13 +2,11 @@
 
 namespace App\Models;
 
-use App\Enums\Gender;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Validation\Rules\Enum;
 use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
@@ -53,7 +51,7 @@ class User extends Authenticatable
         'max:20',
         'unique:users,phone,' . $userId
       ],
-      $prefix . 'gender' => ['nullable', new Enum(Gender::class)],
+      // $prefix . 'gender' => ['nullable', new Enum(Gender::class)],
       $prefix . 'email' => [
         'nullable',
         'string',
@@ -82,5 +80,10 @@ class User extends Authenticatable
     return Attribute::make(
       get: fn() => "{$this->first_name} {$this->other_names} {$this->last_name}"
     );
+  }
+
+  function ticketVerifications()
+  {
+    return $this->hasMany(TicketVerification::class);
   }
 }
