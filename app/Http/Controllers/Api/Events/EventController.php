@@ -32,6 +32,12 @@ class EventController extends Controller
     );
   }
 
+  public function show(Event $event)
+  {
+    $event->load('eventSeason', 'eventPackages', 'eventImages');
+    return $this->apiRes($event);
+  }
+
   public function store(Request $request, EventSeason $eventSeason)
   {
     $data = $request->validate([

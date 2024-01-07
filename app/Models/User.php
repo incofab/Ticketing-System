@@ -60,7 +60,7 @@ class User extends Authenticatable
       ],
       ...$userId
         ? []
-        : [$prefix . 'password' => ['required', 'string', 'confirmed', 'min:6']]
+        : [$prefix . 'password' => ['required', 'string', 'min:6']]
     ];
   }
 

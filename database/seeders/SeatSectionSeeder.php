@@ -10,19 +10,18 @@ use Illuminate\Database\Seeder;
 class SeatSectionSeeder extends Seeder
 {
   const SECTIONS = [
-    ['title' => 'cover-stand', 'capacity' => 2000, 'description' => null],
-    ['title' => 'open-stand', 'capacity' => 5000, 'description' => null]
+    ['title' => 'section-d', 'capacity' => 2253, 'description' => 'Section D']
   ];
 
   /** @return array{ 'seat_section_id': int, 'seat_no': string, 'description': string}[] */
   function getSeats(SeatSection $seatSection)
   {
     return [
-      [
-        'seat_no' => rand(10000, 99999),
-        'description' => null
-      ]
-    ];
+        // [
+        //   'seat_no' => rand(10000, 99999),
+        //   'description' => null
+        // ]
+      ];
   }
   /**
    * Run the database seeds.

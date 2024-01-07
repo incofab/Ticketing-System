@@ -38,7 +38,7 @@ endpoints:
         name: merchant
         description: ''
         required: true
-        example: dolor
+        example: qui
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -47,7 +47,7 @@ endpoints:
         name: callback_url
         description: ''
         required: false
-        example: 'http://collier.net/excepturi-dignissimos-modi-perspiciatis-atque-dolores'
+        example: 'http://www.orn.com/'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -56,7 +56,7 @@ endpoints:
         name: quantity
         description: 'Must be at least 1.'
         required: true
-        example: 60
+        example: 47
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -65,7 +65,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: rixgyusgdktmavpqhqidrt
+        example: qplslsrtdmccfbnrtziujdo
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -74,7 +74,7 @@ endpoints:
         name: phone
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: tmwnofcfqphtbnknjcoqqichs
+        example: juwlnxngoncmv
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -83,18 +83,18 @@ endpoints:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: false
-        example: marcos.barton@example.com
+        example: hzulauf@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      merchant: dolor
-      callback_url: 'http://collier.net/excepturi-dignissimos-modi-perspiciatis-atque-dolores'
-      quantity: 60
-      name: rixgyusgdktmavpqhqidrt
-      phone: tmwnofcfqphtbnknjcoqqichs
-      email: marcos.barton@example.com
+      merchant: qui
+      callback_url: 'http://www.orn.com/'
+      quantity: 47
+      name: qplslsrtdmccfbnrtziujdo
+      phone: juwlnxngoncmv
+      email: hzulauf@example.net
     fileParameters: []
     responses: []
     responseFields: []
@@ -128,13 +128,13 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: ipsa
+        example: libero
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      reference: ipsa
+      reference: libero
     fileParameters: []
     responses: []
     responseFields: []
@@ -168,7 +168,7 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: porro
+        example: facere
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -178,15 +178,15 @@ endpoints:
         description: ''
         required: true
         example:
-          - et
+          - sunt
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      reference: porro
+      reference: facere
       seat_ids:
-        - et
+        - sunt
     fileParameters: []
     responses: []
     responseFields: []
@@ -220,7 +220,7 @@ endpoints:
         name: ticket_id
         description: ''
         required: true
-        example: 19
+        example: 16
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -229,7 +229,7 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: molestiae
+        example: eum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -238,15 +238,15 @@ endpoints:
         name: device_no
         description: ''
         required: true
-        example: officiis
+        example: voluptatem
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      ticket_id: 19
-      reference: molestiae
-      device_no: officiis
+      ticket_id: 16
+      reference: eum
+      device_no: voluptatem
     fileParameters: []
     responses: []
     responseFields: []

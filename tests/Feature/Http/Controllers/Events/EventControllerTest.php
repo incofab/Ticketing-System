@@ -1,14 +1,14 @@
 <?php
 use App\Models\Event;
+use App\Models\EventImage;
+use App\Models\EventPackage;
 use App\Models\EventSeason;
 use App\Models\SeatSection;
 use App\Models\User;
 
 use function Pest\Laravel\actingAs;
-use function Pest\Laravel\assertDatabaseMissing;
 use function Pest\Laravel\assertSoftDeleted;
 use function Pest\Laravel\getJson;
-use function Pest\Laravel\postJson;
 use function PHPUnit\Framework\assertNotEmpty;
 
 beforeEach(function () {
@@ -43,6 +43,28 @@ it('can get a list of upcoming events', function () {
   $response->assertOk()->assertJsonCount(5, 'data.data');
 });
 
+it('can show an event', function () {
+  $event = Event::factory()->create();
+  EventPackage::factory(2)
+    ->event($event)
+    ->create();
+  EventImage::factory(2)
+    ->event($event)
+    ->create();
+  $event->load('eventSeason', 'eventPackages', 'eventImages');
+  getJson(route('api.events.show', $event))
+    ->assertOk()
+    ->assertJson([
+      'data' => [
+        'id' => $event->id,
+        'title' => $event->title,
+        'event_season' => $event->eventSeason->only('id', 'title'),
+        'event_packages' => $event->eventPackages->toArray(),
+        'event_images' => $event->eventImages->toArray()
+      ]
+    ]);
+});
+// return;
 it('can store a new event', function () {
   // Create some dummy data, for example:
   $eventSeason = EventSeason::factory()->create();

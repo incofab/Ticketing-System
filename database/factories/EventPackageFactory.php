@@ -16,4 +16,9 @@ class EventPackageFactory extends Factory
       'price' => fake()->randomFloat(1, 1000, 10000)
     ];
   }
+
+  function event(Event $event)
+  {
+    return $this->state(fn($attr) => ['event_id' => $event]);
+  }
 }

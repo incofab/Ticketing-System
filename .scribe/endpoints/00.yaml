@@ -26,7 +26,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: hic
+        example: et
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -35,14 +35,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: 'uh-[J<j'
+        example: 'lqr||[8O`oq:rQ'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      phone: hic
-      password: 'uh-[J<j'
+      phone: et
+      password: 'lqr||[8O`oq:rQ'
     fileParameters: []
     responses: []
     responseFields: []
@@ -71,8 +71,68 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      first_name:
+        name: first_name
+        description: ''
+        required: true
+        example: 4
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      last_name:
+        name: last_name
+        description: ''
+        required: true
+        example: odio
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      other_names:
+        name: other_names
+        description: ''
+        required: false
+        example: id
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      phone:
+        name: phone
+        description: ''
+        required: true
+        example: recusandae
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      email:
+        name: email
+        description: ''
+        required: false
+        example: paucek.katheryn@example.org
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: 'hvL9I?Ebp-'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      first_name: 4
+      last_name: odio
+      other_names: id
+      phone: recusandae
+      email: paucek.katheryn@example.org
+      password: 'hvL9I?Ebp-'
     fileParameters: []
     responses: []
     responseFields: []

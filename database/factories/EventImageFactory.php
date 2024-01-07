@@ -16,4 +16,9 @@ class EventImageFactory extends Factory
       'image' => fake()->imageUrl()
     ];
   }
+
+  function event(Event $event)
+  {
+    return $this->state(fn($attr) => ['event_id' => $event]);
+  }
 }

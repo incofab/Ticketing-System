@@ -27,7 +27,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"","data":{"current_page":1,"data":[{"id":1,"event_id":1,"seat_section_id":1,"price":8706.4,"quantity_sold":0,"created_at":"2024-01-03T12:32:25.000000Z","updated_at":"2024-01-03T12:32:25.000000Z"},{"id":2,"event_id":2,"seat_section_id":2,"price":8009.2,"quantity_sold":0,"created_at":"2024-01-03T12:32:25.000000Z","updated_at":"2024-01-03T12:32:25.000000Z"},{"id":3,"event_id":3,"seat_section_id":3,"price":4855.3,"quantity_sold":0,"created_at":"2024-01-03T12:32:25.000000Z","updated_at":"2024-01-03T12:32:25.000000Z"},{"id":4,"event_id":4,"seat_section_id":5,"price":7031.9,"quantity_sold":0,"created_at":"2024-01-03T12:32:25.000000Z","updated_at":"2024-01-03T12:32:25.000000Z"},{"id":5,"event_id":5,"seat_section_id":6,"price":7712,"quantity_sold":0,"created_at":"2024-01-03T12:32:25.000000Z","updated_at":"2024-01-03T12:32:25.000000Z"},{"id":6,"event_id":6,"seat_section_id":7,"price":5415.7,"quantity_sold":0,"created_at":"2024-01-03T12:32:25.000000Z","updated_at":"2024-01-03T12:32:25.000000Z"},{"id":7,"event_id":7,"seat_section_id":9,"price":2010.4,"quantity_sold":0,"created_at":"2024-01-03T12:32:25.000000Z","updated_at":"2024-01-03T12:32:25.000000Z"},{"id":8,"event_id":8,"seat_section_id":10,"price":1153,"quantity_sold":0,"created_at":"2024-01-03T12:32:25.000000Z","updated_at":"2024-01-03T12:32:25.000000Z"},{"id":9,"event_id":9,"seat_section_id":11,"price":2885.1,"quantity_sold":0,"created_at":"2024-01-03T12:32:25.000000Z","updated_at":"2024-01-03T12:32:25.000000Z"},{"id":10,"event_id":10,"seat_section_id":13,"price":8893,"quantity_sold":0,"created_at":"2024-01-03T12:32:25.000000Z","updated_at":"2024-01-03T12:32:25.000000Z"},{"id":11,"event_id":11,"seat_section_id":14,"price":8946.9,"quantity_sold":0,"created_at":"2024-01-03T12:32:25.000000Z","updated_at":"2024-01-03T12:32:25.000000Z"},{"id":12,"event_id":12,"seat_section_id":15,"price":4512.1,"quantity_sold":0,"created_at":"2024-01-03T12:32:25.000000Z","updated_at":"2024-01-03T12:32:25.000000Z"},{"id":13,"event_id":13,"seat_section_id":17,"price":1374.3,"quantity_sold":0,"created_at":"2024-01-03T12:32:25.000000Z","updated_at":"2024-01-03T12:32:25.000000Z"},{"id":14,"event_id":14,"seat_section_id":18,"price":7857.7,"quantity_sold":0,"created_at":"2024-01-03T12:32:25.000000Z","updated_at":"2024-01-03T12:32:25.000000Z"},{"id":15,"event_id":15,"seat_section_id":19,"price":3324.2,"quantity_sold":0,"created_at":"2024-01-03T12:32:25.000000Z","updated_at":"2024-01-03T12:32:25.000000Z"}],"first_page_url":"http:\/\/localhost\/api\/event-packages\/index?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/event-packages\/index?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/event-packages\/index?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/event-packages\/index","per_page":100,"prev_page_url":null,"to":15,"total":15}}'
+        content: '{"message":"","data":{"current_page":1,"data":[{"id":1,"event_id":1,"seat_section_id":1,"price":1048.9,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":2,"event_id":2,"seat_section_id":2,"price":5667.5,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":3,"event_id":3,"seat_section_id":3,"price":8937.7,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":4,"event_id":4,"seat_section_id":5,"price":2890.6,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":5,"event_id":5,"seat_section_id":6,"price":2880.7,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":6,"event_id":6,"seat_section_id":7,"price":4123.8,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":7,"event_id":7,"seat_section_id":9,"price":2418.3,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":8,"event_id":8,"seat_section_id":10,"price":7054.4,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":9,"event_id":9,"seat_section_id":11,"price":2660.8,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":10,"event_id":10,"seat_section_id":13,"price":7311.5,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":11,"event_id":11,"seat_section_id":14,"price":8688.8,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":12,"event_id":12,"seat_section_id":15,"price":2387.7,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":13,"event_id":13,"seat_section_id":17,"price":5205.4,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":14,"event_id":14,"seat_section_id":18,"price":6604.9,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":15,"event_id":15,"seat_section_id":19,"price":9861.5,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"}],"first_page_url":"http:\/\/localhost\/api\/event-packages\/index?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/event-packages\/index?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/event-packages\/index?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/event-packages\/index","per_page":100,"prev_page_url":null,"to":15,"total":15}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -63,13 +63,13 @@ endpoints:
         name: event_id
         description: 'The ID of the event.'
         required: true
-        example: 15
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      event_id: 15
+      event_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -77,7 +77,7 @@ endpoints:
         name: seat_section_id
         description: ''
         required: true
-        example: maxime
+        example: ut
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -86,14 +86,14 @@ endpoints:
         name: price
         description: ''
         required: true
-        example: 25.0
+        example: 261829.0
         type: number
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      seat_section_id: maxime
-      price: 25.0
+      seat_section_id: ut
+      price: 261829.0
     fileParameters: []
     responses: []
     responseFields: []

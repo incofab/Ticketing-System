@@ -12,12 +12,20 @@ use Illuminate\Support\Facades\Auth;
  */
 class ApiAuthController extends Controller
 {
+  /**
+   * @bodyParam first_name int required
+   * @bodyParam last_name string required
+   * @bodyParam other_names string
+   * @bodyParam phone string required
+   * @bodyParam email string
+   * @bodyParam password string required
+   */
   public function register(Request $request)
   {
     $data = $request->validate(User::generalRule());
     $user = User::create([...$data, 'password' => bcrypt($data['password'])]);
 
-    $token = $user->createToken(User::API_ACCESS_TOKEN_NAME)->accessToken;
+    $token = $user->createToken(User::API_ACCESS_TOKEN_NAME)->plainTextToken;
 
     return $this->ok(['token' => $token]);
   }
@@ -34,7 +42,7 @@ class ApiAuthController extends Controller
     }
 
     $token = currentUser()->createToken(User::API_ACCESS_TOKEN_NAME)
-      ->accessToken;
+      ->plainTextToken;
     return $this->ok(['token' => $token]);
   }
 
