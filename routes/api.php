@@ -27,6 +27,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
 Route::group(['prefix' => 'seats'], function () {
     Route::get('/index/{seatSection?}', [Seats\SeatController::class, 'index'])->name('seats.index');
+    Route::get('/available/{eventPackage}', [Seats\SeatController::class, 'available'])->name('seats.available');
 });
 
 Route::group(['prefix' => 'seat-sections'], function () {

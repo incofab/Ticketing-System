@@ -1,6 +1,9 @@
 <?php
+
+use App\Models\EventPackage;
 use App\Models\Seat;
 use App\Models\SeatSection;
+use App\Models\Ticket;
 use App\Models\User;
 
 use function Pest\Laravel\getJson;
@@ -28,3 +31,37 @@ it('can get a list of event ', function () {
     ->assertOk()
     ->assertJsonCount(4, 'data.data');
 });
+
+it('returns available seats for the designated event package', function () {
+  // Create an event package and associated seat
+  $eventPackage = EventPackage::factory()->create();
+  [$seats1] = Seat::factory(10)->create([
+    'seat_section_id' => $eventPackage->seat_section_id
+  ]);
+  // Create a ticket within a different event package
+  Ticket::factory(3)->create();
+  Ticket::factory(3)
+    ->eventPackage($eventPackage)
+    ->create();
+  Ticket::factory()
+    ->eventPackage($eventPackage)
+    ->create([
+      'event_package_id' => $eventPackage->id,
+      'seat_id' => $seats1->id
+    ]);
+  // dd(Seat::all()->count() . ' djdskds');
+  // Make a request to the available seats endpoint
+  getJson(route('api.seats.available', [$eventPackage]))
+    ->assertOk()
+    // ->dump()
+    ->assertJsonCount(9, 'data.data')
+    ->assertJsonStructure([
+      'data' => [
+        'data' => [
+          '*' => ['id', 'seat_section_id']
+        ]
+      ]
+    ]);
+});
+
+// Add more tests to cover different scenarios, such as no available seats, etc.

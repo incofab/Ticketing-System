@@ -76,11 +76,12 @@ it('generates tickets for a valid payment reference and seat ids', function () {
     'reference' => $this->paymentReference->reference,
     'seat_ids' => $seatIds
   ])
-    // ->dump()
+    ->dump()
     ->assertOk();
   expect(
     Ticket::whereIn('seat_id', $seatIds)
       ->get()
       ->count()
   )->toBe(count($seatIds));
+  // dd(json_encode(Ticket::query()->first()));
 });

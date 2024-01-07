@@ -39,7 +39,514 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"","data":{"current_page":1,"data":[],"first_page_url":"http:\/\/localhost\/api\/seats\/index\/1?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/seats\/index\/1?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/seats\/index\/1?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/seats\/index\/1","per_page":100,"prev_page_url":null,"to":null,"total":0}}'
+        content: '{"message":"","data":{"current_page":1,"data":[{"id":1,"seat_section_id":1,"seat_no":"0001","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":2,"seat_section_id":1,"seat_no":"0002","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":3,"seat_section_id":1,"seat_no":"0003","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":4,"seat_section_id":1,"seat_no":"0004","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":5,"seat_section_id":1,"seat_no":"0005","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":6,"seat_section_id":1,"seat_no":"0006","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":7,"seat_section_id":1,"seat_no":"0007","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":8,"seat_section_id":1,"seat_no":"0008","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":9,"seat_section_id":1,"seat_no":"0009","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":10,"seat_section_id":1,"seat_no":"0010","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":11,"seat_section_id":1,"seat_no":"0011","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":12,"seat_section_id":1,"seat_no":"0012","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":13,"seat_section_id":1,"seat_no":"0013","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":14,"seat_section_id":1,"seat_no":"0014","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":15,"seat_section_id":1,"seat_no":"0015","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":16,"seat_section_id":1,"seat_no":"0016","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":17,"seat_section_id":1,"seat_no":"0017","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":18,"seat_section_id":1,"seat_no":"0018","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":19,"seat_section_id":1,"seat_no":"0019","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":20,"seat_section_id":1,"seat_no":"0020","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":21,"seat_section_id":1,"seat_no":"0021","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":22,"seat_section_id":1,"seat_no":"0022","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":23,"seat_section_id":1,"seat_no":"0023","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":24,"seat_section_id":1,"seat_no":"0024","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":25,"seat_section_id":1,"seat_no":"0025","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":26,"seat_section_id":1,"seat_no":"0026","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":27,"seat_section_id":1,"seat_no":"0027","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":28,"seat_section_id":1,"seat_no":"0028","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":29,"seat_section_id":1,"seat_no":"0029","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":30,"seat_section_id":1,"seat_no":"0030","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":31,"seat_section_id":1,"seat_no":"0031","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":32,"seat_section_id":1,"seat_no":"0032","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":33,"seat_section_id":1,"seat_no":"0033","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":34,"seat_section_id":1,"seat_no":"0034","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":35,"seat_section_id":1,"seat_no":"0035","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":36,"seat_section_id":1,"seat_no":"0036","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":37,"seat_section_id":1,"seat_no":"0037","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":38,"seat_section_id":1,"seat_no":"0038","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":39,"seat_section_id":1,"seat_no":"0039","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":40,"seat_section_id":1,"seat_no":"0040","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":41,"seat_section_id":1,"seat_no":"0041","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":42,"seat_section_id":1,"seat_no":"0042","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":43,"seat_section_id":1,"seat_no":"0043","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":44,"seat_section_id":1,"seat_no":"0044","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":45,"seat_section_id":1,"seat_no":"0045","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":46,"seat_section_id":1,"seat_no":"0046","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":47,"seat_section_id":1,"seat_no":"0047","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":48,"seat_section_id":1,"seat_no":"0048","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":49,"seat_section_id":1,"seat_no":"0049","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":50,"seat_section_id":1,"seat_no":"0050","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":51,"seat_section_id":1,"seat_no":"0051","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":52,"seat_section_id":1,"seat_no":"0052","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":53,"seat_section_id":1,"seat_no":"0053","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":54,"seat_section_id":1,"seat_no":"0054","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":55,"seat_section_id":1,"seat_no":"0055","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":56,"seat_section_id":1,"seat_no":"0056","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":57,"seat_section_id":1,"seat_no":"0057","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":58,"seat_section_id":1,"seat_no":"0058","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":59,"seat_section_id":1,"seat_no":"0059","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":60,"seat_section_id":1,"seat_no":"0060","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":61,"seat_section_id":1,"seat_no":"0061","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":62,"seat_section_id":1,"seat_no":"0062","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":63,"seat_section_id":1,"seat_no":"0063","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":64,"seat_section_id":1,"seat_no":"0064","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":65,"seat_section_id":1,"seat_no":"0065","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":66,"seat_section_id":1,"seat_no":"0066","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":67,"seat_section_id":1,"seat_no":"0067","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":68,"seat_section_id":1,"seat_no":"0068","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":69,"seat_section_id":1,"seat_no":"0069","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":70,"seat_section_id":1,"seat_no":"0070","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":71,"seat_section_id":1,"seat_no":"0071","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":72,"seat_section_id":1,"seat_no":"0072","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":73,"seat_section_id":1,"seat_no":"0073","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":74,"seat_section_id":1,"seat_no":"0074","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":75,"seat_section_id":1,"seat_no":"0075","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":76,"seat_section_id":1,"seat_no":"0076","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":77,"seat_section_id":1,"seat_no":"0077","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":78,"seat_section_id":1,"seat_no":"0078","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":79,"seat_section_id":1,"seat_no":"0079","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":80,"seat_section_id":1,"seat_no":"0080","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":81,"seat_section_id":1,"seat_no":"0081","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":82,"seat_section_id":1,"seat_no":"0082","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":83,"seat_section_id":1,"seat_no":"0083","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":84,"seat_section_id":1,"seat_no":"0084","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":85,"seat_section_id":1,"seat_no":"0085","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":86,"seat_section_id":1,"seat_no":"0086","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":87,"seat_section_id":1,"seat_no":"0087","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":88,"seat_section_id":1,"seat_no":"0088","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":89,"seat_section_id":1,"seat_no":"0089","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":90,"seat_section_id":1,"seat_no":"0090","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":91,"seat_section_id":1,"seat_no":"0091","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":92,"seat_section_id":1,"seat_no":"0092","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":93,"seat_section_id":1,"seat_no":"0093","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":94,"seat_section_id":1,"seat_no":"0094","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":95,"seat_section_id":1,"seat_no":"0095","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":96,"seat_section_id":1,"seat_no":"0096","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":97,"seat_section_id":1,"seat_no":"0097","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":98,"seat_section_id":1,"seat_no":"0098","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":99,"seat_section_id":1,"seat_no":"0099","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"},{"id":100,"seat_section_id":1,"seat_no":"0100","description":null,"features":null,"status":"available","deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z"}],"first_page_url":"http:\/\/localhost\/api\/seats\/index\/1?page=1","from":1,"last_page":100,"last_page_url":"http:\/\/localhost\/api\/seats\/index\/1?page=100","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/seats\/index\/1?page=1","label":"1","active":true},{"url":"http:\/\/localhost\/api\/seats\/index\/1?page=2","label":"2","active":false},{"url":"http:\/\/localhost\/api\/seats\/index\/1?page=3","label":"3","active":false},{"url":"http:\/\/localhost\/api\/seats\/index\/1?page=4","label":"4","active":false},{"url":"http:\/\/localhost\/api\/seats\/index\/1?page=5","label":"5","active":false},{"url":"http:\/\/localhost\/api\/seats\/index\/1?page=6","label":"6","active":false},{"url":"http:\/\/localhost\/api\/seats\/index\/1?page=7","label":"7","active":false},{"url":"http:\/\/localhost\/api\/seats\/index\/1?page=8","label":"8","active":false},{"url":"http:\/\/localhost\/api\/seats\/index\/1?page=9","label":"9","active":false},{"url":"http:\/\/localhost\/api\/seats\/index\/1?page=10","label":"10","active":false},{"url":null,"label":"...","active":false},{"url":"http:\/\/localhost\/api\/seats\/index\/1?page=99","label":"99","active":false},{"url":"http:\/\/localhost\/api\/seats\/index\/1?page=100","label":"100","active":false},{"url":"http:\/\/localhost\/api\/seats\/index\/1?page=2","label":"Next &raquo;","active":false}],"next_page_url":"http:\/\/localhost\/api\/seats\/index\/1?page=2","path":"http:\/\/localhost\/api\/seats\/index\/1","per_page":100,"prev_page_url":null,"to":100,"total":10000}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '59'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/seats/available/{eventPackage_id}'
+    metadata:
+      groupName: Seats
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      eventPackage_id:
+        name: eventPackage_id
+        description: 'The ID of the eventPackage.'
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      eventPackage_id: 2
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: |-
+          {
+              "message": "No query results for model [App\\Models\\EventPackage] 2",
+              "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+              "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
+              "line": 487,
+              "trace": [
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
+                      "line": 463,
+                      "function": "prepareException",
+                      "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php",
+                      "line": 54,
+                      "function": "render",
+                      "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php",
+                      "line": 51,
+                      "function": "render",
+                      "class": "NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 185,
+                      "function": "handleException",
+                      "class": "Illuminate\\Routing\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
+                      "line": 159,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
+                      "line": 135,
+                      "function": "handleRequest",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
+                      "line": 87,
+                      "function": "handleRequestUsingNamedLimiter",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php",
+                      "line": 25,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 141,
+                      "function": "Laravel\\Sanctum\\Http\\Middleware\\{closure}",
+                      "class": "Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 116,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php",
+                      "line": 26,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 116,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 800,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 777,
+                      "function": "runRouteWithinStack",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 741,
+                      "function": "runRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 730,
+                      "function": "dispatchToRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 200,
+                      "function": "dispatch",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 141,
+                      "function": "Illuminate\\Foundation\\Http\\{closure}",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php",
+                      "line": 59,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Barryvdh\\Debugbar\\Middleware\\InjectDebugbar",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php",
+                      "line": 31,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php",
+                      "line": 40,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php",
+                      "line": 27,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php",
+                      "line": 99,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php",
+                      "line": 62,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\HandleCors",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php",
+                      "line": 39,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\TrustProxies",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 116,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 175,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 144,
+                      "function": "sendRequestThroughRouter",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 300,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 288,
+                      "function": "callLaravelOrLumenRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 91,
+                      "function": "makeApiCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 44,
+                      "function": "makeResponseCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 35,
+                      "function": "makeResponseCallIfConditionsPass",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 236,
+                      "function": "__invoke",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 166,
+                      "function": "iterateThroughStrategies",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 95,
+                      "function": "fetchResponses",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 125,
+                      "function": "processRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 72,
+                      "function": "extractEndpointsInfoFromLaravelApp",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 50,
+                      "function": "extractEndpointsInfoAndWriteToDisk",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php",
+                      "line": 53,
+                      "function": "get",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 36,
+                      "function": "handle",
+                      "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Container/Util.php",
+                      "line": 41,
+                      "function": "Illuminate\\Container\\{closure}",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 93,
+                      "function": "unwrapIfClosure",
+                      "class": "Illuminate\\Container\\Util",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 37,
+                      "function": "callBoundMethod",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php",
+                      "line": 662,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "line": 211,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\Container",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/symfony/console/Command/Command.php",
+                      "line": 326,
+                      "function": "execute",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "line": 181,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Command\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/symfony/console/Application.php",
+                      "line": 1081,
+                      "function": "run",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/symfony/console/Application.php",
+                      "line": 320,
+                      "function": "doRunCommand",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/symfony/console/Application.php",
+                      "line": 174,
+                      "function": "doRun",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php",
+                      "line": 201,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/var/www/html/artisan",
+                      "line": 37,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Console\\Kernel",
+                      "type": "->"
+                  }
+              ]
+          }
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -80,7 +587,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"","data":[{"id":1,"capacity":10000,"title":"Regular","description":null,"features":null,"deleted_at":null,"created_at":"2024-01-07T13:18:02.000000Z","updated_at":"2024-01-07T13:18:02.000000Z","seats_count":0},{"id":2,"capacity":2083,"title":"Cover Stand Regular","description":null,"features":null,"deleted_at":null,"created_at":"2024-01-07T13:18:02.000000Z","updated_at":"2024-01-07T13:18:02.000000Z","seats_count":0},{"id":3,"capacity":60,"title":"Cover Stand Executive","description":null,"features":null,"deleted_at":null,"created_at":"2024-01-07T13:18:02.000000Z","updated_at":"2024-01-07T13:18:02.000000Z","seats_count":0},{"id":4,"capacity":110,"title":"Press Gallery","description":null,"features":null,"deleted_at":null,"created_at":"2024-01-07T13:18:02.000000Z","updated_at":"2024-01-07T13:18:02.000000Z","seats_count":0},{"id":5,"capacity":956,"title":"Vitae voluptas eaque facere natus quas quia temporibus.","description":"Voluptatem qui a sint ea tempora est nostrum qui sapiente quibusdam et ut corrupti.","features":"Tenetur sunt vero modi expedita consequuntur quam ea veritatis et et.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":6,"capacity":673,"title":"Nostrum omnis deleniti vitae in neque.","description":"Necessitatibus ducimus labore ut qui et sit qui et nostrum reprehenderit.","features":"Sed rerum aut aut error et incidunt quia autem corrupti.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":7,"capacity":972,"title":"Aut voluptas non dolorum et itaque.","description":"Qui est inventore est totam omnis illo.","features":"Repellendus numquam repudiandae aliquid non assumenda similique mollitia sed.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":8,"capacity":538,"title":"Ullam quaerat cum voluptatum ut rem sunt.","description":"Quaerat qui ea dolor ea nemo sapiente est sit.","features":"Laudantium aspernatur sit molestiae quo sed.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":1},{"id":9,"capacity":989,"title":"Ad et natus dolores et eveniet qui aliquid.","description":"Veniam debitis ea atque libero repellendus architecto voluptatem mollitia.","features":"Sit officiis ad eligendi qui minus.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":10,"capacity":896,"title":"Sit est dolore ut aut est sapiente.","description":"Accusantium libero eos qui ad sunt iure eum beatae nihil aliquid.","features":"Velit voluptate quo minus enim ipsam distinctio.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":11,"capacity":118,"title":"Quis ut id distinctio.","description":"Cumque consequatur adipisci est nam quo amet.","features":"Laboriosam inventore nesciunt et consectetur nemo.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":12,"capacity":328,"title":"Quod perferendis doloremque ipsam magni est.","description":"Magni fugiat qui est et reiciendis at explicabo.","features":"Qui nisi cumque sint repellendus officiis error.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":1},{"id":13,"capacity":815,"title":"Distinctio velit assumenda sunt corporis quia quo voluptas.","description":"Vel alias est doloremque numquam sed tempore non libero molestiae non placeat.","features":"Ut voluptates dolor voluptates officiis harum omnis minima eos.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":14,"capacity":629,"title":"Dolores molestiae a repellat quia praesentium.","description":"Sit eum commodi aut hic consequatur quae incidunt omnis atque voluptatem quis sed magnam.","features":"Vel eum qui qui nihil reiciendis voluptate perferendis voluptas.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":15,"capacity":111,"title":"Ut quas est perspiciatis nemo nobis ipsum omnis.","description":"Et aut voluptatem rerum maxime sit quia voluptas reiciendis.","features":"Repellendus rem veritatis sit omnis soluta est aut corrupti doloremque maxime.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":16,"capacity":147,"title":"Rerum optio tempore sequi harum voluptatem vel.","description":"Ex sed enim dolor error saepe inventore voluptatum sit excepturi occaecati distinctio aut.","features":"Itaque ut quam officia autem dolorem rem perferendis non incidunt aut.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":1},{"id":17,"capacity":239,"title":"Eaque accusamus laborum maiores doloribus cumque soluta.","description":"Et hic sit ut fugit recusandae est velit animi sunt mollitia ipsum.","features":"Ea aperiam culpa ipsa esse molestias et est.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":18,"capacity":477,"title":"Mollitia dicta earum dicta tempore necessitatibus.","description":"Consequatur et cumque ipsa dolor fugiat porro.","features":"Quia nemo earum reprehenderit et aut.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":19,"capacity":265,"title":"Vel expedita error beatae dolore pariatur.","description":"Eum dignissimos praesentium deleniti iusto aliquid laborum illo.","features":"Optio assumenda ut expedita id assumenda.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":20,"capacity":959,"title":"Minus et iusto sit atque maxime.","description":"Enim odit numquam eum assumenda voluptatum aut.","features":"Totam voluptas exercitationem quia sunt magni.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":1},{"id":21,"capacity":464,"title":"Vel vero dignissimos voluptas dignissimos atque.","description":"Omnis vitae autem maxime nisi dolorem officiis inventore nobis et.","features":"Iure sequi sit quibusdam voluptatem voluptas suscipit dolore adipisci.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":22,"capacity":431,"title":"Distinctio quis ut assumenda fuga ipsam.","description":"Eveniet et ea consequuntur ad quod velit id tempore blanditiis qui.","features":"Et amet mollitia dolorem nulla nam officiis.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":23,"capacity":139,"title":"Vel qui eum rerum.","description":"Rerum aut voluptatem ab maxime iste quia.","features":"Doloremque est aut voluptatem dolor.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":24,"capacity":317,"title":"Ad praesentium ipsum ex consequatur est ipsam.","description":"Quisquam doloribus aliquid et laborum qui quia iusto.","features":"Dolorum aliquam quos illum voluptatem possimus.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":1}]}'
+        content: '{"message":"","data":[{"id":1,"capacity":10000,"title":"Regular","description":null,"features":null,"deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z","seats_count":10000},{"id":2,"capacity":2083,"title":"Cover Stand Regular","description":null,"features":null,"deleted_at":null,"created_at":"2024-01-07T18:11:41.000000Z","updated_at":"2024-01-07T18:11:41.000000Z","seats_count":2083},{"id":3,"capacity":60,"title":"Cover Stand Executive","description":null,"features":null,"deleted_at":null,"created_at":"2024-01-07T18:11:47.000000Z","updated_at":"2024-01-07T18:11:47.000000Z","seats_count":60},{"id":4,"capacity":110,"title":"Press Gallery","description":null,"features":null,"deleted_at":null,"created_at":"2024-01-07T18:11:47.000000Z","updated_at":"2024-01-07T18:11:47.000000Z","seats_count":110}]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -130,7 +637,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: bertzczvmvvgi
+        example: tudcrdzecunbfye
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -139,7 +646,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Optio modi dolores deleniti in.'
+        example: 'Ipsam molestiae nihil quos aliquam sint adipisci quaerat necessitatibus.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -148,7 +655,7 @@ endpoints:
         name: features
         description: ''
         required: false
-        example: dicta
+        example: nostrum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -157,16 +664,16 @@ endpoints:
         name: capacity
         description: ''
         required: true
-        example: 1
+        example: 5
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: bertzczvmvvgi
-      description: 'Optio modi dolores deleniti in.'
-      features: dicta
-      capacity: 1
+      title: tudcrdzecunbfye
+      description: 'Ipsam molestiae nihil quos aliquam sint adipisci quaerat necessitatibus.'
+      features: nostrum
+      capacity: 5
     fileParameters: []
     responses: []
     responseFields: []

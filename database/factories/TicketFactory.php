@@ -26,6 +26,13 @@ class TicketFactory extends Factory
   function eventPackage(EventPackage $eventPackage = null)
   {
     $eventPackage = $eventPackage ?? EventPackage::factory()->create();
-    return $this->state(fn($attr) => ['event_package_id' => $eventPackage->id]);
+    return $this->state(
+      fn($attr) => [
+        'event_package_id' => $eventPackage->id
+        // 'seat_id' => Seat::factory()->create([
+        //   'seat_section_id' => $eventPackage->seat_section_id
+        // ])
+      ]
+    );
   }
 }
