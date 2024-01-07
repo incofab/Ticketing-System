@@ -16,6 +16,14 @@ class Seat extends Model
     'status' => SeatStatus::class
   ];
 
+  function scopeSeatSectionId($query, $seatSectionId)
+  {
+    return $query->when(
+      $seatSectionId,
+      fn($q, $value) => $q->where('seat_section_id', $value)
+    );
+  }
+
   function seatSection()
   {
     return $this->belongsTo(SeatSection::class);

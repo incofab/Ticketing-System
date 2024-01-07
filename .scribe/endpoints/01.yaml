@@ -4,6 +4,57 @@ endpoints:
   -
     httpMethods:
       - GET
+    uri: 'api/seats/index/{seatSection?}'
+    metadata:
+      groupName: Seats
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seatSection:
+        name: seatSection
+        description: ''
+        required: false
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      seatSection: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"message":"","data":{"current_page":1,"data":[],"first_page_url":"http:\/\/localhost\/api\/seats\/index\/1?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/seats\/index\/1?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/seats\/index\/1?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/seats\/index\/1","per_page":100,"prev_page_url":null,"to":null,"total":0}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '59'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
     uri: api/seat-sections/index
     metadata:
       groupName: Seats
@@ -77,7 +128,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: ztkoqknrogocqlbjzuellqz
+        example: bertzczvmvvgi
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -86,7 +137,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Aut qui occaecati dolorum eius impedit possimus ut qui.'
+        example: 'Optio modi dolores deleniti in.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -95,7 +146,7 @@ endpoints:
         name: features
         description: ''
         required: false
-        example: sit
+        example: dicta
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -104,16 +155,16 @@ endpoints:
         name: capacity
         description: ''
         required: true
-        example: 20
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: ztkoqknrogocqlbjzuellqz
-      description: 'Aut qui occaecati dolorum eius impedit possimus ut qui.'
-      features: sit
-      capacity: 20
+      title: bertzczvmvvgi
+      description: 'Optio modi dolores deleniti in.'
+      features: dicta
+      capacity: 1
     fileParameters: []
     responses: []
     responseFields: []

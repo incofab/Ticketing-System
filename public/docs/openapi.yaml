@@ -26,11 +26,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: dolores
+                  example: ut
                 password:
                   type: string
                   description: ''
-                  example: 'h@.},u|nXP&(3_L)l'
+                  example: 'NG~~0~.O^|;[?'
               required:
                 - phone
                 - password
@@ -54,27 +54,27 @@ paths:
                 first_name:
                   type: integer
                   description: ''
-                  example: 4
+                  example: 6
                 last_name:
                   type: string
                   description: ''
-                  example: eum
+                  example: non
                 other_names:
                   type: string
                   description: ''
-                  example: autem
+                  example: aut
                 phone:
                   type: string
                   description: ''
-                  example: vero
+                  example: aliquid
                 email:
                   type: string
                   description: ''
-                  example: vivienne06@example.org
+                  example: dorthy.hintz@example.com
                 password:
                   type: string
                   description: ''
-                  example: '"yf?mI>3JZb9|@U'
+                  example: 'fHQ{ptKRtL|qlAv/'
               required:
                 - first_name
                 - last_name
@@ -122,7 +122,7 @@ paths:
                 event_id:
                   type: string
                   description: ''
-                  example: aut
+                  example: rerum
                 image:
                   type: string
                   format: binary
@@ -130,7 +130,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: voluptas
+                  example: aliquam
               required:
                 - event_id
                 - image
@@ -151,7 +151,7 @@ paths:
         in: path
         name: eventImage_id
         description: 'The ID of the eventImage.'
-        example: 8
+        example: 14
         required: true
         schema:
           type: integer
@@ -585,11 +585,11 @@ paths:
                 seat_section_id:
                   type: string
                   description: ''
-                  example: quod
+                  example: aspernatur
                 price:
                   type: number
                   description: ''
-                  example: 298.843
+                  example: 152759.33339733
               required:
                 - seat_section_id
                 - price
@@ -899,19 +899,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: vrksanqdvtuzcyjpjwu
+                  example: nslhsyoxvhqdtxjnxxryxcby
                 description:
                   type: string
                   description: ''
-                  example: 'Ab perspiciatis ullam minus omnis a vel nobis.'
+                  example: 'Quam corporis et fugit autem architecto.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2024-01-07T14:29:57'
+                  example: '2024-01-07T17:03:21'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2113-08-22'
+                  example: '2115-02-25'
               required:
                 - title
       security: []
@@ -943,19 +943,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ofwxdhhztvuwmgxplgooap
+                  example: drbxk
                 description:
                   type: string
                   description: ''
-                  example: 'Ullam alias ut qui minus.'
+                  example: 'Doloremque eos tempore voluptas ex consequatur.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2024-01-07T14:29:57'
+                  example: '2024-01-07T17:03:21'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2056-07-20'
+                  example: '2028-05-10'
               required:
                 - title
       security: []
@@ -1665,31 +1665,31 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: xozvxylmnjjhakzckngn
+                  example: qcwzukhmadygpdbetdkkra
                 description:
                   type: string
                   description: ''
-                  example: 'Quis iste harum mollitia vitae deleniti totam est.'
+                  example: 'Iusto veritatis aut voluptatem ab occaecati.'
                 start_time:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2024-01-07T14:29:57'
+                  example: '2024-01-07T17:03:21'
                 end_time:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>start_time</code>.'
-                  example: '2106-02-16'
+                  example: '2119-01-06'
                 home_team:
                   type: string
                   description: ''
-                  example: aut
+                  example: odit
                 away_team:
                   type: string
                   description: ''
-                  example: quo
+                  example: quia
                 event_packages:
                   type: array
                   description: 'Must have at least 1 items.'
-                  example: yprdyudpsxusrtrfxdjekhlzrtdbgdefeihjwckrzxnyskrquatrpritlrfpomdh
+                  example: krocjgbswrlqfiozwviyjzkdmakyakczqgyjovdmppjhrdqlupxdtvbesfiokccdoux
                   items:
                     type: string
               required:
@@ -1724,27 +1724,27 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: pxmjp
+                  example: ustgxywve
                 description:
                   type: string
                   description: ''
-                  example: 'Voluptatem eaque id quisquam voluptate et et saepe.'
+                  example: 'Ea eum corrupti accusantium vel.'
                 start_time:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2024-01-07T14:29:57'
+                  example: '2024-01-07T17:03:21'
                 end_time:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>start_time</code>.'
-                  example: '2058-08-28'
+                  example: '2062-08-24'
                 home_team:
                   type: string
                   description: ''
-                  example: a
+                  example: blanditiis
                 away_team:
                   type: string
                   description: ''
-                  example: quo
+                  example: aspernatur
               required:
                 - title
                 - start_time
@@ -1777,6 +1777,135 @@ paths:
         required: true
         schema:
           type: integer
+  '/api/seats/index/{seatSection}':
+    get:
+      summary: ''
+      operationId: getApiSeatsIndexSeatSection
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: ''
+                  data:
+                    current_page: 1
+                    data: []
+                    first_page_url: 'http://localhost/api/seats/index/1?page=1'
+                    from: null
+                    last_page: 1
+                    last_page_url: 'http://localhost/api/seats/index/1?page=1'
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost/api/seats/index/1?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    next_page_url: null
+                    path: 'http://localhost/api/seats/index/1'
+                    per_page: 100
+                    prev_page_url: null
+                    to: null
+                    total: 0
+                properties:
+                  message:
+                    type: string
+                    example: ''
+                  data:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      data:
+                        type: array
+                        example: []
+                      first_page_url:
+                        type: string
+                        example: 'http://localhost/api/seats/index/1?page=1'
+                      from:
+                        type: string
+                        example: null
+                      last_page:
+                        type: integer
+                        example: 1
+                      last_page_url:
+                        type: string
+                        example: 'http://localhost/api/seats/index/1?page=1'
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://localhost/api/seats/index/1?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      next_page_url:
+                        type: string
+                        example: null
+                      path:
+                        type: string
+                        example: 'http://localhost/api/seats/index/1'
+                      per_page:
+                        type: integer
+                        example: 100
+                      prev_page_url:
+                        type: string
+                        example: null
+                      to:
+                        type: string
+                        example: null
+                      total:
+                        type: integer
+                        example: 0
+      tags:
+        - Seats
+      security: []
+    parameters:
+      -
+        in: path
+        name: seatSection
+        description: 'Optional parameter.'
+        required: true
+        schema:
+          type: integer
+        examples:
+          omitted:
+            summary: 'When the value is omitted'
+            value: ''
+          present:
+            summary: 'When the value is present'
+            value: 1
   /api/seat-sections/index:
     get:
       summary: ''
@@ -2332,19 +2461,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ztkoqknrogocqlbjzuellqz
+                  example: bertzczvmvvgi
                 description:
                   type: string
                   description: ''
-                  example: 'Aut qui occaecati dolorum eius impedit possimus ut qui.'
+                  example: 'Optio modi dolores deleniti in.'
                 features:
                   type: string
                   description: ''
-                  example: sit
+                  example: dicta
                 capacity:
                   type: integer
                   description: ''
-                  example: 20
+                  example: 1
               required:
                 - title
                 - capacity
@@ -2377,27 +2506,27 @@ paths:
                 merchant:
                   type: string
                   description: ''
-                  example: non
+                  example: ea
                 callback_url:
                   type: string
                   description: ''
-                  example: 'http://kulas.biz/atque-placeat-aliquid-aut-assumenda-dolorum-inventore.html'
+                  example: 'http://www.hodkiewicz.com/dolorem-culpa-corporis-incidunt-vel-dolores-facilis'
                 quantity:
                   type: integer
                   description: 'Must be at least 1.'
-                  example: 40
+                  example: 13
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: wmdcbenywapsnuagcub
+                  example: edsw
                 phone:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: kirpfvjzlo
+                  example: rxzx
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: gwitting@example.com
+                  example: garnett.lehner@example.org
               required:
                 - merchant
                 - quantity
@@ -2430,7 +2559,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: quis
+                  example: provident
               required:
                 - reference
       security: []
@@ -2453,12 +2582,12 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: voluptas
+                  example: nobis
                 seat_ids:
                   type: array
                   description: ''
                   example:
-                    - quidem
+                    - ut
                   items:
                     type: string
               required:
@@ -2484,15 +2613,15 @@ paths:
                 ticket_id:
                   type: integer
                   description: ''
-                  example: 2
+                  example: 5
                 reference:
                   type: string
                   description: ''
-                  example: placeat
+                  example: omnis
                 device_no:
                   type: string
                   description: ''
-                  example: officiis
+                  example: voluptatem
               required:
                 - ticket_id
                 - reference

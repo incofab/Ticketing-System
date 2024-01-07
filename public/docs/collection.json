@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Rangers Ticketing System",
-        "_postman_id": "39e2a90a-9775-418d-86ad-3a28f90c5604",
+        "_postman_id": "3f5dafff-a9a7-49ae-8622-077108c62a26",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone\":\"dolores\",\"password\":\"h@.},u|nXP&(3_L)l\"}"
+                            "raw": "{\"phone\":\"ut\",\"password\":\"NG~~0~.O^|;[?\"}"
                         },
                         "description": "",
                         "auth": {
@@ -72,7 +72,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":4,\"last_name\":\"eum\",\"other_names\":\"autem\",\"phone\":\"vero\",\"email\":\"vivienne06@example.org\",\"password\":\"\\\"yf?mI>3JZb9|@U\"}"
+                            "raw": "{\"first_name\":6,\"last_name\":\"non\",\"other_names\":\"aut\",\"phone\":\"aliquid\",\"email\":\"dorthy.hintz@example.com\",\"password\":\"fHQ{ptKRtL|qlAv\\\/\"}"
                         },
                         "description": "",
                         "auth": {
@@ -160,13 +160,13 @@
                             "formdata": [
                                 {
                                     "key": "event_id",
-                                    "value": "aut",
+                                    "value": "rerum",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "reference",
-                                    "value": "voluptas",
+                                    "value": "aliquam",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -196,7 +196,7 @@
                                 {
                                     "id": "eventImage_id",
                                     "key": "eventImage_id",
-                                    "value": "8",
+                                    "value": "14",
                                     "description": "The ID of the eventImage."
                                 }
                             ]
@@ -312,7 +312,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"seat_section_id\":\"quod\",\"price\":298.843}"
+                            "raw": "{\"seat_section_id\":\"aspernatur\",\"price\":152759.33339733}"
                         },
                         "description": "",
                         "auth": {
@@ -521,7 +521,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"vrksanqdvtuzcyjpjwu\",\"description\":\"Ab perspiciatis ullam minus omnis a vel nobis.\",\"date_from\":\"2024-01-07T14:29:57\",\"date_to\":\"2113-08-22\"}"
+                            "raw": "{\"title\":\"nslhsyoxvhqdtxjnxxryxcby\",\"description\":\"Quam corporis et fugit autem architecto.\",\"date_from\":\"2024-01-07T17:03:21\",\"date_to\":\"2115-02-25\"}"
                         },
                         "description": "",
                         "auth": {
@@ -560,7 +560,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"ofwxdhhztvuwmgxplgooap\",\"description\":\"Ullam alias ut qui minus.\",\"date_from\":\"2024-01-07T14:29:57\",\"date_to\":\"2056-07-20\"}"
+                            "raw": "{\"title\":\"drbxk\",\"description\":\"Doloremque eos tempore voluptas ex consequatur.\",\"date_from\":\"2024-01-07T17:03:21\",\"date_to\":\"2028-05-10\"}"
                         },
                         "description": "",
                         "auth": {
@@ -833,7 +833,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"xozvxylmnjjhakzckngn\",\"description\":\"Quis iste harum mollitia vitae deleniti totam est.\",\"start_time\":\"2024-01-07T14:29:57\",\"end_time\":\"2106-02-16\",\"home_team\":\"aut\",\"away_team\":\"quo\",\"event_packages\":\"yprdyudpsxusrtrfxdjekhlzrtdbgdefeihjwckrzxnyskrquatrpritlrfpomdh\"}"
+                            "raw": "{\"title\":\"qcwzukhmadygpdbetdkkra\",\"description\":\"Iusto veritatis aut voluptatem ab occaecati.\",\"start_time\":\"2024-01-07T17:03:21\",\"end_time\":\"2119-01-06\",\"home_team\":\"odit\",\"away_team\":\"quia\",\"event_packages\":\"krocjgbswrlqfiozwviyjzkdmakyakczqgyjovdmppjhrdqlupxdtvbesfiokccdoux\"}"
                         },
                         "description": "",
                         "auth": {
@@ -872,7 +872,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"pxmjp\",\"description\":\"Voluptatem eaque id quisquam voluptate et et saepe.\",\"start_time\":\"2024-01-07T14:29:57\",\"end_time\":\"2058-08-28\",\"home_team\":\"a\",\"away_team\":\"quo\"}"
+                            "raw": "{\"title\":\"ustgxywve\",\"description\":\"Ea eum corrupti accusantium vel.\",\"start_time\":\"2024-01-07T17:03:21\",\"end_time\":\"2062-08-24\",\"home_team\":\"blanditiis\",\"away_team\":\"aspernatur\"}"
                         },
                         "description": "",
                         "auth": {
@@ -923,6 +923,70 @@
             "name": "Seats",
             "description": "",
             "item": [
+                {
+                    "name": "GET api\/seats\/index\/{seatSection?}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/seats\/index\/:seatSection",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/seats\/index\/:seatSection",
+                            "variable": [
+                                {
+                                    "id": "seatSection",
+                                    "key": "seatSection",
+                                    "value": "1",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"message\":\"\",\"data\":{\"current_page\":1,\"data\":[],\"first_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/seats\\\/index\\\/1?page=1\",\"from\":null,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/seats\\\/index\\\/1?page=1\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/seats\\\/index\\\/1?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost\\\/api\\\/seats\\\/index\\\/1\",\"per_page\":100,\"prev_page_url\":null,\"to\":null,\"total\":0}}",
+                            "name": ""
+                        }
+                    ]
+                },
                 {
                     "name": "GET api\/seat-sections\/index",
                     "request": {
@@ -1009,7 +1073,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"ztkoqknrogocqlbjzuellqz\",\"description\":\"Aut qui occaecati dolorum eius impedit possimus ut qui.\",\"features\":\"sit\",\"capacity\":20}"
+                            "raw": "{\"title\":\"bertzczvmvvgi\",\"description\":\"Optio modi dolores deleniti in.\",\"features\":\"dicta\",\"capacity\":1}"
                         },
                         "description": "",
                         "auth": {
@@ -1054,7 +1118,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"merchant\":\"non\",\"callback_url\":\"http:\\\/\\\/kulas.biz\\\/atque-placeat-aliquid-aut-assumenda-dolorum-inventore.html\",\"quantity\":40,\"name\":\"wmdcbenywapsnuagcub\",\"phone\":\"kirpfvjzlo\",\"email\":\"gwitting@example.com\"}"
+                            "raw": "{\"merchant\":\"ea\",\"callback_url\":\"http:\\\/\\\/www.hodkiewicz.com\\\/dolorem-culpa-corporis-incidunt-vel-dolores-facilis\",\"quantity\":13,\"name\":\"edsw\",\"phone\":\"rxzx\",\"email\":\"garnett.lehner@example.org\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1085,7 +1149,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"reference\":\"quis\"}"
+                            "raw": "{\"reference\":\"provident\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1116,7 +1180,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"reference\":\"voluptas\",\"seat_ids\":[\"quidem\"]}"
+                            "raw": "{\"reference\":\"nobis\",\"seat_ids\":[\"ut\"]}"
                         },
                         "description": "",
                         "auth": {
@@ -1147,7 +1211,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"ticket_id\":2,\"reference\":\"placeat\",\"device_no\":\"officiis\"}"
+                            "raw": "{\"ticket_id\":5,\"reference\":\"omnis\",\"device_no\":\"voluptatem\"}"
                         },
                         "description": "",
                         "auth": {

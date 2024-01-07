@@ -25,6 +25,10 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/logout', [Auth\ApiAuthController::class, 'logout'])->name('logout');
 });
 
+Route::group(['prefix' => 'seats'], function () {
+    Route::get('/index/{seatSection?}', [Seats\SeatController::class, 'index'])->name('seats.index');
+});
+
 Route::group(['prefix' => 'seat-sections'], function () {
     Route::get('/index', [Seats\SeatSectionController::class, 'index'])->name('seat-sections.index');
     Route::group(['middleware' => ['auth:sanctum']], function () {

@@ -79,7 +79,7 @@ endpoints:
         name: seat_section_id
         description: ''
         required: true
-        example: quod
+        example: aspernatur
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -88,14 +88,14 @@ endpoints:
         name: price
         description: ''
         required: true
-        example: 298.843
+        example: 152759.33339733
         type: number
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      seat_section_id: quod
-      price: 298.843
+      seat_section_id: aspernatur
+      price: 152759.33339733
     fileParameters: []
     responses: []
     responseFields: []

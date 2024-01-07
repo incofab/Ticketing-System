@@ -38,7 +38,7 @@ endpoints:
         name: merchant
         description: ''
         required: true
-        example: non
+        example: ea
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -47,7 +47,7 @@ endpoints:
         name: callback_url
         description: ''
         required: false
-        example: 'http://kulas.biz/atque-placeat-aliquid-aut-assumenda-dolorum-inventore.html'
+        example: 'http://www.hodkiewicz.com/dolorem-culpa-corporis-incidunt-vel-dolores-facilis'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -56,7 +56,7 @@ endpoints:
         name: quantity
         description: 'Must be at least 1.'
         required: true
-        example: 40
+        example: 13
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -65,7 +65,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: wmdcbenywapsnuagcub
+        example: edsw
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -74,7 +74,7 @@ endpoints:
         name: phone
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: kirpfvjzlo
+        example: rxzx
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -83,18 +83,18 @@ endpoints:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: false
-        example: gwitting@example.com
+        example: garnett.lehner@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      merchant: non
-      callback_url: 'http://kulas.biz/atque-placeat-aliquid-aut-assumenda-dolorum-inventore.html'
-      quantity: 40
-      name: wmdcbenywapsnuagcub
-      phone: kirpfvjzlo
-      email: gwitting@example.com
+      merchant: ea
+      callback_url: 'http://www.hodkiewicz.com/dolorem-culpa-corporis-incidunt-vel-dolores-facilis'
+      quantity: 13
+      name: edsw
+      phone: rxzx
+      email: garnett.lehner@example.org
     fileParameters: []
     responses: []
     responseFields: []
@@ -128,13 +128,13 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: quis
+        example: provident
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      reference: quis
+      reference: provident
     fileParameters: []
     responses: []
     responseFields: []
@@ -168,7 +168,7 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: voluptas
+        example: nobis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -178,15 +178,15 @@ endpoints:
         description: ''
         required: true
         example:
-          - quidem
+          - ut
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      reference: voluptas
+      reference: nobis
       seat_ids:
-        - quidem
+        - ut
     fileParameters: []
     responses: []
     responseFields: []
@@ -220,7 +220,7 @@ endpoints:
         name: ticket_id
         description: ''
         required: true
-        example: 2
+        example: 5
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -229,7 +229,7 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: placeat
+        example: omnis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -238,15 +238,15 @@ endpoints:
         name: device_no
         description: ''
         required: true
-        example: officiis
+        example: voluptatem
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      ticket_id: 2
-      reference: placeat
-      device_no: officiis
+      ticket_id: 5
+      reference: omnis
+      device_no: voluptatem
     fileParameters: []
     responses: []
     responseFields: []
