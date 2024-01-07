@@ -1,7 +1,6 @@
 <?php
 namespace Database\Seeders;
 
-use App\Models\SeatSection;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -16,7 +15,7 @@ class DatabaseSeeder extends Seeder
     $this->call([
       // UserSeeder::class
       EventCategorySeeder::class,
-      SeatSection::class
+      SeatSectionSeeder::class
     ]);
   }
 }

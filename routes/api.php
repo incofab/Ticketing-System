@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers as Web;
 use App\Http\Controllers\Api\Events;
+use App\Http\Controllers\Api\Seats;
 use App\Http\Controllers\Api\Tickets;
 use App\Http\Controllers\Auth;
 
@@ -22,6 +23,10 @@ Route::post('/register', [Auth\ApiAuthController::class, 'register'])->name('reg
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/logout', [Auth\ApiAuthController::class, 'logout'])->name('logout');
+});
+
+Route::group(['prefix' => 'seat-sections'], function () {
+    Route::get('/index', [Seats\SeatSectionController::class, 'index'])->name('seat-sections.index');
 });
 
 Route::group(['prefix' => 'event-seasons'], function () {

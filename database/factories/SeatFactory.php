@@ -16,4 +16,9 @@ class SeatFactory extends Factory
       'features' => fake()->sentence(10)
     ];
   }
+
+  function seatSection(SeatSection $seatSection)
+  {
+    return $this->state(fn($attr) => ['seat_section_id' => $seatSection]);
+  }
 }

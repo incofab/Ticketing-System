@@ -15,6 +15,9 @@ class GenerateTicketFromPayment
   private SeatSection $seatSection;
   private TicketPayment $ticketPayment;
 
+  /**
+   * @param int[] $seatIds
+   */
   function __construct(
     private PaymentReference $paymentReference,
     private array $seatIds

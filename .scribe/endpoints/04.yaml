@@ -1,12 +1,12 @@
-name: 'Event Packages'
+name: 'Event Images'
 description: ''
 endpoints:
   -
     httpMethods:
-      - GET
-    uri: api/event-packages/index
+      - POST
+    uri: api/event-image/store
     metadata:
-      groupName: 'Event Packages'
+      groupName: 'Event Images'
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -15,86 +15,45 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
+      Content-Type: multipart/form-data
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"message":"","data":{"current_page":1,"data":[{"id":1,"event_id":1,"seat_section_id":1,"price":1048.9,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":2,"event_id":2,"seat_section_id":2,"price":5667.5,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":3,"event_id":3,"seat_section_id":3,"price":8937.7,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":4,"event_id":4,"seat_section_id":5,"price":2890.6,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":5,"event_id":5,"seat_section_id":6,"price":2880.7,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":6,"event_id":6,"seat_section_id":7,"price":4123.8,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":7,"event_id":7,"seat_section_id":9,"price":2418.3,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":8,"event_id":8,"seat_section_id":10,"price":7054.4,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":9,"event_id":9,"seat_section_id":11,"price":2660.8,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":10,"event_id":10,"seat_section_id":13,"price":7311.5,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":11,"event_id":11,"seat_section_id":14,"price":8688.8,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":12,"event_id":12,"seat_section_id":15,"price":2387.7,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":13,"event_id":13,"seat_section_id":17,"price":5205.4,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":14,"event_id":14,"seat_section_id":18,"price":6604.9,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},{"id":15,"event_id":15,"seat_section_id":19,"price":9861.5,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"}],"first_page_url":"http:\/\/localhost\/api\/event-packages\/index?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/event-packages\/index?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/event-packages\/index?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/event-packages\/index","per_page":100,"prev_page_url":null,"to":15,"total":15}}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '59'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: 'api/event-packages/events/{event_id}/store'
-    metadata:
-      groupName: 'Event Packages'
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
+    bodyParameters:
       event_id:
         name: event_id
-        description: 'The ID of the event.'
-        required: true
-        example: 1
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-    cleanUrlParameters:
-      event_id: 1
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      seat_section_id:
-        name: seat_section_id
         description: ''
         required: true
-        example: ut
+        example: maxime
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      price:
-        name: price
+      image:
+        name: image
+        description: 'Must be a file.'
+        required: true
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      reference:
+        name: reference
         description: ''
         required: true
-        example: 261829.0
-        type: number
+        example: placeat
+        type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      seat_section_id: ut
-      price: 261829.0
-    fileParameters: []
+      event_id: maxime
+      reference: placeat
+    fileParameters:
+      image: null
     responses: []
     responseFields: []
     auth: []
@@ -105,9 +64,9 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: 'api/event-packages/{eventPackage_id}/destroy'
+    uri: 'api/event-image/{eventImage_id}/destroy'
     metadata:
-      groupName: 'Event Packages'
+      groupName: 'Event Images'
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -119,17 +78,17 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      eventPackage_id:
-        name: eventPackage_id
-        description: 'The ID of the eventPackage.'
+      eventImage_id:
+        name: eventImage_id
+        description: 'The ID of the eventImage.'
         required: true
-        example: 1
+        example: 16
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      eventPackage_id: 1
+      eventImage_id: 16
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

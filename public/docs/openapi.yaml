@@ -26,11 +26,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: et
+                  example: dignissimos
                 password:
                   type: string
                   description: ''
-                  example: 'lqr||[8O`oq:rQ'
+                  example: pC%<Ik8nzl-bye
               required:
                 - phone
                 - password
@@ -54,27 +54,27 @@ paths:
                 first_name:
                   type: integer
                   description: ''
-                  example: 4
+                  example: 11
                 last_name:
                   type: string
                   description: ''
-                  example: odio
+                  example: voluptatibus
                 other_names:
                   type: string
                   description: ''
-                  example: id
+                  example: rerum
                 phone:
                   type: string
                   description: ''
-                  example: recusandae
+                  example: ut
                 email:
                   type: string
                   description: ''
-                  example: paucek.katheryn@example.org
+                  example: diamond59@example.org
                 password:
                   type: string
                   description: ''
-                  example: 'hvL9I?Ebp-'
+                  example: "'7&B-Ok]lH8CH?/S5="
               required:
                 - first_name
                 - last_name
@@ -122,7 +122,7 @@ paths:
                 event_id:
                   type: string
                   description: ''
-                  example: qui
+                  example: maxime
                 image:
                   type: string
                   format: binary
@@ -130,7 +130,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: impedit
+                  example: placeat
               required:
                 - event_id
                 - image
@@ -151,7 +151,7 @@ paths:
         in: path
         name: eventImage_id
         description: 'The ID of the eventImage.'
-        example: 4
+        example: 16
         required: true
         schema:
           type: integer
@@ -585,11 +585,11 @@ paths:
                 seat_section_id:
                   type: string
                   description: ''
-                  example: ut
+                  example: molestiae
                 price:
                   type: number
                   description: ''
-                  example: 261829.0
+                  example: 8262832.0
               required:
                 - seat_section_id
                 - price
@@ -999,19 +999,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: cklrrzttxypsdmvykqkp
+                  example: bqwwlvynpwzcohhxywp
                 description:
                   type: string
                   description: ''
-                  example: 'Unde eum omnis aut adipisci maxime accusamus vel molestiae.'
+                  example: 'Quas cum at est aperiam sequi minima.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2024-01-07T07:52:45'
+                  example: '2024-01-07T08:39:32'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2027-12-29'
+                  example: '2117-07-15'
               required:
                 - title
       security: []
@@ -1043,19 +1043,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: lvz
+                  example: rdtzqveivriwn
                 description:
                   type: string
                   description: ''
-                  example: 'Voluptatibus eum laudantium consequatur iste maiores.'
+                  example: 'Nam quidem aut velit.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2024-01-07T07:52:45'
+                  example: '2024-01-07T08:39:32'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2030-02-13'
+                  example: '2028-04-23'
               required:
                 - title
       security: []
@@ -1720,31 +1720,31 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: kjlhmlwwiejw
+                  example: wymxebubwmgafzfgmfcwghs
                 description:
                   type: string
                   description: ''
-                  example: 'Sunt rerum dolore cumque voluptatem provident rem eligendi esse.'
+                  example: 'Qui eum inventore natus laboriosam nostrum et.'
                 start_time:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2024-01-07T07:52:45'
+                  example: '2024-01-07T08:39:32'
                 end_time:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>start_time</code>.'
-                  example: '2098-10-25'
+                  example: '2056-12-07'
                 home_team:
                   type: string
                   description: ''
-                  example: laborum
+                  example: eveniet
                 away_team:
                   type: string
                   description: ''
-                  example: ut
+                  example: minus
                 event_packages:
                   type: array
                   description: 'Must have at least 1 items.'
-                  example: wfvbizqqjqjyqcwrfbpalcmkytnklcnxcwjztbebntzqmzedaswczcoyccsp
+                  example: ahiiliyvaxadabzanotukgpovfkpnkyoiigjtqpiwaokrxpfjvfzwvwfjctdxskcmnfgpbd
                   items:
                     type: string
               required:
@@ -1779,27 +1779,27 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: btz
+                  example: uekrdznajfszggilykjl
                 description:
                   type: string
                   description: ''
-                  example: 'Nemo numquam rerum rerum atque at.'
+                  example: 'Eaque repellat accusamus aliquam.'
                 start_time:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2024-01-07T07:52:45'
+                  example: '2024-01-07T08:39:32'
                 end_time:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>start_time</code>.'
-                  example: '2032-02-03'
+                  example: '2093-10-21'
                 home_team:
                   type: string
                   description: ''
-                  example: eius
+                  example: earum
                 away_team:
                   type: string
                   description: ''
-                  example: vel
+                  example: est
               required:
                 - title
                 - start_time
@@ -1832,6 +1832,462 @@ paths:
         required: true
         schema:
           type: integer
+  /api/seat-sections/index:
+    get:
+      summary: ''
+      operationId: getApiSeatSectionsIndex
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: ''
+                  data:
+                    -
+                      id: 1
+                      capacity: 972
+                      title: 'Dolor suscipit et omnis harum dolorem.'
+                      description: 'Blanditiis est quisquam asperiores porro impedit expedita cupiditate odit dignissimos necessitatibus a.'
+                      features: 'Illum hic ut nulla sed inventore id.'
+                      deleted_at: null
+                      created_at: '2024-01-07T06:51:55.000000Z'
+                      updated_at: '2024-01-07T06:51:55.000000Z'
+                      seats_count: 0
+                    -
+                      id: 2
+                      capacity: 857
+                      title: 'Nihil consequuntur ratione magnam consequatur eligendi.'
+                      description: 'Perferendis doloribus doloremque ut inventore id accusantium.'
+                      features: 'Et sed incidunt fugit sit ipsa cupiditate sed.'
+                      deleted_at: null
+                      created_at: '2024-01-07T06:51:55.000000Z'
+                      updated_at: '2024-01-07T06:51:55.000000Z'
+                      seats_count: 0
+                    -
+                      id: 3
+                      capacity: 486
+                      title: 'Qui ratione officiis necessitatibus aspernatur consectetur laudantium.'
+                      description: 'Non unde autem voluptas aut animi eos enim voluptas consequatur.'
+                      features: 'Sit doloremque doloribus et reiciendis ut quisquam officia exercitationem laborum.'
+                      deleted_at: null
+                      created_at: '2024-01-07T06:51:55.000000Z'
+                      updated_at: '2024-01-07T06:51:55.000000Z'
+                      seats_count: 0
+                    -
+                      id: 4
+                      capacity: 70
+                      title: 'Porro dignissimos dolorem quia id enim magni.'
+                      description: 'Voluptatibus odit nobis quam sed voluptatem officiis blanditiis iste doloremque.'
+                      features: 'Sequi quo eaque dolores culpa id magnam iusto illum enim rerum.'
+                      deleted_at: null
+                      created_at: '2024-01-07T06:51:55.000000Z'
+                      updated_at: '2024-01-07T06:51:55.000000Z'
+                      seats_count: 1
+                    -
+                      id: 5
+                      capacity: 729
+                      title: 'Ea aut saepe qui molestiae id earum.'
+                      description: 'Fuga rerum molestiae qui ea et exercitationem quia harum quod voluptatibus aut.'
+                      features: 'Ipsam tenetur tempora quod ratione doloribus delectus aut tenetur.'
+                      deleted_at: null
+                      created_at: '2024-01-07T06:51:55.000000Z'
+                      updated_at: '2024-01-07T06:51:55.000000Z'
+                      seats_count: 0
+                    -
+                      id: 6
+                      capacity: 771
+                      title: 'Non explicabo quia totam enim eveniet accusantium rerum.'
+                      description: 'Dolor sunt vel voluptatem sed qui unde maiores laudantium ut quae vitae.'
+                      features: 'Omnis qui a architecto rerum veniam atque qui cum rerum beatae voluptatibus.'
+                      deleted_at: null
+                      created_at: '2024-01-07T06:51:55.000000Z'
+                      updated_at: '2024-01-07T06:51:55.000000Z'
+                      seats_count: 0
+                    -
+                      id: 7
+                      capacity: 230
+                      title: 'Est rerum sunt distinctio quisquam consequatur.'
+                      description: 'Qui dolores necessitatibus voluptatem officia facilis dolorem voluptatum aut ut eaque veritatis natus corrupti.'
+                      features: 'Ex veniam eaque nam perspiciatis neque aliquid et esse.'
+                      deleted_at: null
+                      created_at: '2024-01-07T06:51:55.000000Z'
+                      updated_at: '2024-01-07T06:51:55.000000Z'
+                      seats_count: 0
+                    -
+                      id: 8
+                      capacity: 438
+                      title: 'Temporibus sunt animi et quaerat placeat quisquam.'
+                      description: 'Doloremque illo officiis cumque aliquid laboriosam sit.'
+                      features: 'Dolorem corporis dolore temporibus ex qui maxime et voluptates.'
+                      deleted_at: null
+                      created_at: '2024-01-07T06:51:55.000000Z'
+                      updated_at: '2024-01-07T06:51:55.000000Z'
+                      seats_count: 1
+                    -
+                      id: 9
+                      capacity: 32
+                      title: 'Aut quos sapiente ut ipsam.'
+                      description: 'Temporibus expedita eligendi culpa dolor neque esse omnis asperiores non vero fugit in.'
+                      features: 'Ea dolor sit velit illo molestias quo dicta enim.'
+                      deleted_at: null
+                      created_at: '2024-01-07T06:51:55.000000Z'
+                      updated_at: '2024-01-07T06:51:55.000000Z'
+                      seats_count: 0
+                    -
+                      id: 10
+                      capacity: 856
+                      title: 'Maiores atque aut vitae laudantium qui.'
+                      description: 'Expedita esse provident saepe harum maxime dolor.'
+                      features: 'Sequi deserunt cumque officiis quae deserunt qui.'
+                      deleted_at: null
+                      created_at: '2024-01-07T06:51:55.000000Z'
+                      updated_at: '2024-01-07T06:51:55.000000Z'
+                      seats_count: 0
+                    -
+                      id: 11
+                      capacity: 80
+                      title: 'Blanditiis tempore sint repudiandae sunt qui suscipit.'
+                      description: 'Atque repudiandae itaque quis ipsam qui non porro enim itaque culpa quia.'
+                      features: 'Non qui fugiat quis sed quae.'
+                      deleted_at: null
+                      created_at: '2024-01-07T06:51:55.000000Z'
+                      updated_at: '2024-01-07T06:51:55.000000Z'
+                      seats_count: 0
+                    -
+                      id: 12
+                      capacity: 966
+                      title: 'Ad modi est et vel modi expedita.'
+                      description: 'Expedita nobis vitae ut nostrum quia tempore.'
+                      features: 'Praesentium error dolor sed deserunt qui ipsa autem.'
+                      deleted_at: null
+                      created_at: '2024-01-07T06:51:55.000000Z'
+                      updated_at: '2024-01-07T06:51:55.000000Z'
+                      seats_count: 1
+                    -
+                      id: 13
+                      capacity: 513
+                      title: 'Minus aut ut molestiae itaque tempora itaque id.'
+                      description: 'Perferendis dolore velit perferendis eaque dicta amet consequatur tempore.'
+                      features: 'Velit quasi doloribus ipsam aut non sapiente.'
+                      deleted_at: null
+                      created_at: '2024-01-07T06:51:55.000000Z'
+                      updated_at: '2024-01-07T06:51:55.000000Z'
+                      seats_count: 0
+                    -
+                      id: 14
+                      capacity: 157
+                      title: 'Suscipit provident et sed molestias excepturi est ut.'
+                      description: 'Sit assumenda iure iste laboriosam nemo nisi enim illum voluptatum veritatis itaque.'
+                      features: 'Est non quis quis minima provident.'
+                      deleted_at: null
+                      created_at: '2024-01-07T06:51:55.000000Z'
+                      updated_at: '2024-01-07T06:51:55.000000Z'
+                      seats_count: 0
+                    -
+                      id: 15
+                      capacity: 277
+                      title: 'Eligendi praesentium veritatis natus aliquid facilis.'
+                      description: 'Sint ut qui aliquam consequatur aut explicabo et doloremque aperiam.'
+                      features: 'Voluptas corporis reprehenderit sint rerum.'
+                      deleted_at: null
+                      created_at: '2024-01-07T06:51:55.000000Z'
+                      updated_at: '2024-01-07T06:51:55.000000Z'
+                      seats_count: 0
+                    -
+                      id: 16
+                      capacity: 708
+                      title: 'Enim libero sint eum quos quam corporis et id.'
+                      description: 'Est sit nobis nobis natus labore ipsa molestias numquam.'
+                      features: 'Ratione neque id et veniam similique modi itaque.'
+                      deleted_at: null
+                      created_at: '2024-01-07T06:51:55.000000Z'
+                      updated_at: '2024-01-07T06:51:55.000000Z'
+                      seats_count: 1
+                    -
+                      id: 17
+                      capacity: 837
+                      title: 'Deserunt veniam non quisquam soluta perferendis.'
+                      description: 'Ut hic eos reiciendis veniam et placeat ut maxime.'
+                      features: 'Et ipsam et qui cupiditate beatae nostrum nemo aut sed.'
+                      deleted_at: null
+                      created_at: '2024-01-07T06:51:55.000000Z'
+                      updated_at: '2024-01-07T06:51:55.000000Z'
+                      seats_count: 0
+                    -
+                      id: 18
+                      capacity: 664
+                      title: 'Natus dolore quae debitis voluptatibus odit aut ipsum.'
+                      description: 'Quidem ea voluptate quia aut ut aut.'
+                      features: 'Officia consequuntur veniam autem alias eaque dolorum veritatis.'
+                      deleted_at: null
+                      created_at: '2024-01-07T06:51:55.000000Z'
+                      updated_at: '2024-01-07T06:51:55.000000Z'
+                      seats_count: 0
+                    -
+                      id: 19
+                      capacity: 267
+                      title: 'Quos quasi non occaecati dolor rerum temporibus nostrum.'
+                      description: 'Corrupti est mollitia ea iusto perferendis in in veritatis explicabo.'
+                      features: 'Quidem et fugiat cumque natus quam dicta.'
+                      deleted_at: null
+                      created_at: '2024-01-07T06:51:55.000000Z'
+                      updated_at: '2024-01-07T06:51:55.000000Z'
+                      seats_count: 0
+                    -
+                      id: 20
+                      capacity: 708
+                      title: 'Voluptas quas ut repellat similique nemo officia.'
+                      description: 'Modi quia iure qui accusamus mollitia in.'
+                      features: 'Accusantium sed cum hic recusandae ad sit.'
+                      deleted_at: null
+                      created_at: '2024-01-07T06:51:55.000000Z'
+                      updated_at: '2024-01-07T06:51:55.000000Z'
+                      seats_count: 1
+                properties:
+                  message:
+                    type: string
+                    example: ''
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        capacity: 972
+                        title: 'Dolor suscipit et omnis harum dolorem.'
+                        description: 'Blanditiis est quisquam asperiores porro impedit expedita cupiditate odit dignissimos necessitatibus a.'
+                        features: 'Illum hic ut nulla sed inventore id.'
+                        deleted_at: null
+                        created_at: '2024-01-07T06:51:55.000000Z'
+                        updated_at: '2024-01-07T06:51:55.000000Z'
+                        seats_count: 0
+                      -
+                        id: 2
+                        capacity: 857
+                        title: 'Nihil consequuntur ratione magnam consequatur eligendi.'
+                        description: 'Perferendis doloribus doloremque ut inventore id accusantium.'
+                        features: 'Et sed incidunt fugit sit ipsa cupiditate sed.'
+                        deleted_at: null
+                        created_at: '2024-01-07T06:51:55.000000Z'
+                        updated_at: '2024-01-07T06:51:55.000000Z'
+                        seats_count: 0
+                      -
+                        id: 3
+                        capacity: 486
+                        title: 'Qui ratione officiis necessitatibus aspernatur consectetur laudantium.'
+                        description: 'Non unde autem voluptas aut animi eos enim voluptas consequatur.'
+                        features: 'Sit doloremque doloribus et reiciendis ut quisquam officia exercitationem laborum.'
+                        deleted_at: null
+                        created_at: '2024-01-07T06:51:55.000000Z'
+                        updated_at: '2024-01-07T06:51:55.000000Z'
+                        seats_count: 0
+                      -
+                        id: 4
+                        capacity: 70
+                        title: 'Porro dignissimos dolorem quia id enim magni.'
+                        description: 'Voluptatibus odit nobis quam sed voluptatem officiis blanditiis iste doloremque.'
+                        features: 'Sequi quo eaque dolores culpa id magnam iusto illum enim rerum.'
+                        deleted_at: null
+                        created_at: '2024-01-07T06:51:55.000000Z'
+                        updated_at: '2024-01-07T06:51:55.000000Z'
+                        seats_count: 1
+                      -
+                        id: 5
+                        capacity: 729
+                        title: 'Ea aut saepe qui molestiae id earum.'
+                        description: 'Fuga rerum molestiae qui ea et exercitationem quia harum quod voluptatibus aut.'
+                        features: 'Ipsam tenetur tempora quod ratione doloribus delectus aut tenetur.'
+                        deleted_at: null
+                        created_at: '2024-01-07T06:51:55.000000Z'
+                        updated_at: '2024-01-07T06:51:55.000000Z'
+                        seats_count: 0
+                      -
+                        id: 6
+                        capacity: 771
+                        title: 'Non explicabo quia totam enim eveniet accusantium rerum.'
+                        description: 'Dolor sunt vel voluptatem sed qui unde maiores laudantium ut quae vitae.'
+                        features: 'Omnis qui a architecto rerum veniam atque qui cum rerum beatae voluptatibus.'
+                        deleted_at: null
+                        created_at: '2024-01-07T06:51:55.000000Z'
+                        updated_at: '2024-01-07T06:51:55.000000Z'
+                        seats_count: 0
+                      -
+                        id: 7
+                        capacity: 230
+                        title: 'Est rerum sunt distinctio quisquam consequatur.'
+                        description: 'Qui dolores necessitatibus voluptatem officia facilis dolorem voluptatum aut ut eaque veritatis natus corrupti.'
+                        features: 'Ex veniam eaque nam perspiciatis neque aliquid et esse.'
+                        deleted_at: null
+                        created_at: '2024-01-07T06:51:55.000000Z'
+                        updated_at: '2024-01-07T06:51:55.000000Z'
+                        seats_count: 0
+                      -
+                        id: 8
+                        capacity: 438
+                        title: 'Temporibus sunt animi et quaerat placeat quisquam.'
+                        description: 'Doloremque illo officiis cumque aliquid laboriosam sit.'
+                        features: 'Dolorem corporis dolore temporibus ex qui maxime et voluptates.'
+                        deleted_at: null
+                        created_at: '2024-01-07T06:51:55.000000Z'
+                        updated_at: '2024-01-07T06:51:55.000000Z'
+                        seats_count: 1
+                      -
+                        id: 9
+                        capacity: 32
+                        title: 'Aut quos sapiente ut ipsam.'
+                        description: 'Temporibus expedita eligendi culpa dolor neque esse omnis asperiores non vero fugit in.'
+                        features: 'Ea dolor sit velit illo molestias quo dicta enim.'
+                        deleted_at: null
+                        created_at: '2024-01-07T06:51:55.000000Z'
+                        updated_at: '2024-01-07T06:51:55.000000Z'
+                        seats_count: 0
+                      -
+                        id: 10
+                        capacity: 856
+                        title: 'Maiores atque aut vitae laudantium qui.'
+                        description: 'Expedita esse provident saepe harum maxime dolor.'
+                        features: 'Sequi deserunt cumque officiis quae deserunt qui.'
+                        deleted_at: null
+                        created_at: '2024-01-07T06:51:55.000000Z'
+                        updated_at: '2024-01-07T06:51:55.000000Z'
+                        seats_count: 0
+                      -
+                        id: 11
+                        capacity: 80
+                        title: 'Blanditiis tempore sint repudiandae sunt qui suscipit.'
+                        description: 'Atque repudiandae itaque quis ipsam qui non porro enim itaque culpa quia.'
+                        features: 'Non qui fugiat quis sed quae.'
+                        deleted_at: null
+                        created_at: '2024-01-07T06:51:55.000000Z'
+                        updated_at: '2024-01-07T06:51:55.000000Z'
+                        seats_count: 0
+                      -
+                        id: 12
+                        capacity: 966
+                        title: 'Ad modi est et vel modi expedita.'
+                        description: 'Expedita nobis vitae ut nostrum quia tempore.'
+                        features: 'Praesentium error dolor sed deserunt qui ipsa autem.'
+                        deleted_at: null
+                        created_at: '2024-01-07T06:51:55.000000Z'
+                        updated_at: '2024-01-07T06:51:55.000000Z'
+                        seats_count: 1
+                      -
+                        id: 13
+                        capacity: 513
+                        title: 'Minus aut ut molestiae itaque tempora itaque id.'
+                        description: 'Perferendis dolore velit perferendis eaque dicta amet consequatur tempore.'
+                        features: 'Velit quasi doloribus ipsam aut non sapiente.'
+                        deleted_at: null
+                        created_at: '2024-01-07T06:51:55.000000Z'
+                        updated_at: '2024-01-07T06:51:55.000000Z'
+                        seats_count: 0
+                      -
+                        id: 14
+                        capacity: 157
+                        title: 'Suscipit provident et sed molestias excepturi est ut.'
+                        description: 'Sit assumenda iure iste laboriosam nemo nisi enim illum voluptatum veritatis itaque.'
+                        features: 'Est non quis quis minima provident.'
+                        deleted_at: null
+                        created_at: '2024-01-07T06:51:55.000000Z'
+                        updated_at: '2024-01-07T06:51:55.000000Z'
+                        seats_count: 0
+                      -
+                        id: 15
+                        capacity: 277
+                        title: 'Eligendi praesentium veritatis natus aliquid facilis.'
+                        description: 'Sint ut qui aliquam consequatur aut explicabo et doloremque aperiam.'
+                        features: 'Voluptas corporis reprehenderit sint rerum.'
+                        deleted_at: null
+                        created_at: '2024-01-07T06:51:55.000000Z'
+                        updated_at: '2024-01-07T06:51:55.000000Z'
+                        seats_count: 0
+                      -
+                        id: 16
+                        capacity: 708
+                        title: 'Enim libero sint eum quos quam corporis et id.'
+                        description: 'Est sit nobis nobis natus labore ipsa molestias numquam.'
+                        features: 'Ratione neque id et veniam similique modi itaque.'
+                        deleted_at: null
+                        created_at: '2024-01-07T06:51:55.000000Z'
+                        updated_at: '2024-01-07T06:51:55.000000Z'
+                        seats_count: 1
+                      -
+                        id: 17
+                        capacity: 837
+                        title: 'Deserunt veniam non quisquam soluta perferendis.'
+                        description: 'Ut hic eos reiciendis veniam et placeat ut maxime.'
+                        features: 'Et ipsam et qui cupiditate beatae nostrum nemo aut sed.'
+                        deleted_at: null
+                        created_at: '2024-01-07T06:51:55.000000Z'
+                        updated_at: '2024-01-07T06:51:55.000000Z'
+                        seats_count: 0
+                      -
+                        id: 18
+                        capacity: 664
+                        title: 'Natus dolore quae debitis voluptatibus odit aut ipsum.'
+                        description: 'Quidem ea voluptate quia aut ut aut.'
+                        features: 'Officia consequuntur veniam autem alias eaque dolorum veritatis.'
+                        deleted_at: null
+                        created_at: '2024-01-07T06:51:55.000000Z'
+                        updated_at: '2024-01-07T06:51:55.000000Z'
+                        seats_count: 0
+                      -
+                        id: 19
+                        capacity: 267
+                        title: 'Quos quasi non occaecati dolor rerum temporibus nostrum.'
+                        description: 'Corrupti est mollitia ea iusto perferendis in in veritatis explicabo.'
+                        features: 'Quidem et fugiat cumque natus quam dicta.'
+                        deleted_at: null
+                        created_at: '2024-01-07T06:51:55.000000Z'
+                        updated_at: '2024-01-07T06:51:55.000000Z'
+                        seats_count: 0
+                      -
+                        id: 20
+                        capacity: 708
+                        title: 'Voluptas quas ut repellat similique nemo officia.'
+                        description: 'Modi quia iure qui accusamus mollitia in.'
+                        features: 'Accusantium sed cum hic recusandae ad sit.'
+                        deleted_at: null
+                        created_at: '2024-01-07T06:51:55.000000Z'
+                        updated_at: '2024-01-07T06:51:55.000000Z'
+                        seats_count: 1
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        capacity:
+                          type: integer
+                          example: 972
+                        title:
+                          type: string
+                          example: 'Dolor suscipit et omnis harum dolorem.'
+                        description:
+                          type: string
+                          example: 'Blanditiis est quisquam asperiores porro impedit expedita cupiditate odit dignissimos necessitatibus a.'
+                        features:
+                          type: string
+                          example: 'Illum hic ut nulla sed inventore id.'
+                        deleted_at:
+                          type: string
+                          example: null
+                        created_at:
+                          type: string
+                          example: '2024-01-07T06:51:55.000000Z'
+                        updated_at:
+                          type: string
+                          example: '2024-01-07T06:51:55.000000Z'
+                        seats_count:
+                          type: integer
+                          example: 0
+      tags:
+        - Seats
+      security: []
   '/api/tickets/init-payment/{eventPackage_id}':
     post:
       summary: ''
@@ -1851,27 +2307,27 @@ paths:
                 merchant:
                   type: string
                   description: ''
-                  example: qui
+                  example: ut
                 callback_url:
                   type: string
                   description: ''
-                  example: 'http://www.orn.com/'
+                  example: 'https://www.renner.com/veritatis-et-iusto-numquam-consectetur-quis'
                 quantity:
                   type: integer
                   description: 'Must be at least 1.'
-                  example: 47
+                  example: 25
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: qplslsrtdmccfbnrtziujdo
+                  example: xfdznscyv
                 phone:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: juwlnxngoncmv
+                  example: zwfbvi
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: hzulauf@example.net
+                  example: anne.wiegand@example.com
               required:
                 - merchant
                 - quantity
@@ -1904,7 +2360,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: libero
+                  example: ut
               required:
                 - reference
       security: []
@@ -1927,12 +2383,12 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: facere
+                  example: molestias
                 seat_ids:
                   type: array
                   description: ''
                   example:
-                    - sunt
+                    - ipsum
                   items:
                     type: string
               required:
@@ -1958,15 +2414,15 @@ paths:
                 ticket_id:
                   type: integer
                   description: ''
-                  example: 16
+                  example: 10
                 reference:
                   type: string
                   description: ''
-                  example: eum
+                  example: aut
                 device_no:
                   type: string
                   description: ''
-                  example: voluptatem
+                  example: esse
               required:
                 - ticket_id
                 - reference
@@ -1987,6 +2443,9 @@ tags:
     description: ''
   -
     name: Events
+    description: ''
+  -
+    name: Seats
     description: ''
   -
     name: Tickets
