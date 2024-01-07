@@ -39,12 +39,13 @@ class SeatSectionSeeder extends Seeder
   /** @return array{ 'id': int, 'seat_section_id': int, 'seat_no': string, 'description': string}[] */
   function getSeats(SeatSection $seatSection)
   {
-    return [
-        // [
-        //   'seat_no' => rand(10000, 99999),
-        //   'description' => null
-        // ]
+    $seats = [];
+    for ($i = 1; $i <= $seatSection->capacity; $i++) {
+      $seats[] = [
+        'seat_no' => str_pad($i, 4, '0', STR_PAD_LEFT)
       ];
+    }
+    return $seats;
   }
   /**
    * Run the database seeds.

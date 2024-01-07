@@ -27,7 +27,7 @@ class InitTicketPurchaseController extends Controller
         new Enum(PaymentMerchantType::class)
       ],
       'callback_url' => [
-        'nullable',
+        'required',
         'string',
         Rule::requiredIf(
           fn() => $request->merchant === PaymentMerchantType::Paystack->value
@@ -72,6 +72,7 @@ class InitTicketPurchaseController extends Controller
       $reference,
       $ticketPayment->user_id
     );
+    $paymentReferenceDto->setCallbackUrl($request->callback_url);
     [$res, $paymentReference] = PaymentMerchant::make($request->merchant)->init(
       $paymentReferenceDto
     );
