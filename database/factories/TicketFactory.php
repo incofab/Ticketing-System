@@ -22,4 +22,10 @@ class TicketFactory extends Factory
       'qr_code' => fake()->imageUrl()
     ];
   }
+
+  function eventPackage(EventPackage $eventPackage = null)
+  {
+    $eventPackage = $eventPackage ?? EventPackage::factory()->create();
+    return $this->state(fn($attr) => ['event_package_id' => $eventPackage->id]);
+  }
 }

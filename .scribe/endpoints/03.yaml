@@ -37,7 +37,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"","data":{"current_page":1,"data":[{"id":1,"event_season_id":1,"title":"Possimus architecto ut ut vel qui.","description":"Aut quod sint harum voluptas non consequuntur consectetur id praesentium vitae vitae.","start_time":"2024-03-07T06:51:55.000000Z","end_time":"2024-04-07T06:51:55.000000Z","home_team":"sint","away_team":"molestiae","deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z","event_images":[],"event_packages":[{"id":1,"event_id":1,"seat_section_id":1,"price":1048.9,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"}]}],"first_page_url":"http:\/\/localhost\/api\/events\/index\/1?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/events\/index\/1?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/events\/index\/1?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/events\/index\/1","per_page":100,"prev_page_url":null,"to":1,"total":1}}'
+        content: '{"message":"","data":{"current_page":1,"data":[{"id":1,"event_season_id":1,"title":"Reprehenderit commodi aperiam perferendis tenetur sunt sint.","description":"Est asperiores fugiat quasi et inventore necessitatibus aut autem consequatur.","start_time":"2024-03-07T13:29:44.000000Z","end_time":"2024-04-07T13:29:44.000000Z","home_team":"aut","away_team":"deleniti","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","event_images":[],"event_packages":[{"id":1,"event_id":1,"seat_section_id":5,"price":7454,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z"}]}],"first_page_url":"http:\/\/localhost\/api\/events\/index\/1?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/events\/index\/1?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/events\/index\/1?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/events\/index\/1","per_page":100,"prev_page_url":null,"to":1,"total":1}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -88,7 +88,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"","data":{"current_page":1,"data":[{"id":1,"event_season_id":1,"title":"Possimus architecto ut ut vel qui.","description":"Aut quod sint harum voluptas non consequuntur consectetur id praesentium vitae vitae.","start_time":"2024-03-07T06:51:55.000000Z","end_time":"2024-04-07T06:51:55.000000Z","home_team":"sint","away_team":"molestiae","deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"}],"first_page_url":"http:\/\/localhost\/api\/events\/upcoming\/1?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/events\/upcoming\/1?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/events\/upcoming\/1?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/events\/upcoming\/1","per_page":100,"prev_page_url":null,"to":1,"total":1}}'
+        content: '{"message":"","data":{"current_page":1,"data":[{"id":1,"event_season_id":1,"title":"Reprehenderit commodi aperiam perferendis tenetur sunt sint.","description":"Est asperiores fugiat quasi et inventore necessitatibus aut autem consequatur.","start_time":"2024-03-07T13:29:44.000000Z","end_time":"2024-04-07T13:29:44.000000Z","home_team":"aut","away_team":"deleniti","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z"}],"first_page_url":"http:\/\/localhost\/api\/events\/upcoming\/1?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/events\/upcoming\/1?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/events\/upcoming\/1?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/events\/upcoming\/1","per_page":100,"prev_page_url":null,"to":1,"total":1}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -139,7 +139,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"","data":{"id":1,"event_season_id":1,"title":"Possimus architecto ut ut vel qui.","description":"Aut quod sint harum voluptas non consequuntur consectetur id praesentium vitae vitae.","start_time":"2024-03-07T06:51:55.000000Z","end_time":"2024-04-07T06:51:55.000000Z","home_team":"sint","away_team":"molestiae","deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z","event_season":{"id":1,"event_category_id":1,"title":"Distinctio harum natus neque reiciendis animi id labore.","description":"Voluptatem deleniti dolorum quod et qui nulla sit voluptas quia minus.","date_from":"2024-02-07T06:51:55.000000Z","date_to":"2024-05-07T06:51:55.000000Z","status":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"},"event_packages":[{"id":1,"event_id":1,"seat_section_id":1,"price":1048.9,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z"}],"event_images":[]}}'
+        content: '{"message":"","data":{"id":1,"event_season_id":1,"title":"Reprehenderit commodi aperiam perferendis tenetur sunt sint.","description":"Est asperiores fugiat quasi et inventore necessitatibus aut autem consequatur.","start_time":"2024-03-07T13:29:44.000000Z","end_time":"2024-04-07T13:29:44.000000Z","home_team":"aut","away_team":"deleniti","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","event_season":{"id":1,"event_category_id":2,"title":"Esse voluptatum optio hic possimus quo dignissimos.","description":"Maiores et atque nihil ut sit officia nam similique quo.","date_from":"2024-02-07T13:29:44.000000Z","date_to":"2024-05-07T13:29:44.000000Z","status":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z"},"event_packages":[{"id":1,"event_id":1,"seat_section_id":5,"price":7454,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seat_section":{"id":5,"capacity":956,"title":"Vitae voluptas eaque facere natus quas quia temporibus.","description":"Voluptatem qui a sint ea tempora est nostrum qui sapiente quibusdam et ut corrupti.","features":"Tenetur sunt vero modi expedita consequuntur quam ea veritatis et et.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z"}}],"event_images":[]}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -189,7 +189,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: wymxebubwmgafzfgmfcwghs
+        example: xozvxylmnjjhakzckngn
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -198,7 +198,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Qui eum inventore natus laboriosam nostrum et.'
+        example: 'Quis iste harum mollitia vitae deleniti totam est.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -207,7 +207,7 @@ endpoints:
         name: start_time
         description: 'Must be a valid date.'
         required: true
-        example: '2024-01-07T08:39:32'
+        example: '2024-01-07T14:29:57'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -216,7 +216,7 @@ endpoints:
         name: end_time
         description: 'Must be a valid date. Must be a date after <code>start_time</code>.'
         required: false
-        example: '2056-12-07'
+        example: '2106-02-16'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -225,7 +225,7 @@ endpoints:
         name: home_team
         description: ''
         required: false
-        example: eveniet
+        example: aut
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -234,7 +234,7 @@ endpoints:
         name: away_team
         description: ''
         required: false
-        example: minus
+        example: quo
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -243,7 +243,7 @@ endpoints:
         name: event_packages
         description: 'Must have at least 1 items.'
         required: false
-        example: ahiiliyvaxadabzanotukgpovfkpnkyoiigjtqpiwaokrxpfjvfzwvwfjctdxskcmnfgpbd
+        example: yprdyudpsxusrtrfxdjekhlzrtdbgdefeihjwckrzxnyskrquatrpritlrfpomdh
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -252,7 +252,7 @@ endpoints:
         name: 'event_packages[].seat_section_id'
         description: ''
         required: true
-        example: amet
+        example: tempora
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -261,19 +261,19 @@ endpoints:
         name: 'event_packages[].price'
         description: ''
         required: true
-        example: 1.53604785
+        example: 24.0
         type: number
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: wymxebubwmgafzfgmfcwghs
-      description: 'Qui eum inventore natus laboriosam nostrum et.'
-      start_time: '2024-01-07T08:39:32'
-      end_time: '2056-12-07'
-      home_team: eveniet
-      away_team: minus
-      event_packages: ahiiliyvaxadabzanotukgpovfkpnkyoiigjtqpiwaokrxpfjvfzwvwfjctdxskcmnfgpbd
+      title: xozvxylmnjjhakzckngn
+      description: 'Quis iste harum mollitia vitae deleniti totam est.'
+      start_time: '2024-01-07T14:29:57'
+      end_time: '2106-02-16'
+      home_team: aut
+      away_team: quo
+      event_packages: yprdyudpsxusrtrfxdjekhlzrtdbgdefeihjwckrzxnyskrquatrpritlrfpomdh
     fileParameters: []
     responses: []
     responseFields: []
@@ -317,7 +317,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: uekrdznajfszggilykjl
+        example: pxmjp
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -326,7 +326,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Eaque repellat accusamus aliquam.'
+        example: 'Voluptatem eaque id quisquam voluptate et et saepe.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -335,7 +335,7 @@ endpoints:
         name: start_time
         description: 'Must be a valid date.'
         required: true
-        example: '2024-01-07T08:39:32'
+        example: '2024-01-07T14:29:57'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -344,7 +344,7 @@ endpoints:
         name: end_time
         description: 'Must be a valid date. Must be a date after <code>start_time</code>.'
         required: false
-        example: '2093-10-21'
+        example: '2058-08-28'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -353,7 +353,7 @@ endpoints:
         name: home_team
         description: ''
         required: false
-        example: earum
+        example: a
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -362,18 +362,18 @@ endpoints:
         name: away_team
         description: ''
         required: false
-        example: est
+        example: quo
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: uekrdznajfszggilykjl
-      description: 'Eaque repellat accusamus aliquam.'
-      start_time: '2024-01-07T08:39:32'
-      end_time: '2093-10-21'
-      home_team: earum
-      away_team: est
+      title: pxmjp
+      description: 'Voluptatem eaque id quisquam voluptate et et saepe.'
+      start_time: '2024-01-07T14:29:57'
+      end_time: '2058-08-28'
+      home_team: a
+      away_team: quo
     fileParameters: []
     responses: []
     responseFields: []

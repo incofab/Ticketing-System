@@ -10,10 +10,33 @@ use Illuminate\Database\Seeder;
 class SeatSectionSeeder extends Seeder
 {
   const SECTIONS = [
-    ['title' => 'section-d', 'capacity' => 2253, 'description' => 'Section D']
+    [
+      'id' => 1,
+      'title' => 'Regular',
+      'capacity' => 10000,
+      'description' => null
+    ],
+    [
+      'id' => 2,
+      'title' => 'Cover Stand Regular',
+      'capacity' => 2083,
+      'description' => null
+    ],
+    [
+      'id' => 3,
+      'title' => 'Cover Stand Executive',
+      'capacity' => 60,
+      'description' => null
+    ],
+    [
+      'id' => 4,
+      'title' => 'Press Gallery',
+      'capacity' => 110,
+      'description' => null
+    ]
   ];
 
-  /** @return array{ 'seat_section_id': int, 'seat_no': string, 'description': string}[] */
+  /** @return array{ 'id': int, 'seat_section_id': int, 'seat_no': string, 'description': string}[] */
   function getSeats(SeatSection $seatSection)
   {
     return [

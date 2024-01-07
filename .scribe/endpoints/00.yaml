@@ -26,7 +26,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: dignissimos
+        example: dolores
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -35,14 +35,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: pC%<Ik8nzl-bye
+        example: 'h@.},u|nXP&(3_L)l'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      phone: dignissimos
-      password: pC%<Ik8nzl-bye
+      phone: dolores
+      password: 'h@.},u|nXP&(3_L)l'
     fileParameters: []
     responses: []
     responseFields: []
@@ -76,7 +76,7 @@ endpoints:
         name: first_name
         description: ''
         required: true
-        example: 11
+        example: 4
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -85,7 +85,7 @@ endpoints:
         name: last_name
         description: ''
         required: true
-        example: voluptatibus
+        example: eum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -94,7 +94,7 @@ endpoints:
         name: other_names
         description: ''
         required: false
-        example: rerum
+        example: autem
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -103,7 +103,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: ut
+        example: vero
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -112,7 +112,7 @@ endpoints:
         name: email
         description: ''
         required: false
-        example: diamond59@example.org
+        example: vivienne06@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -121,18 +121,18 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: "'7&B-Ok]lH8CH?/S5="
+        example: '"yf?mI>3JZb9|@U'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      first_name: 11
-      last_name: voluptatibus
-      other_names: rerum
-      phone: ut
-      email: diamond59@example.org
-      password: "'7&B-Ok]lH8CH?/S5="
+      first_name: 4
+      last_name: eum
+      other_names: autem
+      phone: vero
+      email: vivienne06@example.org
+      password: '"yf?mI>3JZb9|@U'
     fileParameters: []
     responses: []
     responseFields: []

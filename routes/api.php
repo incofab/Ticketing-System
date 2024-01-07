@@ -27,6 +27,9 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
 Route::group(['prefix' => 'seat-sections'], function () {
     Route::get('/index', [Seats\SeatSectionController::class, 'index'])->name('seat-sections.index');
+    Route::group(['middleware' => ['auth:sanctum']], function () {
+        Route::post('/{seatSection}/update', [Seats\SeatSectionController::class, 'update'])->name('seat-sections.update');
+    });
 });
 
 Route::group(['prefix' => 'event-seasons'], function () {

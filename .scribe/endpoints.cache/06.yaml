@@ -38,7 +38,7 @@ endpoints:
         name: merchant
         description: ''
         required: true
-        example: ut
+        example: non
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -47,7 +47,7 @@ endpoints:
         name: callback_url
         description: ''
         required: false
-        example: 'https://www.renner.com/veritatis-et-iusto-numquam-consectetur-quis'
+        example: 'http://kulas.biz/atque-placeat-aliquid-aut-assumenda-dolorum-inventore.html'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -56,7 +56,7 @@ endpoints:
         name: quantity
         description: 'Must be at least 1.'
         required: true
-        example: 25
+        example: 40
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -65,7 +65,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: xfdznscyv
+        example: wmdcbenywapsnuagcub
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -74,7 +74,7 @@ endpoints:
         name: phone
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: zwfbvi
+        example: kirpfvjzlo
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -83,18 +83,18 @@ endpoints:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: false
-        example: anne.wiegand@example.com
+        example: gwitting@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      merchant: ut
-      callback_url: 'https://www.renner.com/veritatis-et-iusto-numquam-consectetur-quis'
-      quantity: 25
-      name: xfdznscyv
-      phone: zwfbvi
-      email: anne.wiegand@example.com
+      merchant: non
+      callback_url: 'http://kulas.biz/atque-placeat-aliquid-aut-assumenda-dolorum-inventore.html'
+      quantity: 40
+      name: wmdcbenywapsnuagcub
+      phone: kirpfvjzlo
+      email: gwitting@example.com
     fileParameters: []
     responses: []
     responseFields: []
@@ -128,13 +128,13 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: ut
+        example: quis
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      reference: ut
+      reference: quis
     fileParameters: []
     responses: []
     responseFields: []
@@ -168,7 +168,7 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: molestias
+        example: voluptas
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -178,15 +178,15 @@ endpoints:
         description: ''
         required: true
         example:
-          - ipsum
+          - quidem
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      reference: molestias
+      reference: voluptas
       seat_ids:
-        - ipsum
+        - quidem
     fileParameters: []
     responses: []
     responseFields: []
@@ -220,7 +220,7 @@ endpoints:
         name: ticket_id
         description: ''
         required: true
-        example: 10
+        example: 2
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -229,7 +229,7 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: aut
+        example: placeat
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -238,15 +238,15 @@ endpoints:
         name: device_no
         description: ''
         required: true
-        example: esse
+        example: officiis
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      ticket_id: 10
-      reference: aut
-      device_no: esse
+      ticket_id: 2
+      reference: placeat
+      device_no: officiis
     fileParameters: []
     responses: []
     responseFields: []

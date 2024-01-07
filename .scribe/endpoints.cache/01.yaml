@@ -29,7 +29,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"","data":[{"id":1,"capacity":972,"title":"Dolor suscipit et omnis harum dolorem.","description":"Blanditiis est quisquam asperiores porro impedit expedita cupiditate odit dignissimos necessitatibus a.","features":"Illum hic ut nulla sed inventore id.","deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z","seats_count":0},{"id":2,"capacity":857,"title":"Nihil consequuntur ratione magnam consequatur eligendi.","description":"Perferendis doloribus doloremque ut inventore id accusantium.","features":"Et sed incidunt fugit sit ipsa cupiditate sed.","deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z","seats_count":0},{"id":3,"capacity":486,"title":"Qui ratione officiis necessitatibus aspernatur consectetur laudantium.","description":"Non unde autem voluptas aut animi eos enim voluptas consequatur.","features":"Sit doloremque doloribus et reiciendis ut quisquam officia exercitationem laborum.","deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z","seats_count":0},{"id":4,"capacity":70,"title":"Porro dignissimos dolorem quia id enim magni.","description":"Voluptatibus odit nobis quam sed voluptatem officiis blanditiis iste doloremque.","features":"Sequi quo eaque dolores culpa id magnam iusto illum enim rerum.","deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z","seats_count":1},{"id":5,"capacity":729,"title":"Ea aut saepe qui molestiae id earum.","description":"Fuga rerum molestiae qui ea et exercitationem quia harum quod voluptatibus aut.","features":"Ipsam tenetur tempora quod ratione doloribus delectus aut tenetur.","deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z","seats_count":0},{"id":6,"capacity":771,"title":"Non explicabo quia totam enim eveniet accusantium rerum.","description":"Dolor sunt vel voluptatem sed qui unde maiores laudantium ut quae vitae.","features":"Omnis qui a architecto rerum veniam atque qui cum rerum beatae voluptatibus.","deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z","seats_count":0},{"id":7,"capacity":230,"title":"Est rerum sunt distinctio quisquam consequatur.","description":"Qui dolores necessitatibus voluptatem officia facilis dolorem voluptatum aut ut eaque veritatis natus corrupti.","features":"Ex veniam eaque nam perspiciatis neque aliquid et esse.","deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z","seats_count":0},{"id":8,"capacity":438,"title":"Temporibus sunt animi et quaerat placeat quisquam.","description":"Doloremque illo officiis cumque aliquid laboriosam sit.","features":"Dolorem corporis dolore temporibus ex qui maxime et voluptates.","deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z","seats_count":1},{"id":9,"capacity":32,"title":"Aut quos sapiente ut ipsam.","description":"Temporibus expedita eligendi culpa dolor neque esse omnis asperiores non vero fugit in.","features":"Ea dolor sit velit illo molestias quo dicta enim.","deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z","seats_count":0},{"id":10,"capacity":856,"title":"Maiores atque aut vitae laudantium qui.","description":"Expedita esse provident saepe harum maxime dolor.","features":"Sequi deserunt cumque officiis quae deserunt qui.","deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z","seats_count":0},{"id":11,"capacity":80,"title":"Blanditiis tempore sint repudiandae sunt qui suscipit.","description":"Atque repudiandae itaque quis ipsam qui non porro enim itaque culpa quia.","features":"Non qui fugiat quis sed quae.","deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z","seats_count":0},{"id":12,"capacity":966,"title":"Ad modi est et vel modi expedita.","description":"Expedita nobis vitae ut nostrum quia tempore.","features":"Praesentium error dolor sed deserunt qui ipsa autem.","deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z","seats_count":1},{"id":13,"capacity":513,"title":"Minus aut ut molestiae itaque tempora itaque id.","description":"Perferendis dolore velit perferendis eaque dicta amet consequatur tempore.","features":"Velit quasi doloribus ipsam aut non sapiente.","deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z","seats_count":0},{"id":14,"capacity":157,"title":"Suscipit provident et sed molestias excepturi est ut.","description":"Sit assumenda iure iste laboriosam nemo nisi enim illum voluptatum veritatis itaque.","features":"Est non quis quis minima provident.","deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z","seats_count":0},{"id":15,"capacity":277,"title":"Eligendi praesentium veritatis natus aliquid facilis.","description":"Sint ut qui aliquam consequatur aut explicabo et doloremque aperiam.","features":"Voluptas corporis reprehenderit sint rerum.","deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z","seats_count":0},{"id":16,"capacity":708,"title":"Enim libero sint eum quos quam corporis et id.","description":"Est sit nobis nobis natus labore ipsa molestias numquam.","features":"Ratione neque id et veniam similique modi itaque.","deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z","seats_count":1},{"id":17,"capacity":837,"title":"Deserunt veniam non quisquam soluta perferendis.","description":"Ut hic eos reiciendis veniam et placeat ut maxime.","features":"Et ipsam et qui cupiditate beatae nostrum nemo aut sed.","deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z","seats_count":0},{"id":18,"capacity":664,"title":"Natus dolore quae debitis voluptatibus odit aut ipsum.","description":"Quidem ea voluptate quia aut ut aut.","features":"Officia consequuntur veniam autem alias eaque dolorum veritatis.","deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z","seats_count":0},{"id":19,"capacity":267,"title":"Quos quasi non occaecati dolor rerum temporibus nostrum.","description":"Corrupti est mollitia ea iusto perferendis in in veritatis explicabo.","features":"Quidem et fugiat cumque natus quam dicta.","deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z","seats_count":0},{"id":20,"capacity":708,"title":"Voluptas quas ut repellat similique nemo officia.","description":"Modi quia iure qui accusamus mollitia in.","features":"Accusantium sed cum hic recusandae ad sit.","deleted_at":null,"created_at":"2024-01-07T06:51:55.000000Z","updated_at":"2024-01-07T06:51:55.000000Z","seats_count":1}]}'
+        content: '{"message":"","data":[{"id":1,"capacity":10000,"title":"Regular","description":null,"features":null,"deleted_at":null,"created_at":"2024-01-07T13:18:02.000000Z","updated_at":"2024-01-07T13:18:02.000000Z","seats_count":0},{"id":2,"capacity":2083,"title":"Cover Stand Regular","description":null,"features":null,"deleted_at":null,"created_at":"2024-01-07T13:18:02.000000Z","updated_at":"2024-01-07T13:18:02.000000Z","seats_count":0},{"id":3,"capacity":60,"title":"Cover Stand Executive","description":null,"features":null,"deleted_at":null,"created_at":"2024-01-07T13:18:02.000000Z","updated_at":"2024-01-07T13:18:02.000000Z","seats_count":0},{"id":4,"capacity":110,"title":"Press Gallery","description":null,"features":null,"deleted_at":null,"created_at":"2024-01-07T13:18:02.000000Z","updated_at":"2024-01-07T13:18:02.000000Z","seats_count":0},{"id":5,"capacity":956,"title":"Vitae voluptas eaque facere natus quas quia temporibus.","description":"Voluptatem qui a sint ea tempora est nostrum qui sapiente quibusdam et ut corrupti.","features":"Tenetur sunt vero modi expedita consequuntur quam ea veritatis et et.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":6,"capacity":673,"title":"Nostrum omnis deleniti vitae in neque.","description":"Necessitatibus ducimus labore ut qui et sit qui et nostrum reprehenderit.","features":"Sed rerum aut aut error et incidunt quia autem corrupti.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":7,"capacity":972,"title":"Aut voluptas non dolorum et itaque.","description":"Qui est inventore est totam omnis illo.","features":"Repellendus numquam repudiandae aliquid non assumenda similique mollitia sed.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":8,"capacity":538,"title":"Ullam quaerat cum voluptatum ut rem sunt.","description":"Quaerat qui ea dolor ea nemo sapiente est sit.","features":"Laudantium aspernatur sit molestiae quo sed.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":1},{"id":9,"capacity":989,"title":"Ad et natus dolores et eveniet qui aliquid.","description":"Veniam debitis ea atque libero repellendus architecto voluptatem mollitia.","features":"Sit officiis ad eligendi qui minus.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":10,"capacity":896,"title":"Sit est dolore ut aut est sapiente.","description":"Accusantium libero eos qui ad sunt iure eum beatae nihil aliquid.","features":"Velit voluptate quo minus enim ipsam distinctio.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":11,"capacity":118,"title":"Quis ut id distinctio.","description":"Cumque consequatur adipisci est nam quo amet.","features":"Laboriosam inventore nesciunt et consectetur nemo.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":12,"capacity":328,"title":"Quod perferendis doloremque ipsam magni est.","description":"Magni fugiat qui est et reiciendis at explicabo.","features":"Qui nisi cumque sint repellendus officiis error.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":1},{"id":13,"capacity":815,"title":"Distinctio velit assumenda sunt corporis quia quo voluptas.","description":"Vel alias est doloremque numquam sed tempore non libero molestiae non placeat.","features":"Ut voluptates dolor voluptates officiis harum omnis minima eos.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":14,"capacity":629,"title":"Dolores molestiae a repellat quia praesentium.","description":"Sit eum commodi aut hic consequatur quae incidunt omnis atque voluptatem quis sed magnam.","features":"Vel eum qui qui nihil reiciendis voluptate perferendis voluptas.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":15,"capacity":111,"title":"Ut quas est perspiciatis nemo nobis ipsum omnis.","description":"Et aut voluptatem rerum maxime sit quia voluptas reiciendis.","features":"Repellendus rem veritatis sit omnis soluta est aut corrupti doloremque maxime.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":16,"capacity":147,"title":"Rerum optio tempore sequi harum voluptatem vel.","description":"Ex sed enim dolor error saepe inventore voluptatum sit excepturi occaecati distinctio aut.","features":"Itaque ut quam officia autem dolorem rem perferendis non incidunt aut.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":1},{"id":17,"capacity":239,"title":"Eaque accusamus laborum maiores doloribus cumque soluta.","description":"Et hic sit ut fugit recusandae est velit animi sunt mollitia ipsum.","features":"Ea aperiam culpa ipsa esse molestias et est.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":18,"capacity":477,"title":"Mollitia dicta earum dicta tempore necessitatibus.","description":"Consequatur et cumque ipsa dolor fugiat porro.","features":"Quia nemo earum reprehenderit et aut.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":19,"capacity":265,"title":"Vel expedita error beatae dolore pariatur.","description":"Eum dignissimos praesentium deleniti iusto aliquid laborum illo.","features":"Optio assumenda ut expedita id assumenda.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":20,"capacity":959,"title":"Minus et iusto sit atque maxime.","description":"Enim odit numquam eum assumenda voluptatum aut.","features":"Totam voluptas exercitationem quia sunt magni.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":1},{"id":21,"capacity":464,"title":"Vel vero dignissimos voluptas dignissimos atque.","description":"Omnis vitae autem maxime nisi dolorem officiis inventore nobis et.","features":"Iure sequi sit quibusdam voluptatem voluptas suscipit dolore adipisci.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":22,"capacity":431,"title":"Distinctio quis ut assumenda fuga ipsam.","description":"Eveniet et ea consequuntur ad quod velit id tempore blanditiis qui.","features":"Et amet mollitia dolorem nulla nam officiis.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":23,"capacity":139,"title":"Vel qui eum rerum.","description":"Rerum aut voluptatem ab maxime iste quia.","features":"Doloremque est aut voluptatem dolor.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":0},{"id":24,"capacity":317,"title":"Ad praesentium ipsum ex consequatur est ipsam.","description":"Quisquam doloribus aliquid et laborum qui quia iusto.","features":"Dolorum aliquam quos illum voluptatem possimus.","deleted_at":null,"created_at":"2024-01-07T13:29:44.000000Z","updated_at":"2024-01-07T13:29:44.000000Z","seats_count":1}]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -38,6 +38,86 @@ endpoints:
           access-control-allow-origin: '*'
         description: null
         custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/seat-sections/{seatSection_id}/update'
+    metadata:
+      groupName: Seats
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      seatSection_id:
+        name: seatSection_id
+        description: 'The ID of the seatSection.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      seatSection_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: ztkoqknrogocqlbjzuellqz
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: false
+        example: 'Aut qui occaecati dolorum eius impedit possimus ut qui.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      features:
+        name: features
+        description: ''
+        required: false
+        example: sit
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      capacity:
+        name: capacity
+        description: ''
+        required: true
+        example: 20
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      title: ztkoqknrogocqlbjzuellqz
+      description: 'Aut qui occaecati dolorum eius impedit possimus ut qui.'
+      features: sit
+      capacity: 20
+    fileParameters: []
+    responses: []
     responseFields: []
     auth: []
     controller: null

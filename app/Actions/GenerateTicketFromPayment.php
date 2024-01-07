@@ -14,6 +14,7 @@ class GenerateTicketFromPayment
   private EventPackage $eventPackage;
   private SeatSection $seatSection;
   private TicketPayment $ticketPayment;
+  private int $numOfTicketsToGenerate;
 
   /**
    * @param int[] $seatIds
@@ -27,9 +28,10 @@ class GenerateTicketFromPayment
     $this->eventPackage = $this->ticketPayment->eventPackage;
     $this->seatSection = $this->eventPackage->seatSection;
 
+    $this->numOfTicketsToGenerate = count($seatIds);
     abort_if(
       $this->seatSection->capacity <
-        $this->eventPackage->quantity_sold + $this->ticketPayment->quantity,
+        $this->eventPackage->quantity_sold + $this->numOfTicketsToGenerate,
       401,
       'Not enough available seats'
     );
@@ -58,7 +60,7 @@ class GenerateTicketFromPayment
     $this->eventPackage
       ->fill([
         'quantity_sold' =>
-          $this->eventPackage->quantity_sold + $this->ticketPayment->quantity
+          $this->eventPackage->quantity_sold + $this->numOfTicketsToGenerate
       ])
       ->save();
     return $tickets;
