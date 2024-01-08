@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\Tickets\VerifyTicketController;
 use App\Models\Ticket;
 use App\Models\User;
 
@@ -12,6 +13,7 @@ beforeEach(function () {
   $reference = 'unique_reference-' . rand(10000, 99999);
   $this->requestData = [
     'ticket_id' => $this->ticket->id,
+    'hash' => $this->ticket->reference,
     'reference' => $reference,
     'device_no' => 'device123'
   ];
@@ -20,7 +22,12 @@ beforeEach(function () {
 it('returns validation error if required fields are missing', function () {
   actingAs($this->admin)
     ->postJson(route('api.tickets.verify'), [])
-    ->assertJsonValidationErrors(['reference', 'device_no', 'ticket_id']);
+    ->assertJsonValidationErrors([
+      'reference',
+      'hash',
+      'device_no',
+      'ticket_id'
+    ]);
 });
 
 it('can verify a ticket', function () {
@@ -31,7 +38,40 @@ it('can verify a ticket', function () {
     ->assertJson(['success' => true, 'slug' => 'verified']);
 
   // Assert that the ticket verification record exists in the database
-  $this->assertDatabaseHas('ticket_verifications', $this->requestData);
+  $this->assertDatabaseHas(
+    'ticket_verifications',
+    collect($this->requestData)
+      ->except('hash')
+      ->toArray()
+  );
+});
+
+it('ensures ticket hash is valid', function () {
+  actingAs($this->admin)
+    ->postJson(route('api.tickets.verify'), [
+      ...$this->requestData,
+      'hash' => 'invalid hash'
+    ])
+    ->assertOk()
+    ->assertJson([
+      'success' => false,
+      'slug' => VerifyTicketController::SLUG_INVALID_TICKET
+    ]);
+  actingAs($this->admin)
+    ->postJson(route('api.tickets.verify'), $this->requestData)
+    ->assertOk()
+    ->assertJson([
+      'success' => true,
+      'slug' => VerifyTicketController::SLUG_VERIFIED
+    ]);
+
+  // Assert that the ticket verification record exists in the database
+  $this->assertDatabaseHas(
+    'ticket_verifications',
+    collect($this->requestData)
+      ->except('hash')
+      ->toArray()
+  );
 });
 
 it('returns already verified if the ticket is already verified', function () {
@@ -39,7 +79,7 @@ it('returns already verified if the ticket is already verified', function () {
     ->postJson(route('api.tickets.verify'), $this->requestData)
     ->assertOk();
 
-  travelTo(now()->addSeconds(10));
+  travelTo(now()->addSeconds(5));
 
   // Verification still valid if called from same device and within time allowance
   actingAs($this->admin)

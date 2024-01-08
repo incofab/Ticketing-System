@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\Tickets;
 
 use App\Http\Controllers\Controller;
+use App\Models\Ticket;
 use App\Models\TicketVerification;
 use Illuminate\Http\Request;
 
@@ -11,6 +12,7 @@ use Illuminate\Http\Request;
  */
 class VerifyTicketController extends Controller
 {
+  const SLUG_INVALID_TICKET = 'invalid_ticket';
   const SLUG_VERIFIED = 'verified';
   const SLUG_ALREADY_VERIFIED = 'alredy_verified';
 
@@ -18,6 +20,7 @@ class VerifyTicketController extends Controller
   {
     $data = $request->validate([
       'ticket_id' => ['required', 'integer'],
+      'hash' => ['required', 'string'],
       'reference' => [
         'required',
         'string',
@@ -25,6 +28,14 @@ class VerifyTicketController extends Controller
       ],
       'device_no' => ['required', 'string']
     ]);
+
+    $ticket = Ticket::query()
+      ->where('id', $request->ticket_id)
+      ->where('reference', $request->hash)
+      ->first();
+    if (!$ticket) {
+      return $this->res(false, self::SLUG_INVALID_TICKET, []);
+    }
 
     /** @var TicketVerification $existingVerification */
     $existingVerification = TicketVerification::query()
@@ -45,7 +56,11 @@ class VerifyTicketController extends Controller
 
     $ticketVerification = currentUser()
       ->ticketVerifications()
-      ->create($data);
+      ->create(
+        collect($data)
+          ->except('hash')
+          ->toArray()
+      );
 
     return $this->res(true, self::SLUG_VERIFIED, $ticketVerification);
   }

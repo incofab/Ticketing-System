@@ -76,8 +76,26 @@ it('generates tickets for a valid payment reference and seat ids', function () {
     'reference' => $this->paymentReference->reference,
     'seat_ids' => $seatIds
   ])
-    ->dump()
-    ->assertOk();
+    ->assertOk()
+    ->assertJsonStructure([
+      'data' => [
+        '*' => [
+          'id',
+          'seat_id',
+          'seat' => ['seat_no'],
+          'event_package' => [
+            'id',
+            'seat_section' => ['title', 'capacity'],
+            'event' => [
+              'id',
+              'title',
+              'start_time',
+              'event_season' => ['id', 'title']
+            ]
+          ]
+        ]
+      ]
+    ]);
   expect(
     Ticket::whereIn('seat_id', $seatIds)
       ->get()

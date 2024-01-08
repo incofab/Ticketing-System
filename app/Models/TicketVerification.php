@@ -20,7 +20,7 @@ class TicketVerification extends Model
     if ($this->device_no !== $deviceNo) {
       return false;
     }
-    $allowanceInSeconds = 30;
+    $allowanceInSeconds = 10;
     return $this->created_at
       ->addSeconds($allowanceInSeconds)
       ->greaterThanOrEqualTo(now());

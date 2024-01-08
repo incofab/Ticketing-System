@@ -46,7 +46,7 @@ class GenerateTicketFromPayment
 
     foreach ($this->seatIds as $key => $seatId) {
       $ticketReference = Str::orderedUuid();
-      $tickets[] = $this->ticketPayment->tickets()->create([
+      $generatedTicket = $this->ticketPayment->tickets()->create([
         'reference' => $ticketReference,
         'qr_code' => QrCode::format('svg')->generate(
           "$ticketReference|{$this->ticketPayment->id}"
@@ -55,6 +55,12 @@ class GenerateTicketFromPayment
         'user_id' => $this->ticketPayment->user_id,
         'event_package_id' => $this->ticketPayment->event_package_id
       ]);
+      $generatedTicket->load(
+        'seat',
+        'eventPackage.seatSection',
+        'eventPackage.event.eventSeason'
+      );
+      $tickets[] = $generatedTicket;
     }
 
     $this->eventPackage
