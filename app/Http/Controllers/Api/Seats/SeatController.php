@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\Seats;
 
+use App\Actions\GetAvailableSeats;
 use App\Http\Controllers\Controller;
 use App\Models\EventPackage;
 use App\Models\Seat;
@@ -21,13 +22,13 @@ class SeatController extends Controller
 
   public function available(Request $request, EventPackage $eventPackage)
   {
-    $query = Seat::query()
-      ->whereDoesntHave(
-        'tickets',
-        fn($q) => $q->where('event_package_id', $eventPackage->id)
-      )
-      ->where('seats.seat_section_id', $eventPackage->seat_section_id);
-
+    // $query = Seat::query()
+    //   ->whereDoesntHave(
+    //     'tickets',
+    //     fn($q) => $q->where('event_package_id', $eventPackage->id)
+    //   )
+    //   ->where('seats.seat_section_id', $eventPackage->seat_section_id);
+    $query = GetAvailableSeats::run($eventPackage);
     return $this->apiRes(paginateFromRequest($query));
   }
 }

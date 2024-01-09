@@ -63,13 +63,13 @@ endpoints:
         name: event_id
         description: 'The ID of the event.'
         required: true
-        example: 1
+        example: 6
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      event_id: 1
+      event_id: 6
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -77,7 +77,7 @@ endpoints:
         name: seat_section_id
         description: ''
         required: true
-        example: sint
+        example: quia
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -86,14 +86,14 @@ endpoints:
         name: price
         description: ''
         required: true
-        example: 4.50988
+        example: 460939.0
         type: number
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      seat_section_id: sint
-      price: 4.50988
+      seat_section_id: quia
+      price: 460939.0
     fileParameters: []
     responses: []
     responseFields: []
@@ -123,13 +123,13 @@ endpoints:
         name: eventPackage_id
         description: 'The ID of the eventPackage.'
         required: true
-        example: 19
+        example: 10
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      eventPackage_id: 19
+      eventPackage_id: 10
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

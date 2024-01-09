@@ -35,4 +35,15 @@ class TicketFactory extends Factory
       ]
     );
   }
+
+  function ticketPayment(TicketPayment $ticketPayment = null)
+  {
+    $ticketPayment = $ticketPayment ?? TicketPayment::factory()->create();
+    return $this->state(
+      fn($attr) => [
+        'event_package_id' => $ticketPayment->event_package_id,
+        'ticket_payment_id' => $ticketPayment->id
+      ]
+    );
+  }
 }

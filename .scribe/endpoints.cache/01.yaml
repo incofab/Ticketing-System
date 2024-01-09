@@ -75,13 +75,13 @@ endpoints:
         name: eventPackage_id
         description: 'The ID of the eventPackage.'
         required: true
-        example: 5
+        example: 14
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      eventPackage_id: 5
+      eventPackage_id: 14
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -92,7 +92,7 @@ endpoints:
         status: 404
         content: |-
           {
-              "message": "No query results for model [App\\Models\\EventPackage] 5",
+              "message": "No query results for model [App\\Models\\EventPackage] 14",
               "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
               "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
               "line": 487,
@@ -637,7 +637,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: rayvxnvknzxyqhlwpdkj
+        example: cwdtdqqogqwjteyaukfr
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -646,7 +646,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Sunt accusamus dolorem quibusdam aut sit dolores velit.'
+        example: 'Qui aut laborum quia enim neque voluptatem et quidem.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -655,7 +655,7 @@ endpoints:
         name: features
         description: ''
         required: false
-        example: molestias
+        example: nobis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -664,16 +664,16 @@ endpoints:
         name: capacity
         description: ''
         required: true
-        example: 16
+        example: 6
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: rayvxnvknzxyqhlwpdkj
-      description: 'Sunt accusamus dolorem quibusdam aut sit dolores velit.'
-      features: molestias
-      capacity: 16
+      title: cwdtdqqogqwjteyaukfr
+      description: 'Qui aut laborum quia enim neque voluptatem et quidem.'
+      features: nobis
+      capacity: 6
     fileParameters: []
     responses: []
     responseFields: []

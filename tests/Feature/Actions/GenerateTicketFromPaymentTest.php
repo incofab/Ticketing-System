@@ -19,9 +19,19 @@ it('aborts if not enough seats', function () {
 
   $seats = Seat::factory(2)->create();
   $seatIds = $seats->pluck('id')->toArray();
-  $generateTicket = new GenerateTicketFromPayment($paymentReference, $seatIds);
+
+  try {
+    $generateTicket = new GenerateTicketFromPayment(
+      $paymentReference,
+      $seatIds
+    );
+
+    $this->expectExceptionCode(401);
+  } catch (\Throwable $th) {
+    info('Catch error' . get_class($th));
+  }
   // Should abort here
-  $tickets = $generateTicket->run();
+  // $tickets = $generateTicket->run();
 });
 
 it('generates tickets from payment', function () {

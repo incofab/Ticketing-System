@@ -75,6 +75,7 @@ Route::group(['prefix' => 'tickets'], function () {
     Route::post('/init-payment/{eventPackage}', Tickets\InitTicketPurchaseController::class)->name('tickets.init-payment');
     Route::post('/confirm-payment', Tickets\ConfirmPaymentController::class)->name('tickets.confirm-payment');
     Route::post('/generate-ticket', Tickets\GenerateTicketController::class)->name('tickets.generate');
+    Route::get('/retrieve', Tickets\RetrieveTicketController::class)->name('tickets.retrieve');
     Route::group(['middleware' => ['auth:sanctum']], function () {
         Route::post('/verify', Tickets\VerifyTicketController::class)->name('tickets.verify');
     });

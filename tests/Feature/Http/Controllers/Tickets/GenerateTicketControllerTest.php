@@ -16,9 +16,28 @@ beforeEach(function () {
     ->confirmed()
     ->create();
   $this->eventPackage = $this->ticketPayment->eventPackage;
-  $this->seats = Seat::factory(3)->create([
+  $this->seats = Seat::factory(4)->create([
     'seat_section_id' => $this->eventPackage->seat_section_id
   ]);
+  $this->validStructure = [
+    'data' => [
+      '*' => [
+        'id',
+        'seat_id',
+        'seat' => ['seat_no'],
+        'event_package' => [
+          'id',
+          'seat_section' => ['title', 'capacity'],
+          'event' => [
+            'id',
+            'title',
+            'start_time',
+            'event_season' => ['id', 'title']
+          ]
+        ]
+      ]
+    ]
+  ];
 });
 
 it('fails to generate tickets for an invalid payment reference', function () {
@@ -77,29 +96,66 @@ it('generates tickets for a valid payment reference and seat ids', function () {
     'seat_ids' => $seatIds
   ])
     ->assertOk()
-    ->assertJsonStructure([
-      'data' => [
-        '*' => [
-          'id',
-          'seat_id',
-          'seat' => ['seat_no'],
-          'event_package' => [
-            'id',
-            'seat_section' => ['title', 'capacity'],
-            'event' => [
-              'id',
-              'title',
-              'start_time',
-              'event_season' => ['id', 'title']
-            ]
-          ]
-        ]
-      ]
-    ]);
+    ->assertJsonStructure($this->validStructure);
   expect(
     Ticket::whereIn('seat_id', $seatIds)
       ->get()
       ->count()
   )->toBe(count($seatIds));
   // dd(json_encode(Ticket::query()->first()));
+});
+
+it('generates tickets for seat quantity', function () {
+  postJson($this->url, [
+    'reference' => $this->paymentReference->reference,
+    'quantity' => 2
+  ])->assertForbidden();
+  postJson($this->url, [
+    'reference' => $this->paymentReference->reference,
+    'quantity' => 1
+  ])
+    ->assertOk()
+    ->assertJsonStructure($this->validStructure);
+  expect($this->ticketPayment->tickets()->count())->toBe(1);
+});
+
+it('generates tickets for seat ids and quantity', function () {
+  $seatIds = $this->seats->pluck('id')->toArray();
+  $this->ticketPayment->fill(['quantity' => 4])->save();
+  postJson($this->url, [
+    'reference' => $this->paymentReference->reference,
+    'quantity' => 2,
+    'seat_ids' => $seatIds
+  ])->assertForbidden();
+
+  postJson($this->url, [
+    'reference' => $this->paymentReference->reference,
+    'quantity' => 2,
+    'seat_ids' => array_splice($seatIds, 0, 2)
+  ])
+    ->assertOk()
+    ->assertJsonStructure($this->validStructure);
+  expect($this->ticketPayment->tickets()->count())->toBe(4);
+});
+
+it('generates tickets for total payment quantity', function () {
+  $this->ticketPayment->fill(['quantity' => 4])->save();
+  postJson($this->url, [
+    'reference' => $this->paymentReference->reference,
+    'quantity' => 2
+  ])
+    ->assertOk()
+    ->assertJsonCount(2, 'data');
+
+  postJson($this->url, [
+    'reference' => $this->paymentReference->reference
+  ])
+    ->assertOk()
+    ->assertJsonCount(2, 'data');
+
+  postJson($this->url, [
+    'reference' => $this->paymentReference->reference
+  ])->assertForbidden();
+
+  expect($this->ticketPayment->tickets()->count())->toBe(4);
 });
