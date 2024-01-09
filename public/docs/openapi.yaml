@@ -26,11 +26,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: ratione
+                  example: occaecati
                 password:
                   type: string
                   description: ''
-                  example: "#EU4]Ge':4uc"
+                  example: ')lp:j\Tbvh'
               required:
                 - phone
                 - password
@@ -54,27 +54,27 @@ paths:
                 first_name:
                   type: integer
                   description: ''
-                  example: 10
+                  example: 3
                 last_name:
                   type: string
                   description: ''
-                  example: itaque
+                  example: et
                 other_names:
                   type: string
                   description: ''
-                  example: ut
+                  example: qui
                 phone:
                   type: string
                   description: ''
-                  example: perferendis
+                  example: et
                 email:
                   type: string
                   description: ''
-                  example: huel.manuela@example.net
+                  example: jazmyne70@example.org
                 password:
                   type: string
                   description: ''
-                  example: f<jN9tk$qb0MU
+                  example: 3pTE4ji!\Z>-p_vLSg
               required:
                 - first_name
                 - last_name
@@ -122,7 +122,7 @@ paths:
                 event_id:
                   type: string
                   description: ''
-                  example: quam
+                  example: molestias
                 image:
                   type: string
                   format: binary
@@ -130,7 +130,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: ad
+                  example: aspernatur
               required:
                 - event_id
                 - image
@@ -151,7 +151,7 @@ paths:
         in: path
         name: eventImage_id
         description: 'The ID of the eventImage.'
-        example: 19
+        example: 7
         required: true
         schema:
           type: integer
@@ -288,11 +288,11 @@ paths:
                 seat_section_id:
                   type: string
                   description: ''
-                  example: qui
+                  example: sint
                 price:
                   type: number
                   description: ''
-                  example: 291.52195
+                  example: 4.50988
               required:
                 - seat_section_id
                 - price
@@ -302,7 +302,7 @@ paths:
         in: path
         name: event_id
         description: 'The ID of the event.'
-        example: 5
+        example: 1
         required: true
         schema:
           type: integer
@@ -321,7 +321,7 @@ paths:
         in: path
         name: eventPackage_id
         description: 'The ID of the eventPackage.'
-        example: 7
+        example: 19
         required: true
         schema:
           type: integer
@@ -602,19 +602,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: rtaalsyhmjhrsaxiize
+                  example: qvqklnfqrnpxzfhpntwntu
                 description:
                   type: string
                   description: ''
-                  example: 'In et tenetur officiis ipsam eligendi possimus.'
+                  example: 'Exercitationem sit temporibus dignissimos est aut qui.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2024-01-07T23:46:27'
+                  example: '2024-01-09T09:08:58'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2031-12-11'
+                  example: '2081-04-02'
               required:
                 - title
       security: []
@@ -646,19 +646,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: pfqlynxmcqluske
+                  example: elsqylugfh
                 description:
                   type: string
                   description: ''
-                  example: 'Doloribus corporis totam consequatur possimus illum totam ut.'
+                  example: 'Et magnam ipsa repellat assumenda beatae molestiae voluptatem.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2024-01-07T23:46:27'
+                  example: '2024-01-09T09:08:58'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2065-02-01'
+                  example: '2055-02-07'
               required:
                 - title
       security: []
@@ -667,7 +667,7 @@ paths:
         in: path
         name: eventSeason_id
         description: 'The ID of the eventSeason.'
-        example: 10
+        example: 4
         required: true
         schema:
           type: integer
@@ -686,7 +686,7 @@ paths:
         in: path
         name: eventSeason_id
         description: 'The ID of the eventSeason.'
-        example: 10
+        example: 8
         required: true
         schema:
           type: integer
@@ -704,7 +704,7 @@ paths:
               schema:
                 type: object
                 example:
-                  message: 'No query results for model [App\Models\EventSeason] 17'
+                  message: 'No query results for model [App\Models\EventSeason] 12'
                   exception: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
                   file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
                   line: 487
@@ -1096,7 +1096,7 @@ paths:
                 properties:
                   message:
                     type: string
-                    example: 'No query results for model [App\Models\EventSeason] 17'
+                    example: 'No query results for model [App\Models\EventSeason] 12'
                   exception:
                     type: string
                     example: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
@@ -1528,7 +1528,7 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: 17
+            value: 12
   '/api/events/upcoming/{eventSeason}':
     get:
       summary: ''
@@ -1543,7 +1543,7 @@ paths:
               schema:
                 type: object
                 example:
-                  message: 'No query results for model [App\Models\EventSeason] 3'
+                  message: 'No query results for model [App\Models\EventSeason] 7'
                   exception: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
                   file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
                   line: 487
@@ -1935,7 +1935,7 @@ paths:
                 properties:
                   message:
                     type: string
-                    example: 'No query results for model [App\Models\EventSeason] 3'
+                    example: 'No query results for model [App\Models\EventSeason] 7'
                   exception:
                     type: string
                     example: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
@@ -2367,7 +2367,7 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: 3
+            value: 7
   '/api/events/show/{event_id}':
     get:
       summary: ''
@@ -2382,7 +2382,7 @@ paths:
               schema:
                 type: object
                 example:
-                  message: 'No query results for model [App\Models\Event] 20'
+                  message: 'No query results for model [App\Models\Event] 14'
                   exception: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
                   file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
                   line: 487
@@ -2774,7 +2774,7 @@ paths:
                 properties:
                   message:
                     type: string
-                    example: 'No query results for model [App\Models\Event] 20'
+                    example: 'No query results for model [App\Models\Event] 14'
                   exception:
                     type: string
                     example: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
@@ -3197,7 +3197,7 @@ paths:
         in: path
         name: event_id
         description: 'The ID of the event.'
-        example: 20
+        example: 14
         required: true
         schema:
           type: integer
@@ -3220,31 +3220,31 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: wbvdqnlyo
+                  example: skqgfxoxl
                 description:
                   type: string
                   description: ''
-                  example: 'Qui mollitia perferendis voluptatum iste et.'
+                  example: 'Qui voluptatem sed ex.'
                 start_time:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2024-01-07T23:46:27'
+                  example: '2024-01-09T09:08:59'
                 end_time:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>start_time</code>.'
-                  example: '2093-10-30'
+                  example: '2092-06-27'
                 home_team:
                   type: string
                   description: ''
-                  example: hic
+                  example: distinctio
                 away_team:
                   type: string
                   description: ''
-                  example: autem
+                  example: atque
                 event_packages:
                   type: array
                   description: 'Must have at least 1 items.'
-                  example: siujpltqfwetejftft
+                  example: fnbylumdjskpltlcvselmndyovmwuraovhowccttzvmtnoncgquraeclaecxyou
                   items:
                     type: string
               required:
@@ -3256,7 +3256,7 @@ paths:
         in: path
         name: eventSeason_id
         description: 'The ID of the eventSeason.'
-        example: 17
+        example: 5
         required: true
         schema:
           type: integer
@@ -3279,27 +3279,27 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: imhpf
+                  example: mgjmoygp
                 description:
                   type: string
                   description: ''
-                  example: 'Sunt odit itaque eos ab officia sint nobis.'
+                  example: 'Sed et provident accusamus ab quisquam recusandae.'
                 start_time:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2024-01-07T23:46:27'
+                  example: '2024-01-09T09:08:59'
                 end_time:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>start_time</code>.'
-                  example: '2115-09-20'
+                  example: '2054-11-26'
                 home_team:
                   type: string
                   description: ''
-                  example: unde
+                  example: ab
                 away_team:
                   type: string
                   description: ''
-                  example: sapiente
+                  example: laborum
               required:
                 - title
                 - start_time
@@ -3309,7 +3309,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the event.'
-        example: 14
+        example: 12
         required: true
         schema:
           type: integer
@@ -3328,7 +3328,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the event.'
-        example: 4
+        example: 14
         required: true
         schema:
           type: integer
@@ -5601,7 +5601,7 @@ paths:
               schema:
                 type: object
                 example:
-                  message: 'No query results for model [App\Models\EventPackage] 2'
+                  message: 'No query results for model [App\Models\EventPackage] 5'
                   exception: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
                   file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
                   line: 487
@@ -5993,7 +5993,7 @@ paths:
                 properties:
                   message:
                     type: string
-                    example: 'No query results for model [App\Models\EventPackage] 2'
+                    example: 'No query results for model [App\Models\EventPackage] 5'
                   exception:
                     type: string
                     example: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
@@ -6416,7 +6416,7 @@ paths:
         in: path
         name: eventPackage_id
         description: 'The ID of the eventPackage.'
-        example: 2
+        example: 5
         required: true
         schema:
           type: integer
@@ -6575,19 +6575,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: tudcrdzecunbfye
+                  example: rayvxnvknzxyqhlwpdkj
                 description:
                   type: string
                   description: ''
-                  example: 'Ipsam molestiae nihil quos aliquam sint adipisci quaerat necessitatibus.'
+                  example: 'Sunt accusamus dolorem quibusdam aut sit dolores velit.'
                 features:
                   type: string
                   description: ''
-                  example: nostrum
+                  example: molestias
                 capacity:
                   type: integer
                   description: ''
-                  example: 5
+                  example: 16
               required:
                 - title
                 - capacity
@@ -6620,27 +6620,27 @@ paths:
                 merchant:
                   type: string
                   description: ''
-                  example: quaerat
+                  example: hic
                 callback_url:
                   type: string
                   description: ''
-                  example: 'http://www.howell.com/impedit-ipsum-sunt-iure-modi-quas'
+                  example: 'http://prosacco.net/perspiciatis-est-voluptate-illo-occaecati-numquam'
                 quantity:
                   type: integer
                   description: 'Must be at least 1.'
-                  example: 86
+                  example: 7
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: tthsndhxbvf
+                  example: uqlff
                 phone:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: bkuk
+                  example: qdxdppqpvewpg
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: gutmann.judson@example.com
+                  example: jroberts@example.com
               required:
                 - merchant
                 - callback_url
@@ -6651,7 +6651,7 @@ paths:
         in: path
         name: eventPackage_id
         description: 'The ID of the eventPackage.'
-        example: 12
+        example: 18
         required: true
         schema:
           type: integer
@@ -6674,7 +6674,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: in
+                  example: non
               required:
                 - reference
       security: []
@@ -6697,12 +6697,12 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: neque
+                  example: nostrum
                 seat_ids:
                   type: array
                   description: ''
                   example:
-                    - quia
+                    - consequuntur
                   items:
                     type: string
               required:
@@ -6728,17 +6728,22 @@ paths:
                 ticket_id:
                   type: integer
                   description: ''
-                  example: 15
+                  example: 16
+                hash:
+                  type: string
+                  description: ''
+                  example: praesentium
                 reference:
                   type: string
                   description: ''
-                  example: aperiam
+                  example: vel
                 device_no:
                   type: string
                   description: ''
-                  example: debitis
+                  example: in
               required:
                 - ticket_id
+                - hash
                 - reference
                 - device_no
       security: []

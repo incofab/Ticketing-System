@@ -28,7 +28,7 @@ endpoints:
         name: event_id
         description: ''
         required: true
-        example: quam
+        example: molestias
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -46,14 +46,14 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: ad
+        example: aspernatur
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      event_id: quam
-      reference: ad
+      event_id: molestias
+      reference: aspernatur
     fileParameters:
       image: null
     responses: []
@@ -84,13 +84,13 @@ endpoints:
         name: eventImage_id
         description: 'The ID of the eventImage.'
         required: true
-        example: 19
+        example: 7
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      eventImage_id: 19
+      eventImage_id: 7
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

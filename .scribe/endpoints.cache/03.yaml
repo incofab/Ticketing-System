@@ -24,13 +24,13 @@ endpoints:
         name: eventSeason
         description: ''
         required: false
-        example: 17
+        example: 12
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      eventSeason: 17
+      eventSeason: 12
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -41,7 +41,7 @@ endpoints:
         status: 404
         content: |-
           {
-              "message": "No query results for model [App\\Models\\EventSeason] 17",
+              "message": "No query results for model [App\\Models\\EventSeason] 12",
               "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
               "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
               "line": 487,
@@ -531,13 +531,13 @@ endpoints:
         name: eventSeason
         description: ''
         required: false
-        example: 3
+        example: 7
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      eventSeason: 3
+      eventSeason: 7
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -548,7 +548,7 @@ endpoints:
         status: 404
         content: |-
           {
-              "message": "No query results for model [App\\Models\\EventSeason] 3",
+              "message": "No query results for model [App\\Models\\EventSeason] 7",
               "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
               "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
               "line": 487,
@@ -1038,13 +1038,13 @@ endpoints:
         name: event_id
         description: 'The ID of the event.'
         required: true
-        example: 20
+        example: 14
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      event_id: 20
+      event_id: 14
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1055,7 +1055,7 @@ endpoints:
         status: 404
         content: |-
           {
-              "message": "No query results for model [App\\Models\\Event] 20",
+              "message": "No query results for model [App\\Models\\Event] 14",
               "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
               "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
               "line": 487,
@@ -1545,13 +1545,13 @@ endpoints:
         name: eventSeason_id
         description: 'The ID of the eventSeason.'
         required: true
-        example: 17
+        example: 5
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      eventSeason_id: 17
+      eventSeason_id: 5
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -1559,7 +1559,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: wbvdqnlyo
+        example: skqgfxoxl
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1568,7 +1568,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Qui mollitia perferendis voluptatum iste et.'
+        example: 'Qui voluptatem sed ex.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1577,7 +1577,7 @@ endpoints:
         name: start_time
         description: 'Must be a valid date.'
         required: true
-        example: '2024-01-07T23:46:27'
+        example: '2024-01-09T09:08:59'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1586,7 +1586,7 @@ endpoints:
         name: end_time
         description: 'Must be a valid date. Must be a date after <code>start_time</code>.'
         required: false
-        example: '2093-10-30'
+        example: '2092-06-27'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1595,7 +1595,7 @@ endpoints:
         name: home_team
         description: ''
         required: false
-        example: hic
+        example: distinctio
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1604,7 +1604,7 @@ endpoints:
         name: away_team
         description: ''
         required: false
-        example: autem
+        example: atque
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1613,7 +1613,7 @@ endpoints:
         name: event_packages
         description: 'Must have at least 1 items.'
         required: false
-        example: siujpltqfwetejftft
+        example: fnbylumdjskpltlcvselmndyovmwuraovhowccttzvmtnoncgquraeclaecxyou
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -1622,7 +1622,7 @@ endpoints:
         name: 'event_packages[].seat_section_id'
         description: ''
         required: true
-        example: ut
+        example: asperiores
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1631,19 +1631,19 @@ endpoints:
         name: 'event_packages[].price'
         description: ''
         required: true
-        example: 33.036
+        example: 28.984
         type: number
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: wbvdqnlyo
-      description: 'Qui mollitia perferendis voluptatum iste et.'
-      start_time: '2024-01-07T23:46:27'
-      end_time: '2093-10-30'
-      home_team: hic
-      away_team: autem
-      event_packages: siujpltqfwetejftft
+      title: skqgfxoxl
+      description: 'Qui voluptatem sed ex.'
+      start_time: '2024-01-09T09:08:59'
+      end_time: '2092-06-27'
+      home_team: distinctio
+      away_team: atque
+      event_packages: fnbylumdjskpltlcvselmndyovmwuraovhowccttzvmtnoncgquraeclaecxyou
     fileParameters: []
     responses: []
     responseFields: []
@@ -1673,13 +1673,13 @@ endpoints:
         name: id
         description: 'The ID of the event.'
         required: true
-        example: 14
+        example: 12
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 14
+      id: 12
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -1687,7 +1687,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: imhpf
+        example: mgjmoygp
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1696,7 +1696,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Sunt odit itaque eos ab officia sint nobis.'
+        example: 'Sed et provident accusamus ab quisquam recusandae.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1705,7 +1705,7 @@ endpoints:
         name: start_time
         description: 'Must be a valid date.'
         required: true
-        example: '2024-01-07T23:46:27'
+        example: '2024-01-09T09:08:59'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1714,7 +1714,7 @@ endpoints:
         name: end_time
         description: 'Must be a valid date. Must be a date after <code>start_time</code>.'
         required: false
-        example: '2115-09-20'
+        example: '2054-11-26'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1723,7 +1723,7 @@ endpoints:
         name: home_team
         description: ''
         required: false
-        example: unde
+        example: ab
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1732,18 +1732,18 @@ endpoints:
         name: away_team
         description: ''
         required: false
-        example: sapiente
+        example: laborum
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: imhpf
-      description: 'Sunt odit itaque eos ab officia sint nobis.'
-      start_time: '2024-01-07T23:46:27'
-      end_time: '2115-09-20'
-      home_team: unde
-      away_team: sapiente
+      title: mgjmoygp
+      description: 'Sed et provident accusamus ab quisquam recusandae.'
+      start_time: '2024-01-09T09:08:59'
+      end_time: '2054-11-26'
+      home_team: ab
+      away_team: laborum
     fileParameters: []
     responses: []
     responseFields: []
@@ -1773,13 +1773,13 @@ endpoints:
         name: id
         description: 'The ID of the event.'
         required: true
-        example: 4
+        example: 14
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 4
+      id: 14
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
