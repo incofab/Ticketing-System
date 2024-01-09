@@ -19,7 +19,7 @@ class VerifyTicketController extends Controller
   public function __invoke(Request $request)
   {
     $data = $request->validate([
-      'ticket_id' => ['required', 'integer'],
+      'ticket_payment_id' => ['required', 'integer'],
       'hash' => ['required', 'string'],
       'reference' => [
         'required',
@@ -30,7 +30,7 @@ class VerifyTicketController extends Controller
     ]);
 
     $ticket = Ticket::query()
-      ->where('id', $request->ticket_id)
+      ->where('ticket_payment_id', $request->ticket_payment_id)
       ->where('reference', $request->hash)
       ->first();
     if (!$ticket) {
@@ -39,7 +39,7 @@ class VerifyTicketController extends Controller
 
     /** @var TicketVerification $existingVerification */
     $existingVerification = TicketVerification::query()
-      ->where('ticket_id', $data['ticket_id'])
+      ->where('ticket_id', $ticket->id)
       ->with('user')
       ->first();
 
@@ -57,8 +57,8 @@ class VerifyTicketController extends Controller
     $ticketVerification = currentUser()
       ->ticketVerifications()
       ->create(
-        collect($data)
-          ->except('hash')
+        collect([...$data, 'ticket_id' => $ticket->id])
+          ->except('hash', 'ticket_payment_id')
           ->toArray()
       );
 

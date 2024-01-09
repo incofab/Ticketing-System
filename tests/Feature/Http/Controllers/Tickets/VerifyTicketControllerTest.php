@@ -12,7 +12,7 @@ beforeEach(function () {
   $this->ticket = Ticket::factory()->create();
   $reference = 'unique_reference-' . rand(10000, 99999);
   $this->requestData = [
-    'ticket_id' => $this->ticket->id,
+    'ticket_payment_id' => $this->ticket->ticket_payment_id,
     'hash' => $this->ticket->reference,
     'reference' => $reference,
     'device_no' => 'device123'
@@ -26,7 +26,7 @@ it('returns validation error if required fields are missing', function () {
       'reference',
       'hash',
       'device_no',
-      'ticket_id'
+      'ticket_payment_id'
     ]);
 });
 
@@ -40,8 +40,8 @@ it('can verify a ticket', function () {
   // Assert that the ticket verification record exists in the database
   $this->assertDatabaseHas(
     'ticket_verifications',
-    collect($this->requestData)
-      ->except('hash')
+    collect([...$this->requestData, 'ticket_id' => $this->ticket->id])
+      ->except('hash', 'ticket_payment_id')
       ->toArray()
   );
 });
@@ -68,8 +68,8 @@ it('ensures ticket hash is valid', function () {
   // Assert that the ticket verification record exists in the database
   $this->assertDatabaseHas(
     'ticket_verifications',
-    collect($this->requestData)
-      ->except('hash')
+    collect([...$this->requestData, 'ticket_id' => $this->ticket->id])
+      ->except('hash', 'ticket_payment_id')
       ->toArray()
   );
 });
