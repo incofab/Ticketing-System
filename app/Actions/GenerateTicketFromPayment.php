@@ -6,6 +6,7 @@ use App\Models\PaymentReference;
 use App\Models\SeatSection;
 use App\Models\Ticket;
 use App\Models\TicketPayment;
+use DB;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use Str;
 
@@ -44,6 +45,7 @@ class GenerateTicketFromPayment
   {
     $tickets = [];
 
+    DB::beginTransaction();
     foreach ($this->seatIds as $key => $seatId) {
       $ticketReference = Str::orderedUuid();
       $generatedTicket = $this->ticketPayment->tickets()->create([
@@ -63,12 +65,13 @@ class GenerateTicketFromPayment
       $tickets[] = $generatedTicket;
     }
 
-    $this->eventPackage
-      ->fill([
-        'quantity_sold' =>
-          $this->eventPackage->quantity_sold + $this->numOfTicketsToGenerate
-      ])
-      ->save();
+    // $this->eventPackage
+    //   ->fill([
+    //     'quantity_sold' =>
+    //       $this->eventPackage->quantity_sold + $this->numOfTicketsToGenerate
+    //   ])
+    //   ->save();
+    DB::commit();
     return $tickets;
   }
 }

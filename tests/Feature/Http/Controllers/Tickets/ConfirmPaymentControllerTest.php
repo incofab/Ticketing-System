@@ -11,6 +11,8 @@ it('can confirm paystack ticket payment', function () {
   $paymentReference = PaymentReference::factory()
     ->ticketPayment()
     ->create();
+  $ticketPayment = $paymentReference->paymentable;
+  $eventPackage = $ticketPayment->eventPackage;
 
   $url = "https://api.paystack.co/transaction/verify/{$paymentReference->reference}";
   Http::fake([
@@ -37,4 +39,5 @@ it('can confirm paystack ticket payment', function () {
   expect($paymentReference->fresh())->status->toBe(
     PaymentReferenceStatus::Confirmed
   );
+  expect($eventPackage->fresh()->quantity_sold)->toBe($ticketPayment->quantity);
 });
