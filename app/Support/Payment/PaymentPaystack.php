@@ -15,7 +15,11 @@ class PaymentPaystack extends PaymentMerchant
 
     $ret = (new PaystackHelper())->initialize(
       $paymentReference->amount,
-      Arr::get($paymentReference->user, 'email', config('app.email')),
+      Arr::get(
+        $paymentReference->user,
+        'email',
+        $paymentReferenceDto->getEmail() ?? config('app.email')
+      ),
       $paymentReferenceDto->getCallbackUrl(),
       $paymentReference->reference
     );

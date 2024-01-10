@@ -35,6 +35,11 @@ class PaymentReferenceDto
     return $this->paymentable;
   }
 
+  function getEmail()
+  {
+    return $this->paymentable->email;
+  }
+
   function getExtraData()
   {
     return $this->extraData;
