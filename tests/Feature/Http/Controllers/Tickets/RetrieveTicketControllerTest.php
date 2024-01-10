@@ -51,7 +51,11 @@ it('returns tickets and payment for a valid reference and email', function () {
       'data' => [
         'tickets' => [
           'data' => [
-            '*' => ['seat_id', 'seat', 'qr_code']
+            '*' => [
+              'seat_id',
+              'seat' => ['id', 'seat_no', 'seat_section'],
+              'qr_code'
+            ]
           ]
         ],
         'payment' => ['quantity']

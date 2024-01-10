@@ -13,11 +13,12 @@ Route::get('/dummy1', function () {
         $quantity = $eventPackage->ticketPayments->sum('quantity');
         dd([
             'query quantity' => $queryQuantity,
-            'collection quantity' => $quantity
+            'collection quantity' => $quantity,
+            'eventPackage quantity' => $eventPackage->quantity_sold
         ]);
         $eventPackage->fill(['quantity_sold' => $quantity])->save();
     }
-    dd('No packages');
+    dd('Done for '.$eventPackages->count().' package(s)');
 });
 Route::get('/login', function () {
     return 'Login page';

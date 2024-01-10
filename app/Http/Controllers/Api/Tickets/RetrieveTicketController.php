@@ -37,7 +37,7 @@ class RetrieveTicketController extends Controller
       $ticketPayment
         ->tickets()
         ->getQuery()
-        ->with('seat')
+        ->with('seat.seatSection')
     );
 
     return $this->apiRes([
