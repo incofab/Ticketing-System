@@ -138,7 +138,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: wz
+        example: tcgprbtdlhvhxawspcext
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -147,7 +147,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Illum sed sit qui est accusamus ipsam.'
+        example: 'Veniam qui aut quod quidem consequuntur consequatur.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -156,7 +156,7 @@ endpoints:
         name: date_from
         description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
         required: false
-        example: '2024-01-10T00:41:16'
+        example: '2024-01-12T20:18:45'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -165,16 +165,16 @@ endpoints:
         name: date_to
         description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
         required: false
-        example: '2091-09-20'
+        example: '2098-01-04'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: wz
-      description: 'Illum sed sit qui est accusamus ipsam.'
-      date_from: '2024-01-10T00:41:16'
-      date_to: '2091-09-20'
+      title: tcgprbtdlhvhxawspcext
+      description: 'Veniam qui aut quod quidem consequuntur consequatur.'
+      date_from: '2024-01-12T20:18:45'
+      date_to: '2098-01-04'
     fileParameters: []
     responses: []
     responseFields: []
@@ -204,13 +204,13 @@ endpoints:
         name: eventSeason_id
         description: 'The ID of the eventSeason.'
         required: true
-        example: 5
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      eventSeason_id: 5
+      eventSeason_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -218,7 +218,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: zjyywqipfdbcfzhlh
+        example: hznminypkjloupookcyml
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -227,7 +227,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Maiores itaque repellat velit.'
+        example: 'Corporis quia quibusdam magnam a.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -236,7 +236,7 @@ endpoints:
         name: date_from
         description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
         required: false
-        example: '2024-01-10T00:41:16'
+        example: '2024-01-12T20:18:45'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -245,16 +245,16 @@ endpoints:
         name: date_to
         description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
         required: false
-        example: '2050-07-14'
+        example: '2049-01-15'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: zjyywqipfdbcfzhlh
-      description: 'Maiores itaque repellat velit.'
-      date_from: '2024-01-10T00:41:16'
-      date_to: '2050-07-14'
+      title: hznminypkjloupookcyml
+      description: 'Corporis quia quibusdam magnam a.'
+      date_from: '2024-01-12T20:18:45'
+      date_to: '2049-01-15'
     fileParameters: []
     responses: []
     responseFields: []
@@ -284,13 +284,13 @@ endpoints:
         name: eventSeason_id
         description: 'The ID of the eventSeason.'
         required: true
-        example: 15
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      eventSeason_id: 15
+      eventSeason_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

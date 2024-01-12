@@ -4,9 +4,12 @@ use App\Enums\PaymentReferenceStatus;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers as Web;
 use App\Http\Controllers\Home;
+use App\Mail\TicketPurchaseMail;
 use App\Models\EventPackage;
 use App\Models\Ticket;
 use App\Models\TicketPayment;
+
+Route::post('/webhook/paystack', [Home\HomeController::class, 'paystackWebhook'])->name('webhook.paystack');
 
 Route::get('/dummy1', function () {
     $eventPackages = EventPackage::query()->with('ticketPayments')->get();
@@ -31,8 +34,12 @@ Route::get('/dummy1', function () {
     }
     dd('Done for '.$eventPackages->count().' package(s)');
 });
+
 Route::get('/login', function () {
     return 'Login page';
 })->name('login');
 
-Route::post('/webhook/paystack', [Home\HomeController::class, 'paystackWebhook'])->name('webhook.paystack');
+Route::get('/mail-test', function () {
+    return new TicketPurchaseMail(Ticket::query()->first());
+});
+

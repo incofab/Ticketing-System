@@ -1,12 +1,14 @@
 <?php
 namespace App\Actions;
 
+use App\Mail\TicketPurchaseMail;
 use App\Models\EventPackage;
 use App\Models\PaymentReference;
 use App\Models\SeatSection;
 use App\Models\Ticket;
 use App\Models\TicketPayment;
 use DB;
+use Mail;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use Str;
 
@@ -60,17 +62,16 @@ class GenerateTicketFromPayment
       $generatedTicket->load(
         'seat',
         'eventPackage.seatSection',
-        'eventPackage.event.eventSeason'
+        'eventPackage.event.eventSeason',
+        'ticketPayment'
       );
       $tickets[] = $generatedTicket;
+      if ($this->ticketPayment->email) {
+        Mail::to($this->ticketPayment->email)->queue(
+          new TicketPurchaseMail($generatedTicket)
+        );
+      }
     }
-
-    // $this->eventPackage
-    //   ->fill([
-    //     'quantity_sold' =>
-    //       $this->eventPackage->quantity_sold + $this->numOfTicketsToGenerate
-    //   ])
-    //   ->save();
     DB::commit();
     return $tickets;
   }

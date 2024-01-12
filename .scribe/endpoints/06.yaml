@@ -22,13 +22,13 @@ endpoints:
         name: eventPackage_id
         description: 'The ID of the eventPackage.'
         required: true
-        example: 19
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      eventPackage_id: 19
+      eventPackage_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -36,7 +36,7 @@ endpoints:
         name: merchant
         description: ''
         required: true
-        example: tempora
+        example: veniam
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -45,7 +45,7 @@ endpoints:
         name: callback_url
         description: ''
         required: true
-        example: 'http://www.smith.net/'
+        example: 'http://damore.com/'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -54,7 +54,7 @@ endpoints:
         name: quantity
         description: 'Must be at least 1.'
         required: true
-        example: 11
+        example: 63
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -63,7 +63,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: evsziwoaatjlzbiftguryxmer
+        example: nedqdldixytyrgovuhiuqe
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -72,7 +72,7 @@ endpoints:
         name: phone
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: qypkedieylrdeyzwtidnjlbc
+        example: maohhirpn
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -80,19 +80,19 @@ endpoints:
       email:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
-        required: false
-        example: maddison.strosin@example.net
+        required: true
+        example: david.abbott@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      merchant: tempora
-      callback_url: 'http://www.smith.net/'
-      quantity: 11
-      name: evsziwoaatjlzbiftguryxmer
-      phone: qypkedieylrdeyzwtidnjlbc
-      email: maddison.strosin@example.net
+      merchant: veniam
+      callback_url: 'http://damore.com/'
+      quantity: 63
+      name: nedqdldixytyrgovuhiuqe
+      phone: maohhirpn
+      email: david.abbott@example.net
     fileParameters: []
     responses: []
     responseFields: []
@@ -126,13 +126,13 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: cumque
+        example: accusamus
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      reference: cumque
+      reference: accusamus
     fileParameters: []
     responses: []
     responseFields: []
@@ -166,7 +166,7 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: laudantium
+        example: quos
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -175,7 +175,7 @@ endpoints:
         name: quantity
         description: 'Must be at least 1.'
         required: false
-        example: 73
+        example: 56
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -185,16 +185,16 @@ endpoints:
         description: ''
         required: true
         example:
-          - eum
+          - voluptates
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      reference: laudantium
-      quantity: 73
+      reference: quos
+      quantity: 56
       seat_ids:
-        - eum
+        - voluptates
     fileParameters: []
     responses: []
     responseFields: []
@@ -228,7 +228,7 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: maiores
+        example: molestiae
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -237,14 +237,14 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: emma.collier@example.org
+        example: van.wiegand@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      reference: maiores
-      email: emma.collier@example.org
+      reference: molestiae
+      email: van.wiegand@example.org
     fileParameters: []
     responses:
       -
@@ -270,7 +270,7 @@ endpoints:
                   },
                   {
                       "file": "/var/www/html/app/Http/Controllers/Api/Tickets/RetrieveTicketController.php",
-                      "line": 33,
+                      "line": 35,
                       "function": "abort_if"
                   },
                   {
@@ -790,7 +790,7 @@ endpoints:
         name: ticket_payment_id
         description: ''
         required: true
-        example: 16
+        example: 9
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -799,7 +799,7 @@ endpoints:
         name: hash
         description: ''
         required: true
-        example: quo
+        example: alias
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -808,7 +808,7 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: voluptatum
+        example: adipisci
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -817,16 +817,16 @@ endpoints:
         name: device_no
         description: ''
         required: true
-        example: perferendis
+        example: qui
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      ticket_payment_id: 16
-      hash: quo
-      reference: voluptatum
-      device_no: perferendis
+      ticket_payment_id: 9
+      hash: alias
+      reference: adipisci
+      device_no: qui
     fileParameters: []
     responses: []
     responseFields: []

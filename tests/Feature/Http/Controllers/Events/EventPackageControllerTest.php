@@ -21,32 +21,31 @@ it('can get a list of event packages', function () {
     'seat_section_id' => $seatSection->id
   ]);
 
-  $response = getJson(
+  getJson(
     route('api.event-packages.index', [
       'event' => $event->id,
       'seatSection' => $seatSection->id
     ])
-  );
-
-  $response->assertOk()->assertJsonCount(5, 'data.data');
+  )
+    ->assertOk()
+    ->assertJsonCount(5, 'data.data');
 });
 
 it('can store a new event package', function () {
   $event = Event::factory()->create();
   $seatSection = SeatSection::factory()->create();
+  $requestData = ['price' => 50.0, 'entry_gate' => 'Gate 1'];
 
-  $response = actingAs($this->admin)->postJson(
-    route('api.event-packages.store', ['event' => $event->id]),
-    [
+  actingAs($this->admin)
+    ->postJson(route('api.event-packages.store', ['event' => $event->id]), [
       'seat_section_id' => $seatSection->id,
-      'price' => 50.0
-    ]
-  );
-
-  $response->assertOk()->assertJsonFragment(['price' => 50.0]);
+      ...$requestData
+    ])
+    ->assertOk()
+    ->assertJsonFragment(['price' => 50.0]);
   assertDatabaseHas('event_packages', [
-    'price' => 50.0,
-    'event_id' => $event->id
+    'event_id' => $event->id,
+    ...$requestData
   ]);
 });
 

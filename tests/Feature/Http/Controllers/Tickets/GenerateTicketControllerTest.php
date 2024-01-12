@@ -8,6 +8,7 @@ use App\Models\TicketPayment;
 use function Pest\Laravel\postJson;
 
 beforeEach(function () {
+  Mail::fake();
   $this->url = route('api.tickets.generate');
 
   $this->ticketPayment = TicketPayment::factory()->create(['quantity' => 1]);

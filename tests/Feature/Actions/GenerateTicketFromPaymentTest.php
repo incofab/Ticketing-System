@@ -5,6 +5,10 @@ use App\Models\Seat;
 use App\Models\Ticket;
 use App\Models\TicketPayment;
 
+beforeEach(function () {
+  Mail::fake();
+});
+
 it('aborts if not enough seats', function () {
   $paymentReference = PaymentReference::factory()
     ->ticketPayment()
@@ -28,6 +32,7 @@ it('aborts if not enough seats', function () {
 
     $this->expectExceptionCode(401);
   } catch (\Throwable $th) {
+    Mail::assertNothingQueued();
     info('Catch error' . get_class($th));
   }
   // Should abort here
@@ -67,5 +72,6 @@ it('generates tickets from payment', function () {
 
   // Check if quantity_sold is updated in EventPackage
   $eventPackage->refresh();
+  Mail::assertQueuedCount($seats->count());
   // expect($eventPackage->quantity_sold)->toBe($seats->count());
 });

@@ -34,5 +34,6 @@ return [
   'paystack' => [
     'public-key' => env('PAYSTACK_PUBLIC_KEY'),
     'secret-key' => env('PAYSTACK_SECRET_KEY')
-  ]
+  ],
+  'maildrip' => ['api_key' => env('MAIL_DRIP_API_KEY')]
 ];

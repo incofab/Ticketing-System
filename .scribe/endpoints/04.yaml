@@ -44,14 +44,14 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: dignissimos
+        example: error
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
       event_id: quia
-      reference: dignissimos
+      reference: error
     fileParameters:
       image: null
     responses: []
@@ -82,13 +82,13 @@ endpoints:
         name: eventImage_id
         description: 'The ID of the eventImage.'
         required: true
-        example: 15
+        example: 20
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      eventImage_id: 15
+      eventImage_id: 20
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

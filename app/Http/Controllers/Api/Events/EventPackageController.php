@@ -25,7 +25,8 @@ class EventPackageController extends Controller
   {
     $data = $request->validate([
       'seat_section_id' => ['required', 'exists:seat_sections,id'],
-      'price' => ['required', 'numeric']
+      'price' => ['required', 'numeric'],
+      'entry_gate' => ['nullable', 'string']
     ]);
     $createdPackages = CreateUpdateEventPackage::run($event, [$data]);
     return $this->apiRes($createdPackages[0]);

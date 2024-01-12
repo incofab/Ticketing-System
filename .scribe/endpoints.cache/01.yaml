@@ -75,13 +75,13 @@ endpoints:
         name: eventPackage_id
         description: 'The ID of the eventPackage.'
         required: true
-        example: 14
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      eventPackage_id: 14
+      eventPackage_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -89,464 +89,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 404
-        content: |-
-          {
-              "message": "No query results for model [App\\Models\\EventPackage] 14",
-              "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
-              "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
-              "line": 487,
-              "trace": [
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
-                      "line": 463,
-                      "function": "prepareException",
-                      "class": "Illuminate\\Foundation\\Exceptions\\Handler",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php",
-                      "line": 54,
-                      "function": "render",
-                      "class": "Illuminate\\Foundation\\Exceptions\\Handler",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php",
-                      "line": 51,
-                      "function": "render",
-                      "class": "NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 185,
-                      "function": "handleException",
-                      "class": "Illuminate\\Routing\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
-                      "line": 159,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
-                      "line": 135,
-                      "function": "handleRequest",
-                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php",
-                      "line": 87,
-                      "function": "handleRequestUsingNamedLimiter",
-                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php",
-                      "line": 25,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 141,
-                      "function": "Laravel\\Sanctum\\Http\\Middleware\\{closure}",
-                      "class": "Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 116,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php",
-                      "line": 26,
-                      "function": "then",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 116,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 800,
-                      "function": "then",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 777,
-                      "function": "runRouteWithinStack",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 741,
-                      "function": "runRoute",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 730,
-                      "function": "dispatchToRoute",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
-                      "line": 200,
-                      "function": "dispatch",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 141,
-                      "function": "Illuminate\\Foundation\\Http\\{closure}",
-                      "class": "Illuminate\\Foundation\\Http\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php",
-                      "line": 59,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Barryvdh\\Debugbar\\Middleware\\InjectDebugbar",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
-                      "line": 21,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php",
-                      "line": 31,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
-                      "line": 21,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php",
-                      "line": 40,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php",
-                      "line": 27,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php",
-                      "line": 99,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php",
-                      "line": 62,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Http\\Middleware\\HandleCors",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php",
-                      "line": 39,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 180,
-                      "function": "handle",
-                      "class": "Illuminate\\Http\\Middleware\\TrustProxies",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 116,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
-                      "line": 175,
-                      "function": "then",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
-                      "line": 144,
-                      "function": "sendRequestThroughRouter",
-                      "class": "Illuminate\\Foundation\\Http\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 300,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 288,
-                      "function": "callLaravelOrLumenRoute",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 91,
-                      "function": "makeApiCall",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 44,
-                      "function": "makeResponseCall",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 35,
-                      "function": "makeResponseCallIfConditionsPass",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
-                      "line": 236,
-                      "function": "__invoke",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
-                      "line": 166,
-                      "function": "iterateThroughStrategies",
-                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
-                      "line": 95,
-                      "function": "fetchResponses",
-                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
-                      "line": 125,
-                      "function": "processRoute",
-                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
-                      "line": 72,
-                      "function": "extractEndpointsInfoFromLaravelApp",
-                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
-                      "line": 50,
-                      "function": "extractEndpointsInfoAndWriteToDisk",
-                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php",
-                      "line": 53,
-                      "function": "get",
-                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
-                      "line": 36,
-                      "function": "handle",
-                      "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Container/Util.php",
-                      "line": 41,
-                      "function": "Illuminate\\Container\\{closure}",
-                      "class": "Illuminate\\Container\\BoundMethod",
-                      "type": "::"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
-                      "line": 93,
-                      "function": "unwrapIfClosure",
-                      "class": "Illuminate\\Container\\Util",
-                      "type": "::"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
-                      "line": 37,
-                      "function": "callBoundMethod",
-                      "class": "Illuminate\\Container\\BoundMethod",
-                      "type": "::"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php",
-                      "line": 662,
-                      "function": "call",
-                      "class": "Illuminate\\Container\\BoundMethod",
-                      "type": "::"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php",
-                      "line": 211,
-                      "function": "call",
-                      "class": "Illuminate\\Container\\Container",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/symfony/console/Command/Command.php",
-                      "line": 326,
-                      "function": "execute",
-                      "class": "Illuminate\\Console\\Command",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php",
-                      "line": 181,
-                      "function": "run",
-                      "class": "Symfony\\Component\\Console\\Command\\Command",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/symfony/console/Application.php",
-                      "line": 1081,
-                      "function": "run",
-                      "class": "Illuminate\\Console\\Command",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/symfony/console/Application.php",
-                      "line": 320,
-                      "function": "doRunCommand",
-                      "class": "Symfony\\Component\\Console\\Application",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/symfony/console/Application.php",
-                      "line": 174,
-                      "function": "doRun",
-                      "class": "Symfony\\Component\\Console\\Application",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php",
-                      "line": 201,
-                      "function": "run",
-                      "class": "Symfony\\Component\\Console\\Application",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/var/www/html/artisan",
-                      "line": 37,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Console\\Kernel",
-                      "type": "->"
-                  }
-              ]
-          }
+        status: 200
+        content: '{"message":"","data":{"current_page":1,"data":[],"first_page_url":"http:\/\/localhost\/api\/seats\/available\/1?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/seats\/available\/1?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/seats\/available\/1?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/seats\/available\/1","per_page":100,"prev_page_url":null,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -587,7 +131,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"","data":[{"id":1,"capacity":10000,"title":"Regular","description":null,"features":null,"deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z","seats_count":10000},{"id":2,"capacity":2083,"title":"Cover Stand Regular","description":null,"features":null,"deleted_at":null,"created_at":"2024-01-07T18:11:41.000000Z","updated_at":"2024-01-07T18:11:41.000000Z","seats_count":2083},{"id":3,"capacity":60,"title":"Cover Stand Executive","description":null,"features":null,"deleted_at":null,"created_at":"2024-01-07T18:11:47.000000Z","updated_at":"2024-01-07T18:11:47.000000Z","seats_count":60},{"id":4,"capacity":110,"title":"Press Gallery","description":null,"features":null,"deleted_at":null,"created_at":"2024-01-07T18:11:47.000000Z","updated_at":"2024-01-07T18:11:47.000000Z","seats_count":110}]}'
+        content: '{"message":"","data":[{"id":1,"capacity":10000,"title":"Regular","description":null,"features":null,"deleted_at":null,"created_at":"2024-01-07T18:10:42.000000Z","updated_at":"2024-01-07T18:10:42.000000Z","seats_count":10000},{"id":2,"capacity":2083,"title":"Cover Stand Regular","description":null,"features":null,"deleted_at":null,"created_at":"2024-01-07T18:11:41.000000Z","updated_at":"2024-01-07T18:11:41.000000Z","seats_count":2083},{"id":3,"capacity":60,"title":"Cover Stand Executive","description":null,"features":null,"deleted_at":null,"created_at":"2024-01-07T18:11:47.000000Z","updated_at":"2024-01-07T18:11:47.000000Z","seats_count":60},{"id":4,"capacity":110,"title":"Press Gallery","description":null,"features":null,"deleted_at":null,"created_at":"2024-01-07T18:11:47.000000Z","updated_at":"2024-01-07T18:11:47.000000Z","seats_count":110},{"id":5,"capacity":708,"title":"Sit est reprehenderit nisi quis ipsam inventore.","description":"Quis est quibusdam et perferendis adipisci fugit laborum consequatur repellendus enim quis provident temporibus quasi.","features":"Maxime qui eos nisi quam debitis occaecati modi voluptatem voluptatem.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","seats_count":0},{"id":6,"capacity":24,"title":"Est perferendis delectus ipsa expedita veniam dolorem voluptatem autem.","description":"Et rerum ipsam repudiandae eaque perferendis architecto.","features":"Consequatur sint voluptatem voluptatem perspiciatis voluptatem et quis veritatis aut accusamus delectus.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","seats_count":0},{"id":7,"capacity":369,"title":"Error rerum qui ullam eos cum odit.","description":"Exercitationem in nesciunt sit laborum doloremque quibusdam fuga recusandae similique nulla consequatur.","features":"Quam eum blanditiis repellat unde velit recusandae est atque.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","seats_count":0},{"id":8,"capacity":642,"title":"Eius nihil qui rem et veniam tenetur cumque veritatis.","description":"Dolore ut quo ex natus ullam ab.","features":"Aut eos odio aspernatur odit alias quasi suscipit quasi voluptas veniam.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","seats_count":1},{"id":9,"capacity":919,"title":"Saepe dolor culpa est enim voluptatem ea et similique.","description":"Quia hic harum vel iure consequatur veritatis totam et officiis.","features":"Molestiae praesentium autem est soluta recusandae nostrum sed et consequatur cum.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","seats_count":0},{"id":10,"capacity":532,"title":"Et voluptatem enim et dolor.","description":"Et dolorem et eius excepturi vitae eos ut ut.","features":"Minus dolore iure error sit est quia iusto veniam.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","seats_count":0},{"id":11,"capacity":630,"title":"Labore vero cum aut qui cupiditate iure mollitia.","description":"Incidunt necessitatibus exercitationem modi esse nihil qui officia.","features":"Molestiae ea deserunt ullam sunt sequi nihil deleniti hic.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","seats_count":0},{"id":12,"capacity":213,"title":"Dolore quam eum occaecati rerum consequatur tenetur alias.","description":"Quo accusamus ex dolores voluptas omnis iusto rerum sed molestiae.","features":"Cumque ipsam ut omnis est eius amet aliquid saepe neque blanditiis.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","seats_count":1},{"id":13,"capacity":577,"title":"Dolorem quae odit nesciunt nemo et facilis magnam aut.","description":"Consequatur ut sed nesciunt fugit totam beatae reiciendis sed aut sed aut doloremque minima.","features":"Qui velit a qui non rerum.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","seats_count":0},{"id":14,"capacity":138,"title":"Architecto facilis et harum et et.","description":"Eveniet eaque rerum animi earum deserunt eligendi et aut id vel.","features":"Eaque quo aut pariatur eveniet cupiditate dolor omnis est.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","seats_count":0},{"id":15,"capacity":232,"title":"Voluptas sunt modi sunt et sint.","description":"Sed dolores tenetur rerum officiis autem qui corporis quasi.","features":"Inventore perferendis atque modi et doloremque quibusdam harum magni atque eum.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","seats_count":0},{"id":16,"capacity":61,"title":"Architecto aliquam ut voluptate nemo.","description":"Accusantium molestias voluptas et ex qui saepe ea ut.","features":"Quaerat cupiditate fugiat odit et sed unde.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","seats_count":1},{"id":17,"capacity":395,"title":"Facilis doloremque impedit nihil tenetur mollitia cupiditate illum.","description":"Voluptate aliquam aut et quasi culpa ipsa quibusdam et quisquam dolorum.","features":"Facilis soluta dolorem sed perferendis qui non alias et ipsum.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","seats_count":0},{"id":18,"capacity":684,"title":"In quia et perferendis impedit veniam officiis.","description":"Quia repellendus beatae nihil recusandae optio dolorem.","features":"Distinctio rerum voluptatum corporis fugiat nulla similique eius est.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","seats_count":0},{"id":19,"capacity":849,"title":"Praesentium explicabo ipsam rerum totam sunt.","description":"Delectus ipsa perferendis incidunt maiores facere occaecati nihil suscipit fuga possimus iure.","features":"Eligendi inventore delectus est delectus sed nemo.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","seats_count":0},{"id":20,"capacity":484,"title":"At nihil corporis sint et sit necessitatibus.","description":"Maiores aut repellendus ut necessitatibus nostrum voluptatibus voluptatem sed illum libero voluptas veritatis doloremque.","features":"Numquam aut velit vitae ullam rerum omnis.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","seats_count":1},{"id":21,"capacity":269,"title":"Alias esse amet reiciendis et.","description":"Ut molestias unde aut vero quam qui sequi quis saepe porro veniam.","features":"Fuga consequatur porro ut voluptatem rerum deleniti eaque nihil deleniti.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","seats_count":0},{"id":22,"capacity":590,"title":"Impedit molestiae enim quo ducimus quo beatae saepe.","description":"Maxime voluptas possimus unde sit sint sequi temporibus.","features":"Quia dolorem sed ea sunt et in sint vero laborum.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","seats_count":0},{"id":23,"capacity":665,"title":"Repellat dicta veritatis vel occaecati voluptatem.","description":"Qui nisi autem adipisci deleniti accusantium vel ut ut et est ut earum laboriosam.","features":"Hic veniam consequuntur molestiae corporis eum unde libero consequatur consequatur sit.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","seats_count":0},{"id":24,"capacity":177,"title":"Doloribus et vel fugiat alias asperiores iste.","description":"Dignissimos itaque similique corrupti omnis qui nam odit temporibus ea atque.","features":"Nobis sunt saepe temporibus quidem enim alias architecto odio deserunt.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","seats_count":1}]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -637,7 +181,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: cwdtdqqogqwjteyaukfr
+        example: kllordnpptporlvsylgnswrgi
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -646,7 +190,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Qui aut laborum quia enim neque voluptatem et quidem.'
+        example: 'Magni possimus iure et at repudiandae molestiae.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -655,7 +199,7 @@ endpoints:
         name: features
         description: ''
         required: false
-        example: nobis
+        example: in
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -664,16 +208,16 @@ endpoints:
         name: capacity
         description: ''
         required: true
-        example: 6
+        example: 5
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: cwdtdqqogqwjteyaukfr
-      description: 'Qui aut laborum quia enim neque voluptatem et quidem.'
-      features: nobis
-      capacity: 6
+      title: kllordnpptporlvsylgnswrgi
+      description: 'Magni possimus iure et at repudiandae molestiae.'
+      features: in
+      capacity: 5
     fileParameters: []
     responses: []
     responseFields: []
