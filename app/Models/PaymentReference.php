@@ -46,4 +46,9 @@ class PaymentReference extends Model
   {
     return $this->hasMany(Payment::class);
   }
+
+  function user()
+  {
+    return $this->belongsTo(User::class);
+  }
 }

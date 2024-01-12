@@ -67,7 +67,7 @@ abstract class PaymentProcessor
   public static function makeFromReference(string $reference)
   {
     $paymentRef = PaymentReference::where('reference', $reference)
-      ->with(['user'])
+      ->with('user')
       ->firstOrFail();
     return self::make($paymentRef);
   }

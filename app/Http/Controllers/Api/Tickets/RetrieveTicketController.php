@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\Tickets;
 
+use App\Enums\PaymentReferenceStatus;
 use App\Http\Controllers\Controller;
 use App\Models\PaymentReference;
 use App\Models\TicketPayment;
@@ -21,6 +22,7 @@ class RetrieveTicketController extends Controller
 
     $paymentReference = PaymentReference::query()
       ->where('reference', $request->reference)
+      ->where('status', PaymentReferenceStatus::Confirmed)
       ->with('paymentable')
       ->first();
 

@@ -11,11 +11,5 @@ class VerifyCsrfToken extends Middleware
    *
    * @var array
    */
-  protected $except = [
-    'home/callback/*',
-    'ccd/image-upload/*',
-    'api/exam/*',
-    'external/*',
-    '*'
-  ];
+  protected $except = ['home/callback/*', 'webhook/*'];
 }
