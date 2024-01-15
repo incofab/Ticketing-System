@@ -179,7 +179,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: kllordnpptporlvsylgnswrgi
+        example: yf
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -188,7 +188,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Magni possimus iure et at repudiandae molestiae.'
+        example: 'Iusto dolorum non at et magnam exercitationem.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -197,7 +197,7 @@ endpoints:
         name: features
         description: ''
         required: false
-        example: in
+        example: corrupti
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -206,16 +206,16 @@ endpoints:
         name: capacity
         description: ''
         required: true
-        example: 5
+        example: 6
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: kllordnpptporlvsylgnswrgi
-      description: 'Magni possimus iure et at repudiandae molestiae.'
-      features: in
-      capacity: 5
+      title: yf
+      description: 'Iusto dolorum non at et magnam exercitationem.'
+      features: corrupti
+      capacity: 6
     fileParameters: []
     responses: []
     responseFields: []

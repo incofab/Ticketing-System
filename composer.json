@@ -14,9 +14,10 @@
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "league/flysystem-aws-s3-v3": "^3.15",
+        "nunomaduro/collision": "^6.1",
         "simplesoftwareio/simple-qrcode": "^4.2",
-        "tightenco/ziggy": "^1.6",
-        "nunomaduro/collision": "^6.1"
+        "spatie/laravel-permission": "^6.3",
+        "tightenco/ziggy": "^1.6"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.8",

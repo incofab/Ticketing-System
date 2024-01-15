@@ -5,6 +5,7 @@ use App\Http\Controllers as Web;
 use App\Http\Controllers\Api\Events;
 use App\Http\Controllers\Api\Seats;
 use App\Http\Controllers\Api\Tickets;
+use App\Http\Controllers\Api\Payments;
 use App\Http\Controllers\Auth;
 
 /*
@@ -79,4 +80,11 @@ Route::group(['prefix' => 'tickets'], function () {
     Route::group(['middleware' => ['auth:sanctum']], function () {
         Route::post('/verify', Tickets\VerifyTicketController::class)->name('tickets.verify');
     });
+    Route::group(['middleware' => ['auth:sanctum', 'admin']], function () {
+        Route::get('/index', Tickets\ListTicketController::class)->name('tickets.index');
+    });
+});
+
+Route::group(['prefix' => 'payments'], function () {
+    Route::get('/index', [Payments\PaymentController::class, 'index'])->name('payments.index');
 });

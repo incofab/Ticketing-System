@@ -79,7 +79,7 @@ endpoints:
         name: seat_section_id
         description: ''
         required: true
-        example: aliquam
+        example: saepe
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -88,7 +88,7 @@ endpoints:
         name: price
         description: ''
         required: true
-        example: 178.12985946
+        example: 1984609.5380673
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -97,15 +97,15 @@ endpoints:
         name: entry_gate
         description: ''
         required: false
-        example: quia
+        example: ratione
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      seat_section_id: aliquam
-      price: 178.12985946
-      entry_gate: quia
+      seat_section_id: saepe
+      price: 1984609.5380673
+      entry_gate: ratione
     fileParameters: []
     responses: []
     responseFields: []

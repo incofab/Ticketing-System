@@ -15,7 +15,8 @@ class DatabaseSeeder extends Seeder
     $this->call([
       // UserSeeder::class
       EventCategorySeeder::class,
-      SeatSectionSeeder::class
+      RoleSeeder::class
+      // SeatSectionSeeder::class
     ]);
   }
 }

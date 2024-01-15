@@ -32,7 +32,7 @@ class PaystackHelper
     if (!$res->json('status') || !$res->json('data.authorization_url')) {
       return failRes(
         'Error: ' . $res->json('message', 'Paystack initialization failed'),
-        $res->json()
+        $res->json() ?? []
       );
     }
 

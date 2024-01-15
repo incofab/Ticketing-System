@@ -39,6 +39,38 @@ it('aborts if not enough seats', function () {
   // $tickets = $generateTicket->run();
 });
 
+it('aborts if not enough seats 2', function () {
+  $paymentReference = PaymentReference::factory()
+    ->ticketPayment()
+    ->confirmed()
+    ->create();
+  /** @var TicketPayment $ticketPayment */
+  $ticketPayment = $paymentReference->paymentable;
+  $eventPackage = $ticketPayment->eventPackage;
+  $seatSection = $eventPackage->seatSection;
+  $seatSection->fill(['capacity' => 10])->save();
+  Ticket::factory(8)
+    ->eventPackage($eventPackage)
+    ->create();
+
+  $seats = Seat::factory(3)->create();
+  $seatIds = $seats->pluck('id')->toArray();
+
+  try {
+    $generateTicket = new GenerateTicketFromPayment(
+      $paymentReference,
+      $seatIds
+    );
+
+    $this->expectExceptionCode(401);
+  } catch (\Throwable $th) {
+    Mail::assertNothingQueued();
+    info('Catch error' . get_class($th));
+  }
+  // Should abort here
+  // $tickets = $generateTicket->run();
+});
+
 it('generates tickets from payment', function () {
   $paymentReference = PaymentReference::factory()
     ->ticketPayment()

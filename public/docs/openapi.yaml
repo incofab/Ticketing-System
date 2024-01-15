@@ -26,11 +26,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: repellat
+                  example: molestiae
                 password:
                   type: string
                   description: ''
-                  example: ':wn+n5RDWI15:O-'
+                  example: '\66O8&a8'
               required:
                 - phone
                 - password
@@ -54,27 +54,27 @@ paths:
                 first_name:
                   type: integer
                   description: ''
-                  example: 11
+                  example: 1
                 last_name:
                   type: string
                   description: ''
-                  example: consequuntur
+                  example: sit
                 other_names:
                   type: string
                   description: ''
-                  example: placeat
+                  example: facilis
                 phone:
                   type: string
                   description: ''
-                  example: quidem
+                  example: unde
                 email:
                   type: string
                   description: ''
-                  example: tristian.moen@example.net
+                  example: tobin.russel@example.net
                 password:
                   type: string
                   description: ''
-                  example: "|'|0F/^xDr^s#x@$d"
+                  example: \^amwBR
               required:
                 - first_name
                 - last_name
@@ -122,7 +122,7 @@ paths:
                 event_id:
                   type: string
                   description: ''
-                  example: quia
+                  example: qui
                 image:
                   type: string
                   format: binary
@@ -130,7 +130,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: error
+                  example: quidem
               required:
                 - event_id
                 - image
@@ -151,7 +151,7 @@ paths:
         in: path
         name: eventImage_id
         description: 'The ID of the eventImage.'
-        example: 20
+        example: 8
         required: true
         schema:
           type: integer
@@ -618,15 +618,15 @@ paths:
                 seat_section_id:
                   type: string
                   description: ''
-                  example: aliquam
+                  example: saepe
                 price:
                   type: number
                   description: ''
-                  example: 178.12985946
+                  example: 1984609.5380673
                 entry_gate:
                   type: string
                   description: ''
-                  example: quia
+                  example: ratione
               required:
                 - seat_section_id
                 - price
@@ -936,19 +936,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: tcgprbtdlhvhxawspcext
+                  example: camnhh
                 description:
                   type: string
                   description: ''
-                  example: 'Veniam qui aut quod quidem consequuntur consequatur.'
+                  example: 'Distinctio dicta consequatur omnis iusto dolores aut.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2024-01-12T20:18:45'
+                  example: '2024-01-15T09:20:28'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2098-01-04'
+                  example: '2066-04-18'
               required:
                 - title
       security: []
@@ -980,19 +980,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: hznminypkjloupookcyml
+                  example: w
                 description:
                   type: string
                   description: ''
-                  example: 'Corporis quia quibusdam magnam a.'
+                  example: 'Voluptatem a non ipsa.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2024-01-12T20:18:45'
+                  example: '2024-01-15T09:20:28'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2049-01-15'
+                  example: '2109-07-18'
               required:
                 - title
       security: []
@@ -1713,31 +1713,31 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: cuobrcjqolr
+                  example: vhrfivo
                 description:
                   type: string
                   description: ''
-                  example: 'Quod qui est reiciendis.'
+                  example: 'Culpa mollitia optio est voluptates porro voluptates.'
                 start_time:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2024-01-12T20:18:45'
+                  example: '2024-01-15T09:20:28'
                 end_time:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>start_time</code>.'
-                  example: '2028-05-11'
+                  example: '2058-12-26'
                 home_team:
                   type: string
                   description: ''
-                  example: illo
+                  example: sint
                 away_team:
                   type: string
                   description: ''
-                  example: occaecati
+                  example: sed
                 event_packages:
                   type: array
                   description: 'Must have at least 1 items.'
-                  example: klhu
+                  example: ycezawyxxmwtfucsduyfeizxphzlxxlufmrld
                   items:
                     type: string
               required:
@@ -1772,27 +1772,27 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: gmr
+                  example: ppcgfqbkewmiy
                 description:
                   type: string
                   description: ''
-                  example: 'Consequatur architecto quis suscipit deserunt perspiciatis praesentium.'
+                  example: 'Maxime enim unde cupiditate eius reprehenderit.'
                 start_time:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2024-01-12T20:18:45'
+                  example: '2024-01-15T09:20:28'
                 end_time:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>start_time</code>.'
-                  example: '2103-04-14'
+                  example: '2061-10-01'
                 home_team:
                   type: string
                   description: ''
-                  example: occaecati
+                  example: autem
                 away_team:
                   type: string
                   description: ''
-                  example: omnis
+                  example: architecto
               required:
                 - title
                 - start_time
@@ -1825,6 +1825,668 @@ paths:
         required: true
         schema:
           type: integer
+  /api/payments/index:
+    get:
+      summary: ''
+      operationId: getApiPaymentsIndex
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: ''
+                  data:
+                    current_page: 1
+                    data:
+                      -
+                        id: 1
+                        quantity: 7
+                        event_package_id: 1
+                        user_id: 1
+                        name: 'Ernestina Balistreri Jr.'
+                        phone: 551-275-8293
+                        email: katrina12@yahoo.com
+                        created_at: '2024-01-12T17:35:58.000000Z'
+                        updated_at: '2024-01-12T17:35:58.000000Z'
+                        event_package:
+                          id: 1
+                          event_id: 1
+                          seat_section_id: 5
+                          price: 3725.7
+                          quantity_sold: 0
+                          deleted_at: null
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-12T17:35:58.000000Z'
+                          entry_gate: null
+                          event:
+                            id: 1
+                            event_season_id: 1
+                            title: 'Illum ex repudiandae sunt.'
+                            description: 'Sequi rerum aut magni ea qui est consequatur.'
+                            start_time: '2024-03-12T17:35:58.000000Z'
+                            end_time: '2024-04-12T17:35:58.000000Z'
+                            home_team: expedita
+                            away_team: unde
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                          seat_section:
+                            id: 5
+                            capacity: 708
+                            title: 'Sit est reprehenderit nisi quis ipsam inventore.'
+                            description: 'Quis est quibusdam et perferendis adipisci fugit laborum consequatur repellendus enim quis provident temporibus quasi.'
+                            features: 'Maxime qui eos nisi quam debitis occaecati modi voluptatem voluptatem.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                      -
+                        id: 3
+                        quantity: 4
+                        event_package_id: 4
+                        user_id: 4
+                        name: 'Kolby Spinka'
+                        phone: 217-274-5233
+                        email: haylee45@hotmail.com
+                        created_at: '2024-01-12T17:35:58.000000Z'
+                        updated_at: '2024-01-12T17:35:58.000000Z'
+                        event_package:
+                          id: 4
+                          event_id: 4
+                          seat_section_id: 9
+                          price: 5039.9
+                          quantity_sold: 0
+                          deleted_at: null
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-12T17:35:58.000000Z'
+                          entry_gate: null
+                          event:
+                            id: 4
+                            event_season_id: 4
+                            title: 'Reiciendis officiis sunt quia omnis voluptates cupiditate laborum.'
+                            description: 'Ipsam aut tempore voluptatem et eos est eligendi illo quod dolorem quos.'
+                            start_time: '2024-03-12T17:35:58.000000Z'
+                            end_time: '2024-04-12T17:35:58.000000Z'
+                            home_team: enim
+                            away_team: quis
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                          seat_section:
+                            id: 9
+                            capacity: 919
+                            title: 'Saepe dolor culpa est enim voluptatem ea et similique.'
+                            description: 'Quia hic harum vel iure consequatur veritatis totam et officiis.'
+                            features: 'Molestiae praesentium autem est soluta recusandae nostrum sed et consequatur cum.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                      -
+                        id: 5
+                        quantity: 1
+                        event_package_id: 7
+                        user_id: 7
+                        name: 'Summer Hoeger MD'
+                        phone: '+1 (534) 499-1341'
+                        email: alex.mayer@kling.org
+                        created_at: '2024-01-12T17:35:58.000000Z'
+                        updated_at: '2024-01-12T17:35:58.000000Z'
+                        event_package:
+                          id: 7
+                          event_id: 7
+                          seat_section_id: 13
+                          price: 1755.2
+                          quantity_sold: 0
+                          deleted_at: null
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-12T17:35:58.000000Z'
+                          entry_gate: null
+                          event:
+                            id: 7
+                            event_season_id: 7
+                            title: 'Alias cupiditate aut aut quo.'
+                            description: 'Nesciunt laboriosam aut maxime modi iste officiis eius.'
+                            start_time: '2024-03-12T17:35:58.000000Z'
+                            end_time: '2024-04-12T17:35:58.000000Z'
+                            home_team: et
+                            away_team: eos
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                          seat_section:
+                            id: 13
+                            capacity: 577
+                            title: 'Dolorem quae odit nesciunt nemo et facilis magnam aut.'
+                            description: 'Consequatur ut sed nesciunt fugit totam beatae reiciendis sed aut sed aut doloremque minima.'
+                            features: 'Qui velit a qui non rerum.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                      -
+                        id: 7
+                        quantity: 9
+                        event_package_id: 10
+                        user_id: 10
+                        name: 'Mekhi Conroy MD'
+                        phone: 352.795.5298
+                        email: hdare@bahringer.net
+                        created_at: '2024-01-12T17:35:58.000000Z'
+                        updated_at: '2024-01-12T17:35:58.000000Z'
+                        event_package:
+                          id: 10
+                          event_id: 10
+                          seat_section_id: 17
+                          price: 6388.9
+                          quantity_sold: 0
+                          deleted_at: null
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-12T17:35:58.000000Z'
+                          entry_gate: null
+                          event:
+                            id: 10
+                            event_season_id: 10
+                            title: 'Omnis eveniet eligendi explicabo optio quam quia sunt quia.'
+                            description: 'Eum autem quasi ipsa voluptatem quod nulla quia qui minus quia.'
+                            start_time: '2024-03-12T17:35:58.000000Z'
+                            end_time: '2024-04-12T17:35:58.000000Z'
+                            home_team: qui
+                            away_team: doloremque
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                          seat_section:
+                            id: 17
+                            capacity: 395
+                            title: 'Facilis doloremque impedit nihil tenetur mollitia cupiditate illum.'
+                            description: 'Voluptate aliquam aut et quasi culpa ipsa quibusdam et quisquam dolorum.'
+                            features: 'Facilis soluta dolorem sed perferendis qui non alias et ipsum.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                      -
+                        id: 9
+                        quantity: 0
+                        event_package_id: 13
+                        user_id: 13
+                        name: 'Ms. Celia Sanford'
+                        phone: +1-937-592-8181
+                        email: kstehr@yahoo.com
+                        created_at: '2024-01-12T17:35:58.000000Z'
+                        updated_at: '2024-01-12T17:35:58.000000Z'
+                        event_package:
+                          id: 13
+                          event_id: 13
+                          seat_section_id: 21
+                          price: 4331.2
+                          quantity_sold: 0
+                          deleted_at: null
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-12T17:35:58.000000Z'
+                          entry_gate: null
+                          event:
+                            id: 13
+                            event_season_id: 13
+                            title: 'Vitae ut quia aut quidem quia.'
+                            description: 'Magnam debitis ut ut deleniti et dolor et ex ut sequi.'
+                            start_time: '2024-03-12T17:35:58.000000Z'
+                            end_time: '2024-04-12T17:35:58.000000Z'
+                            home_team: cum
+                            away_team: similique
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                          seat_section:
+                            id: 21
+                            capacity: 269
+                            title: 'Alias esse amet reiciendis et.'
+                            description: 'Ut molestias unde aut vero quam qui sequi quis saepe porro veniam.'
+                            features: 'Fuga consequatur porro ut voluptatem rerum deleniti eaque nihil deleniti.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                    first_page_url: 'http://localhost/api/payments/index?page=1'
+                    from: 1
+                    last_page: 1
+                    last_page_url: 'http://localhost/api/payments/index?page=1'
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost/api/payments/index?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    next_page_url: null
+                    path: 'http://localhost/api/payments/index'
+                    per_page: 300
+                    prev_page_url: null
+                    to: 5
+                    total: 5
+                properties:
+                  message:
+                    type: string
+                    example: ''
+                  data:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      data:
+                        type: array
+                        example:
+                          -
+                            id: 1
+                            quantity: 7
+                            event_package_id: 1
+                            user_id: 1
+                            name: 'Ernestina Balistreri Jr.'
+                            phone: 551-275-8293
+                            email: katrina12@yahoo.com
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            event_package:
+                              id: 1
+                              event_id: 1
+                              seat_section_id: 5
+                              price: 3725.7
+                              quantity_sold: 0
+                              deleted_at: null
+                              created_at: '2024-01-12T17:35:58.000000Z'
+                              updated_at: '2024-01-12T17:35:58.000000Z'
+                              entry_gate: null
+                              event:
+                                id: 1
+                                event_season_id: 1
+                                title: 'Illum ex repudiandae sunt.'
+                                description: 'Sequi rerum aut magni ea qui est consequatur.'
+                                start_time: '2024-03-12T17:35:58.000000Z'
+                                end_time: '2024-04-12T17:35:58.000000Z'
+                                home_team: expedita
+                                away_team: unde
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                              seat_section:
+                                id: 5
+                                capacity: 708
+                                title: 'Sit est reprehenderit nisi quis ipsam inventore.'
+                                description: 'Quis est quibusdam et perferendis adipisci fugit laborum consequatur repellendus enim quis provident temporibus quasi.'
+                                features: 'Maxime qui eos nisi quam debitis occaecati modi voluptatem voluptatem.'
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                          -
+                            id: 3
+                            quantity: 4
+                            event_package_id: 4
+                            user_id: 4
+                            name: 'Kolby Spinka'
+                            phone: 217-274-5233
+                            email: haylee45@hotmail.com
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            event_package:
+                              id: 4
+                              event_id: 4
+                              seat_section_id: 9
+                              price: 5039.9
+                              quantity_sold: 0
+                              deleted_at: null
+                              created_at: '2024-01-12T17:35:58.000000Z'
+                              updated_at: '2024-01-12T17:35:58.000000Z'
+                              entry_gate: null
+                              event:
+                                id: 4
+                                event_season_id: 4
+                                title: 'Reiciendis officiis sunt quia omnis voluptates cupiditate laborum.'
+                                description: 'Ipsam aut tempore voluptatem et eos est eligendi illo quod dolorem quos.'
+                                start_time: '2024-03-12T17:35:58.000000Z'
+                                end_time: '2024-04-12T17:35:58.000000Z'
+                                home_team: enim
+                                away_team: quis
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                              seat_section:
+                                id: 9
+                                capacity: 919
+                                title: 'Saepe dolor culpa est enim voluptatem ea et similique.'
+                                description: 'Quia hic harum vel iure consequatur veritatis totam et officiis.'
+                                features: 'Molestiae praesentium autem est soluta recusandae nostrum sed et consequatur cum.'
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                          -
+                            id: 5
+                            quantity: 1
+                            event_package_id: 7
+                            user_id: 7
+                            name: 'Summer Hoeger MD'
+                            phone: '+1 (534) 499-1341'
+                            email: alex.mayer@kling.org
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            event_package:
+                              id: 7
+                              event_id: 7
+                              seat_section_id: 13
+                              price: 1755.2
+                              quantity_sold: 0
+                              deleted_at: null
+                              created_at: '2024-01-12T17:35:58.000000Z'
+                              updated_at: '2024-01-12T17:35:58.000000Z'
+                              entry_gate: null
+                              event:
+                                id: 7
+                                event_season_id: 7
+                                title: 'Alias cupiditate aut aut quo.'
+                                description: 'Nesciunt laboriosam aut maxime modi iste officiis eius.'
+                                start_time: '2024-03-12T17:35:58.000000Z'
+                                end_time: '2024-04-12T17:35:58.000000Z'
+                                home_team: et
+                                away_team: eos
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                              seat_section:
+                                id: 13
+                                capacity: 577
+                                title: 'Dolorem quae odit nesciunt nemo et facilis magnam aut.'
+                                description: 'Consequatur ut sed nesciunt fugit totam beatae reiciendis sed aut sed aut doloremque minima.'
+                                features: 'Qui velit a qui non rerum.'
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                          -
+                            id: 7
+                            quantity: 9
+                            event_package_id: 10
+                            user_id: 10
+                            name: 'Mekhi Conroy MD'
+                            phone: 352.795.5298
+                            email: hdare@bahringer.net
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            event_package:
+                              id: 10
+                              event_id: 10
+                              seat_section_id: 17
+                              price: 6388.9
+                              quantity_sold: 0
+                              deleted_at: null
+                              created_at: '2024-01-12T17:35:58.000000Z'
+                              updated_at: '2024-01-12T17:35:58.000000Z'
+                              entry_gate: null
+                              event:
+                                id: 10
+                                event_season_id: 10
+                                title: 'Omnis eveniet eligendi explicabo optio quam quia sunt quia.'
+                                description: 'Eum autem quasi ipsa voluptatem quod nulla quia qui minus quia.'
+                                start_time: '2024-03-12T17:35:58.000000Z'
+                                end_time: '2024-04-12T17:35:58.000000Z'
+                                home_team: qui
+                                away_team: doloremque
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                              seat_section:
+                                id: 17
+                                capacity: 395
+                                title: 'Facilis doloremque impedit nihil tenetur mollitia cupiditate illum.'
+                                description: 'Voluptate aliquam aut et quasi culpa ipsa quibusdam et quisquam dolorum.'
+                                features: 'Facilis soluta dolorem sed perferendis qui non alias et ipsum.'
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                          -
+                            id: 9
+                            quantity: 0
+                            event_package_id: 13
+                            user_id: 13
+                            name: 'Ms. Celia Sanford'
+                            phone: +1-937-592-8181
+                            email: kstehr@yahoo.com
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            event_package:
+                              id: 13
+                              event_id: 13
+                              seat_section_id: 21
+                              price: 4331.2
+                              quantity_sold: 0
+                              deleted_at: null
+                              created_at: '2024-01-12T17:35:58.000000Z'
+                              updated_at: '2024-01-12T17:35:58.000000Z'
+                              entry_gate: null
+                              event:
+                                id: 13
+                                event_season_id: 13
+                                title: 'Vitae ut quia aut quidem quia.'
+                                description: 'Magnam debitis ut ut deleniti et dolor et ex ut sequi.'
+                                start_time: '2024-03-12T17:35:58.000000Z'
+                                end_time: '2024-04-12T17:35:58.000000Z'
+                                home_team: cum
+                                away_team: similique
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                              seat_section:
+                                id: 21
+                                capacity: 269
+                                title: 'Alias esse amet reiciendis et.'
+                                description: 'Ut molestias unde aut vero quam qui sequi quis saepe porro veniam.'
+                                features: 'Fuga consequatur porro ut voluptatem rerum deleniti eaque nihil deleniti.'
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 1
+                            quantity:
+                              type: integer
+                              example: 7
+                            event_package_id:
+                              type: integer
+                              example: 1
+                            user_id:
+                              type: integer
+                              example: 1
+                            name:
+                              type: string
+                              example: 'Ernestina Balistreri Jr.'
+                            phone:
+                              type: string
+                              example: 551-275-8293
+                            email:
+                              type: string
+                              example: katrina12@yahoo.com
+                            created_at:
+                              type: string
+                              example: '2024-01-12T17:35:58.000000Z'
+                            updated_at:
+                              type: string
+                              example: '2024-01-12T17:35:58.000000Z'
+                            event_package:
+                              type: object
+                              properties:
+                                id:
+                                  type: integer
+                                  example: 1
+                                event_id:
+                                  type: integer
+                                  example: 1
+                                seat_section_id:
+                                  type: integer
+                                  example: 5
+                                price:
+                                  type: number
+                                  example: 3725.7
+                                quantity_sold:
+                                  type: integer
+                                  example: 0
+                                deleted_at:
+                                  type: string
+                                  example: null
+                                created_at:
+                                  type: string
+                                  example: '2024-01-12T17:35:58.000000Z'
+                                updated_at:
+                                  type: string
+                                  example: '2024-01-12T17:35:58.000000Z'
+                                entry_gate:
+                                  type: string
+                                  example: null
+                                event:
+                                  type: object
+                                  properties:
+                                    id:
+                                      type: integer
+                                      example: 1
+                                    event_season_id:
+                                      type: integer
+                                      example: 1
+                                    title:
+                                      type: string
+                                      example: 'Illum ex repudiandae sunt.'
+                                    description:
+                                      type: string
+                                      example: 'Sequi rerum aut magni ea qui est consequatur.'
+                                    start_time:
+                                      type: string
+                                      example: '2024-03-12T17:35:58.000000Z'
+                                    end_time:
+                                      type: string
+                                      example: '2024-04-12T17:35:58.000000Z'
+                                    home_team:
+                                      type: string
+                                      example: expedita
+                                    away_team:
+                                      type: string
+                                      example: unde
+                                    deleted_at:
+                                      type: string
+                                      example: null
+                                    created_at:
+                                      type: string
+                                      example: '2024-01-12T17:35:58.000000Z'
+                                    updated_at:
+                                      type: string
+                                      example: '2024-01-12T17:35:58.000000Z'
+                                seat_section:
+                                  type: object
+                                  properties:
+                                    id:
+                                      type: integer
+                                      example: 5
+                                    capacity:
+                                      type: integer
+                                      example: 708
+                                    title:
+                                      type: string
+                                      example: 'Sit est reprehenderit nisi quis ipsam inventore.'
+                                    description:
+                                      type: string
+                                      example: 'Quis est quibusdam et perferendis adipisci fugit laborum consequatur repellendus enim quis provident temporibus quasi.'
+                                    features:
+                                      type: string
+                                      example: 'Maxime qui eos nisi quam debitis occaecati modi voluptatem voluptatem.'
+                                    deleted_at:
+                                      type: string
+                                      example: null
+                                    created_at:
+                                      type: string
+                                      example: '2024-01-12T17:35:58.000000Z'
+                                    updated_at:
+                                      type: string
+                                      example: '2024-01-12T17:35:58.000000Z'
+                      first_page_url:
+                        type: string
+                        example: 'http://localhost/api/payments/index?page=1'
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 1
+                      last_page_url:
+                        type: string
+                        example: 'http://localhost/api/payments/index?page=1'
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://localhost/api/payments/index?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      next_page_url:
+                        type: string
+                        example: null
+                      path:
+                        type: string
+                        example: 'http://localhost/api/payments/index'
+                      per_page:
+                        type: integer
+                        example: 300
+                      prev_page_url:
+                        type: string
+                        example: null
+                      to:
+                        type: integer
+                        example: 5
+                      total:
+                        type: integer
+                        example: 5
+      tags:
+        - Payments
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                status:
+                  type: string
+                  description: ''
+                  example: null
+                event_package_id:
+                  type: string
+                  description: ''
+                  example: null
+      security: []
   '/api/seats/index/{seatSection}':
     get:
       summary: ''
@@ -4758,19 +5420,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: kllordnpptporlvsylgnswrgi
+                  example: yf
                 description:
                   type: string
                   description: ''
-                  example: 'Magni possimus iure et at repudiandae molestiae.'
+                  example: 'Iusto dolorum non at et magnam exercitationem.'
                 features:
                   type: string
                   description: ''
-                  example: in
+                  example: corrupti
                 capacity:
                   type: integer
                   description: ''
-                  example: 5
+                  example: 6
               required:
                 - title
                 - capacity
@@ -4803,27 +5465,27 @@ paths:
                 merchant:
                   type: string
                   description: ''
-                  example: veniam
+                  example: nam
                 callback_url:
                   type: string
                   description: ''
-                  example: 'http://damore.com/'
+                  example: 'http://www.zemlak.com/maiores-nihil-quas-corporis-mollitia-animi-nostrum-corrupti'
                 quantity:
                   type: integer
                   description: 'Must be at least 1.'
-                  example: 63
+                  example: 72
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: nedqdldixytyrgovuhiuqe
+                  example: laph
                 phone:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: maohhirpn
+                  example: jbrofbsm
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: david.abbott@example.net
+                  example: kilback.remington@example.net
               required:
                 - merchant
                 - callback_url
@@ -4858,7 +5520,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: accusamus
+                  example: non
               required:
                 - reference
       security: []
@@ -4881,16 +5543,16 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: quos
+                  example: ut
                 quantity:
                   type: integer
                   description: 'Must be at least 1.'
-                  example: 56
+                  example: 10
                 seat_ids:
                   type: array
                   description: ''
                   example:
-                    - voluptates
+                    - magnam
                   items:
                     type: string
               required:
@@ -5806,11 +6468,11 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: molestiae
+                  example: minima
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: van.wiegand@example.org
+                  example: casper.deshaun@example.net
               required:
                 - reference
                 - email
@@ -5834,24 +6496,46 @@ paths:
                 ticket_payment_id:
                   type: integer
                   description: ''
-                  example: 9
+                  example: 1
                 hash:
                   type: string
                   description: ''
-                  example: alias
+                  example: exercitationem
                 reference:
                   type: string
                   description: ''
-                  example: adipisci
+                  example: ex
                 device_no:
                   type: string
                   description: ''
-                  example: qui
+                  example: quas
               required:
                 - ticket_payment_id
                 - hash
                 - reference
                 - device_no
+      security: []
+  /api/tickets/index:
+    get:
+      summary: ''
+      operationId: getApiTicketsIndex
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Tickets
       security: []
 tags:
   -
@@ -5868,6 +6552,9 @@ tags:
     description: ''
   -
     name: Events
+    description: ''
+  -
+    name: Payments
     description: ''
   -
     name: Seats
