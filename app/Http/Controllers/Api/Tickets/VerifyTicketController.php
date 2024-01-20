@@ -26,14 +26,17 @@ class VerifyTicketController extends Controller
         'string',
         'unique:ticket_verifications,reference'
       ],
-      'device_no' => ['required', 'string']
+      'device_no' => ['required', 'string'],
+      'event_id' => ['required', 'integer']
     ]);
 
     $ticket = Ticket::query()
       ->where('ticket_payment_id', $request->ticket_payment_id)
       ->where('reference', $request->hash)
+      ->with('eventPackage')
       ->first();
-    if (!$ticket) {
+
+    if (!$ticket || $ticket->eventPackage->event_id !== $data['event_id']) {
       return $this->res(false, self::SLUG_INVALID_TICKET, []);
     }
 
@@ -58,7 +61,7 @@ class VerifyTicketController extends Controller
       ->ticketVerifications()
       ->create(
         collect([...$data, 'ticket_id' => $ticket->id])
-          ->except('hash', 'ticket_payment_id')
+          ->except('hash', 'ticket_payment_id', 'event_id')
           ->toArray()
       );
 

@@ -18,11 +18,15 @@ class PaystackHelper
     // Change to kobo
     $amount = $amount * 100;
 
+    $subAccount = config('services.paystack.ticket-subaccount');
     $data = [
       'amount' => $amount,
       'email' => $email,
       'callback_url' => $callbackUrl,
-      'reference' => $reference
+      'reference' => $reference,
+      ...$subAccount
+        ? ['subaccount' => $subAccount, 'bearer' => 'subaccount']
+        : []
     ];
 
     $res = Http::acceptJson()

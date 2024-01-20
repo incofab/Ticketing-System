@@ -36,7 +36,7 @@ endpoints:
         name: merchant
         description: ''
         required: true
-        example: nam
+        example: repellat
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -44,8 +44,8 @@ endpoints:
       callback_url:
         name: callback_url
         description: ''
-        required: true
-        example: 'http://www.zemlak.com/maiores-nihil-quas-corporis-mollitia-animi-nostrum-corrupti'
+        required: false
+        example: 'http://cormier.org/eius-aut-maxime-qui-quidem-officiis-quos-ut'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -54,7 +54,7 @@ endpoints:
         name: quantity
         description: 'Must be at least 1.'
         required: true
-        example: 72
+        example: 76
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -63,7 +63,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: laph
+        example: xytcytggzucicdayjoj
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -72,7 +72,7 @@ endpoints:
         name: phone
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: jbrofbsm
+        example: wrdhslftplivixo
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -81,18 +81,18 @@ endpoints:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: kilback.remington@example.net
+        example: waters.magdalen@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      merchant: nam
-      callback_url: 'http://www.zemlak.com/maiores-nihil-quas-corporis-mollitia-animi-nostrum-corrupti'
-      quantity: 72
-      name: laph
-      phone: jbrofbsm
-      email: kilback.remington@example.net
+      merchant: repellat
+      callback_url: 'http://cormier.org/eius-aut-maxime-qui-quidem-officiis-quos-ut'
+      quantity: 76
+      name: xytcytggzucicdayjoj
+      phone: wrdhslftplivixo
+      email: waters.magdalen@example.net
     fileParameters: []
     responses: []
     responseFields: []
@@ -126,13 +126,13 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: non
+        example: omnis
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      reference: non
+      reference: omnis
     fileParameters: []
     responses: []
     responseFields: []
@@ -166,7 +166,7 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: ut
+        example: ipsam
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -175,7 +175,7 @@ endpoints:
         name: quantity
         description: 'Must be at least 1.'
         required: false
-        example: 10
+        example: 27
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -185,16 +185,16 @@ endpoints:
         description: ''
         required: true
         example:
-          - magnam
+          - sit
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      reference: ut
-      quantity: 10
+      reference: ipsam
+      quantity: 27
       seat_ids:
-        - magnam
+        - sit
     fileParameters: []
     responses: []
     responseFields: []
@@ -228,7 +228,7 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: minima
+        example: officiis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -237,14 +237,14 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: casper.deshaun@example.net
+        example: webster.nienow@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      reference: minima
-      email: casper.deshaun@example.net
+      reference: officiis
+      email: webster.nienow@example.org
     fileParameters: []
     responses:
       -
@@ -790,7 +790,7 @@ endpoints:
         name: ticket_payment_id
         description: ''
         required: true
-        example: 1
+        example: 17
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -799,7 +799,7 @@ endpoints:
         name: hash
         description: ''
         required: true
-        example: exercitationem
+        example: quas
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -808,7 +808,7 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: ex
+        example: at
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -817,16 +817,26 @@ endpoints:
         name: device_no
         description: ''
         required: true
-        example: quas
+        example: dolorem
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
+      event_id:
+        name: event_id
+        description: ''
+        required: true
+        example: 18
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
     cleanBodyParameters:
-      ticket_payment_id: 1
-      hash: exercitationem
-      reference: ex
-      device_no: quas
+      ticket_payment_id: 17
+      hash: quas
+      reference: at
+      device_no: dolorem
+      event_id: 18
     fileParameters: []
     responses: []
     responseFields: []

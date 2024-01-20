@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\PaymentReferenceStatus;
 use App\Models\PaymentReference;
 use App\Models\User;
 use Database\Seeders\RoleSeeder;
@@ -25,7 +26,7 @@ it('returns a paginated list of payments', function () {
   actingAs($this->admin)
     ->getJson(route('api.payments.index'))
     ->assertOk()
-    ->assertJsonCount(5, 'data.data')
+    ->assertJsonCount(7, 'data.data')
     ->assertJsonStructure([
       'data' => [
         'data' => [
@@ -33,4 +34,23 @@ it('returns a paginated list of payments', function () {
         ]
       ]
     ]);
+});
+
+it('returns a paginated list of payments with status filter', function () {
+  actingAs($this->admin)
+    ->getJson(
+      route('api.payments.index', [
+        'status' => PaymentReferenceStatus::Confirmed->value
+      ])
+    )
+    ->assertOk()
+    ->assertJsonCount(5, 'data.data');
+  actingAs($this->admin)
+    ->getJson(
+      route('api.payments.index', [
+        'status' => PaymentReferenceStatus::Pending->value
+      ])
+    )
+    ->assertOk()
+    ->assertJsonCount(2, 'data.data');
 });

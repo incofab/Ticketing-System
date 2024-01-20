@@ -33,7 +33,8 @@ return [
   ],
   'paystack' => [
     'public-key' => env('PAYSTACK_PUBLIC_KEY'),
-    'secret-key' => env('PAYSTACK_SECRET_KEY')
+    'secret-key' => env('PAYSTACK_SECRET_KEY'),
+    'ticket-subaccount' => env('PAYSTACK_TICKET_SUBACCOUNT')
   ],
   'maildrip' => ['api_key' => env('MAIL_DRIP_API_KEY')]
 ];

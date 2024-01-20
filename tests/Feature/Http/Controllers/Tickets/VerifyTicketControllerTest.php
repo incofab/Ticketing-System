@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\Tickets\VerifyTicketController;
+use App\Models\Event;
 use App\Models\Ticket;
 use App\Models\User;
 
@@ -15,7 +16,8 @@ beforeEach(function () {
     'ticket_payment_id' => $this->ticket->ticket_payment_id,
     'hash' => $this->ticket->reference,
     'reference' => $reference,
-    'device_no' => 'device123'
+    'device_no' => 'device123',
+    'event_id' => $this->ticket->eventPackage->event_id
   ];
 });
 
@@ -26,9 +28,27 @@ it('returns validation error if required fields are missing', function () {
       'reference',
       'hash',
       'device_no',
-      'ticket_payment_id'
+      'ticket_payment_id',
+      'event_id'
     ]);
 });
+
+it(
+  'returns invalid ticket when ticket is not for the supplied event',
+  function () {
+    $event = Event::factory()->create();
+    actingAs($this->admin)
+      ->postJson(route('api.tickets.verify'), [
+        ...$this->requestData,
+        'event_id' => $event->id
+      ])
+      ->assertOk()
+      ->assertJson([
+        'success' => false,
+        'slug' => VerifyTicketController::SLUG_INVALID_TICKET
+      ]);
+  }
+);
 
 it('can verify a ticket', function () {
   actingAs($this->admin)
@@ -41,7 +61,7 @@ it('can verify a ticket', function () {
   $this->assertDatabaseHas(
     'ticket_verifications',
     collect([...$this->requestData, 'ticket_id' => $this->ticket->id])
-      ->except('hash', 'ticket_payment_id')
+      ->except('hash', 'ticket_payment_id', 'event_id')
       ->toArray()
   );
 });
@@ -69,7 +89,7 @@ it('ensures ticket hash is valid', function () {
   $this->assertDatabaseHas(
     'ticket_verifications',
     collect([...$this->requestData, 'ticket_id' => $this->ticket->id])
-      ->except('hash', 'ticket_payment_id')
+      ->except('hash', 'ticket_payment_id', 'event_id')
       ->toArray()
   );
 });

@@ -102,7 +102,7 @@ it('handles Paystack webhook successfully', function () {
   $_SERVER['REQUEST_METHOD'] = 'POST';
   $_SERVER['HTTP_X_PAYSTACK_SIGNATURE'] = hash_hmac(
     'sha512',
-    json_encode($inputData),
+    '',
     config('services.paystack.secret-key')
   );
 

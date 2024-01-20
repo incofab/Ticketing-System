@@ -6,6 +6,7 @@ use App\Actions\CreateUpdateEventPackage;
 use App\Http\Controllers\Controller;
 use App\Models\Event;
 use App\Models\EventSeason;
+use DB;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
@@ -17,6 +18,8 @@ class EventController extends Controller
   public function index(EventSeason $eventSeason = null)
   {
     $query = $eventSeason ? $eventSeason->events()->getQuery() : Event::query();
+
+    $query->selectRaw('*, (created_at > NOW()) AS expired');
 
     return $this->apiRes(
       paginateFromRequest($query->with('eventImages', 'eventPackages'))

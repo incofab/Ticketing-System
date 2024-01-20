@@ -17,7 +17,7 @@ abstract class PaymentMerchant
 
   public static function createPaymentReference(
     PaymentReferenceDto $paymentReferenceDto
-  ) {
+  ): PaymentReference {
     return PaymentReference::query()->firstOrCreate(
       ['reference' => $paymentReferenceDto->reference],
       $paymentReferenceDto->toArray()
@@ -39,6 +39,8 @@ abstract class PaymentMerchant
   public static function make(string $merchant)
   {
     switch ($merchant) {
+      case PaymentMerchantType::BankDeposit->value:
+        return new PaymentBankDeposit($merchant);
       case PaymentMerchantType::Paystack->value:
       default:
         return new PaymentPaystack($merchant);

@@ -18,15 +18,30 @@ beforeEach(function () {
 it('can get a list of events', function () {
   // Create some dummy data, for example:
   $eventSeason = EventSeason::factory()->create();
-  $events = Event::factory(5)->create(['event_season_id' => $eventSeason->id]);
+  Event::factory(5)->create(['event_season_id' => $eventSeason->id]);
+  Event::factory(2)->create();
 
   // Call the endpoint
-  $response = getJson(
-    route('api.events.index', ['eventSeason' => $eventSeason->id])
-  );
-
-  // Assert the response
-  $response->assertOk()->assertJsonCount(5, 'data.data');
+  getJson(route('api.events.index', ['eventSeason' => $eventSeason->id]))
+    ->assertOk()
+    ->assertJsonCount(5, 'data.data')
+    ->assertJsonStructure([
+      'data' => [
+        'data' => [
+          '*' => [
+            'id',
+            'title',
+            'event_season_id',
+            'expired',
+            'event_packages',
+            'event_images'
+          ]
+        ]
+      ]
+    ]);
+  getJson(route('api.events.index'))
+    ->assertOk()
+    ->assertJsonCount(7, 'data.data');
 });
 
 it('can get a list of upcoming events', function () {

@@ -10,6 +10,7 @@ beforeEach(function () {
   $this->admin = User::factory()->create();
   $this->paymentReference = PaymentReference::factory()
     ->ticketPayment()
+    ->confirmed()
     ->create([
       'reference' => 'valid_reference'
     ]);
@@ -46,6 +47,7 @@ it('returns tickets and payment for a valid reference and email', function () {
     ->ticketPayment($this->ticketPayment)
     ->create();
   getJson(route('api.tickets.retrieve', $this->requestData))
+    // ->dump()
     ->assertOk()
     ->assertJsonStructure([
       'data' => [

@@ -26,11 +26,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: molestiae
+                  example: aperiam
                 password:
                   type: string
                   description: ''
-                  example: '\66O8&a8'
+                  example: '$s#V/SS0C~@TlA'
               required:
                 - phone
                 - password
@@ -54,27 +54,27 @@ paths:
                 first_name:
                   type: integer
                   description: ''
-                  example: 1
+                  example: 12
                 last_name:
                   type: string
                   description: ''
-                  example: sit
+                  example: tempora
                 other_names:
                   type: string
                   description: ''
-                  example: facilis
+                  example: voluptate
                 phone:
                   type: string
                   description: ''
-                  example: unde
+                  example: aliquid
                 email:
                   type: string
                   description: ''
-                  example: tobin.russel@example.net
+                  example: ppurdy@example.com
                 password:
                   type: string
                   description: ''
-                  example: \^amwBR
+                  example: '&7AP4]7rv+_|DapZ+'
               required:
                 - first_name
                 - last_name
@@ -122,7 +122,7 @@ paths:
                 event_id:
                   type: string
                   description: ''
-                  example: qui
+                  example: modi
                 image:
                   type: string
                   format: binary
@@ -130,7 +130,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: quidem
+                  example: eos
               required:
                 - event_id
                 - image
@@ -151,7 +151,7 @@ paths:
         in: path
         name: eventImage_id
         description: 'The ID of the eventImage.'
-        example: 8
+        example: 7
         required: true
         schema:
           type: integer
@@ -178,10 +178,10 @@ paths:
                         event_id: 1
                         seat_section_id: 5
                         price: 3725.7
-                        quantity_sold: 0
+                        quantity_sold: 1
                         deleted_at: null
                         created_at: '2024-01-12T17:35:58.000000Z'
-                        updated_at: '2024-01-12T17:35:58.000000Z'
+                        updated_at: '2024-01-20T09:35:58.000000Z'
                         entry_gate: null
                       -
                         id: 2
@@ -364,10 +364,10 @@ paths:
                             event_id: 1
                             seat_section_id: 5
                             price: 3725.7
-                            quantity_sold: 0
+                            quantity_sold: 1
                             deleted_at: null
                             created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-20T09:35:58.000000Z'
                             entry_gate: null
                           -
                             id: 2
@@ -526,7 +526,7 @@ paths:
                               example: 3725.7
                             quantity_sold:
                               type: integer
-                              example: 0
+                              example: 1
                             deleted_at:
                               type: string
                               example: null
@@ -535,7 +535,7 @@ paths:
                               example: '2024-01-12T17:35:58.000000Z'
                             updated_at:
                               type: string
-                              example: '2024-01-12T17:35:58.000000Z'
+                              example: '2024-01-20T09:35:58.000000Z'
                             entry_gate:
                               type: string
                               example: null
@@ -618,15 +618,15 @@ paths:
                 seat_section_id:
                   type: string
                   description: ''
-                  example: saepe
+                  example: possimus
                 price:
                   type: number
                   description: ''
-                  example: 1984609.5380673
+                  example: 17856753.46902
                 entry_gate:
                   type: string
                   description: ''
-                  example: ratione
+                  example: magnam
               required:
                 - seat_section_id
                 - price
@@ -936,19 +936,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: camnhh
+                  example: tmkkionmromji
                 description:
                   type: string
                   description: ''
-                  example: 'Distinctio dicta consequatur omnis iusto dolores aut.'
+                  example: 'Laborum beatae nihil molestiae aliquam.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2024-01-15T09:20:28'
+                  example: '2024-01-20T11:04:47'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2066-04-18'
+                  example: '2049-11-11'
               required:
                 - title
       security: []
@@ -980,19 +980,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: w
+                  example: ejlulkdnkylnsmnzzx
                 description:
                   type: string
                   description: ''
-                  example: 'Voluptatem a non ipsa.'
+                  example: 'Dolores ut occaecati nesciunt iste quod.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2024-01-15T09:20:28'
+                  example: '2024-01-20T11:04:47'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2109-07-18'
+                  example: '2106-09-16'
               required:
                 - title
       security: []
@@ -1054,6 +1054,7 @@ paths:
                         deleted_at: null
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
+                        expired: 0
                         event_images: []
                         event_packages:
                           -
@@ -1061,10 +1062,10 @@ paths:
                             event_id: 1
                             seat_section_id: 5
                             price: 3725.7
-                            quantity_sold: 0
+                            quantity_sold: 1
                             deleted_at: null
                             created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-20T09:35:58.000000Z'
                             entry_gate: null
                     first_page_url: 'http://localhost/api/events/index/1?page=1'
                     from: 1
@@ -1114,6 +1115,7 @@ paths:
                             deleted_at: null
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
+                            expired: 0
                             event_images: []
                             event_packages:
                               -
@@ -1121,10 +1123,10 @@ paths:
                                 event_id: 1
                                 seat_section_id: 5
                                 price: 3725.7
-                                quantity_sold: 0
+                                quantity_sold: 1
                                 deleted_at: null
                                 created_at: '2024-01-12T17:35:58.000000Z'
-                                updated_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-20T09:35:58.000000Z'
                                 entry_gate: null
                         items:
                           type: object
@@ -1162,6 +1164,9 @@ paths:
                             updated_at:
                               type: string
                               example: '2024-01-12T17:35:58.000000Z'
+                            expired:
+                              type: integer
+                              example: 0
                             event_images:
                               type: array
                               example: []
@@ -1173,10 +1178,10 @@ paths:
                                   event_id: 1
                                   seat_section_id: 5
                                   price: 3725.7
-                                  quantity_sold: 0
+                                  quantity_sold: 1
                                   deleted_at: null
                                   created_at: '2024-01-12T17:35:58.000000Z'
-                                  updated_at: '2024-01-12T17:35:58.000000Z'
+                                  updated_at: '2024-01-20T09:35:58.000000Z'
                                   entry_gate: null
                               items:
                                 type: object
@@ -1195,7 +1200,7 @@ paths:
                                     example: 3725.7
                                   quantity_sold:
                                     type: integer
-                                    example: 0
+                                    example: 1
                                   deleted_at:
                                     type: string
                                     example: null
@@ -1204,7 +1209,7 @@ paths:
                                     example: '2024-01-12T17:35:58.000000Z'
                                   updated_at:
                                     type: string
-                                    example: '2024-01-12T17:35:58.000000Z'
+                                    example: '2024-01-20T09:35:58.000000Z'
                                   entry_gate:
                                     type: string
                                     example: null
@@ -1515,10 +1520,10 @@ paths:
                         event_id: 1
                         seat_section_id: 5
                         price: 3725.7
-                        quantity_sold: 0
+                        quantity_sold: 1
                         deleted_at: null
                         created_at: '2024-01-12T17:35:58.000000Z'
-                        updated_at: '2024-01-12T17:35:58.000000Z'
+                        updated_at: '2024-01-20T09:35:58.000000Z'
                         entry_gate: null
                         seat_section:
                           id: 5
@@ -1608,10 +1613,10 @@ paths:
                             event_id: 1
                             seat_section_id: 5
                             price: 3725.7
-                            quantity_sold: 0
+                            quantity_sold: 1
                             deleted_at: null
                             created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-20T09:35:58.000000Z'
                             entry_gate: null
                             seat_section:
                               id: 5
@@ -1639,7 +1644,7 @@ paths:
                               example: 3725.7
                             quantity_sold:
                               type: integer
-                              example: 0
+                              example: 1
                             deleted_at:
                               type: string
                               example: null
@@ -1648,7 +1653,7 @@ paths:
                               example: '2024-01-12T17:35:58.000000Z'
                             updated_at:
                               type: string
-                              example: '2024-01-12T17:35:58.000000Z'
+                              example: '2024-01-20T09:35:58.000000Z'
                             entry_gate:
                               type: string
                               example: null
@@ -1713,31 +1718,31 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: vhrfivo
+                  example: kqkdtuxjtm
                 description:
                   type: string
                   description: ''
-                  example: 'Culpa mollitia optio est voluptates porro voluptates.'
+                  example: 'Quisquam tempora aut nihil corporis neque dignissimos consequatur magnam.'
                 start_time:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2024-01-15T09:20:28'
+                  example: '2024-01-20T11:04:47'
                 end_time:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>start_time</code>.'
-                  example: '2058-12-26'
+                  example: '2103-03-20'
                 home_team:
                   type: string
                   description: ''
-                  example: sint
+                  example: praesentium
                 away_team:
                   type: string
                   description: ''
-                  example: sed
+                  example: occaecati
                 event_packages:
                   type: array
                   description: 'Must have at least 1 items.'
-                  example: ycezawyxxmwtfucsduyfeizxphzlxxlufmrld
+                  example: wqowkbexzzrhgpzjivclrzfmunicuuvxpnuawvcxbrvpwilcccnrlfjtxvrptnpphjmhbpoaaeryut
                   items:
                     type: string
               required:
@@ -1772,27 +1777,27 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ppcgfqbkewmiy
+                  example: mvj
                 description:
                   type: string
                   description: ''
-                  example: 'Maxime enim unde cupiditate eius reprehenderit.'
+                  example: 'Quaerat quam vel libero debitis similique nihil.'
                 start_time:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2024-01-15T09:20:28'
+                  example: '2024-01-20T11:04:47'
                 end_time:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>start_time</code>.'
-                  example: '2061-10-01'
+                  example: '2051-07-07'
                 home_team:
                   type: string
                   description: ''
-                  example: autem
+                  example: modi
                 away_team:
                   type: string
                   description: ''
-                  example: architecto
+                  example: aut
               required:
                 - title
                 - start_time
@@ -1858,10 +1863,10 @@ paths:
                           event_id: 1
                           seat_section_id: 5
                           price: 3725.7
-                          quantity_sold: 0
+                          quantity_sold: 1
                           deleted_at: null
                           created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-20T09:35:58.000000Z'
                           entry_gate: null
                           event:
                             id: 1
@@ -2048,6 +2053,47 @@ paths:
                             deleted_at: null
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
+                      -
+                        id: 11
+                        quantity: 1
+                        event_package_id: 1
+                        user_id: null
+                        name: null
+                        phone: null
+                        email: my@gmail.com
+                        created_at: '2024-01-20T09:28:24.000000Z'
+                        updated_at: '2024-01-20T09:28:24.000000Z'
+                        event_package:
+                          id: 1
+                          event_id: 1
+                          seat_section_id: 5
+                          price: 3725.7
+                          quantity_sold: 1
+                          deleted_at: null
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-20T09:35:58.000000Z'
+                          entry_gate: null
+                          event:
+                            id: 1
+                            event_season_id: 1
+                            title: 'Illum ex repudiandae sunt.'
+                            description: 'Sequi rerum aut magni ea qui est consequatur.'
+                            start_time: '2024-03-12T17:35:58.000000Z'
+                            end_time: '2024-04-12T17:35:58.000000Z'
+                            home_team: expedita
+                            away_team: unde
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                          seat_section:
+                            id: 5
+                            capacity: 708
+                            title: 'Sit est reprehenderit nisi quis ipsam inventore.'
+                            description: 'Quis est quibusdam et perferendis adipisci fugit laborum consequatur repellendus enim quis provident temporibus quasi.'
+                            features: 'Maxime qui eos nisi quam debitis occaecati modi voluptatem voluptatem.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
                     first_page_url: 'http://localhost/api/payments/index?page=1'
                     from: 1
                     last_page: 1
@@ -2069,8 +2115,8 @@ paths:
                     path: 'http://localhost/api/payments/index'
                     per_page: 300
                     prev_page_url: null
-                    to: 5
-                    total: 5
+                    to: 6
+                    total: 6
                 properties:
                   message:
                     type: string
@@ -2099,10 +2145,10 @@ paths:
                               event_id: 1
                               seat_section_id: 5
                               price: 3725.7
-                              quantity_sold: 0
+                              quantity_sold: 1
                               deleted_at: null
                               created_at: '2024-01-12T17:35:58.000000Z'
-                              updated_at: '2024-01-12T17:35:58.000000Z'
+                              updated_at: '2024-01-20T09:35:58.000000Z'
                               entry_gate: null
                               event:
                                 id: 1
@@ -2289,6 +2335,47 @@ paths:
                                 deleted_at: null
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
+                          -
+                            id: 11
+                            quantity: 1
+                            event_package_id: 1
+                            user_id: null
+                            name: null
+                            phone: null
+                            email: my@gmail.com
+                            created_at: '2024-01-20T09:28:24.000000Z'
+                            updated_at: '2024-01-20T09:28:24.000000Z'
+                            event_package:
+                              id: 1
+                              event_id: 1
+                              seat_section_id: 5
+                              price: 3725.7
+                              quantity_sold: 1
+                              deleted_at: null
+                              created_at: '2024-01-12T17:35:58.000000Z'
+                              updated_at: '2024-01-20T09:35:58.000000Z'
+                              entry_gate: null
+                              event:
+                                id: 1
+                                event_season_id: 1
+                                title: 'Illum ex repudiandae sunt.'
+                                description: 'Sequi rerum aut magni ea qui est consequatur.'
+                                start_time: '2024-03-12T17:35:58.000000Z'
+                                end_time: '2024-04-12T17:35:58.000000Z'
+                                home_team: expedita
+                                away_team: unde
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                              seat_section:
+                                id: 5
+                                capacity: 708
+                                title: 'Sit est reprehenderit nisi quis ipsam inventore.'
+                                description: 'Quis est quibusdam et perferendis adipisci fugit laborum consequatur repellendus enim quis provident temporibus quasi.'
+                                features: 'Maxime qui eos nisi quam debitis occaecati modi voluptatem voluptatem.'
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
                         items:
                           type: object
                           properties:
@@ -2336,7 +2423,7 @@ paths:
                                   example: 3725.7
                                 quantity_sold:
                                   type: integer
-                                  example: 0
+                                  example: 1
                                 deleted_at:
                                   type: string
                                   example: null
@@ -2345,7 +2432,7 @@ paths:
                                   example: '2024-01-12T17:35:58.000000Z'
                                 updated_at:
                                   type: string
-                                  example: '2024-01-12T17:35:58.000000Z'
+                                  example: '2024-01-20T09:35:58.000000Z'
                                 entry_gate:
                                   type: string
                                   example: null
@@ -2465,10 +2552,10 @@ paths:
                         example: null
                       to:
                         type: integer
-                        example: 5
+                        example: 6
                       total:
                         type: integer
-                        example: 5
+                        example: 6
       tags:
         - Payments
       requestBody:
@@ -2483,6 +2570,10 @@ paths:
                   description: ''
                   example: null
                 event_package_id:
+                  type: string
+                  description: ''
+                  example: null
+                event_id:
                   type: string
                   description: ''
                   example: null
@@ -5420,19 +5511,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: yf
+                  example: gbniatzahwbqkhksindc
                 description:
                   type: string
                   description: ''
-                  example: 'Iusto dolorum non at et magnam exercitationem.'
+                  example: 'Animi laborum enim deserunt modi omnis quaerat.'
                 features:
                   type: string
                   description: ''
-                  example: corrupti
+                  example: non
                 capacity:
                   type: integer
                   description: ''
-                  example: 6
+                  example: 11
               required:
                 - title
                 - capacity
@@ -5465,30 +5556,29 @@ paths:
                 merchant:
                   type: string
                   description: ''
-                  example: nam
+                  example: repellat
                 callback_url:
                   type: string
                   description: ''
-                  example: 'http://www.zemlak.com/maiores-nihil-quas-corporis-mollitia-animi-nostrum-corrupti'
+                  example: 'http://cormier.org/eius-aut-maxime-qui-quidem-officiis-quos-ut'
                 quantity:
                   type: integer
                   description: 'Must be at least 1.'
-                  example: 72
+                  example: 76
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: laph
+                  example: xytcytggzucicdayjoj
                 phone:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: jbrofbsm
+                  example: wrdhslftplivixo
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: kilback.remington@example.net
+                  example: waters.magdalen@example.net
               required:
                 - merchant
-                - callback_url
                 - quantity
                 - email
       security: []
@@ -5520,7 +5610,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: non
+                  example: omnis
               required:
                 - reference
       security: []
@@ -5543,16 +5633,16 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: ut
+                  example: ipsam
                 quantity:
                   type: integer
                   description: 'Must be at least 1.'
-                  example: 10
+                  example: 27
                 seat_ids:
                   type: array
                   description: ''
                   example:
-                    - magnam
+                    - sit
                   items:
                     type: string
               required:
@@ -6468,11 +6558,11 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: minima
+                  example: officiis
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: casper.deshaun@example.net
+                  example: webster.nienow@example.org
               required:
                 - reference
                 - email
@@ -6496,24 +6586,29 @@ paths:
                 ticket_payment_id:
                   type: integer
                   description: ''
-                  example: 1
+                  example: 17
                 hash:
                   type: string
                   description: ''
-                  example: exercitationem
+                  example: quas
                 reference:
                   type: string
                   description: ''
-                  example: ex
+                  example: at
                 device_no:
                   type: string
                   description: ''
-                  example: quas
+                  example: dolorem
+                event_id:
+                  type: integer
+                  description: ''
+                  example: 18
               required:
                 - ticket_payment_id
                 - hash
                 - reference
                 - device_no
+                - event_id
       security: []
   /api/tickets/index:
     get:
