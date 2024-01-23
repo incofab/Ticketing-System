@@ -21,6 +21,13 @@ class Event extends Model
     return $query->where('start_time', '>', now());
   }
 
+  function isExpired()
+  {
+    return now()
+      ->subHours(12)
+      ->greaterThan($this->start_time);
+  }
+
   function eventSeason()
   {
     return $this->belongsTo(EventSeason::class);

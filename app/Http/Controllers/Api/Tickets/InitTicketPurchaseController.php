@@ -19,7 +19,7 @@ class InitTicketPurchaseController extends Controller
 {
   public function __invoke(EventPackage $eventPackage, Request $request)
   {
-    $eventPackage->load('seatSection');
+    $eventPackage->load('seatSection', 'event');
     $data = $request->validate([
       'merchant' => [
         'required',
@@ -54,7 +54,7 @@ class InitTicketPurchaseController extends Controller
       'phone' => ['nullable', 'string', 'max:255'],
       'email' => ['required', 'email', 'max:255']
     ]);
-
+    abort_if($eventPackage->event->isExpired(), 403, 'Event is expired');
     $amount = $eventPackage->price * $data['quantity'];
 
     $ticketPayment = $eventPackage->ticketPayments()->create([
