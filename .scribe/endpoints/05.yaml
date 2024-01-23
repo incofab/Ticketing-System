@@ -77,7 +77,7 @@ endpoints:
         name: seat_section_id
         description: ''
         required: true
-        example: possimus
+        example: amet
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -86,7 +86,7 @@ endpoints:
         name: price
         description: ''
         required: true
-        example: 17856753.46902
+        example: 109816.6
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -95,15 +95,15 @@ endpoints:
         name: entry_gate
         description: ''
         required: false
-        example: magnam
+        example: voluptatem
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      seat_section_id: possimus
-      price: 17856753.46902
-      entry_gate: magnam
+      seat_section_id: amet
+      price: 109816.6
+      entry_gate: voluptatem
     fileParameters: []
     responses: []
     responseFields: []

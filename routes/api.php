@@ -79,6 +79,7 @@ Route::group(['prefix' => 'tickets'], function () {
     Route::get('/retrieve', Tickets\RetrieveTicketController::class)->name('tickets.retrieve');
     Route::group(['middleware' => ['auth:sanctum']], function () {
         Route::post('/verify', Tickets\VerifyTicketController::class)->name('tickets.verify');
+        Route::post('/bank-deposit/confirm', Tickets\ConfirmBankDepositController::class)->name('tickets.bank-deposit.confirm');
     });
     Route::group(['middleware' => ['auth:sanctum', 'admin']], function () {
         Route::get('/index', Tickets\ListTicketController::class)->name('tickets.index');

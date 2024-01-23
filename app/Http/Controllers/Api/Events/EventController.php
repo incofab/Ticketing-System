@@ -6,6 +6,7 @@ use App\Actions\CreateUpdateEventPackage;
 use App\Http\Controllers\Controller;
 use App\Models\Event;
 use App\Models\EventSeason;
+use App\Support\UITableFilters\EventUITableFilters;
 use DB;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -15,14 +16,29 @@ use Illuminate\Validation\Rule;
  */
 class EventController extends Controller
 {
-  public function index(EventSeason $eventSeason = null)
+  /**
+   * @queryParam title string No-example
+   * @queryParam start_time_from string No-example
+   * @queryParam start_time_to string No-example
+   *
+   * @queryParam sortKey string Represents the direction of the sort. Must be either of ASC|DESC. No-example
+   * @queryParam sortDir string. No-example
+   * @queryParam search string. No-example
+   * @queryParam date_from string. No-example
+   * @queryParam date_to string. No-example
+   */
+  public function index(Request $request, EventSeason $eventSeason = null)
   {
     $query = $eventSeason ? $eventSeason->events()->getQuery() : Event::query();
 
-    $query->selectRaw('*, (created_at > NOW()) AS expired');
+    $query->selectRaw('*, (start_time < NOW()) AS expired');
+
+    EventUITableFilters::make($request->all(), $query)->filterQuery();
 
     return $this->apiRes(
-      paginateFromRequest($query->with('eventImages', 'eventPackages'))
+      paginateFromRequest(
+        $query->with('eventImages', 'eventPackages')->oldest('start_time')
+      )
     );
   }
 

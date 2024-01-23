@@ -4,12 +4,15 @@ namespace App\Support\UITableFilters;
 
 class UserUITableFilters extends BaseUITableFilter
 {
-  protected array $sortableColumns = [
-    'firstName' => 'first_name',
-    'lastName' => 'last_name',
-    'email' => 'email',
-    'createdAt' => 'created_at'
-  ];
+  protected function getSortableColumns(): array
+  {
+    return [
+      'firstName' => 'first_name',
+      'lastName' => 'last_name',
+      'email' => 'email',
+      'createdAt' => 'created_at'
+    ];
+  }
 
   protected function extraValidationRules(): array
   {

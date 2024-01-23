@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Rangers Ticketing System",
-        "_postman_id": "f793b649-a650-45d2-9e57-92e01cb4e531",
+        "_postman_id": "1522c970-ba84-461e-9379-8b78433be5c1",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone\":\"aperiam\",\"password\":\"$s#V\\\/SS0C~@TlA\"}"
+                            "raw": "{\"phone\":\"est\",\"password\":\"K3V#9Pj'x{Ubz7Ml5\"}"
                         },
                         "description": "",
                         "auth": {
@@ -72,7 +72,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":12,\"last_name\":\"tempora\",\"other_names\":\"voluptate\",\"phone\":\"aliquid\",\"email\":\"ppurdy@example.com\",\"password\":\"&7AP4]7rv+_|DapZ+\"}"
+                            "raw": "{\"first_name\":15,\"last_name\":\"nam\",\"other_names\":\"et\",\"phone\":\"officiis\",\"email\":\"benjamin15@example.com\",\"password\":\"*E8Q14C-w>b[18cp\"}"
                         },
                         "description": "",
                         "auth": {
@@ -160,13 +160,13 @@
                             "formdata": [
                                 {
                                     "key": "event_id",
-                                    "value": "modi",
+                                    "value": "tempore",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "reference",
-                                    "value": "eos",
+                                    "value": "totam",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -196,7 +196,7 @@
                                 {
                                     "id": "eventImage_id",
                                     "key": "eventImage_id",
-                                    "value": "7",
+                                    "value": "16",
                                     "description": "The ID of the eventImage."
                                 }
                             ]
@@ -312,7 +312,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"seat_section_id\":\"possimus\",\"price\":17856753.46902,\"entry_gate\":\"magnam\"}"
+                            "raw": "{\"seat_section_id\":\"amet\",\"price\":109816.6,\"entry_gate\":\"voluptatem\"}"
                         },
                         "description": "",
                         "auth": {
@@ -521,7 +521,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"tmkkionmromji\",\"description\":\"Laborum beatae nihil molestiae aliquam.\",\"date_from\":\"2024-01-20T11:04:47\",\"date_to\":\"2049-11-11\"}"
+                            "raw": "{\"title\":\"pldbwzhx\",\"description\":\"Optio hic aperiam animi maxime occaecati dolor enim ab.\",\"date_from\":\"2024-01-23T10:49:19\",\"date_to\":\"2089-09-13\"}"
                         },
                         "description": "",
                         "auth": {
@@ -560,7 +560,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"ejlulkdnkylnsmnzzx\",\"description\":\"Dolores ut occaecati nesciunt iste quod.\",\"date_from\":\"2024-01-20T11:04:47\",\"date_to\":\"2106-09-16\"}"
+                            "raw": "{\"title\":\"aesgth\",\"description\":\"Reiciendis tenetur facere est et officiis similique ipsum.\",\"date_from\":\"2024-01-23T10:49:19\",\"date_to\":\"2028-12-10\"}"
                         },
                         "description": "",
                         "auth": {
@@ -617,8 +617,57 @@
                         "url": {
                             "host": "{{baseUrl}}",
                             "path": "api\/events\/index\/:eventSeason",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/events\/index\/:eventSeason",
+                            "query": [
+                                {
+                                    "key": "title",
+                                    "value": "",
+                                    "description": "",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "start_time_from",
+                                    "value": "",
+                                    "description": "",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "start_time_to",
+                                    "value": "",
+                                    "description": "",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "sortKey",
+                                    "value": "",
+                                    "description": "Represents the direction of the sort. Must be either of ASC|DESC.",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "sortDir",
+                                    "value": "",
+                                    "description": "string.",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "search",
+                                    "value": "",
+                                    "description": "string.",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "date_from",
+                                    "value": "",
+                                    "description": "string.",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "date_to",
+                                    "value": "",
+                                    "description": "string.",
+                                    "disabled": true
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/events\/index\/:eventSeason?title=&start_time_from=&start_time_to=&sortKey=&sortDir=&search=&date_from=&date_to=",
                             "variable": [
                                 {
                                     "id": "eventSeason",
@@ -833,7 +882,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"kqkdtuxjtm\",\"description\":\"Quisquam tempora aut nihil corporis neque dignissimos consequatur magnam.\",\"start_time\":\"2024-01-20T11:04:47\",\"end_time\":\"2103-03-20\",\"home_team\":\"praesentium\",\"away_team\":\"occaecati\",\"event_packages\":\"wqowkbexzzrhgpzjivclrzfmunicuuvxpnuawvcxbrvpwilcccnrlfjtxvrptnpphjmhbpoaaeryut\"}"
+                            "raw": "{\"title\":\"mroq\",\"description\":\"Illum distinctio expedita autem reiciendis.\",\"start_time\":\"2024-01-23T10:49:19\",\"end_time\":\"2105-06-25\",\"home_team\":\"molestias\",\"away_team\":\"incidunt\",\"event_packages\":\"mcxvkxqwm\"}"
                         },
                         "description": "",
                         "auth": {
@@ -872,7 +921,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"mvj\",\"description\":\"Quaerat quam vel libero debitis similique nihil.\",\"start_time\":\"2024-01-20T11:04:47\",\"end_time\":\"2051-07-07\",\"home_team\":\"modi\",\"away_team\":\"aut\"}"
+                            "raw": "{\"title\":\"odud\",\"description\":\"Nulla illo magni dolorem laudantium exercitationem libero.\",\"start_time\":\"2024-01-23T10:49:19\",\"end_time\":\"2120-10-22\",\"home_team\":\"omnis\",\"away_team\":\"dolorem\"}"
                         },
                         "description": "",
                         "auth": {
@@ -929,8 +978,57 @@
                         "url": {
                             "host": "{{baseUrl}}",
                             "path": "api\/payments\/index",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/payments\/index"
+                            "query": [
+                                {
+                                    "key": "status",
+                                    "value": "",
+                                    "description": "",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "event_package_id",
+                                    "value": "",
+                                    "description": "int.",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "event_id",
+                                    "value": "",
+                                    "description": "int.",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "sortKey",
+                                    "value": "",
+                                    "description": "Represents the direction of the sort. Must be either of ASC|DESC.",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "sortDir",
+                                    "value": "",
+                                    "description": "string.",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "search",
+                                    "value": "",
+                                    "description": "string.",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "date_from",
+                                    "value": "",
+                                    "description": "string.",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "date_to",
+                                    "value": "",
+                                    "description": "string.",
+                                    "disabled": true
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/payments\/index?status=&event_package_id=&event_id=&sortKey=&sortDir=&search=&date_from=&date_to="
                         },
                         "method": "GET",
                         "header": [
@@ -943,10 +1041,7 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "[]"
-                        },
+                        "body": null,
                         "description": "",
                         "auth": {
                             "type": "noauth"
@@ -977,7 +1072,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"\",\"data\":{\"current_page\":1,\"data\":[{\"id\":1,\"quantity\":7,\"event_package_id\":1,\"user_id\":1,\"name\":\"Ernestina Balistreri Jr.\",\"phone\":\"551-275-8293\",\"email\":\"katrina12@yahoo.com\",\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\",\"event_package\":{\"id\":1,\"event_id\":1,\"seat_section_id\":5,\"price\":3725.7,\"quantity_sold\":1,\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-20T09:35:58.000000Z\",\"entry_gate\":null,\"event\":{\"id\":1,\"event_season_id\":1,\"title\":\"Illum ex repudiandae sunt.\",\"description\":\"Sequi rerum aut magni ea qui est consequatur.\",\"start_time\":\"2024-03-12T17:35:58.000000Z\",\"end_time\":\"2024-04-12T17:35:58.000000Z\",\"home_team\":\"expedita\",\"away_team\":\"unde\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"},\"seat_section\":{\"id\":5,\"capacity\":708,\"title\":\"Sit est reprehenderit nisi quis ipsam inventore.\",\"description\":\"Quis est quibusdam et perferendis adipisci fugit laborum consequatur repellendus enim quis provident temporibus quasi.\",\"features\":\"Maxime qui eos nisi quam debitis occaecati modi voluptatem voluptatem.\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"}}},{\"id\":3,\"quantity\":4,\"event_package_id\":4,\"user_id\":4,\"name\":\"Kolby Spinka\",\"phone\":\"217-274-5233\",\"email\":\"haylee45@hotmail.com\",\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\",\"event_package\":{\"id\":4,\"event_id\":4,\"seat_section_id\":9,\"price\":5039.9,\"quantity_sold\":0,\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\",\"entry_gate\":null,\"event\":{\"id\":4,\"event_season_id\":4,\"title\":\"Reiciendis officiis sunt quia omnis voluptates cupiditate laborum.\",\"description\":\"Ipsam aut tempore voluptatem et eos est eligendi illo quod dolorem quos.\",\"start_time\":\"2024-03-12T17:35:58.000000Z\",\"end_time\":\"2024-04-12T17:35:58.000000Z\",\"home_team\":\"enim\",\"away_team\":\"quis\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"},\"seat_section\":{\"id\":9,\"capacity\":919,\"title\":\"Saepe dolor culpa est enim voluptatem ea et similique.\",\"description\":\"Quia hic harum vel iure consequatur veritatis totam et officiis.\",\"features\":\"Molestiae praesentium autem est soluta recusandae nostrum sed et consequatur cum.\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"}}},{\"id\":5,\"quantity\":1,\"event_package_id\":7,\"user_id\":7,\"name\":\"Summer Hoeger MD\",\"phone\":\"+1 (534) 499-1341\",\"email\":\"alex.mayer@kling.org\",\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\",\"event_package\":{\"id\":7,\"event_id\":7,\"seat_section_id\":13,\"price\":1755.2,\"quantity_sold\":0,\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\",\"entry_gate\":null,\"event\":{\"id\":7,\"event_season_id\":7,\"title\":\"Alias cupiditate aut aut quo.\",\"description\":\"Nesciunt laboriosam aut maxime modi iste officiis eius.\",\"start_time\":\"2024-03-12T17:35:58.000000Z\",\"end_time\":\"2024-04-12T17:35:58.000000Z\",\"home_team\":\"et\",\"away_team\":\"eos\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"},\"seat_section\":{\"id\":13,\"capacity\":577,\"title\":\"Dolorem quae odit nesciunt nemo et facilis magnam aut.\",\"description\":\"Consequatur ut sed nesciunt fugit totam beatae reiciendis sed aut sed aut doloremque minima.\",\"features\":\"Qui velit a qui non rerum.\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"}}},{\"id\":7,\"quantity\":9,\"event_package_id\":10,\"user_id\":10,\"name\":\"Mekhi Conroy MD\",\"phone\":\"352.795.5298\",\"email\":\"hdare@bahringer.net\",\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\",\"event_package\":{\"id\":10,\"event_id\":10,\"seat_section_id\":17,\"price\":6388.9,\"quantity_sold\":0,\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\",\"entry_gate\":null,\"event\":{\"id\":10,\"event_season_id\":10,\"title\":\"Omnis eveniet eligendi explicabo optio quam quia sunt quia.\",\"description\":\"Eum autem quasi ipsa voluptatem quod nulla quia qui minus quia.\",\"start_time\":\"2024-03-12T17:35:58.000000Z\",\"end_time\":\"2024-04-12T17:35:58.000000Z\",\"home_team\":\"qui\",\"away_team\":\"doloremque\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"},\"seat_section\":{\"id\":17,\"capacity\":395,\"title\":\"Facilis doloremque impedit nihil tenetur mollitia cupiditate illum.\",\"description\":\"Voluptate aliquam aut et quasi culpa ipsa quibusdam et quisquam dolorum.\",\"features\":\"Facilis soluta dolorem sed perferendis qui non alias et ipsum.\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"}}},{\"id\":9,\"quantity\":0,\"event_package_id\":13,\"user_id\":13,\"name\":\"Ms. Celia Sanford\",\"phone\":\"+1-937-592-8181\",\"email\":\"kstehr@yahoo.com\",\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\",\"event_package\":{\"id\":13,\"event_id\":13,\"seat_section_id\":21,\"price\":4331.2,\"quantity_sold\":0,\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\",\"entry_gate\":null,\"event\":{\"id\":13,\"event_season_id\":13,\"title\":\"Vitae ut quia aut quidem quia.\",\"description\":\"Magnam debitis ut ut deleniti et dolor et ex ut sequi.\",\"start_time\":\"2024-03-12T17:35:58.000000Z\",\"end_time\":\"2024-04-12T17:35:58.000000Z\",\"home_team\":\"cum\",\"away_team\":\"similique\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"},\"seat_section\":{\"id\":21,\"capacity\":269,\"title\":\"Alias esse amet reiciendis et.\",\"description\":\"Ut molestias unde aut vero quam qui sequi quis saepe porro veniam.\",\"features\":\"Fuga consequatur porro ut voluptatem rerum deleniti eaque nihil deleniti.\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"}}},{\"id\":11,\"quantity\":1,\"event_package_id\":1,\"user_id\":null,\"name\":null,\"phone\":null,\"email\":\"my@gmail.com\",\"created_at\":\"2024-01-20T09:28:24.000000Z\",\"updated_at\":\"2024-01-20T09:28:24.000000Z\",\"event_package\":{\"id\":1,\"event_id\":1,\"seat_section_id\":5,\"price\":3725.7,\"quantity_sold\":1,\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-20T09:35:58.000000Z\",\"entry_gate\":null,\"event\":{\"id\":1,\"event_season_id\":1,\"title\":\"Illum ex repudiandae sunt.\",\"description\":\"Sequi rerum aut magni ea qui est consequatur.\",\"start_time\":\"2024-03-12T17:35:58.000000Z\",\"end_time\":\"2024-04-12T17:35:58.000000Z\",\"home_team\":\"expedita\",\"away_team\":\"unde\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"},\"seat_section\":{\"id\":5,\"capacity\":708,\"title\":\"Sit est reprehenderit nisi quis ipsam inventore.\",\"description\":\"Quis est quibusdam et perferendis adipisci fugit laborum consequatur repellendus enim quis provident temporibus quasi.\",\"features\":\"Maxime qui eos nisi quam debitis occaecati modi voluptatem voluptatem.\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"}}}],\"first_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/payments\\\/index?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/payments\\\/index?page=1\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/payments\\\/index?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost\\\/api\\\/payments\\\/index\",\"per_page\":300,\"prev_page_url\":null,\"to\":6,\"total\":6}}",
+                            "body": "{\"message\":\"\",\"data\":{\"current_page\":1,\"data\":[{\"id\":1,\"quantity\":7,\"event_package_id\":1,\"user_id\":1,\"name\":\"Ernestina Balistreri Jr.\",\"phone\":\"551-275-8293\",\"email\":\"katrina12@yahoo.com\",\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\",\"merchant\":\"paystack\",\"event_package\":{\"id\":1,\"event_id\":1,\"seat_section_id\":5,\"price\":3725.7,\"quantity_sold\":1,\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-20T09:35:58.000000Z\",\"entry_gate\":null,\"event\":{\"id\":1,\"event_season_id\":1,\"title\":\"Illum ex repudiandae sunt.\",\"description\":\"Sequi rerum aut magni ea qui est consequatur.\",\"start_time\":\"2024-03-12T17:35:58.000000Z\",\"end_time\":\"2024-04-12T17:35:58.000000Z\",\"home_team\":\"expedita\",\"away_team\":\"unde\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"},\"seat_section\":{\"id\":5,\"capacity\":708,\"title\":\"Sit est reprehenderit nisi quis ipsam inventore.\",\"description\":\"Quis est quibusdam et perferendis adipisci fugit laborum consequatur repellendus enim quis provident temporibus quasi.\",\"features\":\"Maxime qui eos nisi quam debitis occaecati modi voluptatem voluptatem.\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"}}},{\"id\":3,\"quantity\":4,\"event_package_id\":4,\"user_id\":4,\"name\":\"Kolby Spinka\",\"phone\":\"217-274-5233\",\"email\":\"haylee45@hotmail.com\",\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\",\"merchant\":\"paystack\",\"event_package\":{\"id\":4,\"event_id\":4,\"seat_section_id\":9,\"price\":5039.9,\"quantity_sold\":0,\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\",\"entry_gate\":null,\"event\":{\"id\":4,\"event_season_id\":4,\"title\":\"Reiciendis officiis sunt quia omnis voluptates cupiditate laborum.\",\"description\":\"Ipsam aut tempore voluptatem et eos est eligendi illo quod dolorem quos.\",\"start_time\":\"2024-03-12T17:35:58.000000Z\",\"end_time\":\"2024-04-12T17:35:58.000000Z\",\"home_team\":\"enim\",\"away_team\":\"quis\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"},\"seat_section\":{\"id\":9,\"capacity\":919,\"title\":\"Saepe dolor culpa est enim voluptatem ea et similique.\",\"description\":\"Quia hic harum vel iure consequatur veritatis totam et officiis.\",\"features\":\"Molestiae praesentium autem est soluta recusandae nostrum sed et consequatur cum.\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"}}},{\"id\":5,\"quantity\":1,\"event_package_id\":7,\"user_id\":7,\"name\":\"Summer Hoeger MD\",\"phone\":\"+1 (534) 499-1341\",\"email\":\"alex.mayer@kling.org\",\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\",\"merchant\":\"paystack\",\"event_package\":{\"id\":7,\"event_id\":7,\"seat_section_id\":13,\"price\":1755.2,\"quantity_sold\":0,\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\",\"entry_gate\":null,\"event\":{\"id\":7,\"event_season_id\":7,\"title\":\"Alias cupiditate aut aut quo.\",\"description\":\"Nesciunt laboriosam aut maxime modi iste officiis eius.\",\"start_time\":\"2024-03-12T17:35:58.000000Z\",\"end_time\":\"2024-04-12T17:35:58.000000Z\",\"home_team\":\"et\",\"away_team\":\"eos\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"},\"seat_section\":{\"id\":13,\"capacity\":577,\"title\":\"Dolorem quae odit nesciunt nemo et facilis magnam aut.\",\"description\":\"Consequatur ut sed nesciunt fugit totam beatae reiciendis sed aut sed aut doloremque minima.\",\"features\":\"Qui velit a qui non rerum.\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"}}},{\"id\":7,\"quantity\":9,\"event_package_id\":10,\"user_id\":10,\"name\":\"Mekhi Conroy MD\",\"phone\":\"352.795.5298\",\"email\":\"hdare@bahringer.net\",\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\",\"merchant\":\"paystack\",\"event_package\":{\"id\":10,\"event_id\":10,\"seat_section_id\":17,\"price\":6388.9,\"quantity_sold\":0,\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\",\"entry_gate\":null,\"event\":{\"id\":10,\"event_season_id\":10,\"title\":\"Omnis eveniet eligendi explicabo optio quam quia sunt quia.\",\"description\":\"Eum autem quasi ipsa voluptatem quod nulla quia qui minus quia.\",\"start_time\":\"2024-03-12T17:35:58.000000Z\",\"end_time\":\"2024-04-12T17:35:58.000000Z\",\"home_team\":\"qui\",\"away_team\":\"doloremque\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"},\"seat_section\":{\"id\":17,\"capacity\":395,\"title\":\"Facilis doloremque impedit nihil tenetur mollitia cupiditate illum.\",\"description\":\"Voluptate aliquam aut et quasi culpa ipsa quibusdam et quisquam dolorum.\",\"features\":\"Facilis soluta dolorem sed perferendis qui non alias et ipsum.\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"}}},{\"id\":9,\"quantity\":0,\"event_package_id\":13,\"user_id\":13,\"name\":\"Ms. Celia Sanford\",\"phone\":\"+1-937-592-8181\",\"email\":\"kstehr@yahoo.com\",\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\",\"merchant\":\"paystack\",\"event_package\":{\"id\":13,\"event_id\":13,\"seat_section_id\":21,\"price\":4331.2,\"quantity_sold\":0,\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\",\"entry_gate\":null,\"event\":{\"id\":13,\"event_season_id\":13,\"title\":\"Vitae ut quia aut quidem quia.\",\"description\":\"Magnam debitis ut ut deleniti et dolor et ex ut sequi.\",\"start_time\":\"2024-03-12T17:35:58.000000Z\",\"end_time\":\"2024-04-12T17:35:58.000000Z\",\"home_team\":\"cum\",\"away_team\":\"similique\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"},\"seat_section\":{\"id\":21,\"capacity\":269,\"title\":\"Alias esse amet reiciendis et.\",\"description\":\"Ut molestias unde aut vero quam qui sequi quis saepe porro veniam.\",\"features\":\"Fuga consequatur porro ut voluptatem rerum deleniti eaque nihil deleniti.\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"}}},{\"id\":11,\"quantity\":1,\"event_package_id\":1,\"user_id\":null,\"name\":null,\"phone\":null,\"email\":\"my@gmail.com\",\"created_at\":\"2024-01-20T09:28:24.000000Z\",\"updated_at\":\"2024-01-20T09:28:24.000000Z\",\"merchant\":\"paystack\",\"event_package\":{\"id\":1,\"event_id\":1,\"seat_section_id\":5,\"price\":3725.7,\"quantity_sold\":1,\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-20T09:35:58.000000Z\",\"entry_gate\":null,\"event\":{\"id\":1,\"event_season_id\":1,\"title\":\"Illum ex repudiandae sunt.\",\"description\":\"Sequi rerum aut magni ea qui est consequatur.\",\"start_time\":\"2024-03-12T17:35:58.000000Z\",\"end_time\":\"2024-04-12T17:35:58.000000Z\",\"home_team\":\"expedita\",\"away_team\":\"unde\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"},\"seat_section\":{\"id\":5,\"capacity\":708,\"title\":\"Sit est reprehenderit nisi quis ipsam inventore.\",\"description\":\"Quis est quibusdam et perferendis adipisci fugit laborum consequatur repellendus enim quis provident temporibus quasi.\",\"features\":\"Maxime qui eos nisi quam debitis occaecati modi voluptatem voluptatem.\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"}}}],\"first_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/payments\\\/index?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost\\\/api\\\/payments\\\/index?page=1\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost\\\/api\\\/payments\\\/index?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost\\\/api\\\/payments\\\/index\",\"per_page\":300,\"prev_page_url\":null,\"to\":6,\"total\":6}}",
                             "name": ""
                         }
                     ]
@@ -1202,7 +1297,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"gbniatzahwbqkhksindc\",\"description\":\"Animi laborum enim deserunt modi omnis quaerat.\",\"features\":\"non\",\"capacity\":11}"
+                            "raw": "{\"title\":\"mhhirvhhatbbesvlvzpoicah\",\"description\":\"Et et delectus quis reiciendis vel est omnis.\",\"features\":\"eius\",\"capacity\":15}"
                         },
                         "description": "",
                         "auth": {
@@ -1247,7 +1342,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"merchant\":\"repellat\",\"callback_url\":\"http:\\\/\\\/cormier.org\\\/eius-aut-maxime-qui-quidem-officiis-quos-ut\",\"quantity\":76,\"name\":\"xytcytggzucicdayjoj\",\"phone\":\"wrdhslftplivixo\",\"email\":\"waters.magdalen@example.net\"}"
+                            "raw": "{\"merchant\":\"quia\",\"callback_url\":\"http:\\\/\\\/beer.com\\\/iure-expedita-quibusdam-rerum-animi\",\"quantity\":24,\"name\":\"xvbwzylaljmncpic\",\"phone\":\"lbfqjb\",\"email\":\"josiane.greenholt@example.org\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1278,7 +1373,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"reference\":\"omnis\"}"
+                            "raw": "{\"reference\":\"sed\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1309,7 +1404,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"reference\":\"ipsam\",\"quantity\":27,\"seat_ids\":[\"sit\"]}"
+                            "raw": "{\"reference\":\"dolorum\",\"quantity\":54,\"seat_ids\":[\"hic\"]}"
                         },
                         "description": "",
                         "auth": {
@@ -1340,7 +1435,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"reference\":\"officiis\",\"email\":\"webster.nienow@example.org\"}"
+                            "raw": "{\"reference\":\"eius\",\"email\":\"boyd70@example.org\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1399,7 +1494,38 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"ticket_payment_id\":17,\"hash\":\"quas\",\"reference\":\"at\",\"device_no\":\"dolorem\",\"event_id\":18}"
+                            "raw": "{\"ticket_payment_id\":20,\"hash\":\"blanditiis\",\"reference\":\"eum\",\"device_no\":\"nihil\",\"event_id\":11}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/tickets\/bank-deposit\/confirm",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tickets\/bank-deposit\/confirm",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tickets\/bank-deposit\/confirm"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"reference\":\"quo\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1414,8 +1540,63 @@
                         "url": {
                             "host": "{{baseUrl}}",
                             "path": "api\/tickets\/index",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/tickets\/index"
+                            "query": [
+                                {
+                                    "key": "reference",
+                                    "value": "",
+                                    "description": "",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "ticket_payment_id",
+                                    "value": "",
+                                    "description": "",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "event_package_id",
+                                    "value": "",
+                                    "description": "",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "seat_id",
+                                    "value": "",
+                                    "description": "",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "sortKey",
+                                    "value": "",
+                                    "description": "Represents the direction of the sort. Must be either of ASC|DESC.",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "sortDir",
+                                    "value": "",
+                                    "description": "string.",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "search",
+                                    "value": "",
+                                    "description": "string.",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "date_from",
+                                    "value": "",
+                                    "description": "string.",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "date_to",
+                                    "value": "",
+                                    "description": "string.",
+                                    "disabled": true
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/tickets\/index?reference=&ticket_payment_id=&event_package_id=&seat_id=&sortKey=&sortDir=&search=&date_from=&date_to="
                         },
                         "method": "GET",
                         "header": [

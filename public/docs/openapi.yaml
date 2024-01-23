@@ -26,11 +26,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: aperiam
+                  example: est
                 password:
                   type: string
                   description: ''
-                  example: '$s#V/SS0C~@TlA'
+                  example: "K3V#9Pj'x{Ubz7Ml5"
               required:
                 - phone
                 - password
@@ -54,27 +54,27 @@ paths:
                 first_name:
                   type: integer
                   description: ''
-                  example: 12
+                  example: 15
                 last_name:
                   type: string
                   description: ''
-                  example: tempora
+                  example: nam
                 other_names:
                   type: string
                   description: ''
-                  example: voluptate
+                  example: et
                 phone:
                   type: string
                   description: ''
-                  example: aliquid
+                  example: officiis
                 email:
                   type: string
                   description: ''
-                  example: ppurdy@example.com
+                  example: benjamin15@example.com
                 password:
                   type: string
                   description: ''
-                  example: '&7AP4]7rv+_|DapZ+'
+                  example: '*E8Q14C-w>b[18cp'
               required:
                 - first_name
                 - last_name
@@ -122,7 +122,7 @@ paths:
                 event_id:
                   type: string
                   description: ''
-                  example: modi
+                  example: tempore
                 image:
                   type: string
                   format: binary
@@ -130,7 +130,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: eos
+                  example: totam
               required:
                 - event_id
                 - image
@@ -151,7 +151,7 @@ paths:
         in: path
         name: eventImage_id
         description: 'The ID of the eventImage.'
-        example: 7
+        example: 16
         required: true
         schema:
           type: integer
@@ -618,15 +618,15 @@ paths:
                 seat_section_id:
                   type: string
                   description: ''
-                  example: possimus
+                  example: amet
                 price:
                   type: number
                   description: ''
-                  example: 17856753.46902
+                  example: 109816.6
                 entry_gate:
                   type: string
                   description: ''
-                  example: magnam
+                  example: voluptatem
               required:
                 - seat_section_id
                 - price
@@ -936,19 +936,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: tmkkionmromji
+                  example: pldbwzhx
                 description:
                   type: string
                   description: ''
-                  example: 'Laborum beatae nihil molestiae aliquam.'
+                  example: 'Optio hic aperiam animi maxime occaecati dolor enim ab.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2024-01-20T11:04:47'
+                  example: '2024-01-23T10:49:19'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2049-11-11'
+                  example: '2089-09-13'
               required:
                 - title
       security: []
@@ -980,19 +980,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ejlulkdnkylnsmnzzx
+                  example: aesgth
                 description:
                   type: string
                   description: ''
-                  example: 'Dolores ut occaecati nesciunt iste quod.'
+                  example: 'Reiciendis tenetur facere est et officiis similique ipsum.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2024-01-20T11:04:47'
+                  example: '2024-01-23T10:49:19'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2106-09-16'
+                  example: '2028-12-10'
               required:
                 - title
       security: []
@@ -1029,7 +1029,87 @@ paths:
       summary: ''
       operationId: getApiEventsIndexEventSeason
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: query
+          name: title
+          description: ''
+          example: null
+          required: false
+          schema:
+            type: string
+            description: ''
+            example: null
+        -
+          in: query
+          name: start_time_from
+          description: ''
+          example: null
+          required: false
+          schema:
+            type: string
+            description: ''
+            example: null
+        -
+          in: query
+          name: start_time_to
+          description: ''
+          example: null
+          required: false
+          schema:
+            type: string
+            description: ''
+            example: null
+        -
+          in: query
+          name: sortKey
+          description: 'Represents the direction of the sort. Must be either of ASC|DESC.'
+          example: null
+          required: false
+          schema:
+            type: string
+            description: 'Represents the direction of the sort. Must be either of ASC|DESC.'
+            example: null
+        -
+          in: query
+          name: sortDir
+          description: string.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: string.
+            example: null
+        -
+          in: query
+          name: search
+          description: string.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: string.
+            example: null
+        -
+          in: query
+          name: date_from
+          description: string.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: string.
+            example: null
+        -
+          in: query
+          name: date_to
+          description: string.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: string.
+            example: null
       responses:
         200:
           description: ''
@@ -1718,31 +1798,31 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: kqkdtuxjtm
+                  example: mroq
                 description:
                   type: string
                   description: ''
-                  example: 'Quisquam tempora aut nihil corporis neque dignissimos consequatur magnam.'
+                  example: 'Illum distinctio expedita autem reiciendis.'
                 start_time:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2024-01-20T11:04:47'
+                  example: '2024-01-23T10:49:19'
                 end_time:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>start_time</code>.'
-                  example: '2103-03-20'
+                  example: '2105-06-25'
                 home_team:
                   type: string
                   description: ''
-                  example: praesentium
+                  example: molestias
                 away_team:
                   type: string
                   description: ''
-                  example: occaecati
+                  example: incidunt
                 event_packages:
                   type: array
                   description: 'Must have at least 1 items.'
-                  example: wqowkbexzzrhgpzjivclrzfmunicuuvxpnuawvcxbrvpwilcccnrlfjtxvrptnpphjmhbpoaaeryut
+                  example: mcxvkxqwm
                   items:
                     type: string
               required:
@@ -1777,27 +1857,27 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: mvj
+                  example: odud
                 description:
                   type: string
                   description: ''
-                  example: 'Quaerat quam vel libero debitis similique nihil.'
+                  example: 'Nulla illo magni dolorem laudantium exercitationem libero.'
                 start_time:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2024-01-20T11:04:47'
+                  example: '2024-01-23T10:49:19'
                 end_time:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>start_time</code>.'
-                  example: '2051-07-07'
+                  example: '2120-10-22'
                 home_team:
                   type: string
                   description: ''
-                  example: modi
+                  example: omnis
                 away_team:
                   type: string
                   description: ''
-                  example: aut
+                  example: dolorem
               required:
                 - title
                 - start_time
@@ -1835,7 +1915,87 @@ paths:
       summary: ''
       operationId: getApiPaymentsIndex
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: query
+          name: status
+          description: ''
+          example: null
+          required: false
+          schema:
+            type: string
+            description: ''
+            example: null
+        -
+          in: query
+          name: event_package_id
+          description: int.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: int.
+            example: null
+        -
+          in: query
+          name: event_id
+          description: int.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: int.
+            example: null
+        -
+          in: query
+          name: sortKey
+          description: 'Represents the direction of the sort. Must be either of ASC|DESC.'
+          example: null
+          required: false
+          schema:
+            type: string
+            description: 'Represents the direction of the sort. Must be either of ASC|DESC.'
+            example: null
+        -
+          in: query
+          name: sortDir
+          description: string.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: string.
+            example: null
+        -
+          in: query
+          name: search
+          description: string.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: string.
+            example: null
+        -
+          in: query
+          name: date_from
+          description: string.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: string.
+            example: null
+        -
+          in: query
+          name: date_to
+          description: string.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: string.
+            example: null
       responses:
         200:
           description: ''
@@ -1858,6 +2018,7 @@ paths:
                         email: katrina12@yahoo.com
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
+                        merchant: paystack
                         event_package:
                           id: 1
                           event_id: 1
@@ -1899,6 +2060,7 @@ paths:
                         email: haylee45@hotmail.com
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
+                        merchant: paystack
                         event_package:
                           id: 4
                           event_id: 4
@@ -1940,6 +2102,7 @@ paths:
                         email: alex.mayer@kling.org
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
+                        merchant: paystack
                         event_package:
                           id: 7
                           event_id: 7
@@ -1981,6 +2144,7 @@ paths:
                         email: hdare@bahringer.net
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
+                        merchant: paystack
                         event_package:
                           id: 10
                           event_id: 10
@@ -2022,6 +2186,7 @@ paths:
                         email: kstehr@yahoo.com
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
+                        merchant: paystack
                         event_package:
                           id: 13
                           event_id: 13
@@ -2063,6 +2228,7 @@ paths:
                         email: my@gmail.com
                         created_at: '2024-01-20T09:28:24.000000Z'
                         updated_at: '2024-01-20T09:28:24.000000Z'
+                        merchant: paystack
                         event_package:
                           id: 1
                           event_id: 1
@@ -2140,6 +2306,7 @@ paths:
                             email: katrina12@yahoo.com
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
+                            merchant: paystack
                             event_package:
                               id: 1
                               event_id: 1
@@ -2181,6 +2348,7 @@ paths:
                             email: haylee45@hotmail.com
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
+                            merchant: paystack
                             event_package:
                               id: 4
                               event_id: 4
@@ -2222,6 +2390,7 @@ paths:
                             email: alex.mayer@kling.org
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
+                            merchant: paystack
                             event_package:
                               id: 7
                               event_id: 7
@@ -2263,6 +2432,7 @@ paths:
                             email: hdare@bahringer.net
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
+                            merchant: paystack
                             event_package:
                               id: 10
                               event_id: 10
@@ -2304,6 +2474,7 @@ paths:
                             email: kstehr@yahoo.com
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
+                            merchant: paystack
                             event_package:
                               id: 13
                               event_id: 13
@@ -2345,6 +2516,7 @@ paths:
                             email: my@gmail.com
                             created_at: '2024-01-20T09:28:24.000000Z'
                             updated_at: '2024-01-20T09:28:24.000000Z'
+                            merchant: paystack
                             event_package:
                               id: 1
                               event_id: 1
@@ -2406,6 +2578,9 @@ paths:
                             updated_at:
                               type: string
                               example: '2024-01-12T17:35:58.000000Z'
+                            merchant:
+                              type: string
+                              example: paystack
                             event_package:
                               type: object
                               properties:
@@ -2558,25 +2733,6 @@ paths:
                         example: 6
       tags:
         - Payments
-      requestBody:
-        required: false
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                status:
-                  type: string
-                  description: ''
-                  example: null
-                event_package_id:
-                  type: string
-                  description: ''
-                  example: null
-                event_id:
-                  type: string
-                  description: ''
-                  example: null
       security: []
   '/api/seats/index/{seatSection}':
     get:
@@ -5511,19 +5667,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: gbniatzahwbqkhksindc
+                  example: mhhirvhhatbbesvlvzpoicah
                 description:
                   type: string
                   description: ''
-                  example: 'Animi laborum enim deserunt modi omnis quaerat.'
+                  example: 'Et et delectus quis reiciendis vel est omnis.'
                 features:
                   type: string
                   description: ''
-                  example: non
+                  example: eius
                 capacity:
                   type: integer
                   description: ''
-                  example: 11
+                  example: 15
               required:
                 - title
                 - capacity
@@ -5556,27 +5712,27 @@ paths:
                 merchant:
                   type: string
                   description: ''
-                  example: repellat
+                  example: quia
                 callback_url:
                   type: string
                   description: ''
-                  example: 'http://cormier.org/eius-aut-maxime-qui-quidem-officiis-quos-ut'
+                  example: 'http://beer.com/iure-expedita-quibusdam-rerum-animi'
                 quantity:
                   type: integer
                   description: 'Must be at least 1.'
-                  example: 76
+                  example: 24
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: xytcytggzucicdayjoj
+                  example: xvbwzylaljmncpic
                 phone:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: wrdhslftplivixo
+                  example: lbfqjb
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: waters.magdalen@example.net
+                  example: josiane.greenholt@example.org
               required:
                 - merchant
                 - quantity
@@ -5610,7 +5766,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: omnis
+                  example: sed
               required:
                 - reference
       security: []
@@ -5633,16 +5789,16 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: ipsam
+                  example: dolorum
                 quantity:
                   type: integer
                   description: 'Must be at least 1.'
-                  example: 27
+                  example: 54
                 seat_ids:
                   type: array
                   description: ''
                   example:
-                    - sit
+                    - hic
                   items:
                     type: string
               required:
@@ -6558,11 +6714,11 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: officiis
+                  example: eius
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: webster.nienow@example.org
+                  example: boyd70@example.org
               required:
                 - reference
                 - email
@@ -6586,23 +6742,23 @@ paths:
                 ticket_payment_id:
                   type: integer
                   description: ''
-                  example: 17
+                  example: 20
                 hash:
                   type: string
                   description: ''
-                  example: quas
+                  example: blanditiis
                 reference:
                   type: string
                   description: ''
-                  example: at
+                  example: eum
                 device_no:
                   type: string
                   description: ''
-                  example: dolorem
+                  example: nihil
                 event_id:
                   type: integer
                   description: ''
-                  example: 18
+                  example: 11
               required:
                 - ticket_payment_id
                 - hash
@@ -6610,12 +6766,125 @@ paths:
                 - device_no
                 - event_id
       security: []
+  /api/tickets/bank-deposit/confirm:
+    post:
+      summary: ''
+      operationId: postApiTicketsBankDepositConfirm
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Tickets
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                reference:
+                  type: string
+                  description: ''
+                  example: quo
+              required:
+                - reference
+      security: []
   /api/tickets/index:
     get:
       summary: ''
       operationId: getApiTicketsIndex
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: query
+          name: reference
+          description: ''
+          example: null
+          required: false
+          schema:
+            type: string
+            description: ''
+            example: null
+        -
+          in: query
+          name: ticket_payment_id
+          description: ''
+          example: null
+          required: false
+          schema:
+            type: integer
+            description: ''
+            example: null
+        -
+          in: query
+          name: event_package_id
+          description: ''
+          example: null
+          required: false
+          schema:
+            type: integer
+            description: ''
+            example: null
+        -
+          in: query
+          name: seat_id
+          description: ''
+          example: null
+          required: false
+          schema:
+            type: integer
+            description: ''
+            example: null
+        -
+          in: query
+          name: sortKey
+          description: 'Represents the direction of the sort. Must be either of ASC|DESC.'
+          example: null
+          required: false
+          schema:
+            type: string
+            description: 'Represents the direction of the sort. Must be either of ASC|DESC.'
+            example: null
+        -
+          in: query
+          name: sortDir
+          description: string.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: string.
+            example: null
+        -
+          in: query
+          name: search
+          description: string.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: string.
+            example: null
+        -
+          in: query
+          name: date_from
+          description: string.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: string.
+            example: null
+        -
+          in: query
+          name: date_to
+          description: string.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: string.
+            example: null
       responses:
         401:
           description: ''

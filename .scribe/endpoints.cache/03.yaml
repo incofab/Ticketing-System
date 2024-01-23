@@ -31,7 +31,79 @@ endpoints:
         custom: []
     cleanUrlParameters:
       eventSeason: 1
-    queryParameters: []
+    queryParameters:
+      title:
+        name: title
+        description: ''
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      start_time_from:
+        name: start_time_from
+        description: ''
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      start_time_to:
+        name: start_time_to
+        description: ''
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      sortKey:
+        name: sortKey
+        description: 'Represents the direction of the sort. Must be either of ASC|DESC.'
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      sortDir:
+        name: sortDir
+        description: string.
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      search:
+        name: search
+        description: string.
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      date_from:
+        name: date_from
+        description: string.
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      date_to:
+        name: date_to
+        description: string.
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
     cleanQueryParameters: []
     bodyParameters: []
     cleanBodyParameters: []
@@ -191,7 +263,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: kqkdtuxjtm
+        example: mroq
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -200,7 +272,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Quisquam tempora aut nihil corporis neque dignissimos consequatur magnam.'
+        example: 'Illum distinctio expedita autem reiciendis.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -209,7 +281,7 @@ endpoints:
         name: start_time
         description: 'Must be a valid date.'
         required: true
-        example: '2024-01-20T11:04:47'
+        example: '2024-01-23T10:49:19'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -218,7 +290,7 @@ endpoints:
         name: end_time
         description: 'Must be a valid date. Must be a date after <code>start_time</code>.'
         required: false
-        example: '2103-03-20'
+        example: '2105-06-25'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -227,7 +299,7 @@ endpoints:
         name: home_team
         description: ''
         required: false
-        example: praesentium
+        example: molestias
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -236,7 +308,7 @@ endpoints:
         name: away_team
         description: ''
         required: false
-        example: occaecati
+        example: incidunt
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -245,7 +317,7 @@ endpoints:
         name: event_packages
         description: 'Must have at least 1 items.'
         required: false
-        example: wqowkbexzzrhgpzjivclrzfmunicuuvxpnuawvcxbrvpwilcccnrlfjtxvrptnpphjmhbpoaaeryut
+        example: mcxvkxqwm
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -254,7 +326,7 @@ endpoints:
         name: 'event_packages[].seat_section_id'
         description: ''
         required: true
-        example: quidem
+        example: qui
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -263,19 +335,19 @@ endpoints:
         name: 'event_packages[].price'
         description: ''
         required: true
-        example: 60759.0
+        example: 815474.0
         type: number
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: kqkdtuxjtm
-      description: 'Quisquam tempora aut nihil corporis neque dignissimos consequatur magnam.'
-      start_time: '2024-01-20T11:04:47'
-      end_time: '2103-03-20'
-      home_team: praesentium
-      away_team: occaecati
-      event_packages: wqowkbexzzrhgpzjivclrzfmunicuuvxpnuawvcxbrvpwilcccnrlfjtxvrptnpphjmhbpoaaeryut
+      title: mroq
+      description: 'Illum distinctio expedita autem reiciendis.'
+      start_time: '2024-01-23T10:49:19'
+      end_time: '2105-06-25'
+      home_team: molestias
+      away_team: incidunt
+      event_packages: mcxvkxqwm
     fileParameters: []
     responses: []
     responseFields: []
@@ -319,7 +391,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: mvj
+        example: odud
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -328,7 +400,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Quaerat quam vel libero debitis similique nihil.'
+        example: 'Nulla illo magni dolorem laudantium exercitationem libero.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -337,7 +409,7 @@ endpoints:
         name: start_time
         description: 'Must be a valid date.'
         required: true
-        example: '2024-01-20T11:04:47'
+        example: '2024-01-23T10:49:19'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -346,7 +418,7 @@ endpoints:
         name: end_time
         description: 'Must be a valid date. Must be a date after <code>start_time</code>.'
         required: false
-        example: '2051-07-07'
+        example: '2120-10-22'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -355,7 +427,7 @@ endpoints:
         name: home_team
         description: ''
         required: false
-        example: modi
+        example: omnis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -364,18 +436,18 @@ endpoints:
         name: away_team
         description: ''
         required: false
-        example: aut
+        example: dolorem
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: mvj
-      description: 'Quaerat quam vel libero debitis similique nihil.'
-      start_time: '2024-01-20T11:04:47'
-      end_time: '2051-07-07'
-      home_team: modi
-      away_team: aut
+      title: odud
+      description: 'Nulla illo magni dolorem laudantium exercitationem libero.'
+      start_time: '2024-01-23T10:49:19'
+      end_time: '2120-10-22'
+      home_team: omnis
+      away_team: dolorem
     fileParameters: []
     responses: []
     responseFields: []

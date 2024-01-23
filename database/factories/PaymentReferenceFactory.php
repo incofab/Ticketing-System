@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Enums\PaymentMerchantType;
 use App\Enums\PaymentReferenceStatus;
 use App\Models\Payment;
 use App\Models\PaymentReference;
@@ -16,7 +17,8 @@ class PaymentReferenceFactory extends Factory
     return [
       'reference' => Str::orderedUuid(),
       'amount' => fake()->randomFloat(2, 10000, 100000),
-      'status' => PaymentReferenceStatus::Pending
+      'status' => PaymentReferenceStatus::Pending,
+      'merchant' => PaymentMerchantType::Paystack
     ];
   }
 
@@ -29,6 +31,13 @@ class PaymentReferenceFactory extends Factory
         'paymentable_id' => $ticketPayment->id,
         'user_id' => $ticketPayment->user_id
       ]
+    );
+  }
+
+  function bankDeposit()
+  {
+    return $this->state(
+      fn($attr) => ['merchant' => PaymentMerchantType::BankDeposit]
     );
   }
 

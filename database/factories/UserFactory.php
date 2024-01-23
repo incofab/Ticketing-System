@@ -29,6 +29,11 @@ class UserFactory extends Factory
     ];
   }
 
+  function admin()
+  {
+    return $this->role(RoleType::Admin);
+  }
+
   function role($role = RoleType::Admin)
   {
     return $this->afterCreating(function (User $user) use ($role) {

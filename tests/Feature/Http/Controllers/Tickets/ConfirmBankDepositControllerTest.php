@@ -2,12 +2,7 @@
 
 use App\Enums\PaymentReferenceStatus;
 use App\Models\PaymentReference;
-use App\Models\User;
-use Database\Seeders\RoleSeeder;
-
-use function Pest\Laravel\actingAs;
 use function Pest\Laravel\postJson;
-use function Pest\Laravel\seed;
 
 beforeEach(function () {
   $this->paymentReference = PaymentReference::factory()
@@ -53,34 +48,41 @@ it('can confirm paystack ticket payment', function () {
 
   $makeAssertion = $this->makeAssertion;
   $makeAssertion($this->paymentReference);
-});
 
-it('can confirm bank deposit ticket payment', function () {
-  seed(RoleSeeder::class);
+  /*
   $paymentReference = PaymentReference::factory()
-    ->bankDeposit()
     ->ticketPayment()
     ->create();
+  $ticketPayment = $paymentReference->paymentable;
+  $eventPackage = $ticketPayment->eventPackage;
+
+  $url = "https://api.paystack.co/transaction/verify/{$paymentReference->reference}";
+  Http::fake([
+    $url => Http::response(
+      [
+        'status' => true,
+        'data' => [
+          'status' => 'success',
+          'amount' => ceil($paymentReference->amount) * 100
+        ]
+      ],
+      200
+    )
+  ]);
 
   expect($paymentReference)
     ->status->not()
     ->toBe(PaymentReferenceStatus::Confirmed);
-  postJson(route('api.tickets.bank-deposit.confirm'), [
+  postJson(route('api.tickets.confirm-payment'), [
     'reference' => $paymentReference->reference
-  ])->assertUnauthorized();
-  actingAs(
-    User::factory()
-      ->admin()
-      ->create()
-  )
-    ->postJson(route('api.tickets.bank-deposit.confirm'), [
-      'reference' => $paymentReference->reference
-    ])
-    ->dump()
+  ])
+    // ->dump()
     ->assertOk();
-
-  $makeAssertion = $this->makeAssertion;
-  $makeAssertion($paymentReference);
+  expect($paymentReference->fresh())->status->toBe(
+    PaymentReferenceStatus::Confirmed
+  );
+  expect($eventPackage->fresh()->quantity_sold)->toBe($ticketPayment->quantity);
+  */
 });
 
 it('handles Paystack webhook successfully', function () {

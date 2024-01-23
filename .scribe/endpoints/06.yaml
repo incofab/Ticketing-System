@@ -36,7 +36,7 @@ endpoints:
         name: merchant
         description: ''
         required: true
-        example: repellat
+        example: quia
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -45,7 +45,7 @@ endpoints:
         name: callback_url
         description: ''
         required: false
-        example: 'http://cormier.org/eius-aut-maxime-qui-quidem-officiis-quos-ut'
+        example: 'http://beer.com/iure-expedita-quibusdam-rerum-animi'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -54,7 +54,7 @@ endpoints:
         name: quantity
         description: 'Must be at least 1.'
         required: true
-        example: 76
+        example: 24
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -63,7 +63,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: xytcytggzucicdayjoj
+        example: xvbwzylaljmncpic
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -72,7 +72,7 @@ endpoints:
         name: phone
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: wrdhslftplivixo
+        example: lbfqjb
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -81,18 +81,18 @@ endpoints:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: waters.magdalen@example.net
+        example: josiane.greenholt@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      merchant: repellat
-      callback_url: 'http://cormier.org/eius-aut-maxime-qui-quidem-officiis-quos-ut'
-      quantity: 76
-      name: xytcytggzucicdayjoj
-      phone: wrdhslftplivixo
-      email: waters.magdalen@example.net
+      merchant: quia
+      callback_url: 'http://beer.com/iure-expedita-quibusdam-rerum-animi'
+      quantity: 24
+      name: xvbwzylaljmncpic
+      phone: lbfqjb
+      email: josiane.greenholt@example.org
     fileParameters: []
     responses: []
     responseFields: []
@@ -126,13 +126,13 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: omnis
+        example: sed
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      reference: omnis
+      reference: sed
     fileParameters: []
     responses: []
     responseFields: []
@@ -166,7 +166,7 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: ipsam
+        example: dolorum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -175,7 +175,7 @@ endpoints:
         name: quantity
         description: 'Must be at least 1.'
         required: false
-        example: 27
+        example: 54
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -185,16 +185,16 @@ endpoints:
         description: ''
         required: true
         example:
-          - sit
+          - hic
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      reference: ipsam
-      quantity: 27
+      reference: dolorum
+      quantity: 54
       seat_ids:
-        - sit
+        - hic
     fileParameters: []
     responses: []
     responseFields: []
@@ -228,7 +228,7 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: officiis
+        example: eius
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -237,14 +237,14 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: webster.nienow@example.org
+        example: boyd70@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      reference: officiis
-      email: webster.nienow@example.org
+      reference: eius
+      email: boyd70@example.org
     fileParameters: []
     responses:
       -
@@ -790,7 +790,7 @@ endpoints:
         name: ticket_payment_id
         description: ''
         required: true
-        example: 17
+        example: 20
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -799,7 +799,7 @@ endpoints:
         name: hash
         description: ''
         required: true
-        example: quas
+        example: blanditiis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -808,7 +808,7 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: at
+        example: eum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -817,7 +817,7 @@ endpoints:
         name: device_no
         description: ''
         required: true
-        example: dolorem
+        example: nihil
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -826,17 +826,57 @@ endpoints:
         name: event_id
         description: ''
         required: true
-        example: 18
+        example: 11
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      ticket_payment_id: 17
-      hash: quas
-      reference: at
-      device_no: dolorem
-      event_id: 18
+      ticket_payment_id: 20
+      hash: blanditiis
+      reference: eum
+      device_no: nihil
+      event_id: 11
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/tickets/bank-deposit/confirm
+    metadata:
+      groupName: Tickets
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      reference:
+        name: reference
+        description: ''
+        required: true
+        example: quo
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      reference: quo
     fileParameters: []
     responses: []
     responseFields: []
@@ -863,7 +903,88 @@ endpoints:
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
-    queryParameters: []
+    queryParameters:
+      reference:
+        name: reference
+        description: ''
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      ticket_payment_id:
+        name: ticket_payment_id
+        description: ''
+        required: false
+        example: null
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      event_package_id:
+        name: event_package_id
+        description: ''
+        required: false
+        example: null
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      seat_id:
+        name: seat_id
+        description: ''
+        required: false
+        example: null
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      sortKey:
+        name: sortKey
+        description: 'Represents the direction of the sort. Must be either of ASC|DESC.'
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      sortDir:
+        name: sortDir
+        description: string.
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      search:
+        name: search
+        description: string.
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      date_from:
+        name: date_from
+        description: string.
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      date_to:
+        name: date_to
+        description: string.
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
     cleanQueryParameters: []
     bodyParameters: []
     cleanBodyParameters: []

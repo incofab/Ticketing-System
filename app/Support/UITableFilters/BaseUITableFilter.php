@@ -4,20 +4,36 @@ namespace App\Support\UITableFilters;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 
 abstract class BaseUITableFilter
 {
-  protected array $sortableColumns;
   private $calledFns = [];
+  private string $table;
+
+  const DEFAULT_SORT_COLUMNS = [
+    'createdAt' => 'created_at'
+  ];
 
   public function __construct(
     protected array $requestData,
     protected Builder $baseQuery
   ) {
     $this->validateRequestData();
+    $this->table = $baseQuery->getModel()->getTable();
+    $this->dateFilter(
+      "{$this->table}.created_at",
+      $this->requestGet('date_from'),
+      $this->requestGet('date_to')
+    );
   }
 
   protected function extraValidationRules(): array
+  {
+    return [];
+  }
+
+  protected function getSortableColumns(): array
   {
     return [];
   }
@@ -30,10 +46,15 @@ abstract class BaseUITableFilter
   private function validateRequestData(): static
   {
     $this->requestData = Validator::validate($this->requestData, [
-      'sortDir' => ['required_with:sortKey', 'string'],
+      'sortDir' => [
+        'required_with:sortKey',
+        'string',
+        Rule::in(['ASC', 'DESC', 'asc', 'desc'])
+      ],
       'sortKey' => ['required_with:sortDir', 'string'],
       'search' => ['nullable', 'string'],
-      'institution_id' => ['sometimes', 'integer'],
+      'date_from' => ['nullable', 'date'],
+      'date_to' => ['nullable', 'date'],
       ...$this->extraValidationRules()
     ]);
 
@@ -44,7 +65,10 @@ abstract class BaseUITableFilter
   {
     $sortDir = $this->requestData['sortDir'] ?? null;
     $sortKey = $this->requestData['sortKey'] ?? null;
-    $columnName = $this->sortableColumns[$sortKey] ?? null;
+    $columnName =
+      [...self::DEFAULT_SORT_COLUMNS, ...$this->getSortableColumns()][
+        $sortKey
+      ] ?? null;
 
     if (empty($columnName)) {
       return $this;
@@ -71,6 +95,19 @@ abstract class BaseUITableFilter
       $this->requestGet('search'),
       fn(self $that, $search) => $that->generalSearch($search)
     );
+  }
+
+  protected function dateFilter($columnName, $dateFrom, $dateTo)
+  {
+    // $columnName = "{$this->table}.created_at";
+    if ($dateFrom && $dateTo) {
+      $this->baseQuery->whereBetween($columnName, [$dateFrom, $dateTo]);
+    } elseif ($dateFrom) {
+      $this->baseQuery->where($columnName, '>', $dateFrom);
+    } elseif ($dateTo) {
+      $this->baseQuery->where($columnName, '<', $dateTo);
+    }
+    return $this;
   }
 
   protected function requestGet($key)

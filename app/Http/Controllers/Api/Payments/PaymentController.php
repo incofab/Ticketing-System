@@ -2,19 +2,35 @@
 
 namespace App\Http\Controllers\Api\Payments;
 
-use App\Enums\PaymentReferenceStatus;
 use App\Http\Controllers\Controller;
 use App\Models\TicketPayment;
+use App\Support\UITableFilters\TicketPaymentUITableFilters;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Rules\Enum;
 
 /**
  * @group Payments
  */
 class PaymentController extends Controller
 {
+  /**
+   * @queryParam status string No-example
+   * @queryParam event_package_id int. No-example
+   * @queryParam event_id int. No-example
+   *
+   * @queryParam sortKey string Represents the direction of the sort. Must be either of ASC|DESC. No-example
+   * @queryParam sortDir string. No-example
+   * @queryParam search string. No-example
+   * @queryParam date_from string. No-example
+   * @queryParam date_to string. No-example
+   */
   public function index(Request $request)
   {
+    $query = TicketPayment::query()->select(
+      'ticket_payments.*',
+      'payment_references.merchant'
+    );
+    TicketPaymentUITableFilters::make($request->all(), $query)->filterQuery();
+    /*
     $request->validate([
       'status' => ['nullable', new Enum(PaymentReferenceStatus::class)],
       'event_package_id' => ['nullable', 'exists:event_package_id,id'],
@@ -22,7 +38,7 @@ class PaymentController extends Controller
     ]);
 
     $query = TicketPayment::query()
-      ->select('ticket_payments.*')
+      ->select('ticket_payments.*', 'payment_references.merchant')
       ->join('payment_references', function ($q) {
         $q->on(
           'payment_references.paymentable_id',
@@ -52,6 +68,8 @@ class PaymentController extends Controller
         $request->event_package_id,
         fn($q, $value) => $q->where('ticket_payments.event_package_id', $value)
       )
+      */
+    $query
       ->with('eventPackage.event', 'eventPackage.seatSection')
       ->oldest('ticket_payments.id');
 

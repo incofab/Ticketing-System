@@ -13,13 +13,16 @@ class PaymentBankDeposit extends PaymentMerchant
 
     $ret['amount'] = $paymentReferenceDto->amount;
     return [
-      successRes('', ['amount' => $paymentReference->amount]),
+      successRes('', [
+        'amount' => $paymentReference->amount,
+        'reference' => $paymentReference->reference
+      ]),
       $paymentReference
     ];
   }
 
   function verify(PaymentReference $paymentReference): Res
   {
-    return successRes();
+    return successRes('', ['amount' => $paymentReference->amount]);
   }
 }
