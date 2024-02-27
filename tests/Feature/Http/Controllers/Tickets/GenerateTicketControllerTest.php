@@ -106,6 +106,27 @@ it('generates tickets for a valid payment reference and seat ids', function () {
   // dd(json_encode(Ticket::query()->first()));
 });
 
+it('handles duplicated seat Ids', function () {
+  $seatIds = $this->seats->pluck('id')->toArray();
+  $this->ticketPayment->fill(['quantity' => count($seatIds) * 2])->save();
+
+  postJson($this->url, [
+    'reference' => $this->paymentReference->reference,
+    'seat_ids' => $seatIds
+  ])
+    ->assertOk()
+    ->assertJsonStructure($this->validStructure);
+  postJson($this->url, [
+    'reference' => $this->paymentReference->reference,
+    'seat_ids' => $seatIds
+  ])->assertJsonValidationErrorFor('seat_ids.0');
+  expect(
+    Ticket::whereIn('seat_id', $seatIds)
+      ->get()
+      ->count()
+  )->toBe(count($seatIds));
+});
+
 it('generates tickets for seat quantity', function () {
   postJson($this->url, [
     'reference' => $this->paymentReference->reference,

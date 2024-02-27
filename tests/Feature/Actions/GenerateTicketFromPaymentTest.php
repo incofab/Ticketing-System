@@ -49,9 +49,11 @@ it('aborts if not enough seats 2', function () {
   $eventPackage = $ticketPayment->eventPackage;
   $seatSection = $eventPackage->seatSection;
   $seatSection->fill(['capacity' => 10])->save();
-  Ticket::factory(8)
+  $quantitySold = 8;
+  Ticket::factory($quantitySold)
     ->eventPackage($eventPackage)
     ->create();
+  $eventPackage->fill(['quantity_sold' => $quantitySold])->save();
 
   $seats = Seat::factory(3)->create();
   $seatIds = $seats->pluck('id')->toArray();
@@ -106,4 +108,22 @@ it('generates tickets from payment', function () {
   $eventPackage->refresh();
   Mail::assertQueuedCount($seats->count());
   // expect($eventPackage->quantity_sold)->toBe($seats->count());
+});
+
+it('generates nothing when the ticketpayment is processing', function () {
+  $paymentReference = PaymentReference::factory()
+    ->ticketPayment()
+    ->confirmed()
+    ->create();
+  /** @var TicketPayment $ticketPayment */
+  $ticketPayment = $paymentReference->paymentable;
+  $ticketPayment->markProcessing(true);
+
+  $seats = Seat::factory(2)->create();
+  $seatIds = $seats->pluck('id')->toArray();
+  $generateTicket = new GenerateTicketFromPayment($paymentReference, $seatIds);
+  $tickets = $generateTicket->run();
+
+  // Assertions
+  expect($tickets)->toHaveCount(0);
 });

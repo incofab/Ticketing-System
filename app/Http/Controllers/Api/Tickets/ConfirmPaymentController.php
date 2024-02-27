@@ -20,8 +20,14 @@ class ConfirmPaymentController extends Controller
     /** @var PaymentReference $paymentReference */
     $paymentReference = PaymentReference::query()
       ->where('reference', $request->reference)
-      ->where('merchant', PaymentMerchantType::Paystack)
+      // ->where('merchant', PaymentMerchantType::Paystack)
       ->firstOrFail();
+
+    if ($paymentReference->merchant !== PaymentMerchantType::Paystack) {
+      return $this->ok(
+        failRes('', ['slug' => 'unexpected_merchant'])->toArray()
+      );
+    }
 
     $res = PaymentProcessor::make(
       $paymentReference

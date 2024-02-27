@@ -16,6 +16,11 @@ class TicketPayment extends Model
     'quantity' => 'integer'
   ];
 
+  function markProcessing(bool $isProcessing)
+  {
+    $this->fill(['processing' => $isProcessing])->save();
+  }
+
   function eventPackage()
   {
     return $this->belongsTo(EventPackage::class);

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\Tickets;
 use App\Enums\PaymentReferenceStatus;
 use App\Http\Controllers\Controller;
 use App\Models\PaymentReference;
+use App\Models\Ticket;
 use App\Models\TicketPayment;
 use Illuminate\Http\Request;
 
@@ -35,11 +36,21 @@ class RetrieveTicketController extends Controller
       'Invalid reference and/or email supplied'
     );
 
+    $query = Ticket::query()
+      ->select('tickets.*')
+      ->join('seats', 'tickets.seat_id', 'seats.id')
+      ->where('tickets.ticket_payment_id', $ticketPayment->id)
+      ->groupBy('tickets.seat_id')
+      ->oldest('seats.seat_no')
+      ->with('seat.seatSection');
+
     $tickets = paginateFromRequest(
-      $ticketPayment
-        ->tickets()
-        ->getQuery()
-        ->with('seat.seatSection')
+      $query
+      // $ticketPayment
+      //   ->tickets()
+      //   ->getQuery()
+      //   ->oldest('tickets.seat_id')
+      //   ->with('seat.seatSection')
     );
 
     return $this->apiRes([

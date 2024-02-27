@@ -18,8 +18,8 @@ class ListTicketController extends Controller
    * @queryParam event_package_id int No-example
    * @queryParam seat_id int No-example
    *
-   * @queryParam sortKey string Represents the direction of the sort. Must be either of ASC|DESC. No-example
-   * @queryParam sortDir string. No-example
+   * @queryParam sortKey string. No-example
+   * @queryParam sortDir string Represents the direction of the sort. ASC|DESC. No-example
    * @queryParam search string. No-example
    * @queryParam date_from string. No-example
    * @queryParam date_to string. No-example

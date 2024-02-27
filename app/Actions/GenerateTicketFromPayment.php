@@ -31,7 +31,7 @@ class GenerateTicketFromPayment
     $this->eventPackage = $this->ticketPayment->eventPackage;
     $this->seatSection = $this->eventPackage->seatSection;
 
-    $numOfTicketsGenerated = $this->eventPackage->tickets()->count();
+    $numOfTicketsGenerated = $this->eventPackage->quantity_sold; //$this->eventPackage->tickets()->count();
     $this->numOfTicketsToGenerate = count($seatIds);
     abort_if(
       $this->seatSection->capacity <
@@ -47,20 +47,42 @@ class GenerateTicketFromPayment
    */
   function run()
   {
+    if ($this->ticketPayment->processing) {
+      return [];
+    }
+    try {
+      $this->ticketPayment->markProcessing(true);
+      $this->generateTickets();
+    } catch (\Throwable $th) {
+      info(
+        'GenerateTicketFromPayment: Error generation tickets: ' .
+          $th->getMessage()
+      );
+    } finally {
+      $this->ticketPayment->markProcessing(false);
+    }
+  }
+
+  function generateTickets()
+  {
     $tickets = [];
 
     DB::beginTransaction();
     foreach ($this->seatIds as $key => $seatId) {
       $ticketReference = Str::orderedUuid();
-      $generatedTicket = $this->ticketPayment->tickets()->create([
-        'reference' => $ticketReference,
-        'qr_code' => QrCode::format('svg')->generate(
-          "$ticketReference|{$this->ticketPayment->id}"
-        ),
-        'seat_id' => $seatId,
-        'user_id' => $this->ticketPayment->user_id,
-        'event_package_id' => $this->ticketPayment->event_package_id
-      ]);
+      $generatedTicket = $this->ticketPayment->tickets()->firstOrCreate(
+        [
+          'seat_id' => $seatId,
+          'event_package_id' => $this->ticketPayment->event_package_id
+        ],
+        [
+          'reference' => $ticketReference,
+          'qr_code' => QrCode::format('svg')->generate(
+            "$ticketReference|{$this->ticketPayment->id}"
+          ),
+          'user_id' => $this->ticketPayment->user_id
+        ]
+      );
       $generatedTicket->load(
         'seat',
         'eventPackage.seatSection',
