@@ -32,21 +32,15 @@ class EventUITableFilters extends BaseUITableFilter
 
   protected function directQuery()
   {
-    $this->baseQuery->when(
-      $this->requestGet('title'),
-      fn($q, $value) => $q->where('events.title', 'like', "%$value%")
-    );
-
-    return $this;
-  }
-
-  public function filterQuery(): static
-  {
     $this->dateFilter(
       'events.start_time',
       $this->requestGet('start_time_from'),
       $this->requestGet('end_time_from')
+    )->baseQuery->when(
+      $this->requestGet('title'),
+      fn($q, $value) => $q->where('events.title', 'like', "%$value%")
     );
+
     return $this;
   }
 }
