@@ -35,7 +35,7 @@ class EventUITableFilters extends BaseUITableFilter
     $this->dateFilter(
       'events.start_time',
       $this->requestGet('start_time_from'),
-      $this->requestGet('end_time_from')
+      $this->requestGet('start_time_to')
     )->baseQuery->when(
       $this->requestGet('title'),
       fn($q, $value) => $q->where('events.title', 'like', "%$value%")

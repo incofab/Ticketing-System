@@ -14,6 +14,7 @@ class GetAvailableSeats
         'tickets',
         fn($q) => $q->where('event_package_id', $eventPackage->id)
       )
-      ->where('seats.seat_section_id', $eventPackage->seat_section_id);
+      ->where('seats.seat_section_id', $eventPackage->seat_section_id)
+      ->oldest('seats.seat_no');
   }
 }

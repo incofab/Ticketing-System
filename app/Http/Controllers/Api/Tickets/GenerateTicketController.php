@@ -177,7 +177,7 @@ class GenerateTicketController extends Controller
   private function getAvailableSeats(TicketPayment $ticketPayment, int $count)
   {
     return GetAvailableSeats::run($ticketPayment->eventPackage)
-      ->oldest('seats.seat_no')
+      // ->oldest('seats.seat_no')
       ->take($count)
       ->pluck('seats.id')
       ->toArray();

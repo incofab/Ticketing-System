@@ -49,7 +49,8 @@ it('can confirm paystack ticket payment', function () {
     'reference' => $this->paymentReference->reference
   ])
     // ->dump()
-    ->assertOk();
+    ->assertOk()
+    ->assertJsonStructure(['success', 'message', 'tickets']);
 
   $makeAssertion = $this->makeAssertion;
   $makeAssertion($this->paymentReference);
@@ -76,7 +77,7 @@ it('can confirm bank deposit ticket payment', function () {
     ->postJson(route('api.tickets.bank-deposit.confirm'), [
       'reference' => $paymentReference->reference
     ])
-    ->dump()
+    // ->dump()
     ->assertOk();
 
   $makeAssertion = $this->makeAssertion;

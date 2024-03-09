@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers\Api\Tickets;
 
+use App\Actions\GenerateTicketFromPayment;
+use App\Actions\GetAvailableSeats;
 use App\Enums\PaymentMerchantType;
 use App\Http\Controllers\Controller;
 use App\Models\PaymentReference;
+use App\Models\TicketPayment;
 use App\Support\Payment\Processor\PaymentProcessor;
 use Illuminate\Http\Request;
 
@@ -34,6 +37,20 @@ class ConfirmPaymentController extends Controller
     )->handleCallbackWithTransaction();
 
     abort_unless($res->isSuccessful(), 403, $res->getMessage());
-    return $this->ok($res->toArray());
+
+    $tickets = $this->generateTickets($paymentReference);
+
+    return $this->ok([...$res->toArray(), 'tickets' => $tickets]);
+  }
+
+  private function generateTickets(PaymentReference $paymentReference)
+  {
+    /** @var TicketPayment $ticketPayment */
+    $ticketPayment = $paymentReference->paymentable;
+    $seatIds = GetAvailableSeats::run($ticketPayment->eventPackage)
+      ->take($ticketPayment->quantity)
+      ->pluck('seats.id')
+      ->toArray();
+    return (new GenerateTicketFromPayment($paymentReference, $seatIds))->run();
   }
 }

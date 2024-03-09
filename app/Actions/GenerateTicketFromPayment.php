@@ -31,7 +31,7 @@ class GenerateTicketFromPayment
     $this->eventPackage = $this->ticketPayment->eventPackage;
     $this->seatSection = $this->eventPackage->seatSection;
 
-    $numOfTicketsGenerated = $this->eventPackage->quantity_sold; //$this->eventPackage->tickets()->count();
+    $numOfTicketsGenerated = $this->eventPackage->tickets()->count(); //$this->eventPackage->quantity_sold;
     $this->numOfTicketsToGenerate = count($seatIds);
     abort_if(
       $this->seatSection->capacity <
@@ -52,7 +52,7 @@ class GenerateTicketFromPayment
     }
     try {
       $this->ticketPayment->markProcessing(true);
-      $this->generateTickets();
+      return $this->generateTickets();
     } catch (\Throwable $th) {
       info(
         'GenerateTicketFromPayment: Error generation tickets: ' .
@@ -61,6 +61,7 @@ class GenerateTicketFromPayment
     } finally {
       $this->ticketPayment->markProcessing(false);
     }
+    return [];
   }
 
   function generateTickets()
