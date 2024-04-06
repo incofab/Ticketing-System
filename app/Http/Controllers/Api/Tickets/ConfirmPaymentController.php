@@ -47,6 +47,11 @@ class ConfirmPaymentController extends Controller
   {
     /** @var TicketPayment $ticketPayment */
     $ticketPayment = $paymentReference->paymentable;
+    $existingTicketsGenerated = $ticketPayment->tickets()->count();
+    $remainingSeats = $ticketPayment->quantity - $existingTicketsGenerated;
+    if ($remainingSeats < 1) {
+      return $ticketPayment->tickets()->get();
+    }
     $seatIds = GetAvailableSeats::run($ticketPayment->eventPackage)
       ->take($ticketPayment->quantity)
       ->pluck('seats.id')
