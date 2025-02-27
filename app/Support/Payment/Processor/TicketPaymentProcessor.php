@@ -10,11 +10,19 @@ class TicketPaymentProcessor extends PaymentProcessor
 {
   function handleCallback(): Res
   {
-    if ($this->paymentReference->status === PaymentReferenceStatus::Confirmed) {
+    if ($this->paymentReference->status !== PaymentReferenceStatus::Pending) {
       return successRes('Payment already completed');
     }
 
-    $this->verify();
+    $res = $this->verify();
+    if (!$res->isSuccessful()) {
+      if ($res->is_failed) {
+        $this->paymentReference
+          ->fill(['status' => PaymentReferenceStatus::Cancelled])
+          ->save();
+      }
+      return $res;
+    }
 
     // /** @var User $user */
     // $user = $this->paymentReference->user;

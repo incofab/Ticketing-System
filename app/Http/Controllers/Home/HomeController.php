@@ -49,9 +49,7 @@ class HomeController extends Controller
 
     $reference = $data['reference'];
 
-    $ret = PaymentProcessor::makeFromReference(
-      $reference
-    )->handleCallbackWithTransaction();
+    $ret = PaymentProcessor::makeFromReference($reference)->handleCallback();
 
     return $this->ok($ret->toArray());
   }

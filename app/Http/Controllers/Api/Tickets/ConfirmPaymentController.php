@@ -32,9 +32,7 @@ class ConfirmPaymentController extends Controller
       );
     }
 
-    $res = PaymentProcessor::make(
-      $paymentReference
-    )->handleCallbackWithTransaction();
+    $res = PaymentProcessor::make($paymentReference)->handleCallback();
 
     abort_unless($res->isSuccessful(), 403, $res->getMessage());
 

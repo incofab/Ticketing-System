@@ -72,8 +72,12 @@ class EventController extends Controller
       'description' => ['nullable', 'string'],
       'start_time' => ['sometimes', 'required', 'date'],
       'end_time' => ['sometimes', 'date', 'after:start_time'],
-      'home_team' => ['nullable', 'string'],
-      'away_team' => ['nullable', 'string'],
+      'home_team' => ['nullable', 'string', 'max:255'],
+      'away_team' => ['nullable', 'string', 'max:255'],
+      'venue' => ['nullable', 'string', 'max:255'],
+      'phone' => ['nullable', 'string', 'max:255'],
+      'email' => ['nullable', 'email', 'max:255'],
+      'website' => ['nullable', 'email', 'max:255'],
       'event_packages' => ['nullable', 'array', 'min:1'],
       'event_packages.*.seat_section_id' => [
         'required',
@@ -107,7 +111,11 @@ class EventController extends Controller
       'start_time' => ['sometimes', 'required', 'date'],
       'end_time' => ['sometimes', 'date', 'after:start_time'],
       'home_team' => ['nullable', 'string'],
-      'away_team' => ['nullable', 'string']
+      'away_team' => ['nullable', 'string'],
+      'venue' => ['nullable', 'string', 'max:255'],
+      'phone' => ['nullable', 'string', 'max:255'],
+      'email' => ['nullable', 'email', 'max:255'],
+      'website' => ['nullable', 'email', 'max:255']
     ]);
 
     $event->fill($data)->save();

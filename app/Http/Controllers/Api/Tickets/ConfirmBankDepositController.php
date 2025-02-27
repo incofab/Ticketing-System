@@ -30,9 +30,7 @@ class ConfirmBankDepositController extends Controller
       ->where('merchant', PaymentMerchantType::BankDeposit)
       ->firstOrFail();
 
-    $res = PaymentProcessor::make(
-      $paymentReference
-    )->handleCallbackWithTransaction();
+    $res = PaymentProcessor::make($paymentReference)->handleCallback();
 
     abort_unless($res->isSuccessful(), 403, $res->getMessage());
     return $this->ok($res->toArray());

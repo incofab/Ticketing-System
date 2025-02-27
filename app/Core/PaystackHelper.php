@@ -57,10 +57,14 @@ class PaystackHelper
       ->withToken(config('services.paystack.secret-key'))
       ->get($url);
 
-    if (!$res->json('status') || $res->json('data.status') !== 'success') {
+    $status = $res->json('data.status');
+    if (!$res->json('status') || $status !== 'success') {
       return failRes(
         $res->json('data.gateway_response', 'Transaction NOT successful'),
-        ['result' => $res->json('data')]
+        [
+          'result' => $res->json('data'),
+          'is_failed' => in_array($status, ['abandoned', 'failed', 'reversed'])
+        ]
       );
     }
 
@@ -72,7 +76,7 @@ class PaystackHelper
 
     return successRes('Reference verified', [
       'result' => $res->json('data'),
-      'status' => $res->json('data.status'),
+      'status' => $status,
       'amount' => $amount
     ]);
   }

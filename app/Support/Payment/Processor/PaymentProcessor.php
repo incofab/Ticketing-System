@@ -8,61 +8,57 @@ use App\Support\Payment\PaymentMerchant;
 use App\Support\Res;
 use Exception;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Validation\ValidationException;
 
 abstract class PaymentProcessor
 {
-  protected PaymentReference $paymentReference;
+  // protected PaymentReference $paymentReference;
   protected PaymentMerchant $paymentMerchant;
 
-  protected function __construct(PaymentReference $paymentReference)
+  protected function __construct(protected PaymentReference $paymentReference)
   {
-    $this->paymentReference = $paymentReference;
+    // $this->paymentReference = $paymentReference;
     $this->paymentMerchant = PaymentMerchant::make(
       $paymentReference->merchant->value
     );
   }
 
-  protected function verify()
+  protected function verify(): Res
   {
     if ($this->paymentReference->status !== PaymentReferenceStatus::Pending) {
-      return throw ValidationException::withMessages([
-        'message' => 'Payment Already resolved'
-      ]);
+      return failRes('Payment already resolved');
     }
 
     $ret = $this->paymentMerchant->verify($this->paymentReference);
 
     if (!$ret->isSuccessful()) {
-      return throw ValidationException::withMessages([
-        'error' => $ret->message
-      ]);
+      return $ret;
     }
 
     $amount = $ret->amount;
     if ($amount < $this->paymentReference->amount) {
-      return throw ValidationException::withMessages([
-        'message' => "Payment insufficient: Paid: $amount, Expected: {$this->paymentReference->amount}"
-      ]);
+      return failRes(
+        "Payment insufficient: Paid: $amount, Expected: {$this->paymentReference->amount}"
+      );
     }
+    return $ret;
   }
 
   abstract function handleCallback(): Res;
 
-  public function handleCallbackWithTransaction()
-  {
-    DB::beginTransaction();
+  // public function handleCallbackWithTransaction()
+  // {
+  //   DB::beginTransaction();
 
-    $ret = $this->handleCallback();
+  //   $ret = $this->handleCallback();
 
-    if (!$ret->isSuccessful()) {
-      DB::rollBack();
-    } else {
-      DB::commit();
-    }
+  //   if (!$ret->isSuccessful()) {
+  //     DB::rollBack();
+  //   } else {
+  //     DB::commit();
+  //   }
 
-    return $ret;
-  }
+  //   return $ret;
+  // }
 
   public static function makeFromReference(string $reference)
   {

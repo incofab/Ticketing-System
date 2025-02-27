@@ -22,6 +22,10 @@ return new class extends Migration {
       $table->dateTime('end_time')->nullable(true);
       $table->string('home_team')->nullable(true);
       $table->string('away_team')->nullable(true);
+      $table->string('venue')->nullable(true);
+      $table->string('phone')->nullable(true);
+      $table->string('email')->nullable(true);
+      $table->string('website')->nullable(true);
 
       $table->softDeletes();
       $table->timestamps();
