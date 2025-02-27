@@ -1,5 +1,6 @@
 <?php
 use App\Actions\GenerateTicketFromPayment;
+use App\Models\EventAttendee;
 use App\Models\PaymentReference;
 use App\Models\Seat;
 use App\Models\Ticket;
@@ -27,7 +28,8 @@ it('aborts if not enough seats', function () {
   try {
     $generateTicket = new GenerateTicketFromPayment(
       $paymentReference,
-      $seatIds
+      $seatIds,
+      []
     );
 
     $this->expectExceptionCode(401);
@@ -61,7 +63,8 @@ it('aborts if not enough seats 2', function () {
   try {
     $generateTicket = new GenerateTicketFromPayment(
       $paymentReference,
-      $seatIds
+      $seatIds,
+      []
     );
 
     $this->expectExceptionCode(401);
@@ -86,11 +89,26 @@ it('generates tickets from payment', function () {
   $seats = Seat::factory(2)->create();
 
   $seatIds = $seats->pluck('id')->toArray();
-  $generateTicket = new GenerateTicketFromPayment($paymentReference, $seatIds);
+  $seatExtraData = $seats
+    ->map(
+      fn($item) => [
+        'seat_id' => $item->id,
+        'attendee' => EventAttendee::factory()
+          ->make()
+          ->toArray()
+      ]
+    )
+    ->toArray();
+  $generateTicket = new GenerateTicketFromPayment(
+    $paymentReference,
+    $seatIds,
+    $seatExtraData
+  );
   $tickets = $generateTicket->run();
 
   // Assertions
   expect($tickets)->toHaveCount($seats->count());
+  expect(EventAttendee::query()->count())->toBe($seats->count());
   //   info(json_encode($tickets, JSON_PRETTY_PRINT));
   //   dd($tickets);
   foreach ($tickets as $ticket) {
@@ -121,7 +139,11 @@ it('generates nothing when the ticketpayment is processing', function () {
 
   $seats = Seat::factory(2)->create();
   $seatIds = $seats->pluck('id')->toArray();
-  $generateTicket = new GenerateTicketFromPayment($paymentReference, $seatIds);
+  $generateTicket = new GenerateTicketFromPayment(
+    $paymentReference,
+    $seatIds,
+    []
+  );
   $tickets = $generateTicket->run();
 
   // Assertions

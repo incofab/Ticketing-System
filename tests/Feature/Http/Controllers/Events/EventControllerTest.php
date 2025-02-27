@@ -98,11 +98,17 @@ it('can store a new event', function () {
       'event_packages' => [
         [
           'seat_section_id' => $seatSection->id,
-          'price' => 50.0
+          'price' => 50.0,
+          'title' => fake()
+            ->unique()
+            ->sentence(3)
         ],
         [
           'seat_section_id' => $seatSection2->id,
-          'price' => 150.0
+          'price' => 150.0,
+          'title' => fake()
+            ->unique()
+            ->sentence(3)
         ]
       ]
     ]

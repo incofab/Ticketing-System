@@ -7,9 +7,8 @@ use App\Actions\GetAvailableSeats;
 use App\Enums\PaymentReferenceStatus;
 use App\Http\Controllers\Controller;
 use App\Models\PaymentReference;
-use App\Models\Seat;
-use App\Models\Ticket;
 use App\Models\TicketPayment;
+use App\Rules\ValidateSeatAvailabilityRule;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Http\Request;
 
@@ -35,37 +34,24 @@ class GenerateTicketController extends Controller
     /** @var TicketPayment $ticketPayment */
     $ticketPayment = $paymentReference->paymentable;
 
-    $request->validate([
+    $data = $request->validate([
       'reference' => ['required', 'string'],
       'quantity' => ['sometimes', 'integer', 'min:1'],
-      'seat_ids' => ['sometimes', 'array', 'min:1'],
-      'seat_ids.*' => [
+      'seats' => ['sometimes', 'array', 'min:1'],
+      'seats.*.seat_id' => [
         'required',
-        function ($attr, $value, $fail) use ($ticketPayment) {
-          // First check that the seat exists in the selected package
-          $seat = Seat::query()
-            ->where('id', $value)
-            ->where(
-              'seat_section_id',
-              $ticketPayment->eventPackage->seat_section_id
-            )
-            ->first();
-          if (!$seat) {
-            $fail("$attr not available in this section of payment");
-            return;
-          }
-          // Check if the seats has been booked already
-          $existingTicket = Ticket::query()
-            ->where('event_package_id', $ticketPayment->event_package_id)
-            ->where('tickets.seat_id', $value)
-            ->first();
-          if ($existingTicket) {
-            $fail("$attr has already been booked");
-            return;
-          }
-        }
-      ]
+        new ValidateSeatAvailabilityRule($ticketPayment)
+      ],
+      'seats.*.attendee' => ['sometimes', 'array', 'min:1'],
+      'seats.*.attendee.name' => ['sometimes', 'string'],
+      'seats.*.attendee.email' => ['sometimes', 'email'],
+      'seats.*.attendee.phone' => ['sometimes', 'string'],
+      'seats.*.attendee.address' => ['sometimes', 'string']
     ]);
+
+    $selectedSeatIds = collect($data['seats'] ?? [])
+      ->map(fn($item) => $item['seat_id'])
+      ->toArray();
 
     $existingTicketsGenerated = $ticketPayment->tickets()->count();
     $remainingSeats = $ticketPayment->quantity - $existingTicketsGenerated;
@@ -76,11 +62,17 @@ class GenerateTicketController extends Controller
       'Your payment is not enough for the requested number of seats'
     );
 
-    $seatIds = $this->getSeatIds($request, $ticketPayment, $remainingSeats);
+    $seatIds = $this->getSeatIds(
+      $request,
+      $selectedSeatIds,
+      $ticketPayment,
+      $remainingSeats
+    );
 
     $tickets = (new GenerateTicketFromPayment(
       $paymentReference,
-      $seatIds
+      $seatIds,
+      $data['seats'] ?? []
     ))->run();
 
     return $this->apiRes($tickets);
@@ -92,18 +84,21 @@ class GenerateTicketController extends Controller
    * */
   private function getSeatIds(
     Request $request,
+    array|null $selectedSeatIds,
     TicketPayment $ticketPayment,
     int $remainingSeats
   ) {
-    if ($request->seat_ids && $request->quantity) {
+    if ($selectedSeatIds && $request->quantity) {
       return $this->handleQuantityAndSeatIds(
         $request,
+        $selectedSeatIds,
         $ticketPayment,
         $remainingSeats
       );
-    } elseif ($request->seat_ids) {
+    } elseif ($selectedSeatIds) {
       return $this->handleSeatIdsOnly(
         $request,
+        $selectedSeatIds,
         $ticketPayment,
         $remainingSeats
       );
@@ -121,15 +116,16 @@ class GenerateTicketController extends Controller
   /** @return int[] */
   private function handleSeatIdsOnly(
     Request $request,
+    array|null $selectedSeatIds,
     TicketPayment $ticketPayment,
     int $remainingSeats
   ) {
     abort_if(
-      $remainingSeats < count($request->seat_ids),
+      $remainingSeats < count($selectedSeatIds),
       403,
       'Your payment is not enough for the requested number of seats'
     );
-    return $request->seat_ids;
+    return $selectedSeatIds;
   }
 
   private function handleQuantityOnly(
@@ -148,22 +144,23 @@ class GenerateTicketController extends Controller
   /** @return int[] */
   private function handleQuantityAndSeatIds(
     Request $request,
+    array $selectedSeatIds,
     TicketPayment $ticketPayment,
     int $remainingSeats
   ) {
-    $count = count($request->seat_ids) + $request->quantity;
+    $count = count($selectedSeatIds) + $request->quantity;
     abort_if(
       $remainingSeats < $count,
       403,
       'Your payment is not enough for the requested number of seats'
     );
     $seatsForQuantity = GetAvailableSeats::run($ticketPayment->eventPackage)
-      ->whereNotIn('seats.id', $request->seat_ids)
+      ->whereNotIn('seats.id', $selectedSeatIds)
       ->oldest('seats.seat_no')
       ->take($request->quantity)
       ->pluck('seats.id')
       ->toArray();
-    return array_merge($request->seat_ids, $seatsForQuantity);
+    return array_merge($selectedSeatIds, $seatsForQuantity);
   }
 
   /** @return int[] */

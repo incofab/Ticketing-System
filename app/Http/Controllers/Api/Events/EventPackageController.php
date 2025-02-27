@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Event;
 use App\Models\EventPackage;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 /**
  * @group Event Packages
@@ -26,7 +27,17 @@ class EventPackageController extends Controller
     $data = $request->validate([
       'seat_section_id' => ['required', 'exists:seat_sections,id'],
       'price' => ['required', 'numeric'],
-      'entry_gate' => ['nullable', 'string']
+      'entry_gate' => ['nullable', 'string'],
+      'notes' => ['nullable', 'string'],
+      'capacity' => ['required', 'integer'],
+      'title' => [
+        'required',
+        'string',
+        Rule::unique('event_packages', 'title')->where(
+          'seat_section_id',
+          $request->seat_section_id
+        )
+      ]
     ]);
     $createdPackages = CreateUpdateEventPackage::run($event, [$data]);
     return $this->apiRes($createdPackages[0]);

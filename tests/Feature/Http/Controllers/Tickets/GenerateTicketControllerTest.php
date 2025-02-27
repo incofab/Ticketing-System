@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\EventAttendee;
 use App\Models\PaymentReference;
 use App\Models\Seat;
 use App\Models\Ticket;
@@ -44,17 +45,17 @@ beforeEach(function () {
 it('fails to generate tickets for an invalid payment reference', function () {
   postJson($this->url, [
     'reference' => 'invalid_reference',
-    'seat_ids' => [1]
+    'seats' => [['seat_id' => 1]]
   ])->assertStatus(404);
 });
 
 it('fails to generate tickets with invalid seat ids', function () {
   postJson($this->url, [
     'reference' => $this->paymentReference->reference,
-    'seat_ids' => ['invalid_seat_id']
+    'seats' => [['seat_id' => 'invalid_seat_id']]
   ])
     ->assertStatus(422)
-    ->assertJsonValidationErrors(['seat_ids.0']);
+    ->assertJsonValidationErrors(['seats.0.seat_id']);
 
   // Check that seat exist in the right section
   $this->eventPackage = $this->ticketPayment->eventPackage;
@@ -62,10 +63,10 @@ it('fails to generate tickets with invalid seat ids', function () {
 
   postJson($this->url, [
     'reference' => $this->paymentReference->reference,
-    'seat_ids' => [$seat->id]
+    'seats' => [['seat_id' => $seat->id]]
   ])
     ->assertStatus(422)
-    ->assertJsonValidationErrors(['seat_ids.0']);
+    ->assertJsonValidationErrors(['seats.0.seat_id']);
 });
 
 it('fails to generate tickets with already booked seats', function () {
@@ -76,10 +77,10 @@ it('fails to generate tickets with already booked seats', function () {
 
   postJson($this->url, [
     'reference' => $this->paymentReference->reference,
-    'seat_ids' => [$seat1->id]
+    'seats' => [['seat_id' => $seat1->id]]
   ])
     ->assertStatus(422)
-    ->assertJsonValidationErrors(['seat_ids.0']);
+    ->assertJsonValidationErrors(['seats.0.seat_id']);
 });
 
 it('generates tickets for a valid payment reference and seat ids', function () {
@@ -87,22 +88,30 @@ it('generates tickets for a valid payment reference and seat ids', function () {
   // Will fail is payment quantity is not enough
   postJson($this->url, [
     'reference' => $this->paymentReference->reference,
-    'seat_ids' => $seatIds
+    'seats' => $this->seats
+      ->map(fn($item) => ['seat_id' => $item->id])
+      ->toArray()
   ])->assertForbidden();
 
   $this->ticketPayment->fill(['quantity' => 4])->save();
 
   postJson($this->url, [
     'reference' => $this->paymentReference->reference,
-    'seat_ids' => $seatIds
+    'seats' => $this->seats
+      ->map(
+        fn($item) => [
+          'seat_id' => $item->id,
+          'attendee' => EventAttendee::factory()
+            ->make()
+            ->toArray()
+        ]
+      )
+      ->toArray()
   ])
     ->assertOk()
     ->assertJsonStructure($this->validStructure);
-  expect(
-    Ticket::whereIn('seat_id', $seatIds)
-      ->get()
-      ->count()
-  )->toBe(count($seatIds));
+  expect(Ticket::whereIn('seat_id', $seatIds)->count())->toBe(count($seatIds));
+  expect(EventAttendee::query()->count())->toBe(count($seatIds));
   // dd(json_encode(Ticket::query()->first()));
 });
 
@@ -112,14 +121,21 @@ it('handles duplicated seat Ids', function () {
 
   postJson($this->url, [
     'reference' => $this->paymentReference->reference,
-    'seat_ids' => $seatIds
+    'seats' => $this->seats
+      ->map(fn($item) => ['seat_id' => $item->id])
+      ->toArray()
   ])
     ->assertOk()
     ->assertJsonStructure($this->validStructure);
   postJson($this->url, [
     'reference' => $this->paymentReference->reference,
-    'seat_ids' => $seatIds
-  ])->assertJsonValidationErrorFor('seat_ids.0');
+    'seats' => $this->seats
+      ->map(fn($item) => ['seat_id' => $item->id])
+      ->toArray()
+  ])->assertJsonValidationErrors(
+    $this->seats->map(fn($item, $i) => "seats.$i.seat_id")->toArray()
+  );
+
   expect(
     Ticket::whereIn('seat_id', $seatIds)
       ->get()
@@ -142,18 +158,20 @@ it('generates tickets for seat quantity', function () {
 });
 
 it('generates tickets for seat ids and quantity', function () {
-  $seatIds = $this->seats->pluck('id')->toArray();
+  $seatData = $this->seats
+    ->map(fn($item) => ['seat_id' => $item->id])
+    ->toArray();
   $this->ticketPayment->fill(['quantity' => 4])->save();
   postJson($this->url, [
     'reference' => $this->paymentReference->reference,
     'quantity' => 2,
-    'seat_ids' => $seatIds
+    'seats' => $seatData
   ])->assertForbidden();
 
   postJson($this->url, [
     'reference' => $this->paymentReference->reference,
     'quantity' => 2,
-    'seat_ids' => array_splice($seatIds, 0, 2)
+    'seats' => array_splice($seatData, 0, 2)
   ])
     ->assertOk()
     ->assertJsonStructure($this->validStructure);

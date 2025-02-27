@@ -7,6 +7,59 @@ servers:
   -
     url: 'http://localhost'
 paths:
+  /api/admin/dashboard:
+    get:
+      summary: ''
+      operationId: getApiAdminDashboard
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Admin
+      security: []
+  '/api/admin/events/{event_id}/dashboard':
+    get:
+      summary: ''
+      operationId: getApiAdminEventsEvent_idDashboard
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Admin
+      security: []
+    parameters:
+      -
+        in: path
+        name: event_id
+        description: 'The ID of the event.'
+        example: 1
+        required: true
+        schema:
+          type: integer
   /api/login:
     post:
       summary: ''
@@ -26,11 +79,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: est
+                  example: in
                 password:
                   type: string
                   description: ''
-                  example: "K3V#9Pj'x{Ubz7Ml5"
+                  example: "?r#SK'x|;t"
               required:
                 - phone
                 - password
@@ -54,27 +107,27 @@ paths:
                 first_name:
                   type: integer
                   description: ''
-                  example: 15
+                  example: 20
                 last_name:
                   type: string
                   description: ''
-                  example: nam
+                  example: ea
                 other_names:
                   type: string
                   description: ''
-                  example: et
+                  example: odit
                 phone:
                   type: string
                   description: ''
-                  example: officiis
+                  example: in
                 email:
                   type: string
                   description: ''
-                  example: benjamin15@example.com
+                  example: mcronin@example.com
                 password:
                   type: string
                   description: ''
-                  example: '*E8Q14C-w>b[18cp'
+                  example: '?PZ''^G":?k'
               required:
                 - first_name
                 - last_name
@@ -122,7 +175,7 @@ paths:
                 event_id:
                   type: string
                   description: ''
-                  example: tempore
+                  example: nihil
                 image:
                   type: string
                   format: binary
@@ -130,7 +183,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: totam
+                  example: pariatur
               required:
                 - event_id
                 - image
@@ -151,7 +204,7 @@ paths:
         in: path
         name: eventImage_id
         description: 'The ID of the eventImage.'
-        example: 16
+        example: 8
         required: true
         schema:
           type: integer
@@ -618,18 +671,32 @@ paths:
                 seat_section_id:
                   type: string
                   description: ''
-                  example: amet
+                  example: aut
                 price:
                   type: number
                   description: ''
-                  example: 109816.6
+                  example: 108128.7713
                 entry_gate:
                   type: string
                   description: ''
-                  example: voluptatem
+                  example: quia
+                notes:
+                  type: string
+                  description: ''
+                  example: consequatur
+                capacity:
+                  type: integer
+                  description: ''
+                  example: 2
+                title:
+                  type: string
+                  description: ''
+                  example: illo
               required:
                 - seat_section_id
                 - price
+                - capacity
+                - title
       security: []
     parameters:
       -
@@ -936,19 +1003,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: pldbwzhx
+                  example: oao
                 description:
                   type: string
                   description: ''
-                  example: 'Optio hic aperiam animi maxime occaecati dolor enim ab.'
+                  example: 'Ut laboriosam voluptas vel.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2024-01-23T10:49:19'
+                  example: '2025-02-27T14:36:04'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2089-09-13'
+                  example: '2038-03-03'
               required:
                 - title
       security: []
@@ -980,19 +1047,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: aesgth
+                  example: kzimlzjwdfwledfyswdryuz
                 description:
                   type: string
                   description: ''
-                  example: 'Reiciendis tenetur facere est et officiis similique ipsum.'
+                  example: 'Veritatis itaque quia iste suscipit consequuntur magni et.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2024-01-23T10:49:19'
+                  example: '2025-02-27T14:36:04'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2028-12-10'
+                  example: '2105-01-14'
               required:
                 - title
       security: []
@@ -1063,22 +1130,22 @@ paths:
         -
           in: query
           name: sortKey
-          description: 'Represents the direction of the sort. Must be either of ASC|DESC.'
+          description: ''
           example: null
           required: false
           schema:
             type: string
-            description: 'Represents the direction of the sort. Must be either of ASC|DESC.'
+            description: ''
             example: null
         -
           in: query
           name: sortDir
-          description: string.
+          description: 'Represents the direction of the sort. ASC|DESC.'
           example: null
           required: false
           schema:
             type: string
-            description: string.
+            description: 'Represents the direction of the sort. ASC|DESC.'
             example: null
         -
           in: query
@@ -1134,7 +1201,7 @@ paths:
                         deleted_at: null
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
-                        expired: 0
+                        expired: 1
                         event_images: []
                         event_packages:
                           -
@@ -1195,7 +1262,7 @@ paths:
                             deleted_at: null
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
-                            expired: 0
+                            expired: 1
                             event_images: []
                             event_packages:
                               -
@@ -1246,7 +1313,7 @@ paths:
                               example: '2024-01-12T17:35:58.000000Z'
                             expired:
                               type: integer
-                              example: 0
+                              example: 1
                             event_images:
                               type: array
                               example: []
@@ -1385,21 +1452,9 @@ paths:
                   message: ''
                   data:
                     current_page: 1
-                    data:
-                      -
-                        id: 1
-                        event_season_id: 1
-                        title: 'Illum ex repudiandae sunt.'
-                        description: 'Sequi rerum aut magni ea qui est consequatur.'
-                        start_time: '2024-03-12T17:35:58.000000Z'
-                        end_time: '2024-04-12T17:35:58.000000Z'
-                        home_team: expedita
-                        away_team: unde
-                        deleted_at: null
-                        created_at: '2024-01-12T17:35:58.000000Z'
-                        updated_at: '2024-01-12T17:35:58.000000Z'
+                    data: []
                     first_page_url: 'http://localhost/api/events/upcoming/1?page=1'
-                    from: 1
+                    from: null
                     last_page: 1
                     last_page_url: 'http://localhost/api/events/upcoming/1?page=1'
                     links:
@@ -1419,8 +1474,8 @@ paths:
                     path: 'http://localhost/api/events/upcoming/1'
                     per_page: 100
                     prev_page_url: null
-                    to: 1
-                    total: 1
+                    to: null
+                    total: 0
                 properties:
                   message:
                     type: string
@@ -1433,61 +1488,13 @@ paths:
                         example: 1
                       data:
                         type: array
-                        example:
-                          -
-                            id: 1
-                            event_season_id: 1
-                            title: 'Illum ex repudiandae sunt.'
-                            description: 'Sequi rerum aut magni ea qui est consequatur.'
-                            start_time: '2024-03-12T17:35:58.000000Z'
-                            end_time: '2024-04-12T17:35:58.000000Z'
-                            home_team: expedita
-                            away_team: unde
-                            deleted_at: null
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                        items:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                              example: 1
-                            event_season_id:
-                              type: integer
-                              example: 1
-                            title:
-                              type: string
-                              example: 'Illum ex repudiandae sunt.'
-                            description:
-                              type: string
-                              example: 'Sequi rerum aut magni ea qui est consequatur.'
-                            start_time:
-                              type: string
-                              example: '2024-03-12T17:35:58.000000Z'
-                            end_time:
-                              type: string
-                              example: '2024-04-12T17:35:58.000000Z'
-                            home_team:
-                              type: string
-                              example: expedita
-                            away_team:
-                              type: string
-                              example: unde
-                            deleted_at:
-                              type: string
-                              example: null
-                            created_at:
-                              type: string
-                              example: '2024-01-12T17:35:58.000000Z'
-                            updated_at:
-                              type: string
-                              example: '2024-01-12T17:35:58.000000Z'
+                        example: []
                       first_page_url:
                         type: string
                         example: 'http://localhost/api/events/upcoming/1?page=1'
                       from:
-                        type: integer
-                        example: 1
+                        type: string
+                        example: null
                       last_page:
                         type: integer
                         example: 1
@@ -1534,11 +1541,11 @@ paths:
                         type: string
                         example: null
                       to:
-                        type: integer
-                        example: 1
+                        type: string
+                        example: null
                       total:
                         type: integer
-                        example: 1
+                        example: 0
       tags:
         - Events
       security: []
@@ -1798,31 +1805,31 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: mroq
+                  example: b
                 description:
                   type: string
                   description: ''
-                  example: 'Illum distinctio expedita autem reiciendis.'
+                  example: 'Ducimus accusantium corporis dolorum error velit consequatur ipsam voluptatem.'
                 start_time:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2024-01-23T10:49:19'
+                  example: '2025-02-27T14:36:04'
                 end_time:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>start_time</code>.'
-                  example: '2105-06-25'
+                  example: '2031-02-10'
                 home_team:
                   type: string
                   description: ''
-                  example: molestias
+                  example: repudiandae
                 away_team:
                   type: string
                   description: ''
-                  example: incidunt
+                  example: temporibus
                 event_packages:
                   type: array
                   description: 'Must have at least 1 items.'
-                  example: mcxvkxqwm
+                  example: oktcickrgwoameccmyzpssgmcmvfhzfqhhcmfig
                   items:
                     type: string
               required:
@@ -1857,27 +1864,27 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: odud
+                  example: fzslaajwimpfgmfh
                 description:
                   type: string
                   description: ''
-                  example: 'Nulla illo magni dolorem laudantium exercitationem libero.'
+                  example: 'Aut quibusdam dignissimos perspiciatis quibusdam tenetur in autem.'
                 start_time:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2024-01-23T10:49:19'
+                  example: '2025-02-27T14:36:04'
                 end_time:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>start_time</code>.'
-                  example: '2120-10-22'
+                  example: '2125-01-06'
                 home_team:
                   type: string
                   description: ''
-                  example: omnis
+                  example: magni
                 away_team:
                   type: string
                   description: ''
-                  example: dolorem
+                  example: aut
               required:
                 - title
                 - start_time
@@ -1949,22 +1956,22 @@ paths:
         -
           in: query
           name: sortKey
-          description: 'Represents the direction of the sort. Must be either of ASC|DESC.'
+          description: ''
           example: null
           required: false
           schema:
             type: string
-            description: 'Represents the direction of the sort. Must be either of ASC|DESC.'
+            description: ''
             example: null
         -
           in: query
           name: sortDir
-          description: string.
+          description: 'Represents the direction of the sort. ASC|DESC.'
           example: null
           required: false
           schema:
             type: string
-            description: string.
+            description: 'Represents the direction of the sort. ASC|DESC.'
             example: null
         -
           in: query
@@ -5112,6 +5119,46 @@ paths:
         required: true
         schema:
           type: integer
+  '/api/seats/{seatSection_id}':
+    post:
+      summary: ''
+      operationId: postApiSeatsSeatSection_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Seats
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                seat_no:
+                  type: string
+                  description: ''
+                  example: quibusdam
+                description:
+                  type: string
+                  description: ''
+                  example: 'Occaecati officia culpa aut quas suscipit.'
+                status:
+                  type: string
+                  description: ''
+                  example: null
+              required:
+                - seat_no
+      security: []
+    parameters:
+      -
+        in: path
+        name: seatSection_id
+        description: 'The ID of the seatSection.'
+        example: 1
+        required: true
+        schema:
+          type: integer
   /api/seat-sections/index:
     get:
       summary: ''
@@ -5667,19 +5714,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: mhhirvhhatbbesvlvzpoicah
+                  example: niiqqkdfjkqighxiuhnmxdk
                 description:
                   type: string
                   description: ''
-                  example: 'Et et delectus quis reiciendis vel est omnis.'
+                  example: 'Dolor doloremque quas voluptatem odit voluptas.'
                 features:
                   type: string
                   description: ''
-                  example: eius
+                  example: earum
                 capacity:
                   type: integer
                   description: ''
-                  example: 15
+                  example: 3
               required:
                 - title
                 - capacity
@@ -5712,27 +5759,27 @@ paths:
                 merchant:
                   type: string
                   description: ''
-                  example: quia
+                  example: consectetur
                 callback_url:
                   type: string
                   description: ''
-                  example: 'http://beer.com/iure-expedita-quibusdam-rerum-animi'
+                  example: 'http://www.hane.org/asperiores-et-dolor-quidem-amet-sapiente-et-nam'
                 quantity:
                   type: integer
                   description: 'Must be at least 1.'
-                  example: 24
+                  example: 12
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: xvbwzylaljmncpic
+                  example: nzdqrihbiiojwd
                 phone:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: lbfqjb
+                  example: lvfssczqgyeaxagcqkvy
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: josiane.greenholt@example.org
+                  example: vpadberg@example.org
               required:
                 - merchant
                 - quantity
@@ -5766,7 +5813,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: sed
+                  example: eos
               required:
                 - reference
       security: []
@@ -5789,22 +5836,65 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: dolorum
+                  example: sapiente
                 quantity:
                   type: integer
                   description: 'Must be at least 1.'
-                  example: 54
-                seat_ids:
+                  example: 86
+                seats:
                   type: array
-                  description: ''
-                  example:
-                    - hic
+                  description: 'Must have at least 1 items.'
+                  example: pszkhehradjyljmctvnuaimummymcjn
                   items:
                     type: string
               required:
                 - reference
-                - seat_ids
       security: []
+  '/api/tickets/{ticket_id}/event-attendees/create':
+    post:
+      summary: ''
+      operationId: postApiTicketsTicket_idEventAttendeesCreate
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Tickets
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: owmjnpxxovxkvzavkgw
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: xraynor@example.com
+                phone:
+                  type: string
+                  description: 'Must not be greater than 15 characters.'
+                  example: oiqvtqb
+                address:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: p
+              required:
+                - name
+                - email
+      security: []
+    parameters:
+      -
+        in: path
+        name: ticket_id
+        description: 'The ID of the ticket.'
+        example: 1
+        required: true
+        schema:
+          type: integer
   /api/tickets/retrieve:
     get:
       summary: ''
@@ -5836,7 +5926,7 @@ paths:
                       function: abort
                     -
                       file: /var/www/html/app/Http/Controllers/Api/Tickets/RetrieveTicketController.php
-                      line: 35
+                      line: 36
                       function: abort_if
                     -
                       file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Controller.php
@@ -6274,7 +6364,7 @@ paths:
                         function: abort
                       -
                         file: /var/www/html/app/Http/Controllers/Api/Tickets/RetrieveTicketController.php
-                        line: 35
+                        line: 36
                         function: abort_if
                       -
                         file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Controller.php
@@ -6714,11 +6804,11 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: eius
+                  example: et
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: boyd70@example.org
+                  example: nicolas.julia@example.com
               required:
                 - reference
                 - email
@@ -6742,23 +6832,23 @@ paths:
                 ticket_payment_id:
                   type: integer
                   description: ''
-                  example: 20
+                  example: 14
                 hash:
                   type: string
                   description: ''
-                  example: blanditiis
+                  example: in
                 reference:
                   type: string
                   description: ''
-                  example: eum
+                  example: quia
                 device_no:
                   type: string
                   description: ''
-                  example: nihil
+                  example: qui
                 event_id:
                   type: integer
                   description: ''
-                  example: 11
+                  example: 13
               required:
                 - ticket_payment_id
                 - hash
@@ -6785,7 +6875,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: quo
+                  example: hic
               required:
                 - reference
       security: []
@@ -6838,22 +6928,22 @@ paths:
         -
           in: query
           name: sortKey
-          description: 'Represents the direction of the sort. Must be either of ASC|DESC.'
-          example: null
-          required: false
-          schema:
-            type: string
-            description: 'Represents the direction of the sort. Must be either of ASC|DESC.'
-            example: null
-        -
-          in: query
-          name: sortDir
           description: string.
           example: null
           required: false
           schema:
             type: string
             description: string.
+            example: null
+        -
+          in: query
+          name: sortDir
+          description: 'Represents the direction of the sort. ASC|DESC.'
+          example: null
+          required: false
+          schema:
+            type: string
+            description: 'Represents the direction of the sort. ASC|DESC.'
             example: null
         -
           in: query
@@ -6902,6 +6992,9 @@ paths:
         - Tickets
       security: []
 tags:
+  -
+    name: Admin
+    description: ''
   -
     name: Authentication
     description: ''

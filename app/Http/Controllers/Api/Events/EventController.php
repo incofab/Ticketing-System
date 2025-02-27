@@ -79,7 +79,8 @@ class EventController extends Controller
         'required',
         'exists:seat_sections,id'
       ],
-      'event_packages.*.price' => ['required', 'numeric']
+      'event_packages.*.price' => ['required', 'numeric'],
+      'event_packages.*.title' => ['required', 'string']
     ]);
 
     $event = $eventSeason->events()->create(

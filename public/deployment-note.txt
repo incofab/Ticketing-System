@@ -1,0 +1,25 @@
+
+- Create endpoints for create/update for Seat and seat Section.
+
+- Add a column for notes to event_packages
+
+- Allow options to create multiple event packages for the same section. (will need a reference)
+
+- Metrics for dashboard
+  -- Seat count
+  -- Seat Section count
+  -- Events count
+  
+- Event dashboard
+  -- No of seats sold
+  -- No of seats not sold
+  -- Revenue generated
+  -- Event packages count
+  -- No of check ins
+
+
+- onboarding table to keep record of users attending the event. Logging their name, phone name and email
+  -- fetch onboarding record using ticket reference
+  -- endpoint to record onboarding data (with ticket reference)
+  -- record onboarded users
+  

@@ -1,11 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers as Web;
 use App\Http\Controllers\Api\Events;
 use App\Http\Controllers\Api\Seats;
 use App\Http\Controllers\Api\Tickets;
 use App\Http\Controllers\Api\Payments;
+use App\Http\Controllers\Api\Admin;
 use App\Http\Controllers\Auth;
 
 /*
@@ -26,9 +26,15 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/logout', [Auth\ApiAuthController::class, 'logout'])->name('logout');
 });
 
+Route::group(['prefix' => 'admin', 'middleware' => ['auth:sanctum', 'admin']], function () {
+    Route::get('/dashboard', [Admin\AdminController::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('/events/{event}/dashboard', [Admin\AdminController::class, 'eventDashboard'])->name('admin.event.dashboard');
+});
+
 Route::group(['prefix' => 'seats'], function () {
     Route::get('/index/{seatSection?}', [Seats\SeatController::class, 'index'])->name('seats.index');
     Route::get('/available/{eventPackage}', [Seats\SeatController::class, 'available'])->name('seats.available');
+    Route::post('/{seatSection}', [Seats\SeatController::class, 'store'])->name('seats.store');
 });
 
 Route::group(['prefix' => 'seat-sections'], function () {
@@ -76,6 +82,7 @@ Route::group(['prefix' => 'tickets'], function () {
     Route::post('/init-payment/{eventPackage}', Tickets\InitTicketPurchaseController::class)->name('tickets.init-payment');
     Route::post('/confirm-payment', Tickets\ConfirmPaymentController::class)->name('tickets.confirm-payment');
     Route::post('/generate-ticket', Tickets\GenerateTicketController::class)->name('tickets.generate');
+    Route::post('/{ticket}/event-attendees/create', Tickets\EventAttendeeController::class)->name('tickets.event-attendees.store');
     Route::get('/retrieve', Tickets\RetrieveTicketController::class)->name('tickets.retrieve');
     Route::group(['middleware' => ['auth:sanctum']], function () {
         Route::post('/verify', Tickets\VerifyTicketController::class)->name('tickets.verify');

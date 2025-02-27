@@ -20,11 +20,22 @@ class GenerateTicketFromPayment
   private int $numOfTicketsToGenerate;
 
   /**
-   * @param int[] $seatIds
+   * @param int[] $seatIds,
+   * @param PaymentReference $paymentReference
+   * @param array{
+   *  seat_id: int,
+   *  attendee: array{
+   *   name: string,
+   *   phone: string,
+   *   email: string,
+   *   address: string,
+   * }
+   * }[] $seatExtraData
    */
   function __construct(
     private PaymentReference $paymentReference,
-    private array $seatIds
+    private array $seatIds,
+    private array $seatExtraData = []
   ) {
     $this->ticketPayment = $paymentReference->paymentable;
     $this->ticketPayment->load('eventPackage.seatSection');
@@ -90,6 +101,9 @@ class GenerateTicketFromPayment
         'eventPackage.event.eventSeason',
         'ticketPayment'
       );
+
+      $this->recordAttendee($seatId, $generatedTicket);
+
       $tickets[] = $generatedTicket;
       if ($this->ticketPayment->email) {
         Mail::to($this->ticketPayment->email)->queue(
@@ -99,5 +113,20 @@ class GenerateTicketFromPayment
     }
     DB::commit();
     return $tickets;
+  }
+
+  private function recordAttendee($seatId, Ticket $ticket)
+  {
+    $attendeeData = [];
+    foreach ($this->seatExtraData as $key => $item) {
+      if ($item['seat_id'] == $seatId) {
+        $attendeeData = $item;
+        break;
+      }
+    }
+    if (empty($attendeeData['attendee'])) {
+      return;
+    }
+    RecordAttendee::run($ticket, $attendeeData['attendee']);
   }
 }
