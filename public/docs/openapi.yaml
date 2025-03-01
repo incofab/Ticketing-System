@@ -79,11 +79,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: ex
+                  example: et
                 password:
                   type: string
                   description: ''
-                  example: 'R5!|dVe`UtQ}'
+                  example: 'ndm\aA_!C7\{'
               required:
                 - phone
                 - password
@@ -107,27 +107,27 @@ paths:
                 first_name:
                   type: integer
                   description: ''
-                  example: 7
+                  example: 5
                 last_name:
                   type: string
                   description: ''
-                  example: incidunt
+                  example: est
                 other_names:
                   type: string
                   description: ''
-                  example: et
+                  example: eos
                 phone:
                   type: string
                   description: ''
-                  example: occaecati
+                  example: provident
                 email:
                   type: string
                   description: ''
-                  example: anika.bailey@example.net
+                  example: hdamore@example.com
                 password:
                   type: string
                   description: ''
-                  example: MKPp_@
+                  example: 2|m3GpdX
               required:
                 - first_name
                 - last_name
@@ -196,11 +196,11 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: fxraui
+                  example: jiofvrpfb
                 description:
                   type: string
                   description: ''
-                  example: 'Reiciendis facilis tenetur minus reiciendis temporibus non rem officia.'
+                  example: 'Soluta esse quia a consequatur odit et aut.'
               required:
                 - title
       security: []
@@ -223,11 +223,11 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: jvigmaontwvdwkcrtycu
+                  example: jknspovpzxrkxjfyykru
                 description:
                   type: string
                   description: ''
-                  example: 'Ut velit harum vel.'
+                  example: 'Laborum quia eveniet sed nihil deserunt ullam.'
               required:
                 - title
       security: []
@@ -268,7 +268,7 @@ paths:
                 event_id:
                   type: string
                   description: ''
-                  example: recusandae
+                  example: sunt
                 image:
                   type: string
                   format: binary
@@ -276,7 +276,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: libero
+                  example: dolores
               required:
                 - event_id
                 - image
@@ -297,7 +297,7 @@ paths:
         in: path
         name: eventImage_id
         description: 'The ID of the eventImage.'
-        example: 6
+        example: 20
         required: true
         schema:
           type: integer
@@ -784,27 +784,27 @@ paths:
                 seat_section_id:
                   type: string
                   description: ''
-                  example: necessitatibus
+                  example: assumenda
                 price:
                   type: number
                   description: ''
-                  example: 134742.114842
+                  example: 164340.81182447
                 entry_gate:
                   type: string
                   description: ''
-                  example: quaerat
+                  example: dolorum
                 notes:
                   type: string
                   description: ''
-                  example: alias
+                  example: sint
                 capacity:
                   type: integer
                   description: ''
-                  example: 13
+                  example: 17
                 title:
                   type: string
                   description: ''
-                  example: consequatur
+                  example: dicta
               required:
                 - seat_section_id
                 - price
@@ -1116,19 +1116,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: w
+                  example: uitcwhyory
                 description:
                   type: string
                   description: ''
-                  example: 'Recusandae suscipit odit excepturi consequatur.'
+                  example: 'Maiores sed placeat aut sit asperiores consectetur ut corrupti.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2025-03-01T18:23:38'
+                  example: '2025-03-01T19:53:33'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2090-03-27'
+                  example: '2032-09-27'
               required:
                 - title
       security: []
@@ -1160,19 +1160,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: goliawailbgkyeqgevqlgfyz
+                  example: otwqijxfbbco
                 description:
                   type: string
                   description: ''
-                  example: 'Maxime molestiae ut voluptatum.'
+                  example: 'Enim repudiandae accusamus excepturi tempore non natus.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2025-03-01T18:23:38'
+                  example: '2025-03-01T19:53:33'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2034-04-24'
+                  example: '2115-10-11'
               required:
                 - title
       security: []
@@ -1918,47 +1918,47 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: blymkpozgmaibbtlzyflmvlra
+                  example: l
                 description:
                   type: string
                   description: ''
-                  example: 'Tempora sunt laudantium voluptatem id.'
+                  example: 'Perspiciatis cumque vel minus est.'
                 start_time:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2025-03-01T18:23:38'
+                  example: '2025-03-01T19:53:33'
                 end_time:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>start_time</code>.'
-                  example: '2078-04-12'
+                  example: '2061-12-24'
                 home_team:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: oxownwbic
+                  example: myzuioygaxhfcwkxqzfx
                 away_team:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ehwklqwruwkvxqz
+                  example: tqmxgasg
                 venue:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: peyjbnmbdhnohdehpsfdpya
+                  example: bwmkhnqtzoxrwlmghjqzoypnl
                 phone:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: vdyelwurkmkjdia
+                  example: ulktrmh
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: pweimann@example.net
+                  example: halvorson.penelope@example.com
                 website:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: xcejw
+                  example: znmqwhdmotu
                 event_packages:
                   type: array
                   description: 'Must have at least 1 items.'
-                  example: auwopvdemrvaezpgaitjrmtjfagwtqxunfvhjdwchbwqowrbnvsnfvageblemyrspaztgzblmdtxnoizlf
+                  example: begauxxhrafrgvjbmxxiiljagvppakybjyaojrsugnzelmoiznlweemmczogylbylunrxrsbrcevatnqazbo
                   items:
                     type: string
               required:
@@ -1993,43 +1993,43 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: goa
+                  example: nxsehtglfgevcv
                 description:
                   type: string
                   description: ''
-                  example: 'Magni vitae laudantium quia maiores possimus qui illo.'
+                  example: 'Cumque sed ad perferendis quaerat quia ea.'
                 start_time:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2025-03-01T18:23:38'
+                  example: '2025-03-01T19:53:33'
                 end_time:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>start_time</code>.'
-                  example: '2110-08-19'
+                  example: '2080-05-13'
                 home_team:
                   type: string
                   description: ''
-                  example: laboriosam
+                  example: cupiditate
                 away_team:
                   type: string
                   description: ''
-                  example: at
+                  example: incidunt
                 venue:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: lqbdvnpxabxjo
+                  example: ltt
                 phone:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: rynhq
+                  example: hdvwt
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: anthony.bednar@example.com
+                  example: alyson50@example.net
                 website:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: msrqhzgrat
+                  example: jzfsrwn
               required:
                 - title
                 - start_time
@@ -5266,9 +5266,9 @@ paths:
           type: integer
   '/api/seats/{seatSection_id}':
     post:
-      summary: ''
-      operationId: postApiSeatsSeatSection_id
-      description: ''
+      summary: 'Store new seats in a seat section.'
+      operationId: storeNewSeatsInASeatSection
+      description: 'This endpoint allows you to create multiple seats within a specific seat section.'
       parameters: []
       responses: {  }
       tags:
@@ -5280,20 +5280,15 @@ paths:
             schema:
               type: object
               properties:
-                seat_no:
-                  type: string
-                  description: ''
-                  example: magnam
-                description:
-                  type: string
-                  description: ''
-                  example: 'Nisi ea voluptatibus rerum alias recusandae.'
-                status:
-                  type: string
-                  description: ''
-                  example: null
+                seats:
+                  type: array
+                  description: 'An array of seats to create.'
+                  example:
+                    - deserunt
+                  items:
+                    type: string
               required:
-                - seat_no
+                - seats
       security: []
     parameters:
       -
@@ -5859,19 +5854,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: tslbjd
+                  example: qkxxrchsekgviwzhdpmvue
                 description:
                   type: string
                   description: ''
-                  example: 'Harum magni et id impedit.'
+                  example: 'Reiciendis ratione libero provident reprehenderit facere rem.'
                 features:
                   type: string
                   description: ''
-                  example: recusandae
+                  example: vel
                 capacity:
                   type: integer
                   description: ''
-                  example: 18
+                  example: 11
               required:
                 - title
                 - capacity
@@ -5895,19 +5890,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: gxdq
+                  example: dfcitsbjjvkeykwijzyrzhgx
                 description:
                   type: string
                   description: ''
-                  example: 'Quod vel qui ipsam doloribus rerum possimus quisquam.'
+                  example: 'Temporibus amet amet non.'
                 features:
                   type: string
                   description: ''
-                  example: qui
+                  example: tempora
                 capacity:
                   type: integer
                   description: ''
-                  example: 15
+                  example: 9
               required:
                 - title
                 - capacity
@@ -5940,27 +5935,27 @@ paths:
                 merchant:
                   type: string
                   description: ''
-                  example: quo
+                  example: similique
                 callback_url:
                   type: string
                   description: ''
-                  example: 'http://metz.com/quia-atque-ullam-est-voluptate-praesentium-consequatur'
+                  example: 'http://monahan.com/autem-unde-assumenda-quasi-non-ut-est.html'
                 quantity:
                   type: integer
                   description: 'Must be at least 1.'
-                  example: 68
+                  example: 46
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: yleebwocsm
+                  example: dklwwoqxt
                 phone:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ezmykqcevu
+                  example: rhljrqdtdogbv
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: rath.finn@example.org
+                  example: misael.weber@example.net
               required:
                 - merchant
                 - quantity
@@ -5994,7 +5989,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: et
+                  example: quibusdam
               required:
                 - reference
       security: []
@@ -6017,15 +6012,15 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: nostrum
+                  example: mollitia
                 quantity:
                   type: integer
                   description: 'Must be at least 1.'
-                  example: 7
+                  example: 2
                 seats:
                   type: array
                   description: 'Must have at least 1 items.'
-                  example: zphzhgfowvbwtfkwqdfqjwflmpnstypabwkvstnolivhw
+                  example: 'y'
                   items:
                     type: string
               required:
@@ -6050,19 +6045,19 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: jofufdcarz
+                  example: pxqtbyblrxiorkqfbnubwtzyk
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: ajacobi@example.net
+                  example: klindgren@example.org
                 phone:
                   type: string
                   description: 'Must not be greater than 15 characters.'
-                  example: ipiuty
+                  example: afyde
                 address:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: iipupuscpcggxphn
+                  example: r
               required:
                 - name
                 - email
@@ -6985,11 +6980,11 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: magnam
+                  example: quasi
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: madelyn.hirthe@example.net
+                  example: gage.schamberger@example.net
               required:
                 - reference
                 - email
@@ -7013,23 +7008,23 @@ paths:
                 ticket_payment_id:
                   type: integer
                   description: ''
-                  example: 9
+                  example: 1
                 hash:
                   type: string
                   description: ''
-                  example: iusto
+                  example: alias
                 reference:
                   type: string
                   description: ''
-                  example: modi
+                  example: et
                 device_no:
                   type: string
                   description: ''
-                  example: est
+                  example: reiciendis
                 event_id:
                   type: integer
                   description: ''
-                  example: 14
+                  example: 15
               required:
                 - ticket_payment_id
                 - hash
@@ -7056,7 +7051,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: aperiam
+                  example: nihil
               required:
                 - reference
       security: []

@@ -16,7 +16,7 @@ use Illuminate\Validation\Rules\Enum;
  */
 class SeatController extends Controller
 {
-  public function index(Request $request, SeatSection $seatSection = null)
+  public function index(Request $request, SeatSection|null $seatSection = null)
   {
     $seatSections = Seat::query()->seatSectionId($seatSection?->id);
     return $this->apiRes(paginateFromRequest($seatSections));
@@ -28,17 +28,39 @@ class SeatController extends Controller
     return $this->apiRes(paginateFromRequest($query));
   }
 
+  /**
+   * Store new seats in a seat section.
+   *
+   * This endpoint allows you to create multiple seats within a specific seat section.
+   *
+   * @bodyParam seats array required An array of seats to create.
+   * @bodyParam seats[].seat_no string required The seat number (e.g., "A1", "B5").
+   * @bodyParam seats[].description string The seat description. Example: "Near the aisle"
+   * @bodyParam seats[].features string The seat features. Example: "Premium seat with extra legroom"
+   * @bodyParam seats[].status string The seat status. Possible values : available, reserved, blocked. Example: available
+   */
   function store(Request $request, SeatSection $seatSection)
   {
     $data = $request->validate([
-      'seat_no' => ['required', 'string'],
-      'description' => ['nullable', 'string'],
-      'status' => ['sometimes', new Enum(SeatStatus::class)]
+      'seats' => ['required', 'array', 'min:1'],
+      'seats.*.seat_no' => ['required', 'string'],
+      'seats.*.description' => ['nullable', 'string'],
+      'seats.*.features' => ['nullable', 'string'],
+      'seats.*.status' => ['sometimes', new Enum(SeatStatus::class)]
     ]);
 
-    $seat = $seatSection
-      ->seats()
-      ->firstOrCreate(['seat_no' => $data['seat_no']], $data);
-    return $this->apiRes($seat);
+    abort_if(
+      $seatSection->seats()->count() + count($data['seats']) >=
+        $seatSection->capacity,
+      403,
+      'Seat section is full'
+    );
+    $createdSeats = [];
+    foreach ($data['seats'] as $key => $seat) {
+      $createdSeats[] = $seatSection
+        ->seats()
+        ->firstOrCreate(['seat_no' => $seat['seat_no']], $seat);
+    }
+    return $this->apiRes($createdSeats, 'Seats created successfully');
   }
 }

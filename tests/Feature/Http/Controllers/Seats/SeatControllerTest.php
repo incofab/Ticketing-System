@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\SeatStatus;
 use App\Models\EventPackage;
 use App\Models\Seat;
 use App\Models\SeatSection;
@@ -7,6 +8,7 @@ use App\Models\Ticket;
 use App\Models\User;
 
 use function Pest\Laravel\getJson;
+use function Pest\Laravel\postJson;
 
 beforeEach(function () {
   $this->admin = User::factory()->create();
@@ -65,3 +67,64 @@ it('returns available seats for the designated event package', function () {
 });
 
 // Add more tests to cover different scenarios, such as no available seats, etc.
+
+it('can store a new seat in a seat section and handle validation', function () {
+  // Create a seat section with some capacity
+  $seatSection = SeatSection::factory()->create(['capacity' => 5]);
+
+  // Valid data
+  $validData = Seat::factory(2)
+    ->seatSection($seatSection)
+    ->make()
+    ->map(
+      fn($item) => collect($item)
+        ->except('seat_section_id')
+        ->toArray()
+    )
+    ->toArray();
+
+  // Test successful creation
+  postJson(route('api.seats.store', $seatSection), [
+    'seats' => $validData
+  ])->assertOk();
+  $this->assertDatabaseHas('seats', [
+    ...$validData[0],
+    'seat_section_id' => $seatSection->id
+  ]);
+  $this->assertDatabaseHas('seats', [
+    ...$validData[1],
+    'seat_section_id' => $seatSection->id
+  ]);
+
+  // Test creating a duplicate seat
+  postJson(route('api.seats.store', $seatSection), [
+    'seats' => $validData
+  ])->assertOk();
+  $this->assertDatabaseCount('seats', 2);
+
+  // Test creating the seat with just the required value
+  postJson(route('api.seats.store', $seatSection), [
+    'seats' => [['seat_no' => 'A2']]
+  ])->assertOk();
+  $this->assertDatabaseHas('seats', [
+    'seat_section_id' => $seatSection->id,
+    'seat_no' => 'A2',
+    'description' => null,
+    'status' => SeatStatus::Available->value
+  ]);
+
+  // Test validation: seat_no required
+  postJson(route('api.seats.store', $seatSection), [
+    'seats' => [['description' => 'test']]
+  ])
+    ->assertStatus(422)
+    ->assertJsonValidationErrors('seats.0.seat_no');
+
+  $seatSection->fill(['capacity' => SeatSection::query()->count()])->save();
+  // Test section full
+  postJson(route('api.seats.store', $seatSection), [
+    'seats' => [['seat_no' => 'A6']]
+  ])
+    ->assertStatus(403)
+    ->assertSee('Seat section is full');
+});

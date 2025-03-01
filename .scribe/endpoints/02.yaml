@@ -112,8 +112,8 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'Store new seats in a seat section.'
+      description: 'This endpoint allows you to create multiple seats within a specific seat section.'
       authenticated: false
       custom: []
     headers:
@@ -134,36 +134,55 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      seat_no:
-        name: seat_no
-        description: ''
+      seats:
+        name: seats
+        description: 'An array of seats to create.'
         required: true
-        example: magnam
+        example:
+          - deserunt
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      'seats[].seat_no':
+        name: 'seats[].seat_no'
+        description: 'The seat number (e.g., "A1", "B5").'
+        required: true
+        example: rerum
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      description:
-        name: description
-        description: ''
+      'seats[].description':
+        name: 'seats[].description'
+        description: 'The seat description.'
         required: false
-        example: 'Nisi ea voluptatibus rerum alias recusandae.'
+        example: '"Near the aisle"'
         type: string
         enumValues: []
-        exampleWasSpecified: false
+        exampleWasSpecified: true
         custom: []
-      status:
-        name: status
-        description: ''
+      'seats[].features':
+        name: 'seats[].features'
+        description: 'The seat features.'
         required: false
-        example: null
+        example: '"Premium seat with extra legroom"'
         type: string
         enumValues: []
-        exampleWasSpecified: false
+        exampleWasSpecified: true
+        custom: []
+      'seats[].status':
+        name: 'seats[].status'
+        description: 'The seat status. Possible values : available, reserved, blocked.'
+        required: false
+        example: available
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
         custom: []
     cleanBodyParameters:
-      seat_no: magnam
-      description: 'Nisi ea voluptatibus rerum alias recusandae.'
+      seats:
+        - deserunt
     fileParameters: []
     responses: []
     responseFields: []
@@ -238,7 +257,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: tslbjd
+        example: qkxxrchsekgviwzhdpmvue
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -247,7 +266,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Harum magni et id impedit.'
+        example: 'Reiciendis ratione libero provident reprehenderit facere rem.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -256,7 +275,7 @@ endpoints:
         name: features
         description: ''
         required: false
-        example: recusandae
+        example: vel
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -265,16 +284,16 @@ endpoints:
         name: capacity
         description: ''
         required: true
-        example: 18
+        example: 11
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: tslbjd
-      description: 'Harum magni et id impedit.'
-      features: recusandae
-      capacity: 18
+      title: qkxxrchsekgviwzhdpmvue
+      description: 'Reiciendis ratione libero provident reprehenderit facere rem.'
+      features: vel
+      capacity: 11
     fileParameters: []
     responses: []
     responseFields: []
@@ -318,7 +337,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: gxdq
+        example: dfcitsbjjvkeykwijzyrzhgx
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -327,7 +346,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Quod vel qui ipsam doloribus rerum possimus quisquam.'
+        example: 'Temporibus amet amet non.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -336,7 +355,7 @@ endpoints:
         name: features
         description: ''
         required: false
-        example: qui
+        example: tempora
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -345,16 +364,16 @@ endpoints:
         name: capacity
         description: ''
         required: true
-        example: 15
+        example: 9
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: gxdq
-      description: 'Quod vel qui ipsam doloribus rerum possimus quisquam.'
-      features: qui
-      capacity: 15
+      title: dfcitsbjjvkeykwijzyrzhgx
+      description: 'Temporibus amet amet non.'
+      features: tempora
+      capacity: 9
     fileParameters: []
     responses: []
     responseFields: []

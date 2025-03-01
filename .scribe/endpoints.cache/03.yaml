@@ -67,7 +67,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: fxraui
+        example: jiofvrpfb
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -76,14 +76,14 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Reiciendis facilis tenetur minus reiciendis temporibus non rem officia.'
+        example: 'Soluta esse quia a consequatur odit et aut.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: fxraui
-      description: 'Reiciendis facilis tenetur minus reiciendis temporibus non rem officia.'
+      title: jiofvrpfb
+      description: 'Soluta esse quia a consequatur odit et aut.'
     fileParameters: []
     responses: []
     responseFields: []
@@ -128,7 +128,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: jvigmaontwvdwkcrtycu
+        example: jknspovpzxrkxjfyykru
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -137,14 +137,14 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Ut velit harum vel.'
+        example: 'Laborum quia eveniet sed nihil deserunt ullam.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: jvigmaontwvdwkcrtycu
-      description: 'Ut velit harum vel.'
+      title: jknspovpzxrkxjfyykru
+      description: 'Laborum quia eveniet sed nihil deserunt ullam.'
     fileParameters: []
     responses: []
     responseFields: []
