@@ -20,6 +20,24 @@ class SeatSectionController extends Controller
     return $this->apiRes($seatSections);
   }
 
+  public function store(Request $request)
+  {
+    $data = $request->validate([
+      'title' => [
+        'required',
+        'string',
+        'max:255',
+        'unique:seat_sections,title'
+      ],
+      'description' => ['nullable', 'string'],
+      'features' => ['nullable', 'string'],
+      'capacity' => ['required', 'integer']
+    ]);
+
+    $seatSection = SeatSection::query()->create($data);
+    return $this->apiRes($seatSection);
+  }
+
   public function update(Request $request, SeatSection $seatSection)
   {
     $data = $request->validate([

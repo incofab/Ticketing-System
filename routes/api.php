@@ -41,6 +41,7 @@ Route::group(['prefix' => 'seats'], function () {
 Route::group(['prefix' => 'seat-sections'], function () {
     Route::get('/index', [Seats\SeatSectionController::class, 'index'])->name('seat-sections.index');
     Route::group(['middleware' => ['auth:sanctum']], function () {
+        Route::post('', [Seats\SeatSectionController::class, 'store'])->name('seat-sections.store');
         Route::post('/{seatSection}/update', [Seats\SeatSectionController::class, 'update'])->name('seat-sections.update');
     });
 });

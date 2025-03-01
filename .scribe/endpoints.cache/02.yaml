@@ -140,7 +140,7 @@ endpoints:
         name: seat_no
         description: ''
         required: true
-        example: et
+        example: magnam
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -149,7 +149,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Vel id modi iure officia error assumenda sapiente quod.'
+        example: 'Nisi ea voluptatibus rerum alias recusandae.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -164,8 +164,8 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      seat_no: et
-      description: 'Vel id modi iure officia error assumenda sapiente quod.'
+      seat_no: magnam
+      description: 'Nisi ea voluptatibus rerum alias recusandae.'
     fileParameters: []
     responses: []
     responseFields: []
@@ -218,6 +218,76 @@ endpoints:
   -
     httpMethods:
       - POST
+    uri: api/seat-sections
+    metadata:
+      groupName: Seats
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: tslbjd
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: false
+        example: 'Harum magni et id impedit.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      features:
+        name: features
+        description: ''
+        required: false
+        example: recusandae
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      capacity:
+        name: capacity
+        description: ''
+        required: true
+        example: 18
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      title: tslbjd
+      description: 'Harum magni et id impedit.'
+      features: recusandae
+      capacity: 18
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
     uri: 'api/seat-sections/{seatSection_id}/update'
     metadata:
       groupName: Seats
@@ -250,7 +320,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: zgepbuuizhrgtkuqkt
+        example: gxdq
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -259,7 +329,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Error reiciendis sint omnis sapiente impedit veritatis deserunt.'
+        example: 'Quod vel qui ipsam doloribus rerum possimus quisquam.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -268,7 +338,7 @@ endpoints:
         name: features
         description: ''
         required: false
-        example: et
+        example: qui
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -277,16 +347,16 @@ endpoints:
         name: capacity
         description: ''
         required: true
-        example: 9
+        example: 15
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: zgepbuuizhrgtkuqkt
-      description: 'Error reiciendis sint omnis sapiente impedit veritatis deserunt.'
-      features: et
-      capacity: 9
+      title: gxdq
+      description: 'Quod vel qui ipsam doloribus rerum possimus quisquam.'
+      features: qui
+      capacity: 15
     fileParameters: []
     responses: []
     responseFields: []

@@ -77,7 +77,7 @@ class EventController extends Controller
       'venue' => ['nullable', 'string', 'max:255'],
       'phone' => ['nullable', 'string', 'max:255'],
       'email' => ['nullable', 'email', 'max:255'],
-      'website' => ['nullable', 'email', 'max:255'],
+      'website' => ['nullable', 'string', 'max:255'],
       'event_packages' => ['nullable', 'array', 'min:1'],
       'event_packages.*.seat_section_id' => [
         'required',
@@ -115,7 +115,7 @@ class EventController extends Controller
       'venue' => ['nullable', 'string', 'max:255'],
       'phone' => ['nullable', 'string', 'max:255'],
       'email' => ['nullable', 'email', 'max:255'],
-      'website' => ['nullable', 'email', 'max:255']
+      'website' => ['nullable', 'string', 'max:255']
     ]);
 
     $event->fill($data)->save();

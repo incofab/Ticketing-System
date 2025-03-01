@@ -22,6 +22,17 @@ it('can get a list of seat sections', function () {
     ]);
 });
 
+it('can create a new seat section', function () {
+  $postData = SeatSection::factory()
+    ->make()
+    ->toArray();
+  $response = actingAs($this->admin)->postJson(
+    route('api.seat-sections.store'),
+    $postData
+  );
+  $response->assertOk()->assertJsonFragment($postData);
+});
+
 it('can update an existing seat section', function () {
   $seatSection = SeatSection::factory()->create();
   $postData = [

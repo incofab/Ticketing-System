@@ -263,7 +263,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: vfouehcjnqqwfxn
+        example: blymkpozgmaibbtlzyflmvlra
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -272,7 +272,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Expedita odio repudiandae quibusdam fugiat.'
+        example: 'Tempora sunt laudantium voluptatem id.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -281,7 +281,7 @@ endpoints:
         name: start_time
         description: 'Must be a valid date.'
         required: true
-        example: '2025-03-01T17:20:35'
+        example: '2025-03-01T18:23:38'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -290,7 +290,7 @@ endpoints:
         name: end_time
         description: 'Must be a valid date. Must be a date after <code>start_time</code>.'
         required: false
-        example: '2071-11-22'
+        example: '2078-04-12'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -299,7 +299,7 @@ endpoints:
         name: home_team
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: rbcv
+        example: oxownwbic
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -308,7 +308,7 @@ endpoints:
         name: away_team
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: nepampeomjqrysuuy
+        example: ehwklqwruwkvxqz
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -317,7 +317,7 @@ endpoints:
         name: venue
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: yytnirov
+        example: peyjbnmbdhnohdehpsfdpya
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -326,7 +326,7 @@ endpoints:
         name: phone
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: yqefnf
+        example: vdyelwurkmkjdia
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -335,16 +335,16 @@ endpoints:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: false
-        example: santino.abernathy@example.net
+        example: pweimann@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
       website:
         name: website
-        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        description: 'Must not be greater than 255 characters.'
         required: false
-        example: yyjtejbezwprgel
+        example: xcejw
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -353,7 +353,7 @@ endpoints:
         name: event_packages
         description: 'Must have at least 1 items.'
         required: false
-        example: fgeicvmfegancdbhrbinbonbncvdmd
+        example: auwopvdemrvaezpgaitjrmtjfagwtqxunfvhjdwchbwqowrbnvsnfvageblemyrspaztgzblmdtxnoizlf
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -362,7 +362,7 @@ endpoints:
         name: 'event_packages[].seat_section_id'
         description: ''
         required: true
-        example: aut
+        example: dolorum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -371,7 +371,7 @@ endpoints:
         name: 'event_packages[].price'
         description: ''
         required: true
-        example: 2010496.3614
+        example: 34.766
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -380,23 +380,23 @@ endpoints:
         name: 'event_packages[].title'
         description: ''
         required: true
-        example: expedita
+        example: animi
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: vfouehcjnqqwfxn
-      description: 'Expedita odio repudiandae quibusdam fugiat.'
-      start_time: '2025-03-01T17:20:35'
-      end_time: '2071-11-22'
-      home_team: rbcv
-      away_team: nepampeomjqrysuuy
-      venue: yytnirov
-      phone: yqefnf
-      email: santino.abernathy@example.net
-      website: yyjtejbezwprgel
-      event_packages: fgeicvmfegancdbhrbinbonbncvdmd
+      title: blymkpozgmaibbtlzyflmvlra
+      description: 'Tempora sunt laudantium voluptatem id.'
+      start_time: '2025-03-01T18:23:38'
+      end_time: '2078-04-12'
+      home_team: oxownwbic
+      away_team: ehwklqwruwkvxqz
+      venue: peyjbnmbdhnohdehpsfdpya
+      phone: vdyelwurkmkjdia
+      email: pweimann@example.net
+      website: xcejw
+      event_packages: auwopvdemrvaezpgaitjrmtjfagwtqxunfvhjdwchbwqowrbnvsnfvageblemyrspaztgzblmdtxnoizlf
     fileParameters: []
     responses: []
     responseFields: []
@@ -440,7 +440,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: emnhglymxtnxlgergccebqlbs
+        example: goa
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -449,7 +449,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Ut atque asperiores eius illum.'
+        example: 'Magni vitae laudantium quia maiores possimus qui illo.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -458,7 +458,7 @@ endpoints:
         name: start_time
         description: 'Must be a valid date.'
         required: true
-        example: '2025-03-01T17:20:35'
+        example: '2025-03-01T18:23:38'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -467,7 +467,7 @@ endpoints:
         name: end_time
         description: 'Must be a valid date. Must be a date after <code>start_time</code>.'
         required: false
-        example: '2119-07-22'
+        example: '2110-08-19'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -476,7 +476,7 @@ endpoints:
         name: home_team
         description: ''
         required: false
-        example: qui
+        example: laboriosam
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -485,7 +485,7 @@ endpoints:
         name: away_team
         description: ''
         required: false
-        example: ipsam
+        example: at
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -494,7 +494,7 @@ endpoints:
         name: venue
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: aznpmqjckfmmbffmsczisme
+        example: lqbdvnpxabxjo
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -503,7 +503,7 @@ endpoints:
         name: phone
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: vggpynvptubutkmdyj
+        example: rynhq
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -512,31 +512,31 @@ endpoints:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: false
-        example: tracey35@example.com
+        example: anthony.bednar@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
       website:
         name: website
-        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        description: 'Must not be greater than 255 characters.'
         required: false
-        example: vjvrhu
+        example: msrqhzgrat
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: emnhglymxtnxlgergccebqlbs
-      description: 'Ut atque asperiores eius illum.'
-      start_time: '2025-03-01T17:20:35'
-      end_time: '2119-07-22'
-      home_team: qui
-      away_team: ipsam
-      venue: aznpmqjckfmmbffmsczisme
-      phone: vggpynvptubutkmdyj
-      email: tracey35@example.com
-      website: vjvrhu
+      title: goa
+      description: 'Magni vitae laudantium quia maiores possimus qui illo.'
+      start_time: '2025-03-01T18:23:38'
+      end_time: '2110-08-19'
+      home_team: laboriosam
+      away_team: at
+      venue: lqbdvnpxabxjo
+      phone: rynhq
+      email: anthony.bednar@example.com
+      website: msrqhzgrat
     fileParameters: []
     responses: []
     responseFields: []
