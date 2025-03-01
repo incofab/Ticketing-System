@@ -27,7 +27,7 @@ class EventController extends Controller
    * @queryParam date_from string. No-example
    * @queryParam date_to string. No-example
    */
-  public function index(Request $request, EventSeason $eventSeason = null)
+  public function index(Request $request, EventSeason|null $eventSeason = null)
   {
     $query = $eventSeason ? $eventSeason->events()->getQuery() : Event::query();
 
@@ -42,7 +42,7 @@ class EventController extends Controller
     );
   }
 
-  public function upcomingEvents(EventSeason $eventSeason = null)
+  public function upcomingEvents(EventSeason|null $eventSeason = null)
   {
     $query = $eventSeason ? $eventSeason->events()->getQuery() : Event::query();
 

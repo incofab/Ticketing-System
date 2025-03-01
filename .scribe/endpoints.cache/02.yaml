@@ -140,7 +140,7 @@ endpoints:
         name: seat_no
         description: ''
         required: true
-        example: quibusdam
+        example: et
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -149,7 +149,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Occaecati officia culpa aut quas suscipit.'
+        example: 'Vel id modi iure officia error assumenda sapiente quod.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -164,8 +164,8 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      seat_no: quibusdam
-      description: 'Occaecati officia culpa aut quas suscipit.'
+      seat_no: et
+      description: 'Vel id modi iure officia error assumenda sapiente quod.'
     fileParameters: []
     responses: []
     responseFields: []
@@ -250,7 +250,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: niiqqkdfjkqighxiuhnmxdk
+        example: zgepbuuizhrgtkuqkt
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -259,7 +259,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Dolor doloremque quas voluptatem odit voluptas.'
+        example: 'Error reiciendis sint omnis sapiente impedit veritatis deserunt.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -268,7 +268,7 @@ endpoints:
         name: features
         description: ''
         required: false
-        example: earum
+        example: et
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -277,16 +277,16 @@ endpoints:
         name: capacity
         description: ''
         required: true
-        example: 3
+        example: 9
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: niiqqkdfjkqighxiuhnmxdk
-      description: 'Dolor doloremque quas voluptatem odit voluptas.'
-      features: earum
-      capacity: 3
+      title: zgepbuuizhrgtkuqkt
+      description: 'Error reiciendis sint omnis sapiente impedit veritatis deserunt.'
+      features: et
+      capacity: 9
     fileParameters: []
     responses: []
     responseFields: []

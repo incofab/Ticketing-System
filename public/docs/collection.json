@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Rangers Ticketing System",
-        "_postman_id": "c619a4ee-9382-457e-8609-883be7e40e70",
+        "_postman_id": "9c27a9e6-92db-4b99-a07b-c549a147285a",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -151,7 +151,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone\":\"in\",\"password\":\"?r#SK'x|;t\"}"
+                            "raw": "{\"phone\":\"vel\",\"password\":\"yS2mFZIg\"}"
                         },
                         "description": "",
                         "auth": {
@@ -182,7 +182,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":20,\"last_name\":\"ea\",\"other_names\":\"odit\",\"phone\":\"in\",\"email\":\"mcronin@example.com\",\"password\":\"?PZ'^G\\\":?k\"}"
+                            "raw": "{\"first_name\":12,\"last_name\":\"quam\",\"other_names\":\"animi\",\"phone\":\"et\",\"email\":\"bogan.tod@example.org\",\"password\":\"TWxW_#y-^hQv6b\"}"
                         },
                         "description": "",
                         "auth": {
@@ -242,6 +242,166 @@
             ]
         },
         {
+            "name": "Event Category",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/event-categories",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/event-categories",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/event-categories"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/event-categories",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/event-categories",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/event-categories"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"eguugrekdkyrzfpf\",\"description\":\"Fugiat dignissimos incidunt corrupti eius.\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PUT api\/event-categories\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/event-categories\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/event-categories\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the event category."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"omtfdvvivhxagxjcyliwy\",\"description\":\"Voluptatem dolor nulla labore quaerat.\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE api\/event-categories\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/event-categories\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/event-categories\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the event category."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
             "name": "Event Images",
             "description": "",
             "item": [
@@ -270,13 +430,13 @@
                             "formdata": [
                                 {
                                     "key": "event_id",
-                                    "value": "nihil",
+                                    "value": "illum",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "reference",
-                                    "value": "pariatur",
+                                    "value": "quia",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -306,7 +466,7 @@
                                 {
                                     "id": "eventImage_id",
                                     "key": "eventImage_id",
-                                    "value": "8",
+                                    "value": "15",
                                     "description": "The ID of the eventImage."
                                 }
                             ]
@@ -342,8 +502,21 @@
                         "url": {
                             "host": "{{baseUrl}}",
                             "path": "api\/event-packages\/index",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/event-packages\/index"
+                            "query": [
+                                {
+                                    "key": "event",
+                                    "value": "",
+                                    "description": "",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "seatSection",
+                                    "value": "",
+                                    "description": "",
+                                    "disabled": true
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/event-packages\/index?event=&seatSection="
                         },
                         "method": "GET",
                         "header": [
@@ -422,7 +595,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"seat_section_id\":\"aut\",\"price\":108128.7713,\"entry_gate\":\"quia\",\"notes\":\"consequatur\",\"capacity\":2,\"title\":\"illo\"}"
+                            "raw": "{\"seat_section_id\":\"eaque\",\"price\":87631.47213,\"entry_gate\":\"labore\",\"notes\":\"alias\",\"capacity\":6,\"title\":\"sed\"}"
                         },
                         "description": "",
                         "auth": {
@@ -631,7 +804,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"oao\",\"description\":\"Ut laboriosam voluptas vel.\",\"date_from\":\"2025-02-27T14:36:04\",\"date_to\":\"2038-03-03\"}"
+                            "raw": "{\"title\":\"jonmyhhoayjt\",\"description\":\"Nulla voluptates qui optio cum.\",\"date_from\":\"2025-03-01T17:20:35\",\"date_to\":\"2064-07-28\"}"
                         },
                         "description": "",
                         "auth": {
@@ -670,7 +843,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"kzimlzjwdfwledfyswdryuz\",\"description\":\"Veritatis itaque quia iste suscipit consequuntur magni et.\",\"date_from\":\"2025-02-27T14:36:04\",\"date_to\":\"2105-01-14\"}"
+                            "raw": "{\"title\":\"kpycbpicdfurqek\",\"description\":\"Qui iure quisquam nemo aut in qui earum corporis.\",\"date_from\":\"2025-03-01T17:20:35\",\"date_to\":\"2073-10-01\"}"
                         },
                         "description": "",
                         "auth": {
@@ -992,7 +1165,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"b\",\"description\":\"Ducimus accusantium corporis dolorum error velit consequatur ipsam voluptatem.\",\"start_time\":\"2025-02-27T14:36:04\",\"end_time\":\"2031-02-10\",\"home_team\":\"repudiandae\",\"away_team\":\"temporibus\",\"event_packages\":\"oktcickrgwoameccmyzpssgmcmvfhzfqhhcmfig\"}"
+                            "raw": "{\"title\":\"vfouehcjnqqwfxn\",\"description\":\"Expedita odio repudiandae quibusdam fugiat.\",\"start_time\":\"2025-03-01T17:20:35\",\"end_time\":\"2071-11-22\",\"home_team\":\"rbcv\",\"away_team\":\"nepampeomjqrysuuy\",\"venue\":\"yytnirov\",\"phone\":\"yqefnf\",\"email\":\"santino.abernathy@example.net\",\"website\":\"yyjtejbezwprgel\",\"event_packages\":\"fgeicvmfegancdbhrbinbonbncvdmd\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1031,7 +1204,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"fzslaajwimpfgmfh\",\"description\":\"Aut quibusdam dignissimos perspiciatis quibusdam tenetur in autem.\",\"start_time\":\"2025-02-27T14:36:04\",\"end_time\":\"2125-01-06\",\"home_team\":\"magni\",\"away_team\":\"aut\"}"
+                            "raw": "{\"title\":\"emnhglymxtnxlgergccebqlbs\",\"description\":\"Ut atque asperiores eius illum.\",\"start_time\":\"2025-03-01T17:20:35\",\"end_time\":\"2119-07-22\",\"home_team\":\"qui\",\"away_team\":\"ipsam\",\"venue\":\"aznpmqjckfmmbffmsczisme\",\"phone\":\"vggpynvptubutkmdyj\",\"email\":\"tracey35@example.com\",\"website\":\"vjvrhu\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1351,7 +1524,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"seat_no\":\"quibusdam\",\"description\":\"Occaecati officia culpa aut quas suscipit.\"}"
+                            "raw": "{\"seat_no\":\"et\",\"description\":\"Vel id modi iure officia error assumenda sapiente quod.\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1446,7 +1619,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"niiqqkdfjkqighxiuhnmxdk\",\"description\":\"Dolor doloremque quas voluptatem odit voluptas.\",\"features\":\"earum\",\"capacity\":3}"
+                            "raw": "{\"title\":\"zgepbuuizhrgtkuqkt\",\"description\":\"Error reiciendis sint omnis sapiente impedit veritatis deserunt.\",\"features\":\"et\",\"capacity\":9}"
                         },
                         "description": "",
                         "auth": {
@@ -1491,7 +1664,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"merchant\":\"consectetur\",\"callback_url\":\"http:\\\/\\\/www.hane.org\\\/asperiores-et-dolor-quidem-amet-sapiente-et-nam\",\"quantity\":12,\"name\":\"nzdqrihbiiojwd\",\"phone\":\"lvfssczqgyeaxagcqkvy\",\"email\":\"vpadberg@example.org\"}"
+                            "raw": "{\"merchant\":\"eos\",\"callback_url\":\"https:\\\/\\\/cronin.com\\\/qui-quam-quis-reprehenderit-molestias-quae-praesentium.html\",\"quantity\":80,\"name\":\"zyubkse\",\"phone\":\"l\",\"email\":\"gusikowski.lorenza@example.com\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1522,7 +1695,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"reference\":\"eos\"}"
+                            "raw": "{\"reference\":\"itaque\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1553,7 +1726,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"reference\":\"sapiente\",\"quantity\":86,\"seats\":[{\"attendee\":{\"name\":\"dolores\",\"email\":\"dietrich.anna@example.org\",\"phone\":\"autem\",\"address\":\"magni\"}}]}"
+                            "raw": "{\"reference\":\"ut\",\"quantity\":17,\"seats\":[{\"attendee\":{\"name\":\"dolorem\",\"email\":\"mconroy@example.net\",\"phone\":\"est\",\"address\":\"vitae\"}}]}"
                         },
                         "description": "",
                         "auth": {
@@ -1592,7 +1765,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"owmjnpxxovxkvzavkgw\",\"email\":\"xraynor@example.com\",\"phone\":\"oiqvtqb\",\"address\":\"p\"}"
+                            "raw": "{\"name\":\"qiuhdauqahuxdfg\",\"email\":\"johnathon.brown@example.net\",\"phone\":\"ubnpgankfyr\",\"address\":\"amsbvjbblwcryqcnlswx\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1623,7 +1796,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"reference\":\"et\",\"email\":\"nicolas.julia@example.com\"}"
+                            "raw": "{\"reference\":\"facere\",\"email\":\"brianne56@example.net\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1682,7 +1855,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"ticket_payment_id\":14,\"hash\":\"in\",\"reference\":\"quia\",\"device_no\":\"qui\",\"event_id\":13}"
+                            "raw": "{\"ticket_payment_id\":6,\"hash\":\"architecto\",\"reference\":\"illum\",\"device_no\":\"unde\",\"event_id\":8}"
                         },
                         "description": "",
                         "auth": {
@@ -1713,7 +1886,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"reference\":\"hic\"}"
+                            "raw": "{\"reference\":\"optio\"}"
                         },
                         "description": "",
                         "auth": {

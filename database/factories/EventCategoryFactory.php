@@ -9,7 +9,9 @@ class EventCategoryFactory extends Factory
   public function definition(): array
   {
     return [
-      'title' => fake()->sentence(),
+      'title' => fake()
+        ->unique()
+        ->sentence(),
       'description' => fake()->sentence(10)
     ];
   }

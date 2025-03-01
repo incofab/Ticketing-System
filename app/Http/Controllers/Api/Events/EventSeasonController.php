@@ -13,7 +13,7 @@ use Illuminate\Validation\Rule;
  */
 class EventSeasonController extends Controller
 {
-  public function index(EventCategory $eventCategory = null)
+  public function index(EventCategory|null $eventCategory = null)
   {
     $eventSeasons = $eventCategory
       ? $eventCategory->eventSeasons()
@@ -21,7 +21,7 @@ class EventSeasonController extends Controller
     return $this->apiRes(paginateFromRequest($eventSeasons));
   }
 
-  public function upcomingSeason(EventCategory $eventCategory = null)
+  public function upcomingSeason(EventCategory|null $eventCategory = null)
   {
     $query = $eventCategory
       ? $eventCategory->eventSeasons()->getQuery()

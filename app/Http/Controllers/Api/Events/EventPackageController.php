@@ -14,6 +14,10 @@ use Illuminate\Validation\Rule;
  */
 class EventPackageController extends Controller
 {
+  /**
+   * @queryParam event int No-example
+   * @queryParam seatSection int No-example
+   */
   public function index(Request $request)
   {
     $query = EventPackage::query()

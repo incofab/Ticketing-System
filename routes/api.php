@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\Seats;
 use App\Http\Controllers\Api\Tickets;
 use App\Http\Controllers\Api\Payments;
 use App\Http\Controllers\Api\Admin;
+use App\Http\Controllers\Api\Events\EventCategoryController;
 use App\Http\Controllers\Auth;
 
 /*
@@ -43,6 +44,8 @@ Route::group(['prefix' => 'seat-sections'], function () {
         Route::post('/{seatSection}/update', [Seats\SeatSectionController::class, 'update'])->name('seat-sections.update');
     });
 });
+
+Route::apiResource('event-categories', EventCategoryController::class)->middleware('auth:sanctum')->except('show');
 
 Route::group(['prefix' => 'event-seasons'], function () {
     Route::get('/index/{eventCategory?}', [Events\EventSeasonController::class, 'index'])->name('event-seasons.index');
