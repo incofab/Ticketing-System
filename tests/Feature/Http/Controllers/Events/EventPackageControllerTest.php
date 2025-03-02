@@ -49,6 +49,34 @@ it('can store a new event package', function () {
   assertDatabaseHas('event_packages', $requestData);
 });
 
+it('cannot store a new event package when capacity is not enough', function () {
+  $event = Event::factory()->create();
+  $seatSection = SeatSection::factory()->create(['capacity' => 10]);
+  $requestData = EventPackage::factory()
+    ->for($seatSection)
+    ->event($event)
+    ->make(['capacity' => 6])
+    ->toArray();
+
+  actingAs($this->admin)
+    ->postJson(route('api.event-packages.store', ['event' => $event->id]), [
+      ...$requestData,
+      'capacity' => 11
+    ])
+    ->assertJsonValidationErrorFor('capacity');
+  EventPackage::factory()
+    ->for($seatSection)
+    ->event($event)
+    ->create(['capacity' => 5]);
+
+  actingAs($this->admin)
+    ->postJson(
+      route('api.event-packages.store', ['event' => $event->id]),
+      $requestData
+    )
+    ->assertJsonValidationErrorFor('capacity');
+});
+
 it('can delete an existing event package', function () {
   $eventPackage = EventPackage::factory()->create();
   $response = actingAs($this->admin)->postJson(

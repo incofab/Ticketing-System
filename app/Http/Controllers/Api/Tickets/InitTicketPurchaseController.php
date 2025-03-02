@@ -39,9 +39,9 @@ class InitTicketPurchaseController extends Controller
         'min:1',
         function ($attr, $value, $fail) use ($eventPackage) {
           $availableSeats =
-            $eventPackage->seatSection->capacity - $eventPackage->quantity_sold;
+            $eventPackage->capacity - $eventPackage->quantity_sold;
           if ($availableSeats < 1) {
-            $fail('All seats in this section are fully booked');
+            $fail('All seats in this package are fully booked');
             return;
           }
           if ($availableSeats < $value) {

@@ -17,7 +17,7 @@ class EventPackageFactory extends Factory
       'event_id' => Event::factory(),
       'seat_section_id' => SeatSection::factory(),
       'price' => fake()->randomFloat(1, 1000, 10000),
-      'capacity' => fake()->randomNumber(),
+      'capacity' => fake()->randomNumber(2),
       'entry_gate' => fake()->word()
     ];
   }

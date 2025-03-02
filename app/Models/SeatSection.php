@@ -16,4 +16,9 @@ class SeatSection extends Model
   {
     return $this->hasMany(Seat::class);
   }
+
+  function eventPackages()
+  {
+    return $this->hasMany(EventPackage::class);
+  }
 }

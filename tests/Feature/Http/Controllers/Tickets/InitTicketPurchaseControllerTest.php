@@ -82,8 +82,8 @@ it(
   function () {
     /** @var EventPackage $eventPackage */
     $eventPackage = EventPackage::factory()->create();
-    $seatSection = $eventPackage->seatSection;
-    $eventPackage->fill(['quantity_sold' => $seatSection->capacity])->save();
+    // $seatSection = $eventPackage->seatSection;
+    $eventPackage->fill(['quantity_sold' => $eventPackage->capacity])->save();
     $postData = [
       'merchant' => PaymentMerchantType::BankDeposit->value,
       'quantity' => 1,
@@ -96,14 +96,14 @@ it(
       $postData
     )->assertJsonValidationErrorFor('quantity');
     $eventPackage
-      ->fill(['quantity_sold' => $seatSection->capacity - 1])
+      ->fill(['quantity_sold' => $eventPackage->capacity - 1])
       ->save();
     postJson(route('api.tickets.init-payment', [$eventPackage]), [
       ...$postData,
       'quantity' => 2
     ])->assertJsonValidationErrorFor('quantity');
     $eventPackage
-      ->fill(['quantity_sold' => $seatSection->capacity - 1])
+      ->fill(['quantity_sold' => $eventPackage->capacity - 1])
       ->save();
 
     postJson(

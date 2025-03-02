@@ -6,6 +6,7 @@ use App\Actions\CreateUpdateEventPackage;
 use App\Http\Controllers\Controller;
 use App\Models\Event;
 use App\Models\EventPackage;
+use App\Models\SeatSection;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
@@ -33,7 +34,28 @@ class EventPackageController extends Controller
       'price' => ['required', 'numeric'],
       'entry_gate' => ['nullable', 'string'],
       'notes' => ['nullable', 'string'],
-      'capacity' => ['required', 'integer'],
+      'capacity' => [
+        'required',
+        'integer',
+        function ($attr, $value, $fail) {
+          /** @var SeatSection $seatSection */
+          $seatSection = SeatSection::query()->findOrFail(
+            request('seat_section_id')
+          );
+          $allocatedCapacity = EventPackage::whereSeatSectionId(
+            $seatSection->id
+          )->sum('capacity');
+          $availableCapacity = $seatSection->capacity - $allocatedCapacity;
+          if ($availableCapacity < 1) {
+            $fail('There are no available seats');
+            return;
+          }
+          if ($availableCapacity < $value) {
+            $fail("There are only $availableCapacity available seat capacity");
+            return;
+          }
+        }
+      ],
       'title' => [
         'required',
         'string',
