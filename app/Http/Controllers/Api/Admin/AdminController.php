@@ -60,9 +60,11 @@ class AdminController extends Controller
       ->sum('payment_references.amount');
 
     $data = [
+      'event' => $event,
       'total_income' => $totalIncome,
       'tickets_sold' => $ticketPaymentQuery->sum('ticket_payments.quantity'),
-      'packages' => $event->eventPackages()->count()
+      'packages' => $event->eventPackages()->count(),
+      'attendees' => $event->eventAttendees()->count()
     ];
     return $this->apiRes($data);
   }

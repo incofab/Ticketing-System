@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\Tickets;
 
 use App\Actions\RecordAttendee;
 use App\Http\Controllers\Controller;
+use App\Models\EventAttendee;
 use App\Models\Ticket;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,16 @@ use Illuminate\Http\Request;
  */
 class EventAttendeeController extends Controller
 {
-  public function __invoke(Request $request, Ticket $ticket)
+  /**
+   * @queryParam event int No-example
+   */
+  public function index(Request $request)
+  {
+    $query = EventAttendee::query()->eventId($request->event);
+    return $this->apiRes(paginateFromRequest($query));
+  }
+
+  public function store(Request $request, Ticket $ticket)
   {
     $data = $request->validate([
       'name' => ['required', 'string', 'max:255'],

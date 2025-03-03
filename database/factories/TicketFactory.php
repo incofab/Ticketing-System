@@ -23,7 +23,7 @@ class TicketFactory extends Factory
     ];
   }
 
-  function eventPackage(EventPackage $eventPackage = null)
+  function eventPackage(EventPackage|null $eventPackage = null)
   {
     $eventPackage = $eventPackage ?? EventPackage::factory()->create();
     return $this->state(
@@ -36,7 +36,7 @@ class TicketFactory extends Factory
     );
   }
 
-  function ticketPayment(TicketPayment $ticketPayment = null)
+  function ticketPayment(TicketPayment|null $ticketPayment = null)
   {
     $ticketPayment = $ticketPayment ?? TicketPayment::factory()->create();
     return $this->state(

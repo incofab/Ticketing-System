@@ -81,17 +81,20 @@ Route::group(['prefix' => 'event-packages'], function () {
         Route::post('/{eventPackage}/destroy', [Events\EventPackageController::class, 'destroy'])->name('event-packages.destroy');
     });
 });
+Route::group(['prefix' => 'event-attendees', 'middleware' => ['auth:sanctum', 'admin']], function () {
+    Route::get('/', [Tickets\EventAttendeeController::class, 'index'])->name('event-attendees.index');
+});
 
 Route::group(['prefix' => 'tickets'], function () {
     Route::post('/init-payment/{eventPackage}', Tickets\InitTicketPurchaseController::class)->name('tickets.init-payment');
     Route::post('/confirm-payment', Tickets\ConfirmPaymentController::class)->name('tickets.confirm-payment');
     Route::post('/generate-ticket', Tickets\GenerateTicketController::class)->name('tickets.generate');
-    Route::post('/{ticket}/event-attendees/create', Tickets\EventAttendeeController::class)->name('tickets.event-attendees.store');
     Route::get('/retrieve', Tickets\RetrieveTicketController::class)->name('tickets.retrieve');
     Route::group(['middleware' => ['auth:sanctum']], function () {
         Route::post('/verify', Tickets\VerifyTicketController::class)->name('tickets.verify');
         Route::post('/bank-deposit/confirm', Tickets\ConfirmBankDepositController::class)->name('tickets.bank-deposit.confirm');
     });
+    Route::post('/{ticket}/event-attendees/create', [Tickets\EventAttendeeController::class, 'store'])->name('tickets.event-attendees.store');
     Route::group(['middleware' => ['auth:sanctum', 'admin']], function () {
         Route::get('/index', Tickets\ListTicketController::class)->name('tickets.index');
     });

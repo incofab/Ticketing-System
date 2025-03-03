@@ -42,4 +42,9 @@ class Event extends Model
   {
     return $this->hasMany(EventImage::class);
   }
+
+  function eventAttendees()
+  {
+    return $this->hasMany(EventAttendee::class);
+  }
 }

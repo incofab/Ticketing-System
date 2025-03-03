@@ -2,6 +2,7 @@
 
 use App\Enums\PaymentReferenceStatus;
 use App\Models\Event;
+use App\Models\EventAttendee;
 use App\Models\EventPackage;
 use App\Models\EventSeason;
 use App\Models\PaymentReference;
@@ -67,6 +68,13 @@ it('should return the correct event dashboard data', function () {
     'event_id' => $event->id
   ]);
 
+  $ticket = Ticket::factory()
+    ->eventPackage($eventPackage1)
+    ->create();
+  EventAttendee::factory(3)
+    ->ticket($ticket)
+    ->create();
+
   $ticketPayment1 = TicketPayment::factory()->create([
     'event_package_id' => $eventPackage1->id,
     'quantity' => 2
@@ -93,7 +101,8 @@ it('should return the correct event dashboard data', function () {
       'data' => [
         'total_income' => 5000,
         'tickets_sold' => 5,
-        'packages' => 2
+        'packages' => 2,
+        'attendees' => 3
       ]
     ]);
 });
