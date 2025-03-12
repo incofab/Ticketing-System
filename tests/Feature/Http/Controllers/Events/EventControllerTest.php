@@ -5,6 +5,7 @@ use App\Models\EventPackage;
 use App\Models\EventSeason;
 use App\Models\SeatSection;
 use App\Models\User;
+use Illuminate\Http\UploadedFile;
 
 use function Pest\Laravel\actingAs;
 use function Pest\Laravel\assertSoftDeleted;
@@ -13,6 +14,7 @@ use function PHPUnit\Framework\assertNotEmpty;
 
 beforeEach(function () {
   $this->admin = User::factory()->create();
+  Storage::fake();
 });
 
 it('can get a list of events', function () {
@@ -79,8 +81,9 @@ it('can show an event', function () {
       ]
     ]);
 });
-// return;
+
 it('can store a new event', function () {
+  $logoFile = UploadedFile::fake()->image('event_image.jpg');
   // Create some dummy data, for example:
   $eventSeason = EventSeason::factory()->create();
   [$seatSection, $seatSection2] = SeatSection::factory(2)->create();
@@ -95,6 +98,7 @@ it('can store a new event', function () {
       'end_time' => now()->addDays(1),
       'home_team' => 'Home Team',
       'away_team' => 'Away Team',
+      'logo_file' => $logoFile,
       'event_packages' => [
         [
           'seat_section_id' => $seatSection->id,
@@ -123,10 +127,17 @@ it('can store a new event', function () {
     ->with('eventPackages')
     ->first();
   assertNotEmpty($event);
+  expect($event->logo)
+    ->not()
+    ->toBeNull();
   expect($event->eventPackages->count())->toBe(2);
+  Storage::disk('s3_public')->assertExists(
+    "event_{$event->id}/{$logoFile->hashName()}"
+  );
 });
 
 it('can update an existing event', function () {
+  $logoFile = UploadedFile::fake()->image('event_image.jpg');
   // Create some dummy data, for example:
   $event = Event::factory()->create();
 
@@ -134,6 +145,7 @@ it('can update an existing event', function () {
   $response = actingAs($this->admin)->postJson(
     route('api.events.update', ['event' => $event->id]),
     [
+      'logo_file' => $logoFile,
       'title' => 'Updated Event',
       'description' => 'Updated description',
       'start_time' => now(),
@@ -145,6 +157,9 @@ it('can update an existing event', function () {
 
   // Assert the response
   $response->assertOk()->assertJsonFragment(['title' => 'Updated Event']);
+  Storage::disk('s3_public')->assertExists(
+    "event_{$event->id}/{$logoFile->hashName()}"
+  );
 });
 
 it('can delete an existing event', function () {

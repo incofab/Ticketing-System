@@ -9,6 +9,7 @@ use App\Models\PaymentReference;
 use App\Models\Seat;
 use App\Models\Ticket;
 use App\Models\TicketPayment;
+use App\Models\TicketVerification;
 use App\Models\User;
 use App\Support\MorphMap;
 use Database\Seeders\RoleSeeder;
@@ -95,6 +96,10 @@ it('should return the correct event dashboard data', function () {
     ->confirmed()
     ->create(['amount' => 3000]);
 
+  TicketVerification::factory(2)
+    ->for($ticket)
+    ->create();
+
   getJson(route('api.admin.event.dashboard', ['event' => $event->id]))
     ->assertOk()
     ->assertJson([
@@ -102,7 +107,8 @@ it('should return the correct event dashboard data', function () {
         'total_income' => 5000,
         'tickets_sold' => 5,
         'packages' => 2,
-        'attendees' => 3
+        'attendees' => 3,
+        'verified_attendees' => 2
       ]
     ]);
 });

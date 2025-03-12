@@ -32,4 +32,14 @@ class Ticket extends Model
   {
     return $this->belongsTo(Seat::class);
   }
+
+  function eventAttendee()
+  {
+    return $this->hasOne(EventAttendee::class);
+  }
+
+  function ticketVerification()
+  {
+    return $this->hasOne(TicketVerification::class);
+  }
 }

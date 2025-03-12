@@ -7,9 +7,9 @@ use App\Http\Controllers\Controller;
 use App\Models\Event;
 use App\Models\EventSeason;
 use App\Support\UITableFilters\EventUITableFilters;
-use DB;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Rule;
+use Illuminate\Http\UploadedFile;
+use Storage;
 
 /**
  * @group Events
@@ -47,7 +47,12 @@ class EventController extends Controller
     $query = $eventSeason ? $eventSeason->events()->getQuery() : Event::query();
 
     return $this->apiRes(
-      paginateFromRequest($query->upcomingEvents()->oldest('start_time'))
+      paginateFromRequest(
+        $query
+          ->upcomingEvents()
+          ->with('eventSeason', 'eventPackages.seatSection', 'eventImages')
+          ->oldest('start_time')
+      )
     );
   }
 
@@ -60,24 +65,7 @@ class EventController extends Controller
   public function store(Request $request, EventSeason $eventSeason)
   {
     $data = $request->validate([
-      'title' => [
-        'required',
-        'string',
-        'max:255',
-        Rule::unique('events', 'title')->where(
-          'event_season_id',
-          $eventSeason->id
-        )
-      ],
-      'description' => ['nullable', 'string'],
-      'start_time' => ['sometimes', 'required', 'date'],
-      'end_time' => ['sometimes', 'date', 'after:start_time'],
-      'home_team' => ['nullable', 'string', 'max:255'],
-      'away_team' => ['nullable', 'string', 'max:255'],
-      'venue' => ['nullable', 'string', 'max:255'],
-      'phone' => ['nullable', 'string', 'max:255'],
-      'email' => ['nullable', 'email', 'max:255'],
-      'website' => ['nullable', 'string', 'max:255'],
+      ...Event::createRule($eventSeason->id),
       'event_packages' => ['nullable', 'array', 'min:1'],
       'event_packages.*.seat_section_id' => [
         'required',
@@ -89,36 +77,42 @@ class EventController extends Controller
 
     $event = $eventSeason->events()->create(
       collect($data)
-        ->except('event_packages')
+        ->except('event_packages', 'logo_file')
         ->toArray()
     );
     CreateUpdateEventPackage::run($event, $data['event_packages'] ?? []);
+
+    $this->uploadLogo($event, $request->logo_file);
+
     return $this->apiRes($event);
+  }
+
+  private function uploadLogo(Event $event, UploadedFile|null $file = null)
+  {
+    if (!$file) {
+      return;
+    }
+    $imagePath = $file->store("event_{$event->id}", 's3_public');
+    $publicUrl = Storage::disk('s3_public')->url($imagePath);
+    $event->fill(['logo' => $publicUrl])->save();
   }
 
   public function update(Request $request, Event $event)
   {
-    $data = $request->validate([
-      'title' => [
-        'required',
-        'string',
-        'max:255',
-        Rule::unique('events', 'title')
-          ->where('event_season_id', $event->event_season_id)
-          ->ignore($event->id, 'id')
-      ],
-      'description' => ['nullable', 'string'],
-      'start_time' => ['sometimes', 'required', 'date'],
-      'end_time' => ['sometimes', 'date', 'after:start_time'],
-      'home_team' => ['nullable', 'string'],
-      'away_team' => ['nullable', 'string'],
-      'venue' => ['nullable', 'string', 'max:255'],
-      'phone' => ['nullable', 'string', 'max:255'],
-      'email' => ['nullable', 'email', 'max:255'],
-      'website' => ['nullable', 'string', 'max:255']
-    ]);
+    $data = $request->validate(
+      Event::createRule($event->event_season_id, $event)
+    );
 
-    $event->fill($data)->save();
+    $event
+      ->fill(
+        collect($data)
+          ->except('logo_file')
+          ->toArray()
+      )
+      ->save();
+
+    $this->uploadLogo($event, $request->logo_file);
+
     return $this->apiRes($event);
   }
 

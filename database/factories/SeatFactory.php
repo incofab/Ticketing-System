@@ -11,7 +11,9 @@ class SeatFactory extends Factory
   {
     return [
       'seat_section_id' => SeatSection::factory(),
-      'seat_no' => fake()->numerify('#####'),
+      'seat_no' => fake()
+        ->unique()
+        ->numerify('#####'),
       'description' => fake()->sentence(10),
       'features' => fake()->sentence(10)
     ];

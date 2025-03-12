@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Api\Seats;
 
+use App\Actions\RecordSeat;
 use App\Http\Controllers\Controller;
+use App\Models\Seat;
 use App\Models\SeatSection;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -15,7 +17,9 @@ class SeatSectionController extends Controller
   public function index(Request $request)
   {
     $seatSections = SeatSection::query()
-      ->withCount('seats')
+      ->withCount('seats', 'eventPackages')
+      ->with('eventPackages')
+      ->withSum('eventPackages', 'quantity_sold')
       ->get();
     return $this->apiRes($seatSections);
   }
@@ -31,10 +35,27 @@ class SeatSectionController extends Controller
       ],
       'description' => ['nullable', 'string'],
       'features' => ['nullable', 'string'],
-      'capacity' => ['required', 'integer']
+      'capacity' => ['required', 'integer'],
+      'seats' => ['nullable', 'array', 'min:1'],
+      ...Seat::createRule('seats.*.')
     ]);
 
-    $seatSection = SeatSection::query()->create($data);
+    abort_if(
+      $data['capacity'] < count($data['seats'] ?? []),
+      403,
+      'Seat section is full'
+    );
+
+    $seatSection = SeatSection::query()->create(
+      collect($data)
+        ->except('seats')
+        ->toArray()
+    );
+    if (!empty($data['seats'])) {
+      (new RecordSeat($seatSection))->createMany($data['seats']);
+    }
+    $seatSection->load('seats');
+
     return $this->apiRes($seatSection);
   }
 

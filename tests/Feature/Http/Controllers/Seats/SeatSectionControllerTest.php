@@ -1,4 +1,7 @@
 <?php
+
+use App\Models\Event;
+use App\Models\Seat;
 use App\Models\SeatSection;
 use App\Models\User;
 
@@ -10,7 +13,10 @@ beforeEach(function () {
 });
 
 it('can get a list of seat sections', function () {
-  SeatSection::factory(4)->create();
+  $event = Event::factory()->create();
+  SeatSection::factory(4)
+    ->eventPackages($event)
+    ->create();
   getJson(route('api.seat-sections.index'))
     // ->dump()
     ->assertOk()
@@ -31,6 +37,34 @@ it('can create a new seat section', function () {
     $postData
   );
   $response->assertOk()->assertJsonFragment($postData);
+});
+
+it('can create a new seat section with seats', function () {
+  $postData = SeatSection::factory()
+    ->make()
+    ->toArray();
+  $response = actingAs($this->admin)->postJson(
+    route('api.seat-sections.store'),
+    [
+      ...$postData,
+      'seats' => Seat::factory(2)
+        ->make()
+        ->toArray()
+    ]
+  );
+  $response
+    ->assertOk()
+    ->assertJsonFragment($postData)
+    ->assertJsonStructure([
+      'data' => [
+        'title',
+        'description',
+        'capacity',
+        'seats' => [
+          '*' => ['id', 'seat_no', 'description', 'features', 'status']
+        ]
+      ]
+    ]);
 });
 
 it('can update an existing seat section', function () {

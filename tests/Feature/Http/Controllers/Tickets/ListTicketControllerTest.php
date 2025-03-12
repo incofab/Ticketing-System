@@ -45,7 +45,6 @@ it('returns a paginated list of tickets', function () {
             'seat_id',
             'seat' => ['id', 'seat_no', 'seat_section' => ['title']],
             'qr_code',
-            'ticket_payment' => ['quantity'],
             'event_package' => ['price', 'event' => ['title']]
           ]
         ]

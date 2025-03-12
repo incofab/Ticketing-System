@@ -79,11 +79,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: et
+                  example: totam
                 password:
                   type: string
                   description: ''
-                  example: 'ndm\aA_!C7\{'
+                  example: ;6!l+dvV
               required:
                 - phone
                 - password
@@ -107,27 +107,27 @@ paths:
                 first_name:
                   type: integer
                   description: ''
-                  example: 5
+                  example: 15
                 last_name:
                   type: string
                   description: ''
-                  example: est
+                  example: rerum
                 other_names:
                   type: string
                   description: ''
-                  example: eos
+                  example: vitae
                 phone:
                   type: string
                   description: ''
-                  example: provident
+                  example: ut
                 email:
                   type: string
                   description: ''
-                  example: hdamore@example.com
+                  example: waldo.block@example.net
                 password:
                   type: string
                   description: ''
-                  example: 2|m3GpdX
+                  example: '?,x*Qv&'
               required:
                 - first_name
                 - last_name
@@ -196,11 +196,11 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: jiofvrpfb
+                  example: gwsu
                 description:
                   type: string
                   description: ''
-                  example: 'Soluta esse quia a consequatur odit et aut.'
+                  example: 'Dignissimos aut et fugit.'
               required:
                 - title
       security: []
@@ -223,11 +223,11 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: jknspovpzxrkxjfyykru
+                  example: pozxdjjkoiofdi
                 description:
                   type: string
                   description: ''
-                  example: 'Laborum quia eveniet sed nihil deserunt ullam.'
+                  example: 'Similique deserunt aliquid neque id quia maxime.'
               required:
                 - title
       security: []
@@ -268,7 +268,7 @@ paths:
                 event_id:
                   type: string
                   description: ''
-                  example: sunt
+                  example: impedit
                 image:
                   type: string
                   format: binary
@@ -276,7 +276,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: dolores
+                  example: culpa
               required:
                 - event_id
                 - image
@@ -297,7 +297,7 @@ paths:
         in: path
         name: eventImage_id
         description: 'The ID of the eventImage.'
-        example: 20
+        example: 9
         required: true
         schema:
           type: integer
@@ -784,27 +784,27 @@ paths:
                 seat_section_id:
                   type: string
                   description: ''
-                  example: assumenda
+                  example: sunt
                 price:
                   type: number
                   description: ''
-                  example: 164340.81182447
+                  example: 68045785.97
                 entry_gate:
                   type: string
                   description: ''
-                  example: dolorum
+                  example: eos
                 notes:
                   type: string
                   description: ''
-                  example: sint
+                  example: omnis
                 capacity:
                   type: integer
                   description: ''
-                  example: 17
+                  example: 19
                 title:
                   type: string
                   description: ''
-                  example: dicta
+                  example: est
               required:
                 - seat_section_id
                 - price
@@ -1116,19 +1116,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: uitcwhyory
+                  example: xcgc
                 description:
                   type: string
                   description: ''
-                  example: 'Maiores sed placeat aut sit asperiores consectetur ut corrupti.'
+                  example: 'Nobis blanditiis autem corrupti qui et.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2025-03-01T19:53:33'
+                  example: '2025-03-12T21:49:11'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2032-09-27'
+                  example: '2122-01-06'
               required:
                 - title
       security: []
@@ -1160,19 +1160,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: otwqijxfbbco
+                  example: hcpgolagznstwidsl
                 description:
                   type: string
                   description: ''
-                  example: 'Enim repudiandae accusamus excepturi tempore non natus.'
+                  example: 'Voluptatem deserunt soluta quam ipsum quam corrupti voluptatem.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2025-03-01T19:53:33'
+                  example: '2025-03-12T21:49:11'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2115-10-11'
+                  example: '2049-03-28'
               required:
                 - title
       security: []
@@ -1909,61 +1909,18 @@ paths:
       tags:
         - Events
       requestBody:
-        required: true
+        required: false
         content:
           application/json:
             schema:
               type: object
               properties:
-                title:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: l
-                description:
-                  type: string
-                  description: ''
-                  example: 'Perspiciatis cumque vel minus est.'
-                start_time:
-                  type: string
-                  description: 'Must be a valid date.'
-                  example: '2025-03-01T19:53:33'
-                end_time:
-                  type: string
-                  description: 'Must be a valid date. Must be a date after <code>start_time</code>.'
-                  example: '2061-12-24'
-                home_team:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: myzuioygaxhfcwkxqzfx
-                away_team:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: tqmxgasg
-                venue:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: bwmkhnqtzoxrwlmghjqzoypnl
-                phone:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: ulktrmh
-                email:
-                  type: string
-                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: halvorson.penelope@example.com
-                website:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: znmqwhdmotu
                 event_packages:
                   type: array
                   description: 'Must have at least 1 items.'
-                  example: begauxxhrafrgvjbmxxiiljagvppakybjyaojrsugnzelmoiznlweemmczogylbylunrxrsbrcevatnqazbo
+                  example: valpicxcryicsjqsetzyfvdlqoukfnbxelsmebivtplqepvsimqcuuqzmggnqxzgpijuqnainpfzzh
                   items:
                     type: string
-              required:
-                - title
-                - start_time
       security: []
     parameters:
       -
@@ -1983,56 +1940,6 @@ paths:
       responses: {  }
       tags:
         - Events
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                title:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: nxsehtglfgevcv
-                description:
-                  type: string
-                  description: ''
-                  example: 'Cumque sed ad perferendis quaerat quia ea.'
-                start_time:
-                  type: string
-                  description: 'Must be a valid date.'
-                  example: '2025-03-01T19:53:33'
-                end_time:
-                  type: string
-                  description: 'Must be a valid date. Must be a date after <code>start_time</code>.'
-                  example: '2080-05-13'
-                home_team:
-                  type: string
-                  description: ''
-                  example: cupiditate
-                away_team:
-                  type: string
-                  description: ''
-                  example: incidunt
-                venue:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: ltt
-                phone:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: hdvwt
-                email:
-                  type: string
-                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: alyson50@example.net
-                website:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: jzfsrwn
-              required:
-                - title
-                - start_time
       security: []
     parameters:
       -
@@ -5284,7 +5191,7 @@ paths:
                   type: array
                   description: 'An array of seats to create.'
                   example:
-                    - deserunt
+                    - sapiente
                   items:
                     type: string
               required:
@@ -5325,6 +5232,9 @@ paths:
                       created_at: '2024-01-07T18:10:42.000000Z'
                       updated_at: '2024-01-07T18:10:42.000000Z'
                       seats_count: 10000
+                      event_packages_count: 0
+                      event_packages_sum_quantity_sold: null
+                      event_packages: []
                     -
                       id: 2
                       capacity: 2083
@@ -5335,6 +5245,9 @@ paths:
                       created_at: '2024-01-07T18:11:41.000000Z'
                       updated_at: '2024-01-07T18:11:41.000000Z'
                       seats_count: 2083
+                      event_packages_count: 0
+                      event_packages_sum_quantity_sold: null
+                      event_packages: []
                     -
                       id: 3
                       capacity: 60
@@ -5345,6 +5258,9 @@ paths:
                       created_at: '2024-01-07T18:11:47.000000Z'
                       updated_at: '2024-01-07T18:11:47.000000Z'
                       seats_count: 60
+                      event_packages_count: 0
+                      event_packages_sum_quantity_sold: null
+                      event_packages: []
                     -
                       id: 4
                       capacity: 110
@@ -5355,6 +5271,9 @@ paths:
                       created_at: '2024-01-07T18:11:47.000000Z'
                       updated_at: '2024-01-07T18:11:47.000000Z'
                       seats_count: 110
+                      event_packages_count: 0
+                      event_packages_sum_quantity_sold: null
+                      event_packages: []
                     -
                       id: 5
                       capacity: 708
@@ -5365,6 +5284,19 @@ paths:
                       created_at: '2024-01-12T17:35:58.000000Z'
                       updated_at: '2024-01-12T17:35:58.000000Z'
                       seats_count: 0
+                      event_packages_count: 1
+                      event_packages_sum_quantity_sold: '1'
+                      event_packages:
+                        -
+                          id: 1
+                          event_id: 1
+                          seat_section_id: 5
+                          price: 3725.7
+                          quantity_sold: 1
+                          deleted_at: null
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-20T09:35:58.000000Z'
+                          entry_gate: null
                     -
                       id: 6
                       capacity: 24
@@ -5375,6 +5307,19 @@ paths:
                       created_at: '2024-01-12T17:35:58.000000Z'
                       updated_at: '2024-01-12T17:35:58.000000Z'
                       seats_count: 0
+                      event_packages_count: 1
+                      event_packages_sum_quantity_sold: '0'
+                      event_packages:
+                        -
+                          id: 2
+                          event_id: 2
+                          seat_section_id: 6
+                          price: 7204.2
+                          quantity_sold: 0
+                          deleted_at: null
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-12T17:35:58.000000Z'
+                          entry_gate: null
                     -
                       id: 7
                       capacity: 369
@@ -5385,6 +5330,19 @@ paths:
                       created_at: '2024-01-12T17:35:58.000000Z'
                       updated_at: '2024-01-12T17:35:58.000000Z'
                       seats_count: 0
+                      event_packages_count: 1
+                      event_packages_sum_quantity_sold: '0'
+                      event_packages:
+                        -
+                          id: 3
+                          event_id: 3
+                          seat_section_id: 7
+                          price: 8509.6
+                          quantity_sold: 0
+                          deleted_at: null
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-12T17:35:58.000000Z'
+                          entry_gate: null
                     -
                       id: 8
                       capacity: 642
@@ -5395,6 +5353,9 @@ paths:
                       created_at: '2024-01-12T17:35:58.000000Z'
                       updated_at: '2024-01-12T17:35:58.000000Z'
                       seats_count: 1
+                      event_packages_count: 0
+                      event_packages_sum_quantity_sold: null
+                      event_packages: []
                     -
                       id: 9
                       capacity: 919
@@ -5405,6 +5366,19 @@ paths:
                       created_at: '2024-01-12T17:35:58.000000Z'
                       updated_at: '2024-01-12T17:35:58.000000Z'
                       seats_count: 0
+                      event_packages_count: 1
+                      event_packages_sum_quantity_sold: '0'
+                      event_packages:
+                        -
+                          id: 4
+                          event_id: 4
+                          seat_section_id: 9
+                          price: 5039.9
+                          quantity_sold: 0
+                          deleted_at: null
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-12T17:35:58.000000Z'
+                          entry_gate: null
                     -
                       id: 10
                       capacity: 532
@@ -5415,6 +5389,19 @@ paths:
                       created_at: '2024-01-12T17:35:58.000000Z'
                       updated_at: '2024-01-12T17:35:58.000000Z'
                       seats_count: 0
+                      event_packages_count: 1
+                      event_packages_sum_quantity_sold: '0'
+                      event_packages:
+                        -
+                          id: 5
+                          event_id: 5
+                          seat_section_id: 10
+                          price: 6940.7
+                          quantity_sold: 0
+                          deleted_at: null
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-12T17:35:58.000000Z'
+                          entry_gate: null
                     -
                       id: 11
                       capacity: 630
@@ -5425,6 +5412,19 @@ paths:
                       created_at: '2024-01-12T17:35:58.000000Z'
                       updated_at: '2024-01-12T17:35:58.000000Z'
                       seats_count: 0
+                      event_packages_count: 1
+                      event_packages_sum_quantity_sold: '0'
+                      event_packages:
+                        -
+                          id: 6
+                          event_id: 6
+                          seat_section_id: 11
+                          price: 6118.8
+                          quantity_sold: 0
+                          deleted_at: null
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-12T17:35:58.000000Z'
+                          entry_gate: null
                     -
                       id: 12
                       capacity: 213
@@ -5435,6 +5435,9 @@ paths:
                       created_at: '2024-01-12T17:35:58.000000Z'
                       updated_at: '2024-01-12T17:35:58.000000Z'
                       seats_count: 1
+                      event_packages_count: 0
+                      event_packages_sum_quantity_sold: null
+                      event_packages: []
                     -
                       id: 13
                       capacity: 577
@@ -5445,6 +5448,19 @@ paths:
                       created_at: '2024-01-12T17:35:58.000000Z'
                       updated_at: '2024-01-12T17:35:58.000000Z'
                       seats_count: 0
+                      event_packages_count: 1
+                      event_packages_sum_quantity_sold: '0'
+                      event_packages:
+                        -
+                          id: 7
+                          event_id: 7
+                          seat_section_id: 13
+                          price: 1755.2
+                          quantity_sold: 0
+                          deleted_at: null
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-12T17:35:58.000000Z'
+                          entry_gate: null
                     -
                       id: 14
                       capacity: 138
@@ -5455,6 +5471,19 @@ paths:
                       created_at: '2024-01-12T17:35:58.000000Z'
                       updated_at: '2024-01-12T17:35:58.000000Z'
                       seats_count: 0
+                      event_packages_count: 1
+                      event_packages_sum_quantity_sold: '0'
+                      event_packages:
+                        -
+                          id: 8
+                          event_id: 8
+                          seat_section_id: 14
+                          price: 6075.5
+                          quantity_sold: 0
+                          deleted_at: null
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-12T17:35:58.000000Z'
+                          entry_gate: null
                     -
                       id: 15
                       capacity: 232
@@ -5465,6 +5494,19 @@ paths:
                       created_at: '2024-01-12T17:35:58.000000Z'
                       updated_at: '2024-01-12T17:35:58.000000Z'
                       seats_count: 0
+                      event_packages_count: 1
+                      event_packages_sum_quantity_sold: '0'
+                      event_packages:
+                        -
+                          id: 9
+                          event_id: 9
+                          seat_section_id: 15
+                          price: 4199.9
+                          quantity_sold: 0
+                          deleted_at: null
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-12T17:35:58.000000Z'
+                          entry_gate: null
                     -
                       id: 16
                       capacity: 61
@@ -5475,6 +5517,9 @@ paths:
                       created_at: '2024-01-12T17:35:58.000000Z'
                       updated_at: '2024-01-12T17:35:58.000000Z'
                       seats_count: 1
+                      event_packages_count: 0
+                      event_packages_sum_quantity_sold: null
+                      event_packages: []
                     -
                       id: 17
                       capacity: 395
@@ -5485,6 +5530,19 @@ paths:
                       created_at: '2024-01-12T17:35:58.000000Z'
                       updated_at: '2024-01-12T17:35:58.000000Z'
                       seats_count: 0
+                      event_packages_count: 1
+                      event_packages_sum_quantity_sold: '0'
+                      event_packages:
+                        -
+                          id: 10
+                          event_id: 10
+                          seat_section_id: 17
+                          price: 6388.9
+                          quantity_sold: 0
+                          deleted_at: null
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-12T17:35:58.000000Z'
+                          entry_gate: null
                     -
                       id: 18
                       capacity: 684
@@ -5495,6 +5553,19 @@ paths:
                       created_at: '2024-01-12T17:35:58.000000Z'
                       updated_at: '2024-01-12T17:35:58.000000Z'
                       seats_count: 0
+                      event_packages_count: 1
+                      event_packages_sum_quantity_sold: '0'
+                      event_packages:
+                        -
+                          id: 11
+                          event_id: 11
+                          seat_section_id: 18
+                          price: 1063.4
+                          quantity_sold: 0
+                          deleted_at: null
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-12T17:35:58.000000Z'
+                          entry_gate: null
                     -
                       id: 19
                       capacity: 849
@@ -5505,6 +5576,19 @@ paths:
                       created_at: '2024-01-12T17:35:58.000000Z'
                       updated_at: '2024-01-12T17:35:58.000000Z'
                       seats_count: 0
+                      event_packages_count: 1
+                      event_packages_sum_quantity_sold: '0'
+                      event_packages:
+                        -
+                          id: 12
+                          event_id: 12
+                          seat_section_id: 19
+                          price: 3962.2
+                          quantity_sold: 0
+                          deleted_at: null
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-12T17:35:58.000000Z'
+                          entry_gate: null
                     -
                       id: 20
                       capacity: 484
@@ -5515,6 +5599,9 @@ paths:
                       created_at: '2024-01-12T17:35:58.000000Z'
                       updated_at: '2024-01-12T17:35:58.000000Z'
                       seats_count: 1
+                      event_packages_count: 0
+                      event_packages_sum_quantity_sold: null
+                      event_packages: []
                     -
                       id: 21
                       capacity: 269
@@ -5525,6 +5612,19 @@ paths:
                       created_at: '2024-01-12T17:35:58.000000Z'
                       updated_at: '2024-01-12T17:35:58.000000Z'
                       seats_count: 0
+                      event_packages_count: 1
+                      event_packages_sum_quantity_sold: '0'
+                      event_packages:
+                        -
+                          id: 13
+                          event_id: 13
+                          seat_section_id: 21
+                          price: 4331.2
+                          quantity_sold: 0
+                          deleted_at: null
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-12T17:35:58.000000Z'
+                          entry_gate: null
                     -
                       id: 22
                       capacity: 590
@@ -5535,6 +5635,19 @@ paths:
                       created_at: '2024-01-12T17:35:58.000000Z'
                       updated_at: '2024-01-12T17:35:58.000000Z'
                       seats_count: 0
+                      event_packages_count: 1
+                      event_packages_sum_quantity_sold: '0'
+                      event_packages:
+                        -
+                          id: 14
+                          event_id: 14
+                          seat_section_id: 22
+                          price: 4246.2
+                          quantity_sold: 0
+                          deleted_at: null
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-12T17:35:58.000000Z'
+                          entry_gate: null
                     -
                       id: 23
                       capacity: 665
@@ -5545,6 +5658,19 @@ paths:
                       created_at: '2024-01-12T17:35:58.000000Z'
                       updated_at: '2024-01-12T17:35:58.000000Z'
                       seats_count: 0
+                      event_packages_count: 1
+                      event_packages_sum_quantity_sold: '0'
+                      event_packages:
+                        -
+                          id: 15
+                          event_id: 15
+                          seat_section_id: 23
+                          price: 7010
+                          quantity_sold: 0
+                          deleted_at: null
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-12T17:35:58.000000Z'
+                          entry_gate: null
                     -
                       id: 24
                       capacity: 177
@@ -5555,6 +5681,9 @@ paths:
                       created_at: '2024-01-12T17:35:58.000000Z'
                       updated_at: '2024-01-12T17:35:58.000000Z'
                       seats_count: 1
+                      event_packages_count: 0
+                      event_packages_sum_quantity_sold: null
+                      event_packages: []
                 properties:
                   message:
                     type: string
@@ -5572,6 +5701,9 @@ paths:
                         created_at: '2024-01-07T18:10:42.000000Z'
                         updated_at: '2024-01-07T18:10:42.000000Z'
                         seats_count: 10000
+                        event_packages_count: 0
+                        event_packages_sum_quantity_sold: null
+                        event_packages: []
                       -
                         id: 2
                         capacity: 2083
@@ -5582,6 +5714,9 @@ paths:
                         created_at: '2024-01-07T18:11:41.000000Z'
                         updated_at: '2024-01-07T18:11:41.000000Z'
                         seats_count: 2083
+                        event_packages_count: 0
+                        event_packages_sum_quantity_sold: null
+                        event_packages: []
                       -
                         id: 3
                         capacity: 60
@@ -5592,6 +5727,9 @@ paths:
                         created_at: '2024-01-07T18:11:47.000000Z'
                         updated_at: '2024-01-07T18:11:47.000000Z'
                         seats_count: 60
+                        event_packages_count: 0
+                        event_packages_sum_quantity_sold: null
+                        event_packages: []
                       -
                         id: 4
                         capacity: 110
@@ -5602,6 +5740,9 @@ paths:
                         created_at: '2024-01-07T18:11:47.000000Z'
                         updated_at: '2024-01-07T18:11:47.000000Z'
                         seats_count: 110
+                        event_packages_count: 0
+                        event_packages_sum_quantity_sold: null
+                        event_packages: []
                       -
                         id: 5
                         capacity: 708
@@ -5612,6 +5753,19 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         seats_count: 0
+                        event_packages_count: 1
+                        event_packages_sum_quantity_sold: '1'
+                        event_packages:
+                          -
+                            id: 1
+                            event_id: 1
+                            seat_section_id: 5
+                            price: 3725.7
+                            quantity_sold: 1
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-20T09:35:58.000000Z'
+                            entry_gate: null
                       -
                         id: 6
                         capacity: 24
@@ -5622,6 +5776,19 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         seats_count: 0
+                        event_packages_count: 1
+                        event_packages_sum_quantity_sold: '0'
+                        event_packages:
+                          -
+                            id: 2
+                            event_id: 2
+                            seat_section_id: 6
+                            price: 7204.2
+                            quantity_sold: 0
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            entry_gate: null
                       -
                         id: 7
                         capacity: 369
@@ -5632,6 +5799,19 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         seats_count: 0
+                        event_packages_count: 1
+                        event_packages_sum_quantity_sold: '0'
+                        event_packages:
+                          -
+                            id: 3
+                            event_id: 3
+                            seat_section_id: 7
+                            price: 8509.6
+                            quantity_sold: 0
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            entry_gate: null
                       -
                         id: 8
                         capacity: 642
@@ -5642,6 +5822,9 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         seats_count: 1
+                        event_packages_count: 0
+                        event_packages_sum_quantity_sold: null
+                        event_packages: []
                       -
                         id: 9
                         capacity: 919
@@ -5652,6 +5835,19 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         seats_count: 0
+                        event_packages_count: 1
+                        event_packages_sum_quantity_sold: '0'
+                        event_packages:
+                          -
+                            id: 4
+                            event_id: 4
+                            seat_section_id: 9
+                            price: 5039.9
+                            quantity_sold: 0
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            entry_gate: null
                       -
                         id: 10
                         capacity: 532
@@ -5662,6 +5858,19 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         seats_count: 0
+                        event_packages_count: 1
+                        event_packages_sum_quantity_sold: '0'
+                        event_packages:
+                          -
+                            id: 5
+                            event_id: 5
+                            seat_section_id: 10
+                            price: 6940.7
+                            quantity_sold: 0
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            entry_gate: null
                       -
                         id: 11
                         capacity: 630
@@ -5672,6 +5881,19 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         seats_count: 0
+                        event_packages_count: 1
+                        event_packages_sum_quantity_sold: '0'
+                        event_packages:
+                          -
+                            id: 6
+                            event_id: 6
+                            seat_section_id: 11
+                            price: 6118.8
+                            quantity_sold: 0
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            entry_gate: null
                       -
                         id: 12
                         capacity: 213
@@ -5682,6 +5904,9 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         seats_count: 1
+                        event_packages_count: 0
+                        event_packages_sum_quantity_sold: null
+                        event_packages: []
                       -
                         id: 13
                         capacity: 577
@@ -5692,6 +5917,19 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         seats_count: 0
+                        event_packages_count: 1
+                        event_packages_sum_quantity_sold: '0'
+                        event_packages:
+                          -
+                            id: 7
+                            event_id: 7
+                            seat_section_id: 13
+                            price: 1755.2
+                            quantity_sold: 0
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            entry_gate: null
                       -
                         id: 14
                         capacity: 138
@@ -5702,6 +5940,19 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         seats_count: 0
+                        event_packages_count: 1
+                        event_packages_sum_quantity_sold: '0'
+                        event_packages:
+                          -
+                            id: 8
+                            event_id: 8
+                            seat_section_id: 14
+                            price: 6075.5
+                            quantity_sold: 0
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            entry_gate: null
                       -
                         id: 15
                         capacity: 232
@@ -5712,6 +5963,19 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         seats_count: 0
+                        event_packages_count: 1
+                        event_packages_sum_quantity_sold: '0'
+                        event_packages:
+                          -
+                            id: 9
+                            event_id: 9
+                            seat_section_id: 15
+                            price: 4199.9
+                            quantity_sold: 0
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            entry_gate: null
                       -
                         id: 16
                         capacity: 61
@@ -5722,6 +5986,9 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         seats_count: 1
+                        event_packages_count: 0
+                        event_packages_sum_quantity_sold: null
+                        event_packages: []
                       -
                         id: 17
                         capacity: 395
@@ -5732,6 +5999,19 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         seats_count: 0
+                        event_packages_count: 1
+                        event_packages_sum_quantity_sold: '0'
+                        event_packages:
+                          -
+                            id: 10
+                            event_id: 10
+                            seat_section_id: 17
+                            price: 6388.9
+                            quantity_sold: 0
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            entry_gate: null
                       -
                         id: 18
                         capacity: 684
@@ -5742,6 +6022,19 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         seats_count: 0
+                        event_packages_count: 1
+                        event_packages_sum_quantity_sold: '0'
+                        event_packages:
+                          -
+                            id: 11
+                            event_id: 11
+                            seat_section_id: 18
+                            price: 1063.4
+                            quantity_sold: 0
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            entry_gate: null
                       -
                         id: 19
                         capacity: 849
@@ -5752,6 +6045,19 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         seats_count: 0
+                        event_packages_count: 1
+                        event_packages_sum_quantity_sold: '0'
+                        event_packages:
+                          -
+                            id: 12
+                            event_id: 12
+                            seat_section_id: 19
+                            price: 3962.2
+                            quantity_sold: 0
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            entry_gate: null
                       -
                         id: 20
                         capacity: 484
@@ -5762,6 +6068,9 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         seats_count: 1
+                        event_packages_count: 0
+                        event_packages_sum_quantity_sold: null
+                        event_packages: []
                       -
                         id: 21
                         capacity: 269
@@ -5772,6 +6081,19 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         seats_count: 0
+                        event_packages_count: 1
+                        event_packages_sum_quantity_sold: '0'
+                        event_packages:
+                          -
+                            id: 13
+                            event_id: 13
+                            seat_section_id: 21
+                            price: 4331.2
+                            quantity_sold: 0
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            entry_gate: null
                       -
                         id: 22
                         capacity: 590
@@ -5782,6 +6104,19 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         seats_count: 0
+                        event_packages_count: 1
+                        event_packages_sum_quantity_sold: '0'
+                        event_packages:
+                          -
+                            id: 14
+                            event_id: 14
+                            seat_section_id: 22
+                            price: 4246.2
+                            quantity_sold: 0
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            entry_gate: null
                       -
                         id: 23
                         capacity: 665
@@ -5792,6 +6127,19 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         seats_count: 0
+                        event_packages_count: 1
+                        event_packages_sum_quantity_sold: '0'
+                        event_packages:
+                          -
+                            id: 15
+                            event_id: 15
+                            seat_section_id: 23
+                            price: 7010
+                            quantity_sold: 0
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            entry_gate: null
                       -
                         id: 24
                         capacity: 177
@@ -5802,6 +6150,9 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         seats_count: 1
+                        event_packages_count: 0
+                        event_packages_sum_quantity_sold: null
+                        event_packages: []
                     items:
                       type: object
                       properties:
@@ -5832,6 +6183,15 @@ paths:
                         seats_count:
                           type: integer
                           example: 10000
+                        event_packages_count:
+                          type: integer
+                          example: 0
+                        event_packages_sum_quantity_sold:
+                          type: string
+                          example: null
+                        event_packages:
+                          type: array
+                          example: []
       tags:
         - Seats
       security: []
@@ -5854,19 +6214,24 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: qkxxrchsekgviwzhdpmvue
+                  example: ofrfgfledyafxmlecji
                 description:
                   type: string
                   description: ''
-                  example: 'Reiciendis ratione libero provident reprehenderit facere rem.'
+                  example: 'Amet eum rem omnis.'
                 features:
                   type: string
                   description: ''
-                  example: vel
+                  example: non
                 capacity:
                   type: integer
                   description: ''
-                  example: 11
+                  example: 14
+                seats:
+                  type: object
+                  description: 'Must have at least 1 items.'
+                  example: null
+                  properties: {  }
               required:
                 - title
                 - capacity
@@ -5890,19 +6255,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: dfcitsbjjvkeykwijzyrzhgx
+                  example: ojearjxpo
                 description:
                   type: string
                   description: ''
-                  example: 'Temporibus amet amet non.'
+                  example: 'Inventore magni aut molestias consequatur.'
                 features:
                   type: string
                   description: ''
-                  example: tempora
+                  example: consequatur
                 capacity:
                   type: integer
                   description: ''
-                  example: 9
+                  example: 18
               required:
                 - title
                 - capacity
@@ -5916,6 +6281,38 @@ paths:
         required: true
         schema:
           type: integer
+  /api/event-attendees:
+    get:
+      summary: ''
+      operationId: getApiEventAttendees
+      description: ''
+      parameters:
+        -
+          in: query
+          name: event
+          description: ''
+          example: null
+          required: false
+          schema:
+            type: integer
+            description: ''
+            example: null
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Tickets
+      security: []
   '/api/tickets/init-payment/{eventPackage_id}':
     post:
       summary: ''
@@ -5935,27 +6332,27 @@ paths:
                 merchant:
                   type: string
                   description: ''
-                  example: similique
+                  example: omnis
                 callback_url:
                   type: string
                   description: ''
-                  example: 'http://monahan.com/autem-unde-assumenda-quasi-non-ut-est.html'
+                  example: 'http://www.blanda.biz/corrupti-itaque-et-quas-est-aut-doloremque'
                 quantity:
                   type: integer
                   description: 'Must be at least 1.'
-                  example: 46
+                  example: 82
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: dklwwoqxt
+                  example: vfmewcdsmaqwgaoikiepv
                 phone:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: rhljrqdtdogbv
+                  example: g
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: misael.weber@example.net
+                  example: amara.nolan@example.com
               required:
                 - merchant
                 - quantity
@@ -5989,7 +6386,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: quibusdam
+                  example: iste
               required:
                 - reference
       security: []
@@ -6012,65 +6409,20 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: mollitia
+                  example: quae
                 quantity:
                   type: integer
                   description: 'Must be at least 1.'
-                  example: 2
+                  example: 80
                 seats:
                   type: array
                   description: 'Must have at least 1 items.'
-                  example: 'y'
+                  example: vxfprqpghtdzinurpksfudoplsecbiwpjstqgwgzzpcdslpfavrbgyztkqwdwrybaayizkxztbjyihrvittlt
                   items:
                     type: string
               required:
                 - reference
       security: []
-  '/api/tickets/{ticket_id}/event-attendees/create':
-    post:
-      summary: ''
-      operationId: postApiTicketsTicket_idEventAttendeesCreate
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Tickets
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: pxqtbyblrxiorkqfbnubwtzyk
-                email:
-                  type: string
-                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: klindgren@example.org
-                phone:
-                  type: string
-                  description: 'Must not be greater than 15 characters.'
-                  example: afyde
-                address:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: r
-              required:
-                - name
-                - email
-      security: []
-    parameters:
-      -
-        in: path
-        name: ticket_id
-        description: 'The ID of the ticket.'
-        example: 1
-        required: true
-        schema:
-          type: integer
   /api/tickets/retrieve:
     get:
       summary: ''
@@ -6980,11 +7332,11 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: quasi
+                  example: vel
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: gage.schamberger@example.net
+                  example: damien.roob@example.com
               required:
                 - reference
                 - email
@@ -7008,23 +7360,23 @@ paths:
                 ticket_payment_id:
                   type: integer
                   description: ''
-                  example: 1
+                  example: 10
                 hash:
                   type: string
                   description: ''
-                  example: alias
+                  example: voluptatem
                 reference:
                   type: string
                   description: ''
-                  example: et
+                  example: quia
                 device_no:
                   type: string
                   description: ''
-                  example: reiciendis
+                  example: animi
                 event_id:
                   type: integer
                   description: ''
-                  example: 15
+                  example: 4
               required:
                 - ticket_payment_id
                 - hash
@@ -7051,10 +7403,888 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: nihil
+                  example: quod
               required:
                 - reference
       security: []
+  '/api/tickets/{ticket_id}/event-attendees/create':
+    post:
+      summary: ''
+      operationId: postApiTicketsTicket_idEventAttendeesCreate
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Tickets
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: wsxdsditby
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: dberge@example.org
+                phone:
+                  type: string
+                  description: 'Must not be greater than 15 characters.'
+                  example: jbtguj
+                address:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ajednybhuojvlboqff
+              required:
+                - name
+                - email
+      security: []
+    parameters:
+      -
+        in: path
+        name: ticket_id
+        description: 'The ID of the ticket.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/tickets/{ticket_reference}/show/reference':
+    get:
+      summary: ''
+      operationId: getApiTicketsTicket_referenceShowReference
+      description: ''
+      parameters: []
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'No query results for model [App\Models\Ticket] 1'
+                  exception: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+                  file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                  line: 487
+                  trace:
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                      line: 463
+                      function: prepareException
+                      class: Illuminate\Foundation\Exceptions\Handler
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php
+                      line: 54
+                      function: render
+                      class: Illuminate\Foundation\Exceptions\Handler
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php
+                      line: 51
+                      function: render
+                      class: NunoMaduro\Collision\Adapters\Laravel\ExceptionHandler
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 185
+                      function: handleException
+                      class: Illuminate\Routing\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                      line: 159
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                      line: 135
+                      function: handleRequest
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                      line: 87
+                      function: handleRequestUsingNamedLimiter
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php
+                      line: 25
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 141
+                      function: 'Laravel\Sanctum\Http\Middleware\{closure}'
+                      class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php
+                      line: 26
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 800
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 777
+                      function: runRouteWithinStack
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 741
+                      function: runRoute
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 730
+                      function: dispatchToRoute
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 200
+                      function: dispatch
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 141
+                      function: 'Illuminate\Foundation\Http\{closure}'
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php
+                      line: 59
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Barryvdh\Debugbar\Middleware\InjectDebugbar
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                      line: 21
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
+                      line: 31
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                      line: 21
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
+                      line: 40
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TrimStrings
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
+                      line: 27
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
+                      line: 99
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
+                      line: 62
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Http\Middleware\HandleCors
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
+                      line: 39
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Http\Middleware\TrustProxies
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 175
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 144
+                      function: sendRequestThroughRouter
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 300
+                      function: handle
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 288
+                      function: callLaravelOrLumenRoute
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 91
+                      function: makeApiCall
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 44
+                      function: makeResponseCall
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 35
+                      function: makeResponseCallIfConditionsPass
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 236
+                      function: __invoke
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 166
+                      function: iterateThroughStrategies
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 95
+                      function: fetchResponses
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 125
+                      function: processRoute
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 72
+                      function: extractEndpointsInfoFromLaravelApp
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 50
+                      function: extractEndpointsInfoAndWriteToDisk
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
+                      line: 53
+                      function: get
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 36
+                      function: handle
+                      class: Knuckles\Scribe\Commands\GenerateDocumentation
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Util.php
+                      line: 41
+                      function: 'Illuminate\Container\{closure}'
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 93
+                      function: unwrapIfClosure
+                      class: Illuminate\Container\Util
+                      type: '::'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 37
+                      function: callBoundMethod
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php
+                      line: 662
+                      function: call
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                      line: 211
+                      function: call
+                      class: Illuminate\Container\Container
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/symfony/console/Command/Command.php
+                      line: 326
+                      function: execute
+                      class: Illuminate\Console\Command
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                      line: 181
+                      function: run
+                      class: Symfony\Component\Console\Command\Command
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/symfony/console/Application.php
+                      line: 1081
+                      function: run
+                      class: Illuminate\Console\Command
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/symfony/console/Application.php
+                      line: 320
+                      function: doRunCommand
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/symfony/console/Application.php
+                      line: 174
+                      function: doRun
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
+                      line: 201
+                      function: run
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /var/www/html/artisan
+                      line: 37
+                      function: handle
+                      class: Illuminate\Foundation\Console\Kernel
+                      type: '->'
+                properties:
+                  message:
+                    type: string
+                    example: 'No query results for model [App\Models\Ticket] 1'
+                  exception:
+                    type: string
+                    example: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+                  file:
+                    type: string
+                    example: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                  line:
+                    type: integer
+                    example: 487
+                  trace:
+                    type: array
+                    example:
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                        line: 463
+                        function: prepareException
+                        class: Illuminate\Foundation\Exceptions\Handler
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php
+                        line: 54
+                        function: render
+                        class: Illuminate\Foundation\Exceptions\Handler
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php
+                        line: 51
+                        function: render
+                        class: NunoMaduro\Collision\Adapters\Laravel\ExceptionHandler
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 185
+                        function: handleException
+                        class: Illuminate\Routing\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                        line: 159
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                        line: 135
+                        function: handleRequest
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                        line: 87
+                        function: handleRequestUsingNamedLimiter
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php
+                        line: 25
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 141
+                        function: 'Laravel\Sanctum\Http\Middleware\{closure}'
+                        class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php
+                        line: 26
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 800
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 777
+                        function: runRouteWithinStack
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 741
+                        function: runRoute
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 730
+                        function: dispatchToRoute
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 200
+                        function: dispatch
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 141
+                        function: 'Illuminate\Foundation\Http\{closure}'
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php
+                        line: 59
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Barryvdh\Debugbar\Middleware\InjectDebugbar
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                        line: 21
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
+                        line: 31
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                        line: 21
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
+                        line: 40
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TrimStrings
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
+                        line: 27
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
+                        line: 99
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
+                        line: 62
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Http\Middleware\HandleCors
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
+                        line: 39
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Http\Middleware\TrustProxies
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 175
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 144
+                        function: sendRequestThroughRouter
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 300
+                        function: handle
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 288
+                        function: callLaravelOrLumenRoute
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 91
+                        function: makeApiCall
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 44
+                        function: makeResponseCall
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 35
+                        function: makeResponseCallIfConditionsPass
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 236
+                        function: __invoke
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 166
+                        function: iterateThroughStrategies
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 95
+                        function: fetchResponses
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 125
+                        function: processRoute
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 72
+                        function: extractEndpointsInfoFromLaravelApp
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 50
+                        function: extractEndpointsInfoAndWriteToDisk
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
+                        line: 53
+                        function: get
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 36
+                        function: handle
+                        class: Knuckles\Scribe\Commands\GenerateDocumentation
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Util.php
+                        line: 41
+                        function: 'Illuminate\Container\{closure}'
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 93
+                        function: unwrapIfClosure
+                        class: Illuminate\Container\Util
+                        type: '::'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 37
+                        function: callBoundMethod
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php
+                        line: 662
+                        function: call
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                        line: 211
+                        function: call
+                        class: Illuminate\Container\Container
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/symfony/console/Command/Command.php
+                        line: 326
+                        function: execute
+                        class: Illuminate\Console\Command
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                        line: 181
+                        function: run
+                        class: Symfony\Component\Console\Command\Command
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/symfony/console/Application.php
+                        line: 1081
+                        function: run
+                        class: Illuminate\Console\Command
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/symfony/console/Application.php
+                        line: 320
+                        function: doRunCommand
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/symfony/console/Application.php
+                        line: 174
+                        function: doRun
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
+                        line: 201
+                        function: run
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /var/www/html/artisan
+                        line: 37
+                        function: handle
+                        class: Illuminate\Foundation\Console\Kernel
+                        type: '->'
+                    items:
+                      type: object
+                      properties:
+                        file:
+                          type: string
+                          example: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                        line:
+                          type: integer
+                          example: 463
+                        function:
+                          type: string
+                          example: prepareException
+                        class:
+                          type: string
+                          example: Illuminate\Foundation\Exceptions\Handler
+                        type:
+                          type: string
+                          example: '->'
+      tags:
+        - Tickets
+      security: []
+    parameters:
+      -
+        in: path
+        name: ticket_reference
+        description: ''
+        example: 1
+        required: true
+        schema:
+          type: integer
   /api/tickets/index:
     get:
       summary: ''

@@ -42,16 +42,14 @@ class RetrieveTicketController extends Controller
       ->where('tickets.ticket_payment_id', $ticketPayment->id)
       ->groupBy('tickets.seat_id')
       ->oldest('seats.seat_no')
-      ->with('seat.seatSection');
+      ->with(
+        'seat.seatSection',
+        'eventPackage.event.eventImages',
+        'eventAttendee',
+        'ticketVerification'
+      );
 
-    $tickets = paginateFromRequest(
-      $query
-      // $ticketPayment
-      //   ->tickets()
-      //   ->getQuery()
-      //   ->oldest('tickets.seat_id')
-      //   ->with('seat.seatSection')
-    );
+    $tickets = paginateFromRequest($query);
 
     return $this->apiRes([
       'tickets' => $tickets,

@@ -30,7 +30,13 @@ class ListTicketController extends Controller
       ->filterQuery()
       ->getQuery()
       ->latest('id')
-      ->with('ticketPayment', 'eventPackage.event', 'seat.seatSection');
+      ->with(
+        // 'ticketPayment',
+        'eventPackage.event.eventImages',
+        'eventAttendee',
+        'ticketVerification',
+        'seat.seatSection'
+      );
 
     return $this->apiRes(paginateFromRequest($query));
   }

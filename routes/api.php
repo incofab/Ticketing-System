@@ -95,6 +95,7 @@ Route::group(['prefix' => 'tickets'], function () {
         Route::post('/bank-deposit/confirm', Tickets\ConfirmBankDepositController::class)->name('tickets.bank-deposit.confirm');
     });
     Route::post('/{ticket}/event-attendees/create', [Tickets\EventAttendeeController::class, 'store'])->name('tickets.event-attendees.store');
+    Route::get('/{ticket:reference}/show/reference', [Tickets\TicketController::class, 'showByReference'])->name('tickets.show.reference');
     Route::group(['middleware' => ['auth:sanctum', 'admin']], function () {
         Route::get('/index', Tickets\ListTicketController::class)->name('tickets.index');
     });

@@ -6,6 +6,7 @@ use App\Enums\SeatStatus;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Validation\Rules\Enum;
 
 class Seat extends Model
 {
@@ -15,6 +16,16 @@ class Seat extends Model
   protected $casts = [
     'status' => SeatStatus::class
   ];
+
+  static function createRule($prefix = '')
+  {
+    return [
+      $prefix . 'seat_no' => ['required', 'string'],
+      $prefix . 'description' => ['nullable', 'string'],
+      $prefix . 'features' => ['nullable', 'string'],
+      $prefix . 'status' => ['sometimes', new Enum(SeatStatus::class)]
+    ];
+  }
 
   function scopeSeatSectionId($query, $seatSectionId)
   {

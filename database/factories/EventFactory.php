@@ -20,7 +20,13 @@ class EventFactory extends Factory
         ->word(),
       'away_team' => fake()
         ->unique()
-        ->word()
+        ->word(),
+      'facebook' => fake()->url(),
+      'twitter' => fake()->url(),
+      'tiktok' => fake()->url(),
+      'linkedin' => fake()->url(),
+      'instagram' => fake()->url(),
+      'youtube' => fake()->url()
     ];
   }
 }

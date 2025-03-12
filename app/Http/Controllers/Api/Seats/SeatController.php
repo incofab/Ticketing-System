@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\Seats;
 
 use App\Actions\GetAvailableSeats;
+use App\Actions\RecordSeat;
 use App\Enums\SeatStatus;
 use App\Http\Controllers\Controller;
 use App\Models\EventPackage;
@@ -43,10 +44,7 @@ class SeatController extends Controller
   {
     $data = $request->validate([
       'seats' => ['required', 'array', 'min:1'],
-      'seats.*.seat_no' => ['required', 'string'],
-      'seats.*.description' => ['nullable', 'string'],
-      'seats.*.features' => ['nullable', 'string'],
-      'seats.*.status' => ['sometimes', new Enum(SeatStatus::class)]
+      ...Seat::createRule('seats.*.')
     ]);
 
     abort_if(
@@ -55,12 +53,12 @@ class SeatController extends Controller
       403,
       'Seat section is full'
     );
-    $createdSeats = [];
-    foreach ($data['seats'] as $key => $seat) {
-      $createdSeats[] = $seatSection
-        ->seats()
-        ->firstOrCreate(['seat_no' => $seat['seat_no']], $seat);
-    }
+    $createdSeats = (new RecordSeat($seatSection))->createMany($data['seats']);
+    // foreach ($data['seats'] as $key => $seat) {
+    //   $createdSeats[] = $seatSection
+    //     ->seats()
+    //     ->firstOrCreate(['seat_no' => $seat['seat_no']], $seat);
+    // }
     return $this->apiRes($createdSeats, 'Seats created successfully');
   }
 }
