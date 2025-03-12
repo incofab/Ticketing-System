@@ -18,9 +18,13 @@ it('can store a new event image', function () {
   $response = actingAs($this->admin)->postJson(
     route('api.event-images.store'),
     [
-      'event_id' => $event->id,
-      'image' => $imageFile,
-      'reference' => 'unique_reference'
+      'images' => [
+        [
+          'event_id' => $event->id,
+          'image' => $imageFile,
+          'reference' => 'unique_reference'
+        ]
+      ]
     ]
   );
   $response

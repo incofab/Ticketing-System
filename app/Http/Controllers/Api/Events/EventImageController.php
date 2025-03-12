@@ -15,21 +15,28 @@ class EventImageController extends Controller
   public function store(Request $request)
   {
     $data = $request->validate([
-      'event_id' => ['required', 'exists:events,id'],
-      'image' => ['required', 'file'],
-      'reference' => ['required', 'string', 'unique:event_images,reference']
+      'images' => ['required', 'array', 'min:1', 'max:5'],
+      'images.*.event_id' => ['required', 'exists:events,id'],
+      'images.*.image' => ['required', 'file'],
+      'images.*.reference' => [
+        'required',
+        'string',
+        'unique:event_images,reference'
+      ]
     ]);
-    $eventImage = EventImage::query()->create([
-      ...$data,
-      'user_id' => currentUser()?->id,
-      'image' => null
-    ]);
-    $imagePath = $request->image->store(
-      "event_{$data['event_id']}",
-      's3_public'
-    );
-    $publicUrl = Storage::disk('s3_public')->url($imagePath);
-    $eventImage->fill(['image' => $publicUrl])->save();
+    foreach ($data['images'] as $key => $image) {
+      $eventImage = EventImage::query()->create([
+        ...$image,
+        'user_id' => currentUser()?->id,
+        'image' => null
+      ]);
+      $imagePath = $image['image']->store(
+        "event_{$image['event_id']}",
+        's3_public'
+      );
+      $publicUrl = Storage::disk('s3_public')->url($imagePath);
+      $eventImage->fill(['image' => $publicUrl])->save();
+    }
     return $this->apiRes($eventImage);
   }
 

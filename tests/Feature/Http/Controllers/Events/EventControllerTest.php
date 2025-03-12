@@ -88,16 +88,20 @@ it('can store a new event', function () {
   $eventSeason = EventSeason::factory()->create();
   [$seatSection, $seatSection2] = SeatSection::factory(2)->create();
 
+  $eventData = collect(Event::factory()->make())
+    ->except('event_season_id')
+    ->toArray();
   // Call the endpoint with valid data
   $response = actingAs($this->admin)->postJson(
     route('api.events.store', ['eventSeason' => $eventSeason->id]),
     [
-      'title' => 'New Event',
-      'description' => 'Event description',
-      'start_time' => now(),
-      'end_time' => now()->addDays(1),
-      'home_team' => 'Home Team',
-      'away_team' => 'Away Team',
+      // 'title' => 'New Event',
+      // 'description' => 'Event description',
+      // 'start_time' => now(),
+      // 'end_time' => now()->addDays(1),
+      // 'home_team' => 'Home Team',
+      // 'away_team' => 'Away Team',
+      ...$eventData,
       'logo_file' => $logoFile,
       'event_packages' => [
         [
@@ -121,7 +125,7 @@ it('can store a new event', function () {
   // Assert the response
   $eventData = $response
     ->assertOk()
-    ->assertJsonFragment(['title' => 'New Event'])
+    ->assertJsonFragment(['title' => $eventData['title']])
     ->json('data');
   $event = Event::where('id', $eventData['id'])
     ->with('eventPackages')
