@@ -67,7 +67,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: gwsu
+        example: ewyiaeisubshxbwx
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -76,14 +76,14 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Dignissimos aut et fugit.'
+        example: 'Perferendis sapiente voluptas dicta ratione ut velit.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: gwsu
-      description: 'Dignissimos aut et fugit.'
+      title: ewyiaeisubshxbwx
+      description: 'Perferendis sapiente voluptas dicta ratione ut velit.'
     fileParameters: []
     responses: []
     responseFields: []
@@ -128,7 +128,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: pozxdjjkoiofdi
+        example: dklblpeubbk
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -137,14 +137,14 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Similique deserunt aliquid neque id quia maxime.'
+        example: 'Qui voluptates dolore magni voluptatem voluptatem dolorem.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: pozxdjjkoiofdi
-      description: 'Similique deserunt aliquid neque id quia maxime.'
+      title: dklblpeubbk
+      description: 'Qui voluptates dolore magni voluptatem voluptatem dolorem.'
     fileParameters: []
     responses: []
     responseFields: []

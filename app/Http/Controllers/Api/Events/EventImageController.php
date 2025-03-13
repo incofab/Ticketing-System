@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\Events;
 
 use App\Http\Controllers\Controller;
+use App\Models\Event;
 use App\Models\EventImage;
 use Illuminate\Http\Request;
 use Storage;
@@ -12,11 +13,18 @@ use Storage;
  */
 class EventImageController extends Controller
 {
-  public function store(Request $request)
+  function index(Event $event)
+  {
+    return $this->apiRes(
+      paginateFromRequest($event->eventImages()->getQuery())
+    );
+  }
+
+  public function store(Event $event, Request $request)
   {
     $data = $request->validate([
       'images' => ['required', 'array', 'min:1', 'max:5'],
-      'images.*.event_id' => ['required', 'exists:events,id'],
+      // 'images.*.event_id' => ['required', 'exists:events,id'],
       'images.*.image' => ['required', 'file'],
       'images.*.reference' => [
         'required',
@@ -25,15 +33,10 @@ class EventImageController extends Controller
       ]
     ]);
     foreach ($data['images'] as $key => $image) {
-      $eventImage = EventImage::query()->create([
-        ...$image,
-        'user_id' => currentUser()?->id,
-        'image' => null
-      ]);
-      $imagePath = $image['image']->store(
-        "event_{$image['event_id']}",
-        's3_public'
-      );
+      $eventImage = $event
+        ->eventImages()
+        ->create([...$image, 'user_id' => currentUser()?->id, 'image' => null]);
+      $imagePath = $image['image']->store("event_{$event->id}", 's3_public');
       $publicUrl = Storage::disk('s3_public')->url($imagePath);
       $eventImage->fill(['image' => $publicUrl])->save();
     }

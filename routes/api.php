@@ -69,8 +69,9 @@ Route::group(['prefix' => 'events'], function () {
     });
 });
 
-Route::group(['middleware' => ['auth:sanctum'], 'prefix' => 'event-image'], function () {
-    Route::post('/store', [Events\EventImageController::class, 'store'])->name('event-images.store');
+Route::group(['middleware' => ['auth:sanctum'], 'prefix' => 'event-images'], function () {
+    Route::get('/events/{event}/index', [Events\EventImageController::class, 'index'])->name('event-images.index');
+    Route::post('/events/{event}/store', [Events\EventImageController::class, 'store'])->name('event-images.store');
     Route::post('/{eventImage}/destroy', [Events\EventImageController::class, 'destroy'])->name('event-images.destroy');
 });
 

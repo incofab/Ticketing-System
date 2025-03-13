@@ -263,7 +263,7 @@ endpoints:
         name: event_packages
         description: 'Must have at least 1 items.'
         required: false
-        example: valpicxcryicsjqsetzyfvdlqoukfnbxelsmebivtplqepvsimqcuuqzmggnqxzgpijuqnainpfzzh
+        example: dlgeokiexwmepsxasplbwaqcftbuvqd
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -272,7 +272,7 @@ endpoints:
         name: 'event_packages[].seat_section_id'
         description: ''
         required: true
-        example: pariatur
+        example: accusantium
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -281,7 +281,7 @@ endpoints:
         name: 'event_packages[].price'
         description: ''
         required: true
-        example: 122603096.12914
+        example: 27415.2
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -290,13 +290,13 @@ endpoints:
         name: 'event_packages[].title'
         description: ''
         required: true
-        example: animi
+        example: explicabo
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      event_packages: valpicxcryicsjqsetzyfvdlqoukfnbxelsmebivtplqepvsimqcuuqzmggnqxzgpijuqnainpfzzh
+      event_packages: dlgeokiexwmepsxasplbwaqcftbuvqd
     fileParameters: []
     responses: []
     responseFields: []

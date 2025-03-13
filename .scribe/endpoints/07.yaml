@@ -95,7 +95,7 @@ endpoints:
         name: seat_section_id
         description: ''
         required: true
-        example: sunt
+        example: iure
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -104,7 +104,7 @@ endpoints:
         name: price
         description: ''
         required: true
-        example: 68045785.97
+        example: 2882213.77
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -113,7 +113,7 @@ endpoints:
         name: entry_gate
         description: ''
         required: false
-        example: eos
+        example: reprehenderit
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -122,7 +122,7 @@ endpoints:
         name: notes
         description: ''
         required: false
-        example: omnis
+        example: et
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -140,18 +140,18 @@ endpoints:
         name: title
         description: ''
         required: true
-        example: est
+        example: dolorum
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      seat_section_id: sunt
-      price: 68045785.97
-      entry_gate: eos
-      notes: omnis
+      seat_section_id: iure
+      price: 2882213.77
+      entry_gate: reprehenderit
+      notes: et
       capacity: 19
-      title: est
+      title: dolorum
     fileParameters: []
     responses: []
     responseFields: []

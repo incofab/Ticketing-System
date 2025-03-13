@@ -108,7 +108,12 @@ it('should return the correct event dashboard data', function () {
         'tickets_sold' => 5,
         'packages' => 2,
         'attendees' => 3,
-        'verified_attendees' => 2
+        'verified_attendees' => 2,
+        'total_package_capacity' =>
+          $eventPackage1->capacity + $eventPackage2->capacity,
+        'project_revenue' =>
+          $eventPackage1->capacity * $eventPackage1->price +
+          $eventPackage2->capacity * $eventPackage2->price
       ]
     ]);
 });

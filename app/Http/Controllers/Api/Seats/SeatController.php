@@ -48,7 +48,7 @@ class SeatController extends Controller
     ]);
 
     abort_if(
-      $seatSection->seats()->count() + count($data['seats']) >=
+      $seatSection->seats()->count() + count($data['seats']) >
         $seatSection->capacity,
       403,
       'Seat section is full'

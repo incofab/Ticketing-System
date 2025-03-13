@@ -5,8 +5,8 @@ description: ''
 endpoints:
   -
     httpMethods:
-      - POST
-    uri: api/event-image/store
+      - GET
+    uri: 'api/event-images/events/{event_id}/index'
     metadata:
       groupName: 'Event Images'
       groupDescription: ''
@@ -17,45 +17,102 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: multipart/form-data
+      Content-Type: application/json
       Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
+    urlParameters:
       event_id:
         name: event_id
-        description: ''
+        description: 'The ID of the event.'
         required: true
-        example: impedit
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      image:
-        name: image
-        description: 'Must be a file.'
+    cleanUrlParameters:
+      event_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/event-images/events/{event_id}/store'
+    metadata:
+      groupName: 'Event Images'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      event_id:
+        name: event_id
+        description: 'The ID of the event.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      event_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      images:
+        name: images
+        description: 'Must have at least 1 items. Must not have more than 5 items.'
+        required: true
+        example: th
+        type: 'file[]'
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      'images[].image':
+        name: 'images[].image'
+        description: "'images.*.event_id' => ['required', 'exists:events,id'],. Must be a file."
         required: true
         example: null
         type: file
         enumValues: []
         exampleWasSpecified: false
         custom: []
-      reference:
-        name: reference
+      'images[].reference':
+        name: 'images[].reference'
         description: ''
         required: true
-        example: culpa
+        example: placeat
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      event_id: impedit
-      reference: culpa
-    fileParameters:
-      image: null
+      images: th
+    fileParameters: []
     responses: []
     responseFields: []
     auth: []
@@ -66,7 +123,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: 'api/event-image/{eventImage_id}/destroy'
+    uri: 'api/event-images/{eventImage_id}/destroy'
     metadata:
       groupName: 'Event Images'
       groupDescription: ''
@@ -84,13 +141,13 @@ endpoints:
         name: eventImage_id
         description: 'The ID of the eventImage.'
         required: true
-        example: 9
+        example: 10
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      eventImage_id: 9
+      eventImage_id: 10
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

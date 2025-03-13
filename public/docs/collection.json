@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Rangers Ticketing System",
-        "_postman_id": "482bc760-9baa-4633-b72f-be39ee07d7b7",
+        "_postman_id": "806d3ec4-2ebb-4f33-b319-11e9bb3905e7",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -151,7 +151,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone\":\"totam\",\"password\":\";6!l+dvV\"}"
+                            "raw": "{\"phone\":\"qui\",\"password\":\"]EPav~DA2N7`%'XdsnA\\\/\"}"
                         },
                         "description": "",
                         "auth": {
@@ -182,7 +182,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":15,\"last_name\":\"rerum\",\"other_names\":\"vitae\",\"phone\":\"ut\",\"email\":\"waldo.block@example.net\",\"password\":\"?,x*Qv&\"}"
+                            "raw": "{\"first_name\":15,\"last_name\":\"consequatur\",\"other_names\":\"omnis\",\"phone\":\"illum\",\"email\":\"uraynor@example.org\",\"password\":\"5`r.YyG^1VX4Q'}*t\\\/0U\"}"
                         },
                         "description": "",
                         "auth": {
@@ -315,7 +315,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"gwsu\",\"description\":\"Dignissimos aut et fugit.\"}"
+                            "raw": "{\"title\":\"ewyiaeisubshxbwx\",\"description\":\"Perferendis sapiente voluptas dicta ratione ut velit.\"}"
                         },
                         "description": "",
                         "auth": {
@@ -354,7 +354,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"pozxdjjkoiofdi\",\"description\":\"Similique deserunt aliquid neque id quia maxime.\"}"
+                            "raw": "{\"title\":\"dklblpeubbk\",\"description\":\"Qui voluptates dolore magni voluptatem voluptatem dolorem.\"}"
                         },
                         "description": "",
                         "auth": {
@@ -406,19 +406,83 @@
             "description": "",
             "item": [
                 {
-                    "name": "POST api\/event-image\/store",
+                    "name": "GET api\/event-images\/events\/{event_id}\/index",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/event-image\/store",
+                            "path": "api\/event-images\/events\/:event_id\/index",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/event-image\/store"
+                            "raw": "{{baseUrl}}\/api\/event-images\/events\/:event_id\/index",
+                            "variable": [
+                                {
+                                    "id": "event_id",
+                                    "key": "event_id",
+                                    "value": "1",
+                                    "description": "The ID of the event."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/event-images\/events\/{event_id}\/store",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/event-images\/events\/:event_id\/store",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/event-images\/events\/:event_id\/store",
+                            "variable": [
+                                {
+                                    "id": "event_id",
+                                    "key": "event_id",
+                                    "value": "1",
+                                    "description": "The ID of the event."
+                                }
+                            ]
                         },
                         "method": "POST",
                         "header": [
                             {
                                 "key": "Content-Type",
-                                "value": "multipart\/form-data"
+                                "value": "application\/json"
                             },
                             {
                                 "key": "Accept",
@@ -426,26 +490,8 @@
                             }
                         ],
                         "body": {
-                            "mode": "formdata",
-                            "formdata": [
-                                {
-                                    "key": "event_id",
-                                    "value": "impedit",
-                                    "type": "text",
-                                    "description": ""
-                                },
-                                {
-                                    "key": "reference",
-                                    "value": "culpa",
-                                    "type": "text",
-                                    "description": ""
-                                },
-                                {
-                                    "key": "image",
-                                    "src": [],
-                                    "type": "file"
-                                }
-                            ]
+                            "mode": "raw",
+                            "raw": "{\"images\":\"th\"}"
                         },
                         "description": "",
                         "auth": {
@@ -455,18 +501,18 @@
                     "response": []
                 },
                 {
-                    "name": "POST api\/event-image\/{eventImage_id}\/destroy",
+                    "name": "POST api\/event-images\/{eventImage_id}\/destroy",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/event-image\/:eventImage_id\/destroy",
+                            "path": "api\/event-images\/:eventImage_id\/destroy",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/event-image\/:eventImage_id\/destroy",
+                            "raw": "{{baseUrl}}\/api\/event-images\/:eventImage_id\/destroy",
                             "variable": [
                                 {
                                     "id": "eventImage_id",
                                     "key": "eventImage_id",
-                                    "value": "9",
+                                    "value": "10",
                                     "description": "The ID of the eventImage."
                                 }
                             ]
@@ -595,7 +641,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"seat_section_id\":\"sunt\",\"price\":68045785.97,\"entry_gate\":\"eos\",\"notes\":\"omnis\",\"capacity\":19,\"title\":\"est\"}"
+                            "raw": "{\"seat_section_id\":\"iure\",\"price\":2882213.77,\"entry_gate\":\"reprehenderit\",\"notes\":\"et\",\"capacity\":19,\"title\":\"dolorum\"}"
                         },
                         "description": "",
                         "auth": {
@@ -804,7 +850,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"xcgc\",\"description\":\"Nobis blanditiis autem corrupti qui et.\",\"date_from\":\"2025-03-12T21:49:11\",\"date_to\":\"2122-01-06\"}"
+                            "raw": "{\"title\":\"np\",\"description\":\"Nisi reprehenderit incidunt autem molestiae at.\",\"date_from\":\"2025-03-13T21:13:18\",\"date_to\":\"2078-01-29\"}"
                         },
                         "description": "",
                         "auth": {
@@ -843,7 +889,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"hcpgolagznstwidsl\",\"description\":\"Voluptatem deserunt soluta quam ipsum quam corrupti voluptatem.\",\"date_from\":\"2025-03-12T21:49:11\",\"date_to\":\"2049-03-28\"}"
+                            "raw": "{\"title\":\"soiwgicdrhiks\",\"description\":\"Nisi perspiciatis quaerat aut debitis ut saepe.\",\"date_from\":\"2025-03-13T21:13:18\",\"date_to\":\"2051-06-28\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1165,7 +1211,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"event_packages\":\"valpicxcryicsjqsetzyfvdlqoukfnbxelsmebivtplqepvsimqcuuqzmggnqxzgpijuqnainpfzzh\"}"
+                            "raw": "{\"event_packages\":\"dlgeokiexwmepsxasplbwaqcftbuvqd\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1521,7 +1567,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"seats\":[\"sapiente\"]}"
+                            "raw": "{\"seats\":[\"nesciunt\"]}"
                         },
                         "description": "This endpoint allows you to create multiple seats within a specific seat section.",
                         "auth": {
@@ -1608,7 +1654,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"ofrfgfledyafxmlecji\",\"description\":\"Amet eum rem omnis.\",\"features\":\"non\",\"capacity\":14}"
+                            "raw": "{\"title\":\"mgvzosfqflnghghe\",\"description\":\"Iusto adipisci animi odio dolorem minima voluptas ea animi.\",\"features\":\"est\",\"capacity\":11}"
                         },
                         "description": "",
                         "auth": {
@@ -1647,7 +1693,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"ojearjxpo\",\"description\":\"Inventore magni aut molestias consequatur.\",\"features\":\"consequatur\",\"capacity\":18}"
+                            "raw": "{\"title\":\"lbhtqpaabvoptvmexbsspjgc\",\"description\":\"Dolores est rerum ex culpa.\",\"features\":\"perspiciatis\",\"capacity\":18}"
                         },
                         "description": "",
                         "auth": {
@@ -1747,7 +1793,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"merchant\":\"omnis\",\"callback_url\":\"http:\\\/\\\/www.blanda.biz\\\/corrupti-itaque-et-quas-est-aut-doloremque\",\"quantity\":82,\"name\":\"vfmewcdsmaqwgaoikiepv\",\"phone\":\"g\",\"email\":\"amara.nolan@example.com\"}"
+                            "raw": "{\"merchant\":\"ullam\",\"callback_url\":\"http:\\\/\\\/www.toy.com\\\/reiciendis-voluptas-adipisci-vel\",\"quantity\":35,\"name\":\"caqpxgeudlkohpxqqpf\",\"phone\":\"pcphuqdsbywryxrzwcdctont\",\"email\":\"xcartwright@example.com\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1778,7 +1824,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"reference\":\"iste\"}"
+                            "raw": "{\"reference\":\"necessitatibus\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1809,7 +1855,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"reference\":\"quae\",\"quantity\":80,\"seats\":[{\"attendee\":{\"name\":\"consequuntur\",\"email\":\"jocelyn77@example.com\",\"phone\":\"eos\",\"address\":\"dolorem\"}}]}"
+                            "raw": "{\"reference\":\"et\",\"quantity\":37,\"seats\":[{\"attendee\":{\"name\":\"unde\",\"email\":\"funk.melissa@example.org\",\"phone\":\"est\",\"address\":\"tempora\"}}]}"
                         },
                         "description": "",
                         "auth": {
@@ -1840,7 +1886,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"reference\":\"vel\",\"email\":\"damien.roob@example.com\"}"
+                            "raw": "{\"reference\":\"id\",\"email\":\"dawn59@example.com\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1899,7 +1945,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"ticket_payment_id\":10,\"hash\":\"voluptatem\",\"reference\":\"quia\",\"device_no\":\"animi\",\"event_id\":4}"
+                            "raw": "{\"ticket_payment_id\":17,\"hash\":\"iusto\",\"reference\":\"quibusdam\",\"device_no\":\"animi\",\"event_id\":9}"
                         },
                         "description": "",
                         "auth": {
@@ -1930,7 +1976,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"reference\":\"quod\"}"
+                            "raw": "{\"reference\":\"perferendis\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1969,7 +2015,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"wsxdsditby\",\"email\":\"dberge@example.org\",\"phone\":\"jbtguj\",\"address\":\"ajednybhuojvlboqff\"}"
+                            "raw": "{\"name\":\"achrzgpbyl\",\"email\":\"karianne33@example.org\",\"phone\":\"ioalnot\",\"address\":\"ceiurai\"}"
                         },
                         "description": "",
                         "auth": {

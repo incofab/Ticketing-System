@@ -37,7 +37,7 @@ class Event extends Model
       'phone' => ['nullable', 'string', 'max:255'],
       'email' => ['nullable', 'email', 'max:255'],
       'website' => ['nullable', 'string', 'max:255'],
-      'facbook' => ['nullable', 'string', 'max:255'],
+      'facebook' => ['nullable', 'string', 'max:255'],
       'twitter' => ['nullable', 'string', 'max:255'],
       'instagram' => ['nullable', 'string', 'max:255'],
       'youtube' => ['nullable', 'string', 'max:255'],

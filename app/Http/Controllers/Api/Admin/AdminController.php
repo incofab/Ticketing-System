@@ -5,9 +5,9 @@ namespace App\Http\Controllers\Api\Admin;
 use App\Enums\PaymentReferenceStatus;
 use App\Http\Controllers\Controller;
 use App\Models\Event;
+use App\Models\EventPackage;
 use App\Models\EventSeason;
 use App\Models\Seat;
-use App\Models\Ticket;
 use App\Models\TicketPayment;
 use App\Models\User;
 use App\Support\MorphMap;
@@ -70,13 +70,22 @@ class AdminController extends Controller
       ->where('event_packages.event_id', $event->id)
       ->count();
 
+    $totalPackageCapacity = DB::table('event_packages')
+      ->where('event_id', $event->id)
+      ->sum('capacity');
+    $projectedRevenue = EventPackage::query()
+      ->where('event_id', $event->id)
+      ->sum(DB::raw('price * capacity'));
     $data = [
       'event' => $event,
       'total_income' => $totalIncome,
       'tickets_sold' => $ticketPaymentQuery->sum('ticket_payments.quantity'),
       'packages' => $event->eventPackages()->count(),
       'attendees' => $event->eventAttendees()->count(),
-      'verified_attendees' => $verifiedAttendees
+      'verified_attendees' => $verifiedAttendees,
+      'seats_count' => Seat::query()->count(),
+      'total_package_capacity' => $totalPackageCapacity,
+      'project_revenue' => $projectedRevenue
     ];
     return $this->apiRes($data);
   }
