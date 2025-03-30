@@ -11,6 +11,9 @@ class SeatSection extends Model
   use HasFactory, SoftDeletes;
 
   protected $guarded = [];
+  protected $casts = [
+    'capacity' => 'integer'
+  ];
 
   function seats()
   {

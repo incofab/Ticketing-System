@@ -77,12 +77,12 @@ class EventController extends Controller
 
     $event = $eventSeason->events()->create(
       collect($data)
-        ->except('event_packages', 'logo_file')
+        ->except('event_packages', 'logo')
         ->toArray()
     );
     CreateUpdateEventPackage::run($event, $data['event_packages'] ?? []);
 
-    $this->uploadLogo($event, $request->logo_file);
+    $this->uploadLogo($event, $request->logo);
 
     return $this->apiRes($event);
   }
@@ -106,12 +106,12 @@ class EventController extends Controller
     $event
       ->fill(
         collect($data)
-          ->except('logo_file')
+          ->except('logo')
           ->toArray()
       )
       ->save();
 
-    $this->uploadLogo($event, $request->logo_file);
+    $this->uploadLogo($event, $request->logo);
 
     return $this->apiRes($event);
   }

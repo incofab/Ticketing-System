@@ -30,7 +30,7 @@ class EventUITableFilters extends BaseUITableFilter
     );
   }
 
-  protected function directQuery()
+  protected function directQuery(): static
   {
     $this->dateFilter(
       'events.start_time',

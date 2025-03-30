@@ -4,23 +4,39 @@ namespace App\Http\Controllers\Api\Seats;
 
 use App\Actions\GetAvailableSeats;
 use App\Actions\RecordSeat;
-use App\Enums\SeatStatus;
 use App\Http\Controllers\Controller;
 use App\Models\EventPackage;
 use App\Models\Seat;
 use App\Models\SeatSection;
+use App\Support\UITableFilters\SeatUITableFilters;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Rules\Enum;
 
 /**
  * @group Seats
  */
 class SeatController extends Controller
 {
+  /**
+   * @queryParam seat_section_id int Representing the seatSection Id. No-example
+   * @queryParam status string. No-example
+   * @queryParam seat_no string. No-example
+   *
+   * @queryParam sortKey string No-example
+   * @queryParam sortDir string Represents the direction of the sort. ASC|DESC. No-example
+   * @queryParam search string. No-example
+   * @queryParam date_from string. No-example
+   * @queryParam date_to string. No-example
+   */
   public function index(Request $request, SeatSection|null $seatSection = null)
   {
-    $seatSections = Seat::query()->seatSectionId($seatSection?->id);
-    return $this->apiRes(paginateFromRequest($seatSections));
+    $query = SeatUITableFilters::make(
+      $request->all(),
+      Seat::query()->seatSectionId($seatSection?->id)
+    )
+      ->filterQuery()
+      ->getQuery();
+    // $seatSections = Seat::query()->seatSectionId($seatSection?->id);
+    return $this->apiRes(paginateFromRequest($query));
   }
 
   public function available(Request $request, EventPackage $eventPackage)

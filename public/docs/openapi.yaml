@@ -79,11 +79,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: qui
+                  example: dolorem
                 password:
                   type: string
                   description: ''
-                  example: "]EPav~DA2N7`%'XdsnA/"
+                  example: )UG+\)>c3gFCZ8hf)
               required:
                 - phone
                 - password
@@ -107,27 +107,27 @@ paths:
                 first_name:
                   type: integer
                   description: ''
-                  example: 15
+                  example: 18
                 last_name:
                   type: string
                   description: ''
-                  example: consequatur
+                  example: necessitatibus
                 other_names:
                   type: string
                   description: ''
-                  example: omnis
+                  example: accusamus
                 phone:
                   type: string
                   description: ''
-                  example: illum
+                  example: ipsum
                 email:
                   type: string
                   description: ''
-                  example: uraynor@example.org
+                  example: dale75@example.com
                 password:
                   type: string
                   description: ''
-                  example: "5`r.YyG^1VX4Q'}*t/0U"
+                  example: "ZU~ScGxSs,'@97"
               required:
                 - first_name
                 - last_name
@@ -196,11 +196,11 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ewyiaeisubshxbwx
+                  example: xplhpaghmmdywievkuwymv
                 description:
                   type: string
                   description: ''
-                  example: 'Perferendis sapiente voluptas dicta ratione ut velit.'
+                  example: 'Ut omnis asperiores esse aperiam dolorem est expedita.'
               required:
                 - title
       security: []
@@ -223,11 +223,11 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: dklblpeubbk
+                  example: qhfyatrjcyjdsoesgqvkqa
                 description:
                   type: string
                   description: ''
-                  example: 'Qui voluptates dolore magni voluptatem voluptatem dolorem.'
+                  example: 'Qui eveniet et reprehenderit.'
               required:
                 - title
       security: []
@@ -329,7 +329,7 @@ paths:
         in: path
         name: eventImage_id
         description: 'The ID of the eventImage.'
-        example: 10
+        example: 5
         required: true
         schema:
           type: integer
@@ -540,7 +540,7 @@ paths:
                         active: false
                     next_page_url: null
                     path: 'http://localhost/api/event-packages/index'
-                    per_page: 100
+                    per_page: 50
                     prev_page_url: null
                     to: 15
                     total: 15
@@ -784,7 +784,7 @@ paths:
                         example: 'http://localhost/api/event-packages/index'
                       per_page:
                         type: integer
-                        example: 100
+                        example: 50
                       prev_page_url:
                         type: string
                         example: null
@@ -816,27 +816,27 @@ paths:
                 seat_section_id:
                   type: string
                   description: ''
-                  example: iure
+                  example: at
                 price:
                   type: number
                   description: ''
-                  example: 2882213.77
+                  example: 871836519.5
                 entry_gate:
                   type: string
                   description: ''
-                  example: reprehenderit
+                  example: aut
                 notes:
                   type: string
                   description: ''
-                  example: et
+                  example: corrupti
                 capacity:
                   type: integer
                   description: ''
-                  example: 19
+                  example: 4
                 title:
                   type: string
                   description: ''
-                  example: dolorum
+                  example: nobis
               required:
                 - seat_section_id
                 - price
@@ -908,7 +908,7 @@ paths:
                         active: false
                     next_page_url: null
                     path: 'http://localhost/api/event-seasons/index/1'
-                    per_page: 100
+                    per_page: 50
                     prev_page_url: null
                     to: null
                     total: 0
@@ -972,7 +972,7 @@ paths:
                         example: 'http://localhost/api/event-seasons/index/1'
                       per_page:
                         type: integer
-                        example: 100
+                        example: 50
                       prev_page_url:
                         type: string
                         example: null
@@ -1037,7 +1037,7 @@ paths:
                         active: false
                     next_page_url: null
                     path: 'http://localhost/api/event-seasons/upcoming/1'
-                    per_page: 100
+                    per_page: 50
                     prev_page_url: null
                     to: null
                     total: 0
@@ -1101,7 +1101,7 @@ paths:
                         example: 'http://localhost/api/event-seasons/upcoming/1'
                       per_page:
                         type: integer
-                        example: 100
+                        example: 50
                       prev_page_url:
                         type: string
                         example: null
@@ -1148,19 +1148,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: np
+                  example: imbeumpezcvp
                 description:
                   type: string
                   description: ''
-                  example: 'Nisi reprehenderit incidunt autem molestiae at.'
+                  example: 'Odit omnis odit non qui ut consequatur mollitia et.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2025-03-13T21:13:18'
+                  example: '2025-03-30T13:56:38'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2078-01-29'
+                  example: '2051-04-17'
               required:
                 - title
       security: []
@@ -1192,19 +1192,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: soiwgicdrhiks
+                  example: fxouqatpcflflbnvm
                 description:
                   type: string
                   description: ''
-                  example: 'Nisi perspiciatis quaerat aut debitis ut saepe.'
+                  example: 'Veniam eligendi dolorem corporis aut sed doloribus.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2025-03-13T21:13:18'
+                  example: '2025-03-30T13:56:38'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2051-06-28'
+                  example: '2032-02-01'
               required:
                 - title
       security: []
@@ -1378,7 +1378,7 @@ paths:
                         active: false
                     next_page_url: null
                     path: 'http://localhost/api/events/index/1'
-                    per_page: 100
+                    per_page: 50
                     prev_page_url: null
                     to: 1
                     total: 1
@@ -1552,7 +1552,7 @@ paths:
                         example: 'http://localhost/api/events/index/1'
                       per_page:
                         type: integer
-                        example: 100
+                        example: 50
                       prev_page_url:
                         type: string
                         example: null
@@ -1617,7 +1617,7 @@ paths:
                         active: false
                     next_page_url: null
                     path: 'http://localhost/api/events/upcoming/1'
-                    per_page: 100
+                    per_page: 50
                     prev_page_url: null
                     to: null
                     total: 0
@@ -1681,7 +1681,7 @@ paths:
                         example: 'http://localhost/api/events/upcoming/1'
                       per_page:
                         type: integer
-                        example: 100
+                        example: 50
                       prev_page_url:
                         type: string
                         example: null
@@ -1950,7 +1950,7 @@ paths:
                 event_packages:
                   type: array
                   description: 'Must have at least 1 items.'
-                  example: dlgeokiexwmepsxasplbwaqcftbuvqd
+                  example: rrqqiuobogxekwimtgyapauaahgytouuwbtinagbtnnusrelhvrcwqvnn
                   items:
                     type: string
       security: []
@@ -2039,6 +2039,26 @@ paths:
             example: null
         -
           in: query
+          name: merchant
+          description: string.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: string.
+            example: null
+        -
+          in: query
+          name: email
+          description: string.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: string.
+            example: null
+        -
+          in: query
           name: sortKey
           description: ''
           example: null
@@ -2100,15 +2120,16 @@ paths:
                     current_page: 1
                     data:
                       -
-                        id: 1
-                        quantity: 7
+                        id: 11
+                        quantity: 1
                         event_package_id: 1
-                        user_id: 1
-                        name: 'Ernestina Balistreri Jr.'
-                        phone: 551-275-8293
-                        email: katrina12@yahoo.com
-                        created_at: '2024-01-12T17:35:58.000000Z'
-                        updated_at: '2024-01-12T17:35:58.000000Z'
+                        user_id: null
+                        name: null
+                        phone: null
+                        email: my@gmail.com
+                        created_at: '2024-01-20T09:28:24.000000Z'
+                        updated_at: '2024-01-20T09:28:24.000000Z'
+                        status: confirmed
                         merchant: paystack
                         event_package:
                           id: 1
@@ -2142,132 +2163,6 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                       -
-                        id: 3
-                        quantity: 4
-                        event_package_id: 4
-                        user_id: 4
-                        name: 'Kolby Spinka'
-                        phone: 217-274-5233
-                        email: haylee45@hotmail.com
-                        created_at: '2024-01-12T17:35:58.000000Z'
-                        updated_at: '2024-01-12T17:35:58.000000Z'
-                        merchant: paystack
-                        event_package:
-                          id: 4
-                          event_id: 4
-                          seat_section_id: 9
-                          price: 5039.9
-                          quantity_sold: 0
-                          deleted_at: null
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-12T17:35:58.000000Z'
-                          entry_gate: null
-                          event:
-                            id: 4
-                            event_season_id: 4
-                            title: 'Reiciendis officiis sunt quia omnis voluptates cupiditate laborum.'
-                            description: 'Ipsam aut tempore voluptatem et eos est eligendi illo quod dolorem quos.'
-                            start_time: '2024-03-12T17:35:58.000000Z'
-                            end_time: '2024-04-12T17:35:58.000000Z'
-                            home_team: enim
-                            away_team: quis
-                            deleted_at: null
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                          seat_section:
-                            id: 9
-                            capacity: 919
-                            title: 'Saepe dolor culpa est enim voluptatem ea et similique.'
-                            description: 'Quia hic harum vel iure consequatur veritatis totam et officiis.'
-                            features: 'Molestiae praesentium autem est soluta recusandae nostrum sed et consequatur cum.'
-                            deleted_at: null
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                      -
-                        id: 5
-                        quantity: 1
-                        event_package_id: 7
-                        user_id: 7
-                        name: 'Summer Hoeger MD'
-                        phone: '+1 (534) 499-1341'
-                        email: alex.mayer@kling.org
-                        created_at: '2024-01-12T17:35:58.000000Z'
-                        updated_at: '2024-01-12T17:35:58.000000Z'
-                        merchant: paystack
-                        event_package:
-                          id: 7
-                          event_id: 7
-                          seat_section_id: 13
-                          price: 1755.2
-                          quantity_sold: 0
-                          deleted_at: null
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-12T17:35:58.000000Z'
-                          entry_gate: null
-                          event:
-                            id: 7
-                            event_season_id: 7
-                            title: 'Alias cupiditate aut aut quo.'
-                            description: 'Nesciunt laboriosam aut maxime modi iste officiis eius.'
-                            start_time: '2024-03-12T17:35:58.000000Z'
-                            end_time: '2024-04-12T17:35:58.000000Z'
-                            home_team: et
-                            away_team: eos
-                            deleted_at: null
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                          seat_section:
-                            id: 13
-                            capacity: 577
-                            title: 'Dolorem quae odit nesciunt nemo et facilis magnam aut.'
-                            description: 'Consequatur ut sed nesciunt fugit totam beatae reiciendis sed aut sed aut doloremque minima.'
-                            features: 'Qui velit a qui non rerum.'
-                            deleted_at: null
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                      -
-                        id: 7
-                        quantity: 9
-                        event_package_id: 10
-                        user_id: 10
-                        name: 'Mekhi Conroy MD'
-                        phone: 352.795.5298
-                        email: hdare@bahringer.net
-                        created_at: '2024-01-12T17:35:58.000000Z'
-                        updated_at: '2024-01-12T17:35:58.000000Z'
-                        merchant: paystack
-                        event_package:
-                          id: 10
-                          event_id: 10
-                          seat_section_id: 17
-                          price: 6388.9
-                          quantity_sold: 0
-                          deleted_at: null
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-12T17:35:58.000000Z'
-                          entry_gate: null
-                          event:
-                            id: 10
-                            event_season_id: 10
-                            title: 'Omnis eveniet eligendi explicabo optio quam quia sunt quia.'
-                            description: 'Eum autem quasi ipsa voluptatem quod nulla quia qui minus quia.'
-                            start_time: '2024-03-12T17:35:58.000000Z'
-                            end_time: '2024-04-12T17:35:58.000000Z'
-                            home_team: qui
-                            away_team: doloremque
-                            deleted_at: null
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                          seat_section:
-                            id: 17
-                            capacity: 395
-                            title: 'Facilis doloremque impedit nihil tenetur mollitia cupiditate illum.'
-                            description: 'Voluptate aliquam aut et quasi culpa ipsa quibusdam et quisquam dolorum.'
-                            features: 'Facilis soluta dolorem sed perferendis qui non alias et ipsum.'
-                            deleted_at: null
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                      -
                         id: 9
                         quantity: 0
                         event_package_id: 13
@@ -2277,6 +2172,7 @@ paths:
                         email: kstehr@yahoo.com
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
+                        status: confirmed
                         merchant: paystack
                         event_package:
                           id: 13
@@ -2310,15 +2206,145 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                       -
-                        id: 11
+                        id: 7
+                        quantity: 9
+                        event_package_id: 10
+                        user_id: 10
+                        name: 'Mekhi Conroy MD'
+                        phone: 352.795.5298
+                        email: hdare@bahringer.net
+                        created_at: '2024-01-12T17:35:58.000000Z'
+                        updated_at: '2024-01-12T17:35:58.000000Z'
+                        status: confirmed
+                        merchant: paystack
+                        event_package:
+                          id: 10
+                          event_id: 10
+                          seat_section_id: 17
+                          price: 6388.9
+                          quantity_sold: 0
+                          deleted_at: null
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-12T17:35:58.000000Z'
+                          entry_gate: null
+                          event:
+                            id: 10
+                            event_season_id: 10
+                            title: 'Omnis eveniet eligendi explicabo optio quam quia sunt quia.'
+                            description: 'Eum autem quasi ipsa voluptatem quod nulla quia qui minus quia.'
+                            start_time: '2024-03-12T17:35:58.000000Z'
+                            end_time: '2024-04-12T17:35:58.000000Z'
+                            home_team: qui
+                            away_team: doloremque
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                          seat_section:
+                            id: 17
+                            capacity: 395
+                            title: 'Facilis doloremque impedit nihil tenetur mollitia cupiditate illum.'
+                            description: 'Voluptate aliquam aut et quasi culpa ipsa quibusdam et quisquam dolorum.'
+                            features: 'Facilis soluta dolorem sed perferendis qui non alias et ipsum.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                      -
+                        id: 5
                         quantity: 1
+                        event_package_id: 7
+                        user_id: 7
+                        name: 'Summer Hoeger MD'
+                        phone: '+1 (534) 499-1341'
+                        email: alex.mayer@kling.org
+                        created_at: '2024-01-12T17:35:58.000000Z'
+                        updated_at: '2024-01-12T17:35:58.000000Z'
+                        status: confirmed
+                        merchant: paystack
+                        event_package:
+                          id: 7
+                          event_id: 7
+                          seat_section_id: 13
+                          price: 1755.2
+                          quantity_sold: 0
+                          deleted_at: null
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-12T17:35:58.000000Z'
+                          entry_gate: null
+                          event:
+                            id: 7
+                            event_season_id: 7
+                            title: 'Alias cupiditate aut aut quo.'
+                            description: 'Nesciunt laboriosam aut maxime modi iste officiis eius.'
+                            start_time: '2024-03-12T17:35:58.000000Z'
+                            end_time: '2024-04-12T17:35:58.000000Z'
+                            home_team: et
+                            away_team: eos
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                          seat_section:
+                            id: 13
+                            capacity: 577
+                            title: 'Dolorem quae odit nesciunt nemo et facilis magnam aut.'
+                            description: 'Consequatur ut sed nesciunt fugit totam beatae reiciendis sed aut sed aut doloremque minima.'
+                            features: 'Qui velit a qui non rerum.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                      -
+                        id: 3
+                        quantity: 4
+                        event_package_id: 4
+                        user_id: 4
+                        name: 'Kolby Spinka'
+                        phone: 217-274-5233
+                        email: haylee45@hotmail.com
+                        created_at: '2024-01-12T17:35:58.000000Z'
+                        updated_at: '2024-01-12T17:35:58.000000Z'
+                        status: confirmed
+                        merchant: paystack
+                        event_package:
+                          id: 4
+                          event_id: 4
+                          seat_section_id: 9
+                          price: 5039.9
+                          quantity_sold: 0
+                          deleted_at: null
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-12T17:35:58.000000Z'
+                          entry_gate: null
+                          event:
+                            id: 4
+                            event_season_id: 4
+                            title: 'Reiciendis officiis sunt quia omnis voluptates cupiditate laborum.'
+                            description: 'Ipsam aut tempore voluptatem et eos est eligendi illo quod dolorem quos.'
+                            start_time: '2024-03-12T17:35:58.000000Z'
+                            end_time: '2024-04-12T17:35:58.000000Z'
+                            home_team: enim
+                            away_team: quis
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                          seat_section:
+                            id: 9
+                            capacity: 919
+                            title: 'Saepe dolor culpa est enim voluptatem ea et similique.'
+                            description: 'Quia hic harum vel iure consequatur veritatis totam et officiis.'
+                            features: 'Molestiae praesentium autem est soluta recusandae nostrum sed et consequatur cum.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                      -
+                        id: 1
+                        quantity: 7
                         event_package_id: 1
-                        user_id: null
-                        name: null
-                        phone: null
-                        email: my@gmail.com
-                        created_at: '2024-01-20T09:28:24.000000Z'
-                        updated_at: '2024-01-20T09:28:24.000000Z'
+                        user_id: 1
+                        name: 'Ernestina Balistreri Jr.'
+                        phone: 551-275-8293
+                        email: katrina12@yahoo.com
+                        created_at: '2024-01-12T17:35:58.000000Z'
+                        updated_at: '2024-01-12T17:35:58.000000Z'
+                        status: confirmed
                         merchant: paystack
                         event_package:
                           id: 1
@@ -2388,15 +2414,16 @@ paths:
                         type: array
                         example:
                           -
-                            id: 1
-                            quantity: 7
+                            id: 11
+                            quantity: 1
                             event_package_id: 1
-                            user_id: 1
-                            name: 'Ernestina Balistreri Jr.'
-                            phone: 551-275-8293
-                            email: katrina12@yahoo.com
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            user_id: null
+                            name: null
+                            phone: null
+                            email: my@gmail.com
+                            created_at: '2024-01-20T09:28:24.000000Z'
+                            updated_at: '2024-01-20T09:28:24.000000Z'
+                            status: confirmed
                             merchant: paystack
                             event_package:
                               id: 1
@@ -2430,132 +2457,6 @@ paths:
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
                           -
-                            id: 3
-                            quantity: 4
-                            event_package_id: 4
-                            user_id: 4
-                            name: 'Kolby Spinka'
-                            phone: 217-274-5233
-                            email: haylee45@hotmail.com
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                            merchant: paystack
-                            event_package:
-                              id: 4
-                              event_id: 4
-                              seat_section_id: 9
-                              price: 5039.9
-                              quantity_sold: 0
-                              deleted_at: null
-                              created_at: '2024-01-12T17:35:58.000000Z'
-                              updated_at: '2024-01-12T17:35:58.000000Z'
-                              entry_gate: null
-                              event:
-                                id: 4
-                                event_season_id: 4
-                                title: 'Reiciendis officiis sunt quia omnis voluptates cupiditate laborum.'
-                                description: 'Ipsam aut tempore voluptatem et eos est eligendi illo quod dolorem quos.'
-                                start_time: '2024-03-12T17:35:58.000000Z'
-                                end_time: '2024-04-12T17:35:58.000000Z'
-                                home_team: enim
-                                away_team: quis
-                                deleted_at: null
-                                created_at: '2024-01-12T17:35:58.000000Z'
-                                updated_at: '2024-01-12T17:35:58.000000Z'
-                              seat_section:
-                                id: 9
-                                capacity: 919
-                                title: 'Saepe dolor culpa est enim voluptatem ea et similique.'
-                                description: 'Quia hic harum vel iure consequatur veritatis totam et officiis.'
-                                features: 'Molestiae praesentium autem est soluta recusandae nostrum sed et consequatur cum.'
-                                deleted_at: null
-                                created_at: '2024-01-12T17:35:58.000000Z'
-                                updated_at: '2024-01-12T17:35:58.000000Z'
-                          -
-                            id: 5
-                            quantity: 1
-                            event_package_id: 7
-                            user_id: 7
-                            name: 'Summer Hoeger MD'
-                            phone: '+1 (534) 499-1341'
-                            email: alex.mayer@kling.org
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                            merchant: paystack
-                            event_package:
-                              id: 7
-                              event_id: 7
-                              seat_section_id: 13
-                              price: 1755.2
-                              quantity_sold: 0
-                              deleted_at: null
-                              created_at: '2024-01-12T17:35:58.000000Z'
-                              updated_at: '2024-01-12T17:35:58.000000Z'
-                              entry_gate: null
-                              event:
-                                id: 7
-                                event_season_id: 7
-                                title: 'Alias cupiditate aut aut quo.'
-                                description: 'Nesciunt laboriosam aut maxime modi iste officiis eius.'
-                                start_time: '2024-03-12T17:35:58.000000Z'
-                                end_time: '2024-04-12T17:35:58.000000Z'
-                                home_team: et
-                                away_team: eos
-                                deleted_at: null
-                                created_at: '2024-01-12T17:35:58.000000Z'
-                                updated_at: '2024-01-12T17:35:58.000000Z'
-                              seat_section:
-                                id: 13
-                                capacity: 577
-                                title: 'Dolorem quae odit nesciunt nemo et facilis magnam aut.'
-                                description: 'Consequatur ut sed nesciunt fugit totam beatae reiciendis sed aut sed aut doloremque minima.'
-                                features: 'Qui velit a qui non rerum.'
-                                deleted_at: null
-                                created_at: '2024-01-12T17:35:58.000000Z'
-                                updated_at: '2024-01-12T17:35:58.000000Z'
-                          -
-                            id: 7
-                            quantity: 9
-                            event_package_id: 10
-                            user_id: 10
-                            name: 'Mekhi Conroy MD'
-                            phone: 352.795.5298
-                            email: hdare@bahringer.net
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                            merchant: paystack
-                            event_package:
-                              id: 10
-                              event_id: 10
-                              seat_section_id: 17
-                              price: 6388.9
-                              quantity_sold: 0
-                              deleted_at: null
-                              created_at: '2024-01-12T17:35:58.000000Z'
-                              updated_at: '2024-01-12T17:35:58.000000Z'
-                              entry_gate: null
-                              event:
-                                id: 10
-                                event_season_id: 10
-                                title: 'Omnis eveniet eligendi explicabo optio quam quia sunt quia.'
-                                description: 'Eum autem quasi ipsa voluptatem quod nulla quia qui minus quia.'
-                                start_time: '2024-03-12T17:35:58.000000Z'
-                                end_time: '2024-04-12T17:35:58.000000Z'
-                                home_team: qui
-                                away_team: doloremque
-                                deleted_at: null
-                                created_at: '2024-01-12T17:35:58.000000Z'
-                                updated_at: '2024-01-12T17:35:58.000000Z'
-                              seat_section:
-                                id: 17
-                                capacity: 395
-                                title: 'Facilis doloremque impedit nihil tenetur mollitia cupiditate illum.'
-                                description: 'Voluptate aliquam aut et quasi culpa ipsa quibusdam et quisquam dolorum.'
-                                features: 'Facilis soluta dolorem sed perferendis qui non alias et ipsum.'
-                                deleted_at: null
-                                created_at: '2024-01-12T17:35:58.000000Z'
-                                updated_at: '2024-01-12T17:35:58.000000Z'
-                          -
                             id: 9
                             quantity: 0
                             event_package_id: 13
@@ -2565,6 +2466,7 @@ paths:
                             email: kstehr@yahoo.com
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
+                            status: confirmed
                             merchant: paystack
                             event_package:
                               id: 13
@@ -2598,15 +2500,145 @@ paths:
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
                           -
-                            id: 11
+                            id: 7
+                            quantity: 9
+                            event_package_id: 10
+                            user_id: 10
+                            name: 'Mekhi Conroy MD'
+                            phone: 352.795.5298
+                            email: hdare@bahringer.net
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            status: confirmed
+                            merchant: paystack
+                            event_package:
+                              id: 10
+                              event_id: 10
+                              seat_section_id: 17
+                              price: 6388.9
+                              quantity_sold: 0
+                              deleted_at: null
+                              created_at: '2024-01-12T17:35:58.000000Z'
+                              updated_at: '2024-01-12T17:35:58.000000Z'
+                              entry_gate: null
+                              event:
+                                id: 10
+                                event_season_id: 10
+                                title: 'Omnis eveniet eligendi explicabo optio quam quia sunt quia.'
+                                description: 'Eum autem quasi ipsa voluptatem quod nulla quia qui minus quia.'
+                                start_time: '2024-03-12T17:35:58.000000Z'
+                                end_time: '2024-04-12T17:35:58.000000Z'
+                                home_team: qui
+                                away_team: doloremque
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                              seat_section:
+                                id: 17
+                                capacity: 395
+                                title: 'Facilis doloremque impedit nihil tenetur mollitia cupiditate illum.'
+                                description: 'Voluptate aliquam aut et quasi culpa ipsa quibusdam et quisquam dolorum.'
+                                features: 'Facilis soluta dolorem sed perferendis qui non alias et ipsum.'
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                          -
+                            id: 5
                             quantity: 1
+                            event_package_id: 7
+                            user_id: 7
+                            name: 'Summer Hoeger MD'
+                            phone: '+1 (534) 499-1341'
+                            email: alex.mayer@kling.org
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            status: confirmed
+                            merchant: paystack
+                            event_package:
+                              id: 7
+                              event_id: 7
+                              seat_section_id: 13
+                              price: 1755.2
+                              quantity_sold: 0
+                              deleted_at: null
+                              created_at: '2024-01-12T17:35:58.000000Z'
+                              updated_at: '2024-01-12T17:35:58.000000Z'
+                              entry_gate: null
+                              event:
+                                id: 7
+                                event_season_id: 7
+                                title: 'Alias cupiditate aut aut quo.'
+                                description: 'Nesciunt laboriosam aut maxime modi iste officiis eius.'
+                                start_time: '2024-03-12T17:35:58.000000Z'
+                                end_time: '2024-04-12T17:35:58.000000Z'
+                                home_team: et
+                                away_team: eos
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                              seat_section:
+                                id: 13
+                                capacity: 577
+                                title: 'Dolorem quae odit nesciunt nemo et facilis magnam aut.'
+                                description: 'Consequatur ut sed nesciunt fugit totam beatae reiciendis sed aut sed aut doloremque minima.'
+                                features: 'Qui velit a qui non rerum.'
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                          -
+                            id: 3
+                            quantity: 4
+                            event_package_id: 4
+                            user_id: 4
+                            name: 'Kolby Spinka'
+                            phone: 217-274-5233
+                            email: haylee45@hotmail.com
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            status: confirmed
+                            merchant: paystack
+                            event_package:
+                              id: 4
+                              event_id: 4
+                              seat_section_id: 9
+                              price: 5039.9
+                              quantity_sold: 0
+                              deleted_at: null
+                              created_at: '2024-01-12T17:35:58.000000Z'
+                              updated_at: '2024-01-12T17:35:58.000000Z'
+                              entry_gate: null
+                              event:
+                                id: 4
+                                event_season_id: 4
+                                title: 'Reiciendis officiis sunt quia omnis voluptates cupiditate laborum.'
+                                description: 'Ipsam aut tempore voluptatem et eos est eligendi illo quod dolorem quos.'
+                                start_time: '2024-03-12T17:35:58.000000Z'
+                                end_time: '2024-04-12T17:35:58.000000Z'
+                                home_team: enim
+                                away_team: quis
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                              seat_section:
+                                id: 9
+                                capacity: 919
+                                title: 'Saepe dolor culpa est enim voluptatem ea et similique.'
+                                description: 'Quia hic harum vel iure consequatur veritatis totam et officiis.'
+                                features: 'Molestiae praesentium autem est soluta recusandae nostrum sed et consequatur cum.'
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                          -
+                            id: 1
+                            quantity: 7
                             event_package_id: 1
-                            user_id: null
-                            name: null
-                            phone: null
-                            email: my@gmail.com
-                            created_at: '2024-01-20T09:28:24.000000Z'
-                            updated_at: '2024-01-20T09:28:24.000000Z'
+                            user_id: 1
+                            name: 'Ernestina Balistreri Jr.'
+                            phone: 551-275-8293
+                            email: katrina12@yahoo.com
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            status: confirmed
                             merchant: paystack
                             event_package:
                               id: 1
@@ -2644,31 +2676,34 @@ paths:
                           properties:
                             id:
                               type: integer
-                              example: 1
+                              example: 11
                             quantity:
                               type: integer
-                              example: 7
+                              example: 1
                             event_package_id:
                               type: integer
                               example: 1
                             user_id:
-                              type: integer
-                              example: 1
+                              type: string
+                              example: null
                             name:
                               type: string
-                              example: 'Ernestina Balistreri Jr.'
+                              example: null
                             phone:
                               type: string
-                              example: 551-275-8293
+                              example: null
                             email:
                               type: string
-                              example: katrina12@yahoo.com
+                              example: my@gmail.com
                             created_at:
                               type: string
-                              example: '2024-01-12T17:35:58.000000Z'
+                              example: '2024-01-20T09:28:24.000000Z'
                             updated_at:
                               type: string
-                              example: '2024-01-12T17:35:58.000000Z'
+                              example: '2024-01-20T09:28:24.000000Z'
+                            status:
+                              type: string
+                              example: confirmed
                             merchant:
                               type: string
                               example: paystack
@@ -2830,7 +2865,87 @@ paths:
       summary: ''
       operationId: getApiSeatsIndexSeatSection
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: query
+          name: seat_section_id
+          description: 'Representing the seatSection Id.'
+          example: null
+          required: false
+          schema:
+            type: integer
+            description: 'Representing the seatSection Id.'
+            example: null
+        -
+          in: query
+          name: status
+          description: string.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: string.
+            example: null
+        -
+          in: query
+          name: seat_no
+          description: string.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: string.
+            example: null
+        -
+          in: query
+          name: sortKey
+          description: ''
+          example: null
+          required: false
+          schema:
+            type: string
+            description: ''
+            example: null
+        -
+          in: query
+          name: sortDir
+          description: 'Represents the direction of the sort. ASC|DESC.'
+          example: null
+          required: false
+          schema:
+            type: string
+            description: 'Represents the direction of the sort. ASC|DESC.'
+            example: null
+        -
+          in: query
+          name: search
+          description: string.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: string.
+            example: null
+        -
+          in: query
+          name: date_from
+          description: string.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: string.
+            example: null
+        -
+          in: query
+          name: date_to
+          description: string.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: string.
+            example: null
       responses:
         200:
           description: ''
@@ -3343,510 +3458,10 @@ paths:
                         deleted_at: null
                         created_at: '2024-01-07T18:10:42.000000Z'
                         updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 51
-                        seat_section_id: 1
-                        seat_no: '0051'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 52
-                        seat_section_id: 1
-                        seat_no: '0052'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 53
-                        seat_section_id: 1
-                        seat_no: '0053'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 54
-                        seat_section_id: 1
-                        seat_no: '0054'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 55
-                        seat_section_id: 1
-                        seat_no: '0055'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 56
-                        seat_section_id: 1
-                        seat_no: '0056'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 57
-                        seat_section_id: 1
-                        seat_no: '0057'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 58
-                        seat_section_id: 1
-                        seat_no: '0058'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 59
-                        seat_section_id: 1
-                        seat_no: '0059'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 60
-                        seat_section_id: 1
-                        seat_no: '0060'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 61
-                        seat_section_id: 1
-                        seat_no: '0061'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 62
-                        seat_section_id: 1
-                        seat_no: '0062'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 63
-                        seat_section_id: 1
-                        seat_no: '0063'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 64
-                        seat_section_id: 1
-                        seat_no: '0064'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 65
-                        seat_section_id: 1
-                        seat_no: '0065'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 66
-                        seat_section_id: 1
-                        seat_no: '0066'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 67
-                        seat_section_id: 1
-                        seat_no: '0067'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 68
-                        seat_section_id: 1
-                        seat_no: '0068'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 69
-                        seat_section_id: 1
-                        seat_no: '0069'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 70
-                        seat_section_id: 1
-                        seat_no: '0070'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 71
-                        seat_section_id: 1
-                        seat_no: '0071'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 72
-                        seat_section_id: 1
-                        seat_no: '0072'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 73
-                        seat_section_id: 1
-                        seat_no: '0073'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 74
-                        seat_section_id: 1
-                        seat_no: '0074'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 75
-                        seat_section_id: 1
-                        seat_no: '0075'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 76
-                        seat_section_id: 1
-                        seat_no: '0076'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 77
-                        seat_section_id: 1
-                        seat_no: '0077'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 78
-                        seat_section_id: 1
-                        seat_no: '0078'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 79
-                        seat_section_id: 1
-                        seat_no: '0079'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 80
-                        seat_section_id: 1
-                        seat_no: '0080'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 81
-                        seat_section_id: 1
-                        seat_no: '0081'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 82
-                        seat_section_id: 1
-                        seat_no: '0082'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 83
-                        seat_section_id: 1
-                        seat_no: '0083'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 84
-                        seat_section_id: 1
-                        seat_no: '0084'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 85
-                        seat_section_id: 1
-                        seat_no: '0085'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 86
-                        seat_section_id: 1
-                        seat_no: '0086'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 87
-                        seat_section_id: 1
-                        seat_no: '0087'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 88
-                        seat_section_id: 1
-                        seat_no: '0088'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 89
-                        seat_section_id: 1
-                        seat_no: '0089'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 90
-                        seat_section_id: 1
-                        seat_no: '0090'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 91
-                        seat_section_id: 1
-                        seat_no: '0091'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 92
-                        seat_section_id: 1
-                        seat_no: '0092'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 93
-                        seat_section_id: 1
-                        seat_no: '0093'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 94
-                        seat_section_id: 1
-                        seat_no: '0094'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 95
-                        seat_section_id: 1
-                        seat_no: '0095'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 96
-                        seat_section_id: 1
-                        seat_no: '0096'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 97
-                        seat_section_id: 1
-                        seat_no: '0097'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 98
-                        seat_section_id: 1
-                        seat_no: '0098'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 99
-                        seat_section_id: 1
-                        seat_no: '0099'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
-                      -
-                        id: 100
-                        seat_section_id: 1
-                        seat_no: '0100'
-                        description: null
-                        features: null
-                        status: available
-                        deleted_at: null
-                        created_at: '2024-01-07T18:10:42.000000Z'
-                        updated_at: '2024-01-07T18:10:42.000000Z'
                     first_page_url: 'http://localhost/api/seats/index/1?page=1'
                     from: 1
-                    last_page: 100
-                    last_page_url: 'http://localhost/api/seats/index/1?page=100'
+                    last_page: 200
+                    last_page_url: 'http://localhost/api/seats/index/1?page=200'
                     links:
                       -
                         url: null
@@ -3897,12 +3512,12 @@ paths:
                         label: ...
                         active: false
                       -
-                        url: 'http://localhost/api/seats/index/1?page=99'
-                        label: '99'
+                        url: 'http://localhost/api/seats/index/1?page=199'
+                        label: '199'
                         active: false
                       -
-                        url: 'http://localhost/api/seats/index/1?page=100'
-                        label: '100'
+                        url: 'http://localhost/api/seats/index/1?page=200'
+                        label: '200'
                         active: false
                       -
                         url: 'http://localhost/api/seats/index/1?page=2'
@@ -3910,9 +3525,9 @@ paths:
                         active: false
                     next_page_url: 'http://localhost/api/seats/index/1?page=2'
                     path: 'http://localhost/api/seats/index/1'
-                    per_page: 100
+                    per_page: 50
                     prev_page_url: null
-                    to: 100
+                    to: 50
                     total: 10000
                 properties:
                   message:
@@ -4427,506 +4042,6 @@ paths:
                             deleted_at: null
                             created_at: '2024-01-07T18:10:42.000000Z'
                             updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 51
-                            seat_section_id: 1
-                            seat_no: '0051'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 52
-                            seat_section_id: 1
-                            seat_no: '0052'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 53
-                            seat_section_id: 1
-                            seat_no: '0053'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 54
-                            seat_section_id: 1
-                            seat_no: '0054'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 55
-                            seat_section_id: 1
-                            seat_no: '0055'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 56
-                            seat_section_id: 1
-                            seat_no: '0056'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 57
-                            seat_section_id: 1
-                            seat_no: '0057'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 58
-                            seat_section_id: 1
-                            seat_no: '0058'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 59
-                            seat_section_id: 1
-                            seat_no: '0059'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 60
-                            seat_section_id: 1
-                            seat_no: '0060'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 61
-                            seat_section_id: 1
-                            seat_no: '0061'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 62
-                            seat_section_id: 1
-                            seat_no: '0062'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 63
-                            seat_section_id: 1
-                            seat_no: '0063'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 64
-                            seat_section_id: 1
-                            seat_no: '0064'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 65
-                            seat_section_id: 1
-                            seat_no: '0065'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 66
-                            seat_section_id: 1
-                            seat_no: '0066'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 67
-                            seat_section_id: 1
-                            seat_no: '0067'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 68
-                            seat_section_id: 1
-                            seat_no: '0068'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 69
-                            seat_section_id: 1
-                            seat_no: '0069'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 70
-                            seat_section_id: 1
-                            seat_no: '0070'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 71
-                            seat_section_id: 1
-                            seat_no: '0071'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 72
-                            seat_section_id: 1
-                            seat_no: '0072'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 73
-                            seat_section_id: 1
-                            seat_no: '0073'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 74
-                            seat_section_id: 1
-                            seat_no: '0074'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 75
-                            seat_section_id: 1
-                            seat_no: '0075'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 76
-                            seat_section_id: 1
-                            seat_no: '0076'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 77
-                            seat_section_id: 1
-                            seat_no: '0077'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 78
-                            seat_section_id: 1
-                            seat_no: '0078'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 79
-                            seat_section_id: 1
-                            seat_no: '0079'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 80
-                            seat_section_id: 1
-                            seat_no: '0080'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 81
-                            seat_section_id: 1
-                            seat_no: '0081'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 82
-                            seat_section_id: 1
-                            seat_no: '0082'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 83
-                            seat_section_id: 1
-                            seat_no: '0083'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 84
-                            seat_section_id: 1
-                            seat_no: '0084'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 85
-                            seat_section_id: 1
-                            seat_no: '0085'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 86
-                            seat_section_id: 1
-                            seat_no: '0086'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 87
-                            seat_section_id: 1
-                            seat_no: '0087'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 88
-                            seat_section_id: 1
-                            seat_no: '0088'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 89
-                            seat_section_id: 1
-                            seat_no: '0089'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 90
-                            seat_section_id: 1
-                            seat_no: '0090'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 91
-                            seat_section_id: 1
-                            seat_no: '0091'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 92
-                            seat_section_id: 1
-                            seat_no: '0092'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 93
-                            seat_section_id: 1
-                            seat_no: '0093'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 94
-                            seat_section_id: 1
-                            seat_no: '0094'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 95
-                            seat_section_id: 1
-                            seat_no: '0095'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 96
-                            seat_section_id: 1
-                            seat_no: '0096'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 97
-                            seat_section_id: 1
-                            seat_no: '0097'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 98
-                            seat_section_id: 1
-                            seat_no: '0098'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 99
-                            seat_section_id: 1
-                            seat_no: '0099'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
-                          -
-                            id: 100
-                            seat_section_id: 1
-                            seat_no: '0100'
-                            description: null
-                            features: null
-                            status: available
-                            deleted_at: null
-                            created_at: '2024-01-07T18:10:42.000000Z'
-                            updated_at: '2024-01-07T18:10:42.000000Z'
                         items:
                           type: object
                           properties:
@@ -4965,10 +4080,10 @@ paths:
                         example: 1
                       last_page:
                         type: integer
-                        example: 100
+                        example: 200
                       last_page_url:
                         type: string
-                        example: 'http://localhost/api/seats/index/1?page=100'
+                        example: 'http://localhost/api/seats/index/1?page=200'
                       links:
                         type: array
                         example:
@@ -5021,12 +4136,12 @@ paths:
                             label: ...
                             active: false
                           -
-                            url: 'http://localhost/api/seats/index/1?page=99'
-                            label: '99'
+                            url: 'http://localhost/api/seats/index/1?page=199'
+                            label: '199'
                             active: false
                           -
-                            url: 'http://localhost/api/seats/index/1?page=100'
-                            label: '100'
+                            url: 'http://localhost/api/seats/index/1?page=200'
+                            label: '200'
                             active: false
                           -
                             url: 'http://localhost/api/seats/index/1?page=2'
@@ -5052,13 +4167,13 @@ paths:
                         example: 'http://localhost/api/seats/index/1'
                       per_page:
                         type: integer
-                        example: 100
+                        example: 50
                       prev_page_url:
                         type: string
                         example: null
                       to:
                         type: integer
-                        example: 100
+                        example: 50
                       total:
                         type: integer
                         example: 10000
@@ -5117,7 +4232,7 @@ paths:
                         active: false
                     next_page_url: null
                     path: 'http://localhost/api/seats/available/1'
-                    per_page: 100
+                    per_page: 50
                     prev_page_url: null
                     to: null
                     total: 0
@@ -5181,7 +4296,7 @@ paths:
                         example: 'http://localhost/api/seats/available/1'
                       per_page:
                         type: integer
-                        example: 100
+                        example: 50
                       prev_page_url:
                         type: string
                         example: null
@@ -5223,7 +4338,7 @@ paths:
                   type: array
                   description: 'An array of seats to create.'
                   example:
-                    - nesciunt
+                    - qui
                   items:
                     type: string
               required:
@@ -5243,7 +4358,67 @@ paths:
       summary: ''
       operationId: getApiSeatSectionsIndex
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: query
+          name: event
+          description: 'Representing the event Id.'
+          example: null
+          required: false
+          schema:
+            type: integer
+            description: 'Representing the event Id.'
+            example: null
+        -
+          in: query
+          name: sortKey
+          description: ''
+          example: null
+          required: false
+          schema:
+            type: string
+            description: ''
+            example: null
+        -
+          in: query
+          name: sortDir
+          description: 'Represents the direction of the sort. ASC|DESC.'
+          example: null
+          required: false
+          schema:
+            type: string
+            description: 'Represents the direction of the sort. ASC|DESC.'
+            example: null
+        -
+          in: query
+          name: search
+          description: string.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: string.
+            example: null
+        -
+          in: query
+          name: date_from
+          description: string.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: string.
+            example: null
+        -
+          in: query
+          name: date_to
+          description: string.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: string.
+            example: null
       responses:
         200:
           description: ''
@@ -5254,475 +4429,8 @@ paths:
                 example:
                   message: ''
                   data:
-                    -
-                      id: 1
-                      capacity: 10000
-                      title: Regular
-                      description: null
-                      features: null
-                      deleted_at: null
-                      created_at: '2024-01-07T18:10:42.000000Z'
-                      updated_at: '2024-01-07T18:10:42.000000Z'
-                      seats_count: 10000
-                      event_packages_count: 0
-                      event_packages_sum_quantity_sold: null
-                      event_packages: []
-                    -
-                      id: 2
-                      capacity: 2083
-                      title: 'Cover Stand Regular'
-                      description: null
-                      features: null
-                      deleted_at: null
-                      created_at: '2024-01-07T18:11:41.000000Z'
-                      updated_at: '2024-01-07T18:11:41.000000Z'
-                      seats_count: 2083
-                      event_packages_count: 0
-                      event_packages_sum_quantity_sold: null
-                      event_packages: []
-                    -
-                      id: 3
-                      capacity: 60
-                      title: 'Cover Stand Executive'
-                      description: null
-                      features: null
-                      deleted_at: null
-                      created_at: '2024-01-07T18:11:47.000000Z'
-                      updated_at: '2024-01-07T18:11:47.000000Z'
-                      seats_count: 60
-                      event_packages_count: 0
-                      event_packages_sum_quantity_sold: null
-                      event_packages: []
-                    -
-                      id: 4
-                      capacity: 110
-                      title: 'Press Gallery'
-                      description: null
-                      features: null
-                      deleted_at: null
-                      created_at: '2024-01-07T18:11:47.000000Z'
-                      updated_at: '2024-01-07T18:11:47.000000Z'
-                      seats_count: 110
-                      event_packages_count: 0
-                      event_packages_sum_quantity_sold: null
-                      event_packages: []
-                    -
-                      id: 5
-                      capacity: 708
-                      title: 'Sit est reprehenderit nisi quis ipsam inventore.'
-                      description: 'Quis est quibusdam et perferendis adipisci fugit laborum consequatur repellendus enim quis provident temporibus quasi.'
-                      features: 'Maxime qui eos nisi quam debitis occaecati modi voluptatem voluptatem.'
-                      deleted_at: null
-                      created_at: '2024-01-12T17:35:58.000000Z'
-                      updated_at: '2024-01-12T17:35:58.000000Z'
-                      seats_count: 0
-                      event_packages_count: 1
-                      event_packages_sum_quantity_sold: '1'
-                      event_packages:
-                        -
-                          id: 1
-                          event_id: 1
-                          seat_section_id: 5
-                          price: 3725.7
-                          quantity_sold: 1
-                          deleted_at: null
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-20T09:35:58.000000Z'
-                          entry_gate: null
-                    -
-                      id: 6
-                      capacity: 24
-                      title: 'Est perferendis delectus ipsa expedita veniam dolorem voluptatem autem.'
-                      description: 'Et rerum ipsam repudiandae eaque perferendis architecto.'
-                      features: 'Consequatur sint voluptatem voluptatem perspiciatis voluptatem et quis veritatis aut accusamus delectus.'
-                      deleted_at: null
-                      created_at: '2024-01-12T17:35:58.000000Z'
-                      updated_at: '2024-01-12T17:35:58.000000Z'
-                      seats_count: 0
-                      event_packages_count: 1
-                      event_packages_sum_quantity_sold: '0'
-                      event_packages:
-                        -
-                          id: 2
-                          event_id: 2
-                          seat_section_id: 6
-                          price: 7204.2
-                          quantity_sold: 0
-                          deleted_at: null
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-12T17:35:58.000000Z'
-                          entry_gate: null
-                    -
-                      id: 7
-                      capacity: 369
-                      title: 'Error rerum qui ullam eos cum odit.'
-                      description: 'Exercitationem in nesciunt sit laborum doloremque quibusdam fuga recusandae similique nulla consequatur.'
-                      features: 'Quam eum blanditiis repellat unde velit recusandae est atque.'
-                      deleted_at: null
-                      created_at: '2024-01-12T17:35:58.000000Z'
-                      updated_at: '2024-01-12T17:35:58.000000Z'
-                      seats_count: 0
-                      event_packages_count: 1
-                      event_packages_sum_quantity_sold: '0'
-                      event_packages:
-                        -
-                          id: 3
-                          event_id: 3
-                          seat_section_id: 7
-                          price: 8509.6
-                          quantity_sold: 0
-                          deleted_at: null
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-12T17:35:58.000000Z'
-                          entry_gate: null
-                    -
-                      id: 8
-                      capacity: 642
-                      title: 'Eius nihil qui rem et veniam tenetur cumque veritatis.'
-                      description: 'Dolore ut quo ex natus ullam ab.'
-                      features: 'Aut eos odio aspernatur odit alias quasi suscipit quasi voluptas veniam.'
-                      deleted_at: null
-                      created_at: '2024-01-12T17:35:58.000000Z'
-                      updated_at: '2024-01-12T17:35:58.000000Z'
-                      seats_count: 1
-                      event_packages_count: 0
-                      event_packages_sum_quantity_sold: null
-                      event_packages: []
-                    -
-                      id: 9
-                      capacity: 919
-                      title: 'Saepe dolor culpa est enim voluptatem ea et similique.'
-                      description: 'Quia hic harum vel iure consequatur veritatis totam et officiis.'
-                      features: 'Molestiae praesentium autem est soluta recusandae nostrum sed et consequatur cum.'
-                      deleted_at: null
-                      created_at: '2024-01-12T17:35:58.000000Z'
-                      updated_at: '2024-01-12T17:35:58.000000Z'
-                      seats_count: 0
-                      event_packages_count: 1
-                      event_packages_sum_quantity_sold: '0'
-                      event_packages:
-                        -
-                          id: 4
-                          event_id: 4
-                          seat_section_id: 9
-                          price: 5039.9
-                          quantity_sold: 0
-                          deleted_at: null
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-12T17:35:58.000000Z'
-                          entry_gate: null
-                    -
-                      id: 10
-                      capacity: 532
-                      title: 'Et voluptatem enim et dolor.'
-                      description: 'Et dolorem et eius excepturi vitae eos ut ut.'
-                      features: 'Minus dolore iure error sit est quia iusto veniam.'
-                      deleted_at: null
-                      created_at: '2024-01-12T17:35:58.000000Z'
-                      updated_at: '2024-01-12T17:35:58.000000Z'
-                      seats_count: 0
-                      event_packages_count: 1
-                      event_packages_sum_quantity_sold: '0'
-                      event_packages:
-                        -
-                          id: 5
-                          event_id: 5
-                          seat_section_id: 10
-                          price: 6940.7
-                          quantity_sold: 0
-                          deleted_at: null
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-12T17:35:58.000000Z'
-                          entry_gate: null
-                    -
-                      id: 11
-                      capacity: 630
-                      title: 'Labore vero cum aut qui cupiditate iure mollitia.'
-                      description: 'Incidunt necessitatibus exercitationem modi esse nihil qui officia.'
-                      features: 'Molestiae ea deserunt ullam sunt sequi nihil deleniti hic.'
-                      deleted_at: null
-                      created_at: '2024-01-12T17:35:58.000000Z'
-                      updated_at: '2024-01-12T17:35:58.000000Z'
-                      seats_count: 0
-                      event_packages_count: 1
-                      event_packages_sum_quantity_sold: '0'
-                      event_packages:
-                        -
-                          id: 6
-                          event_id: 6
-                          seat_section_id: 11
-                          price: 6118.8
-                          quantity_sold: 0
-                          deleted_at: null
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-12T17:35:58.000000Z'
-                          entry_gate: null
-                    -
-                      id: 12
-                      capacity: 213
-                      title: 'Dolore quam eum occaecati rerum consequatur tenetur alias.'
-                      description: 'Quo accusamus ex dolores voluptas omnis iusto rerum sed molestiae.'
-                      features: 'Cumque ipsam ut omnis est eius amet aliquid saepe neque blanditiis.'
-                      deleted_at: null
-                      created_at: '2024-01-12T17:35:58.000000Z'
-                      updated_at: '2024-01-12T17:35:58.000000Z'
-                      seats_count: 1
-                      event_packages_count: 0
-                      event_packages_sum_quantity_sold: null
-                      event_packages: []
-                    -
-                      id: 13
-                      capacity: 577
-                      title: 'Dolorem quae odit nesciunt nemo et facilis magnam aut.'
-                      description: 'Consequatur ut sed nesciunt fugit totam beatae reiciendis sed aut sed aut doloremque minima.'
-                      features: 'Qui velit a qui non rerum.'
-                      deleted_at: null
-                      created_at: '2024-01-12T17:35:58.000000Z'
-                      updated_at: '2024-01-12T17:35:58.000000Z'
-                      seats_count: 0
-                      event_packages_count: 1
-                      event_packages_sum_quantity_sold: '0'
-                      event_packages:
-                        -
-                          id: 7
-                          event_id: 7
-                          seat_section_id: 13
-                          price: 1755.2
-                          quantity_sold: 0
-                          deleted_at: null
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-12T17:35:58.000000Z'
-                          entry_gate: null
-                    -
-                      id: 14
-                      capacity: 138
-                      title: 'Architecto facilis et harum et et.'
-                      description: 'Eveniet eaque rerum animi earum deserunt eligendi et aut id vel.'
-                      features: 'Eaque quo aut pariatur eveniet cupiditate dolor omnis est.'
-                      deleted_at: null
-                      created_at: '2024-01-12T17:35:58.000000Z'
-                      updated_at: '2024-01-12T17:35:58.000000Z'
-                      seats_count: 0
-                      event_packages_count: 1
-                      event_packages_sum_quantity_sold: '0'
-                      event_packages:
-                        -
-                          id: 8
-                          event_id: 8
-                          seat_section_id: 14
-                          price: 6075.5
-                          quantity_sold: 0
-                          deleted_at: null
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-12T17:35:58.000000Z'
-                          entry_gate: null
-                    -
-                      id: 15
-                      capacity: 232
-                      title: 'Voluptas sunt modi sunt et sint.'
-                      description: 'Sed dolores tenetur rerum officiis autem qui corporis quasi.'
-                      features: 'Inventore perferendis atque modi et doloremque quibusdam harum magni atque eum.'
-                      deleted_at: null
-                      created_at: '2024-01-12T17:35:58.000000Z'
-                      updated_at: '2024-01-12T17:35:58.000000Z'
-                      seats_count: 0
-                      event_packages_count: 1
-                      event_packages_sum_quantity_sold: '0'
-                      event_packages:
-                        -
-                          id: 9
-                          event_id: 9
-                          seat_section_id: 15
-                          price: 4199.9
-                          quantity_sold: 0
-                          deleted_at: null
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-12T17:35:58.000000Z'
-                          entry_gate: null
-                    -
-                      id: 16
-                      capacity: 61
-                      title: 'Architecto aliquam ut voluptate nemo.'
-                      description: 'Accusantium molestias voluptas et ex qui saepe ea ut.'
-                      features: 'Quaerat cupiditate fugiat odit et sed unde.'
-                      deleted_at: null
-                      created_at: '2024-01-12T17:35:58.000000Z'
-                      updated_at: '2024-01-12T17:35:58.000000Z'
-                      seats_count: 1
-                      event_packages_count: 0
-                      event_packages_sum_quantity_sold: null
-                      event_packages: []
-                    -
-                      id: 17
-                      capacity: 395
-                      title: 'Facilis doloremque impedit nihil tenetur mollitia cupiditate illum.'
-                      description: 'Voluptate aliquam aut et quasi culpa ipsa quibusdam et quisquam dolorum.'
-                      features: 'Facilis soluta dolorem sed perferendis qui non alias et ipsum.'
-                      deleted_at: null
-                      created_at: '2024-01-12T17:35:58.000000Z'
-                      updated_at: '2024-01-12T17:35:58.000000Z'
-                      seats_count: 0
-                      event_packages_count: 1
-                      event_packages_sum_quantity_sold: '0'
-                      event_packages:
-                        -
-                          id: 10
-                          event_id: 10
-                          seat_section_id: 17
-                          price: 6388.9
-                          quantity_sold: 0
-                          deleted_at: null
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-12T17:35:58.000000Z'
-                          entry_gate: null
-                    -
-                      id: 18
-                      capacity: 684
-                      title: 'In quia et perferendis impedit veniam officiis.'
-                      description: 'Quia repellendus beatae nihil recusandae optio dolorem.'
-                      features: 'Distinctio rerum voluptatum corporis fugiat nulla similique eius est.'
-                      deleted_at: null
-                      created_at: '2024-01-12T17:35:58.000000Z'
-                      updated_at: '2024-01-12T17:35:58.000000Z'
-                      seats_count: 0
-                      event_packages_count: 1
-                      event_packages_sum_quantity_sold: '0'
-                      event_packages:
-                        -
-                          id: 11
-                          event_id: 11
-                          seat_section_id: 18
-                          price: 1063.4
-                          quantity_sold: 0
-                          deleted_at: null
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-12T17:35:58.000000Z'
-                          entry_gate: null
-                    -
-                      id: 19
-                      capacity: 849
-                      title: 'Praesentium explicabo ipsam rerum totam sunt.'
-                      description: 'Delectus ipsa perferendis incidunt maiores facere occaecati nihil suscipit fuga possimus iure.'
-                      features: 'Eligendi inventore delectus est delectus sed nemo.'
-                      deleted_at: null
-                      created_at: '2024-01-12T17:35:58.000000Z'
-                      updated_at: '2024-01-12T17:35:58.000000Z'
-                      seats_count: 0
-                      event_packages_count: 1
-                      event_packages_sum_quantity_sold: '0'
-                      event_packages:
-                        -
-                          id: 12
-                          event_id: 12
-                          seat_section_id: 19
-                          price: 3962.2
-                          quantity_sold: 0
-                          deleted_at: null
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-12T17:35:58.000000Z'
-                          entry_gate: null
-                    -
-                      id: 20
-                      capacity: 484
-                      title: 'At nihil corporis sint et sit necessitatibus.'
-                      description: 'Maiores aut repellendus ut necessitatibus nostrum voluptatibus voluptatem sed illum libero voluptas veritatis doloremque.'
-                      features: 'Numquam aut velit vitae ullam rerum omnis.'
-                      deleted_at: null
-                      created_at: '2024-01-12T17:35:58.000000Z'
-                      updated_at: '2024-01-12T17:35:58.000000Z'
-                      seats_count: 1
-                      event_packages_count: 0
-                      event_packages_sum_quantity_sold: null
-                      event_packages: []
-                    -
-                      id: 21
-                      capacity: 269
-                      title: 'Alias esse amet reiciendis et.'
-                      description: 'Ut molestias unde aut vero quam qui sequi quis saepe porro veniam.'
-                      features: 'Fuga consequatur porro ut voluptatem rerum deleniti eaque nihil deleniti.'
-                      deleted_at: null
-                      created_at: '2024-01-12T17:35:58.000000Z'
-                      updated_at: '2024-01-12T17:35:58.000000Z'
-                      seats_count: 0
-                      event_packages_count: 1
-                      event_packages_sum_quantity_sold: '0'
-                      event_packages:
-                        -
-                          id: 13
-                          event_id: 13
-                          seat_section_id: 21
-                          price: 4331.2
-                          quantity_sold: 0
-                          deleted_at: null
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-12T17:35:58.000000Z'
-                          entry_gate: null
-                    -
-                      id: 22
-                      capacity: 590
-                      title: 'Impedit molestiae enim quo ducimus quo beatae saepe.'
-                      description: 'Maxime voluptas possimus unde sit sint sequi temporibus.'
-                      features: 'Quia dolorem sed ea sunt et in sint vero laborum.'
-                      deleted_at: null
-                      created_at: '2024-01-12T17:35:58.000000Z'
-                      updated_at: '2024-01-12T17:35:58.000000Z'
-                      seats_count: 0
-                      event_packages_count: 1
-                      event_packages_sum_quantity_sold: '0'
-                      event_packages:
-                        -
-                          id: 14
-                          event_id: 14
-                          seat_section_id: 22
-                          price: 4246.2
-                          quantity_sold: 0
-                          deleted_at: null
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-12T17:35:58.000000Z'
-                          entry_gate: null
-                    -
-                      id: 23
-                      capacity: 665
-                      title: 'Repellat dicta veritatis vel occaecati voluptatem.'
-                      description: 'Qui nisi autem adipisci deleniti accusantium vel ut ut et est ut earum laboriosam.'
-                      features: 'Hic veniam consequuntur molestiae corporis eum unde libero consequatur consequatur sit.'
-                      deleted_at: null
-                      created_at: '2024-01-12T17:35:58.000000Z'
-                      updated_at: '2024-01-12T17:35:58.000000Z'
-                      seats_count: 0
-                      event_packages_count: 1
-                      event_packages_sum_quantity_sold: '0'
-                      event_packages:
-                        -
-                          id: 15
-                          event_id: 15
-                          seat_section_id: 23
-                          price: 7010
-                          quantity_sold: 0
-                          deleted_at: null
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-12T17:35:58.000000Z'
-                          entry_gate: null
-                    -
-                      id: 24
-                      capacity: 177
-                      title: 'Doloribus et vel fugiat alias asperiores iste.'
-                      description: 'Dignissimos itaque similique corrupti omnis qui nam odit temporibus ea atque.'
-                      features: 'Nobis sunt saepe temporibus quidem enim alias architecto odio deserunt.'
-                      deleted_at: null
-                      created_at: '2024-01-12T17:35:58.000000Z'
-                      updated_at: '2024-01-12T17:35:58.000000Z'
-                      seats_count: 1
-                      event_packages_count: 0
-                      event_packages_sum_quantity_sold: null
-                      event_packages: []
-                properties:
-                  message:
-                    type: string
-                    example: ''
-                  data:
-                    type: array
-                    example:
+                    current_page: 1
+                    data:
                       -
                         id: 1
                         capacity: 10000
@@ -6185,45 +4893,600 @@ paths:
                         event_packages_count: 0
                         event_packages_sum_quantity_sold: null
                         event_packages: []
-                    items:
-                      type: object
-                      properties:
-                        id:
-                          type: integer
-                          example: 1
-                        capacity:
-                          type: integer
-                          example: 10000
-                        title:
-                          type: string
-                          example: Regular
-                        description:
-                          type: string
-                          example: null
-                        features:
-                          type: string
-                          example: null
-                        deleted_at:
-                          type: string
-                          example: null
-                        created_at:
-                          type: string
-                          example: '2024-01-07T18:10:42.000000Z'
-                        updated_at:
-                          type: string
-                          example: '2024-01-07T18:10:42.000000Z'
-                        seats_count:
-                          type: integer
-                          example: 10000
-                        event_packages_count:
-                          type: integer
-                          example: 0
-                        event_packages_sum_quantity_sold:
-                          type: string
-                          example: null
-                        event_packages:
-                          type: array
-                          example: []
+                    first_page_url: 'http://localhost/api/seat-sections/index?page=1'
+                    from: 1
+                    last_page: 1
+                    last_page_url: 'http://localhost/api/seat-sections/index?page=1'
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost/api/seat-sections/index?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    next_page_url: null
+                    path: 'http://localhost/api/seat-sections/index'
+                    per_page: 50
+                    prev_page_url: null
+                    to: 24
+                    total: 24
+                properties:
+                  message:
+                    type: string
+                    example: ''
+                  data:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      data:
+                        type: array
+                        example:
+                          -
+                            id: 1
+                            capacity: 10000
+                            title: Regular
+                            description: null
+                            features: null
+                            deleted_at: null
+                            created_at: '2024-01-07T18:10:42.000000Z'
+                            updated_at: '2024-01-07T18:10:42.000000Z'
+                            seats_count: 10000
+                            event_packages_count: 0
+                            event_packages_sum_quantity_sold: null
+                            event_packages: []
+                          -
+                            id: 2
+                            capacity: 2083
+                            title: 'Cover Stand Regular'
+                            description: null
+                            features: null
+                            deleted_at: null
+                            created_at: '2024-01-07T18:11:41.000000Z'
+                            updated_at: '2024-01-07T18:11:41.000000Z'
+                            seats_count: 2083
+                            event_packages_count: 0
+                            event_packages_sum_quantity_sold: null
+                            event_packages: []
+                          -
+                            id: 3
+                            capacity: 60
+                            title: 'Cover Stand Executive'
+                            description: null
+                            features: null
+                            deleted_at: null
+                            created_at: '2024-01-07T18:11:47.000000Z'
+                            updated_at: '2024-01-07T18:11:47.000000Z'
+                            seats_count: 60
+                            event_packages_count: 0
+                            event_packages_sum_quantity_sold: null
+                            event_packages: []
+                          -
+                            id: 4
+                            capacity: 110
+                            title: 'Press Gallery'
+                            description: null
+                            features: null
+                            deleted_at: null
+                            created_at: '2024-01-07T18:11:47.000000Z'
+                            updated_at: '2024-01-07T18:11:47.000000Z'
+                            seats_count: 110
+                            event_packages_count: 0
+                            event_packages_sum_quantity_sold: null
+                            event_packages: []
+                          -
+                            id: 5
+                            capacity: 708
+                            title: 'Sit est reprehenderit nisi quis ipsam inventore.'
+                            description: 'Quis est quibusdam et perferendis adipisci fugit laborum consequatur repellendus enim quis provident temporibus quasi.'
+                            features: 'Maxime qui eos nisi quam debitis occaecati modi voluptatem voluptatem.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            seats_count: 0
+                            event_packages_count: 1
+                            event_packages_sum_quantity_sold: '1'
+                            event_packages:
+                              -
+                                id: 1
+                                event_id: 1
+                                seat_section_id: 5
+                                price: 3725.7
+                                quantity_sold: 1
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-20T09:35:58.000000Z'
+                                entry_gate: null
+                          -
+                            id: 6
+                            capacity: 24
+                            title: 'Est perferendis delectus ipsa expedita veniam dolorem voluptatem autem.'
+                            description: 'Et rerum ipsam repudiandae eaque perferendis architecto.'
+                            features: 'Consequatur sint voluptatem voluptatem perspiciatis voluptatem et quis veritatis aut accusamus delectus.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            seats_count: 0
+                            event_packages_count: 1
+                            event_packages_sum_quantity_sold: '0'
+                            event_packages:
+                              -
+                                id: 2
+                                event_id: 2
+                                seat_section_id: 6
+                                price: 7204.2
+                                quantity_sold: 0
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                                entry_gate: null
+                          -
+                            id: 7
+                            capacity: 369
+                            title: 'Error rerum qui ullam eos cum odit.'
+                            description: 'Exercitationem in nesciunt sit laborum doloremque quibusdam fuga recusandae similique nulla consequatur.'
+                            features: 'Quam eum blanditiis repellat unde velit recusandae est atque.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            seats_count: 0
+                            event_packages_count: 1
+                            event_packages_sum_quantity_sold: '0'
+                            event_packages:
+                              -
+                                id: 3
+                                event_id: 3
+                                seat_section_id: 7
+                                price: 8509.6
+                                quantity_sold: 0
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                                entry_gate: null
+                          -
+                            id: 8
+                            capacity: 642
+                            title: 'Eius nihil qui rem et veniam tenetur cumque veritatis.'
+                            description: 'Dolore ut quo ex natus ullam ab.'
+                            features: 'Aut eos odio aspernatur odit alias quasi suscipit quasi voluptas veniam.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            seats_count: 1
+                            event_packages_count: 0
+                            event_packages_sum_quantity_sold: null
+                            event_packages: []
+                          -
+                            id: 9
+                            capacity: 919
+                            title: 'Saepe dolor culpa est enim voluptatem ea et similique.'
+                            description: 'Quia hic harum vel iure consequatur veritatis totam et officiis.'
+                            features: 'Molestiae praesentium autem est soluta recusandae nostrum sed et consequatur cum.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            seats_count: 0
+                            event_packages_count: 1
+                            event_packages_sum_quantity_sold: '0'
+                            event_packages:
+                              -
+                                id: 4
+                                event_id: 4
+                                seat_section_id: 9
+                                price: 5039.9
+                                quantity_sold: 0
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                                entry_gate: null
+                          -
+                            id: 10
+                            capacity: 532
+                            title: 'Et voluptatem enim et dolor.'
+                            description: 'Et dolorem et eius excepturi vitae eos ut ut.'
+                            features: 'Minus dolore iure error sit est quia iusto veniam.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            seats_count: 0
+                            event_packages_count: 1
+                            event_packages_sum_quantity_sold: '0'
+                            event_packages:
+                              -
+                                id: 5
+                                event_id: 5
+                                seat_section_id: 10
+                                price: 6940.7
+                                quantity_sold: 0
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                                entry_gate: null
+                          -
+                            id: 11
+                            capacity: 630
+                            title: 'Labore vero cum aut qui cupiditate iure mollitia.'
+                            description: 'Incidunt necessitatibus exercitationem modi esse nihil qui officia.'
+                            features: 'Molestiae ea deserunt ullam sunt sequi nihil deleniti hic.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            seats_count: 0
+                            event_packages_count: 1
+                            event_packages_sum_quantity_sold: '0'
+                            event_packages:
+                              -
+                                id: 6
+                                event_id: 6
+                                seat_section_id: 11
+                                price: 6118.8
+                                quantity_sold: 0
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                                entry_gate: null
+                          -
+                            id: 12
+                            capacity: 213
+                            title: 'Dolore quam eum occaecati rerum consequatur tenetur alias.'
+                            description: 'Quo accusamus ex dolores voluptas omnis iusto rerum sed molestiae.'
+                            features: 'Cumque ipsam ut omnis est eius amet aliquid saepe neque blanditiis.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            seats_count: 1
+                            event_packages_count: 0
+                            event_packages_sum_quantity_sold: null
+                            event_packages: []
+                          -
+                            id: 13
+                            capacity: 577
+                            title: 'Dolorem quae odit nesciunt nemo et facilis magnam aut.'
+                            description: 'Consequatur ut sed nesciunt fugit totam beatae reiciendis sed aut sed aut doloremque minima.'
+                            features: 'Qui velit a qui non rerum.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            seats_count: 0
+                            event_packages_count: 1
+                            event_packages_sum_quantity_sold: '0'
+                            event_packages:
+                              -
+                                id: 7
+                                event_id: 7
+                                seat_section_id: 13
+                                price: 1755.2
+                                quantity_sold: 0
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                                entry_gate: null
+                          -
+                            id: 14
+                            capacity: 138
+                            title: 'Architecto facilis et harum et et.'
+                            description: 'Eveniet eaque rerum animi earum deserunt eligendi et aut id vel.'
+                            features: 'Eaque quo aut pariatur eveniet cupiditate dolor omnis est.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            seats_count: 0
+                            event_packages_count: 1
+                            event_packages_sum_quantity_sold: '0'
+                            event_packages:
+                              -
+                                id: 8
+                                event_id: 8
+                                seat_section_id: 14
+                                price: 6075.5
+                                quantity_sold: 0
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                                entry_gate: null
+                          -
+                            id: 15
+                            capacity: 232
+                            title: 'Voluptas sunt modi sunt et sint.'
+                            description: 'Sed dolores tenetur rerum officiis autem qui corporis quasi.'
+                            features: 'Inventore perferendis atque modi et doloremque quibusdam harum magni atque eum.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            seats_count: 0
+                            event_packages_count: 1
+                            event_packages_sum_quantity_sold: '0'
+                            event_packages:
+                              -
+                                id: 9
+                                event_id: 9
+                                seat_section_id: 15
+                                price: 4199.9
+                                quantity_sold: 0
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                                entry_gate: null
+                          -
+                            id: 16
+                            capacity: 61
+                            title: 'Architecto aliquam ut voluptate nemo.'
+                            description: 'Accusantium molestias voluptas et ex qui saepe ea ut.'
+                            features: 'Quaerat cupiditate fugiat odit et sed unde.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            seats_count: 1
+                            event_packages_count: 0
+                            event_packages_sum_quantity_sold: null
+                            event_packages: []
+                          -
+                            id: 17
+                            capacity: 395
+                            title: 'Facilis doloremque impedit nihil tenetur mollitia cupiditate illum.'
+                            description: 'Voluptate aliquam aut et quasi culpa ipsa quibusdam et quisquam dolorum.'
+                            features: 'Facilis soluta dolorem sed perferendis qui non alias et ipsum.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            seats_count: 0
+                            event_packages_count: 1
+                            event_packages_sum_quantity_sold: '0'
+                            event_packages:
+                              -
+                                id: 10
+                                event_id: 10
+                                seat_section_id: 17
+                                price: 6388.9
+                                quantity_sold: 0
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                                entry_gate: null
+                          -
+                            id: 18
+                            capacity: 684
+                            title: 'In quia et perferendis impedit veniam officiis.'
+                            description: 'Quia repellendus beatae nihil recusandae optio dolorem.'
+                            features: 'Distinctio rerum voluptatum corporis fugiat nulla similique eius est.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            seats_count: 0
+                            event_packages_count: 1
+                            event_packages_sum_quantity_sold: '0'
+                            event_packages:
+                              -
+                                id: 11
+                                event_id: 11
+                                seat_section_id: 18
+                                price: 1063.4
+                                quantity_sold: 0
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                                entry_gate: null
+                          -
+                            id: 19
+                            capacity: 849
+                            title: 'Praesentium explicabo ipsam rerum totam sunt.'
+                            description: 'Delectus ipsa perferendis incidunt maiores facere occaecati nihil suscipit fuga possimus iure.'
+                            features: 'Eligendi inventore delectus est delectus sed nemo.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            seats_count: 0
+                            event_packages_count: 1
+                            event_packages_sum_quantity_sold: '0'
+                            event_packages:
+                              -
+                                id: 12
+                                event_id: 12
+                                seat_section_id: 19
+                                price: 3962.2
+                                quantity_sold: 0
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                                entry_gate: null
+                          -
+                            id: 20
+                            capacity: 484
+                            title: 'At nihil corporis sint et sit necessitatibus.'
+                            description: 'Maiores aut repellendus ut necessitatibus nostrum voluptatibus voluptatem sed illum libero voluptas veritatis doloremque.'
+                            features: 'Numquam aut velit vitae ullam rerum omnis.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            seats_count: 1
+                            event_packages_count: 0
+                            event_packages_sum_quantity_sold: null
+                            event_packages: []
+                          -
+                            id: 21
+                            capacity: 269
+                            title: 'Alias esse amet reiciendis et.'
+                            description: 'Ut molestias unde aut vero quam qui sequi quis saepe porro veniam.'
+                            features: 'Fuga consequatur porro ut voluptatem rerum deleniti eaque nihil deleniti.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            seats_count: 0
+                            event_packages_count: 1
+                            event_packages_sum_quantity_sold: '0'
+                            event_packages:
+                              -
+                                id: 13
+                                event_id: 13
+                                seat_section_id: 21
+                                price: 4331.2
+                                quantity_sold: 0
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                                entry_gate: null
+                          -
+                            id: 22
+                            capacity: 590
+                            title: 'Impedit molestiae enim quo ducimus quo beatae saepe.'
+                            description: 'Maxime voluptas possimus unde sit sint sequi temporibus.'
+                            features: 'Quia dolorem sed ea sunt et in sint vero laborum.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            seats_count: 0
+                            event_packages_count: 1
+                            event_packages_sum_quantity_sold: '0'
+                            event_packages:
+                              -
+                                id: 14
+                                event_id: 14
+                                seat_section_id: 22
+                                price: 4246.2
+                                quantity_sold: 0
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                                entry_gate: null
+                          -
+                            id: 23
+                            capacity: 665
+                            title: 'Repellat dicta veritatis vel occaecati voluptatem.'
+                            description: 'Qui nisi autem adipisci deleniti accusantium vel ut ut et est ut earum laboriosam.'
+                            features: 'Hic veniam consequuntur molestiae corporis eum unde libero consequatur consequatur sit.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            seats_count: 0
+                            event_packages_count: 1
+                            event_packages_sum_quantity_sold: '0'
+                            event_packages:
+                              -
+                                id: 15
+                                event_id: 15
+                                seat_section_id: 23
+                                price: 7010
+                                quantity_sold: 0
+                                deleted_at: null
+                                created_at: '2024-01-12T17:35:58.000000Z'
+                                updated_at: '2024-01-12T17:35:58.000000Z'
+                                entry_gate: null
+                          -
+                            id: 24
+                            capacity: 177
+                            title: 'Doloribus et vel fugiat alias asperiores iste.'
+                            description: 'Dignissimos itaque similique corrupti omnis qui nam odit temporibus ea atque.'
+                            features: 'Nobis sunt saepe temporibus quidem enim alias architecto odio deserunt.'
+                            deleted_at: null
+                            created_at: '2024-01-12T17:35:58.000000Z'
+                            updated_at: '2024-01-12T17:35:58.000000Z'
+                            seats_count: 1
+                            event_packages_count: 0
+                            event_packages_sum_quantity_sold: null
+                            event_packages: []
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 1
+                            capacity:
+                              type: integer
+                              example: 10000
+                            title:
+                              type: string
+                              example: Regular
+                            description:
+                              type: string
+                              example: null
+                            features:
+                              type: string
+                              example: null
+                            deleted_at:
+                              type: string
+                              example: null
+                            created_at:
+                              type: string
+                              example: '2024-01-07T18:10:42.000000Z'
+                            updated_at:
+                              type: string
+                              example: '2024-01-07T18:10:42.000000Z'
+                            seats_count:
+                              type: integer
+                              example: 10000
+                            event_packages_count:
+                              type: integer
+                              example: 0
+                            event_packages_sum_quantity_sold:
+                              type: string
+                              example: null
+                            event_packages:
+                              type: array
+                              example: []
+                      first_page_url:
+                        type: string
+                        example: 'http://localhost/api/seat-sections/index?page=1'
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 1
+                      last_page_url:
+                        type: string
+                        example: 'http://localhost/api/seat-sections/index?page=1'
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://localhost/api/seat-sections/index?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      next_page_url:
+                        type: string
+                        example: null
+                      path:
+                        type: string
+                        example: 'http://localhost/api/seat-sections/index'
+                      per_page:
+                        type: integer
+                        example: 50
+                      prev_page_url:
+                        type: string
+                        example: null
+                      to:
+                        type: integer
+                        example: 24
+                      total:
+                        type: integer
+                        example: 24
       tags:
         - Seats
       security: []
@@ -6246,19 +5509,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: mgvzosfqflnghghe
+                  example: stsnpookuguwtcwaugcvged
                 description:
                   type: string
                   description: ''
-                  example: 'Iusto adipisci animi odio dolorem minima voluptas ea animi.'
+                  example: 'Tempora mollitia consequuntur est molestiae sed ab.'
                 features:
                   type: string
                   description: ''
-                  example: est
+                  example: tenetur
                 capacity:
                   type: integer
                   description: ''
-                  example: 11
+                  example: 7
                 seats:
                   type: object
                   description: 'Must have at least 1 items.'
@@ -6287,19 +5550,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: lbhtqpaabvoptvmexbsspjgc
+                  example: ortywoyieafyinwbzkslljt
                 description:
                   type: string
                   description: ''
-                  example: 'Dolores est rerum ex culpa.'
+                  example: 'Veritatis atque ipsa quisquam dignissimos rem.'
                 features:
                   type: string
                   description: ''
-                  example: perspiciatis
+                  example: architecto
                 capacity:
                   type: integer
                   description: ''
-                  example: 18
+                  example: 11
               required:
                 - title
                 - capacity
@@ -6364,27 +5627,27 @@ paths:
                 merchant:
                   type: string
                   description: ''
-                  example: ullam
+                  example: quia
                 callback_url:
                   type: string
                   description: ''
-                  example: 'http://www.toy.com/reiciendis-voluptas-adipisci-vel'
+                  example: 'http://glover.net/ipsum-ut-eligendi-aliquid-est'
                 quantity:
                   type: integer
                   description: 'Must be at least 1.'
-                  example: 35
+                  example: 26
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: caqpxgeudlkohpxqqpf
+                  example: vkyaxvdkslfijzufcv
                 phone:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: pcphuqdsbywryxrzwcdctont
+                  example: evzsrvftcrmxb
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: xcartwright@example.com
+                  example: kamryn93@example.net
               required:
                 - merchant
                 - quantity
@@ -6418,7 +5681,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: necessitatibus
+                  example: est
               required:
                 - reference
       security: []
@@ -6441,15 +5704,15 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: et
+                  example: qui
                 quantity:
                   type: integer
                   description: 'Must be at least 1.'
-                  example: 37
+                  example: 58
                 seats:
                   type: array
                   description: 'Must have at least 1 items.'
-                  example: amkzuofnrxgfltntgovvkthuxpgwqbguqifgzinrxpprttyqeuozoiuzhtvpkxkatcbgityxcxuuvzpe
+                  example: dtaiubvqprqxwtqpmcjidphqtobwugdhumzoglmapaaylqwamzbxsulftzzpfrrglfkfppphkgdrjdgghlj
                   items:
                     type: string
               required:
@@ -7364,11 +6627,11 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: id
+                  example: reprehenderit
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: dawn59@example.com
+                  example: ephraim23@example.com
               required:
                 - reference
                 - email
@@ -7392,23 +6655,23 @@ paths:
                 ticket_payment_id:
                   type: integer
                   description: ''
-                  example: 17
+                  example: 6
                 hash:
                   type: string
                   description: ''
-                  example: iusto
+                  example: et
                 reference:
                   type: string
                   description: ''
-                  example: quibusdam
+                  example: qui
                 device_no:
                   type: string
                   description: ''
-                  example: animi
+                  example: est
                 event_id:
                   type: integer
                   description: ''
-                  example: 9
+                  example: 19
               required:
                 - ticket_payment_id
                 - hash
@@ -7435,7 +6698,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: perferendis
+                  example: sint
               required:
                 - reference
       security: []
@@ -7458,19 +6721,19 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: achrzgpbyl
+                  example: zrelboonhgcmetevzitvylo
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: karianne33@example.org
+                  example: bailee52@example.com
                 phone:
                   type: string
                   description: 'Must not be greater than 15 characters.'
-                  example: ioalnot
+                  example: nqwpyjuulj
                 address:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ceiurai
+                  example: stnbolalswjnmmobocymxn
               required:
                 - name
                 - email
@@ -8345,6 +7608,16 @@ paths:
             example: null
         -
           in: query
+          name: event_id
+          description: 'Filter value for the event id'
+          example: null
+          required: false
+          schema:
+            type: integer
+            description: 'Filter value for the event id'
+            example: null
+        -
+          in: query
           name: event_package_id
           description: ''
           example: null
@@ -8361,6 +7634,36 @@ paths:
           required: false
           schema:
             type: integer
+            description: ''
+            example: null
+        -
+          in: query
+          name: seat_section_id
+          description: ''
+          example: null
+          required: false
+          schema:
+            type: integer
+            description: ''
+            example: null
+        -
+          in: query
+          name: is_not_verified
+          description: ''
+          example: null
+          required: false
+          schema:
+            type: boolean
+            description: ''
+            example: null
+        -
+          in: query
+          name: is_verified
+          description: ''
+          example: null
+          required: false
+          schema:
+            type: boolean
             description: ''
             example: null
         -

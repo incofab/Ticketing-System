@@ -16,6 +16,8 @@ class PaymentController extends Controller
    * @queryParam status string No-example
    * @queryParam event_package_id int. No-example
    * @queryParam event_id int. No-example
+   * @queryParam merchant string. No-example
+   * @queryParam email string. No-example
    *
    * @queryParam sortKey string No-example
    * @queryParam sortDir string Represents the direction of the sort. ASC|DESC. No-example
@@ -27,12 +29,13 @@ class PaymentController extends Controller
   {
     $query = TicketPayment::query()->select(
       'ticket_payments.*',
+      'payment_references.status',
       'payment_references.merchant'
     );
     TicketPaymentUITableFilters::make($request->all(), $query)->filterQuery();
     $query
       ->with('eventPackage.event', 'eventPackage.seatSection')
-      ->oldest('ticket_payments.id');
+      ->latest('ticket_payments.id');
 
     return $this->apiRes(paginateFromRequest($query, 300));
   }

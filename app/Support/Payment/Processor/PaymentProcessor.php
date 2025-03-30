@@ -7,7 +7,6 @@ use App\Models\TicketPayment;
 use App\Support\Payment\PaymentMerchant;
 use App\Support\Res;
 use Exception;
-use Illuminate\Support\Facades\DB;
 
 abstract class PaymentProcessor
 {

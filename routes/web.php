@@ -9,7 +9,9 @@ use App\Models\EventPackage;
 use App\Models\Ticket;
 use App\Models\TicketPayment;
 
-Route::post('/webhook/paystack', [Home\HomeController::class, 'paystackWebhook'])->name('webhook.paystack');
+Route::post('/webhook/paystack', [Home\PaymentCallbackController::class, 'paystackWebhook'])->name('webhook.paystack');
+
+Route::get('/callback/airvend', [Home\PaymentCallbackController::class, 'airvendCallback']);
 
 Route::get('/dummy1', function () {
     $eventPackages = EventPackage::query()->with('ticketPayments')->get();

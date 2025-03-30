@@ -26,11 +26,11 @@ class ConfirmPaymentController extends Controller
       // ->where('merchant', PaymentMerchantType::Paystack)
       ->firstOrFail();
 
-    if ($paymentReference->merchant !== PaymentMerchantType::Paystack) {
-      return $this->ok(
-        failRes('', ['slug' => 'unexpected_merchant'])->toArray()
-      );
-    }
+    // if ($paymentReference->merchant !== PaymentMerchantType::Paystack) {
+    //   return $this->ok(
+    //     failRes('', ['slug' => 'unexpected_merchant'])->toArray()
+    //   );
+    // }
 
     $res = PaymentProcessor::make($paymentReference)->handleCallback();
 

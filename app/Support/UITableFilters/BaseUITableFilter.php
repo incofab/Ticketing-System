@@ -61,7 +61,7 @@ abstract class BaseUITableFilter
     return $this;
   }
 
-  public function sortQuery(): static
+  private function sortQuery(): static
   {
     $sortDir = $this->requestData['sortDir'] ?? null;
     $sortKey = $this->requestData['sortKey'] ?? null;
@@ -74,27 +74,30 @@ abstract class BaseUITableFilter
       return $this;
     }
 
-    $this->baseQuery->orderBy($columnName, $sortDir);
+    $this->baseQuery->orderBy("{$this->table}.$columnName", $sortDir);
 
     return $this;
   }
+
   public function getQuery()
   {
     return $this->baseQuery;
   }
 
   /** Handle searches from the url request params */
-  abstract protected function directQuery();
+  abstract protected function directQuery(): self;
 
   /** Perform a search */
   abstract protected function generalSearch(string $search);
 
   public function filterQuery(): static
   {
-    return $this->directQuery()->when(
-      $this->requestGet('search'),
-      fn(self $that, $search) => $that->generalSearch($search)
-    );
+    return $this->directQuery()
+      ->when(
+        $this->requestGet('search'),
+        fn(self $that, $search) => $that->generalSearch($search)
+      )
+      ->sortQuery();
   }
 
   protected function dateFilter($columnName, $dateFrom, $dateTo)

@@ -36,5 +36,13 @@ return [
     'secret-key' => env('PAYSTACK_SECRET_KEY'),
     'ticket-subaccount' => env('PAYSTACK_TICKET_SUBACCOUNT')
   ],
+  'airvend' => [
+    'merchant-key' => env('AIRVEND_MERCHANT_KEY'),
+    'secret-key' => env('AIRVEND_SECRET_KEY')
+  ],
+  'paydestal' => [
+    'public-key' => env('PAYDESTAL_PUBLIC_KEY'),
+    'secret-key' => env('PAYDESTAL_SECRET_KEY')
+  ],
   'maildrip' => ['api_key' => env('MAIL_DRIP_API_KEY')]
 ];

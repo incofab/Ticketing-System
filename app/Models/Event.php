@@ -43,7 +43,7 @@ class Event extends Model
       'youtube' => ['nullable', 'string', 'max:255'],
       'tiktok' => ['nullable', 'string', 'max:255'],
       'linkedin' => ['nullable', 'string', 'max:255'],
-      'logo_file' => ['nullable', 'image']
+      'logo' => ['nullable', 'image']
     ];
   }
 

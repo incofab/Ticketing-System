@@ -25,6 +25,11 @@ class PaymentReferenceDto
     $this->callbackUrl = $callbackUrl;
   }
 
+  function setReference(string $reference)
+  {
+    $this->reference = $reference;
+  }
+
   function getCallbackUrl()
   {
     return $this->callbackUrl;

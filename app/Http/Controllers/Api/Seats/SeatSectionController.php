@@ -6,6 +6,7 @@ use App\Actions\RecordSeat;
 use App\Http\Controllers\Controller;
 use App\Models\Seat;
 use App\Models\SeatSection;
+use App\Support\UITableFilters\SeatSectionUITableFilters;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
@@ -14,13 +15,30 @@ use Illuminate\Validation\Rule;
  */
 class SeatSectionController extends Controller
 {
+  /**
+   * @queryParam event int Representing the event Id. No-example
+   *
+   * @queryParam sortKey string No-example
+   * @queryParam sortDir string Represents the direction of the sort. ASC|DESC. No-example
+   * @queryParam search string. No-example
+   * @queryParam date_from string. No-example
+   * @queryParam date_to string. No-example
+   */
   public function index(Request $request)
   {
-    $seatSections = SeatSection::query()
-      ->withCount('seats', 'eventPackages')
-      ->with('eventPackages')
-      ->withSum('eventPackages', 'quantity_sold')
-      ->get();
+    // SeatSection::query()->innerJoin
+    $query = SeatSectionUITableFilters::make(
+      $request->all(),
+      SeatSection::select('seat_sections.*')
+    )
+      ->filterQuery()
+      ->getQuery();
+    $seatSections = paginateFromRequest(
+      $query
+        ->withCount('seats', 'eventPackages')
+        ->with('eventPackages')
+        ->withSum('eventPackages', 'quantity_sold')
+    );
     return $this->apiRes($seatSections);
   }
 

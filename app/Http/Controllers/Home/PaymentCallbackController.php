@@ -5,8 +5,9 @@ namespace App\Http\Controllers\Home;
 use App\Http\Controllers\Controller;
 use App\Support\Payment\Processor\PaymentProcessor;
 use Arr;
+use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class PaymentCallbackController extends Controller
 {
   function paystackWebhook()
   {
@@ -48,6 +49,15 @@ class HomeController extends Controller
     }
 
     $reference = $data['reference'];
+
+    $ret = PaymentProcessor::makeFromReference($reference)->handleCallback();
+
+    return $this->ok($ret->toArray());
+  }
+
+  function airvendCallback(Request $request)
+  {
+    $reference = $request->txn_ref;
 
     $ret = PaymentProcessor::makeFromReference($reference)->handleCallback();
 

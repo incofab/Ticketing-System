@@ -102,7 +102,7 @@ it('can store a new event', function () {
       // 'home_team' => 'Home Team',
       // 'away_team' => 'Away Team',
       ...$eventData,
-      'logo_file' => $logoFile,
+      'logo' => $logoFile,
       'event_packages' => [
         [
           'seat_section_id' => $seatSection->id,
@@ -149,7 +149,7 @@ it('can update an existing event', function () {
   $response = actingAs($this->admin)->postJson(
     route('api.events.update', ['event' => $event->id]),
     [
-      'logo_file' => $logoFile,
+      'logo' => $logoFile,
       'title' => 'Updated Event',
       'description' => 'Updated description',
       'start_time' => now(),

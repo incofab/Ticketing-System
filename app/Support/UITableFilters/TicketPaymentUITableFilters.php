@@ -4,6 +4,7 @@ namespace App\Support\UITableFilters;
 
 use App\Enums\PaymentReferenceStatus;
 use App\Models\TicketPayment;
+use App\Support\MorphMap;
 use Illuminate\Validation\Rules\Enum;
 
 class TicketPaymentUITableFilters extends BaseUITableFilter
@@ -18,12 +19,17 @@ class TicketPaymentUITableFilters extends BaseUITableFilter
     return [
       'status' => ['nullable', new Enum(PaymentReferenceStatus::class)],
       'event_package_id' => ['nullable', 'integer'], // 'exists:event_package_id,id'],
-      'event_id' => ['nullable', 'integer'] //'exists:events,id']
+      'event_id' => ['nullable', 'integer'],
+      'email' => ['nullable', 'string'],
+      'merchant' => ['nullable', 'string']
     ];
   }
 
   protected function generalSearch(string $search)
   {
+    $this->baseQuery->where(
+      fn($q) => $q->where('ticket_payments.email', 'like', "%$search%")
+    );
   }
 
   private function joinPaymentReference(): static
@@ -36,7 +42,7 @@ class TicketPaymentUITableFilters extends BaseUITableFilter
           'ticket_payments.id'
         )->where(
           'payment_references.paymentable_type',
-          (new TicketPayment())->getMorphClass()
+          MorphMap::key(TicketPayment::class)
         );
       })
     );
@@ -56,7 +62,7 @@ class TicketPaymentUITableFilters extends BaseUITableFilter
     return $this;
   }
 
-  protected function directQuery()
+  protected function directQuery(): static
   {
     $this->baseQuery->when(
       $this->requestGet('title'),
@@ -88,6 +94,14 @@ class TicketPaymentUITableFilters extends BaseUITableFilter
       ->when(
         $this->requestGet('reference'),
         fn($q, $value) => $q->where('payment_references.reference', $value)
+      )
+      ->when(
+        $this->requestGet('email'),
+        fn($q, $value) => $q->where('ticket_payments.email', $value)
+      )
+      ->when(
+        $this->requestGet('merchant'),
+        fn($q, $value) => $q->where('payment_references.merchant', $value)
       );
     return $this;
   }

@@ -39,7 +39,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"","data":{"current_page":1,"data":[],"first_page_url":"http:\/\/localhost\/api\/event-seasons\/index\/1?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/event-seasons\/index\/1?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/event-seasons\/index\/1?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/event-seasons\/index\/1","per_page":100,"prev_page_url":null,"to":null,"total":0}}'
+        content: '{"message":"","data":{"current_page":1,"data":[],"first_page_url":"http:\/\/localhost\/api\/event-seasons\/index\/1?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/event-seasons\/index\/1?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/event-seasons\/index\/1?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/event-seasons\/index\/1","per_page":50,"prev_page_url":null,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -90,7 +90,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"","data":{"current_page":1,"data":[],"first_page_url":"http:\/\/localhost\/api\/event-seasons\/upcoming\/1?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/event-seasons\/upcoming\/1?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/event-seasons\/upcoming\/1?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/event-seasons\/upcoming\/1","per_page":100,"prev_page_url":null,"to":null,"total":0}}'
+        content: '{"message":"","data":{"current_page":1,"data":[],"first_page_url":"http:\/\/localhost\/api\/event-seasons\/upcoming\/1?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/event-seasons\/upcoming\/1?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/event-seasons\/upcoming\/1?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/event-seasons\/upcoming\/1","per_page":50,"prev_page_url":null,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -140,7 +140,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: np
+        example: imbeumpezcvp
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -149,7 +149,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Nisi reprehenderit incidunt autem molestiae at.'
+        example: 'Odit omnis odit non qui ut consequatur mollitia et.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -158,7 +158,7 @@ endpoints:
         name: date_from
         description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
         required: false
-        example: '2025-03-13T21:13:18'
+        example: '2025-03-30T13:56:38'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -167,16 +167,16 @@ endpoints:
         name: date_to
         description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
         required: false
-        example: '2078-01-29'
+        example: '2051-04-17'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: np
-      description: 'Nisi reprehenderit incidunt autem molestiae at.'
-      date_from: '2025-03-13T21:13:18'
-      date_to: '2078-01-29'
+      title: imbeumpezcvp
+      description: 'Odit omnis odit non qui ut consequatur mollitia et.'
+      date_from: '2025-03-30T13:56:38'
+      date_to: '2051-04-17'
     fileParameters: []
     responses: []
     responseFields: []
@@ -220,7 +220,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: soiwgicdrhiks
+        example: fxouqatpcflflbnvm
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -229,7 +229,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Nisi perspiciatis quaerat aut debitis ut saepe.'
+        example: 'Veniam eligendi dolorem corporis aut sed doloribus.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -238,7 +238,7 @@ endpoints:
         name: date_from
         description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
         required: false
-        example: '2025-03-13T21:13:18'
+        example: '2025-03-30T13:56:38'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -247,16 +247,16 @@ endpoints:
         name: date_to
         description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
         required: false
-        example: '2051-06-28'
+        example: '2032-02-01'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: soiwgicdrhiks
-      description: 'Nisi perspiciatis quaerat aut debitis ut saepe.'
-      date_from: '2025-03-13T21:13:18'
-      date_to: '2051-06-28'
+      title: fxouqatpcflflbnvm
+      description: 'Veniam eligendi dolorem corporis aut sed doloribus.'
+      date_from: '2025-03-30T13:56:38'
+      date_to: '2032-02-01'
     fileParameters: []
     responses: []
     responseFields: []

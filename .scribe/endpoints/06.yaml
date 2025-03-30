@@ -85,7 +85,7 @@ endpoints:
         name: images
         description: 'Must have at least 1 items. Must not have more than 5 items.'
         required: true
-        example: th
+        example: mee
         type: 'file[]'
         enumValues: []
         exampleWasSpecified: false
@@ -103,13 +103,13 @@ endpoints:
         name: 'images[].reference'
         description: ''
         required: true
-        example: placeat
+        example: qui
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      images: th
+      images: mee
     fileParameters: []
     responses: []
     responseFields: []
@@ -139,13 +139,13 @@ endpoints:
         name: eventImage_id
         description: 'The ID of the eventImage.'
         required: true
-        example: 10
+        example: 5
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      eventImage_id: 10
+      eventImage_id: 5
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

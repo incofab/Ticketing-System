@@ -41,6 +41,10 @@ abstract class PaymentMerchant
     switch ($merchant) {
       case PaymentMerchantType::BankDeposit->value:
         return new PaymentBankDeposit($merchant);
+      case PaymentMerchantType::Airvend->value:
+        return new PaymentAirvend($merchant);
+      case PaymentMerchantType::Paydestal->value:
+        return new PaymentPaydestal($merchant);
       case PaymentMerchantType::Paystack->value:
       default:
         return new PaymentPaystack($merchant);

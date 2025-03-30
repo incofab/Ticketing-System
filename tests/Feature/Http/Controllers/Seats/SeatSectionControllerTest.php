@@ -20,10 +20,12 @@ it('can get a list of seat sections', function () {
   getJson(route('api.seat-sections.index'))
     // ->dump()
     ->assertOk()
-    ->assertJsonCount(4, 'data')
+    ->assertJsonCount(4, 'data.data')
     ->assertJsonStructure([
       'data' => [
-        '*' => ['id', 'title', 'capacity', 'seats_count']
+        'data' => [
+          '*' => ['id', 'title', 'capacity', 'seats_count']
+        ]
       ]
     ]);
 });

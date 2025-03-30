@@ -44,7 +44,7 @@ if (!function_exists('removeHyphenAndCapitalize')) {
 if (!function_exists('paginateFromRequest')) {
   function paginateFromRequest(
     $query,
-    $defaultPerPage = 100
+    $defaultPerPage = 50
   ): \Illuminate\Contracts\Pagination\LengthAwarePaginator {
     $perPage = request()->query('perPage', $defaultPerPage);
     $page = request()->query('page');

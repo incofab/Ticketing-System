@@ -30,7 +30,7 @@ class InitTicketPurchaseController extends Controller
         'nullable',
         'string',
         Rule::requiredIf(
-          fn() => $request->merchant === PaymentMerchantType::Paystack->value
+          fn() => $request->merchant !== PaymentMerchantType::BankDeposit->value
         )
       ],
       'quantity' => [
