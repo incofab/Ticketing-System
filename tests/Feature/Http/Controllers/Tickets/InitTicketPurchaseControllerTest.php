@@ -22,7 +22,9 @@ beforeEach(function () {
 });
 
 it('can initiate a ticket purchase for Paystack', function () {
-  $expiredEvent = Event::factory()->create(['start_time' => now()->subDays(2)]);
+  $expiredEvent = Event::factory()
+    ->expired()
+    ->create();
   $activeEvent = Event::factory()->create(['start_time' => now()]);
   $expiredEventPackage = EventPackage::factory()
     ->event($expiredEvent)

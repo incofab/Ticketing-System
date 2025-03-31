@@ -33,6 +33,7 @@ it('can get a list of events', function () {
           '*' => [
             'id',
             'title',
+            'expired',
             'event_season_id',
             'expired',
             'event_packages',

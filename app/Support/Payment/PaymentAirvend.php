@@ -30,7 +30,9 @@ class PaymentAirvend extends PaymentMerchant
 
   function verify(PaymentReference $paymentReference): Res
   {
-    $ret = (new AirvendHelper())->verifyReference($paymentReference->reference);
+    $ret = (new AirvendHelper())->verifyWithCustomerReference(
+      $paymentReference->reference
+    );
     return $ret;
   }
 }

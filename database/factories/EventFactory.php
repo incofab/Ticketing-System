@@ -29,4 +29,13 @@ class EventFactory extends Factory
       'youtube' => fake()->url()
     ];
   }
+  function expired()
+  {
+    return $this->state(
+      fn($attr) => [
+        'start_time' => now()->subHours(3),
+        'end_time' => now()->subHours(1)
+      ]
+    );
+  }
 }

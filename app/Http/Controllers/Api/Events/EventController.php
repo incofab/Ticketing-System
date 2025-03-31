@@ -31,7 +31,7 @@ class EventController extends Controller
   {
     $query = $eventSeason ? $eventSeason->events()->getQuery() : Event::query();
 
-    $query->selectRaw('*, (start_time < NOW()) AS expired');
+    // $query->selectRaw('*, (start_time < NOW()) AS expired');
 
     EventUITableFilters::make($request->all(), $query)->filterQuery();
 
