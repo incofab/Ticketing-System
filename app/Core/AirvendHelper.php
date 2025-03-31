@@ -75,7 +75,10 @@ class AirvendHelper
 
     $res = $this->http()->get($url);
 
-    $prefix = 'txn_list.0';
+    $transactionList = $res->json('txn_list');
+    $lastIndex = count($transactionList) - 1;
+    $prefix = "txn_list.$lastIndex";
+
     $success = $res->json('success');
     if (!$success || !$res->json("$prefix.success")) {
       return failRes('Transaction NOT successful');

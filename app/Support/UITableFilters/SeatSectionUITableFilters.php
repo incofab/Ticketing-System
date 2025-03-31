@@ -16,7 +16,7 @@ class SeatSectionUITableFilters extends BaseUITableFilter
   protected function extraValidationRules(): array
   {
     return [
-      'event' => ['sometimes', 'integer']
+      'event_id' => ['sometimes', 'integer']
     ];
   }
 
@@ -43,10 +43,10 @@ class SeatSectionUITableFilters extends BaseUITableFilter
   protected function directQuery(): static
   {
     $this->when(
-      $this->requestGet('event'),
-      fn($q, $value) => $this->joinEventPackage()->baseQuery->when(
-        $this->requestGet('event'),
-        fn($q, $value) => $q->where('event_packages.event_id', $value)
+      $this->requestGet('event_id'),
+      fn($q, $value) => $this->joinEventPackage()->baseQuery->where(
+        'event_packages.event_id',
+        $value
       )
     );
 

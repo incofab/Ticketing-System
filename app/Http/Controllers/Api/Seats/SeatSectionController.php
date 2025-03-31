@@ -16,7 +16,7 @@ use Illuminate\Validation\Rule;
 class SeatSectionController extends Controller
 {
   /**
-   * @queryParam event int Representing the event Id. No-example
+   * @queryParam event_id int Representing the event Id. No-example
    *
    * @queryParam sortKey string No-example
    * @queryParam sortDir string Represents the direction of the sort. ASC|DESC. No-example

@@ -84,7 +84,7 @@ endpoints:
         name: merchant
         description: ''
         required: true
-        example: quia
+        example: temporibus
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -93,7 +93,7 @@ endpoints:
         name: callback_url
         description: ''
         required: false
-        example: 'http://glover.net/ipsum-ut-eligendi-aliquid-est'
+        example: 'http://www.hyatt.com/eum-qui-blanditiis-dolores-voluptatem.html'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -102,7 +102,7 @@ endpoints:
         name: quantity
         description: 'Must be at least 1.'
         required: true
-        example: 26
+        example: 78
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -111,7 +111,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: vkyaxvdkslfijzufcv
+        example: cowggqlqkzzcauy
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -120,7 +120,7 @@ endpoints:
         name: phone
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: evzsrvftcrmxb
+        example: efsvofemzgmruvdpg
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -129,18 +129,18 @@ endpoints:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: kamryn93@example.net
+        example: roxane55@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      merchant: quia
-      callback_url: 'http://glover.net/ipsum-ut-eligendi-aliquid-est'
-      quantity: 26
-      name: vkyaxvdkslfijzufcv
-      phone: evzsrvftcrmxb
-      email: kamryn93@example.net
+      merchant: temporibus
+      callback_url: 'http://www.hyatt.com/eum-qui-blanditiis-dolores-voluptatem.html'
+      quantity: 78
+      name: cowggqlqkzzcauy
+      phone: efsvofemzgmruvdpg
+      email: roxane55@example.com
     fileParameters: []
     responses: []
     responseFields: []
@@ -174,13 +174,13 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: est
+        example: perspiciatis
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      reference: est
+      reference: perspiciatis
     fileParameters: []
     responses: []
     responseFields: []
@@ -214,7 +214,7 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: qui
+        example: aut
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -232,7 +232,7 @@ endpoints:
         name: seats
         description: 'Must have at least 1 items.'
         required: false
-        example: dtaiubvqprqxwtqpmcjidphqtobwugdhumzoglmapaaylqwamzbxsulftzzpfrrglfkfppphkgdrjdgghlj
+        example: ojjgoduuchghyp
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -241,7 +241,7 @@ endpoints:
         name: 'seats[].seat_id'
         description: ''
         required: true
-        example: qui
+        example: debitis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -259,7 +259,7 @@ endpoints:
         name: 'seats[].attendee.name'
         description: ''
         required: false
-        example: quam
+        example: modi
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -268,7 +268,7 @@ endpoints:
         name: 'seats[].attendee.email'
         description: 'Must be a valid email address.'
         required: false
-        example: mherman@example.net
+        example: hbecker@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -277,7 +277,7 @@ endpoints:
         name: 'seats[].attendee.phone'
         description: ''
         required: false
-        example: praesentium
+        example: voluptatem
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -286,21 +286,21 @@ endpoints:
         name: 'seats[].attendee.address'
         description: ''
         required: false
-        example: fugit
+        example: et
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      reference: qui
+      reference: aut
       quantity: 58
       seats:
         -
           attendee:
-            name: quam
-            email: mherman@example.net
-            phone: praesentium
-            address: fugit
+            name: modi
+            email: hbecker@example.net
+            phone: voluptatem
+            address: et
     fileParameters: []
     responses: []
     responseFields: []
@@ -334,7 +334,7 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: reprehenderit
+        example: corrupti
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -343,14 +343,14 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: ephraim23@example.com
+        example: matilda.lindgren@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      reference: reprehenderit
-      email: ephraim23@example.com
+      reference: corrupti
+      email: matilda.lindgren@example.org
     fileParameters: []
     responses:
       -
@@ -896,7 +896,7 @@ endpoints:
         name: ticket_payment_id
         description: ''
         required: true
-        example: 6
+        example: 4
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -905,7 +905,7 @@ endpoints:
         name: hash
         description: ''
         required: true
-        example: et
+        example: eos
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -914,7 +914,7 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: qui
+        example: repudiandae
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -923,7 +923,7 @@ endpoints:
         name: device_no
         description: ''
         required: true
-        example: est
+        example: maiores
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -932,17 +932,17 @@ endpoints:
         name: event_id
         description: ''
         required: true
-        example: 19
+        example: 10
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      ticket_payment_id: 6
-      hash: et
-      reference: qui
-      device_no: est
-      event_id: 19
+      ticket_payment_id: 4
+      hash: eos
+      reference: repudiandae
+      device_no: maiores
+      event_id: 10
     fileParameters: []
     responses: []
     responseFields: []
@@ -976,13 +976,13 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: sint
+        example: distinctio
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      reference: sint
+      reference: distinctio
     fileParameters: []
     responses: []
     responseFields: []
@@ -1026,7 +1026,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: zrelboonhgcmetevzitvylo
+        example: mzrgaobledkx
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1035,7 +1035,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: bailee52@example.com
+        example: preston60@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1044,7 +1044,7 @@ endpoints:
         name: phone
         description: 'Must not be greater than 15 characters.'
         required: false
-        example: nqwpyjuulj
+        example: ndgqthypemza
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1053,16 +1053,16 @@ endpoints:
         name: address
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: stnbolalswjnmmobocymxn
+        example: jlbm
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: zrelboonhgcmetevzitvylo
-      email: bailee52@example.com
-      phone: nqwpyjuulj
-      address: stnbolalswjnmmobocymxn
+      name: mzrgaobledkx
+      email: preston60@example.org
+      phone: ndgqthypemza
+      address: jlbm
     fileParameters: []
     responses: []
     responseFields: []
