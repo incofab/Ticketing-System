@@ -1,8 +1,11 @@
 <?php
 
 use App\Enums\PaymentMerchantType;
+use App\Enums\PaymentReferenceStatus;
 use App\Models\Event;
 use App\Models\EventPackage;
+use App\Models\PaymentReference;
+use Illuminate\Testing\Fluent\AssertableJson;
 
 use function Pest\Laravel\postJson;
 
@@ -122,3 +125,43 @@ it(
     ]);
   }
 );
+
+it('can initiate & confirm a ticket purchase for free', function () {
+  $eventPackage = EventPackage::factory()->create();
+  $params = [
+    'merchant' => PaymentMerchantType::Free->value,
+    'quantity' => 1,
+    'name' => 'John Doe',
+    'phone' => '123456789',
+    'email' => 'john@example.com'
+  ];
+  postJson(route('api.tickets.init-payment', [$eventPackage]), [
+    ...$params,
+    'quantity' => 2
+  ])->assertJsonValidationErrorFor('quantity');
+  $response = postJson(
+    route('api.tickets.init-payment', [$eventPackage]),
+    $params
+  )
+    ->assertSuccessful()
+    ->assertJson(fn(AssertableJson $json) => $json->has('reference')->etc());
+
+  $this->assertDatabaseHas('ticket_payments', [
+    'event_package_id' => $eventPackage->id,
+    'quantity' => 1,
+    'name' => 'John Doe',
+    'phone' => '123456789',
+    'email' => 'john@example.com'
+  ]);
+  $paymentReference = PaymentReference::where(
+    'reference',
+    $response->json('reference')
+  )->firstOrFail();
+  $ticketPayment = $paymentReference->paymentable;
+  $eventPackage = $ticketPayment->eventPackage;
+
+  expect($paymentReference->fresh())->status->toBe(
+    PaymentReferenceStatus::Confirmed
+  );
+  expect($eventPackage->fresh()->quantity_sold)->toBe($ticketPayment->quantity);
+});

@@ -8,6 +8,8 @@ use App\Http\Controllers\Controller;
 use App\Models\EventPackage;
 use App\Models\PaymentReference;
 use App\Support\Payment\PaymentMerchant;
+use App\Support\Payment\Processor\PaymentProcessor;
+use App\Support\Res;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules\Enum;
@@ -30,7 +32,10 @@ class InitTicketPurchaseController extends Controller
         'nullable',
         'string',
         Rule::requiredIf(
-          fn() => $request->merchant !== PaymentMerchantType::BankDeposit->value
+          fn() => !in_array($request->merchant, [
+            PaymentMerchantType::BankDeposit->value,
+            PaymentMerchantType::Free->value
+          ])
         )
       ],
       'quantity' => [
@@ -38,6 +43,13 @@ class InitTicketPurchaseController extends Controller
         'integer',
         'min:1',
         function ($attr, $value, $fail) use ($eventPackage) {
+          if (
+            $value > 1 &&
+            request('merchant') === PaymentMerchantType::Free->value
+          ) {
+            $fail('You cannot get more than one ticket at a time');
+            return;
+          }
           $availableSeats =
             $eventPackage->capacity - $eventPackage->quantity_sold;
           if ($availableSeats < 1) {
@@ -76,7 +88,19 @@ class InitTicketPurchaseController extends Controller
     [$res, $paymentReference] = PaymentMerchant::make($request->merchant)->init(
       $paymentReferenceDto
     );
+
+    $this->handleResult($paymentReference, $res);
     abort_unless($res->isSuccessful(), 403, $res->getMessage());
     return $this->ok($res->toArray());
+  }
+
+  function handleResult(PaymentReference $paymentReference, Res $res)
+  {
+    if ($paymentReference->merchant !== PaymentMerchantType::Free) {
+      return $res;
+    }
+    $res = PaymentProcessor::make($paymentReference)->handleCallback();
+    $res->reference = $paymentReference->reference;
+    return $res;
   }
 }

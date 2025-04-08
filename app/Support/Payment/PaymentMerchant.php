@@ -45,6 +45,8 @@ abstract class PaymentMerchant
         return new PaymentAirvend($merchant);
       case PaymentMerchantType::Paydestal->value:
         return new PaymentPaydestal($merchant);
+      case PaymentMerchantType::Free->value:
+        return new PaymentFree($merchant);
       case PaymentMerchantType::Paystack->value:
       default:
         return new PaymentPaystack($merchant);

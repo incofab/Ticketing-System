@@ -45,7 +45,7 @@ class AirvendHelper
     return successRes('Payment Initialized', [
       'reference' => $reference,
       'transaction_reference' => $this->extractReferenceFromRedirectUrl($link),
-      'redirect_url' => $link
+      'redirect_url' => "$link&customer_transaction_ref=$reference"
     ]);
   }
   //http://localhost/callback/airvend?txn_ref=e8183421-6c90-4f7c-905e-fd89fb4f5659&customer_transaction_ref=e8183421-6c90-4f7c-905e-fd89fb4f5659&amount=200.00&status=successful

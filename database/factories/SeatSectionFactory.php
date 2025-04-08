@@ -15,7 +15,7 @@ class SeatSectionFactory extends Factory
       'title' => fake()->sentence(),
       'description' => fake()->sentence(10),
       'features' => fake()->sentence(8),
-      'capacity' => fake()->randomNumber(3)
+      'capacity' => fake()->randomNumber(3) + 100
     ];
   }
 

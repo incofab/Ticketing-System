@@ -65,7 +65,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: wq
+        example: ksbbmqovuogterkotypfvv
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -74,14 +74,14 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Similique molestias asperiores maxime et sint totam repudiandae.'
+        example: 'Nulla facere dolore iure.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: wq
-      description: 'Similique molestias asperiores maxime et sint totam repudiandae.'
+      title: ksbbmqovuogterkotypfvv
+      description: 'Nulla facere dolore iure.'
     fileParameters: []
     responses: []
     responseFields: []
@@ -126,7 +126,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: vghpiuaqytnhinjsg
+        example: cwhcznknrg
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -135,14 +135,14 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Sint dignissimos porro qui eius et eligendi.'
+        example: 'Deleniti maiores provident rerum sequi voluptatum sint optio.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: vghpiuaqytnhinjsg
-      description: 'Sint dignissimos porro qui eius et eligendi.'
+      title: cwhcznknrg
+      description: 'Deleniti maiores provident rerum sequi voluptatum sint optio.'
     fileParameters: []
     responses: []
     responseFields: []
