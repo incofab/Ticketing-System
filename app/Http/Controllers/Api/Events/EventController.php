@@ -58,7 +58,11 @@ class EventController extends Controller
 
   public function show(Event $event)
   {
-    $event->load('eventSeason', 'eventPackages.seatSection', 'eventImages');
+    $event->load(
+      'eventSeason.eventCategory',
+      'eventPackages.seatSection',
+      'eventImages'
+    );
     return $this->apiRes($event);
   }
 

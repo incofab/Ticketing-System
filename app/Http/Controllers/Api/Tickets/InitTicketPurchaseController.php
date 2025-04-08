@@ -21,6 +21,12 @@ class InitTicketPurchaseController extends Controller
 {
   public function __invoke(EventPackage $eventPackage, Request $request)
   {
+    if ($eventPackage->price <= 0) {
+      $request->merge([
+        'merchant' => PaymentMerchantType::Free->value,
+        'quantity' => 1
+      ]);
+    }
     $eventPackage->load('seatSection', 'event');
     $data = $request->validate([
       'merchant' => [

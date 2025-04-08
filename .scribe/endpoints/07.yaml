@@ -95,7 +95,7 @@ endpoints:
         name: seat_section_id
         description: ''
         required: true
-        example: autem
+        example: omnis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -104,7 +104,7 @@ endpoints:
         name: price
         description: ''
         required: true
-        example: 54107344.86081
+        example: 290.16051667
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -113,7 +113,7 @@ endpoints:
         name: entry_gate
         description: ''
         required: false
-        example: consectetur
+        example: voluptatem
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -122,7 +122,7 @@ endpoints:
         name: notes
         description: ''
         required: false
-        example: similique
+        example: non
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -131,7 +131,7 @@ endpoints:
         name: capacity
         description: ''
         required: true
-        example: 18
+        example: 7
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -140,18 +140,118 @@ endpoints:
         name: title
         description: ''
         required: true
-        example: qui
+        example: non
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      seat_section_id: autem
-      price: 54107344.86081
-      entry_gate: consectetur
-      notes: similique
-      capacity: 18
-      title: qui
+      seat_section_id: omnis
+      price: 290.16051667
+      entry_gate: voluptatem
+      notes: non
+      capacity: 7
+      title: non
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/event-packages/{eventPackage_id}/update'
+    metadata:
+      groupName: 'Event Packages'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      eventPackage_id:
+        name: eventPackage_id
+        description: 'The ID of the eventPackage.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      eventPackage_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      seat_section_id:
+        name: seat_section_id
+        description: ''
+        required: true
+        example: dolorem
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      price:
+        name: price
+        description: ''
+        required: true
+        example: 959.972496
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      entry_gate:
+        name: entry_gate
+        description: ''
+        required: false
+        example: eveniet
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      notes:
+        name: notes
+        description: ''
+        required: false
+        example: autem
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      capacity:
+        name: capacity
+        description: ''
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      title:
+        name: title
+        description: ''
+        required: true
+        example: enim
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      seat_section_id: dolorem
+      price: 959.972496
+      entry_gate: eveniet
+      notes: autem
+      capacity: 2
+      title: enim
     fileParameters: []
     responses: []
     responseFields: []

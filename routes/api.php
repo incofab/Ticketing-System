@@ -79,6 +79,7 @@ Route::group(['prefix' => 'event-packages'], function () {
     Route::get('/index', [Events\EventPackageController::class, 'index'])->name('event-packages.index');
     Route::group(['middleware' => ['auth:sanctum']], function () {
         Route::post('/events/{event}/store', [Events\EventPackageController::class, 'store'])->name('event-packages.store');
+        Route::post('/{eventPackage}/update', [Events\EventPackageController::class, 'update'])->name('event-packages.update');
         Route::post('/{eventPackage}/destroy', [Events\EventPackageController::class, 'destroy'])->name('event-packages.destroy');
     });
 });

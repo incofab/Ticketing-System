@@ -140,7 +140,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: xpaaii
+        example: nymburqyiinpoyxobaenyb
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -149,7 +149,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Dolores nihil assumenda enim impedit eius amet.'
+        example: 'Vero illo odit placeat rem ut soluta.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -158,7 +158,7 @@ endpoints:
         name: date_from
         description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
         required: false
-        example: '2025-04-08T13:57:36'
+        example: '2025-04-08T18:12:43'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -167,16 +167,16 @@ endpoints:
         name: date_to
         description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
         required: false
-        example: '2035-03-19'
+        example: '2041-03-01'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: xpaaii
-      description: 'Dolores nihil assumenda enim impedit eius amet.'
-      date_from: '2025-04-08T13:57:36'
-      date_to: '2035-03-19'
+      title: nymburqyiinpoyxobaenyb
+      description: 'Vero illo odit placeat rem ut soluta.'
+      date_from: '2025-04-08T18:12:43'
+      date_to: '2041-03-01'
     fileParameters: []
     responses: []
     responseFields: []
@@ -220,7 +220,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: g
+        example: m
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -229,7 +229,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Exercitationem rerum aut deserunt iusto consequatur qui.'
+        example: 'Et doloremque velit quidem nihil quod animi ipsum voluptatem.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -238,7 +238,7 @@ endpoints:
         name: date_from
         description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
         required: false
-        example: '2025-04-08T13:57:36'
+        example: '2025-04-08T18:12:43'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -247,16 +247,16 @@ endpoints:
         name: date_to
         description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
         required: false
-        example: '2034-04-25'
+        example: '2119-07-09'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: g
-      description: 'Exercitationem rerum aut deserunt iusto consequatur qui.'
-      date_from: '2025-04-08T13:57:36'
-      date_to: '2034-04-25'
+      title: m
+      description: 'Et doloremque velit quidem nihil quod animi ipsum voluptatem.'
+      date_from: '2025-04-08T18:12:43'
+      date_to: '2119-07-09'
     fileParameters: []
     responses: []
     responseFields: []

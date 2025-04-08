@@ -4,11 +4,10 @@ namespace App\Http\Controllers\Api\Events;
 
 use App\Actions\CreateUpdateEventPackage;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateEventPackageRequest;
 use App\Models\Event;
 use App\Models\EventPackage;
-use App\Models\SeatSection;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Rule;
 
 /**
  * @group Event Packages
@@ -27,45 +26,57 @@ class EventPackageController extends Controller
     return $this->apiRes(paginateFromRequest($query));
   }
 
-  public function store(Request $request, Event $event)
+  public function store(CreateEventPackageRequest $request, Event $event)
   {
-    $data = $request->validate([
-      'seat_section_id' => ['required', 'exists:seat_sections,id'],
-      'price' => ['required', 'numeric'],
-      'entry_gate' => ['nullable', 'string'],
-      'notes' => ['nullable', 'string'],
-      'capacity' => [
-        'required',
-        'integer',
-        function ($attr, $value, $fail) {
-          /** @var SeatSection $seatSection */
-          $seatSection = SeatSection::query()->findOrFail(
-            request('seat_section_id')
-          );
-          $allocatedCapacity = EventPackage::whereSeatSectionId(
-            $seatSection->id
-          )->sum('capacity');
-          $availableCapacity = $seatSection->capacity - $allocatedCapacity;
-          if ($availableCapacity < 1) {
-            $fail('There are no available seats');
-            return;
-          }
-          if ($availableCapacity < $value) {
-            $fail("There are only $availableCapacity available seat capacity");
-            return;
-          }
-        }
-      ],
-      'title' => [
-        'required',
-        'string',
-        Rule::unique('event_packages', 'title')->where(
-          'seat_section_id',
-          $request->seat_section_id
-        )
-      ]
-    ]);
+    // $data = $request->validate([
+    //   'seat_section_id' => ['required', 'exists:seat_sections,id'],
+    //   'price' => ['required', 'numeric'],
+    //   'entry_gate' => ['nullable', 'string'],
+    //   'notes' => ['nullable', 'string'],
+    //   'capacity' => [
+    //     'required',
+    //     'integer',
+    //     function ($attr, $value, $fail) {
+    //       /** @var SeatSection $seatSection */
+    //       $seatSection = SeatSection::query()->findOrFail(
+    //         request('seat_section_id')
+    //       );
+    //       $allocatedCapacity = EventPackage::whereSeatSectionId(
+    //         $seatSection->id
+    //       )->sum('capacity');
+    //       $availableCapacity = $seatSection->capacity - $allocatedCapacity;
+    //       if ($availableCapacity < 1) {
+    //         $fail('There are no available seats');
+    //         return;
+    //       }
+    //       if ($availableCapacity < $value) {
+    //         $fail("There are only $availableCapacity available seat capacity");
+    //         return;
+    //       }
+    //     }
+    //   ],
+    //   'title' => [
+    //     'required',
+    //     'string',
+    //     Rule::unique('event_packages', 'title')->where(
+    //       'seat_section_id',
+    //       $request->seat_section_id
+    //     )
+    //   ]
+    // ]);
+    $data = $request->validated();
     $createdPackages = CreateUpdateEventPackage::run($event, [$data]);
+    return $this->apiRes($createdPackages[0]);
+  }
+
+  function update(
+    CreateEventPackageRequest $request,
+    EventPackage $eventPackage
+  ) {
+    $data = $request->validated();
+    $createdPackages = CreateUpdateEventPackage::run($eventPackage->event, [
+      $data
+    ]);
     return $this->apiRes($createdPackages[0]);
   }
 

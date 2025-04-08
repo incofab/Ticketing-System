@@ -88,3 +88,29 @@ it('can delete an existing event package', function () {
 
   assertDatabaseMissing('event_packages', ['id' => $eventPackage->id]);
 });
+
+it('can update an existing event package', function () {
+  $event = Event::factory()->create();
+  $seatSection = SeatSection::factory()->create();
+  $eventPackage = EventPackage::factory()
+    ->event($event)
+    ->for($seatSection)
+    ->create();
+  $requestData = [
+    ...$eventPackage->toArray(),
+    'price' => 100.0,
+    'capacity' => 15
+  ];
+  actingAs($this->admin)
+    ->postJson(
+      route('api.event-packages.update', ['eventPackage' => $eventPackage->id]),
+      $requestData
+    )
+    ->assertOk();
+  assertDatabaseHas(
+    'event_packages',
+    collect($requestData)
+      ->except('created_at', 'updated_at')
+      ->toArray()
+  );
+});

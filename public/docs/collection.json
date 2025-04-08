@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Rangers Ticketing System",
-        "_postman_id": "7a8b401c-cbb8-4c8c-82ee-573b360dc6d0",
+        "_postman_id": "3c7a1c60-98ca-487a-a632-7e7e1160f819",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -151,7 +151,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone\":\"officiis\",\"password\":\"B1{<\\\"'yXF!IvJzJ\"}"
+                            "raw": "{\"phone\":\"asperiores\",\"password\":\"*SblB(tT5.\"}"
                         },
                         "description": "",
                         "auth": {
@@ -182,7 +182,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":17,\"last_name\":\"iste\",\"other_names\":\"omnis\",\"phone\":\"ipsum\",\"email\":\"enrique.cartwright@example.org\",\"password\":\"nIHhe_I5]9j{*8Gby\"}"
+                            "raw": "{\"first_name\":4,\"last_name\":\"distinctio\",\"other_names\":\"commodi\",\"phone\":\"eos\",\"email\":\"mschimmel@example.com\",\"password\":\"G]Xg5cWpt=\\\"@\"}"
                         },
                         "description": "",
                         "auth": {
@@ -315,7 +315,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"ksbbmqovuogterkotypfvv\",\"description\":\"Nulla facere dolore iure.\"}"
+                            "raw": "{\"title\":\"rbuedawtjyblsoaxrppzk\",\"description\":\"Fuga voluptatem suscipit corrupti velit doloremque libero eum.\"}"
                         },
                         "description": "",
                         "auth": {
@@ -354,7 +354,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"cwhcznknrg\",\"description\":\"Deleniti maiores provident rerum sequi voluptatum sint optio.\"}"
+                            "raw": "{\"title\":\"ucldpgyqpqi\",\"description\":\"Facilis quisquam vero nulla dolor magnam.\"}"
                         },
                         "description": "",
                         "auth": {
@@ -491,7 +491,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"images\":\"sd\"}"
+                            "raw": "{\"images\":\"yqkn\"}"
                         },
                         "description": "",
                         "auth": {
@@ -512,7 +512,7 @@
                                 {
                                     "id": "eventImage_id",
                                     "key": "eventImage_id",
-                                    "value": "20",
+                                    "value": "5",
                                     "description": "The ID of the eventImage."
                                 }
                             ]
@@ -641,7 +641,46 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"seat_section_id\":\"autem\",\"price\":54107344.86081,\"entry_gate\":\"consectetur\",\"notes\":\"similique\",\"capacity\":18,\"title\":\"qui\"}"
+                            "raw": "{\"seat_section_id\":\"omnis\",\"price\":290.16051667,\"entry_gate\":\"voluptatem\",\"notes\":\"non\",\"capacity\":7,\"title\":\"non\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/event-packages\/{eventPackage_id}\/update",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/event-packages\/:eventPackage_id\/update",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/event-packages\/:eventPackage_id\/update",
+                            "variable": [
+                                {
+                                    "id": "eventPackage_id",
+                                    "key": "eventPackage_id",
+                                    "value": "1",
+                                    "description": "The ID of the eventPackage."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"seat_section_id\":\"dolorem\",\"price\":959.972496,\"entry_gate\":\"eveniet\",\"notes\":\"autem\",\"capacity\":2,\"title\":\"enim\"}"
                         },
                         "description": "",
                         "auth": {
@@ -850,7 +889,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"xpaaii\",\"description\":\"Dolores nihil assumenda enim impedit eius amet.\",\"date_from\":\"2025-04-08T13:57:36\",\"date_to\":\"2035-03-19\"}"
+                            "raw": "{\"title\":\"nymburqyiinpoyxobaenyb\",\"description\":\"Vero illo odit placeat rem ut soluta.\",\"date_from\":\"2025-04-08T18:12:43\",\"date_to\":\"2041-03-01\"}"
                         },
                         "description": "",
                         "auth": {
@@ -889,7 +928,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"g\",\"description\":\"Exercitationem rerum aut deserunt iusto consequatur qui.\",\"date_from\":\"2025-04-08T13:57:36\",\"date_to\":\"2034-04-25\"}"
+                            "raw": "{\"title\":\"m\",\"description\":\"Et doloremque velit quidem nihil quod animi ipsum voluptatem.\",\"date_from\":\"2025-04-08T18:12:43\",\"date_to\":\"2119-07-09\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1176,7 +1215,7 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"message\":\"\",\"data\":{\"id\":1,\"event_season_id\":1,\"title\":\"Illum ex repudiandae sunt.\",\"description\":\"Sequi rerum aut magni ea qui est consequatur.\",\"start_time\":\"2024-03-12T17:35:58.000000Z\",\"end_time\":\"2024-04-12T17:35:58.000000Z\",\"home_team\":\"expedita\",\"away_team\":\"unde\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\",\"expired\":true,\"event_season\":{\"id\":1,\"event_category_id\":2,\"title\":\"Eius quia tenetur perspiciatis natus itaque iste.\",\"description\":\"Consequatur et natus est numquam deserunt necessitatibus.\",\"date_from\":\"2024-02-12T17:35:58.000000Z\",\"date_to\":\"2024-05-12T17:35:58.000000Z\",\"status\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"},\"event_packages\":[{\"id\":1,\"event_id\":1,\"seat_section_id\":5,\"price\":3725.7,\"quantity_sold\":1,\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-20T09:35:58.000000Z\",\"entry_gate\":null,\"seat_section\":{\"id\":5,\"capacity\":708,\"title\":\"Sit est reprehenderit nisi quis ipsam inventore.\",\"description\":\"Quis est quibusdam et perferendis adipisci fugit laborum consequatur repellendus enim quis provident temporibus quasi.\",\"features\":\"Maxime qui eos nisi quam debitis occaecati modi voluptatem voluptatem.\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"}}],\"event_images\":[]}}",
+                            "body": "{\"message\":\"\",\"data\":{\"id\":1,\"event_season_id\":1,\"title\":\"Illum ex repudiandae sunt.\",\"description\":\"Sequi rerum aut magni ea qui est consequatur.\",\"start_time\":\"2024-03-12T17:35:58.000000Z\",\"end_time\":\"2024-04-12T17:35:58.000000Z\",\"home_team\":\"expedita\",\"away_team\":\"unde\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\",\"expired\":true,\"event_season\":{\"id\":1,\"event_category_id\":2,\"title\":\"Eius quia tenetur perspiciatis natus itaque iste.\",\"description\":\"Consequatur et natus est numquam deserunt necessitatibus.\",\"date_from\":\"2024-02-12T17:35:58.000000Z\",\"date_to\":\"2024-05-12T17:35:58.000000Z\",\"status\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\",\"event_category\":{\"id\":2,\"title\":\"Quia qui temporibus reiciendis ipsam omnis sed deserunt necessitatibus.\",\"description\":\"Laborum exercitationem esse impedit porro repudiandae iusto necessitatibus eum nisi aliquid molestiae et.\",\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"}},\"event_packages\":[{\"id\":1,\"event_id\":1,\"seat_section_id\":5,\"price\":3725.7,\"quantity_sold\":1,\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-20T09:35:58.000000Z\",\"entry_gate\":null,\"seat_section\":{\"id\":5,\"capacity\":708,\"title\":\"Sit est reprehenderit nisi quis ipsam inventore.\",\"description\":\"Quis est quibusdam et perferendis adipisci fugit laborum consequatur repellendus enim quis provident temporibus quasi.\",\"features\":\"Maxime qui eos nisi quam debitis occaecati modi voluptatem voluptatem.\",\"deleted_at\":null,\"created_at\":\"2024-01-12T17:35:58.000000Z\",\"updated_at\":\"2024-01-12T17:35:58.000000Z\"}}],\"event_images\":[]}}",
                             "name": ""
                         }
                     ]
@@ -1211,7 +1250,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"event_packages\":\"jbnifrjdehkourvfhqzpfisdwdznbyfnehkzscjcexasdatsljuzvpzpelq\"}"
+                            "raw": "{\"event_packages\":\"bpyppwkcevgb\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1628,7 +1667,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"seats\":[\"officia\"]}"
+                            "raw": "{\"seats\":[\"et\"]}"
                         },
                         "description": "This endpoint allows you to create multiple seats within a specific seat section.",
                         "auth": {
@@ -1752,7 +1791,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"bznwxfqtxd\",\"description\":\"Veritatis voluptates consectetur culpa voluptas.\",\"features\":\"ut\",\"capacity\":16}"
+                            "raw": "{\"title\":\"nndhibvvmmhq\",\"description\":\"Perferendis cum officia tenetur est.\",\"features\":\"sint\",\"capacity\":18}"
                         },
                         "description": "",
                         "auth": {
@@ -1791,7 +1830,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"dawanwhmwmiczonjgwu\",\"description\":\"Atque totam dignissimos esse id.\",\"features\":\"quo\",\"capacity\":3}"
+                            "raw": "{\"title\":\"yotmxpxxlhgledxmlghkpc\",\"description\":\"Voluptas tempora autem ut ut labore.\",\"features\":\"doloribus\",\"capacity\":2}"
                         },
                         "description": "",
                         "auth": {
@@ -1891,7 +1930,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"merchant\":\"nam\",\"callback_url\":\"http:\\\/\\\/windler.com\\\/deserunt-aperiam-corrupti-dolorum-autem\",\"quantity\":6,\"name\":\"prgpbmjxownui\",\"phone\":\"yojstgkqphm\",\"email\":\"jane.toy@example.net\"}"
+                            "raw": "{\"merchant\":\"praesentium\",\"callback_url\":\"http:\\\/\\\/www.wolff.biz\\\/\",\"quantity\":9,\"name\":\"r\",\"phone\":\"cdgxyavmrihmz\",\"email\":\"mcclure.sister@example.org\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1922,7 +1961,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"reference\":\"sint\"}"
+                            "raw": "{\"reference\":\"esse\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1953,7 +1992,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"reference\":\"delectus\",\"quantity\":23,\"seats\":[{\"attendee\":{\"name\":\"sed\",\"email\":\"baylee.gaylord@example.com\",\"phone\":\"consequuntur\",\"address\":\"doloremque\"}}]}"
+                            "raw": "{\"reference\":\"accusamus\",\"quantity\":73,\"seats\":[{\"attendee\":{\"name\":\"nostrum\",\"email\":\"lockman.bradford@example.org\",\"phone\":\"molestias\",\"address\":\"hic\"}}]}"
                         },
                         "description": "",
                         "auth": {
@@ -1984,7 +2023,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"reference\":\"voluptatum\",\"email\":\"rubye22@example.net\"}"
+                            "raw": "{\"reference\":\"minus\",\"email\":\"ansel.kozey@example.com\"}"
                         },
                         "description": "",
                         "auth": {
@@ -2043,7 +2082,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"ticket_payment_id\":4,\"hash\":\"provident\",\"reference\":\"et\",\"device_no\":\"molestias\",\"event_id\":20}"
+                            "raw": "{\"ticket_payment_id\":8,\"hash\":\"et\",\"reference\":\"ut\",\"device_no\":\"libero\",\"event_id\":5}"
                         },
                         "description": "",
                         "auth": {
@@ -2074,7 +2113,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"reference\":\"id\"}"
+                            "raw": "{\"reference\":\"labore\"}"
                         },
                         "description": "",
                         "auth": {
@@ -2113,7 +2152,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"x\",\"email\":\"katlynn72@example.net\",\"phone\":\"godbvyyspxeowfn\",\"address\":\"vpnryvmqawuupjxsrkkqmh\"}"
+                            "raw": "{\"name\":\"ktlmxmlq\",\"email\":\"rebecca16@example.com\",\"phone\":\"ckirbbtdgn\",\"address\":\"ixminanjfdcaxflgyoceje\"}"
                         },
                         "description": "",
                         "auth": {
