@@ -31,8 +31,6 @@ class EventController extends Controller
   {
     $query = $eventSeason ? $eventSeason->events()->getQuery() : Event::query();
 
-    // $query->selectRaw('*, (start_time < NOW()) AS expired');
-
     EventUITableFilters::make($request->all(), $query)->filterQuery();
 
     return $this->apiRes(
@@ -79,11 +77,12 @@ class EventController extends Controller
       'event_packages.*.title' => ['required', 'string']
     ]);
 
-    $event = $eventSeason->events()->create(
-      collect($data)
+    $event = $eventSeason->events()->create([
+      ...collect($data)
         ->except('event_packages', 'logo')
-        ->toArray()
-    );
+        ->toArray(),
+      'user_id' => currentUser()?->id
+    ]);
     CreateUpdateEventPackage::run($event, $data['event_packages'] ?? []);
 
     $this->uploadLogo($event, $request->logo);

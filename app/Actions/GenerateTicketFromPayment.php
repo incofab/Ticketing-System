@@ -8,6 +8,7 @@ use App\Models\SeatSection;
 use App\Models\Ticket;
 use App\Models\TicketPayment;
 use DB;
+use Illuminate\Support\Collection;
 use Mail;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use Str;
@@ -51,6 +52,29 @@ class GenerateTicketFromPayment
       401,
       'Not enough available seats'
     );
+  }
+
+  /**
+   * @return Ticket[]|Collection<int, Ticket> $tickets
+   */
+  static function generateFromPaymentReference(
+    PaymentReference $paymentReference
+  ) {
+    /** @var TicketPayment $ticketPayment */
+    $ticketPayment = $paymentReference->paymentable;
+    $existingTicketsGenerated = $ticketPayment->tickets()->count();
+    $remainingSeats = $ticketPayment->quantity - $existingTicketsGenerated;
+
+    if ($remainingSeats < 1) {
+      return $ticketPayment->tickets()->get();
+    }
+
+    $seatIds = GetAvailableSeats::run($ticketPayment->eventPackage)
+      ->take($ticketPayment->quantity)
+      ->pluck('seats.id')
+      ->toArray();
+
+    return (new self($paymentReference, $seatIds))->run();
   }
 
   /**

@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Api\Tickets;
 
 use App\Actions\GenerateTicketFromPayment;
 use App\Actions\GetAvailableSeats;
-use App\Enums\PaymentMerchantType;
 use App\Http\Controllers\Controller;
 use App\Models\PaymentReference;
 use App\Models\TicketPayment;
@@ -23,24 +22,21 @@ class ConfirmPaymentController extends Controller
     /** @var PaymentReference $paymentReference */
     $paymentReference = PaymentReference::query()
       ->where('reference', $request->reference)
-      // ->where('merchant', PaymentMerchantType::Paystack)
       ->firstOrFail();
-
-    // if ($paymentReference->merchant !== PaymentMerchantType::Paystack) {
-    //   return $this->ok(
-    //     failRes('', ['slug' => 'unexpected_merchant'])->toArray()
-    //   );
-    // }
 
     $res = PaymentProcessor::make($paymentReference)->handleCallback();
 
     abort_unless($res->isSuccessful(), 403, $res->getMessage());
 
-    $tickets = $this->generateTickets($paymentReference);
+    $tickets = GenerateTicketFromPayment::generateFromPaymentReference(
+      $paymentReference
+    );
+    // $this->generateTickets($paymentReference);
 
     return $this->ok([...$res->toArray(), 'tickets' => $tickets]);
   }
 
+  /** @deprecated */
   private function generateTickets(PaymentReference $paymentReference)
   {
     /** @var TicketPayment $ticketPayment */

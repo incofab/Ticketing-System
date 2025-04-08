@@ -5,8 +5,10 @@ use App\Enums\PaymentReferenceStatus;
 use App\Models\Event;
 use App\Models\EventPackage;
 use App\Models\PaymentReference;
+use App\Models\Seat;
 use Illuminate\Testing\Fluent\AssertableJson;
 
+use function Pest\Laravel\assertDatabaseCount;
 use function Pest\Laravel\postJson;
 
 beforeEach(function () {
@@ -85,7 +87,6 @@ it('can initiate a ticket purchase for Bank Deposit', function () {
 it(
   'cannot initiate a ticket purchase when there are not enough available seats',
   function () {
-    /** @var EventPackage $eventPackage */
     $eventPackage = EventPackage::factory()->create();
     // $seatSection = $eventPackage->seatSection;
     $eventPackage->fill(['quantity_sold' => $eventPackage->capacity])->save();
@@ -128,6 +129,9 @@ it(
 
 it('can initiate & confirm a ticket purchase for free', function () {
   $eventPackage = EventPackage::factory()->create();
+  Seat::factory()
+    ->seatSection($eventPackage->seatSection)
+    ->create();
   $params = [
     'merchant' => PaymentMerchantType::Free->value,
     'quantity' => 1,
@@ -164,4 +168,5 @@ it('can initiate & confirm a ticket purchase for free', function () {
     PaymentReferenceStatus::Confirmed
   );
   expect($eventPackage->fresh()->quantity_sold)->toBe($ticketPayment->quantity);
+  assertDatabaseCount('tickets', 1);
 });

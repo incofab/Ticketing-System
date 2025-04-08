@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\Tickets;
 
+use App\Actions\GenerateTicketFromPayment;
 use App\DTO\PaymentReferenceDto;
 use App\Enums\PaymentMerchantType;
 use App\Http\Controllers\Controller;
@@ -95,7 +96,7 @@ class InitTicketPurchaseController extends Controller
       $paymentReferenceDto
     );
 
-    $this->handleResult($paymentReference, $res);
+    $res = $this->handleResult($paymentReference, $res);
     abort_unless($res->isSuccessful(), 403, $res->getMessage());
     return $this->ok($res->toArray());
   }
@@ -106,7 +107,14 @@ class InitTicketPurchaseController extends Controller
       return $res;
     }
     $res = PaymentProcessor::make($paymentReference)->handleCallback();
+    if (!$res->isSuccessful()) {
+      return $res;
+    }
+    $tickets = GenerateTicketFromPayment::generateFromPaymentReference(
+      $paymentReference
+    );
     $res->reference = $paymentReference->reference;
+    $res->tickets = $tickets;
     return $res;
   }
 }

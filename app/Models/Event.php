@@ -15,6 +15,7 @@ class Event extends Model
   protected $guarded = [];
   protected $appends = ['expired'];
   protected $casts = [
+    'user_id' => 'integer',
     'start_time' => 'datetime',
     'end_time' => 'datetime'
   ];
