@@ -5,16 +5,18 @@ Dear {{$ticketPayment->name}},
 Thank you for booking with us. Here are your event details
 
 @component('mail::panel')
-<b>Match:</b> {{$event->title}}  
-<b>Date:</b>&nbsp; &nbsp; {{$event->start_time->toFormattedDayDateString()}}  
-<b>Venue:</b> Nnamdi Azikiwe Stadium (The Cathedral), Ogui Road, Enugu  
+<div style="margin-bottom: 5px;"><b>Event:</b> {{$event->title}}</div>
+<div><b>Date:</b>&nbsp; {{$event->start_time->toFormattedDayDateString()}}</div>
+{{-- <b>Venue:</b> Nnamdi Azikiwe Stadium (The Cathedral), Ogui Road, Enugu   --}}
 @endcomponent
     
 Your reservation has been ticketed and your seats are confirmed.   
 
 <div style="text-align: center;">{!!$ticket->qr_code!!}</div>   
 <br>
-If you have any queries about your booking, click <a href="#">here to view our Help pages.</a>   
+<div>
+If you have any queries about your booking, click <a href="#">here for more.</a>   
+</div>
 
 We hope you have a pleasant event experence.   
 

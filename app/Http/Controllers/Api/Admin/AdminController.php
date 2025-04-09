@@ -19,6 +19,11 @@ use Illuminate\Http\Request;
  */
 class AdminController extends Controller
 {
+  function __construct()
+  {
+    $this->middleware('admin')->only('dashboard');
+  }
+
   public function dashboard(Request $request)
   {
     $data = [
@@ -32,6 +37,13 @@ class AdminController extends Controller
 
   function eventDashboard(Event $event)
   {
+    $user = currentUser();
+    abort_unless(
+      $user->isAdmin() || $event->user_id == $user->id,
+      403,
+      'Access denied'
+    );
+
     $ticketPaymentQuery = TicketPayment::query()
       ->join(
         'event_packages',

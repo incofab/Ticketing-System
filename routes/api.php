@@ -27,7 +27,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/logout', [Auth\ApiAuthController::class, 'logout'])->name('logout');
 });
 
-Route::group(['prefix' => 'admin', 'middleware' => ['auth:sanctum', 'admin']], function () {
+Route::group(['prefix' => 'admin', 'middleware' => ['auth:sanctum']], function () {
     Route::get('/dashboard', [Admin\AdminController::class, 'dashboard'])->name('admin.dashboard');
     Route::get('/events/{event}/dashboard', [Admin\AdminController::class, 'eventDashboard'])->name('admin.event.dashboard');
 });
@@ -98,7 +98,7 @@ Route::group(['prefix' => 'tickets'], function () {
     });
     Route::post('/{ticket}/event-attendees/create', [Tickets\EventAttendeeController::class, 'store'])->name('tickets.event-attendees.store');
     Route::get('/{ticket:reference}/show/reference', [Tickets\TicketController::class, 'showByReference'])->name('tickets.show.reference');
-    Route::group(['middleware' => ['auth:sanctum', 'admin']], function () {
+    Route::group(['middleware' => ['auth:sanctum']], function () {
         Route::get('/index', Tickets\ListTicketController::class)->name('tickets.index');
     });
 });

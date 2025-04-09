@@ -33,7 +33,16 @@ class InitTicketPurchaseController extends Controller
       'merchant' => [
         'required',
         'string',
-        new Enum(PaymentMerchantType::class)
+        new Enum(PaymentMerchantType::class),
+        function ($attr, $value, $fail) use ($eventPackage) {
+          if (
+            $eventPackage->price > 0 &&
+            request('merchant') === PaymentMerchantType::Free->value
+          ) {
+            $fail('This is not a free package');
+            return;
+          }
+        }
       ],
       'callback_url' => [
         'nullable',

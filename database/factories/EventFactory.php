@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\EventSeason;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class EventFactory extends Factory
@@ -10,6 +11,7 @@ class EventFactory extends Factory
   public function definition(): array
   {
     return [
+      'user_id' => User::factory(),
       'event_season_id' => EventSeason::factory(),
       'title' => fake()->sentence(),
       'description' => fake()->sentence(10),
@@ -29,6 +31,7 @@ class EventFactory extends Factory
       'youtube' => fake()->url()
     ];
   }
+
   function expired()
   {
     return $this->state(
@@ -37,5 +40,10 @@ class EventFactory extends Factory
         'end_time' => now()->subHours(1)
       ]
     );
+  }
+
+  function user(User $user)
+  {
+    return $this->state(fn($attr) => ['user_id' => $user]);
   }
 }

@@ -20,6 +20,7 @@ class EventController extends Controller
    * @queryParam title string No-example
    * @queryParam start_time_from string No-example
    * @queryParam start_time_to string No-example
+   * @queryParam for_user boolean No-example
    *
    * @queryParam sortKey string No-example
    * @queryParam sortDir string Represents the direction of the sort. ASC|DESC. No-example
@@ -30,6 +31,10 @@ class EventController extends Controller
   public function index(Request $request, EventSeason|null $eventSeason = null)
   {
     $query = $eventSeason ? $eventSeason->events()->getQuery() : Event::query();
+
+    $user = currentUser();
+    $forUser = $request->for_user && $user && !$user?->isAdmin();
+    $query->when($forUser, fn($q) => $q->where('user_id', $user?->id));
 
     EventUITableFilters::make($request->all(), $query)->filterQuery();
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\Tickets;
 
 use App\Http\Controllers\Controller;
+use App\Models\Event;
 use App\Models\Ticket;
 use App\Support\UITableFilters\TicketUITableFilters;
 use Illuminate\Http\Request;
@@ -30,6 +31,13 @@ class ListTicketController extends Controller
    */
   public function __invoke(Request $request)
   {
+    $event = Event::find($request->event_id);
+    $user = currentUser();
+    abort_unless(
+      $user->isAdmin() || $event?->user_id == $user->id,
+      403,
+      'Access denied'
+    );
     $query = TicketUITableFilters::make(
       $request->all(),
       Ticket::select('tickets.*')

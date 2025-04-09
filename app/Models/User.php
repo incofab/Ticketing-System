@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\RoleType;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -81,6 +82,16 @@ class User extends Authenticatable
     return Attribute::make(
       get: fn() => "{$this->first_name} {$this->other_names} {$this->last_name}"
     );
+  }
+
+  function isAdmin()
+  {
+    return $this->hasRole(RoleType::Admin);
+  }
+
+  function events()
+  {
+    return $this->hasMany(Event::class);
   }
 
   function ticketVerifications()

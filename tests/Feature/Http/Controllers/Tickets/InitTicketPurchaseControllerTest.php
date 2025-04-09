@@ -143,6 +143,11 @@ it('can initiate & confirm a ticket purchase for free', function () {
     ...$params,
     'quantity' => 2
   ])->assertJsonValidationErrorFor('quantity');
+  postJson(
+    route('api.tickets.init-payment', [$eventPackage]),
+    $params
+  )->assertJsonValidationErrorFor('merchant');
+  $eventPackage->fill(['price' => 0])->save();
   $response = postJson(
     route('api.tickets.init-payment', [$eventPackage]),
     $params

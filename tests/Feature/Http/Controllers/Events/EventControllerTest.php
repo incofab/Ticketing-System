@@ -47,6 +47,20 @@ it('can get a list of events', function () {
     ->assertJsonCount(7, 'data.data');
 });
 
+it('can get a list of events for a particular user', function () {
+  $user = User::factory()->create();
+  Event::factory(2)
+    ->user($user)
+    ->create();
+  Event::factory(3)->create();
+
+  // Call the endpoint
+  actingAs($user)
+    ->getJson(route('api.events.index', ['for_user' => true]))
+    ->assertOk()
+    ->assertJsonCount(2, 'data.data');
+});
+
 it('can get a list of upcoming events', function () {
   // Create some dummy data, for example:
   $eventSeason = EventSeason::factory()->create();

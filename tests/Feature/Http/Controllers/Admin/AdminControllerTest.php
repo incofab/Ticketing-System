@@ -11,7 +11,6 @@ use App\Models\Ticket;
 use App\Models\TicketPayment;
 use App\Models\TicketVerification;
 use App\Models\User;
-use App\Support\MorphMap;
 use Database\Seeders\RoleSeeder;
 
 use function Pest\Laravel\actingAs;
@@ -30,8 +29,6 @@ beforeEach(function () {
 });
 
 it('should return the correct dashboard data', function () {
-  actingAs($this->admin);
-
   EventSeason::factory()
     ->count(3)
     ->create();
@@ -45,7 +42,7 @@ it('should return the correct dashboard data', function () {
     ->count(4)
     ->create();
 
-  $response = getJson(route('api.admin.dashboard'));
+  $response = actingAs($this->admin)->getJson(route('api.admin.dashboard'));
 
   $response->assertStatus(200);
   $response->assertJson([
@@ -119,12 +116,15 @@ it('should return the correct event dashboard data', function () {
 });
 
 it('should deny access if user is not an admin', function () {
-  $event = Event::factory()->create();
+  $user = User::factory()->create();
+  $event = Event::factory()
+    ->for($user)
+    ->create();
   $nonAdmin = User::factory()->create();
-  actingAs($nonAdmin);
-
-  getJson(route('api.admin.dashboard'))->assertForbidden();
-  getJson(
-    route('api.admin.event.dashboard', ['event' => $event->id])
-  )->assertStatus(403);
+  actingAs($user)
+    ->getJson(route('api.admin.event.dashboard', $event))
+    ->assertOk();
+  actingAs($nonAdmin)
+    ->getJson(route('api.admin.event.dashboard', ['event' => $event->id]))
+    ->assertStatus(403);
 });
