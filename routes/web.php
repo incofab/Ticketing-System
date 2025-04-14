@@ -14,12 +14,18 @@ Route::post('/webhook/paystack', [Home\PaymentCallbackController::class, 'paysta
 Route::get('/callback/airvend', [Home\PaymentCallbackController::class, 'airvendCallback']);
 
 Route::get('/dummy1', function () {
-    $ticket = Ticket::query()->first();
-    // Mail::to('incofabikenna@gmail.com')->send(
-    //     new TicketPurchaseMail($ticket)
-    //   );
-    // dd('dksds');
-    return (new TicketPurchaseMail($ticket));
+    $tickets = Ticket::query()->where('event_id', -1)->with('ticketPayment')->get();
+    foreach ($tickets as $key => $ticket) {
+        $email = $ticket->ticketPayment->email;
+        if(!$email){
+            continue;
+        }
+        Mail::to($email)->queue(
+            new TicketPurchaseMail($ticket)
+          );
+    }
+    dd("Done for ". $tickets->count() . ' tickets');
+    // return (new TicketPurchaseMail($ticket));
     dd('dksds');
     $eventPackages = EventPackage::query()->with('ticketPayments')->get();
     /** @var EventPackage $eventPackage */

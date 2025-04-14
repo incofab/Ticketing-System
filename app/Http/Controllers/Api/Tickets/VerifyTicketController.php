@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\Tickets;
 use App\Http\Controllers\Controller;
 use App\Models\Ticket;
 use App\Models\TicketVerification;
+use Exception;
 use Illuminate\Http\Request;
 
 /**
@@ -14,7 +15,7 @@ class VerifyTicketController extends Controller
 {
   const SLUG_INVALID_TICKET = 'invalid_ticket';
   const SLUG_VERIFIED = 'verified';
-  const SLUG_ALREADY_VERIFIED = 'alredy_verified';
+  const SLUG_ALREADY_VERIFIED = 'already_verified';
 
   public function __invoke(Request $request)
   {
@@ -70,10 +71,28 @@ class VerifyTicketController extends Controller
 
   function res($success, $slug, $data)
   {
+    $title = '';
+    $message = '';
+    if ($slug === self::SLUG_VERIFIED) {
+      $title = 'Ticket Verified';
+      $message = 'This ticket is valid and You\'re good to go!';
+    } elseif ($slug === self::SLUG_ALREADY_VERIFIED) {
+      $title = 'Already Checked-In';
+      $message =
+        'This ticket has already been verified. Please check with the event team.';
+    } elseif ($slug === self::SLUG_INVALID_TICKET) {
+      $title = 'Invalid Ticket';
+      $message =
+        'This ticket is not recognized. Please try again or scan a valid QR code.';
+    } else {
+      throw new Exception("Invalid slug: $slug");
+    }
     return $this->ok([
       'success' => $success,
       'slug' => $slug,
-      'data' => $data
+      'data' => $data,
+      'title' => $title,
+      'message' => $message
     ]);
   }
 }

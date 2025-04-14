@@ -16,6 +16,7 @@ class TicketPurchaseMail extends Mailable
 
   public TicketPayment $ticketPayment;
   public Event $event;
+  public string $viewTicketUrl;
 
   /**
    * Create a new message instance.
@@ -25,6 +26,9 @@ class TicketPurchaseMail extends Mailable
     // now()->toFormattedDayDateString()
     $this->ticketPayment = $ticket->ticketPayment;
     $this->event = $ticket->eventPackage->event;
+    $this->viewTicketUrl =
+      "https://shopurban.co/events/{$this->event->id}?" .
+      http_build_query(['reference' => $ticket->reference]);
   }
 
   /**
@@ -32,7 +36,9 @@ class TicketPurchaseMail extends Mailable
    */
   public function envelope(): Envelope
   {
-    return new Envelope(subject: "{$this->event->title} - Ticket Purchase");
+    return new Envelope(
+      subject: "{$this->event->title} - Ticket Purchase #{$this->ticket->id}"
+    );
   }
 
   /**

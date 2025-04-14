@@ -2,27 +2,25 @@
 
 Dear {{$ticketPayment->name}},
 
-Thank you for booking with us. Here are your event details
+Thank you for booking with us. Below are your event details:  
 
 @component('mail::panel')
-<div style="margin-bottom: 5px;"><b>Event:</b> {{$event->title}}</div>
-<div><b>Date:</b>&nbsp; {{$event->start_time->toFormattedDayDateString()}}</div>
-{{-- <b>Venue:</b> Nnamdi Azikiwe Stadium (The Cathedral), Ogui Road, Enugu   --}}
+<div style="margin-bottom: 7px;"><b>Event:</b> {{$event->title}}</div>
+<div style="margin-bottom: 7px;"><b>Date:</b>&nbsp; {{$event->start_time->toFormattedDayDateString()}}</div>
+<div><b>Venue:</b> {{$event->venue}}</div>
 @endcomponent
     
-Your reservation has been ticketed and your seats are confirmed.   
+Your reservation has been ticketed successfully.   
 
 <div style="text-align: center;">{!!$ticket->qr_code!!}</div>   
 <br>
-<div>
-If you have any queries about your booking, click <a href="#">here for more.</a>   
-</div>
 
-We hope you have a pleasant event experence.   
+To view your ticket and confirm your attendance, <a href="{{$viewTicketUrl}}">RSVP here</a> 
 
-{{-- Click Here to View & Print Online    --}}
 
-Thank you for choosing shopurban!   
+If you found this email in your Spam folder, please "Report not Spam".  
+
+We hope you have a memorable experience at the event.   
 
 Best Regards
 @endcomponent
