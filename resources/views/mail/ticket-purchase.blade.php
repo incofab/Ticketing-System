@@ -15,7 +15,7 @@ Your reservation has been ticketed successfully.
 <div style="text-align: center;">{!!$ticket->qr_code!!}</div>   
 <br>
 
-To view your ticket and confirm your attendance, <a href="{{$viewTicketUrl}}">RSVP here</a> 
+To view your ticket and confirm your attendance, RSVP at <a href="{{$viewTicketUrl}}">{{$viewTicketUrl}}</a> 
 
 
 If you found this email in your Spam folder, please "Report not Spam".  

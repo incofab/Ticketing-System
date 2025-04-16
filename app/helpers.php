@@ -85,3 +85,13 @@ if (!function_exists('breadCrumb')) {
     return new BreadCrumb($title, $route, $icon, $active);
   }
 }
+
+if (!function_exists('sanitizeFilename')) {
+  function sanitizeFilename(string $filename): string
+  {
+    $filename = basename($filename);
+    $sanitized = Str::slug(pathinfo($filename, PATHINFO_FILENAME));
+    $extension = pathinfo($filename, PATHINFO_EXTENSION);
+    return $extension ? "{$sanitized}.{$extension}" : $sanitized;
+  }
+}

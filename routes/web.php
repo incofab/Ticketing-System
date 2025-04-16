@@ -58,3 +58,8 @@ Route::get('/mail-test', function () {
     return new TicketPurchaseMail(Ticket::query()->first());
 });
 
+Route::get('/events/{event}/report', function (\App\Models\Event $event) {
+    // dd('dksdks');
+    return (new \App\Actions\Dummy\GetEventData($event))->run();
+});
+
