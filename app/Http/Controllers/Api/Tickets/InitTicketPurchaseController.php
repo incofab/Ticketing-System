@@ -17,6 +17,18 @@ use Illuminate\Validation\Rules\Enum;
 
 /**
  * @group Tickets
+ * Initialize Ticket Purchase
+ *
+ * This endpoint initializes the purchase of tickets for a specific event package.
+ *
+ * @urlParam eventPackage int required The ID of the event package. Example: 1
+ * @bodyParam merchant string required The payment merchant to use. Example: paystack
+ * @bodyParam callback_url string The URL to redirect to after payment. Required for non-bank deposit and non-free merchants. Example: https://example.com/callback
+ * @bodyParam quantity int required The number of tickets to purchase. Example: 2
+ * @bodyParam name string The name of the ticket purchaser. Example: John Doe
+ * @bodyParam phone string The phone number of the ticket purchaser. Example: 08012345678
+ * @bodyParam email string required The email of the ticket purchaser. Example: john.doe@example.com
+ * @bodyParam referral_code string The referral code used for the purchase. Example: REF123
  */
 class InitTicketPurchaseController extends Controller
 {
@@ -80,7 +92,8 @@ class InitTicketPurchaseController extends Controller
       ],
       'name' => ['nullable', 'string', 'max:255'],
       'phone' => ['nullable', 'string', 'max:255'],
-      'email' => ['required', 'email', 'max:255']
+      'email' => ['required', 'email', 'max:255'],
+      'referral_code' => ['nullable', 'string', 'max:255']
     ]);
     abort_if($eventPackage->event->isExpired(), 403, 'Event is expired');
     $amount = $eventPackage->price * $data['quantity'];
