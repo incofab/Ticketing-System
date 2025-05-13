@@ -2,11 +2,13 @@
 
 namespace App\Models;
 
+use App\Enums\PaymentMerchantType;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Validation\Rule;
+use Illuminate\Validation\Rules\Enum;
 
 class Event extends Model
 {
@@ -17,7 +19,8 @@ class Event extends Model
   protected $casts = [
     'user_id' => 'integer',
     'start_time' => 'datetime',
-    'end_time' => 'datetime'
+    'end_time' => 'datetime',
+    'payment_merchants' => 'array'
   ];
 
   static function createRule($eventSeasonId, Event|null $event = null)
@@ -46,7 +49,12 @@ class Event extends Model
       'youtube' => ['nullable', 'string', 'max:255'],
       'tiktok' => ['nullable', 'string', 'max:255'],
       'linkedin' => ['nullable', 'string', 'max:255'],
-      'logo' => ['nullable', 'image']
+      'logo' => ['nullable', 'image'],
+      'payment_merchants' => ['nullable', 'array', 'min:0'],
+      'payment_merchants.*' => [
+        'nullable',
+        new Enum(PaymentMerchantType::class)
+      ]
     ];
   }
 

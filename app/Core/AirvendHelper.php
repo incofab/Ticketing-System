@@ -26,7 +26,11 @@ class AirvendHelper
 
     $data = [
       'amount' => $amount,
-      'user' => ['email' => $email],
+      'user' => [
+        'email' => $email,
+        'phone' => '08032485925',
+        'name' => 'Unnamed User'
+      ],
       'callback_url' => $callbackUrl,
       'reference' => $reference
     ];
@@ -37,7 +41,7 @@ class AirvendHelper
 
     if (!$link) {
       return failRes(
-        'Error: ' . $res->json('message', 'Paystack initialization failed'),
+        'Error: ' . $res->json('message', 'Payment initialization failed'),
         $res->json() ?? []
       );
     }
@@ -105,79 +109,5 @@ class AirvendHelper
     $lastPart = end($pathParts);
 
     return $lastPart;
-  }
-
-  private function addCharge($amount)
-  {
-    $amount = (int) $amount;
-    if (empty($amount)) {
-      return 0;
-    }
-
-    $finalAmount = $amount;
-
-    if ($amount >= self::FLAT_CHARGE_ELIGIBLE) {
-      $finalAmount = $amount + self::FLAT_CHARGE;
-    }
-
-    return ceil($finalAmount / (1 - self::PERCENTAGE_CHARGE / 100));
-  }
-
-  private function removeCharge($chargedAmount)
-  {
-    $chargedAmount = (int) $chargedAmount;
-    if (empty($chargedAmount)) {
-      return 0;
-    }
-
-    $amount = floor($chargedAmount * (1 - self::PERCENTAGE_CHARGE / 100));
-
-    if ($amount >= self::FLAT_CHARGE_ELIGIBLE) {
-      $amount = $amount - self::FLAT_CHARGE;
-    }
-
-    return $amount;
-  }
-
-  function testPaystackCharges()
-  {
-    $str = '';
-    $i = 0;
-    $enteredAmount = 2000;
-    $addCharge = $this->addCharge($enteredAmount);
-    $removeCharge = $this->removeCharge($addCharge);
-    $i++;
-    $str = "($i). enteredAmount=$enteredAmount <br />addCharge=$addCharge <br />removeCharge=$removeCharge";
-    $str .= '<br /><br />';
-
-    $enteredAmount = 3000;
-    $addCharge = $this->addCharge($enteredAmount);
-    $removeCharge = $this->removeCharge($addCharge);
-    $i++;
-    $str .= "($i). enteredAmount=$enteredAmount <br />addCharge=$addCharge <br />removeCharge=$removeCharge";
-    $str .= '<br /><br />';
-
-    $enteredAmount = 5500;
-    $addCharge = $this->addCharge($enteredAmount);
-    $removeCharge = $this->removeCharge($addCharge);
-    $i++;
-    $str .= "($i). enteredAmount=$enteredAmount <br />addCharge=$addCharge <br />removeCharge=$removeCharge";
-    $str .= '<br /><br />';
-
-    $enteredAmount = 800;
-    $addCharge = $this->addCharge($enteredAmount);
-    $removeCharge = $this->removeCharge($addCharge);
-    $i++;
-    $str .= "($i). enteredAmount=$enteredAmount <br />addCharge=$addCharge <br />removeCharge=$removeCharge";
-    $str .= '<br /><br />';
-
-    $enteredAmount = 'dsk';
-    $addCharge = $this->addCharge($enteredAmount);
-    $removeCharge = $this->removeCharge($addCharge);
-    $i++;
-    $str .= "($i). enteredAmount=$enteredAmount <br />addCharge=$addCharge <br />removeCharge=$removeCharge";
-    $str .= '<br /><br />';
-
-    dd($str);
   }
 }
