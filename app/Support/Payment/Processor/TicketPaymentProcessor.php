@@ -2,9 +2,11 @@
 namespace App\Support\Payment\Processor;
 
 use App\Enums\PaymentReferenceStatus;
+use App\Mail\TicketSoldMail;
 use App\Models\TicketPayment;
 use App\Support\Res;
 use DB;
+use Mail;
 
 class TicketPaymentProcessor extends PaymentProcessor
 {
@@ -29,6 +31,7 @@ class TicketPaymentProcessor extends PaymentProcessor
     /** @var TicketPayment $ticketPayment */
     $ticketPayment = $this->paymentReference->paymentable;
     $eventPackage = $ticketPayment->eventPackage;
+    $event = $eventPackage->event;
 
     DB::beginTransaction();
     $this->paymentReference
@@ -41,6 +44,13 @@ class TicketPaymentProcessor extends PaymentProcessor
           $eventPackage->quantity_sold + $ticketPayment->quantity
       ])
       ->save();
+
+    if ($event->email) {
+      Mail::to($event->email)->queue(
+        new TicketSoldMail($event, $this->paymentReference)
+      );
+    }
+
     DB::commit();
 
     return successRes('Payment successful');

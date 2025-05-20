@@ -52,7 +52,7 @@ class Event extends Model
       'logo' => ['nullable', 'image'],
       'payment_merchants' => ['nullable', 'array', 'min:0'],
       'payment_merchants.*' => [
-        'nullable',
+        'required',
         new Enum(PaymentMerchantType::class)
       ]
     ];
