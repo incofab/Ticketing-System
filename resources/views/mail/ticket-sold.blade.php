@@ -12,7 +12,7 @@ Great news! You have just received a payment for {{$ticketPayment->quantity}} {{
 
 The payment has been successfully processed and credited to your account linked with our platform.   
 
-Thank you for choosing ShopUrban to manage your event. If you have any questions or need further assistance, feel free to reach out to our support team.   
+Thank you for choosing Shopurban to manage your event. If you have any questions or need further assistance, feel free to reach out to our support team.   
 
 Best regards,  
 **Shopurban Team**   

@@ -20,15 +20,16 @@ Route::get('/dummy1', function () {
     );
     return 'message sent';
     dd('dkdkksd');
-    $tickets = Ticket::query()->where('event_id', -1)->with('ticketPayment')->get();
+    $tickets = Ticket::query()->where('event_id', -1)->with('ticketPayment.paymentReferences')->get();
     foreach ($tickets as $key => $ticket) {
         $email = $ticket->ticketPayment->email;
         if(!$email){
             continue;
         }
-        Mail::to($email)->queue(
-            new TicketPurchaseMail($ticket)
-          );
+        Mail::to($email)->queue(new TicketPurchaseMail($ticket));
+        foreach (($ticket->ticketPayment?->paymentReferences ?? []) as $key => $paymentReference) {
+            Mail::to($email)->queue(new \App\Mail\TicketSoldMail($event, $paymentReference));
+        }
     }
     dd("Done for ". $tickets->count() . ' tickets');
     // return (new TicketPurchaseMail($ticket));

@@ -13,9 +13,9 @@ class Mailable extends BaseMailable
     // info('mail is being sent now');
     // info($mailer->all)
 
-    SendEmailViaApi::run($this);
+    // SendEmailViaApi::run($this);
     // var_dump($mailer);
-    // return parent::send($mailer);
+    return parent::send($mailer);
   }
 
   function queue(Factory $queue)

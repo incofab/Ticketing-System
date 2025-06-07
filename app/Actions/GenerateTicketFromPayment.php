@@ -131,7 +131,7 @@ class GenerateTicketFromPayment
       $tickets[] = $generatedTicket;
       if ($this->ticketPayment->email) {
         Mail::to($this->ticketPayment->email)->queue(
-          new TicketPurchaseMail($generatedTicket)
+          new TicketPurchaseMail($generatedTicket->fresh())
         );
       }
     }
