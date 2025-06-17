@@ -59,6 +59,33 @@ endpoints:
         enumValues: []
         exampleWasSpecified: false
         custom: []
+      for_user:
+        name: for_user
+        description: ''
+        required: false
+        example: null
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      for_upcoming:
+        name: for_upcoming
+        description: ''
+        required: false
+        example: null
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      for_past:
+        name: for_past
+        description: ''
+        required: false
+        example: null
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
       sortKey:
         name: sortKey
         description: ''
@@ -111,7 +138,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"","data":{"current_page":1,"data":[{"id":1,"event_season_id":1,"title":"Illum ex repudiandae sunt.","description":"Sequi rerum aut magni ea qui est consequatur.","start_time":"2024-03-12T17:35:58.000000Z","end_time":"2024-04-12T17:35:58.000000Z","home_team":"expedita","away_team":"unde","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","expired":true,"event_images":[],"event_packages":[{"id":1,"event_id":1,"seat_section_id":5,"price":3725.7,"quantity_sold":1,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-20T09:35:58.000000Z","entry_gate":null}]}],"first_page_url":"http:\/\/localhost\/api\/events\/index\/1?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/events\/index\/1?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/events\/index\/1?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/events\/index\/1","per_page":50,"prev_page_url":null,"to":1,"total":1}}'
+        content: '{"message":"","data":{"current_page":1,"data":[{"id":1,"event_season_id":1,"title":"Eius quia tenetur perspiciatis natus itaque iste.","description":"Consequatur et natus est numquam deserunt necessitatibus.","start_time":"2024-03-12T17:35:58.000000Z","end_time":"2024-04-12T17:35:58.000000Z","home_team":"expedita","away_team":"unde","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","facebook":null,"instagram":null,"tiktok":null,"twitter":null,"youtube":null,"linkedin":null,"logo":null,"user_id":null,"event_category_id":2,"date_from":"2024-02-12 18:35:58","date_to":"2024-05-12 18:35:58","status":null,"expired":true,"event_images":[],"event_packages":[{"id":1,"event_id":1,"seat_section_id":5,"price":3725.7,"quantity_sold":1,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-20T09:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0}]}],"first_page_url":"http:\/\/localhost\/api\/events\/index\/1?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/events\/index\/1?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/events\/index\/1?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/events\/index\/1","per_page":50,"prev_page_url":null,"to":1,"total":1}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -213,7 +240,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"","data":{"id":1,"event_season_id":1,"title":"Illum ex repudiandae sunt.","description":"Sequi rerum aut magni ea qui est consequatur.","start_time":"2024-03-12T17:35:58.000000Z","end_time":"2024-04-12T17:35:58.000000Z","home_team":"expedita","away_team":"unde","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","expired":true,"event_season":{"id":1,"event_category_id":2,"title":"Eius quia tenetur perspiciatis natus itaque iste.","description":"Consequatur et natus est numquam deserunt necessitatibus.","date_from":"2024-02-12T17:35:58.000000Z","date_to":"2024-05-12T17:35:58.000000Z","status":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","event_category":{"id":2,"title":"Quia qui temporibus reiciendis ipsam omnis sed deserunt necessitatibus.","description":"Laborum exercitationem esse impedit porro repudiandae iusto necessitatibus eum nisi aliquid molestiae et.","created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z"}},"event_packages":[{"id":1,"event_id":1,"seat_section_id":5,"price":3725.7,"quantity_sold":1,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-20T09:35:58.000000Z","entry_gate":null,"seat_section":{"id":5,"capacity":708,"title":"Sit est reprehenderit nisi quis ipsam inventore.","description":"Quis est quibusdam et perferendis adipisci fugit laborum consequatur repellendus enim quis provident temporibus quasi.","features":"Maxime qui eos nisi quam debitis occaecati modi voluptatem voluptatem.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z"}}],"event_images":[]}}'
+        content: '{"message":"","data":{"id":1,"event_season_id":1,"title":"Illum ex repudiandae sunt.","description":"Sequi rerum aut magni ea qui est consequatur.","start_time":"2024-03-12T17:35:58.000000Z","end_time":"2024-04-12T17:35:58.000000Z","home_team":"expedita","away_team":"unde","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","facebook":null,"instagram":null,"tiktok":null,"twitter":null,"youtube":null,"linkedin":null,"logo":null,"user_id":null,"expired":true,"event_season":{"id":1,"event_category_id":2,"title":"Eius quia tenetur perspiciatis natus itaque iste.","description":"Consequatur et natus est numquam deserunt necessitatibus.","date_from":"2024-02-12T17:35:58.000000Z","date_to":"2024-05-12T17:35:58.000000Z","status":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","event_category":{"id":2,"title":"Quia qui temporibus reiciendis ipsam omnis sed deserunt necessitatibus.","description":"Laborum exercitationem esse impedit porro repudiandae iusto necessitatibus eum nisi aliquid molestiae et.","created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z"}},"event_packages":[{"id":1,"event_id":1,"seat_section_id":5,"price":3725.7,"quantity_sold":1,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-20T09:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0,"seat_section":{"id":5,"capacity":708,"title":"Sit est reprehenderit nisi quis ipsam inventore.","description":"Quis est quibusdam et perferendis adipisci fugit laborum consequatur repellendus enim quis provident temporibus quasi.","features":"Maxime qui eos nisi quam debitis occaecati modi voluptatem voluptatem.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z"}}],"event_images":[]}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -263,7 +290,7 @@ endpoints:
         name: event_packages
         description: 'Must have at least 1 items.'
         required: false
-        example: bpyppwkcevgb
+        example: dimslqsmrlnoounanlbsqobefmcvxhjxrnpsufxemysehynwpuuenexged
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -272,7 +299,7 @@ endpoints:
         name: 'event_packages[].seat_section_id'
         description: ''
         required: true
-        example: molestiae
+        example: sed
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -281,7 +308,7 @@ endpoints:
         name: 'event_packages[].price'
         description: ''
         required: true
-        example: 23696880.3
+        example: 0.96100174
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -290,13 +317,13 @@ endpoints:
         name: 'event_packages[].title'
         description: ''
         required: true
-        example: voluptatem
+        example: iure
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      event_packages: bpyppwkcevgb
+      event_packages: dimslqsmrlnoounanlbsqobefmcvxhjxrnpsufxemysehynwpuuenexged
     fileParameters: []
     responses: []
     responseFields: []

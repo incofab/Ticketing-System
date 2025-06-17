@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  title: 'Rangers Ticketing System'
+  title: 'Shopurban Ticketing System'
   description: ''
   version: 1.0.0
 servers:
@@ -79,11 +79,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: asperiores
+                  example: sit
                 password:
                   type: string
                   description: ''
-                  example: '*SblB(tT5.'
+                  example: '>v9^~mWCO0kPw56.%'
               required:
                 - phone
                 - password
@@ -107,27 +107,27 @@ paths:
                 first_name:
                   type: integer
                   description: ''
-                  example: 4
+                  example: 3
                 last_name:
                   type: string
                   description: ''
-                  example: distinctio
+                  example: illo
                 other_names:
                   type: string
                   description: ''
-                  example: commodi
+                  example: itaque
                 phone:
                   type: string
                   description: ''
-                  example: eos
+                  example: dignissimos
                 email:
                   type: string
                   description: ''
-                  example: mschimmel@example.com
+                  example: obraun@example.net
                 password:
                   type: string
                   description: ''
-                  example: 'G]Xg5cWpt="@'
+                  example: "!anZM8t'EmKr1N)@"
               required:
                 - first_name
                 - last_name
@@ -196,11 +196,11 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: rbuedawtjyblsoaxrppzk
+                  example: jlsgsdteyibqciltpekhcyz
                 description:
                   type: string
                   description: ''
-                  example: 'Fuga voluptatem suscipit corrupti velit doloremque libero eum.'
+                  example: 'Dicta ab nemo voluptas dicta vel.'
               required:
                 - title
       security: []
@@ -223,11 +223,11 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ucldpgyqpqi
+                  example: gvwipqslaqyfktsjszlr
                 description:
                   type: string
                   description: ''
-                  example: 'Facilis quisquam vero nulla dolor magnam.'
+                  example: 'Cumque culpa eum ea cupiditate sunt voluptas ducimus.'
               required:
                 - title
       security: []
@@ -329,7 +329,7 @@ paths:
         in: path
         name: eventImage_id
         description: 'The ID of the eventImage.'
-        example: 5
+        example: 16
         required: true
         schema:
           type: integer
@@ -381,6 +381,9 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-20T09:35:58.000000Z'
                         entry_gate: null
+                        title: ''
+                        notes: null
+                        capacity: 0
                       -
                         id: 2
                         event_id: 2
@@ -391,6 +394,9 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         entry_gate: null
+                        title: ''
+                        notes: null
+                        capacity: 0
                       -
                         id: 3
                         event_id: 3
@@ -401,6 +407,9 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         entry_gate: null
+                        title: ''
+                        notes: null
+                        capacity: 0
                       -
                         id: 4
                         event_id: 4
@@ -411,6 +420,9 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         entry_gate: null
+                        title: ''
+                        notes: null
+                        capacity: 0
                       -
                         id: 5
                         event_id: 5
@@ -421,6 +433,9 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         entry_gate: null
+                        title: ''
+                        notes: null
+                        capacity: 0
                       -
                         id: 6
                         event_id: 6
@@ -431,6 +446,9 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         entry_gate: null
+                        title: ''
+                        notes: null
+                        capacity: 0
                       -
                         id: 7
                         event_id: 7
@@ -441,6 +459,9 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         entry_gate: null
+                        title: ''
+                        notes: null
+                        capacity: 0
                       -
                         id: 8
                         event_id: 8
@@ -451,6 +472,9 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         entry_gate: null
+                        title: ''
+                        notes: null
+                        capacity: 0
                       -
                         id: 9
                         event_id: 9
@@ -461,6 +485,9 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         entry_gate: null
+                        title: ''
+                        notes: null
+                        capacity: 0
                       -
                         id: 10
                         event_id: 10
@@ -471,6 +498,9 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         entry_gate: null
+                        title: ''
+                        notes: null
+                        capacity: 0
                       -
                         id: 11
                         event_id: 11
@@ -481,6 +511,9 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         entry_gate: null
+                        title: ''
+                        notes: null
+                        capacity: 0
                       -
                         id: 12
                         event_id: 12
@@ -491,6 +524,9 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         entry_gate: null
+                        title: ''
+                        notes: null
+                        capacity: 0
                       -
                         id: 13
                         event_id: 13
@@ -501,6 +537,9 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         entry_gate: null
+                        title: ''
+                        notes: null
+                        capacity: 0
                       -
                         id: 14
                         event_id: 14
@@ -511,6 +550,9 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         entry_gate: null
+                        title: ''
+                        notes: null
+                        capacity: 0
                       -
                         id: 15
                         event_id: 15
@@ -521,6 +563,9 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
                         entry_gate: null
+                        title: ''
+                        notes: null
+                        capacity: 0
                     first_page_url: 'http://localhost/api/event-packages/index?page=1'
                     from: 1
                     last_page: 1
@@ -567,6 +612,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-20T09:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                           -
                             id: 2
                             event_id: 2
@@ -577,6 +625,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                           -
                             id: 3
                             event_id: 3
@@ -587,6 +638,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                           -
                             id: 4
                             event_id: 4
@@ -597,6 +651,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                           -
                             id: 5
                             event_id: 5
@@ -607,6 +664,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                           -
                             id: 6
                             event_id: 6
@@ -617,6 +677,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                           -
                             id: 7
                             event_id: 7
@@ -627,6 +690,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                           -
                             id: 8
                             event_id: 8
@@ -637,6 +703,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                           -
                             id: 9
                             event_id: 9
@@ -647,6 +716,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                           -
                             id: 10
                             event_id: 10
@@ -657,6 +729,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                           -
                             id: 11
                             event_id: 11
@@ -667,6 +742,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                           -
                             id: 12
                             event_id: 12
@@ -677,6 +755,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                           -
                             id: 13
                             event_id: 13
@@ -687,6 +768,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                           -
                             id: 14
                             event_id: 14
@@ -697,6 +781,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                           -
                             id: 15
                             event_id: 15
@@ -707,6 +794,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                         items:
                           type: object
                           properties:
@@ -737,6 +827,15 @@ paths:
                             entry_gate:
                               type: string
                               example: null
+                            title:
+                              type: string
+                              example: ''
+                            notes:
+                              type: string
+                              example: null
+                            capacity:
+                              type: integer
+                              example: 0
                       first_page_url:
                         type: string
                         example: 'http://localhost/api/event-packages/index?page=1'
@@ -816,27 +915,27 @@ paths:
                 seat_section_id:
                   type: string
                   description: ''
-                  example: omnis
+                  example: ducimus
                 price:
                   type: number
                   description: ''
-                  example: 290.16051667
+                  example: 10886126.036791
                 entry_gate:
                   type: string
                   description: ''
-                  example: voluptatem
+                  example: et
                 notes:
                   type: string
                   description: ''
-                  example: non
+                  example: qui
                 capacity:
                   type: integer
                   description: ''
-                  example: 7
+                  example: 6
                 title:
                   type: string
                   description: ''
-                  example: non
+                  example: voluptatem
               required:
                 - seat_section_id
                 - price
@@ -871,27 +970,27 @@ paths:
                 seat_section_id:
                   type: string
                   description: ''
-                  example: dolorem
+                  example: ab
                 price:
                   type: number
                   description: ''
-                  example: 959.972496
+                  example: 28421819.0
                 entry_gate:
                   type: string
                   description: ''
-                  example: eveniet
+                  example: quas
                 notes:
                   type: string
                   description: ''
-                  example: autem
+                  example: praesentium
                 capacity:
                   type: integer
                   description: ''
-                  example: 2
+                  example: 8
                 title:
                   type: string
                   description: ''
-                  example: enim
+                  example: nemo
               required:
                 - seat_section_id
                 - price
@@ -1203,19 +1302,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: nymburqyiinpoyxobaenyb
+                  example: sazyjgydrknunh
                 description:
                   type: string
                   description: ''
-                  example: 'Vero illo odit placeat rem ut soluta.'
+                  example: 'Aperiam fugiat sint ipsa sed eveniet cum.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2025-04-08T18:12:43'
+                  example: '2025-06-17T18:47:03'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2041-03-01'
+                  example: '2086-08-30'
               required:
                 - title
       security: []
@@ -1247,19 +1346,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: m
+                  example: wik
                 description:
                   type: string
                   description: ''
-                  example: 'Et doloremque velit quidem nihil quod animi ipsum voluptatem.'
+                  example: 'Voluptas corporis eos a necessitatibus.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2025-04-08T18:12:43'
+                  example: '2025-06-17T18:47:03'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2119-07-09'
+                  example: '2041-06-19'
               required:
                 - title
       security: []
@@ -1329,6 +1428,36 @@ paths:
             example: null
         -
           in: query
+          name: for_user
+          description: ''
+          example: null
+          required: false
+          schema:
+            type: boolean
+            description: ''
+            example: null
+        -
+          in: query
+          name: for_upcoming
+          description: ''
+          example: null
+          required: false
+          schema:
+            type: boolean
+            description: ''
+            example: null
+        -
+          in: query
+          name: for_past
+          description: ''
+          example: null
+          required: false
+          schema:
+            type: boolean
+            description: ''
+            example: null
+        -
+          in: query
           name: sortKey
           description: ''
           example: null
@@ -1392,8 +1521,8 @@ paths:
                       -
                         id: 1
                         event_season_id: 1
-                        title: 'Illum ex repudiandae sunt.'
-                        description: 'Sequi rerum aut magni ea qui est consequatur.'
+                        title: 'Eius quia tenetur perspiciatis natus itaque iste.'
+                        description: 'Consequatur et natus est numquam deserunt necessitatibus.'
                         start_time: '2024-03-12T17:35:58.000000Z'
                         end_time: '2024-04-12T17:35:58.000000Z'
                         home_team: expedita
@@ -1401,6 +1530,18 @@ paths:
                         deleted_at: null
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
+                        facebook: null
+                        instagram: null
+                        tiktok: null
+                        twitter: null
+                        youtube: null
+                        linkedin: null
+                        logo: null
+                        user_id: null
+                        event_category_id: 2
+                        date_from: '2024-02-12 18:35:58'
+                        date_to: '2024-05-12 18:35:58'
+                        status: null
                         expired: true
                         event_images: []
                         event_packages:
@@ -1414,6 +1555,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-20T09:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                     first_page_url: 'http://localhost/api/events/index/1?page=1'
                     from: 1
                     last_page: 1
@@ -1453,8 +1597,8 @@ paths:
                           -
                             id: 1
                             event_season_id: 1
-                            title: 'Illum ex repudiandae sunt.'
-                            description: 'Sequi rerum aut magni ea qui est consequatur.'
+                            title: 'Eius quia tenetur perspiciatis natus itaque iste.'
+                            description: 'Consequatur et natus est numquam deserunt necessitatibus.'
                             start_time: '2024-03-12T17:35:58.000000Z'
                             end_time: '2024-04-12T17:35:58.000000Z'
                             home_team: expedita
@@ -1462,6 +1606,18 @@ paths:
                             deleted_at: null
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
+                            facebook: null
+                            instagram: null
+                            tiktok: null
+                            twitter: null
+                            youtube: null
+                            linkedin: null
+                            logo: null
+                            user_id: null
+                            event_category_id: 2
+                            date_from: '2024-02-12 18:35:58'
+                            date_to: '2024-05-12 18:35:58'
+                            status: null
                             expired: true
                             event_images: []
                             event_packages:
@@ -1475,6 +1631,9 @@ paths:
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-20T09:35:58.000000Z'
                                 entry_gate: null
+                                title: ''
+                                notes: null
+                                capacity: 0
                         items:
                           type: object
                           properties:
@@ -1486,10 +1645,10 @@ paths:
                               example: 1
                             title:
                               type: string
-                              example: 'Illum ex repudiandae sunt.'
+                              example: 'Eius quia tenetur perspiciatis natus itaque iste.'
                             description:
                               type: string
-                              example: 'Sequi rerum aut magni ea qui est consequatur.'
+                              example: 'Consequatur et natus est numquam deserunt necessitatibus.'
                             start_time:
                               type: string
                               example: '2024-03-12T17:35:58.000000Z'
@@ -1511,6 +1670,42 @@ paths:
                             updated_at:
                               type: string
                               example: '2024-01-12T17:35:58.000000Z'
+                            facebook:
+                              type: string
+                              example: null
+                            instagram:
+                              type: string
+                              example: null
+                            tiktok:
+                              type: string
+                              example: null
+                            twitter:
+                              type: string
+                              example: null
+                            youtube:
+                              type: string
+                              example: null
+                            linkedin:
+                              type: string
+                              example: null
+                            logo:
+                              type: string
+                              example: null
+                            user_id:
+                              type: string
+                              example: null
+                            event_category_id:
+                              type: integer
+                              example: 2
+                            date_from:
+                              type: string
+                              example: '2024-02-12 18:35:58'
+                            date_to:
+                              type: string
+                              example: '2024-05-12 18:35:58'
+                            status:
+                              type: string
+                              example: null
                             expired:
                               type: boolean
                               example: true
@@ -1530,6 +1725,9 @@ paths:
                                   created_at: '2024-01-12T17:35:58.000000Z'
                                   updated_at: '2024-01-20T09:35:58.000000Z'
                                   entry_gate: null
+                                  title: ''
+                                  notes: null
+                                  capacity: 0
                               items:
                                 type: object
                                 properties:
@@ -1560,6 +1758,15 @@ paths:
                                   entry_gate:
                                     type: string
                                     example: null
+                                  title:
+                                    type: string
+                                    example: ''
+                                  notes:
+                                    type: string
+                                    example: null
+                                  capacity:
+                                    type: integer
+                                    example: 0
                       first_page_url:
                         type: string
                         example: 'http://localhost/api/events/index/1?page=1'
@@ -1791,6 +1998,14 @@ paths:
                     deleted_at: null
                     created_at: '2024-01-12T17:35:58.000000Z'
                     updated_at: '2024-01-12T17:35:58.000000Z'
+                    facebook: null
+                    instagram: null
+                    tiktok: null
+                    twitter: null
+                    youtube: null
+                    linkedin: null
+                    logo: null
+                    user_id: null
                     expired: true
                     event_season:
                       id: 1
@@ -1819,6 +2034,9 @@ paths:
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-20T09:35:58.000000Z'
                         entry_gate: null
+                        title: ''
+                        notes: null
+                        capacity: 0
                         seat_section:
                           id: 5
                           capacity: 708
@@ -1869,6 +2087,30 @@ paths:
                       updated_at:
                         type: string
                         example: '2024-01-12T17:35:58.000000Z'
+                      facebook:
+                        type: string
+                        example: null
+                      instagram:
+                        type: string
+                        example: null
+                      tiktok:
+                        type: string
+                        example: null
+                      twitter:
+                        type: string
+                        example: null
+                      youtube:
+                        type: string
+                        example: null
+                      linkedin:
+                        type: string
+                        example: null
+                      logo:
+                        type: string
+                        example: null
+                      user_id:
+                        type: string
+                        example: null
                       expired:
                         type: boolean
                         example: true
@@ -1933,6 +2175,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-20T09:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                             seat_section:
                               id: 5
                               capacity: 708
@@ -1972,6 +2217,15 @@ paths:
                             entry_gate:
                               type: string
                               example: null
+                            title:
+                              type: string
+                              example: ''
+                            notes:
+                              type: string
+                              example: null
+                            capacity:
+                              type: integer
+                              example: 0
                             seat_section:
                               type: object
                               properties:
@@ -2033,7 +2287,7 @@ paths:
                 event_packages:
                   type: array
                   description: 'Must have at least 1 items.'
-                  example: bpyppwkcevgb
+                  example: dimslqsmrlnoounanlbsqobefmcvxhjxrnpsufxemysehynwpuuenexged
                   items:
                     type: string
       security: []
@@ -2212,6 +2466,7 @@ paths:
                         email: my@gmail.com
                         created_at: '2024-01-20T09:28:24.000000Z'
                         updated_at: '2024-01-20T09:28:24.000000Z'
+                        processing: 0
                         status: confirmed
                         merchant: paystack
                         event_package:
@@ -2224,6 +2479,9 @@ paths:
                           created_at: '2024-01-12T17:35:58.000000Z'
                           updated_at: '2024-01-20T09:35:58.000000Z'
                           entry_gate: null
+                          title: ''
+                          notes: null
+                          capacity: 0
                           event:
                             id: 1
                             event_season_id: 1
@@ -2236,6 +2494,14 @@ paths:
                             deleted_at: null
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
+                            facebook: null
+                            instagram: null
+                            tiktok: null
+                            twitter: null
+                            youtube: null
+                            linkedin: null
+                            logo: null
+                            user_id: null
                             expired: true
                           seat_section:
                             id: 5
@@ -2256,6 +2522,7 @@ paths:
                         email: kstehr@yahoo.com
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
+                        processing: 0
                         status: confirmed
                         merchant: paystack
                         event_package:
@@ -2268,6 +2535,9 @@ paths:
                           created_at: '2024-01-12T17:35:58.000000Z'
                           updated_at: '2024-01-12T17:35:58.000000Z'
                           entry_gate: null
+                          title: ''
+                          notes: null
+                          capacity: 0
                           event:
                             id: 13
                             event_season_id: 13
@@ -2280,6 +2550,14 @@ paths:
                             deleted_at: null
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
+                            facebook: null
+                            instagram: null
+                            tiktok: null
+                            twitter: null
+                            youtube: null
+                            linkedin: null
+                            logo: null
+                            user_id: null
                             expired: true
                           seat_section:
                             id: 21
@@ -2300,6 +2578,7 @@ paths:
                         email: hdare@bahringer.net
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
+                        processing: 0
                         status: confirmed
                         merchant: paystack
                         event_package:
@@ -2312,6 +2591,9 @@ paths:
                           created_at: '2024-01-12T17:35:58.000000Z'
                           updated_at: '2024-01-12T17:35:58.000000Z'
                           entry_gate: null
+                          title: ''
+                          notes: null
+                          capacity: 0
                           event:
                             id: 10
                             event_season_id: 10
@@ -2324,6 +2606,14 @@ paths:
                             deleted_at: null
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
+                            facebook: null
+                            instagram: null
+                            tiktok: null
+                            twitter: null
+                            youtube: null
+                            linkedin: null
+                            logo: null
+                            user_id: null
                             expired: true
                           seat_section:
                             id: 17
@@ -2344,6 +2634,7 @@ paths:
                         email: alex.mayer@kling.org
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
+                        processing: 0
                         status: confirmed
                         merchant: paystack
                         event_package:
@@ -2356,6 +2647,9 @@ paths:
                           created_at: '2024-01-12T17:35:58.000000Z'
                           updated_at: '2024-01-12T17:35:58.000000Z'
                           entry_gate: null
+                          title: ''
+                          notes: null
+                          capacity: 0
                           event:
                             id: 7
                             event_season_id: 7
@@ -2368,6 +2662,14 @@ paths:
                             deleted_at: null
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
+                            facebook: null
+                            instagram: null
+                            tiktok: null
+                            twitter: null
+                            youtube: null
+                            linkedin: null
+                            logo: null
+                            user_id: null
                             expired: true
                           seat_section:
                             id: 13
@@ -2388,6 +2690,7 @@ paths:
                         email: haylee45@hotmail.com
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
+                        processing: 0
                         status: confirmed
                         merchant: paystack
                         event_package:
@@ -2400,6 +2703,9 @@ paths:
                           created_at: '2024-01-12T17:35:58.000000Z'
                           updated_at: '2024-01-12T17:35:58.000000Z'
                           entry_gate: null
+                          title: ''
+                          notes: null
+                          capacity: 0
                           event:
                             id: 4
                             event_season_id: 4
@@ -2412,6 +2718,14 @@ paths:
                             deleted_at: null
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
+                            facebook: null
+                            instagram: null
+                            tiktok: null
+                            twitter: null
+                            youtube: null
+                            linkedin: null
+                            logo: null
+                            user_id: null
                             expired: true
                           seat_section:
                             id: 9
@@ -2432,6 +2746,7 @@ paths:
                         email: katrina12@yahoo.com
                         created_at: '2024-01-12T17:35:58.000000Z'
                         updated_at: '2024-01-12T17:35:58.000000Z'
+                        processing: 0
                         status: confirmed
                         merchant: paystack
                         event_package:
@@ -2444,6 +2759,9 @@ paths:
                           created_at: '2024-01-12T17:35:58.000000Z'
                           updated_at: '2024-01-20T09:35:58.000000Z'
                           entry_gate: null
+                          title: ''
+                          notes: null
+                          capacity: 0
                           event:
                             id: 1
                             event_season_id: 1
@@ -2456,6 +2774,14 @@ paths:
                             deleted_at: null
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
+                            facebook: null
+                            instagram: null
+                            tiktok: null
+                            twitter: null
+                            youtube: null
+                            linkedin: null
+                            logo: null
+                            user_id: null
                             expired: true
                           seat_section:
                             id: 5
@@ -2512,6 +2838,7 @@ paths:
                             email: my@gmail.com
                             created_at: '2024-01-20T09:28:24.000000Z'
                             updated_at: '2024-01-20T09:28:24.000000Z'
+                            processing: 0
                             status: confirmed
                             merchant: paystack
                             event_package:
@@ -2524,6 +2851,9 @@ paths:
                               created_at: '2024-01-12T17:35:58.000000Z'
                               updated_at: '2024-01-20T09:35:58.000000Z'
                               entry_gate: null
+                              title: ''
+                              notes: null
+                              capacity: 0
                               event:
                                 id: 1
                                 event_season_id: 1
@@ -2536,6 +2866,14 @@ paths:
                                 deleted_at: null
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
+                                facebook: null
+                                instagram: null
+                                tiktok: null
+                                twitter: null
+                                youtube: null
+                                linkedin: null
+                                logo: null
+                                user_id: null
                                 expired: true
                               seat_section:
                                 id: 5
@@ -2556,6 +2894,7 @@ paths:
                             email: kstehr@yahoo.com
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
+                            processing: 0
                             status: confirmed
                             merchant: paystack
                             event_package:
@@ -2568,6 +2907,9 @@ paths:
                               created_at: '2024-01-12T17:35:58.000000Z'
                               updated_at: '2024-01-12T17:35:58.000000Z'
                               entry_gate: null
+                              title: ''
+                              notes: null
+                              capacity: 0
                               event:
                                 id: 13
                                 event_season_id: 13
@@ -2580,6 +2922,14 @@ paths:
                                 deleted_at: null
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
+                                facebook: null
+                                instagram: null
+                                tiktok: null
+                                twitter: null
+                                youtube: null
+                                linkedin: null
+                                logo: null
+                                user_id: null
                                 expired: true
                               seat_section:
                                 id: 21
@@ -2600,6 +2950,7 @@ paths:
                             email: hdare@bahringer.net
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
+                            processing: 0
                             status: confirmed
                             merchant: paystack
                             event_package:
@@ -2612,6 +2963,9 @@ paths:
                               created_at: '2024-01-12T17:35:58.000000Z'
                               updated_at: '2024-01-12T17:35:58.000000Z'
                               entry_gate: null
+                              title: ''
+                              notes: null
+                              capacity: 0
                               event:
                                 id: 10
                                 event_season_id: 10
@@ -2624,6 +2978,14 @@ paths:
                                 deleted_at: null
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
+                                facebook: null
+                                instagram: null
+                                tiktok: null
+                                twitter: null
+                                youtube: null
+                                linkedin: null
+                                logo: null
+                                user_id: null
                                 expired: true
                               seat_section:
                                 id: 17
@@ -2644,6 +3006,7 @@ paths:
                             email: alex.mayer@kling.org
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
+                            processing: 0
                             status: confirmed
                             merchant: paystack
                             event_package:
@@ -2656,6 +3019,9 @@ paths:
                               created_at: '2024-01-12T17:35:58.000000Z'
                               updated_at: '2024-01-12T17:35:58.000000Z'
                               entry_gate: null
+                              title: ''
+                              notes: null
+                              capacity: 0
                               event:
                                 id: 7
                                 event_season_id: 7
@@ -2668,6 +3034,14 @@ paths:
                                 deleted_at: null
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
+                                facebook: null
+                                instagram: null
+                                tiktok: null
+                                twitter: null
+                                youtube: null
+                                linkedin: null
+                                logo: null
+                                user_id: null
                                 expired: true
                               seat_section:
                                 id: 13
@@ -2688,6 +3062,7 @@ paths:
                             email: haylee45@hotmail.com
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
+                            processing: 0
                             status: confirmed
                             merchant: paystack
                             event_package:
@@ -2700,6 +3075,9 @@ paths:
                               created_at: '2024-01-12T17:35:58.000000Z'
                               updated_at: '2024-01-12T17:35:58.000000Z'
                               entry_gate: null
+                              title: ''
+                              notes: null
+                              capacity: 0
                               event:
                                 id: 4
                                 event_season_id: 4
@@ -2712,6 +3090,14 @@ paths:
                                 deleted_at: null
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
+                                facebook: null
+                                instagram: null
+                                tiktok: null
+                                twitter: null
+                                youtube: null
+                                linkedin: null
+                                logo: null
+                                user_id: null
                                 expired: true
                               seat_section:
                                 id: 9
@@ -2732,6 +3118,7 @@ paths:
                             email: katrina12@yahoo.com
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
+                            processing: 0
                             status: confirmed
                             merchant: paystack
                             event_package:
@@ -2744,6 +3131,9 @@ paths:
                               created_at: '2024-01-12T17:35:58.000000Z'
                               updated_at: '2024-01-20T09:35:58.000000Z'
                               entry_gate: null
+                              title: ''
+                              notes: null
+                              capacity: 0
                               event:
                                 id: 1
                                 event_season_id: 1
@@ -2756,6 +3146,14 @@ paths:
                                 deleted_at: null
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
+                                facebook: null
+                                instagram: null
+                                tiktok: null
+                                twitter: null
+                                youtube: null
+                                linkedin: null
+                                logo: null
+                                user_id: null
                                 expired: true
                               seat_section:
                                 id: 5
@@ -2796,6 +3194,9 @@ paths:
                             updated_at:
                               type: string
                               example: '2024-01-20T09:28:24.000000Z'
+                            processing:
+                              type: integer
+                              example: 0
                             status:
                               type: string
                               example: confirmed
@@ -2832,6 +3233,15 @@ paths:
                                 entry_gate:
                                   type: string
                                   example: null
+                                title:
+                                  type: string
+                                  example: ''
+                                notes:
+                                  type: string
+                                  example: null
+                                capacity:
+                                  type: integer
+                                  example: 0
                                 event:
                                   type: object
                                   properties:
@@ -2868,6 +3278,30 @@ paths:
                                     updated_at:
                                       type: string
                                       example: '2024-01-12T17:35:58.000000Z'
+                                    facebook:
+                                      type: string
+                                      example: null
+                                    instagram:
+                                      type: string
+                                      example: null
+                                    tiktok:
+                                      type: string
+                                      example: null
+                                    twitter:
+                                      type: string
+                                      example: null
+                                    youtube:
+                                      type: string
+                                      example: null
+                                    linkedin:
+                                      type: string
+                                      example: null
+                                    logo:
+                                      type: string
+                                      example: null
+                                    user_id:
+                                      type: string
+                                      example: null
                                     expired:
                                       type: boolean
                                       example: true
@@ -4436,7 +4870,7 @@ paths:
                   type: array
                   description: 'An array of seats to create.'
                   example:
-                    - et
+                    - deleniti
                   items:
                     type: string
               required:
@@ -4604,6 +5038,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-20T09:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                       -
                         id: 6
                         capacity: 24
@@ -4627,6 +5064,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                       -
                         id: 7
                         capacity: 369
@@ -4650,6 +5090,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                       -
                         id: 8
                         capacity: 642
@@ -4686,6 +5129,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                       -
                         id: 10
                         capacity: 532
@@ -4709,6 +5155,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                       -
                         id: 11
                         capacity: 630
@@ -4732,6 +5181,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                       -
                         id: 12
                         capacity: 213
@@ -4768,6 +5220,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                       -
                         id: 14
                         capacity: 138
@@ -4791,6 +5246,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                       -
                         id: 15
                         capacity: 232
@@ -4814,6 +5272,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                       -
                         id: 16
                         capacity: 61
@@ -4850,6 +5311,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                       -
                         id: 18
                         capacity: 684
@@ -4873,6 +5337,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                       -
                         id: 19
                         capacity: 849
@@ -4896,6 +5363,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                       -
                         id: 20
                         capacity: 484
@@ -4932,6 +5402,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                       -
                         id: 22
                         capacity: 590
@@ -4955,6 +5428,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                       -
                         id: 23
                         capacity: 665
@@ -4978,6 +5454,9 @@ paths:
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
                             entry_gate: null
+                            title: ''
+                            notes: null
+                            capacity: 0
                       -
                         id: 24
                         capacity: 177
@@ -5102,6 +5581,9 @@ paths:
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-20T09:35:58.000000Z'
                                 entry_gate: null
+                                title: ''
+                                notes: null
+                                capacity: 0
                           -
                             id: 6
                             capacity: 24
@@ -5125,6 +5607,9 @@ paths:
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
                                 entry_gate: null
+                                title: ''
+                                notes: null
+                                capacity: 0
                           -
                             id: 7
                             capacity: 369
@@ -5148,6 +5633,9 @@ paths:
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
                                 entry_gate: null
+                                title: ''
+                                notes: null
+                                capacity: 0
                           -
                             id: 8
                             capacity: 642
@@ -5184,6 +5672,9 @@ paths:
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
                                 entry_gate: null
+                                title: ''
+                                notes: null
+                                capacity: 0
                           -
                             id: 10
                             capacity: 532
@@ -5207,6 +5698,9 @@ paths:
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
                                 entry_gate: null
+                                title: ''
+                                notes: null
+                                capacity: 0
                           -
                             id: 11
                             capacity: 630
@@ -5230,6 +5724,9 @@ paths:
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
                                 entry_gate: null
+                                title: ''
+                                notes: null
+                                capacity: 0
                           -
                             id: 12
                             capacity: 213
@@ -5266,6 +5763,9 @@ paths:
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
                                 entry_gate: null
+                                title: ''
+                                notes: null
+                                capacity: 0
                           -
                             id: 14
                             capacity: 138
@@ -5289,6 +5789,9 @@ paths:
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
                                 entry_gate: null
+                                title: ''
+                                notes: null
+                                capacity: 0
                           -
                             id: 15
                             capacity: 232
@@ -5312,6 +5815,9 @@ paths:
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
                                 entry_gate: null
+                                title: ''
+                                notes: null
+                                capacity: 0
                           -
                             id: 16
                             capacity: 61
@@ -5348,6 +5854,9 @@ paths:
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
                                 entry_gate: null
+                                title: ''
+                                notes: null
+                                capacity: 0
                           -
                             id: 18
                             capacity: 684
@@ -5371,6 +5880,9 @@ paths:
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
                                 entry_gate: null
+                                title: ''
+                                notes: null
+                                capacity: 0
                           -
                             id: 19
                             capacity: 849
@@ -5394,6 +5906,9 @@ paths:
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
                                 entry_gate: null
+                                title: ''
+                                notes: null
+                                capacity: 0
                           -
                             id: 20
                             capacity: 484
@@ -5430,6 +5945,9 @@ paths:
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
                                 entry_gate: null
+                                title: ''
+                                notes: null
+                                capacity: 0
                           -
                             id: 22
                             capacity: 590
@@ -5453,6 +5971,9 @@ paths:
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
                                 entry_gate: null
+                                title: ''
+                                notes: null
+                                capacity: 0
                           -
                             id: 23
                             capacity: 665
@@ -5476,6 +5997,9 @@ paths:
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
                                 entry_gate: null
+                                title: ''
+                                notes: null
+                                capacity: 0
                           -
                             id: 24
                             capacity: 177
@@ -5607,19 +6131,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: nndhibvvmmhq
+                  example: yzbhdrtfpokyoizw
                 description:
                   type: string
                   description: ''
-                  example: 'Perferendis cum officia tenetur est.'
+                  example: 'Nihil aspernatur voluptate commodi natus.'
                 features:
                   type: string
                   description: ''
-                  example: sint
+                  example: quisquam
                 capacity:
                   type: integer
                   description: ''
-                  example: 18
+                  example: 3
                 seats:
                   type: object
                   description: 'Must have at least 1 items.'
@@ -5648,15 +6172,15 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: yotmxpxxlhgledxmlghkpc
+                  example: iqscydpf
                 description:
                   type: string
                   description: ''
-                  example: 'Voluptas tempora autem ut ut labore.'
+                  example: 'Temporibus asperiores voluptas quia officiis quis veniam.'
                 features:
                   type: string
                   description: ''
-                  example: doloribus
+                  example: eligendi
                 capacity:
                   type: integer
                   description: ''
@@ -5724,28 +6248,32 @@ paths:
               properties:
                 merchant:
                   type: string
-                  description: ''
-                  example: praesentium
+                  description: 'The payment merchant to use.'
+                  example: paystack
                 callback_url:
                   type: string
-                  description: ''
-                  example: 'http://www.wolff.biz/'
+                  description: 'The URL to redirect to after payment. Required for non-bank deposit and non-free merchants.'
+                  example: 'https://example.com/callback'
                 quantity:
                   type: integer
-                  description: 'Must be at least 1.'
-                  example: 9
+                  description: 'The number of tickets to purchase.'
+                  example: 2
                 name:
                   type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: r
+                  description: 'The name of the ticket purchaser.'
+                  example: 'John Doe'
                 phone:
                   type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: cdgxyavmrihmz
+                  description: 'The phone number of the ticket purchaser.'
+                  example: '08012345678'
                 email:
                   type: string
-                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: mcclure.sister@example.org
+                  description: 'The email of the ticket purchaser.'
+                  example: john.doe@example.com
+                referral_code:
+                  type: string
+                  description: 'The referral code used for the purchase.'
+                  example: REF123
               required:
                 - merchant
                 - quantity
@@ -5756,6 +6284,14 @@ paths:
         in: path
         name: eventPackage_id
         description: 'The ID of the eventPackage.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+      -
+        in: path
+        name: eventPackage
+        description: 'The ID of the event package.'
         example: 1
         required: true
         schema:
@@ -5779,7 +6315,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: esse
+                  example: dolor
               required:
                 - reference
       security: []
@@ -5802,15 +6338,15 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: accusamus
+                  example: ea
                 quantity:
                   type: integer
                   description: 'Must be at least 1.'
-                  example: 73
+                  example: 11
                 seats:
                   type: array
                   description: 'Must have at least 1 items.'
-                  example: gtogysogmrqctvllmodvnqttvimcqjeraqpdqzcasdjiihcqepswrxtnolykkzgueu
+                  example: lrfrbnuimknvqbsrmxodllvhasflx
                   items:
                     type: string
               required:
@@ -6725,11 +7261,11 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: minus
+                  example: odio
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: ansel.kozey@example.com
+                  example: zemard@example.net
               required:
                 - reference
                 - email
@@ -6753,23 +7289,23 @@ paths:
                 ticket_payment_id:
                   type: integer
                   description: ''
-                  example: 8
+                  example: 12
                 hash:
                   type: string
                   description: ''
-                  example: et
+                  example: totam
                 reference:
                   type: string
                   description: ''
-                  example: ut
+                  example: et
                 device_no:
                   type: string
                   description: ''
-                  example: libero
+                  example: aut
                 event_id:
                   type: integer
                   description: ''
-                  example: 5
+                  example: 7
               required:
                 - ticket_payment_id
                 - hash
@@ -6796,7 +7332,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: labore
+                  example: quo
               required:
                 - reference
       security: []
@@ -6819,19 +7355,19 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ktlmxmlq
+                  example: uqhkxxhcqpgxr
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: rebecca16@example.com
+                  example: beahan.jonatan@example.com
                 phone:
                   type: string
                   description: 'Must not be greater than 15 characters.'
-                  example: ckirbbtdgn
+                  example: pkofxqs
                 address:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ixminanjfdcaxflgyoceje
+                  example: ilqbdsebjfffzpzzpgyncupc
               required:
                 - name
                 - email
@@ -7860,4 +8396,4 @@ tags:
     description: ''
   -
     name: Tickets
-    description: ''
+    description: "Initialize Ticket Purchase\n\nThis endpoint initializes the purchase of tickets for a specific event package."

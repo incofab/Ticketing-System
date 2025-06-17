@@ -85,7 +85,7 @@ endpoints:
         name: images
         description: 'Must have at least 1 items. Must not have more than 5 items.'
         required: true
-        example: yqkn
+        example: xbn
         type: 'file[]'
         enumValues: []
         exampleWasSpecified: false
@@ -103,13 +103,13 @@ endpoints:
         name: 'images[].reference'
         description: ''
         required: true
-        example: veniam
+        example: harum
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      images: yqkn
+      images: xbn
     fileParameters: []
     responses: []
     responseFields: []
@@ -139,13 +139,13 @@ endpoints:
         name: eventImage_id
         description: 'The ID of the eventImage.'
         required: true
-        example: 5
+        example: 16
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      eventImage_id: 5
+      eventImage_id: 16
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

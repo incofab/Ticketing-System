@@ -18,6 +18,7 @@ class Event extends Model
   protected $appends = ['expired'];
   protected $casts = [
     'user_id' => 'integer',
+    'event_season_id' => 'integer',
     'start_time' => 'datetime',
     'end_time' => 'datetime',
     'payment_merchants' => 'array'
@@ -60,7 +61,12 @@ class Event extends Model
 
   function scopeUpcomingEvents($query)
   {
-    return $query->where('start_time', '>', now());
+    return $query->where('events.start_time', '>', now());
+  }
+
+  function scopePastEvents($query)
+  {
+    return $query->where('events.start_time', '<', now());
   }
 
   protected function expired(): Attribute

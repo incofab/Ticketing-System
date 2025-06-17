@@ -32,7 +32,7 @@ class AirvendHelper
         'name' => 'Unnamed User'
       ],
       'callback_url' => $callbackUrl,
-      'reference' => $reference
+      'customer_transaction_ref' => $reference
     ];
 
     $res = $this->http()->post($url, $data);
@@ -59,17 +59,14 @@ class AirvendHelper
     $res = $this->http()->get($url);
 
     $success = $res->json('success');
-    if (!$success) {
+    if (!$success || $res->json('payment_status') != 'Successful') {
       return failRes('Transaction NOT successful');
     }
 
-    return successRes(
-      $res->json('response.ResponseDescription') ?? 'Transaction verified',
-      [
-        'result' => $res->json('response'),
-        'amount' => $res->json('response.Amount') / 100
-      ]
-    );
+    return successRes($res->json('message') ?? 'Transaction verified', [
+      'result' => $res->json('message'),
+      'amount' => $res->json('amount_received')
+    ]);
   }
 
   function verifyWithCustomerReference($reference): Res
@@ -80,22 +77,21 @@ class AirvendHelper
     $res = $this->http()->get($url);
 
     $transactionList = $res->json('txn_list');
+    if (empty($transactionList)) {
+      return failRes($res->json('message', 'Transaction record not found'));
+    }
     $lastIndex = count($transactionList) - 1;
     $prefix = "txn_list.$lastIndex";
 
     $success = $res->json('success');
-    if (!$success || !$res->json("$prefix.success")) {
+    if (!$success || $res->json("$prefix.payment_status") != 'Successful') {
       return failRes('Transaction NOT successful');
     }
 
-    return successRes(
-      $res->json("$prefix.response.ResponseDescription") ??
-        'Transaction verified',
-      [
-        'result' => $res->json("$prefix.response"),
-        'amount' => $res->json("$prefix.response.Amount") / 100
-      ]
-    );
+    return successRes($res->json("$prefix.message") ?? 'Transaction verified', [
+      'result' => $res->json("$prefix.message"),
+      'amount' => $res->json("$prefix.amount_received")
+    ]);
   }
 
   function extractReferenceFromRedirectUrl(string $url): ?string

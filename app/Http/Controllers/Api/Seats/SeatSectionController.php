@@ -38,6 +38,7 @@ class SeatSectionController extends Controller
         ->withCount('seats', 'eventPackages')
         ->with('eventPackages')
         ->withSum('eventPackages', 'quantity_sold')
+        ->groupBy('seat_sections.id')
     );
     return $this->apiRes($seatSections);
   }

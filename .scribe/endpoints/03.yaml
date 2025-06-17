@@ -65,7 +65,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: rbuedawtjyblsoaxrppzk
+        example: jlsgsdteyibqciltpekhcyz
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -74,14 +74,14 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Fuga voluptatem suscipit corrupti velit doloremque libero eum.'
+        example: 'Dicta ab nemo voluptas dicta vel.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: rbuedawtjyblsoaxrppzk
-      description: 'Fuga voluptatem suscipit corrupti velit doloremque libero eum.'
+      title: jlsgsdteyibqciltpekhcyz
+      description: 'Dicta ab nemo voluptas dicta vel.'
     fileParameters: []
     responses: []
     responseFields: []
@@ -126,7 +126,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: ucldpgyqpqi
+        example: gvwipqslaqyfktsjszlr
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -135,14 +135,14 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Facilis quisquam vero nulla dolor magnam.'
+        example: 'Cumque culpa eum ea cupiditate sunt voluptas ducimus.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: ucldpgyqpqi
-      description: 'Facilis quisquam vero nulla dolor magnam.'
+      title: gvwipqslaqyfktsjszlr
+      description: 'Cumque culpa eum ea cupiditate sunt voluptas ducimus.'
     fileParameters: []
     responses: []
     responseFields: []

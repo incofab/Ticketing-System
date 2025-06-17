@@ -11,6 +11,7 @@ class EventSeason extends Model
 
   protected $guarded = [];
   protected $casts = [
+    'event_category_id' => 'integer',
     'date_from' => 'datetime',
     'date_to' => 'datetime'
   ];

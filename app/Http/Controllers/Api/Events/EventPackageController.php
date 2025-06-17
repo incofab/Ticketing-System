@@ -74,10 +74,11 @@ class EventPackageController extends Controller
     EventPackage $eventPackage
   ) {
     $data = $request->validated();
-    $createdPackages = CreateUpdateEventPackage::run($eventPackage->event, [
-      $data
-    ]);
-    return $this->apiRes($createdPackages[0]);
+    $eventPackage->fill($data)->save();
+    // $createdPackages = CreateUpdateEventPackage::run($eventPackage->event, [
+    //   $data
+    // ]);
+    return $this->apiRes($eventPackage);
   }
 
   public function destroy(EventPackage $eventPackage)

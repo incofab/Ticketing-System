@@ -19,7 +19,9 @@ class EventUITableFilters extends BaseUITableFilter
     return [
       'title' => ['sometimes', 'string'],
       'start_time_from' => ['sometimes', 'date'],
-      'start_time_to' => ['sometimes', 'date']
+      'start_time_to' => ['sometimes', 'date'],
+      'event_category' => ['sometimes', 'integer'],
+      'venue' => ['sometimes', 'string']
     ];
   }
 
@@ -30,16 +32,42 @@ class EventUITableFilters extends BaseUITableFilter
     );
   }
 
+  private function joinEventSeason(): static
+  {
+    $this->callOnce(
+      'joinEventSeason',
+      fn() => $this->baseQuery->join(
+        'event_seasons',
+        'event_seasons.id',
+        'events.event_season_id'
+      )
+    );
+    return $this;
+  }
+
   protected function directQuery(): static
   {
+    $this->joinEventSeason();
     $this->dateFilter(
       'events.start_time',
       $this->requestGet('start_time_from'),
       $this->requestGet('start_time_to')
-    )->baseQuery->when(
-      $this->requestGet('title'),
-      fn($q, $value) => $q->where('events.title', 'like', "%$value%")
-    );
+    )
+      ->baseQuery->when(
+        $this->requestGet('title'),
+        fn($q, $value) => $q->where('events.title', 'like', "%$value%")
+      )
+      ->when(
+        $this->requestGet('event_category'),
+        fn($q, $value) => $q->where(
+          'event_seasons.event_category_id',
+          "%$value%"
+        )
+      )
+      ->when(
+        $this->requestGet('venue'),
+        fn($q, $value) => $q->where('events.venue', 'LIKE', "%$value%")
+      );
 
     return $this;
   }

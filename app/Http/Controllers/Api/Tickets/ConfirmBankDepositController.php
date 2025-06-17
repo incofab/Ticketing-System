@@ -18,17 +18,23 @@ class ConfirmBankDepositController extends Controller
   {
     $request->validate(['reference' => ['required', 'string']]);
 
-    abort_unless(
-      currentUser()->hasRole([RoleType::Manager, RoleType::Admin]),
-      403,
-      'Access denied'
-    );
-
     /** @var PaymentReference $paymentReference */
     $paymentReference = PaymentReference::query()
       ->where('reference', $request->reference)
       ->where('merchant', PaymentMerchantType::BankDeposit)
+      ->with('paymentable.eventPackage.event')
       ->firstOrFail();
+
+    $user = currentUser();
+    $isStaff = $user->hasRole([RoleType::Manager, RoleType::Admin]);
+
+    abort_unless(
+      $isStaff ||
+        $paymentReference->paymentable?->eventPackage?->event->user_id ==
+          $user->id,
+      403,
+      'Access denied'
+    );
 
     $res = PaymentProcessor::make($paymentReference)->handleCallback();
 

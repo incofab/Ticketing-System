@@ -14,6 +14,7 @@ class EventPackage extends Model
     'event_id' => 'integer',
     'seat_section_id' => 'integer',
     'quantity_sold' => 'integer',
+    'capacity' => 'integer',
     'price' => 'float'
   ];
 

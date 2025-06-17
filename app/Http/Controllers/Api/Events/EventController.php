@@ -21,6 +21,8 @@ class EventController extends Controller
    * @queryParam start_time_from string No-example
    * @queryParam start_time_to string No-example
    * @queryParam for_user boolean No-example
+   * @queryParam for_upcoming boolean No-example
+   * @queryParam for_past boolean No-example
    *
    * @queryParam sortKey string No-example
    * @queryParam sortDir string Represents the direction of the sort. ASC|DESC. No-example
@@ -34,13 +36,18 @@ class EventController extends Controller
 
     $user = currentUser();
     $forUser = $request->for_user && $user && !$user?->isAdmin();
-    $query->when($forUser, fn($q) => $q->where('user_id', $user?->id));
+    $query
+      ->when($forUser, fn($q) => $q->where('events.user_id', $user?->id))
+      ->when($request->for_upcoming, fn($q) => $q->upcomingEvents())
+      ->when($request->for_past, fn($q) => $q->pastEvents());
 
     EventUITableFilters::make($request->all(), $query)->filterQuery();
 
     return $this->apiRes(
       paginateFromRequest(
-        $query->with('eventImages', 'eventPackages')->oldest('start_time')
+        $query
+          ->with('eventImages', 'eventPackages')
+          ->oldest('events.start_time')
       )
     );
   }

@@ -36,7 +36,7 @@ class UserUITableFilters extends BaseUITableFilter
     );
   }
 
-  protected function directQuery()
+  protected function directQuery(): static
   {
     $this->baseQuery
       ->when(

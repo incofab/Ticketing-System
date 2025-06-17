@@ -50,7 +50,16 @@ class AdminController extends Controller
         'ticket_payments.event_package_id',
         'event_packages.id'
       )
-      ->where('event_packages.event_id', $event->id);
+      ->join('payment_references', function ($join) {
+        $join
+          ->on('payment_references.paymentable_id', 'ticket_payments.id')
+          ->where(
+            'payment_references.paymentable_type',
+            MorphMap::key(TicketPayment::class)
+          );
+      })
+      ->where('event_packages.event_id', $event->id)
+      ->where('payment_references.status', PaymentReferenceStatus::Confirmed);
 
     // Efficiently calculate total income by considering successful payments
     $totalIncome = DB::table('ticket_payments')
@@ -95,7 +104,9 @@ class AdminController extends Controller
       'packages' => $event->eventPackages()->count(),
       'attendees' => $event->eventAttendees()->count(),
       'verified_attendees' => $verifiedAttendees,
-      'seats_count' => Seat::query()->count(),
+      'seats_count' => EventPackage::query()
+        ->where('event_id', $event->id)
+        ->sum('capacity'),
       'total_package_capacity' => $totalPackageCapacity,
       'project_revenue' => $projectedRevenue
     ];
