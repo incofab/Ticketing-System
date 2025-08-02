@@ -55,22 +55,22 @@ class AdminController extends Controller
       'Access denied'
     );
 
-    $ticketPaymentQuery = TicketPayment::query()
-      ->join(
-        'event_packages',
-        'ticket_payments.event_package_id',
-        'event_packages.id'
-      )
-      ->join('payment_references', function ($join) {
-        $join
-          ->on('payment_references.paymentable_id', 'ticket_payments.id')
-          ->where(
-            'payment_references.paymentable_type',
-            MorphMap::key(TicketPayment::class)
-          );
-      })
-      ->where('event_packages.event_id', $event->id)
-      ->where('payment_references.status', PaymentReferenceStatus::Confirmed);
+    // $ticketPaymentQuery = TicketPayment::query()
+    //   ->join(
+    //     'event_packages',
+    //     'ticket_payments.event_package_id',
+    //     'event_packages.id'
+    //   )
+    //   ->join('payment_references', function ($join) {
+    //     $join
+    //       ->on('payment_references.paymentable_id', 'ticket_payments.id')
+    //       ->where(
+    //         'payment_references.paymentable_type',
+    //         MorphMap::key(TicketPayment::class)
+    //       );
+    //   })
+    //   ->where('event_packages.event_id', $event->id)
+    //   ->where('payment_references.status', PaymentReferenceStatus::Confirmed);
 
     $verifiedAttendees = DB::table('tickets')
       ->join('event_packages', 'event_packages.id', 'tickets.event_package_id')
@@ -91,11 +91,12 @@ class AdminController extends Controller
     $data = [
       'event' => $event,
       ...$this->incomeStat($event, $request->date_from, $request->date_to),
-      'tickets_sold' => $this->dateFilter(
-        $ticketPaymentQuery,
-        $request->date_from,
-        $request->date_to
-      )->sum('ticket_payments.quantity'),
+      // 'tickets_sold' => $this->dateFilter(
+      //   $ticketPaymentQuery,
+      //   $request->date_from,
+      //   $request->date_to,
+      //   'ticket_payments.created_at'
+      // )->sum('ticket_payments.quantity'),
       'packages' => $event->eventPackages()->count(),
       'attendees' => $event->eventAttendees()->count(),
       'verified_attendees' => $verifiedAttendees,
@@ -149,6 +150,7 @@ class AdminController extends Controller
       ];
     }
     return [
+      'tickets_sold' => (clone $query)->sum('ticket_payments.quantity'),
       'total_income' => (clone $query)->sum('payment_references.amount'),
       'income_stat' => $incomeStat
     ];
