@@ -66,7 +66,15 @@ class GenerateTicketFromPayment
     $remainingSeats = $ticketPayment->quantity - $existingTicketsGenerated;
 
     if ($remainingSeats < 1) {
-      return $ticketPayment->tickets()->get();
+      return $ticketPayment
+        ->tickets()
+        ->with([
+          'seat',
+          'eventPackage.seatSection',
+          'eventPackage.event.eventSeason',
+          'ticketPayment'
+        ])
+        ->get();
     }
 
     $seatIds = GetAvailableSeats::run($ticketPayment->eventPackage)

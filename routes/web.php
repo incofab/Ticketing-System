@@ -1,11 +1,9 @@
 <?php
 
-use App\Enums\PaymentReferenceStatus;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers as Web;
 use App\Http\Controllers\Home;
 use App\Mail\TicketPurchaseMail;
-use App\Models\EventPackage;
 use App\Models\Ticket;
 use App\Models\TicketPayment;
 
@@ -14,47 +12,29 @@ Route::post('/webhook/paystack', [Home\PaymentCallbackController::class, 'paysta
 Route::get('/callback/airvend', [Home\PaymentCallbackController::class, 'airvendCallback']);
 
 Route::get('/dummy1', function () {
-    return new \App\Mail\TicketSoldMail(\App\Models\Event::query()->first(), \App\Models\PaymentReference::first());
-    Mail::to('incofabikenna@gmail.com')->send(
-        new \App\Mail\TicketPurchaseMail(\App\Models\Ticket::query()->first())
-    );
-    return 'message sent';
-    dd('dkdkksd');
-    $tickets = Ticket::query()->where('event_id', -1)->with('ticketPayment.paymentReferences')->get();
-    foreach ($tickets as $key => $ticket) {
-        $email = $ticket->ticketPayment->email;
-        if(!$email){
-            continue;
-        }
-        Mail::to($email)->queue(new TicketPurchaseMail($ticket));
-        foreach (($ticket->ticketPayment?->paymentReferences ?? []) as $key => $paymentReference) {
-            Mail::to($email)->queue(new \App\Mail\TicketSoldMail($event, $paymentReference));
+
+   $ticketPayments = TicketPayment::select('ticket_payments.*')
+      ->join('payment_references', function ($join) {
+        $join
+          ->on('payment_references.paymentable_id', 'ticket_payments.id')
+          ->where(
+            'payment_references.paymentable_type',
+            'ticket-payment'
+          );
+      })
+      ->where('status', \App\Enums\PaymentReferenceStatus::Confirmed)
+      ->withCount('tickets')
+      ->get();
+    $tps = collect($ticketPayments)->filter(fn($item) => $item->tickets_count < 1);
+    foreach ($tps as $tp) {
+        $paymentReferences = $tp->paymentReferences;
+        foreach ($paymentReferences as $paymentReference) {
+            \App\Actions\GenerateTicketFromPayment::generateFromPaymentReference(
+              $paymentReference
+            );
         }
     }
-    dd("Done for ". $tickets->count() . ' tickets');
-    // return (new TicketPurchaseMail($ticket));
-    dd('dksds');
-    $eventPackages = EventPackage::query()->with('ticketPayments')->get();
-    /** @var EventPackage $eventPackage */
-    foreach ($eventPackages as $key => $eventPackage) {
-        $quantity = TicketPayment::query()->select('ticket_payments.*')
-            ->join('payment_references', function ($q) {
-                $q->on('payment_references.paymentable_id', 'ticket_payments.id')
-                ->where('payment_references.paymentable_type', 'ticket-payment');
-            })
-            ->where('payment_references.status', PaymentReferenceStatus::Confirmed)
-            ->where('ticket_payments.event_package_id', $eventPackage->id)
-            ->sum('ticket_payments.quantity');
-            
-        dd([
-            'Tickets count' => Ticket::query()->where('event_package_id', $eventPackage->id)->count(),
-            'collection quantity' => $quantity,
-            'eventPackage ticketPayments count' => $eventPackage->ticketPayments->sum('quantity'),
-            'eventPackage quantity' => $eventPackage->quantity_sold
-        ]);
-        $eventPackage->fill(['quantity_sold' => $quantity])->save();
-    }
-    dd('Done for '.$eventPackages->count().' package(s)');
+    return ['Affected ' => $tps->count()];
 });
 
 Route::get('/login', function () {

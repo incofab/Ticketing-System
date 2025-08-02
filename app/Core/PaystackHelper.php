@@ -63,7 +63,9 @@ class PaystackHelper
         $res->json('data.gateway_response', 'Transaction NOT successful'),
         [
           'result' => $res->json('data'),
-          'is_failed' => in_array($status, ['abandoned', 'failed', 'reversed'])
+          'is_failed' =>
+            $res->json('status') == false ||
+            in_array($status, ['abandoned', 'failed', 'reversed'])
         ]
       );
     }

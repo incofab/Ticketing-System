@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Enums\PaymentMerchantType;
 use App\Enums\PaymentReferenceStatus;
 use App\Models\PaymentReference;
 use App\Support\Payment\Processor\PaymentProcessor;
@@ -30,7 +31,12 @@ class ProcessPendingPayment extends Command
   {
     $paymentReferences = PaymentReference::query()
       ->where('status', PaymentReferenceStatus::Pending)
-      ->where('created_at', '<', now()->subMinutes(10))
+      ->where('created_at', '<', now()->subMinutes(20))
+      ->whereIn('merchant', [
+        PaymentMerchantType::Paystack,
+        PaymentMerchantType::Paydestal,
+        PaymentMerchantType::Airvend
+      ])
       ->take(10)
       ->get();
 
@@ -38,7 +44,9 @@ class ProcessPendingPayment extends Command
       $this->comment(
         "Running payment ref id = {$paymentReference->id}, index = $key"
       );
-      PaymentProcessor::make($paymentReference)->handleCallback();
+      $res = PaymentProcessor::make($paymentReference)->handleCallback();
+
+      $this->comment(json_encode($res->toArray(), JSON_PRETTY_PRINT));
     }
 
     $this->comment('Payment processing completed');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\Admin;
 
+use App\Enums\PaymentMerchantType;
 use App\Enums\PaymentReferenceStatus;
 use App\Http\Controllers\Controller;
 use App\Models\Event;
@@ -35,8 +36,18 @@ class AdminController extends Controller
     return $this->apiRes($data);
   }
 
-  function eventDashboard(Event $event)
+  function eventDashboard(Request $request, Event $event)
   {
+    $request->validate([
+      'date_from' => ['nullable', 'date'],
+      'date_to' => [
+        'nullable',
+        'date',
+        'required_with:date_from',
+        'after:date_from'
+      ]
+    ]);
+
     $user = currentUser();
     abort_unless(
       $user->isAdmin() || $event->user_id == $user->id,
@@ -61,26 +72,6 @@ class AdminController extends Controller
       ->where('event_packages.event_id', $event->id)
       ->where('payment_references.status', PaymentReferenceStatus::Confirmed);
 
-    // Efficiently calculate total income by considering successful payments
-    $totalIncome = DB::table('ticket_payments')
-      ->join(
-        'event_packages',
-        'ticket_payments.event_package_id',
-        '=',
-        'event_packages.id'
-      )
-      ->join('payment_references', function ($join) {
-        $join
-          ->on('payment_references.paymentable_id', 'ticket_payments.id')
-          ->where(
-            'payment_references.paymentable_type',
-            MorphMap::key(TicketPayment::class)
-          );
-      })
-      ->where('event_packages.event_id', $event->id)
-      ->where('payment_references.status', PaymentReferenceStatus::Confirmed)
-      ->sum('payment_references.amount');
-
     $verifiedAttendees = DB::table('tickets')
       ->join('event_packages', 'event_packages.id', 'tickets.event_package_id')
       ->join(
@@ -99,8 +90,12 @@ class AdminController extends Controller
       ->sum(DB::raw('price * capacity'));
     $data = [
       'event' => $event,
-      'total_income' => $totalIncome,
-      'tickets_sold' => $ticketPaymentQuery->sum('ticket_payments.quantity'),
+      ...$this->incomeStat($event, $request->date_from, $request->date_to),
+      'tickets_sold' => $this->dateFilter(
+        $ticketPaymentQuery,
+        $request->date_from,
+        $request->date_to
+      )->sum('ticket_payments.quantity'),
       'packages' => $event->eventPackages()->count(),
       'attendees' => $event->eventAttendees()->count(),
       'verified_attendees' => $verifiedAttendees,
@@ -111,5 +106,65 @@ class AdminController extends Controller
       'project_revenue' => $projectedRevenue
     ];
     return $this->apiRes($data);
+  }
+
+  private function incomeStat(Event $event, $dateFrom, $dateTo)
+  {
+    // Efficiently calculate total income by considering successful payments
+    $query = DB::table('ticket_payments')
+      ->join(
+        'event_packages',
+        'ticket_payments.event_package_id',
+        '=',
+        'event_packages.id'
+      )
+      ->join('payment_references', function ($join) {
+        $join
+          ->on('payment_references.paymentable_id', 'ticket_payments.id')
+          ->where(
+            'payment_references.paymentable_type',
+            MorphMap::key(TicketPayment::class)
+          );
+      })
+      ->where('event_packages.event_id', $event->id)
+      ->where('payment_references.status', PaymentReferenceStatus::Confirmed);
+
+    $query = $this->dateFilter(
+      $query,
+      $dateFrom,
+      $dateTo,
+      'ticket_payments.created_at'
+    );
+
+    $incomeStat = [];
+    foreach (PaymentMerchantType::cases() as $key => $type) {
+      $merchant = $type->value;
+      $incomeStat[$merchant] = [
+        'count' => (clone $query)
+          ->where('payment_references.merchant', $merchant)
+          ->count(),
+        'total_amount' => (clone $query)
+          ->where('payment_references.merchant', $merchant)
+          ->sum('payment_references.amount')
+      ];
+    }
+    return [
+      'total_income' => (clone $query)->sum('payment_references.amount'),
+      'income_stat' => $incomeStat
+    ];
+  }
+
+  private function dateFilter(
+    \Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder $query,
+    $dateFrom,
+    $dateTo,
+    $createdAt = 'created_at'
+  ) {
+    return $query
+      ->when(
+        $dateTo,
+        fn($q) => $q->whereBetween($createdAt, [$dateFrom, $dateTo])
+      )
+      ->when($dateFrom, fn($q) => $q->where($createdAt, '>', $dateFrom));
   }
 }

@@ -62,7 +62,7 @@ class TicketUITableFilters extends BaseUITableFilter
 
   public function filterQuery(): static
   {
-    $this->when(
+    $this->joinEventPackage()->when(
       $this->requestGet('seat_section_id'),
       fn($q, $value) => $q
         ->joinSeat()

@@ -18,7 +18,10 @@ class TicketPaymentProcessor extends PaymentProcessor
 
     $res = $this->verify();
     if (!$res->isSuccessful()) {
-      if ($res->is_failed) {
+      $canCancel =
+        now()->diffInMinutes($this->paymentReference->created_at, true) > 20;
+      if ($canCancel) {
+        //$res->is_failed) {
         $this->paymentReference
           ->fill(['status' => PaymentReferenceStatus::Cancelled])
           ->save();

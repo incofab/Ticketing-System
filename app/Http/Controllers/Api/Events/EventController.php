@@ -37,6 +37,7 @@ class EventController extends Controller
     $user = currentUser();
     $forUser = $request->for_user && $user && !$user?->isAdmin();
     $query
+      ->select('events.*')
       ->when($forUser, fn($q) => $q->where('events.user_id', $user?->id))
       ->when($request->for_upcoming, fn($q) => $q->upcomingEvents())
       ->when($request->for_past, fn($q) => $q->pastEvents());

@@ -60,7 +60,7 @@ class AirvendHelper
 
     $success = $res->json('success');
     if (!$success || $res->json('payment_status') != 'Successful') {
-      return failRes('Transaction NOT successful');
+      return failRes('Transaction NOT successful', ['is_failed' => true]);
     }
 
     return successRes($res->json('message') ?? 'Transaction verified', [
@@ -78,14 +78,16 @@ class AirvendHelper
 
     $transactionList = $res->json('txn_list');
     if (empty($transactionList)) {
-      return failRes($res->json('message', 'Transaction record not found'));
+      return failRes($res->json('message', 'Transaction record not found'), [
+        'is_failed' => true
+      ]);
     }
     $lastIndex = count($transactionList) - 1;
     $prefix = "txn_list.$lastIndex";
 
     $success = $res->json('success');
     if (!$success || $res->json("$prefix.payment_status") != 'Successful') {
-      return failRes('Transaction NOT successful');
+      return failRes('Transaction NOT successful', ['is_failed' => true]);
     }
 
     return successRes($res->json("$prefix.message") ?? 'Transaction verified', [

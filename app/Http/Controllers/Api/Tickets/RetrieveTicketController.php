@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\Tickets;
 
+use App\Actions\GenerateTicketFromPayment;
 use App\Enums\PaymentReferenceStatus;
 use App\Http\Controllers\Controller;
 use App\Models\PaymentReference;
@@ -49,7 +50,14 @@ class RetrieveTicketController extends Controller
         'ticketVerification'
       );
 
-    $tickets = paginateFromRequest($query);
+    $tickets = paginateFromRequest(clone $query);
+
+    if ($tickets->isEmpty()) {
+      GenerateTicketFromPayment::generateFromPaymentReference(
+        $paymentReference
+      );
+      $tickets = paginateFromRequest($query);
+    }
 
     return $this->apiRes([
       'tickets' => $tickets,
