@@ -23,6 +23,8 @@ use App\Http\Controllers\Auth;
 Route::post('/login', [Auth\ApiAuthController::class, 'login'])->name('login');
 Route::post('/register', [Auth\ApiAuthController::class, 'register'])->name('register');
 
+Route::any('/resend-tickets', [Tickets\TicketController::class, 'resendTicket'])->name('resend-tickets');
+
 Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/logout', [Auth\ApiAuthController::class, 'logout'])->name('logout');
 });
