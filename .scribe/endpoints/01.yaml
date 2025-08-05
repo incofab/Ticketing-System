@@ -34,7 +34,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: odessa.nicolas@example.net
+        example: gustave90@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -43,14 +43,14 @@ endpoints:
         name: event_id
         description: ''
         required: true
-        example: temporibus
+        example: eos
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: odessa.nicolas@example.net
-      event_id: temporibus
+      email: gustave90@example.com
+      event_id: eos
     fileParameters: []
     responses:
       -
@@ -162,6 +162,15 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
+      coupon_code:
+        name: coupon_code
+        description: ''
+        required: false
+        example: sequi
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
       merchant:
         name: merchant
         description: 'The payment merchant to use.'
@@ -225,7 +234,18 @@ endpoints:
         enumValues: []
         exampleWasSpecified: true
         custom: []
+      receivers:
+        name: receivers
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: false
+        example:
+          - u
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
     cleanBodyParameters:
+      coupon_code: sequi
       merchant: paystack
       callback_url: 'https://example.com/callback'
       quantity: 2
@@ -233,6 +253,8 @@ endpoints:
       phone: '08012345678'
       email: john.doe@example.com
       referral_code: REF123
+      receivers:
+        - u
     fileParameters: []
     responses: []
     responseFields: []
@@ -266,13 +288,13 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: sunt
+        example: deleniti
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      reference: sunt
+      reference: deleniti
     fileParameters: []
     responses: []
     responseFields: []
@@ -306,7 +328,7 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: voluptatem
+        example: velit
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -315,7 +337,7 @@ endpoints:
         name: quantity
         description: 'Must be at least 1.'
         required: false
-        example: 90
+        example: 48
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -324,7 +346,7 @@ endpoints:
         name: seats
         description: 'Must have at least 1 items.'
         required: false
-        example: yyecbclbbxbjbceyiyowptjyadai
+        example: ezv
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -333,7 +355,7 @@ endpoints:
         name: 'seats[].seat_id'
         description: ''
         required: true
-        example: laboriosam
+        example: minus
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -351,7 +373,7 @@ endpoints:
         name: 'seats[].attendee.name'
         description: ''
         required: false
-        example: eos
+        example: odio
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -360,7 +382,7 @@ endpoints:
         name: 'seats[].attendee.email'
         description: 'Must be a valid email address.'
         required: false
-        example: gwalter@example.com
+        example: treutel.fidel@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -369,7 +391,7 @@ endpoints:
         name: 'seats[].attendee.phone'
         description: ''
         required: false
-        example: alias
+        example: similique
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -378,21 +400,21 @@ endpoints:
         name: 'seats[].attendee.address'
         description: ''
         required: false
-        example: nisi
+        example: amet
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      reference: voluptatem
-      quantity: 90
+      reference: velit
+      quantity: 48
       seats:
         -
           attendee:
-            name: eos
-            email: gwalter@example.com
-            phone: alias
-            address: nisi
+            name: odio
+            email: treutel.fidel@example.net
+            phone: similique
+            address: amet
     fileParameters: []
     responses: []
     responseFields: []
@@ -426,7 +448,7 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: saepe
+        example: recusandae
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -435,14 +457,14 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: casper.parker@example.com
+        example: hill.nina@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      reference: saepe
-      email: casper.parker@example.com
+      reference: recusandae
+      email: hill.nina@example.org
     fileParameters: []
     responses:
       -
@@ -988,7 +1010,7 @@ endpoints:
         name: ticket_payment_id
         description: ''
         required: true
-        example: 2
+        example: 17
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -997,7 +1019,7 @@ endpoints:
         name: hash
         description: ''
         required: true
-        example: officiis
+        example: perspiciatis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1006,7 +1028,7 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: commodi
+        example: hic
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1015,7 +1037,7 @@ endpoints:
         name: device_no
         description: ''
         required: true
-        example: eaque
+        example: architecto
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1030,10 +1052,10 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      ticket_payment_id: 2
-      hash: officiis
-      reference: commodi
-      device_no: eaque
+      ticket_payment_id: 17
+      hash: perspiciatis
+      reference: hic
+      device_no: architecto
       event_id: 20
     fileParameters: []
     responses: []
@@ -1068,13 +1090,13 @@ endpoints:
         name: reference
         description: ''
         required: true
-        example: quia
+        example: incidunt
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      reference: quia
+      reference: incidunt
     fileParameters: []
     responses: []
     responseFields: []
@@ -1118,7 +1140,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: wrw
+        example: gokjxmsdhyck
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1127,7 +1149,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: cwunsch@example.net
+        example: elittel@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1136,7 +1158,7 @@ endpoints:
         name: phone
         description: 'Must not be greater than 15 characters.'
         required: false
-        example: pmszcfll
+        example: mzlsd
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1145,16 +1167,16 @@ endpoints:
         name: address
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: ycwqecsavdkeeeqesuwwljpru
+        example: eltacftzbezbenfvoi
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: wrw
-      email: cwunsch@example.net
-      phone: pmszcfll
-      address: ycwqecsavdkeeeqesuwwljpru
+      name: gokjxmsdhyck
+      email: elittel@example.net
+      phone: mzlsd
+      address: eltacftzbezbenfvoi
     fileParameters: []
     responses: []
     responseFields: []

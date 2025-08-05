@@ -54,6 +54,15 @@ class TicketPaymentProcessor extends PaymentProcessor
       );
     }
 
+    $coupon = $ticketPayment->coupon;
+    if ($coupon) {
+      $coupon
+        ->fill([
+          'usage_count' => $coupon->usage_count + $ticketPayment->quantity
+        ])
+        ->save();
+    }
+
     DB::commit();
 
     return successRes('Payment successful');

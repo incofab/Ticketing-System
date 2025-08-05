@@ -90,6 +90,14 @@ it('should return success if the payment is already canceled', function () {
 it(
   'should cancel the payment if verification fails with a failure status',
   function () {
+    $this->paymentReference = PaymentReference::factory()
+      ->backDateCreationDate(30)
+      ->create([
+        'paymentable_id' => $this->ticketPayment->id,
+        'paymentable_type' => TicketPayment::class,
+        'amount' => 2000,
+        'status' => PaymentReferenceStatus::Pending
+      ]);
     $fakeHttp = $this->fakeHttp;
     $fakeHttp('failed');
     $processor = TicketPaymentProcessor::make($this->paymentReference);
@@ -98,8 +106,8 @@ it(
     expect($result->isSuccessful())->toBeFalse();
 
     $this->paymentReference->refresh();
-    expect($this->paymentReference->status)->toBe(
-      PaymentReferenceStatus::Cancelled
+    expect($this->paymentReference->status->value)->toBe(
+      PaymentReferenceStatus::Cancelled->value
     );
   }
 );

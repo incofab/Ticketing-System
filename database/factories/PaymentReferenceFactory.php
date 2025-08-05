@@ -22,7 +22,16 @@ class PaymentReferenceFactory extends Factory
     ];
   }
 
-  function ticketPayment(TicketPayment $ticketPayment = null)
+  function backDateCreationDate($mins)
+  {
+    return $this->state(
+      fn($attr) => [
+        'created_at' => now()->subMinutes($mins)
+      ]
+    );
+  }
+
+  function ticketPayment(?TicketPayment $ticketPayment = null)
   {
     $ticketPayment = $ticketPayment ?? TicketPayment::factory()->create();
     return $this->state(

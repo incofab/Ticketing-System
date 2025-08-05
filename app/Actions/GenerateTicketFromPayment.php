@@ -111,6 +111,7 @@ class GenerateTicketFromPayment
   {
     $tickets = [];
 
+    $existingTicketsGenerated = $this->ticketPayment->tickets()->count();
     DB::beginTransaction();
     foreach ($this->seatIds as $key => $seatId) {
       $ticketReference = Str::orderedUuid();
@@ -137,8 +138,11 @@ class GenerateTicketFromPayment
       $this->recordAttendee($seatId, $generatedTicket);
 
       $tickets[] = $generatedTicket;
-      if ($this->ticketPayment->email) {
-        Mail::to($this->ticketPayment->email)->queue(
+      $email = $this->ticketPayment->getReceiverEmail(
+        intval($key) + $existingTicketsGenerated
+      );
+      if ($email) {
+        Mail::to($email)->queue(
           new TicketPurchaseMail($generatedTicket->fresh())
         );
       }

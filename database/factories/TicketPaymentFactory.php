@@ -18,7 +18,12 @@ class TicketPaymentFactory extends Factory
       'user_id' => User::factory(),
       'name' => fake()->name(),
       'phone' => fake()->phoneNumber(),
-      'email' => fake()->email()
+      'email' => fake()->email(),
+      'receivers' => collect(range(1, 1))->map(fn($item) => fake()->email()),
+      'referral_code' => fake()
+        ->optional()
+        ->word(),
+      'amount' => fake()->randomFloat(2, 100, 1000)
     ];
   }
 
@@ -30,5 +35,16 @@ class TicketPaymentFactory extends Factory
         ->confirmed()
         ->create();
     });
+  }
+
+  function receiver($count = 1)
+  {
+    return $this->state(
+      fn($attr) => [
+        'receivers' => collect(range(1, $count))->map(
+          fn($item) => fake()->email()
+        )
+      ]
+    );
   }
 }

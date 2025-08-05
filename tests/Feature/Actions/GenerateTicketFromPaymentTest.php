@@ -1,5 +1,6 @@
 <?php
 use App\Actions\GenerateTicketFromPayment;
+use App\Mail\TicketPurchaseMail;
 use App\Models\EventAttendee;
 use App\Models\PaymentReference;
 use App\Models\Seat;
@@ -77,12 +78,15 @@ it('aborts if not enough seats 2', function () {
 });
 
 it('generates tickets from payment', function () {
+  $ticketPayment = TicketPayment::factory()
+    ->receiver(1)
+    ->create();
   $paymentReference = PaymentReference::factory()
-    ->ticketPayment()
+    ->ticketPayment($ticketPayment)
     ->confirmed()
     ->create();
   /** @var TicketPayment $ticketPayment */
-  $ticketPayment = $paymentReference->paymentable;
+  // $ticketPayment = $paymentReference->paymentable;
   $eventPackage = $ticketPayment->eventPackage;
   $seatSection = $eventPackage->seatSection;
 
@@ -125,7 +129,14 @@ it('generates tickets from payment', function () {
   // Check if quantity_sold is updated in EventPackage
   $eventPackage->refresh();
   Mail::assertQueuedCount($seats->count());
-  // expect($eventPackage->quantity_sold)->toBe($seats->count());
+  Mail::assertQueued(
+    TicketPurchaseMail::class,
+    fn($mail) => $mail->hasTo($ticketPayment->receivers[0])
+  );
+  Mail::assertQueued(
+    TicketPurchaseMail::class,
+    fn($mail) => $mail->hasTo($ticketPayment->email)
+  );
 });
 
 it('generates nothing when the ticketpayment is processing', function () {

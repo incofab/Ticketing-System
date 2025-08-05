@@ -27,7 +27,8 @@ class MorphMap
   }
 
   const MAP = [
-    'user' => Models\User::class,
+    'coupon' => Models\Coupon::class,
+    'coupon-event-package' => Models\CouponEventPackage::class,
     'event' => Models\Event::class,
     'event-category' => Models\EventCategory::class,
     'event-image' => Models\EventImage::class,
@@ -38,6 +39,7 @@ class MorphMap
     'seat' => Models\Seat::class,
     'seat-section' => Models\SeatSection::class,
     'ticket' => Models\Ticket::class,
-    'ticket-payment' => Models\TicketPayment::class
+    'ticket-payment' => Models\TicketPayment::class,
+    'user' => Models\User::class
   ];
 }

@@ -99,6 +99,11 @@ class Event extends Model
     return $this->hasMany(EventAttendee::class);
   }
 
+  function coupons()
+  {
+    return $this->hasMany(Coupon::class);
+  }
+
   function user()
   {
     return $this->belongsTo(User::class);

@@ -2,13 +2,17 @@
 
 use App\Enums\PaymentMerchantType;
 use App\Enums\PaymentReferenceStatus;
+use App\Models\Coupon;
 use App\Models\Event;
 use App\Models\EventPackage;
 use App\Models\PaymentReference;
 use App\Models\Seat;
+use App\Models\TicketPayment;
+use App\Support\MorphMap;
 use Illuminate\Testing\Fluent\AssertableJson;
 
 use function Pest\Laravel\assertDatabaseCount;
+use function Pest\Laravel\assertDatabaseHas;
 use function Pest\Laravel\postJson;
 
 beforeEach(function () {
@@ -62,6 +66,50 @@ it('can initiate a ticket purchase for Paystack', function () {
     'name' => 'John Doe',
     'phone' => '123456789',
     'email' => 'john@example.com'
+  ]);
+});
+
+it('can initiate a ticket purchase for Paystack with coupon code', function () {
+  $activeEvent = Event::factory()->create(['start_time' => now()]);
+  $activeEventPackage = EventPackage::factory()
+    ->event($activeEvent)
+    ->create(['price' => 2000]);
+  $coupon = Coupon::factory()
+    ->event($activeEvent)
+    ->fixed()
+    ->create(['discount_value' => 100, 'min_purchase' => 0]);
+  $requestData = [
+    'merchant' => PaymentMerchantType::Paystack->value,
+    'callback_url' => 'https://example.com/callback',
+    'quantity' => 2,
+    'name' => 'John Doe',
+    'phone' => '123456789',
+    'email' => 'john@example.com',
+    'coupon_code' => $coupon->code,
+    'receivers' => ['john@example.com']
+  ];
+  postJson(
+    route('api.tickets.init-payment', [$activeEventPackage]),
+    $requestData
+  )
+    ->assertSuccessful()
+    ->assertJsonStructure(['redirect_url']);
+
+  $this->assertDatabaseHas('ticket_payments', [
+    'event_package_id' => $activeEventPackage->id,
+    'quantity' => 2,
+    'name' => 'John Doe',
+    'phone' => '123456789',
+    'email' => 'john@example.com',
+    'coupon_id' => $coupon->id,
+    'amount' => 3800, // 2000 - 100 = 1900 * 2 = 3800
+    'original_amount' => 4000, // 2000 * 2 = 4000
+    'discount_amount' => 200 //
+  ]);
+  assertDatabaseHas('payment_references', [
+    // 'reference' => 'dummy-response',
+    'paymentable_type' => MorphMap::key(TicketPayment::class),
+    'amount' => 3800
   ]);
 });
 
@@ -152,7 +200,7 @@ it('can initiate & confirm a ticket purchase for free', function () {
     route('api.tickets.init-payment', [$eventPackage]),
     $params
   )
-    ->assertSuccessful()
+    ->assertOk()
     ->assertJson(fn(AssertableJson $json) => $json->has('reference')->etc());
 
   $this->assertDatabaseHas('ticket_payments', [

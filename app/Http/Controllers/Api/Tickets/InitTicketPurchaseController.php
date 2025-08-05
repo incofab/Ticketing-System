@@ -6,8 +6,10 @@ use App\Actions\GenerateTicketFromPayment;
 use App\DTO\PaymentReferenceDto;
 use App\Enums\PaymentMerchantType;
 use App\Http\Controllers\Controller;
+use App\Models\Coupon;
 use App\Models\EventPackage;
 use App\Models\PaymentReference;
+use App\Rules\ValidateExistsRule;
 use App\Support\Payment\PaymentMerchant;
 use App\Support\Payment\Processor\PaymentProcessor;
 use App\Support\Res;
@@ -40,8 +42,10 @@ class InitTicketPurchaseController extends Controller
         'quantity' => 1
       ]);
     }
+    $couponVal = new ValidateExistsRule(Coupon::class, 'code');
     $eventPackage->load('seatSection', 'event');
     $data = $request->validate([
+      'coupon_code' => ['nullable', 'string', $couponVal],
       'merchant' => [
         'required',
         'string',
@@ -93,18 +97,31 @@ class InitTicketPurchaseController extends Controller
       'name' => ['nullable', 'string', 'max:255'],
       'phone' => ['nullable', 'string', 'max:255'],
       'email' => ['required', 'email', 'max:255'],
-      'referral_code' => ['nullable', 'string', 'max:255']
+      'referral_code' => ['nullable', 'string', 'max:255'],
+      'receivers' => ['nullable', 'array'],
+      'receivers.*' => ['string', 'email', 'max:255']
     ]);
+
     abort_if($eventPackage->event->isExpired(), 403, 'Event is expired');
-    $amount = $eventPackage->price * $data['quantity'];
+
+    /** @var Coupon $coupon */
+    $coupon = $couponVal->getModel();
+    $unitDiscount = $coupon?->getDiscount($eventPackage->price);
+    $price = $eventPackage->price - $unitDiscount;
+    $amount = $price * $data['quantity'];
+
+    abort_if($amount < 0, 403, 'Invalid purchase amount');
 
     $ticketPayment = $eventPackage->ticketPayments()->create([
       ...collect($data)
-        ->except('callback_url', 'merchant')
+        ->except('callback_url', 'merchant', 'coupon_code')
         ->toArray(),
-      'user_id' => currentUser()?->id
+      'user_id' => currentUser()?->id,
+      'coupon_id' => $coupon?->id,
+      'amount' => $amount,
+      'original_amount' => $eventPackage->price * $data['quantity'],
+      'discount_amount' => $unitDiscount * $data['quantity']
     ]);
-
     $reference = PaymentReference::generateReference();
     $paymentReferenceDto = new PaymentReferenceDto(
       $request->merchant,

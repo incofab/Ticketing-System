@@ -87,7 +87,7 @@ endpoints:
         name: images
         description: 'Must have at least 1 items. Must not have more than 5 items.'
         required: true
-        example: mlfo
+        example: ofg
         type: 'file[]'
         enumValues: []
         exampleWasSpecified: false
@@ -105,13 +105,13 @@ endpoints:
         name: 'images[].reference'
         description: ''
         required: true
-        example: quia
+        example: quis
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      images: mlfo
+      images: ofg
     fileParameters: []
     responses: []
     responseFields: []
@@ -141,13 +141,13 @@ endpoints:
         name: eventImage_id
         description: 'The ID of the eventImage.'
         required: true
-        example: 15
+        example: 12
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      eventImage_id: 15
+      eventImage_id: 12
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

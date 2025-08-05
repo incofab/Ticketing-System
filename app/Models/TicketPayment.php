@@ -13,12 +13,23 @@ class TicketPayment extends Model
   protected $casts = [
     'event_package_id' => 'integer',
     'user_id' => 'integer',
-    'quantity' => 'integer'
+    'quantity' => 'integer',
+    'coupon_id' => 'integer',
+    'amount' => 'float',
+    'original_amount' => 'float',
+    'discount_amount' => 'float',
+    'receivers' => 'array',
+    'processing' => 'boolean'
   ];
 
   function markProcessing(bool $isProcessing)
   {
     $this->fill(['processing' => $isProcessing])->save();
+  }
+
+  function getReceiverEmail($index = 0)
+  {
+    return $this->receivers[$index] ?? $this->email;
   }
 
   function eventPackage()
@@ -34,5 +45,10 @@ class TicketPayment extends Model
   function paymentReferences()
   {
     return $this->morphMany(PaymentReference::class, 'paymentable');
+  }
+
+  function coupon()
+  {
+    return $this->belongsTo(Coupon::class);
   }
 }
