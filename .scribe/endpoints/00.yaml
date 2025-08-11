@@ -26,7 +26,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: voluptatem
+        example: illum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -35,14 +35,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: "kXfP^6a4=3_j8[Vh2>'@"
+        example: '[M/|NQZ'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      phone: voluptatem
-      password: "kXfP^6a4=3_j8[Vh2>'@"
+      phone: illum
+      password: '[M/|NQZ'
     fileParameters: []
     responses: []
     responseFields: []
@@ -85,7 +85,7 @@ endpoints:
         name: last_name
         description: ''
         required: true
-        example: ea
+        example: sit
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -94,7 +94,7 @@ endpoints:
         name: other_names
         description: ''
         required: false
-        example: qui
+        example: consequatur
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -103,7 +103,7 @@ endpoints:
         name: phone
         description: ''
         required: true
-        example: id
+        example: deleniti
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -112,7 +112,7 @@ endpoints:
         name: email
         description: ''
         required: false
-        example: meredith59@example.org
+        example: stanton.weber@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -121,18 +121,18 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: 'f\[D|xIKK%LK'
+        example: '!c*!6{O'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
       first_name: 9
-      last_name: ea
-      other_names: qui
-      phone: id
-      email: meredith59@example.org
-      password: 'f\[D|xIKK%LK'
+      last_name: sit
+      other_names: consequatur
+      phone: deleniti
+      email: stanton.weber@example.com
+      password: '!c*!6{O'
     fileParameters: []
     responses: []
     responseFields: []

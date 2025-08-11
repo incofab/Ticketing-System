@@ -109,7 +109,7 @@ Route::group(['prefix' => 'payments'], function () {
     Route::get('/index', [Payments\PaymentController::class, 'index'])->name('payments.index');
 });
 
-Route::group(['prefix' => 'coupons'], function () {
+Route::group(['middleware' => ['auth:sanctum'], 'prefix' => 'coupons'], function () {
     Route::get('', [Payments\CouponController::class, 'index'])->name('coupons.index');
     Route::post('', [Payments\CouponController::class, 'store'])->name('coupons.store');
     Route::get('/{coupon:code}', [Payments\CouponController::class, 'show'])->name('coupons.show');

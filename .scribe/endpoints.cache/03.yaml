@@ -213,7 +213,7 @@ endpoints:
         description: 'An array of seats to create.'
         required: true
         example:
-          - tempore
+          - architecto
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -222,7 +222,7 @@ endpoints:
         name: 'seats[].seat_no'
         description: 'The seat number (e.g., "A1", "B5").'
         required: true
-        example: inventore
+        example: omnis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -256,7 +256,7 @@ endpoints:
         custom: []
     cleanBodyParameters:
       seats:
-        - tempore
+        - architecto
     fileParameters: []
     responses: []
     responseFields: []
@@ -385,7 +385,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: ujpqfudvxcrrq
+        example: xbqlaekzsalibnjmmerzualcf
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -394,7 +394,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Deleniti accusamus temporibus quasi et enim.'
+        example: 'Explicabo nemo atque tempora aspernatur.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -403,7 +403,7 @@ endpoints:
         name: features
         description: ''
         required: false
-        example: voluptas
+        example: ipsam
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -412,7 +412,7 @@ endpoints:
         name: capacity
         description: ''
         required: true
-        example: 9
+        example: 20
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -427,10 +427,10 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: ujpqfudvxcrrq
-      description: 'Deleniti accusamus temporibus quasi et enim.'
-      features: voluptas
-      capacity: 9
+      title: xbqlaekzsalibnjmmerzualcf
+      description: 'Explicabo nemo atque tempora aspernatur.'
+      features: ipsam
+      capacity: 20
     fileParameters: []
     responses: []
     responseFields: []
@@ -474,7 +474,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: uynl
+        example: xbvnaadlruyvazojfzmbc
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -483,7 +483,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Et pariatur sed numquam officiis ipsam.'
+        example: 'Et eum nulla quas beatae nemo.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -492,7 +492,7 @@ endpoints:
         name: features
         description: ''
         required: false
-        example: perspiciatis
+        example: ullam
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -501,16 +501,16 @@ endpoints:
         name: capacity
         description: ''
         required: true
-        example: 2
+        example: 3
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: uynl
-      description: 'Et pariatur sed numquam officiis ipsam.'
-      features: perspiciatis
-      capacity: 2
+      title: xbvnaadlruyvazojfzmbc
+      description: 'Et eum nulla quas beatae nemo.'
+      features: ullam
+      capacity: 3
     fileParameters: []
     responses: []
     responseFields: []
