@@ -137,7 +137,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: api/coupons
+    uri: 'api/coupons/{event_id}'
     metadata:
       groupName: Payments
       groupDescription: ''
@@ -150,8 +150,18 @@ endpoints:
     headers:
       Content-Type: application/json
       Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
+    urlParameters:
+      event_id:
+        name: event_id
+        description: 'The ID of the event.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      event_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -176,7 +186,7 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/coupons
+    uri: 'api/coupons/{event_id}'
     metadata:
       groupName: Payments
       groupDescription: ''
@@ -189,8 +199,18 @@ endpoints:
     headers:
       Content-Type: application/json
       Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
+    urlParameters:
+      event_id:
+        name: event_id
+        description: 'The ID of the event.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      event_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -198,7 +218,7 @@ endpoints:
         name: code
         description: 'The coupon code'
         required: true
-        example: rerum
+        example: totam
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -234,7 +254,7 @@ endpoints:
         name: expires_at
         description: 'The expiration date of the coupon (Leave blank if you dont want to coupon to expire)'
         required: false
-        example: autem
+        example: voluptas
         type: date
         enumValues: []
         exampleWasSpecified: false
@@ -261,7 +281,7 @@ endpoints:
         name: event_id
         description: 'The ID of the event this coupon is associated with.'
         required: true
-        example: 20
+        example: 12
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -279,14 +299,14 @@ endpoints:
         exampleWasSpecified: true
         custom: []
     cleanBodyParameters:
-      code: rerum
+      code: totam
       discount_type: percentage
       discount_value: 20.0
       min_purchase: 100.0
-      expires_at: autem
+      expires_at: voluptas
       usage_limit: 10
       usage_count: 0
-      event_id: 20
+      event_id: 12
       event_package_ids:
         - 1
         - 2
@@ -320,13 +340,13 @@ endpoints:
         name: code
         description: ''
         required: true
-        example: 1
+        example: 13
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      code: 1
+      code: 13
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -369,13 +389,13 @@ endpoints:
         name: id
         description: 'The ID of the coupon.'
         required: true
-        example: 6
+        example: 17
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 6
+      id: 17
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -383,7 +403,7 @@ endpoints:
         name: code
         description: 'The coupon code'
         required: true
-        example: quia
+        example: dolorem
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -419,7 +439,7 @@ endpoints:
         name: expires_at
         description: 'The expiration date of the coupon (Leave blank if you dont want to coupon to expire)'
         required: false
-        example: est
+        example: dicta
         type: date
         enumValues: []
         exampleWasSpecified: false
@@ -446,7 +466,7 @@ endpoints:
         name: event_id
         description: 'The ID of the event this coupon is associated with.'
         required: true
-        example: 8
+        example: 9
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -464,14 +484,14 @@ endpoints:
         exampleWasSpecified: true
         custom: []
     cleanBodyParameters:
-      code: quia
+      code: dolorem
       discount_type: percentage
       discount_value: 20.0
       min_purchase: 100.0
-      expires_at: est
+      expires_at: dicta
       usage_limit: 10
       usage_count: 0
-      event_id: 8
+      event_id: 9
       event_package_ids:
         - 1
         - 2

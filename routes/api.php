@@ -110,8 +110,8 @@ Route::group(['prefix' => 'payments'], function () {
 });
 
 Route::group(['middleware' => ['auth:sanctum'], 'prefix' => 'coupons'], function () {
-    Route::get('', [Payments\CouponController::class, 'index'])->name('coupons.index');
-    Route::post('', [Payments\CouponController::class, 'store'])->name('coupons.store');
+    Route::get('{event}', [Payments\CouponController::class, 'index'])->name('coupons.index');
+    Route::post('{event}', [Payments\CouponController::class, 'store'])->name('coupons.store');
     Route::get('/{coupon:code}', [Payments\CouponController::class, 'show'])->name('coupons.show');
     Route::post('/{coupon}/update', [Payments\CouponController::class, 'update'])->name('coupons.update');
     Route::post('/{coupon}/destroy', [Payments\CouponController::class, 'destroy'])->name('coupons.destroy');

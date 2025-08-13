@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Shopurban Ticketing System",
-        "_postman_id": "e359144b-2409-4bd9-8a68-1ce7555fbf95",
+        "_postman_id": "d5670343-aa1f-4825-ac1c-ea9fe6ba88d4",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -97,7 +97,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"date_from\":\"2025-08-11T21:12:09\",\"date_to\":\"2081-03-22\"}"
+                            "raw": "{\"date_from\":\"2025-08-13T12:47:28\",\"date_to\":\"2084-08-15\"}"
                         },
                         "description": "",
                         "auth": {
@@ -154,7 +154,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone\":\"illum\",\"password\":\"[M\\\/|NQZ\"}"
+                            "raw": "{\"phone\":\"consequatur\",\"password\":\"kXOB\\\\+?+\"}"
                         },
                         "description": "",
                         "auth": {
@@ -185,7 +185,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":9,\"last_name\":\"sit\",\"other_names\":\"consequatur\",\"phone\":\"deleniti\",\"email\":\"stanton.weber@example.com\",\"password\":\"!c*!6{O\"}"
+                            "raw": "{\"first_name\":5,\"last_name\":\"atque\",\"other_names\":\"autem\",\"phone\":\"assumenda\",\"email\":\"weissnat.evalyn@example.com\",\"password\":\":H@ZzQJ6z?[G\"}"
                         },
                         "description": "",
                         "auth": {
@@ -318,7 +318,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"xqqqxwpocyedvonrngowivgvr\",\"description\":\"Eum repellat est repellendus qui illo.\"}"
+                            "raw": "{\"title\":\"hxcrcsiwj\",\"description\":\"Dolorum aut cupiditate iure odit ut iure et.\"}"
                         },
                         "description": "",
                         "auth": {
@@ -357,7 +357,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"dvnqamxtcmnrs\",\"description\":\"Qui tempora dolores eveniet qui tenetur error quasi.\"}"
+                            "raw": "{\"title\":\"slkjpfpvfjpxb\",\"description\":\"Aspernatur impedit soluta molestiae cum eaque et.\"}"
                         },
                         "description": "",
                         "auth": {
@@ -494,7 +494,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"images\":\"xccx\"}"
+                            "raw": "{\"images\":\"xhpky\"}"
                         },
                         "description": "",
                         "auth": {
@@ -515,7 +515,7 @@
                                 {
                                     "id": "eventImage_id",
                                     "key": "eventImage_id",
-                                    "value": "8",
+                                    "value": "20",
                                     "description": "The ID of the eventImage."
                                 }
                             ]
@@ -644,7 +644,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"seat_section_id\":\"sint\",\"price\":38483.22780263,\"entry_gate\":\"accusantium\",\"notes\":\"eligendi\",\"capacity\":8,\"title\":\"et\"}"
+                            "raw": "{\"seat_section_id\":\"eos\",\"price\":358418277.7416485,\"entry_gate\":\"dolor\",\"notes\":\"natus\",\"capacity\":12,\"title\":\"voluptatem\"}"
                         },
                         "description": "",
                         "auth": {
@@ -683,7 +683,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"seat_section_id\":\"minus\",\"price\":37952.578,\"entry_gate\":\"non\",\"notes\":\"excepturi\",\"capacity\":4,\"title\":\"non\"}"
+                            "raw": "{\"seat_section_id\":\"ipsum\",\"price\":1.4,\"entry_gate\":\"maxime\",\"notes\":\"amet\",\"capacity\":14,\"title\":\"impedit\"}"
                         },
                         "description": "",
                         "auth": {
@@ -892,7 +892,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"jbqvusyveyit\",\"description\":\"Aut illum voluptas asperiores ab.\",\"date_from\":\"2025-08-11T21:12:09\",\"date_to\":\"2082-12-05\"}"
+                            "raw": "{\"title\":\"izuzgtzjrgrqnpyzwhgea\",\"description\":\"Doloribus quam sit vel autem culpa nesciunt.\",\"date_from\":\"2025-08-13T12:47:28\",\"date_to\":\"2102-02-27\"}"
                         },
                         "description": "",
                         "auth": {
@@ -931,7 +931,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"rfjwcpj\",\"description\":\"Ut fugiat ut ut necessitatibus perspiciatis praesentium.\",\"date_from\":\"2025-08-11T21:12:09\",\"date_to\":\"2087-01-07\"}"
+                            "raw": "{\"title\":\"jzj\",\"description\":\"Expedita pariatur et quaerat tempore debitis sapiente.\",\"date_from\":\"2025-08-13T12:47:28\",\"date_to\":\"2072-05-21\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1271,7 +1271,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"event_packages\":\"stvxeecqkbmn\"}"
+                            "raw": "{\"event_packages\":\"aqtnbdtcaojavyummokdcnunvoqqaomxsbfnjulmjnafflinwqqjiiivdfunk\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1484,9 +1484,17 @@
                             "request": {
                                 "url": {
                                     "host": "{{baseUrl}}",
-                                    "path": "api\/coupons",
+                                    "path": "api\/coupons\/:event_id",
                                     "query": [],
-                                    "raw": "{{baseUrl}}\/api\/coupons"
+                                    "raw": "{{baseUrl}}\/api\/coupons\/:event_id",
+                                    "variable": [
+                                        {
+                                            "id": "event_id",
+                                            "key": "event_id",
+                                            "value": "1",
+                                            "description": "The ID of the event."
+                                        }
+                                    ]
                                 },
                                 "method": "GET",
                                 "header": [
@@ -1532,9 +1540,17 @@
                             "request": {
                                 "url": {
                                     "host": "{{baseUrl}}",
-                                    "path": "api\/coupons",
+                                    "path": "api\/coupons\/:event_id",
                                     "query": [],
-                                    "raw": "{{baseUrl}}\/api\/coupons"
+                                    "raw": "{{baseUrl}}\/api\/coupons\/:event_id",
+                                    "variable": [
+                                        {
+                                            "id": "event_id",
+                                            "key": "event_id",
+                                            "value": "1",
+                                            "description": "The ID of the event."
+                                        }
+                                    ]
                                 },
                                 "method": "POST",
                                 "header": [
@@ -1549,7 +1565,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"code\":\"rerum\",\"discount_type\":\"percentage\",\"discount_value\":20,\"min_purchase\":100,\"expires_at\":\"autem\",\"usage_limit\":10,\"usage_count\":0,\"event_id\":20,\"event_package_ids\":[1,2,3]}"
+                                    "raw": "{\"code\":\"totam\",\"discount_type\":\"percentage\",\"discount_value\":20,\"min_purchase\":100,\"expires_at\":\"voluptas\",\"usage_limit\":10,\"usage_count\":0,\"event_id\":12,\"event_package_ids\":[1,2,3]}"
                                 },
                                 "description": "",
                                 "auth": {
@@ -1570,7 +1586,7 @@
                                         {
                                             "id": "code",
                                             "key": "code",
-                                            "value": "1",
+                                            "value": "13",
                                             "description": ""
                                         }
                                     ]
@@ -1626,7 +1642,7 @@
                                         {
                                             "id": "id",
                                             "key": "id",
-                                            "value": "6",
+                                            "value": "17",
                                             "description": "The ID of the coupon."
                                         }
                                     ]
@@ -1644,7 +1660,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"code\":\"quia\",\"discount_type\":\"percentage\",\"discount_value\":20,\"min_purchase\":100,\"expires_at\":\"est\",\"usage_limit\":10,\"usage_count\":0,\"event_id\":8,\"event_package_ids\":[1,2,3]}"
+                                    "raw": "{\"code\":\"dolorem\",\"discount_type\":\"percentage\",\"discount_value\":20,\"min_purchase\":100,\"expires_at\":\"dicta\",\"usage_limit\":10,\"usage_count\":0,\"event_id\":9,\"event_package_ids\":[1,2,3]}"
                                 },
                                 "description": "",
                                 "auth": {
@@ -1904,7 +1920,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"seats\":[\"architecto\"]}"
+                            "raw": "{\"seats\":[\"dolorem\"]}"
                         },
                         "description": "This endpoint allows you to create multiple seats within a specific seat section.",
                         "auth": {
@@ -2028,7 +2044,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"xbqlaekzsalibnjmmerzualcf\",\"description\":\"Explicabo nemo atque tempora aspernatur.\",\"features\":\"ipsam\",\"capacity\":20}"
+                            "raw": "{\"title\":\"nrhjziopcozvousglrjkimsm\",\"description\":\"Est nobis fugit reiciendis qui.\",\"features\":\"neque\",\"capacity\":13}"
                         },
                         "description": "",
                         "auth": {
@@ -2067,7 +2083,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"xbvnaadlruyvazojfzmbc\",\"description\":\"Et eum nulla quas beatae nemo.\",\"features\":\"ullam\",\"capacity\":3}"
+                            "raw": "{\"title\":\"layvkpx\",\"description\":\"Voluptatem nobis a doloremque ipsa.\",\"features\":\"quia\",\"capacity\":18}"
                         },
                         "description": "",
                         "auth": {
@@ -2104,7 +2120,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"wrodriguez@example.com\",\"event_id\":\"ut\"}"
+                            "raw": "{\"email\":\"samantha.conn@example.net\",\"event_id\":\"impedit\"}"
                         },
                         "description": "",
                         "auth": {
@@ -2232,7 +2248,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"coupon_code\":\"aut\",\"merchant\":\"paystack\",\"callback_url\":\"https:\\\/\\\/example.com\\\/callback\",\"quantity\":2,\"name\":\"John Doe\",\"phone\":\"08012345678\",\"email\":\"john.doe@example.com\",\"referral_code\":\"REF123\",\"receivers\":[\"myaxcwvqibcwkzwhqeksxdimq\"]}"
+                            "raw": "{\"coupon_code\":\"nobis\",\"merchant\":\"paystack\",\"callback_url\":\"https:\\\/\\\/example.com\\\/callback\",\"quantity\":2,\"name\":\"John Doe\",\"phone\":\"08012345678\",\"email\":\"john.doe@example.com\",\"referral_code\":\"REF123\",\"receivers\":[\"pigheonfijfuetugoxtuc\"]}"
                         },
                         "description": "",
                         "auth": {
@@ -2263,7 +2279,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"reference\":\"doloremque\"}"
+                            "raw": "{\"reference\":\"ea\"}"
                         },
                         "description": "",
                         "auth": {
@@ -2294,7 +2310,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"reference\":\"voluptatem\",\"quantity\":30,\"seats\":[{\"attendee\":{\"name\":\"earum\",\"email\":\"maddison29@example.com\",\"phone\":\"debitis\",\"address\":\"repellendus\"}}]}"
+                            "raw": "{\"reference\":\"voluptas\",\"quantity\":67,\"seats\":[{\"attendee\":{\"name\":\"non\",\"email\":\"grayce.kihn@example.org\",\"phone\":\"vitae\",\"address\":\"neque\"}}]}"
                         },
                         "description": "",
                         "auth": {
@@ -2325,7 +2341,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"reference\":\"rerum\",\"email\":\"cleveland87@example.com\"}"
+                            "raw": "{\"reference\":\"pariatur\",\"email\":\"corkery.jon@example.net\"}"
                         },
                         "description": "",
                         "auth": {
@@ -2384,7 +2400,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"ticket_payment_id\":3,\"hash\":\"ut\",\"reference\":\"aut\",\"device_no\":\"dolores\",\"event_id\":16}"
+                            "raw": "{\"ticket_payment_id\":9,\"hash\":\"neque\",\"reference\":\"libero\",\"device_no\":\"et\",\"event_id\":20}"
                         },
                         "description": "",
                         "auth": {
@@ -2415,7 +2431,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"reference\":\"vel\"}"
+                            "raw": "{\"reference\":\"odit\"}"
                         },
                         "description": "",
                         "auth": {
@@ -2454,7 +2470,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"iiwohy\",\"email\":\"vincent06@example.net\",\"phone\":\"soy\",\"address\":\"agntht\"}"
+                            "raw": "{\"name\":\"p\",\"email\":\"jackson.goodwin@example.org\",\"phone\":\"rkmsfsfaktkyfi\",\"address\":\"nksvpkkgtladxeyklghaxuci\"}"
                         },
                         "description": "",
                         "auth": {

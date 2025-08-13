@@ -56,7 +56,7 @@ class CouponController extends Controller
   /**
    * Display the specified resource.
    */
-  public function show(Event $event, Coupon $coupon)
+  public function show(Coupon $coupon)
   {
     return $this->apiRes($coupon);
   }
