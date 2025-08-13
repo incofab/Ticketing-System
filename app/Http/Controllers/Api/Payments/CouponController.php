@@ -15,7 +15,7 @@ class CouponController extends Controller
 {
   public function __construct()
   {
-    $this->middleware('admin');
+    // $this->middleware('admin');
   }
 
   /**
@@ -23,6 +23,7 @@ class CouponController extends Controller
    */
   public function index(Event $event, Request $request)
   {
+    $this->authorize('update', $event);
     return $this->apiRes(paginateFromRequest($event->coupons()));
   }
 
@@ -41,6 +42,7 @@ class CouponController extends Controller
    */
   public function store(Request $request, Event $event)
   {
+    $this->authorize('update', $event);
     $validated = $request->validate(Coupon::createRule());
 
     $coupon = $event->coupons()->create(
@@ -58,6 +60,7 @@ class CouponController extends Controller
    */
   public function show(Coupon $coupon)
   {
+    $this->authorize('update', $coupon->event);
     return $this->apiRes($coupon);
   }
 
@@ -76,6 +79,7 @@ class CouponController extends Controller
    */
   public function update(Request $request, Coupon $coupon)
   {
+    $this->authorize('update', $coupon->event);
     $validated = $request->validate(Coupon::createRule($coupon));
 
     $coupon->update(
@@ -94,6 +98,7 @@ class CouponController extends Controller
    */
   public function destroy(Coupon $coupon)
   {
+    $this->authorize('update', $coupon->event);
     abort_if(
       $coupon->ticketPayments()->exists(),
       403,
