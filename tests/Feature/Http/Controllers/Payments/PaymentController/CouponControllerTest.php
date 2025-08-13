@@ -65,12 +65,7 @@ it('creates a new coupon for an event', function () {
 
 it('shows a single coupon', function () {
   actingAs($this->admin)
-    ->getJson(
-      route('api.coupons.show', [
-        'event' => $this->event->id,
-        'coupon' => $this->coupon->code
-      ])
-    )
+    ->getJson(route('api.coupons.show', $this->coupon->code))
     ->assertOk()
     ->assertJsonFragment(['id' => $this->coupon->id]);
 });
@@ -93,10 +88,7 @@ it('updates an existing coupon', function () {
     ->toArray();
 
   actingAs($this->admin)
-    ->postJson(
-      route('api.coupons.update', ['coupon' => $this->coupon->id]),
-      $updateData
-    )
+    ->postJson(route('api.coupons.update', $this->coupon->id), $updateData)
     ->assertOk()
     ->assertJsonFragment(['code' => 'UPDATEDCODE']);
 });

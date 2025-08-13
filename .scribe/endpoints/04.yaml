@@ -65,7 +65,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: hxcrcsiwj
+        example: sxyat
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -74,14 +74,14 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Dolorum aut cupiditate iure odit ut iure et.'
+        example: 'Aperiam amet quis voluptatem aut nihil quidem.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: hxcrcsiwj
-      description: 'Dolorum aut cupiditate iure odit ut iure et.'
+      title: sxyat
+      description: 'Aperiam amet quis voluptatem aut nihil quidem.'
     fileParameters: []
     responses: []
     responseFields: []
@@ -126,7 +126,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: slkjpfpvfjpxb
+        example: cvbnxnjpplflqhyl
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -135,14 +135,14 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Aspernatur impedit soluta molestiae cum eaque et.'
+        example: 'Earum molestiae dolor nam pariatur facere.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: slkjpfpvfjpxb
-      description: 'Aspernatur impedit soluta molestiae cum eaque et.'
+      title: cvbnxnjpplflqhyl
+      description: 'Earum molestiae dolor nam pariatur facere.'
     fileParameters: []
     responses: []
     responseFields: []

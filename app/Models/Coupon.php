@@ -99,7 +99,7 @@ class Coupon extends Model
 
   function event()
   {
-    $this->belongsTo(Event::class);
+    return $this->belongsTo(Event::class);
   }
 
   function eventPackages()
