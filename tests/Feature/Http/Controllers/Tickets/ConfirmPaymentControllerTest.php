@@ -1,14 +1,9 @@
 <?php
 
 use App\Enums\PaymentReferenceStatus;
-use App\Mail\TicketPurchaseMail;
 use App\Models\PaymentReference;
-use App\Models\Ticket;
 use App\Models\User;
 use Database\Seeders\RoleSeeder;
-use Illuminate\Mail\Events\MessageSent;
-use Illuminate\Mail\SentMessage;
-use Symfony\Component\Mime\Email;
 
 use function Pest\Laravel\actingAs;
 use function Pest\Laravel\postJson;

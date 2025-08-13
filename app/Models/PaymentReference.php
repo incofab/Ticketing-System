@@ -31,6 +31,17 @@ class PaymentReference extends Model
     return $ref;
   }
 
+  function getCallbackUrl()
+  {
+    $ticketPayment = $this->paymentable;
+    return addUrlParam($this->callback_url, [
+      'reference' => $this->reference,
+      'name' => $ticketPayment?->name,
+      // 'email' => $ticketPayment?->email,
+      'phone' => $ticketPayment?->phone
+    ]);
+  }
+
   private static function getCode()
   {
     return substr(str_replace('-', '', Str::uuid()), 0, 15);

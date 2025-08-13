@@ -95,3 +95,25 @@ if (!function_exists('sanitizeFilename')) {
     return $extension ? "{$sanitized}.{$extension}" : $sanitized;
   }
 }
+
+if (!function_exists('addUrlParam')) {
+  function addUrlParam(string $url, $params = []): string
+  {
+    $parts = parse_url($url);
+    $query = [];
+    if (isset($parts['query'])) {
+      parse_str($parts['query'], $query);
+    }
+
+    $query = [...$query, ...$params];
+    $parts['query'] = http_build_query($query);
+
+    // Rebuild full URL
+    $newUrl =
+      (isset($parts['scheme']) ? "{$parts['scheme']}://" : '') .
+      ($parts['host'] ?? '') .
+      ($parts['path'] ?? '') .
+      (isset($parts['query']) ? "?{$parts['query']}" : '');
+    return $newUrl;
+  }
+}

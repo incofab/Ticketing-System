@@ -23,6 +23,7 @@ class AirvendHelper
   function initialize($amount, $email, $callbackUrl, $reference = null): Res
   {
     $url = self::BASE_URL . 'payment_initiate_hosted';
+    $amount = $this->addCharge($amount);
 
     $data = [
       'amount' => $amount,
@@ -107,5 +108,18 @@ class AirvendHelper
     $lastPart = end($pathParts);
 
     return $lastPart;
+  }
+
+  function addCharge($amount)
+  {
+    $amount = (int) $amount;
+    if (empty($amount)) {
+      return 0;
+    }
+    $finalAmount = $amount;
+    if ($amount >= self::FLAT_CHARGE_ELIGIBLE) {
+      $finalAmount = $amount + self::FLAT_CHARGE;
+    }
+    return ceil($finalAmount / (1 - self::PERCENTAGE_CHARGE / 100));
   }
 }

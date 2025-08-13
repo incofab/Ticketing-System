@@ -16,6 +16,7 @@ use function Pest\Laravel\assertDatabaseHas;
 use function Pest\Laravel\postJson;
 
 beforeEach(function () {
+  Mail::fake();
   Http::fake([
     'https://api.paystack.co/transaction/initialize' => Http::response(
       [

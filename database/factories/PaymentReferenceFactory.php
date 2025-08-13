@@ -15,7 +15,7 @@ class PaymentReferenceFactory extends Factory
   public function definition(): array
   {
     return [
-      'reference' => Str::orderedUuid(),
+      'reference' => Str::orderedUuid()->toString(),
       'amount' => fake()->randomFloat(2, 10000, 100000),
       'status' => PaymentReferenceStatus::Pending,
       'merchant' => PaymentMerchantType::Paystack
