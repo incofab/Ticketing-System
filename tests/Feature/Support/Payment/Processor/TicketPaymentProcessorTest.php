@@ -50,7 +50,7 @@ it('should successfully handle a pending payment', function () {
   $fakeHttp('success');
   $processor = TicketPaymentProcessor::make($this->paymentReference);
 
-  $result = $processor->handleCallback();
+  [$result] = $processor->handleCallback();
   expect($result->isSuccessful())->toBeTrue();
   $this->paymentReference->refresh();
 
@@ -64,7 +64,7 @@ it('should return success if the payment is already confirmed', function () {
     'status' => PaymentReferenceStatus::Confirmed
   ]);
 
-  $result = $this->processor->handleCallback();
+  [$result] = $this->processor->handleCallback();
 
   expect($result->isSuccessful())->toBeTrue();
   expect($result->message)->toBe('Payment already completed');
@@ -78,7 +78,7 @@ it('should return success if the payment is already canceled', function () {
     'status' => PaymentReferenceStatus::Cancelled
   ]);
 
-  $result = $this->processor->handleCallback();
+  [$result] = $this->processor->handleCallback();
 
   expect($result->isSuccessful())->toBeTrue();
   expect($result->message)->toBe('Payment already completed');
@@ -101,7 +101,7 @@ it(
     $fakeHttp = $this->fakeHttp;
     $fakeHttp('failed');
     $processor = TicketPaymentProcessor::make($this->paymentReference);
-    $result = $processor->handleCallback();
+    [$result] = $processor->handleCallback();
 
     expect($result->isSuccessful())->toBeFalse();
 
@@ -119,7 +119,7 @@ it(
     $fakeHttp('pending');
     $processor = TicketPaymentProcessor::make($this->paymentReference);
 
-    $result = $processor->handleCallback();
+    [$result] = $processor->handleCallback();
 
     expect($result->isSuccessful())->toBeFalse();
     $this->paymentReference->refresh();
@@ -133,7 +133,7 @@ it('should handle insufficient payment', function () {
   $fakeHttp = $this->fakeHttp;
   $fakeHttp('success', 0.5);
   $processor = TicketPaymentProcessor::make($this->paymentReference);
-  $result = $processor->handleCallback();
+  [$result] = $processor->handleCallback();
 
   expect($result->isSuccessful())->toBeFalse();
   $this->paymentReference->refresh();

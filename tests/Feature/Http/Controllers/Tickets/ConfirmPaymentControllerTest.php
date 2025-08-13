@@ -1,9 +1,14 @@
 <?php
 
 use App\Enums\PaymentReferenceStatus;
+use App\Mail\TicketPurchaseMail;
 use App\Models\PaymentReference;
+use App\Models\Ticket;
 use App\Models\User;
 use Database\Seeders\RoleSeeder;
+use Illuminate\Mail\Events\MessageSent;
+use Illuminate\Mail\SentMessage;
+use Symfony\Component\Mime\Email;
 
 use function Pest\Laravel\actingAs;
 use function Pest\Laravel\postJson;
@@ -113,3 +118,23 @@ it('handles Paystack webhook successfully', function () {
   $makeAssertion = $this->makeAssertion;
   $makeAssertion($this->paymentReference);
 });
+
+// it('updates sent_at when ticket email is sent', function () {
+//   Mail::fake();
+//   Event::fake([MessageSent::class]);
+
+//   $ticket = Ticket::factory()->create(['sent_at' => null]);
+
+//   $mailable = new TicketPurchaseMail($ticket);
+
+//   // Send the mail
+//   Mail::to('test@example.com')->send($mailable);
+
+//   // Assert event fired
+//   Event::assertDispatched(MessageSent::class);
+//   // Refresh ticket from database
+//   $ticket->refresh();
+
+//   expect($ticket->sent_at)->not->toBeNull();
+//   expect($ticket->sent_->isToday())->toBeTrue();
+// });

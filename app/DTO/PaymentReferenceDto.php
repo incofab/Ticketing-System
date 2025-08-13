@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class PaymentReferenceDto
 {
-  private ?string $callbackUrl = '';
   function __construct(
     public string $merchant,
     private Model $paymentable,
     public int|float $amount,
     public string $reference,
+    public ?string $callback_url = '',
     public $user_id = null,
     public array $extraData = []
   ) {
@@ -20,19 +20,9 @@ class PaymentReferenceDto
       $reference ?? PaymentReference::generateReferece($merchant);
   }
 
-  function setCallbackUrl(?string $callbackUrl)
-  {
-    $this->callbackUrl = $callbackUrl;
-  }
-
   function setReference(string $reference)
   {
     $this->reference = $reference;
-  }
-
-  function getCallbackUrl()
-  {
-    return $this->callbackUrl;
   }
 
   function getPaymentable()
@@ -60,7 +50,8 @@ class PaymentReferenceDto
       'user_id' => $this->user_id,
       'reference' => $this->reference,
       'status' => PaymentReferenceStatus::Pending,
-      'content' => $this->getExtraData()
+      'content' => $this->getExtraData(),
+      'callback_url' => $this->callback_url
     ];
   }
 }

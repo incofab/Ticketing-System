@@ -44,7 +44,7 @@ class ProcessPendingPayment extends Command
       $this->comment(
         "Running payment ref id = {$paymentReference->id}, index = $key"
       );
-      $res = PaymentProcessor::make($paymentReference)->handleCallback();
+      [$res] = PaymentProcessor::make($paymentReference)->handleCallback();
 
       $this->comment(json_encode($res->toArray(), JSON_PRETTY_PRINT));
     }

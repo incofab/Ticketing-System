@@ -216,7 +216,7 @@ endpoints:
         name: code
         description: 'The coupon code'
         required: true
-        example: recusandae
+        example: at
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -252,7 +252,7 @@ endpoints:
         name: expires_at
         description: 'The expiration date of the coupon (Leave blank if you dont want to coupon to expire)'
         required: false
-        example: quis
+        example: fugit
         type: date
         enumValues: []
         exampleWasSpecified: false
@@ -279,7 +279,7 @@ endpoints:
         name: event_id
         description: 'The ID of the event this coupon is associated with.'
         required: true
-        example: 6
+        example: 20
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -297,14 +297,14 @@ endpoints:
         exampleWasSpecified: true
         custom: []
     cleanBodyParameters:
-      code: recusandae
+      code: at
       discount_type: percentage
       discount_value: 20.0
       min_purchase: 100.0
-      expires_at: quis
+      expires_at: fugit
       usage_limit: 10
       usage_count: 0
-      event_id: 6
+      event_id: 20
       event_package_ids:
         - 1
         - 2
@@ -338,13 +338,13 @@ endpoints:
         name: code
         description: ''
         required: true
-        example: 19
+        example: 4
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      code: 19
+      code: 4
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -387,13 +387,13 @@ endpoints:
         name: id
         description: 'The ID of the coupon.'
         required: true
-        example: 1
+        example: 15
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 1
+      id: 15
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -401,7 +401,7 @@ endpoints:
         name: code
         description: 'The coupon code'
         required: true
-        example: et
+        example: ad
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -437,7 +437,7 @@ endpoints:
         name: expires_at
         description: 'The expiration date of the coupon (Leave blank if you dont want to coupon to expire)'
         required: false
-        example: aut
+        example: natus
         type: date
         enumValues: []
         exampleWasSpecified: false
@@ -464,7 +464,7 @@ endpoints:
         name: event_id
         description: 'The ID of the event this coupon is associated with.'
         required: true
-        example: 18
+        example: 7
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -482,14 +482,14 @@ endpoints:
         exampleWasSpecified: true
         custom: []
     cleanBodyParameters:
-      code: et
+      code: ad
       discount_type: percentage
       discount_value: 20.0
       min_purchase: 100.0
-      expires_at: aut
+      expires_at: natus
       usage_limit: 10
       usage_count: 0
-      event_id: 18
+      event_id: 7
       event_package_ids:
         - 1
         - 2
@@ -523,13 +523,13 @@ endpoints:
         name: id
         description: 'The ID of the coupon.'
         required: true
-        example: 18
+        example: 3
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 18
+      id: 3
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

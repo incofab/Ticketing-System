@@ -9,7 +9,9 @@ use App\Models\TicketPayment;
 
 Route::post('/webhook/paystack', [Home\PaymentCallbackController::class, 'paystackWebhook'])->name('webhook.paystack');
 
-Route::get('/callback/airvend', [Home\PaymentCallbackController::class, 'airvendCallback']);
+Route::get('/callback/airvend', [Home\PaymentCallbackController::class, 'airvendCallback'])->name('callback.airvend');
+Route::get('/callback/paystack', [Home\PaymentCallbackController::class, 'paystackCallback'])->name('callback.paystack');
+Route::get('/callback/paydestal', [Home\PaymentCallbackController::class, 'paydestalCallback'])->name('callback.paydestal');
 
 Route::get('/dummy1', function () {
 

@@ -124,13 +124,14 @@ class InitTicketPurchaseController extends Controller
     ]);
     $reference = PaymentReference::generateReference();
     $paymentReferenceDto = new PaymentReferenceDto(
-      $request->merchant,
-      $ticketPayment,
-      $amount,
-      $reference,
-      $ticketPayment->user_id
+      merchant: $request->merchant,
+      paymentable: $ticketPayment,
+      amount: $amount,
+      reference: $reference,
+      user_id: $ticketPayment->user_id,
+      callback_url: $request->callback_url
     );
-    $paymentReferenceDto->setCallbackUrl($request->callback_url);
+    // $paymentReferenceDto->setCallbackUrl($request->callback_url);
     [$res, $paymentReference] = PaymentMerchant::make($request->merchant)->init(
       $paymentReferenceDto
     );
@@ -145,7 +146,7 @@ class InitTicketPurchaseController extends Controller
     if ($paymentReference->merchant !== PaymentMerchantType::Free) {
       return $res;
     }
-    $res = PaymentProcessor::make($paymentReference)->handleCallback();
+    [$res] = PaymentProcessor::make($paymentReference)->handleCallback();
     if (!$res->isSuccessful()) {
       return $res;
     }

@@ -4,16 +4,18 @@ namespace App\Support\Payment\Processor;
 use App\Enums\PaymentReferenceStatus;
 use App\Mail\TicketSoldMail;
 use App\Models\TicketPayment;
-use App\Support\Res;
 use DB;
 use Mail;
 
 class TicketPaymentProcessor extends PaymentProcessor
 {
-  function handleCallback(): Res
+  /**
+   * @retuurn array{Res, PaymentReference}
+   */
+  function handleCallback()
   {
     if ($this->paymentReference->status !== PaymentReferenceStatus::Pending) {
-      return successRes('Payment already completed');
+      return [successRes('Payment already completed'), $this->paymentReference];
     }
 
     $res = $this->verify();
@@ -26,7 +28,7 @@ class TicketPaymentProcessor extends PaymentProcessor
           ->fill(['status' => PaymentReferenceStatus::Cancelled])
           ->save();
       }
-      return $res;
+      return [$res, $this->paymentReference];
     }
 
     // /** @var User $user */
@@ -65,6 +67,6 @@ class TicketPaymentProcessor extends PaymentProcessor
 
     DB::commit();
 
-    return successRes('Payment successful');
+    return [successRes('Payment successful'), $this->paymentReference];
   }
 }

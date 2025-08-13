@@ -42,13 +42,18 @@ abstract class PaymentProcessor
     return $ret;
   }
 
-  abstract function handleCallback(): Res;
+  /**
+   * Handle the payment callback.
+   *
+   * @return array{Res, PaymentReference}
+   */
+  abstract function handleCallback();
 
   // public function handleCallbackWithTransaction()
   // {
   //   DB::beginTransaction();
 
-  //   $ret = $this->handleCallback();
+  //   [$ret] = $this->handleCallback();
 
   //   if (!$ret->isSuccessful()) {
   //     DB::rollBack();

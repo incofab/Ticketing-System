@@ -20,7 +20,7 @@ class PaymentPaydestal extends PaymentMerchant
         'email',
         $paymentReferenceDto->getEmail() ?? config('app.email')
       ),
-      $paymentReferenceDto->getCallbackUrl(),
+      route('callback.paydestal'),
       $paymentReference->reference
     );
 

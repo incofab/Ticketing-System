@@ -20,7 +20,7 @@ class PaymentAirvend extends PaymentMerchant
         'email',
         $paymentReferenceDto->getEmail() ?? config('app.email')
       ),
-      $paymentReferenceDto->getCallbackUrl(),
+      route('callback.airvend'),
       $paymentReference->reference
     );
 

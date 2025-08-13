@@ -49,18 +49,34 @@ class PaymentCallbackController extends Controller
     }
 
     $reference = $data['reference'];
-
-    $ret = PaymentProcessor::makeFromReference($reference)->handleCallback();
-
-    return $this->ok($ret->toArray());
+    return $this->verifyReference($reference, false);
   }
 
   function airvendCallback(Request $request)
   {
-    $reference = $request->txn_ref;
+    return $this->verifyReference($request->txn_ref, true);
+  }
 
-    $ret = PaymentProcessor::makeFromReference($reference)->handleCallback();
+  function paystackCallback(Request $request)
+  {
+    return $this->verifyReference($request->reference, true);
+  }
 
-    return $this->ok($ret->toArray());
+  function paydestalCallback(Request $request)
+  {
+    return $this->verifyReference($request->reference, true);
+  }
+
+  private function verifyReference($reference, $canRedirect = true)
+  {
+    [$ret, $paymentReference] = PaymentProcessor::makeFromReference(
+      $reference
+    )->handleCallback();
+    if (!$canRedirect || !$ret->isSuccessful()) {
+      return $ret->isSuccessful()
+        ? $this->ok($ret->toArray())
+        : $this->message($ret->getMessage() ?? 'Payment not successful', 403);
+    }
+    return redirect($paymentReference->callback_url);
   }
 }

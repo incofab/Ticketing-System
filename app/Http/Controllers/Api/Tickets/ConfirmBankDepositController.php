@@ -36,7 +36,7 @@ class ConfirmBankDepositController extends Controller
       'Access denied'
     );
 
-    $res = PaymentProcessor::make($paymentReference)->handleCallback();
+    [$res] = PaymentProcessor::make($paymentReference)->handleCallback();
 
     abort_unless($res->isSuccessful(), 403, $res->getMessage());
     return $this->ok($res->toArray());

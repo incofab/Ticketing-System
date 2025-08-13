@@ -15,7 +15,8 @@ class Ticket extends Model
     'event_package_id' => 'integer',
     'seat_id' => 'integer',
     'user_id' => 'integer',
-    'qr_code' => 'string'
+    'qr_code' => 'string',
+    'sent_at' => 'datetime'
   ];
 
   function ticketPayment()
