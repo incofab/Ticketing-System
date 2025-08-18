@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers as Web;
+use App\Http\Controllers\Api as Api;
 use App\Http\Controllers\Home;
 use App\Mail\TicketPurchaseMail;
 use App\Models\Ticket;
@@ -14,6 +15,23 @@ Route::get('/callback/paystack', [Home\PaymentCallbackController::class, 'paysta
 Route::get('/callback/paydestal', [Home\PaymentCallbackController::class, 'paydestalCallback'])->name('callback.paydestal');
 
 Route::get('/dummy1', function () {
+  Mail::to('incofabikenna@gmail.com')->send(new \App\Mail\TicketPurchaseMail(Ticket::query()->first()));
+  return 'Mail sent successfully'; 
+  // dd(now()->to);
+  $ticket = \App\Models\Ticket::query()->first();
+
+    $qr = QrCode::format('png')
+      ->size(200)
+      ->generate("{$ticket->reference}|{$ticket->ticketPayment->id}");
+    $qrCode = 'data:image/png;base64,' . base64_encode($qr);
+  return view('tickets.ticket-view-pdf', [
+    'ticket' => $ticket,
+    'seat' => $ticket->seat,
+    'eventPackage' => $ticket->eventPackage,
+    'seatSection' => $ticket->eventPackage->seatSection,
+    'event' => $ticket->eventPackage->event,
+    'qrCode' => $qrCode
+  ]);
 
    $ticketPayments = TicketPayment::select('ticket_payments.*')
       ->join('payment_references', function ($join) {
@@ -51,4 +69,6 @@ Route::get('/events/{event}/report', function (\App\Models\Event $event) {
     // dd('dksdks');
     return (new \App\Actions\Dummy\GetEventData($event))->run();
 });
+
+Route::get('/tickets/{ticket}/print', [Api\Tickets\TicketController::class, 'printTicket'])->name('tickets.print');
 

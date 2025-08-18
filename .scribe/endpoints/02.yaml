@@ -75,7 +75,7 @@ endpoints:
         name: date_from
         description: 'Must be a valid date.'
         required: false
-        example: '2025-08-13T20:49:44'
+        example: '2025-08-18T21:38:04'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -84,14 +84,14 @@ endpoints:
         name: date_to
         description: 'Must be a valid date. This field is required when <code>date_from</code> is present. Must be a date after <code>date_from</code>.'
         required: false
-        example: '2125-02-26'
+        example: '2049-10-10'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      date_from: '2025-08-13T20:49:44'
-      date_to: '2125-02-26'
+      date_from: '2025-08-18T21:38:04'
+      date_to: '2049-10-10'
     fileParameters: []
     responses:
       -

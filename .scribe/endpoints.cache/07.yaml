@@ -87,7 +87,7 @@ endpoints:
         name: images
         description: 'Must have at least 1 items. Must not have more than 5 items.'
         required: true
-        example: ld
+        example: edy
         type: 'file[]'
         enumValues: []
         exampleWasSpecified: false
@@ -105,13 +105,13 @@ endpoints:
         name: 'images[].reference'
         description: ''
         required: true
-        example: earum
+        example: laborum
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      images: ld
+      images: edy
     fileParameters: []
     responses: []
     responseFields: []
@@ -141,13 +141,13 @@ endpoints:
         name: eventImage_id
         description: 'The ID of the eventImage.'
         required: true
-        example: 6
+        example: 11
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      eventImage_id: 6
+      eventImage_id: 11
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

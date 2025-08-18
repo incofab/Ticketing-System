@@ -5,10 +5,13 @@ namespace App\Mail;
 use App\Models\Event;
 use App\Models\Ticket;
 use App\Models\TicketPayment;
+use Http;
 use Illuminate\Bus\Queueable;
+use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use URL;
 
 class TicketPurchaseMail extends Mailable
 {
@@ -17,18 +20,23 @@ class TicketPurchaseMail extends Mailable
   public TicketPayment $ticketPayment;
   public Event $event;
   public string $viewTicketUrl;
+  public $qrCode;
 
   /**
    * Create a new message instance.
    */
   public function __construct(public Ticket $ticket)
   {
-    // now()->toFormattedDayDateString()
     $this->ticketPayment = $ticket->ticketPayment;
     $this->event = $ticket->eventPackage->event;
     $this->viewTicketUrl =
       "https://shopurban.co/events/{$this->event->id}?" .
       http_build_query(['reference' => $ticket->reference]);
+
+    $this->qrCode =
+      '<img src="data:image/svg+xml;base64,' .
+      base64_encode($this->ticket->qr_code) .
+      '">'; // $ticket->qr_code;
   }
 
   /**
@@ -56,6 +64,21 @@ class TicketPurchaseMail extends Mailable
    */
   public function attachments(): array
   {
-    return [];
+    return [
+        // Attachment::fromData(
+        //   fn() => $this->getPdf(),
+        //   "ticket-{$this->ticket->id}.pdf"
+        // )->withMime('application/pdf')
+      ];
+  }
+
+  private function getPdf()
+  {
+    $url = URL::temporarySignedRoute('tickets.print', now()->addMinutes(30), [
+      'ticket' => $this->ticket->id
+    ]);
+    $pdfGenUrl = config('services.pdf-gen-url') . "?url={$url}";
+    $pdfContent = Http::get($pdfGenUrl)->body();
+    return $pdfContent;
   }
 }

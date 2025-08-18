@@ -65,7 +65,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: wbteruavnrc
+        example: cpomeojiogeyrayjnxvgyl
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -74,14 +74,14 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Harum nesciunt quia est laudantium eius.'
+        example: 'Ipsam ut ipsa minus omnis deserunt nostrum.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: wbteruavnrc
-      description: 'Harum nesciunt quia est laudantium eius.'
+      title: cpomeojiogeyrayjnxvgyl
+      description: 'Ipsam ut ipsa minus omnis deserunt nostrum.'
     fileParameters: []
     responses: []
     responseFields: []
@@ -126,7 +126,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: wqhuihgbhcybngoyggvke
+        example: lwjrnorjon
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -135,14 +135,14 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Sint cupiditate ut perferendis ut voluptatem.'
+        example: 'Aperiam consequuntur blanditiis enim expedita.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: wqhuihgbhcybngoyggvke
-      description: 'Sint cupiditate ut perferendis ut voluptatem.'
+      title: lwjrnorjon
+      description: 'Aperiam consequuntur blanditiis enim expedita.'
     fileParameters: []
     responses: []
     responseFields: []

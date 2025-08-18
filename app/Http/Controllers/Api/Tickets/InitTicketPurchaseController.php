@@ -143,7 +143,10 @@ class InitTicketPurchaseController extends Controller
 
   function handleResult(PaymentReference $paymentReference, Res $res)
   {
-    if ($paymentReference->merchant !== PaymentMerchantType::Free) {
+    if (
+      $paymentReference->amount > 0 &&
+      $paymentReference->merchant !== PaymentMerchantType::Free
+    ) {
       return $res;
     }
     [$res] = PaymentProcessor::make($paymentReference)->handleCallback();

@@ -45,7 +45,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"","data":{"current_page":1,"data":[{"id":1,"event_id":1,"seat_section_id":5,"price":3725.7,"quantity_sold":1,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-20T09:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":2,"event_id":2,"seat_section_id":6,"price":7204.2,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":3,"event_id":3,"seat_section_id":7,"price":8509.6,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":4,"event_id":4,"seat_section_id":9,"price":5039.9,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":5,"event_id":5,"seat_section_id":10,"price":6940.7,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":6,"event_id":6,"seat_section_id":11,"price":6118.8,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":7,"event_id":7,"seat_section_id":13,"price":1755.2,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":8,"event_id":8,"seat_section_id":14,"price":6075.5,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":9,"event_id":9,"seat_section_id":15,"price":4199.9,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":10,"event_id":10,"seat_section_id":17,"price":6388.9,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":11,"event_id":11,"seat_section_id":18,"price":1063.4,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":12,"event_id":12,"seat_section_id":19,"price":3962.2,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":13,"event_id":13,"seat_section_id":21,"price":4331.2,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":14,"event_id":14,"seat_section_id":22,"price":4246.2,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":15,"event_id":15,"seat_section_id":23,"price":7010,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0}],"first_page_url":"http:\/\/localhost\/api\/event-packages\/index?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/event-packages\/index?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/event-packages\/index?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/event-packages\/index","per_page":50,"prev_page_url":null,"to":15,"total":15}}'
+        content: '{"message":"","data":{"current_page":1,"data":[{"id":1,"event_id":1,"seat_section_id":5,"price":3725.7,"quantity_sold":1,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-20T09:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":2,"event_id":2,"seat_section_id":6,"price":7204.2,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":3,"event_id":3,"seat_section_id":7,"price":8509.6,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":"4","title":"Free","notes":null,"capacity":0},{"id":4,"event_id":4,"seat_section_id":9,"price":5039.9,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":5,"event_id":5,"seat_section_id":10,"price":6940.7,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":6,"event_id":6,"seat_section_id":11,"price":6118.8,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":7,"event_id":7,"seat_section_id":13,"price":1755.2,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":8,"event_id":8,"seat_section_id":14,"price":6075.5,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":9,"event_id":9,"seat_section_id":15,"price":4199.9,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":10,"event_id":10,"seat_section_id":17,"price":6388.9,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":11,"event_id":11,"seat_section_id":18,"price":1063.4,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":12,"event_id":12,"seat_section_id":19,"price":3962.2,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":13,"event_id":13,"seat_section_id":21,"price":4331.2,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":14,"event_id":14,"seat_section_id":22,"price":4246.2,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0},{"id":15,"event_id":15,"seat_section_id":23,"price":7010,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0}],"first_page_url":"http:\/\/localhost\/api\/event-packages\/index?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/event-packages\/index?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/event-packages\/index?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/event-packages\/index","per_page":50,"prev_page_url":null,"to":15,"total":15}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -95,7 +95,7 @@ endpoints:
         name: seat_section_id
         description: ''
         required: true
-        example: minima
+        example: vel
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -104,7 +104,7 @@ endpoints:
         name: price
         description: ''
         required: true
-        example: 664760.2194
+        example: 6.5
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -113,7 +113,7 @@ endpoints:
         name: entry_gate
         description: ''
         required: false
-        example: aut
+        example: possimus
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -122,7 +122,7 @@ endpoints:
         name: notes
         description: ''
         required: false
-        example: sequi
+        example: minus
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -131,7 +131,7 @@ endpoints:
         name: capacity
         description: ''
         required: true
-        example: 12
+        example: 15
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -140,18 +140,18 @@ endpoints:
         name: title
         description: ''
         required: true
-        example: incidunt
+        example: nostrum
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      seat_section_id: minima
-      price: 664760.2194
-      entry_gate: aut
-      notes: sequi
-      capacity: 12
-      title: incidunt
+      seat_section_id: vel
+      price: 6.5
+      entry_gate: possimus
+      notes: minus
+      capacity: 15
+      title: nostrum
     fileParameters: []
     responses: []
     responseFields: []
@@ -195,7 +195,7 @@ endpoints:
         name: seat_section_id
         description: ''
         required: true
-        example: ducimus
+        example: voluptas
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -204,7 +204,7 @@ endpoints:
         name: price
         description: ''
         required: true
-        example: 77443654.339
+        example: 349920.636522
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -213,7 +213,7 @@ endpoints:
         name: entry_gate
         description: ''
         required: false
-        example: consequatur
+        example: ipsa
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -222,7 +222,7 @@ endpoints:
         name: notes
         description: ''
         required: false
-        example: qui
+        example: et
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -231,7 +231,7 @@ endpoints:
         name: capacity
         description: ''
         required: true
-        example: 18
+        example: 2
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -240,18 +240,18 @@ endpoints:
         name: title
         description: ''
         required: true
-        example: assumenda
+        example: commodi
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      seat_section_id: ducimus
-      price: 77443654.339
-      entry_gate: consequatur
-      notes: qui
-      capacity: 18
-      title: assumenda
+      seat_section_id: voluptas
+      price: 349920.636522
+      entry_gate: ipsa
+      notes: et
+      capacity: 2
+      title: commodi
     fileParameters: []
     responses: []
     responseFields: []

@@ -12,7 +12,7 @@ Thank you for booking with us. Below are your event details:
     
 Your reservation has been ticketed successfully.   
 
-<div style="text-align: center;">{!!$ticket->qr_code!!}</div>   
+<div style="text-align: center;">{!!$qrCode!!}</div>   
 <br>
 
 To view your ticket and confirm your attendance, RSVP at <a href="{{$viewTicketUrl}}">{{$viewTicketUrl}}</a> 

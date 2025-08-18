@@ -35,7 +35,7 @@ class EventController extends Controller
     $query = $eventSeason ? $eventSeason->events()->getQuery() : Event::query();
 
     $user = currentUser();
-    $forUser = $request->for_user && $user && !$user?->isAdmin();
+    $forUser = $request->for_user && $user; // && !$user?->isAdmin();
     $query
       ->select('events.*')
       ->when($forUser, fn($q) => $q->where('events.user_id', $user?->id))

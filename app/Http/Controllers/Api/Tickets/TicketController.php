@@ -9,6 +9,7 @@ use App\Models\Ticket;
 use App\Models\TicketPayment;
 use App\Support\MorphMap;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 /**
  * @group Tickets
@@ -32,8 +33,12 @@ class TicketController extends Controller
   function resendTicket(Request $request)
   {
     $request->validate([
-      'email' => ['required', 'email'],
-      'event_id' => ['required', 'exists:events,id']
+      'email' => [Rule::requiredIf(empty($request->reference)), 'email'],
+      'event_id' => [
+        Rule::requiredIf(empty($request->reference)),
+        'exists:events,id'
+      ],
+      'reference' => [Rule::requiredIf(empty($request->email)), 'string']
     ]);
     $ticketPayments = TicketPayment::query()
       ->join(
@@ -50,8 +55,18 @@ class TicketController extends Controller
             MorphMap::key(TicketPayment::class)
           );
       })
-      ->where('event_packages.event_id', $request->event_id)
-      ->where('ticket_payments.email', $request->email)
+      ->when(
+        $request->reference,
+        fn($q) => $q->where('ticket_payments.reference', $request->reference)
+      )
+      ->when(
+        $request->event_id,
+        fn($q) => $q->where('event_packages.event_id', $request->event_id)
+      )
+      ->when(
+        $request->email,
+        fn($q) => $q->where('ticket_payments.email', $request->email)
+      )
       ->where('payment_references.status', PaymentReferenceStatus::Confirmed)
       ->with('tickets')
       ->get();
@@ -71,5 +86,22 @@ class TicketController extends Controller
       }
     }
     return $this->ok();
+  }
+
+  function printTicket(Ticket $ticket, Request $request)
+  {
+    $ticket->load(
+      'seat.seatSection',
+      'eventPackage.event.eventImages',
+      'eventAttendee',
+      'ticketVerification'
+    );
+    return view('tickets.ticket-view-pdf', [
+      'ticket' => $ticket,
+      'seat' => $ticket->seat,
+      'eventPackage' => $ticket->eventPackage,
+      'seatSection' => $ticket->eventPackage->seatSection,
+      'event' => $ticket->eventPackage->event
+    ]);
   }
 }

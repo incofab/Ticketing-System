@@ -18,17 +18,19 @@ class TicketPaymentProcessor extends PaymentProcessor
       return [successRes('Payment already completed'), $this->paymentReference];
     }
 
-    $res = $this->verify();
-    if (!$res->isSuccessful()) {
-      $canCancel =
-        now()->diffInMinutes($this->paymentReference->created_at, true) > 20;
-      if ($canCancel) {
-        //$res->is_failed) {
-        $this->paymentReference
-          ->fill(['status' => PaymentReferenceStatus::Cancelled])
-          ->save();
+    if ($this->paymentReference->amount > 0) {
+      $res = $this->verify();
+      if (!$res->isSuccessful()) {
+        $canCancel =
+          now()->diffInMinutes($this->paymentReference->created_at, true) > 20;
+        if ($canCancel) {
+          //$res->is_failed) {
+          $this->paymentReference
+            ->fill(['status' => PaymentReferenceStatus::Cancelled])
+            ->save();
+        }
+        return [$res, $this->paymentReference];
       }
-      return [$res, $this->paymentReference];
     }
 
     // /** @var User $user */

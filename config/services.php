@@ -44,5 +44,6 @@ return [
     'public-key' => env('PAYDESTAL_PUBLIC_KEY'),
     'secret-key' => env('PAYDESTAL_SECRET_KEY')
   ],
-  'maildrip' => ['api_key' => env('MAIL_DRIP_API_KEY')]
+  'maildrip' => ['api_key' => env('MAIL_DRIP_API_KEY')],
+  'pdf-gen-url' => env('PDF_GEN_URL', '')
 ];

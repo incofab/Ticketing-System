@@ -8,7 +8,7 @@ Your payment has been confirmed.
 
 @component('mail::panel')
 <div style="margin-bottom: 7px;"><b>Amount:</b> {{number_format($paymentReference->amount)}}</div>
-<div style="margin-bottom: 7px;"><b>Quantity:</b> {{number_format($paymentReference->quantity)}}</div>
+<div style="margin-bottom: 7px;"><b>Quantity:</b> {{number_format($ticketPayment->quantity)}}</div>
 <div style="margin-bottom: 7px;"><b>Package:</b> {{$eventPackage->title}}</div>
 <div style="margin-bottom: 7px;"><b>Event:</b> {{$event->title}}</div>
 <div style="margin-bottom: 7px;"><b>Date:</b>&nbsp; {{$event->start_time->toFormattedDayDateString()}}</div>
