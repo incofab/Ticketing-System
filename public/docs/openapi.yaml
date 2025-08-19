@@ -60,11 +60,11 @@ paths:
                 date_from:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2025-08-19T11:30:24'
+                  example: '2025-08-19T13:41:07'
                 date_to:
                   type: string
                   description: 'Must be a valid date. This field is required when <code>date_from</code> is present. Must be a date after <code>date_from</code>.'
-                  example: '2115-02-01'
+                  example: '2031-02-23'
       security: []
     parameters:
       -
@@ -94,11 +94,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: minus
+                  example: officia
                 password:
                   type: string
                   description: ''
-                  example: '<\):GpG$;eu.SX>2rE'
+                  example: '{JBY1gtb%+'
               required:
                 - phone
                 - password
@@ -122,27 +122,27 @@ paths:
                 first_name:
                   type: integer
                   description: ''
-                  example: 16
+                  example: 11
                 last_name:
                   type: string
                   description: ''
-                  example: voluptas
+                  example: a
                 other_names:
                   type: string
                   description: ''
-                  example: amet
+                  example: sed
                 phone:
                   type: string
                   description: ''
-                  example: ut
+                  example: id
                 email:
                   type: string
                   description: ''
-                  example: jschneider@example.net
+                  example: jaskolski.isabella@example.org
                 password:
                   type: string
                   description: ''
-                  example: 'yn,4z>@&m'
+                  example: "MO|J*Czt'"
               required:
                 - first_name
                 - last_name
@@ -211,11 +211,11 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ubssoaclhlyukjzkcefga
+                  example: i
                 description:
                   type: string
                   description: ''
-                  example: 'Quis odio sunt molestias ipsam rerum voluptatem omnis.'
+                  example: 'Totam qui ut sed animi eum.'
               required:
                 - title
       security: []
@@ -238,11 +238,11 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: uimicyczf
+                  example: exndubrny
                 description:
                   type: string
                   description: ''
-                  example: 'Magnam tenetur enim molestiae et autem rerum labore.'
+                  example: 'Voluptate voluptates rem ad nemo consequatur laudantium.'
               required:
                 - title
       security: []
@@ -344,7 +344,7 @@ paths:
         in: path
         name: eventImage_id
         description: 'The ID of the eventImage.'
-        example: 15
+        example: 20
         required: true
         schema:
           type: integer
@@ -930,27 +930,27 @@ paths:
                 seat_section_id:
                   type: string
                   description: ''
-                  example: aspernatur
+                  example: voluptatem
                 price:
                   type: number
                   description: ''
-                  example: 47471868.5
+                  example: 83695.0
                 entry_gate:
                   type: string
                   description: ''
-                  example: qui
+                  example: maiores
                 notes:
                   type: string
                   description: ''
-                  example: minus
+                  example: ut
                 capacity:
                   type: integer
                   description: ''
-                  example: 20
+                  example: 11
                 title:
                   type: string
                   description: ''
-                  example: consequuntur
+                  example: tempore
               required:
                 - seat_section_id
                 - price
@@ -985,27 +985,27 @@ paths:
                 seat_section_id:
                   type: string
                   description: ''
-                  example: distinctio
+                  example: sequi
                 price:
                   type: number
                   description: ''
-                  example: 3456759.24558
+                  example: 11.10009
                 entry_gate:
                   type: string
                   description: ''
-                  example: sed
+                  example: architecto
                 notes:
                   type: string
                   description: ''
-                  example: dolores
+                  example: earum
                 capacity:
                   type: integer
                   description: ''
-                  example: 8
+                  example: 10
                 title:
                   type: string
                   description: ''
-                  example: alias
+                  example: ab
               required:
                 - seat_section_id
                 - price
@@ -1317,19 +1317,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: nfqpbfbnhfiivsjqxqppsoql
+                  example: qdcvauojlrfqvdphfji
                 description:
                   type: string
                   description: ''
-                  example: 'Quia corporis quos placeat modi et.'
+                  example: 'Dolorum hic earum rerum quas consequatur saepe labore.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2025-08-19T11:30:25'
+                  example: '2025-08-19T13:41:07'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2117-01-22'
+                  example: '2062-05-19'
               required:
                 - title
       security: []
@@ -1361,19 +1361,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: xnlczwarwhceddra
+                  example: ehdbxgtnykkleis
                 description:
                   type: string
                   description: ''
-                  example: 'Omnis eveniet tempora odit quibusdam porro rerum qui.'
+                  example: 'Itaque reiciendis hic quia omnis corporis.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2025-08-19T11:30:25'
+                  example: '2025-08-19T13:41:07'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2111-05-17'
+                  example: '2087-12-18'
               required:
                 - title
       security: []
@@ -2300,7 +2300,7 @@ paths:
                 event_packages:
                   type: array
                   description: 'Must have at least 1 items.'
-                  example: sgfihhjrfvhfrayhsdqdzowxlqbqralvfdsjcwwbpluznsqoghjx
+                  example: jutxm
                   items:
                     type: string
       security: []
@@ -2390,6 +2390,16 @@ paths:
         -
           in: query
           name: merchant
+          description: string.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: string.
+            example: null
+        -
+          in: query
+          name: referral_code
           description: string.
           example: null
           required: false
@@ -2872,7 +2882,7 @@ paths:
                         active: false
                     next_page_url: null
                     path: 'http://localhost/api/payments/index'
-                    per_page: 300
+                    per_page: 50
                     prev_page_url: null
                     to: 6
                     total: 6
@@ -3512,7 +3522,7 @@ paths:
                         example: 'http://localhost/api/payments/index'
                       per_page:
                         type: integer
-                        example: 300
+                        example: 50
                       prev_page_url:
                         type: string
                         example: null
@@ -3525,6 +3535,839 @@ paths:
       tags:
         - Payments
       security: []
+  '/api/coupons/{code}/show':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'No query results for model [App\Models\Coupon] 8'
+                  exception: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+                  file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                  line: 487
+                  trace:
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                      line: 463
+                      function: prepareException
+                      class: Illuminate\Foundation\Exceptions\Handler
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php
+                      line: 54
+                      function: render
+                      class: Illuminate\Foundation\Exceptions\Handler
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php
+                      line: 51
+                      function: render
+                      class: NunoMaduro\Collision\Adapters\Laravel\ExceptionHandler
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 185
+                      function: handleException
+                      class: Illuminate\Routing\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                      line: 159
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                      line: 125
+                      function: handleRequest
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                      line: 87
+                      function: handleRequestUsingNamedLimiter
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php
+                      line: 25
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 141
+                      function: 'Laravel\Sanctum\Http\Middleware\{closure}'
+                      class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php
+                      line: 24
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 798
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 777
+                      function: runRouteWithinStack
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 741
+                      function: runRoute
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 730
+                      function: dispatchToRoute
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 200
+                      function: dispatch
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 141
+                      function: 'Illuminate\Foundation\Http\{closure}'
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php
+                      line: 59
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Barryvdh\Debugbar\Middleware\InjectDebugbar
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                      line: 21
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
+                      line: 31
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                      line: 21
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
+                      line: 40
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TrimStrings
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
+                      line: 27
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
+                      line: 99
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
+                      line: 62
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Http\Middleware\HandleCors
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
+                      line: 39
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Http\Middleware\TrustProxies
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 175
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 144
+                      function: sendRequestThroughRouter
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 300
+                      function: handle
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 288
+                      function: callLaravelOrLumenRoute
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 91
+                      function: makeApiCall
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 44
+                      function: makeResponseCall
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 35
+                      function: makeResponseCallIfConditionsPass
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 236
+                      function: __invoke
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 163
+                      function: iterateThroughStrategies
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 95
+                      function: fetchResponses
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 125
+                      function: processRoute
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 72
+                      function: extractEndpointsInfoFromLaravelApp
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 50
+                      function: extractEndpointsInfoAndWriteToDisk
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
+                      line: 53
+                      function: get
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 36
+                      function: handle
+                      class: Knuckles\Scribe\Commands\GenerateDocumentation
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Util.php
+                      line: 41
+                      function: 'Illuminate\Container\{closure}'
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 93
+                      function: unwrapIfClosure
+                      class: Illuminate\Container\Util
+                      type: '::'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 35
+                      function: callBoundMethod
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php
+                      line: 662
+                      function: call
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                      line: 211
+                      function: call
+                      class: Illuminate\Container\Container
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/symfony/console/Command/Command.php
+                      line: 326
+                      function: execute
+                      class: Illuminate\Console\Command
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                      line: 180
+                      function: run
+                      class: Symfony\Component\Console\Command\Command
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/symfony/console/Application.php
+                      line: 1081
+                      function: run
+                      class: Illuminate\Console\Command
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/symfony/console/Application.php
+                      line: 320
+                      function: doRunCommand
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/symfony/console/Application.php
+                      line: 174
+                      function: doRun
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
+                      line: 201
+                      function: run
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /var/www/html/artisan
+                      line: 35
+                      function: handle
+                      class: Illuminate\Foundation\Console\Kernel
+                      type: '->'
+                properties:
+                  message:
+                    type: string
+                    example: 'No query results for model [App\Models\Coupon] 8'
+                  exception:
+                    type: string
+                    example: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+                  file:
+                    type: string
+                    example: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                  line:
+                    type: integer
+                    example: 487
+                  trace:
+                    type: array
+                    example:
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                        line: 463
+                        function: prepareException
+                        class: Illuminate\Foundation\Exceptions\Handler
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php
+                        line: 54
+                        function: render
+                        class: Illuminate\Foundation\Exceptions\Handler
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php
+                        line: 51
+                        function: render
+                        class: NunoMaduro\Collision\Adapters\Laravel\ExceptionHandler
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 185
+                        function: handleException
+                        class: Illuminate\Routing\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                        line: 159
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                        line: 125
+                        function: handleRequest
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                        line: 87
+                        function: handleRequestUsingNamedLimiter
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php
+                        line: 25
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 141
+                        function: 'Laravel\Sanctum\Http\Middleware\{closure}'
+                        class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php
+                        line: 24
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 798
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 777
+                        function: runRouteWithinStack
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 741
+                        function: runRoute
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 730
+                        function: dispatchToRoute
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 200
+                        function: dispatch
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 141
+                        function: 'Illuminate\Foundation\Http\{closure}'
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php
+                        line: 59
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Barryvdh\Debugbar\Middleware\InjectDebugbar
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                        line: 21
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
+                        line: 31
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                        line: 21
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
+                        line: 40
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TrimStrings
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
+                        line: 27
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
+                        line: 99
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
+                        line: 62
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Http\Middleware\HandleCors
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
+                        line: 39
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Http\Middleware\TrustProxies
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 175
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 144
+                        function: sendRequestThroughRouter
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 300
+                        function: handle
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 288
+                        function: callLaravelOrLumenRoute
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 91
+                        function: makeApiCall
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 44
+                        function: makeResponseCall
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 35
+                        function: makeResponseCallIfConditionsPass
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 236
+                        function: __invoke
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 163
+                        function: iterateThroughStrategies
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 95
+                        function: fetchResponses
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 125
+                        function: processRoute
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 72
+                        function: extractEndpointsInfoFromLaravelApp
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 50
+                        function: extractEndpointsInfoAndWriteToDisk
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
+                        line: 53
+                        function: get
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 36
+                        function: handle
+                        class: Knuckles\Scribe\Commands\GenerateDocumentation
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Util.php
+                        line: 41
+                        function: 'Illuminate\Container\{closure}'
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 93
+                        function: unwrapIfClosure
+                        class: Illuminate\Container\Util
+                        type: '::'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 35
+                        function: callBoundMethod
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php
+                        line: 662
+                        function: call
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                        line: 211
+                        function: call
+                        class: Illuminate\Container\Container
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/symfony/console/Command/Command.php
+                        line: 326
+                        function: execute
+                        class: Illuminate\Console\Command
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                        line: 180
+                        function: run
+                        class: Symfony\Component\Console\Command\Command
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/symfony/console/Application.php
+                        line: 1081
+                        function: run
+                        class: Illuminate\Console\Command
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/symfony/console/Application.php
+                        line: 320
+                        function: doRunCommand
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/symfony/console/Application.php
+                        line: 174
+                        function: doRun
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
+                        line: 201
+                        function: run
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /var/www/html/artisan
+                        line: 35
+                        function: handle
+                        class: Illuminate\Foundation\Console\Kernel
+                        type: '->'
+                    items:
+                      type: object
+                      properties:
+                        file:
+                          type: string
+                          example: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
+                        line:
+                          type: integer
+                          example: 463
+                        function:
+                          type: string
+                          example: prepareException
+                        class:
+                          type: string
+                          example: Illuminate\Foundation\Exceptions\Handler
+                        type:
+                          type: string
+                          example: '->'
+      tags:
+        - Payments
+      security: []
+    parameters:
+      -
+        in: path
+        name: code
+        description: ''
+        example: 8
+        required: true
+        schema:
+          type: integer
   '/api/coupons/{event_id}':
     get:
       summary: 'Display a listing of the resource.'
@@ -3565,7 +4408,7 @@ paths:
                 code:
                   type: string
                   description: 'The coupon code'
-                  example: voluptas
+                  example: exercitationem
                 discount_type:
                   type: string
                   description: 'The type of discount. Possible values: percentage, fixed.'
@@ -3581,7 +4424,7 @@ paths:
                 expires_at:
                   type: date
                   description: 'The expiration date of the coupon (Leave blank if you dont want to coupon to expire)'
-                  example: minima
+                  example: iusto
                 usage_limit:
                   type: integer
                   description: 'The maximum number of times the coupon can be used.'
@@ -3593,7 +4436,7 @@ paths:
                 event_id:
                   type: integer
                   description: 'The ID of the event this coupon is associated with.'
-                  example: 19
+                  example: 12
                 event_package_ids:
                   type: array
                   description: 'An array of event package IDs this coupon applies to. (Leave blank if you want it to apply to all)'
@@ -3614,38 +4457,7 @@ paths:
         in: path
         name: event_id
         description: 'The ID of the event.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-  '/api/coupons/{code}/show':
-    get:
-      summary: 'Display the specified resource.'
-      operationId: displayTheSpecifiedResource
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Payments
-      security: []
-    parameters:
-      -
-        in: path
-        name: code
-        description: ''
-        example: 1
+        example: 15
         required: true
         schema:
           type: integer
@@ -3668,7 +4480,7 @@ paths:
                 code:
                   type: string
                   description: 'The coupon code'
-                  example: autem
+                  example: dolores
                 discount_type:
                   type: string
                   description: 'The type of discount. Possible values: percentage, fixed.'
@@ -3684,7 +4496,7 @@ paths:
                 expires_at:
                   type: date
                   description: 'The expiration date of the coupon (Leave blank if you dont want to coupon to expire)'
-                  example: incidunt
+                  example: quo
                 usage_limit:
                   type: integer
                   description: 'The maximum number of times the coupon can be used.'
@@ -3696,7 +4508,7 @@ paths:
                 event_id:
                   type: integer
                   description: 'The ID of the event this coupon is associated with.'
-                  example: 2
+                  example: 20
                 event_package_ids:
                   type: array
                   description: 'An array of event package IDs this coupon applies to. (Leave blank if you want it to apply to all)'
@@ -3717,7 +4529,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the coupon.'
-        example: 5
+        example: 16
         required: true
         schema:
           type: integer
@@ -3736,7 +4548,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the coupon.'
-        example: 16
+        example: 12
         required: true
         schema:
           type: integer
@@ -5218,7 +6030,7 @@ paths:
                   type: array
                   description: 'An array of seats to create.'
                   example:
-                    - accusantium
+                    - est
                   items:
                     type: string
               required:
@@ -6479,19 +7291,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: dcyxcrf
+                  example: sdxabgblcuqpi
                 description:
                   type: string
                   description: ''
-                  example: 'Possimus eum distinctio at deserunt inventore porro enim.'
+                  example: 'Illo quo iste aliquam voluptate provident.'
                 features:
                   type: string
                   description: ''
-                  example: eveniet
+                  example: odio
                 capacity:
                   type: integer
                   description: ''
-                  example: 13
+                  example: 20
                 seats:
                   type: object
                   description: 'Must have at least 1 items.'
@@ -6520,15 +7332,15 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: vyi
+                  example: iurydeebqrz
                 description:
                   type: string
                   description: ''
-                  example: 'Voluptates exercitationem architecto enim sapiente sit praesentium temporibus.'
+                  example: 'Voluptas reprehenderit rerum quos quod voluptatem commodi animi.'
                 features:
                   type: string
                   description: ''
-                  example: optio
+                  example: et
                 capacity:
                   type: integer
                   description: ''
@@ -6581,7 +7393,7 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: qbernhard@example.net
+                  example: dibbert.brandi@example.com
                 event_id:
                   type: string
                   description: ''
@@ -6589,7 +7401,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: dicta
+                  example: similique
       security: []
   /api/event-attendees:
     get:
@@ -6642,7 +7454,7 @@ paths:
                 coupon_code:
                   type: string
                   description: ''
-                  example: sit
+                  example: doloremque
                 merchant:
                   type: string
                   description: 'The payment merchant to use.'
@@ -6675,7 +7487,7 @@ paths:
                   type: array
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
                   example:
-                    - hprh
+                    - dcimrdqplhi
                   items:
                     type: string
               required:
@@ -6719,7 +7531,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: ipsum
+                  example: a
               required:
                 - reference
       security: []
@@ -6742,15 +7554,15 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: et
+                  example: distinctio
                 quantity:
                   type: integer
                   description: 'Must be at least 1.'
-                  example: 2
+                  example: 26
                 seats:
                   type: array
                   description: 'Must have at least 1 items.'
-                  example: adxxa
+                  example: eaybqjhmwzpg
                   items:
                     type: string
               required:
@@ -7665,11 +8477,11 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: natus
+                  example: distinctio
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: rryan@example.net
+                  example: gerhold.cassidy@example.net
               required:
                 - reference
                 - email
@@ -7693,23 +8505,23 @@ paths:
                 ticket_payment_id:
                   type: integer
                   description: ''
-                  example: 5
+                  example: 11
                 hash:
                   type: string
                   description: ''
-                  example: veniam
+                  example: ipsum
                 reference:
                   type: string
                   description: ''
-                  example: eius
+                  example: qui
                 device_no:
                   type: string
                   description: ''
-                  example: odit
+                  example: doloribus
                 event_id:
                   type: integer
                   description: ''
-                  example: 12
+                  example: 9
               required:
                 - ticket_payment_id
                 - hash
@@ -7736,7 +8548,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: est
+                  example: quos
               required:
                 - reference
       security: []
@@ -7759,19 +8571,19 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: jhgumdtcwxxfrorqgfzx
+                  example: qlmylpwclimbqjpc
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: peter51@example.com
+                  example: alvah.lind@example.org
                 phone:
                   type: string
                   description: 'Must not be greater than 15 characters.'
-                  example: sfckzvfgedhiab
+                  example: wccdexyhgtz
                 address:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: zmdqvjpszbqoahfecojo
+                  example: nszjdhzxqhe
               required:
                 - name
                 - email

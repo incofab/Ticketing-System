@@ -34,12 +34,15 @@ class PaymentReference extends Model
   function getCallbackUrl()
   {
     $ticketPayment = $this->paymentable;
-    return addUrlParam($this->callback_url, [
-      'reference' => $this->reference,
-      'name' => $ticketPayment?->name,
-      // 'email' => $ticketPayment?->email,
-      'phone' => $ticketPayment?->phone
-    ]);
+    return addUrlParam(
+      $this->callback_url ?? 'https://shopurban.co/events/tedxenugu-2025-2',
+      [
+        'reference' => $this->reference,
+        'name' => $ticketPayment?->name,
+        // 'email' => $ticketPayment?->email,
+        'phone' => $ticketPayment?->phone
+      ]
+    );
   }
 
   private static function getCode()

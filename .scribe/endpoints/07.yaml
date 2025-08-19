@@ -85,7 +85,7 @@ endpoints:
         name: images
         description: 'Must have at least 1 items. Must not have more than 5 items.'
         required: true
-        example: mpyro
+        example: si
         type: 'file[]'
         enumValues: []
         exampleWasSpecified: false
@@ -103,13 +103,13 @@ endpoints:
         name: 'images[].reference'
         description: ''
         required: true
-        example: sit
+        example: perspiciatis
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      images: mpyro
+      images: si
     fileParameters: []
     responses: []
     responseFields: []
@@ -139,13 +139,13 @@ endpoints:
         name: eventImage_id
         description: 'The ID of the eventImage.'
         required: true
-        example: 15
+        example: 20
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      eventImage_id: 15
+      eventImage_id: 20
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

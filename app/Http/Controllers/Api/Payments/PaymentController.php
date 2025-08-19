@@ -17,6 +17,7 @@ class PaymentController extends Controller
    * @queryParam event_package_id int. No-example
    * @queryParam event_id int. No-example
    * @queryParam merchant string. No-example
+   * @queryParam referral_code string. No-example
    * @queryParam email string. No-example
    *
    * @queryParam sortKey string No-example
@@ -37,6 +38,6 @@ class PaymentController extends Controller
       ->with('eventPackage.event', 'eventPackage.seatSection')
       ->latest('ticket_payments.id');
 
-    return $this->apiRes(paginateFromRequest($query, 300));
+    return $this->apiRes(paginateFromRequest($query));
   }
 }
