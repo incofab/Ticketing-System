@@ -1,7 +1,9 @@
 <?php
 namespace App\Support\Payment\Processor;
 
+use App\Enums\PaymentMerchantType;
 use App\Enums\PaymentReferenceStatus;
+use App\Mail\TicketPaymentConfirmationMail;
 use App\Mail\TicketSoldMail;
 use App\Models\TicketPayment;
 use DB;
@@ -51,6 +53,19 @@ class TicketPaymentProcessor extends PaymentProcessor
           $eventPackage->quantity_sold + $ticketPayment->quantity
       ])
       ->save();
+
+    if (
+      $ticketPayment?->email &&
+      in_array($this->paymentReference->merchant, [
+        PaymentMerchantType::Paystack,
+        PaymentMerchantType::Paydestal,
+        PaymentMerchantType::Airvend
+      ])
+    ) {
+      Mail::to($ticketPayment->email)->queue(
+        new TicketPaymentConfirmationMail($this->paymentReference)
+      );
+    }
 
     if ($event->email) {
       Mail::to($event->email)->queue(

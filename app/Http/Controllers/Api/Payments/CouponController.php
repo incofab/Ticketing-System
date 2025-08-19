@@ -60,7 +60,7 @@ class CouponController extends Controller
    */
   public function show(Coupon $coupon)
   {
-    $this->authorize('update', $coupon->event);
+    //$this->authorize('update', $coupon->event);
     return $this->apiRes($coupon);
   }
 

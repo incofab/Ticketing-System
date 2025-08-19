@@ -3,11 +3,9 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
-use App\Mail\TicketPaymentConfirmationMail;
 use App\Support\Payment\Processor\PaymentProcessor;
 use Arr;
 use Illuminate\Http\Request;
-use Mail;
 
 class PaymentCallbackController extends Controller
 {
@@ -74,21 +72,18 @@ class PaymentCallbackController extends Controller
     [$ret, $paymentReference] = PaymentProcessor::makeFromReference(
       $reference
     )->handleCallback();
-    if (
-      !$paymentReference->callback_url ||
-      !$canRedirect ||
-      !$ret->isSuccessful()
-    ) {
+
+    if (!$paymentReference->callback_url || !$canRedirect) {
       return $ret->isSuccessful()
         ? $this->ok($ret->toArray())
         : $this->message($ret->getMessage() ?? 'Payment not successful', 403);
     }
-    $ticketPayment = $paymentReference->paymentable;
-    if ($ticketPayment?->email) {
-      Mail::to($ticketPayment->email)->queue(
-        new TicketPaymentConfirmationMail($paymentReference)
-      );
-    }
+    // $ticketPayment = $paymentReference->paymentable;
+    // if ($ticketPayment?->email) {
+    //   Mail::to($ticketPayment->email)->queue(
+    //     new TicketPaymentConfirmationMail($paymentReference)
+    //   );
+    // }
     return redirect($paymentReference->getCallbackUrl());
   }
 }
