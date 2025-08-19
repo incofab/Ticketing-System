@@ -145,7 +145,11 @@ class InitTicketPurchaseController extends Controller
   {
     if (
       $paymentReference->amount > 0 &&
-      $paymentReference->merchant !== PaymentMerchantType::Free
+      // $paymentReference->merchant !== PaymentMerchantType::Free
+      !in_array($paymentReference->merchant, [
+        PaymentMerchantType::BankDeposit,
+        PaymentMerchantType::Free
+      ])
     ) {
       return $res;
     }

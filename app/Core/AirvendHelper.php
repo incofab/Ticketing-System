@@ -66,7 +66,7 @@ class AirvendHelper
 
     return successRes($res->json('message') ?? 'Transaction verified', [
       'result' => $res->json('message'),
-      'amount' => $res->json('amount_received')
+      'amount' => $res->json('amount')
     ]);
   }
 
@@ -93,7 +93,7 @@ class AirvendHelper
 
     return successRes($res->json("$prefix.message") ?? 'Transaction verified', [
       'result' => $res->json("$prefix.message"),
-      'amount' => $res->json("$prefix.amount_received")
+      'amount' => $res->json("$prefix.amount")
     ]);
   }
 

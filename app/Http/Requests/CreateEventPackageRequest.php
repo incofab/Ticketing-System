@@ -55,7 +55,7 @@ class CreateEventPackageRequest extends FormRequest
             $allocatedCapacity -
             ($this->eventPackage?->capacity ?? 0);
 
-          if ($availableCapacity < 1) {
+          if ($availableCapacity < 0) {
             $fail('There are no available seats');
             return;
           }

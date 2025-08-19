@@ -25,16 +25,13 @@ class TicketUITableFilters extends BaseUITableFilter
 
   protected function generalSearch(string $search): static
   {
-    return $this;
-  }
-
-  protected function directQuery(): static
-  {
-    $this->baseQuery->when(
-      $this->requestGet('title'),
-      fn($q, $value) => $q->where('events.title', 'like', "%$value%")
+    $this->joinEventAttendee();
+    $this->baseQuery->where(
+      fn($q) => $q
+        ->where('event_attendees.email', 'like', "%$search%")
+        ->orWhere('event_attendees.name', 'like', "%$search%")
+        ->orWhere('event_attendees.phone', 'like', "%$search%")
     );
-
     return $this;
   }
 
@@ -51,6 +48,19 @@ class TicketUITableFilters extends BaseUITableFilter
     return $this;
   }
 
+  private function joinEventAttendee(): static
+  {
+    $this->callOnce(
+      'joinEventAttendee',
+      fn() => $this->baseQuery->join(
+        'event_attendees',
+        'event_attendees.ticket_id',
+        'tickets.id'
+      )
+    );
+    return $this;
+  }
+
   private function joinSeat(): static
   {
     $this->callOnce(
@@ -60,7 +70,7 @@ class TicketUITableFilters extends BaseUITableFilter
     return $this;
   }
 
-  public function filterQuery(): static
+  public function directQuery(): static
   {
     $this->joinEventPackage()->when(
       $this->requestGet('seat_section_id'),

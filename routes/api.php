@@ -103,6 +103,7 @@ Route::group(['prefix' => 'tickets'], function () {
     Route::group(['middleware' => ['auth:sanctum']], function () {
         Route::get('/index', Tickets\ListTicketController::class)->name('tickets.index');
     });
+    Route::post('/{ticket}/delete', [Tickets\TicketController::class, 'delete'])->name('tickets.delete');
 });
 
 Route::group(['prefix' => 'payments'], function () {

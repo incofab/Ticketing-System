@@ -8,6 +8,7 @@ use App\Mail\TicketPurchaseMail;
 use App\Models\Ticket;
 use App\Models\TicketPayment;
 use App\Support\MorphMap;
+use DB;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
@@ -57,7 +58,7 @@ class TicketController extends Controller
       })
       ->when(
         $request->reference,
-        fn($q) => $q->where('ticket_payments.reference', $request->reference)
+        fn($q) => $q->where('payment_references.reference', $request->reference)
       )
       ->when(
         $request->event_id,
@@ -103,5 +104,35 @@ class TicketController extends Controller
       'seatSection' => $ticket->eventPackage->seatSection,
       'event' => $ticket->eventPackage->event
     ]);
+  }
+
+  function delete(Ticket $ticket, Request $request)
+  {
+    $ticket->load(
+      'eventPackage.event',
+      'eventAttendee', // handled
+      'ticketVerification', // handled
+      'seat.seatSection'
+    );
+    $user = currentUser();
+    abort_unless(
+      $user->isAdmin() || $ticket->eventPackage->event->user_id == $user->id,
+      403,
+      'Access denied'
+    );
+    $eventPackage = $ticket->eventPackage;
+    DB::beginTransaction();
+    if (!$ticket->delete()) {
+      return $this->error('Failed to delete ticket');
+    }
+    $ticketPayment = $ticket->ticketPayment;
+    $ticketPayment->paymentReferences()->delete();
+    $ticketPayment->delete();
+    $eventPackage
+      ->fill(['quantity_sold' => $eventPackage->quantity_sold - 1])
+      ->save();
+
+    DB::commit();
+    return $this->ok();
   }
 }

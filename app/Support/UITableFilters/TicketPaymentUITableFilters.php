@@ -30,6 +30,7 @@ class TicketPaymentUITableFilters extends BaseUITableFilter
     $this->baseQuery->where(
       fn($q) => $q->where('ticket_payments.email', 'like', "%$search%")
     );
+    return $this;
   }
 
   private function joinPaymentReference(): static
@@ -62,17 +63,7 @@ class TicketPaymentUITableFilters extends BaseUITableFilter
     return $this;
   }
 
-  protected function directQuery(): static
-  {
-    $this->baseQuery->when(
-      $this->requestGet('title'),
-      fn($q, $value) => $q->where('events.title', 'like', "%$value%")
-    );
-
-    return $this;
-  }
-
-  public function filterQuery(): static
+  public function directQuery(): static
   {
     $this->joinPaymentReference()->when(
       $this->requestGet('event_id'),
