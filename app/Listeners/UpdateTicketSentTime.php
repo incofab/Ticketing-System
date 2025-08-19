@@ -2,7 +2,7 @@
 
 namespace App\Listeners;
 
-use App\Mail\TicketPurchaseMail;
+use App\Models\Ticket;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Events\MessageSent;
 use Illuminate\Queue\InteractsWithQueue;
@@ -22,9 +22,9 @@ class UpdateTicketSentTime
    */
   public function handle(MessageSent $event): void
   {
-    $mailable = $event->data['mailable'] ?? null;
-    if ($mailable instanceof TicketPurchaseMail) {
-      $ticket = $mailable->ticket;
+    $ticket = $event->data['ticket'] ?? null;
+
+    if ($ticket instanceof Ticket) {
       $ticket->update(['sent_at' => now()]);
     }
   }
