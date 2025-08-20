@@ -39,7 +39,7 @@ class PaymentReference extends Model
       [
         'reference' => $this->reference,
         'name' => $ticketPayment?->name,
-        // 'email' => $ticketPayment?->email,
+        'email' => $ticketPayment?->email,
         'phone' => $ticketPayment?->phone
       ]
     );

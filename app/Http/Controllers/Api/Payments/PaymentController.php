@@ -19,6 +19,8 @@ class PaymentController extends Controller
    * @queryParam merchant string. No-example
    * @queryParam referral_code string. No-example
    * @queryParam email string. No-example
+   * @queryParam phone string. No-example
+   * @queryParam reference string. No-example
    *
    * @queryParam sortKey string No-example
    * @queryParam sortDir string Represents the direction of the sort. ASC|DESC. No-example

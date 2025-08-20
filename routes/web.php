@@ -15,6 +15,20 @@ Route::get('/callback/paystack', [Home\PaymentCallbackController::class, 'paysta
 Route::get('/callback/paydestal', [Home\PaymentCallbackController::class, 'paydestalCallback'])->name('callback.paydestal');
 
 Route::get('/dummy1', function () {
+  $refs = \App\Models\PaymentReference::query()
+    ->where('status', \App\Enums\PaymentReferenceStatus::Confirmed)
+    ->whereBetween('updated_at', [now()->parse('2025-08-20 05:00:00'), now()->parse('2025-08-20 14:00:00')])
+    ->where('updated_at', '<', now()->parse('2025-08-20 05:00:00'))
+    ->with('paymentable.tickets')
+    ->get();
+    dd(['count' => $refs->count()]);
+    foreach ($refs as $ref) {
+      $ticketPayment = $ref->paymentable;
+      if($ticketPayment?->email){
+        \Mail::to($ticketPayment->email)->send(new \App\Mail\TicketPaymentConfirmationMail($ref));
+      }
+    }
+  return $refs->count() . ' emails sent successfully';
   Mail::to('incofabikenna@gmail.com')->send(new \App\Mail\TicketPurchaseMail(Ticket::query()->first()));
   return 'Mail sent successfully'; 
   // dd(now()->to);

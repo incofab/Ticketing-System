@@ -21,7 +21,9 @@ class TicketPaymentUITableFilters extends BaseUITableFilter
       'event_package_id' => ['nullable', 'integer'], // 'exists:event_package_id,id'],
       'event_id' => ['nullable', 'integer'],
       'email' => ['nullable', 'string'],
+      'phone' => ['nullable', 'string'],
       'merchant' => ['nullable', 'string'],
+      'reference' => ['nullable', 'string'],
       'referral_code' => ['nullable', 'string']
     ];
   }
@@ -90,6 +92,10 @@ class TicketPaymentUITableFilters extends BaseUITableFilter
       ->when(
         $this->requestGet('email'),
         fn($q, $value) => $q->where('ticket_payments.email', $value)
+      )
+      ->when(
+        $this->requestGet('phone'),
+        fn($q, $value) => $q->where('ticket_payments.phone', $value)
       )
       ->when(
         $this->requestGet('merchant'),

@@ -288,7 +288,7 @@ endpoints:
         name: event_packages
         description: 'Must have at least 1 items.'
         required: false
-        example: jutxm
+        example: budhfkkxlbdmsfrdzgwybrjvjxhyzpqvtyvpspbpikpks
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -297,7 +297,7 @@ endpoints:
         name: 'event_packages[].seat_section_id'
         description: ''
         required: true
-        example: qui
+        example: dolores
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -306,7 +306,7 @@ endpoints:
         name: 'event_packages[].price'
         description: ''
         required: true
-        example: 107885.0
+        example: 18.2276
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -315,13 +315,13 @@ endpoints:
         name: 'event_packages[].title'
         description: ''
         required: true
-        example: in
+        example: qui
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      event_packages: jutxm
+      event_packages: budhfkkxlbdmsfrdzgwybrjvjxhyzpqvtyvpspbpikpks
     fileParameters: []
     responses: []
     responseFields: []

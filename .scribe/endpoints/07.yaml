@@ -85,7 +85,7 @@ endpoints:
         name: images
         description: 'Must have at least 1 items. Must not have more than 5 items.'
         required: true
-        example: si
+        example: ofi
         type: 'file[]'
         enumValues: []
         exampleWasSpecified: false
@@ -103,13 +103,13 @@ endpoints:
         name: 'images[].reference'
         description: ''
         required: true
-        example: perspiciatis
+        example: repudiandae
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      images: si
+      images: ofi
     fileParameters: []
     responses: []
     responseFields: []
@@ -139,13 +139,13 @@ endpoints:
         name: eventImage_id
         description: 'The ID of the eventImage.'
         required: true
-        example: 20
+        example: 7
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      eventImage_id: 20
+      eventImage_id: 7
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

@@ -74,6 +74,24 @@ endpoints:
         enumValues: []
         exampleWasSpecified: false
         custom: []
+      phone:
+        name: phone
+        description: string.
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      reference:
+        name: reference
+        description: string.
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
       sortKey:
         name: sortKey
         description: ''
@@ -162,13 +180,13 @@ endpoints:
         name: code
         description: ''
         required: true
-        example: 8
+        example: 5
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      code: 8
+      code: 5
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -179,7 +197,7 @@ endpoints:
         status: 404
         content: |-
           {
-              "message": "No query results for model [App\\Models\\Coupon] 8",
+              "message": "No query results for model [App\\Models\\Coupon] 5",
               "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
               "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
               "line": 487,
@@ -669,13 +687,13 @@ endpoints:
         name: event_id
         description: 'The ID of the event.'
         required: true
-        example: 15
+        example: 2
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      event_id: 15
+      event_id: 2
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -718,13 +736,13 @@ endpoints:
         name: event_id
         description: 'The ID of the event.'
         required: true
-        example: 11
+        example: 14
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      event_id: 11
+      event_id: 14
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -732,7 +750,7 @@ endpoints:
         name: code
         description: 'The coupon code'
         required: true
-        example: exercitationem
+        example: perspiciatis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -768,7 +786,7 @@ endpoints:
         name: expires_at
         description: 'The expiration date of the coupon (Leave blank if you dont want to coupon to expire)'
         required: false
-        example: iusto
+        example: nostrum
         type: date
         enumValues: []
         exampleWasSpecified: false
@@ -795,7 +813,7 @@ endpoints:
         name: event_id
         description: 'The ID of the event this coupon is associated with.'
         required: true
-        example: 12
+        example: 10
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -813,14 +831,14 @@ endpoints:
         exampleWasSpecified: true
         custom: []
     cleanBodyParameters:
-      code: exercitationem
+      code: perspiciatis
       discount_type: percentage
       discount_value: 20.0
       min_purchase: 100.0
-      expires_at: iusto
+      expires_at: nostrum
       usage_limit: 10
       usage_count: 0
-      event_id: 12
+      event_id: 10
       event_package_ids:
         - 1
         - 2
@@ -854,13 +872,13 @@ endpoints:
         name: id
         description: 'The ID of the coupon.'
         required: true
-        example: 16
+        example: 17
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 17
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -868,7 +886,7 @@ endpoints:
         name: code
         description: 'The coupon code'
         required: true
-        example: dolores
+        example: tempora
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -904,7 +922,7 @@ endpoints:
         name: expires_at
         description: 'The expiration date of the coupon (Leave blank if you dont want to coupon to expire)'
         required: false
-        example: quo
+        example: ipsam
         type: date
         enumValues: []
         exampleWasSpecified: false
@@ -931,7 +949,7 @@ endpoints:
         name: event_id
         description: 'The ID of the event this coupon is associated with.'
         required: true
-        example: 20
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -949,14 +967,14 @@ endpoints:
         exampleWasSpecified: true
         custom: []
     cleanBodyParameters:
-      code: dolores
+      code: tempora
       discount_type: percentage
       discount_value: 20.0
       min_purchase: 100.0
-      expires_at: quo
+      expires_at: ipsam
       usage_limit: 10
       usage_count: 0
-      event_id: 20
+      event_id: 1
       event_package_ids:
         - 1
         - 2
@@ -990,13 +1008,13 @@ endpoints:
         name: id
         description: 'The ID of the coupon.'
         required: true
-        example: 12
+        example: 19
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 12
+      id: 19
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
