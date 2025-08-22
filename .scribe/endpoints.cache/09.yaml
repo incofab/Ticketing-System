@@ -146,7 +146,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"message":"","data":{"current_page":1,"data":[{"id":11,"quantity":1,"amount":null,"original_amount":null,"discount_amount":0,"event_package_id":1,"coupon_id":null,"user_id":null,"name":null,"phone":null,"email":"my@gmail.com","created_at":"2024-01-20T09:28:24.000000Z","updated_at":"2024-01-20T09:28:24.000000Z","processing":false,"referral_code":null,"receivers":null,"status":"confirmed","merchant":"paystack","event_package":{"id":1,"event_id":1,"seat_section_id":5,"price":3725.7,"quantity_sold":1,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-20T09:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0,"event":{"id":1,"event_season_id":1,"title":"Free","description":"Sequi rerum aut magni ea qui est consequatur.","venue":"International Conference Center (Enugu)","start_time":"2024-03-12T17:35:58.000000Z","end_time":"2024-04-12T17:35:58.000000Z","home_team":"expedita","away_team":"unde","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","facebook":null,"instagram":null,"tiktok":null,"twitter":null,"youtube":null,"linkedin":null,"logo":null,"user_id":null,"payment_merchants":null,"expired":true},"seat_section":{"id":5,"capacity":708,"title":"Sit est reprehenderit nisi quis ipsam inventore.","description":"Quis est quibusdam et perferendis adipisci fugit laborum consequatur repellendus enim quis provident temporibus quasi.","features":"Maxime qui eos nisi quam debitis occaecati modi voluptatem voluptatem.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z"}}},{"id":9,"quantity":0,"amount":null,"original_amount":null,"discount_amount":0,"event_package_id":13,"coupon_id":null,"user_id":13,"name":"Ms. Celia Sanford","phone":"+1-937-592-8181","email":"kstehr@yahoo.com","created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","processing":false,"referral_code":null,"receivers":null,"status":"confirmed","merchant":"paystack","event_package":{"id":13,"event_id":13,"seat_section_id":21,"price":4331.2,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0,"event":{"id":13,"event_season_id":13,"title":"Vitae ut quia aut quidem quia.","description":"Magnam debitis ut ut deleniti et dolor et ex ut sequi.","venue":null,"start_time":"2024-03-12T17:35:58.000000Z","end_time":"2024-04-12T17:35:58.000000Z","home_team":"cum","away_team":"similique","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","facebook":null,"instagram":null,"tiktok":null,"twitter":null,"youtube":null,"linkedin":null,"logo":null,"user_id":null,"payment_merchants":null,"expired":true},"seat_section":{"id":21,"capacity":269,"title":"Alias esse amet reiciendis et.","description":"Ut molestias unde aut vero quam qui sequi quis saepe porro veniam.","features":"Fuga consequatur porro ut voluptatem rerum deleniti eaque nihil deleniti.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z"}}},{"id":7,"quantity":9,"amount":null,"original_amount":null,"discount_amount":0,"event_package_id":10,"coupon_id":null,"user_id":10,"name":"Mekhi Conroy MD","phone":"352.795.5298","email":"hdare@bahringer.net","created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","processing":false,"referral_code":null,"receivers":null,"status":"confirmed","merchant":"paystack","event_package":{"id":10,"event_id":10,"seat_section_id":17,"price":6388.9,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0,"event":{"id":10,"event_season_id":10,"title":"Omnis eveniet eligendi explicabo optio quam quia sunt quia.","description":"Eum autem quasi ipsa voluptatem quod nulla quia qui minus quia.","venue":null,"start_time":"2024-03-12T17:35:58.000000Z","end_time":"2024-04-12T17:35:58.000000Z","home_team":"qui","away_team":"doloremque","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","facebook":null,"instagram":null,"tiktok":null,"twitter":null,"youtube":null,"linkedin":null,"logo":null,"user_id":null,"payment_merchants":null,"expired":true},"seat_section":{"id":17,"capacity":395,"title":"Facilis doloremque impedit nihil tenetur mollitia cupiditate illum.","description":"Voluptate aliquam aut et quasi culpa ipsa quibusdam et quisquam dolorum.","features":"Facilis soluta dolorem sed perferendis qui non alias et ipsum.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z"}}},{"id":5,"quantity":1,"amount":null,"original_amount":null,"discount_amount":0,"event_package_id":7,"coupon_id":null,"user_id":7,"name":"Summer Hoeger MD","phone":"+1 (534) 499-1341","email":"alex.mayer@kling.org","created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","processing":false,"referral_code":null,"receivers":null,"status":"confirmed","merchant":"paystack","event_package":{"id":7,"event_id":7,"seat_section_id":13,"price":1755.2,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0,"event":{"id":7,"event_season_id":7,"title":"Alias cupiditate aut aut quo.","description":"Nesciunt laboriosam aut maxime modi iste officiis eius.","venue":null,"start_time":"2024-03-12T17:35:58.000000Z","end_time":"2024-04-12T17:35:58.000000Z","home_team":"et","away_team":"eos","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","facebook":null,"instagram":null,"tiktok":null,"twitter":null,"youtube":null,"linkedin":null,"logo":null,"user_id":null,"payment_merchants":null,"expired":true},"seat_section":{"id":13,"capacity":577,"title":"Dolorem quae odit nesciunt nemo et facilis magnam aut.","description":"Consequatur ut sed nesciunt fugit totam beatae reiciendis sed aut sed aut doloremque minima.","features":"Qui velit a qui non rerum.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z"}}},{"id":3,"quantity":4,"amount":null,"original_amount":null,"discount_amount":0,"event_package_id":4,"coupon_id":null,"user_id":4,"name":"Kolby Spinka","phone":"217-274-5233","email":"haylee45@hotmail.com","created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","processing":false,"referral_code":null,"receivers":null,"status":"cancelled","merchant":"paystack","event_package":{"id":4,"event_id":4,"seat_section_id":9,"price":5039.9,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0,"event":{"id":4,"event_season_id":4,"title":"Reiciendis officiis sunt quia omnis voluptates cupiditate laborum.","description":"Ipsam aut tempore voluptatem et eos est eligendi illo quod dolorem quos.","venue":null,"start_time":"2024-03-12T17:35:58.000000Z","end_time":"2024-04-12T17:35:58.000000Z","home_team":"enim","away_team":"quis","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","facebook":null,"instagram":null,"tiktok":null,"twitter":null,"youtube":null,"linkedin":null,"logo":null,"user_id":null,"payment_merchants":null,"expired":true},"seat_section":{"id":9,"capacity":919,"title":"Saepe dolor culpa est enim voluptatem ea et similique.","description":"Quia hic harum vel iure consequatur veritatis totam et officiis.","features":"Molestiae praesentium autem est soluta recusandae nostrum sed et consequatur cum.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z"}}},{"id":1,"quantity":7,"amount":null,"original_amount":null,"discount_amount":0,"event_package_id":1,"coupon_id":null,"user_id":1,"name":"Ernestina Balistreri Jr.","phone":"551-275-8293","email":"katrina12@yahoo.com","created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","processing":false,"referral_code":null,"receivers":null,"status":"cancelled","merchant":"paystack","event_package":{"id":1,"event_id":1,"seat_section_id":5,"price":3725.7,"quantity_sold":1,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-20T09:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0,"event":{"id":1,"event_season_id":1,"title":"Free","description":"Sequi rerum aut magni ea qui est consequatur.","venue":"International Conference Center (Enugu)","start_time":"2024-03-12T17:35:58.000000Z","end_time":"2024-04-12T17:35:58.000000Z","home_team":"expedita","away_team":"unde","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","facebook":null,"instagram":null,"tiktok":null,"twitter":null,"youtube":null,"linkedin":null,"logo":null,"user_id":null,"payment_merchants":null,"expired":true},"seat_section":{"id":5,"capacity":708,"title":"Sit est reprehenderit nisi quis ipsam inventore.","description":"Quis est quibusdam et perferendis adipisci fugit laborum consequatur repellendus enim quis provident temporibus quasi.","features":"Maxime qui eos nisi quam debitis occaecati modi voluptatem voluptatem.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z"}}}],"first_page_url":"http:\/\/localhost\/api\/payments\/index?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/payments\/index?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/payments\/index?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/payments\/index","per_page":50,"prev_page_url":null,"to":6,"total":6}}'
+        content: '{"message":"","data":{"current_page":1,"data":[{"id":11,"quantity":1,"amount":null,"original_amount":null,"discount_amount":0,"event_package_id":1,"coupon_id":null,"user_id":null,"name":null,"phone":null,"email":"my@gmail.com","created_at":"2024-01-20T09:28:24.000000Z","updated_at":"2024-01-20T09:28:24.000000Z","processing":false,"referral_code":null,"receivers":null,"status":"confirmed","merchant":"paystack","event_package":{"id":1,"event_id":1,"seat_section_id":5,"price":3725.7,"quantity_sold":1,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-20T09:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0,"event":{"id":1,"event_season_id":1,"title":"Free","description":"Sequi rerum aut magni ea qui est consequatur.","venue":"International Conference Center (Enugu)","start_time":"2024-03-12T17:35:58.000000Z","end_time":"2024-04-12T17:35:58.000000Z","home_team":"expedita","away_team":"unde","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","facebook":null,"instagram":null,"tiktok":null,"twitter":null,"youtube":null,"linkedin":null,"logo":null,"user_id":null,"payment_merchants":null,"expired":true},"seat_section":{"id":5,"capacity":708,"title":"Sit est reprehenderit nisi quis ipsam inventore.","description":"Quis est quibusdam et perferendis adipisci fugit laborum consequatur repellendus enim quis provident temporibus quasi.","features":"Maxime qui eos nisi quam debitis occaecati modi voluptatem voluptatem.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z"}},"payment_reference":{"id":6,"paymentable_type":"ticket-payment","paymentable_id":11,"user_id":null,"reference":"97d907baeea44aa","merchant":"paystack","amount":3725.7,"charge":0,"content":[],"status":"confirmed","created_at":"2024-01-20T09:28:24.000000Z","updated_at":"2024-01-20T09:35:58.000000Z","callback_url":null}},{"id":9,"quantity":0,"amount":null,"original_amount":null,"discount_amount":0,"event_package_id":13,"coupon_id":null,"user_id":13,"name":"Ms. Celia Sanford","phone":"+1-937-592-8181","email":"kstehr@yahoo.com","created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","processing":false,"referral_code":null,"receivers":null,"status":"confirmed","merchant":"paystack","event_package":{"id":13,"event_id":13,"seat_section_id":21,"price":4331.2,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0,"event":{"id":13,"event_season_id":13,"title":"Vitae ut quia aut quidem quia.","description":"Magnam debitis ut ut deleniti et dolor et ex ut sequi.","venue":null,"start_time":"2024-03-12T17:35:58.000000Z","end_time":"2024-04-12T17:35:58.000000Z","home_team":"cum","away_team":"similique","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","facebook":null,"instagram":null,"tiktok":null,"twitter":null,"youtube":null,"linkedin":null,"logo":null,"user_id":null,"payment_merchants":null,"expired":true},"seat_section":{"id":21,"capacity":269,"title":"Alias esse amet reiciendis et.","description":"Ut molestias unde aut vero quam qui sequi quis saepe porro veniam.","features":"Fuga consequatur porro ut voluptatem rerum deleniti eaque nihil deleniti.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z"}},"payment_reference":{"id":5,"paymentable_type":"ticket-payment","paymentable_id":9,"user_id":13,"reference":"9b13827b-af5d-4a56-b174-33bb71a2609b","merchant":"paystack","amount":79441.2,"charge":0,"content":null,"status":"confirmed","created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","callback_url":null}},{"id":7,"quantity":9,"amount":null,"original_amount":null,"discount_amount":0,"event_package_id":10,"coupon_id":null,"user_id":10,"name":"Mekhi Conroy MD","phone":"352.795.5298","email":"hdare@bahringer.net","created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","processing":false,"referral_code":null,"receivers":null,"status":"confirmed","merchant":"paystack","event_package":{"id":10,"event_id":10,"seat_section_id":17,"price":6388.9,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0,"event":{"id":10,"event_season_id":10,"title":"Omnis eveniet eligendi explicabo optio quam quia sunt quia.","description":"Eum autem quasi ipsa voluptatem quod nulla quia qui minus quia.","venue":null,"start_time":"2024-03-12T17:35:58.000000Z","end_time":"2024-04-12T17:35:58.000000Z","home_team":"qui","away_team":"doloremque","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","facebook":null,"instagram":null,"tiktok":null,"twitter":null,"youtube":null,"linkedin":null,"logo":null,"user_id":null,"payment_merchants":null,"expired":true},"seat_section":{"id":17,"capacity":395,"title":"Facilis doloremque impedit nihil tenetur mollitia cupiditate illum.","description":"Voluptate aliquam aut et quasi culpa ipsa quibusdam et quisquam dolorum.","features":"Facilis soluta dolorem sed perferendis qui non alias et ipsum.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z"}},"payment_reference":{"id":4,"paymentable_type":"ticket-payment","paymentable_id":7,"user_id":10,"reference":"9b13827b-9ec9-406e-a083-db4f29b73f06","merchant":"paystack","amount":17741.92,"charge":0,"content":null,"status":"confirmed","created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","callback_url":null}},{"id":5,"quantity":1,"amount":null,"original_amount":null,"discount_amount":0,"event_package_id":7,"coupon_id":null,"user_id":7,"name":"Summer Hoeger MD","phone":"+1 (534) 499-1341","email":"alex.mayer@kling.org","created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","processing":false,"referral_code":null,"receivers":null,"status":"confirmed","merchant":"paystack","event_package":{"id":7,"event_id":7,"seat_section_id":13,"price":1755.2,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0,"event":{"id":7,"event_season_id":7,"title":"Alias cupiditate aut aut quo.","description":"Nesciunt laboriosam aut maxime modi iste officiis eius.","venue":null,"start_time":"2024-03-12T17:35:58.000000Z","end_time":"2024-04-12T17:35:58.000000Z","home_team":"et","away_team":"eos","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","facebook":null,"instagram":null,"tiktok":null,"twitter":null,"youtube":null,"linkedin":null,"logo":null,"user_id":null,"payment_merchants":null,"expired":true},"seat_section":{"id":13,"capacity":577,"title":"Dolorem quae odit nesciunt nemo et facilis magnam aut.","description":"Consequatur ut sed nesciunt fugit totam beatae reiciendis sed aut sed aut doloremque minima.","features":"Qui velit a qui non rerum.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z"}},"payment_reference":{"id":3,"paymentable_type":"ticket-payment","paymentable_id":5,"user_id":7,"reference":"9b13827b-8ef6-40df-bd30-28285978a784","merchant":"paystack","amount":31598.58,"charge":0,"content":null,"status":"confirmed","created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","callback_url":null}},{"id":3,"quantity":4,"amount":null,"original_amount":null,"discount_amount":0,"event_package_id":4,"coupon_id":null,"user_id":4,"name":"Kolby Spinka","phone":"217-274-5233","email":"haylee45@hotmail.com","created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","processing":false,"referral_code":null,"receivers":null,"status":"cancelled","merchant":"paystack","event_package":{"id":4,"event_id":4,"seat_section_id":9,"price":5039.9,"quantity_sold":0,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0,"event":{"id":4,"event_season_id":4,"title":"Reiciendis officiis sunt quia omnis voluptates cupiditate laborum.","description":"Ipsam aut tempore voluptatem et eos est eligendi illo quod dolorem quos.","venue":null,"start_time":"2024-03-12T17:35:58.000000Z","end_time":"2024-04-12T17:35:58.000000Z","home_team":"enim","away_team":"quis","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","facebook":null,"instagram":null,"tiktok":null,"twitter":null,"youtube":null,"linkedin":null,"logo":null,"user_id":null,"payment_merchants":null,"expired":true},"seat_section":{"id":9,"capacity":919,"title":"Saepe dolor culpa est enim voluptatem ea et similique.","description":"Quia hic harum vel iure consequatur veritatis totam et officiis.","features":"Molestiae praesentium autem est soluta recusandae nostrum sed et consequatur cum.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z"}},"payment_reference":{"id":2,"paymentable_type":"ticket-payment","paymentable_id":3,"user_id":4,"reference":"9b13827b-7cf2-4a96-b339-6f087fc564a7","merchant":"paystack","amount":44835.04,"charge":0,"content":null,"status":"cancelled","created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2025-07-28T20:57:20.000000Z","callback_url":null}},{"id":1,"quantity":7,"amount":null,"original_amount":null,"discount_amount":0,"event_package_id":1,"coupon_id":null,"user_id":1,"name":"Ernestina Balistreri Jr.","phone":"551-275-8293","email":"katrina12@yahoo.com","created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","processing":false,"referral_code":null,"receivers":null,"status":"cancelled","merchant":"paystack","event_package":{"id":1,"event_id":1,"seat_section_id":5,"price":3725.7,"quantity_sold":1,"deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-20T09:35:58.000000Z","entry_gate":null,"title":"","notes":null,"capacity":0,"event":{"id":1,"event_season_id":1,"title":"Free","description":"Sequi rerum aut magni ea qui est consequatur.","venue":"International Conference Center (Enugu)","start_time":"2024-03-12T17:35:58.000000Z","end_time":"2024-04-12T17:35:58.000000Z","home_team":"expedita","away_team":"unde","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z","facebook":null,"instagram":null,"tiktok":null,"twitter":null,"youtube":null,"linkedin":null,"logo":null,"user_id":null,"payment_merchants":null,"expired":true},"seat_section":{"id":5,"capacity":708,"title":"Sit est reprehenderit nisi quis ipsam inventore.","description":"Quis est quibusdam et perferendis adipisci fugit laborum consequatur repellendus enim quis provident temporibus quasi.","features":"Maxime qui eos nisi quam debitis occaecati modi voluptatem voluptatem.","deleted_at":null,"created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2024-01-12T17:35:58.000000Z"}},"payment_reference":{"id":1,"paymentable_type":"ticket-payment","paymentable_id":1,"user_id":1,"reference":"9b13827b-675d-472b-a574-73ffab64dca7","merchant":"paystack","amount":36789.18,"charge":0,"content":null,"status":"cancelled","created_at":"2024-01-12T17:35:58.000000Z","updated_at":"2025-07-28T21:05:22.000000Z","callback_url":null}}],"first_page_url":"http:\/\/localhost\/api\/payments\/index?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/payments\/index?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/payments\/index?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/payments\/index","per_page":50,"prev_page_url":null,"to":6,"total":6}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -182,13 +182,13 @@ endpoints:
         name: code
         description: ''
         required: true
-        example: 5
+        example: 9
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      code: 5
+      code: 9
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -199,7 +199,7 @@ endpoints:
         status: 404
         content: |-
           {
-              "message": "No query results for model [App\\Models\\Coupon] 5",
+              "message": "No query results for model [App\\Models\\Coupon] 9",
               "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
               "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
               "line": 487,
@@ -689,13 +689,13 @@ endpoints:
         name: event_id
         description: 'The ID of the event.'
         required: true
-        example: 2
+        example: 12
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      event_id: 2
+      event_id: 12
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -738,13 +738,13 @@ endpoints:
         name: event_id
         description: 'The ID of the event.'
         required: true
-        example: 14
+        example: 7
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      event_id: 14
+      event_id: 7
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -752,7 +752,7 @@ endpoints:
         name: code
         description: 'The coupon code'
         required: true
-        example: perspiciatis
+        example: ea
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -788,7 +788,7 @@ endpoints:
         name: expires_at
         description: 'The expiration date of the coupon (Leave blank if you dont want to coupon to expire)'
         required: false
-        example: nostrum
+        example: enim
         type: date
         enumValues: []
         exampleWasSpecified: false
@@ -815,7 +815,7 @@ endpoints:
         name: event_id
         description: 'The ID of the event this coupon is associated with.'
         required: true
-        example: 10
+        example: 17
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -833,14 +833,14 @@ endpoints:
         exampleWasSpecified: true
         custom: []
     cleanBodyParameters:
-      code: perspiciatis
+      code: ea
       discount_type: percentage
       discount_value: 20.0
       min_purchase: 100.0
-      expires_at: nostrum
+      expires_at: enim
       usage_limit: 10
       usage_count: 0
-      event_id: 10
+      event_id: 17
       event_package_ids:
         - 1
         - 2
@@ -874,13 +874,13 @@ endpoints:
         name: id
         description: 'The ID of the coupon.'
         required: true
-        example: 17
+        example: 18
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 17
+      id: 18
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -888,7 +888,7 @@ endpoints:
         name: code
         description: 'The coupon code'
         required: true
-        example: tempora
+        example: pariatur
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -924,7 +924,7 @@ endpoints:
         name: expires_at
         description: 'The expiration date of the coupon (Leave blank if you dont want to coupon to expire)'
         required: false
-        example: ipsam
+        example: id
         type: date
         enumValues: []
         exampleWasSpecified: false
@@ -951,7 +951,7 @@ endpoints:
         name: event_id
         description: 'The ID of the event this coupon is associated with.'
         required: true
-        example: 1
+        example: 9
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -969,14 +969,14 @@ endpoints:
         exampleWasSpecified: true
         custom: []
     cleanBodyParameters:
-      code: tempora
+      code: pariatur
       discount_type: percentage
       discount_value: 20.0
       min_purchase: 100.0
-      expires_at: ipsam
+      expires_at: id
       usage_limit: 10
       usage_count: 0
-      event_id: 1
+      event_id: 9
       event_package_ids:
         - 1
         - 2
@@ -1010,13 +1010,13 @@ endpoints:
         name: id
         description: 'The ID of the coupon.'
         required: true
-        example: 19
+        example: 20
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 19
+      id: 20
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

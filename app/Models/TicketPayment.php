@@ -42,6 +42,11 @@ class TicketPayment extends Model
     return $this->hasMany(Ticket::class);
   }
 
+  function paymentReference()
+  {
+    return $this->morphOne(PaymentReference::class, 'paymentable');
+  }
+  /** @deprecated */
   function paymentReferences()
   {
     return $this->morphMany(PaymentReference::class, 'paymentable');

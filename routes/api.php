@@ -65,6 +65,7 @@ Route::group(['prefix' => 'events'], function () {
     Route::get('/upcoming/{eventSeason?}', [Events\EventController::class, 'upcomingEvents'])->name('events.upcoming');
     Route::get('/show/{event}', [Events\EventController::class, 'show'])->name('events.show');
     Route::group(['middleware' => ['auth:sanctum']], function () {
+        Route::get('users/index/{eventSeason?}', [Events\EventController::class, 'index'])->name('events.users.index');
         Route::post('/event-seasons/{eventSeason}/store', [Events\EventController::class, 'store'])->name('events.store');
         Route::post('/{event}/update', [Events\EventController::class, 'update'])->name('events.update');
         Route::post('/{event}/destroy', [Events\EventController::class, 'destroy'])->name('events.destroy');

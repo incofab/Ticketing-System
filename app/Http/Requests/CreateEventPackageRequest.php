@@ -48,12 +48,21 @@ class CreateEventPackageRequest extends FormRequest
           );
           $allocatedCapacity = EventPackage::whereSeatSectionId(
             $seatSection->id
-          )->sum('capacity');
+          )
+            ->when(
+              $this->event,
+              fn($q, $val) => $q->where('event_id', $val->id)
+            )
+            ->when(
+              $this->eventPackage,
+              fn($q, $val) => $q
+                ->where('event_id', $val->event_id)
+                ->where('id', '!=', $val->id)
+            )
+            ->sum('capacity');
 
-          $availableCapacity =
-            $seatSection->capacity -
-            $allocatedCapacity -
-            ($this->eventPackage?->capacity ?? 0);
+          $availableCapacity = $seatSection->capacity - $allocatedCapacity; // -
+          // ($this->eventPackage?->capacity ?? 0);
 
           if ($availableCapacity < 0) {
             $fail('There are no available seats');

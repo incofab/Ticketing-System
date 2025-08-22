@@ -60,11 +60,11 @@ paths:
                 date_from:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2025-08-20T11:01:16'
+                  example: '2025-08-22T17:52:53'
                 date_to:
                   type: string
                   description: 'Must be a valid date. This field is required when <code>date_from</code> is present. Must be a date after <code>date_from</code>.'
-                  example: '2103-07-15'
+                  example: '2071-08-29'
       security: []
     parameters:
       -
@@ -94,11 +94,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: qui
+                  example: sint
                 password:
                   type: string
                   description: ''
-                  example: 'Vp+I^"['
+                  example: '9Od>N&'
               required:
                 - phone
                 - password
@@ -126,23 +126,23 @@ paths:
                 last_name:
                   type: string
                   description: ''
-                  example: et
+                  example: repudiandae
                 other_names:
                   type: string
                   description: ''
-                  example: magnam
+                  example: perferendis
                 phone:
                   type: string
                   description: ''
-                  example: doloremque
+                  example: temporibus
                 email:
                   type: string
                   description: ''
-                  example: joshua.abernathy@example.org
+                  example: grant.tamia@example.org
                 password:
                   type: string
                   description: ''
-                  example: 'Ik&|J/2#*-Af]a-k'
+                  example: '7k%p]8'
               required:
                 - first_name
                 - last_name
@@ -211,11 +211,11 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: lfriitablrr
+                  example: nxuetjfzwsrtmbwu
                 description:
                   type: string
                   description: ''
-                  example: 'Veniam numquam asperiores eos laudantium amet dolorem.'
+                  example: 'Provident optio qui dolor et repudiandae voluptatem.'
               required:
                 - title
       security: []
@@ -238,11 +238,11 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: vmrusaq
+                  example: psmbtmwwufrtuajbzw
                 description:
                   type: string
                   description: ''
-                  example: 'Iste laborum aut non totam molestiae.'
+                  example: 'At et sit voluptatibus et quo.'
               required:
                 - title
       security: []
@@ -344,7 +344,7 @@ paths:
         in: path
         name: eventImage_id
         description: 'The ID of the eventImage.'
-        example: 7
+        example: 16
         required: true
         schema:
           type: integer
@@ -930,27 +930,27 @@ paths:
                 seat_section_id:
                   type: string
                   description: ''
-                  example: consequuntur
+                  example: corporis
                 price:
                   type: number
                   description: ''
-                  example: 9.400522526
+                  example: 241514.37295866
                 entry_gate:
                   type: string
                   description: ''
-                  example: illo
+                  example: eligendi
                 notes:
                   type: string
                   description: ''
-                  example: eum
+                  example: ea
                 capacity:
                   type: integer
                   description: ''
-                  example: 15
+                  example: 9
                 title:
                   type: string
                   description: ''
-                  example: dolores
+                  example: temporibus
               required:
                 - seat_section_id
                 - price
@@ -985,27 +985,27 @@ paths:
                 seat_section_id:
                   type: string
                   description: ''
-                  example: hic
+                  example: dolores
                 price:
                   type: number
                   description: ''
-                  example: 13.66647912
+                  example: 11063.305263
                 entry_gate:
                   type: string
                   description: ''
-                  example: laborum
+                  example: illum
                 notes:
                   type: string
                   description: ''
-                  example: optio
+                  example: et
                 capacity:
                   type: integer
                   description: ''
-                  example: 16
+                  example: 4
                 title:
                   type: string
                   description: ''
-                  example: nostrum
+                  example: assumenda
               required:
                 - seat_section_id
                 - price
@@ -1317,19 +1317,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: qzsqahunka
+                  example: pgxofplqpcbnihdguvnqk
                 description:
                   type: string
                   description: ''
-                  example: 'Vel aliquid incidunt quo quo sit amet optio.'
+                  example: 'Ut sint laudantium non et.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2025-08-20T11:01:16'
+                  example: '2025-08-22T17:52:53'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2061-03-05'
+                  example: '2060-11-10'
               required:
                 - title
       security: []
@@ -1361,19 +1361,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: pmzgphjie
+                  example: myzicidlgvszccwbx
                 description:
                   type: string
                   description: ''
-                  example: 'Qui sint ut ut et.'
+                  example: 'Aliquam consectetur labore quia omnis modi.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2025-08-20T11:01:16'
+                  example: '2025-08-22T17:52:53'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2103-08-29'
+                  example: '2114-10-22'
               required:
                 - title
       security: []
@@ -1439,16 +1439,6 @@ paths:
           required: false
           schema:
             type: string
-            description: ''
-            example: null
-        -
-          in: query
-          name: for_user
-          description: ''
-          example: null
-          required: false
-          schema:
-            type: boolean
             description: ''
             example: null
         -
@@ -2281,6 +2271,143 @@ paths:
         required: true
         schema:
           type: integer
+  '/api/events/users/index/{eventSeason}':
+    get:
+      summary: ''
+      operationId: getApiEventsUsersIndexEventSeason
+      description: ''
+      parameters:
+        -
+          in: query
+          name: title
+          description: ''
+          example: null
+          required: false
+          schema:
+            type: string
+            description: ''
+            example: null
+        -
+          in: query
+          name: start_time_from
+          description: ''
+          example: null
+          required: false
+          schema:
+            type: string
+            description: ''
+            example: null
+        -
+          in: query
+          name: start_time_to
+          description: ''
+          example: null
+          required: false
+          schema:
+            type: string
+            description: ''
+            example: null
+        -
+          in: query
+          name: for_upcoming
+          description: ''
+          example: null
+          required: false
+          schema:
+            type: boolean
+            description: ''
+            example: null
+        -
+          in: query
+          name: for_past
+          description: ''
+          example: null
+          required: false
+          schema:
+            type: boolean
+            description: ''
+            example: null
+        -
+          in: query
+          name: sortKey
+          description: ''
+          example: null
+          required: false
+          schema:
+            type: string
+            description: ''
+            example: null
+        -
+          in: query
+          name: sortDir
+          description: 'Represents the direction of the sort. ASC|DESC.'
+          example: null
+          required: false
+          schema:
+            type: string
+            description: 'Represents the direction of the sort. ASC|DESC.'
+            example: null
+        -
+          in: query
+          name: search
+          description: string.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: string.
+            example: null
+        -
+          in: query
+          name: date_from
+          description: string.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: string.
+            example: null
+        -
+          in: query
+          name: date_to
+          description: string.
+          example: null
+          required: false
+          schema:
+            type: string
+            description: string.
+            example: null
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Events
+      security: []
+    parameters:
+      -
+        in: path
+        name: eventSeason
+        description: 'Optional parameter.'
+        required: true
+        schema:
+          type: integer
+        examples:
+          omitted:
+            summary: 'When the value is omitted'
+            value: ''
+          present:
+            summary: 'When the value is present'
+            value: 1
   '/api/events/event-seasons/{eventSeason_id}/store':
     post:
       summary: ''
@@ -2300,7 +2427,7 @@ paths:
                 event_packages:
                   type: array
                   description: 'Must have at least 1 items.'
-                  example: budhfkkxlbdmsfrdzgwybrjvjxhyzpqvtyvpspbpikpks
+                  example: rquwpoktx
                   items:
                     type: string
       security: []
@@ -2563,6 +2690,20 @@ paths:
                             deleted_at: null
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
+                        payment_reference:
+                          id: 6
+                          paymentable_type: ticket-payment
+                          paymentable_id: 11
+                          user_id: null
+                          reference: 97d907baeea44aa
+                          merchant: paystack
+                          amount: 3725.7
+                          charge: 0
+                          content: []
+                          status: confirmed
+                          created_at: '2024-01-20T09:28:24.000000Z'
+                          updated_at: '2024-01-20T09:35:58.000000Z'
+                          callback_url: null
                       -
                         id: 9
                         quantity: 0
@@ -2627,6 +2768,20 @@ paths:
                             deleted_at: null
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
+                        payment_reference:
+                          id: 5
+                          paymentable_type: ticket-payment
+                          paymentable_id: 9
+                          user_id: 13
+                          reference: 9b13827b-af5d-4a56-b174-33bb71a2609b
+                          merchant: paystack
+                          amount: 79441.2
+                          charge: 0
+                          content: null
+                          status: confirmed
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-12T17:35:58.000000Z'
+                          callback_url: null
                       -
                         id: 7
                         quantity: 9
@@ -2691,6 +2846,20 @@ paths:
                             deleted_at: null
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
+                        payment_reference:
+                          id: 4
+                          paymentable_type: ticket-payment
+                          paymentable_id: 7
+                          user_id: 10
+                          reference: 9b13827b-9ec9-406e-a083-db4f29b73f06
+                          merchant: paystack
+                          amount: 17741.92
+                          charge: 0
+                          content: null
+                          status: confirmed
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-12T17:35:58.000000Z'
+                          callback_url: null
                       -
                         id: 5
                         quantity: 1
@@ -2755,6 +2924,20 @@ paths:
                             deleted_at: null
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
+                        payment_reference:
+                          id: 3
+                          paymentable_type: ticket-payment
+                          paymentable_id: 5
+                          user_id: 7
+                          reference: 9b13827b-8ef6-40df-bd30-28285978a784
+                          merchant: paystack
+                          amount: 31598.58
+                          charge: 0
+                          content: null
+                          status: confirmed
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2024-01-12T17:35:58.000000Z'
+                          callback_url: null
                       -
                         id: 3
                         quantity: 4
@@ -2819,6 +3002,20 @@ paths:
                             deleted_at: null
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
+                        payment_reference:
+                          id: 2
+                          paymentable_type: ticket-payment
+                          paymentable_id: 3
+                          user_id: 4
+                          reference: 9b13827b-7cf2-4a96-b339-6f087fc564a7
+                          merchant: paystack
+                          amount: 44835.04
+                          charge: 0
+                          content: null
+                          status: cancelled
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2025-07-28T20:57:20.000000Z'
+                          callback_url: null
                       -
                         id: 1
                         quantity: 7
@@ -2883,6 +3080,20 @@ paths:
                             deleted_at: null
                             created_at: '2024-01-12T17:35:58.000000Z'
                             updated_at: '2024-01-12T17:35:58.000000Z'
+                        payment_reference:
+                          id: 1
+                          paymentable_type: ticket-payment
+                          paymentable_id: 1
+                          user_id: 1
+                          reference: 9b13827b-675d-472b-a574-73ffab64dca7
+                          merchant: paystack
+                          amount: 36789.18
+                          charge: 0
+                          content: null
+                          status: cancelled
+                          created_at: '2024-01-12T17:35:58.000000Z'
+                          updated_at: '2025-07-28T21:05:22.000000Z'
+                          callback_url: null
                     first_page_url: 'http://localhost/api/payments/index?page=1'
                     from: 1
                     last_page: 1
@@ -2983,6 +3194,20 @@ paths:
                                 deleted_at: null
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
+                            payment_reference:
+                              id: 6
+                              paymentable_type: ticket-payment
+                              paymentable_id: 11
+                              user_id: null
+                              reference: 97d907baeea44aa
+                              merchant: paystack
+                              amount: 3725.7
+                              charge: 0
+                              content: []
+                              status: confirmed
+                              created_at: '2024-01-20T09:28:24.000000Z'
+                              updated_at: '2024-01-20T09:35:58.000000Z'
+                              callback_url: null
                           -
                             id: 9
                             quantity: 0
@@ -3047,6 +3272,20 @@ paths:
                                 deleted_at: null
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
+                            payment_reference:
+                              id: 5
+                              paymentable_type: ticket-payment
+                              paymentable_id: 9
+                              user_id: 13
+                              reference: 9b13827b-af5d-4a56-b174-33bb71a2609b
+                              merchant: paystack
+                              amount: 79441.2
+                              charge: 0
+                              content: null
+                              status: confirmed
+                              created_at: '2024-01-12T17:35:58.000000Z'
+                              updated_at: '2024-01-12T17:35:58.000000Z'
+                              callback_url: null
                           -
                             id: 7
                             quantity: 9
@@ -3111,6 +3350,20 @@ paths:
                                 deleted_at: null
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
+                            payment_reference:
+                              id: 4
+                              paymentable_type: ticket-payment
+                              paymentable_id: 7
+                              user_id: 10
+                              reference: 9b13827b-9ec9-406e-a083-db4f29b73f06
+                              merchant: paystack
+                              amount: 17741.92
+                              charge: 0
+                              content: null
+                              status: confirmed
+                              created_at: '2024-01-12T17:35:58.000000Z'
+                              updated_at: '2024-01-12T17:35:58.000000Z'
+                              callback_url: null
                           -
                             id: 5
                             quantity: 1
@@ -3175,6 +3428,20 @@ paths:
                                 deleted_at: null
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
+                            payment_reference:
+                              id: 3
+                              paymentable_type: ticket-payment
+                              paymentable_id: 5
+                              user_id: 7
+                              reference: 9b13827b-8ef6-40df-bd30-28285978a784
+                              merchant: paystack
+                              amount: 31598.58
+                              charge: 0
+                              content: null
+                              status: confirmed
+                              created_at: '2024-01-12T17:35:58.000000Z'
+                              updated_at: '2024-01-12T17:35:58.000000Z'
+                              callback_url: null
                           -
                             id: 3
                             quantity: 4
@@ -3239,6 +3506,20 @@ paths:
                                 deleted_at: null
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
+                            payment_reference:
+                              id: 2
+                              paymentable_type: ticket-payment
+                              paymentable_id: 3
+                              user_id: 4
+                              reference: 9b13827b-7cf2-4a96-b339-6f087fc564a7
+                              merchant: paystack
+                              amount: 44835.04
+                              charge: 0
+                              content: null
+                              status: cancelled
+                              created_at: '2024-01-12T17:35:58.000000Z'
+                              updated_at: '2025-07-28T20:57:20.000000Z'
+                              callback_url: null
                           -
                             id: 1
                             quantity: 7
@@ -3303,6 +3584,20 @@ paths:
                                 deleted_at: null
                                 created_at: '2024-01-12T17:35:58.000000Z'
                                 updated_at: '2024-01-12T17:35:58.000000Z'
+                            payment_reference:
+                              id: 1
+                              paymentable_type: ticket-payment
+                              paymentable_id: 1
+                              user_id: 1
+                              reference: 9b13827b-675d-472b-a574-73ffab64dca7
+                              merchant: paystack
+                              amount: 36789.18
+                              charge: 0
+                              content: null
+                              status: cancelled
+                              created_at: '2024-01-12T17:35:58.000000Z'
+                              updated_at: '2025-07-28T21:05:22.000000Z'
+                              callback_url: null
                         items:
                           type: object
                           properties:
@@ -3495,6 +3790,48 @@ paths:
                                     updated_at:
                                       type: string
                                       example: '2024-01-12T17:35:58.000000Z'
+                            payment_reference:
+                              type: object
+                              properties:
+                                id:
+                                  type: integer
+                                  example: 6
+                                paymentable_type:
+                                  type: string
+                                  example: ticket-payment
+                                paymentable_id:
+                                  type: integer
+                                  example: 11
+                                user_id:
+                                  type: string
+                                  example: null
+                                reference:
+                                  type: string
+                                  example: 97d907baeea44aa
+                                merchant:
+                                  type: string
+                                  example: paystack
+                                amount:
+                                  type: number
+                                  example: 3725.7
+                                charge:
+                                  type: integer
+                                  example: 0
+                                content:
+                                  type: array
+                                  example: []
+                                status:
+                                  type: string
+                                  example: confirmed
+                                created_at:
+                                  type: string
+                                  example: '2024-01-20T09:28:24.000000Z'
+                                updated_at:
+                                  type: string
+                                  example: '2024-01-20T09:35:58.000000Z'
+                                callback_url:
+                                  type: string
+                                  example: null
                       first_page_url:
                         type: string
                         example: 'http://localhost/api/payments/index?page=1'
@@ -3569,7 +3906,7 @@ paths:
               schema:
                 type: object
                 example:
-                  message: 'No query results for model [App\Models\Coupon] 5'
+                  message: 'No query results for model [App\Models\Coupon] 9'
                   exception: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
                   file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
                   line: 487
@@ -3961,7 +4298,7 @@ paths:
                 properties:
                   message:
                     type: string
-                    example: 'No query results for model [App\Models\Coupon] 5'
+                    example: 'No query results for model [App\Models\Coupon] 9'
                   exception:
                     type: string
                     example: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
@@ -4384,7 +4721,7 @@ paths:
         in: path
         name: code
         description: ''
-        example: 5
+        example: 9
         required: true
         schema:
           type: integer
@@ -4428,7 +4765,7 @@ paths:
                 code:
                   type: string
                   description: 'The coupon code'
-                  example: perspiciatis
+                  example: ea
                 discount_type:
                   type: string
                   description: 'The type of discount. Possible values: percentage, fixed.'
@@ -4444,7 +4781,7 @@ paths:
                 expires_at:
                   type: date
                   description: 'The expiration date of the coupon (Leave blank if you dont want to coupon to expire)'
-                  example: nostrum
+                  example: enim
                 usage_limit:
                   type: integer
                   description: 'The maximum number of times the coupon can be used.'
@@ -4456,7 +4793,7 @@ paths:
                 event_id:
                   type: integer
                   description: 'The ID of the event this coupon is associated with.'
-                  example: 10
+                  example: 17
                 event_package_ids:
                   type: array
                   description: 'An array of event package IDs this coupon applies to. (Leave blank if you want it to apply to all)'
@@ -4477,7 +4814,7 @@ paths:
         in: path
         name: event_id
         description: 'The ID of the event.'
-        example: 2
+        example: 12
         required: true
         schema:
           type: integer
@@ -4500,7 +4837,7 @@ paths:
                 code:
                   type: string
                   description: 'The coupon code'
-                  example: tempora
+                  example: pariatur
                 discount_type:
                   type: string
                   description: 'The type of discount. Possible values: percentage, fixed.'
@@ -4516,7 +4853,7 @@ paths:
                 expires_at:
                   type: date
                   description: 'The expiration date of the coupon (Leave blank if you dont want to coupon to expire)'
-                  example: ipsam
+                  example: id
                 usage_limit:
                   type: integer
                   description: 'The maximum number of times the coupon can be used.'
@@ -4528,7 +4865,7 @@ paths:
                 event_id:
                   type: integer
                   description: 'The ID of the event this coupon is associated with.'
-                  example: 1
+                  example: 9
                 event_package_ids:
                   type: array
                   description: 'An array of event package IDs this coupon applies to. (Leave blank if you want it to apply to all)'
@@ -4549,7 +4886,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the coupon.'
-        example: 17
+        example: 18
         required: true
         schema:
           type: integer
@@ -4568,7 +4905,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the coupon.'
-        example: 19
+        example: 20
         required: true
         schema:
           type: integer
@@ -6050,7 +6387,7 @@ paths:
                   type: array
                   description: 'An array of seats to create.'
                   example:
-                    - reiciendis
+                    - id
                   items:
                     type: string
               required:
@@ -7311,19 +7648,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: wqaavsvagnbglxlg
+                  example: vpzlihjwglqweyhouigcfva
                 description:
                   type: string
                   description: ''
-                  example: 'Velit perspiciatis labore possimus quia atque molestias.'
+                  example: 'Minus sint illum totam repellat esse et.'
                 features:
                   type: string
                   description: ''
-                  example: corporis
+                  example: at
                 capacity:
                   type: integer
                   description: ''
-                  example: 1
+                  example: 15
                 seats:
                   type: object
                   description: 'Must have at least 1 items.'
@@ -7352,19 +7689,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: sedutttlhareuqw
+                  example: hpzkhsv
                 description:
                   type: string
                   description: ''
-                  example: 'Ipsam pariatur et omnis mollitia natus dolor voluptate.'
+                  example: 'Et accusamus et totam voluptas ut.'
                 features:
                   type: string
                   description: ''
-                  example: amet
+                  example: excepturi
                 capacity:
                   type: integer
                   description: ''
-                  example: 18
+                  example: 2
               required:
                 - title
                 - capacity
@@ -7413,7 +7750,7 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: kaleb.keeling@example.net
+                  example: hschroeder@example.org
                 event_id:
                   type: string
                   description: ''
@@ -7421,7 +7758,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: ut
+                  example: officia
       security: []
   /api/event-attendees:
     get:
@@ -7474,7 +7811,7 @@ paths:
                 coupon_code:
                   type: string
                   description: ''
-                  example: molestiae
+                  example: assumenda
                 merchant:
                   type: string
                   description: 'The payment merchant to use.'
@@ -7507,7 +7844,7 @@ paths:
                   type: array
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
                   example:
-                    - tnptvcbsydpqe
+                    - sw
                   items:
                     type: string
               required:
@@ -7551,7 +7888,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: dicta
+                  example: quo
               required:
                 - reference
       security: []
@@ -7574,15 +7911,15 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: impedit
+                  example: autem
                 quantity:
                   type: integer
                   description: 'Must be at least 1.'
-                  example: 15
+                  example: 86
                 seats:
                   type: array
                   description: 'Must have at least 1 items.'
-                  example: wlovodhiacpzvnzjssdcaesoztwewigvqxiqttprmdmdecifewsp
+                  example: ibbgtkcagqqzxueekbjorvmager
                   items:
                     type: string
               required:
@@ -8497,11 +8834,11 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: nesciunt
+                  example: rerum
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: mcglynn.mariano@example.org
+                  example: freeman78@example.net
               required:
                 - reference
                 - email
@@ -8525,19 +8862,19 @@ paths:
                 ticket_payment_id:
                   type: integer
                   description: ''
-                  example: 15
+                  example: 4
                 hash:
                   type: string
                   description: ''
-                  example: in
+                  example: eos
                 reference:
                   type: string
                   description: ''
-                  example: aut
+                  example: explicabo
                 device_no:
                   type: string
                   description: ''
-                  example: voluptas
+                  example: doloribus
                 event_id:
                   type: integer
                   description: ''
@@ -8568,7 +8905,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: enim
+                  example: pariatur
               required:
                 - reference
       security: []
@@ -8591,19 +8928,19 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: kxigezouddisrztdegw
+                  example: lgddflfwltbbmpdfqlshn
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: stephen08@example.com
+                  example: jared.smitham@example.net
                 phone:
                   type: string
                   description: 'Must not be greater than 15 characters.'
-                  example: jbjhwx
+                  example: nuhhmd
                 address:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: e
+                  example: rqvfjnpddwmoiwa
               required:
                 - name
                 - email

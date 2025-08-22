@@ -15,12 +15,15 @@ class TicketVerification extends Model
     'user_id' => 'integer'
   ];
 
-  function isVerificationStillValid($deviceNo)
+  function isVerificationStillValid($deviceNo, $reference)
   {
     if ($this->device_no !== $deviceNo) {
       return false;
     }
-    $allowanceInSeconds = 10;
+    if ($this->reference !== $reference) {
+      return false;
+    }
+    $allowanceInSeconds = 4;
     return $this->created_at
       ->addSeconds($allowanceInSeconds)
       ->greaterThanOrEqualTo(now());

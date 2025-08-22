@@ -48,7 +48,12 @@ class VerifyTicketController extends Controller
       ->first();
 
     if ($existingVerification) {
-      if ($existingVerification->isVerificationStillValid($data['device_no'])) {
+      if (
+        $existingVerification->isVerificationStillValid(
+          $data['device_no'],
+          $data['reference']
+        )
+      ) {
         return $this->res(true, self::SLUG_VERIFIED, $existingVerification);
       }
       return $this->res(
@@ -69,7 +74,7 @@ class VerifyTicketController extends Controller
     return $this->res(true, self::SLUG_VERIFIED, $ticketVerification);
   }
 
-  function res($success, $slug, $data)
+  private function res($success, $slug, ?TicketVerification $data = null)
   {
     $title = '';
     $message = '';
@@ -87,6 +92,11 @@ class VerifyTicketController extends Controller
     } else {
       throw new Exception("Invalid slug: $slug");
     }
+    $data?->load(
+      'ticket.eventPackage.event',
+      'ticket.seat.seatSection',
+      'ticket.ticketPayment'
+    );
     return $this->ok([
       'success' => $success,
       'slug' => $slug,

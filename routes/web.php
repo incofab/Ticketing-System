@@ -15,6 +15,17 @@ Route::get('/callback/paystack', [Home\PaymentCallbackController::class, 'paysta
 Route::get('/callback/paydestal', [Home\PaymentCallbackController::class, 'paydestalCallback'])->name('callback.paydestal');
 
 Route::get('/dummy1', function () {
+  $tps = \App\Models\TicketPayment::query()->whereNull('amount')->with('paymentReference')->take(1000)->get();
+  foreach ($tps as $tp) {
+    $ref = $tp->paymentReference;
+    $tp->update([
+      'amount' => $ref?->amount ?? 0,
+      'original_amount' => $ref?->amount ?? 0,
+      'discount_amount' => 0
+    ]);
+  }
+
+    
   $refs = \App\Models\PaymentReference::query()
     ->where('status', \App\Enums\PaymentReferenceStatus::Confirmed)
     ->whereBetween('updated_at', [now()->parse('2025-08-20 05:00:00'), now()->parse('2025-08-20 14:00:00')])
@@ -29,46 +40,6 @@ Route::get('/dummy1', function () {
       }
     }
   return $refs->count() . ' emails sent successfully';
-  Mail::to('incofabikenna@gmail.com')->send(new \App\Mail\TicketPurchaseMail(Ticket::query()->first()));
-  return 'Mail sent successfully'; 
-  // dd(now()->to);
-  $ticket = \App\Models\Ticket::query()->first();
-
-    $qr = QrCode::format('png')
-      ->size(200)
-      ->generate("{$ticket->reference}|{$ticket->ticketPayment->id}");
-    $qrCode = 'data:image/png;base64,' . base64_encode($qr);
-  return view('tickets.ticket-view-pdf', [
-    'ticket' => $ticket,
-    'seat' => $ticket->seat,
-    'eventPackage' => $ticket->eventPackage,
-    'seatSection' => $ticket->eventPackage->seatSection,
-    'event' => $ticket->eventPackage->event,
-    'qrCode' => $qrCode
-  ]);
-
-   $ticketPayments = TicketPayment::select('ticket_payments.*')
-      ->join('payment_references', function ($join) {
-        $join
-          ->on('payment_references.paymentable_id', 'ticket_payments.id')
-          ->where(
-            'payment_references.paymentable_type',
-            'ticket-payment'
-          );
-      })
-      ->where('status', \App\Enums\PaymentReferenceStatus::Confirmed)
-      ->withCount('tickets')
-      ->get();
-    $tps = collect($ticketPayments)->filter(fn($item) => $item->tickets_count < 1);
-    foreach ($tps as $tp) {
-        $paymentReferences = $tp->paymentReferences;
-        foreach ($paymentReferences as $paymentReference) {
-            \App\Actions\GenerateTicketFromPayment::generateFromPaymentReference(
-              $paymentReference
-            );
-        }
-    }
-    return ['Affected ' => $tps->count()];
 });
 
 Route::get('/login', function () {

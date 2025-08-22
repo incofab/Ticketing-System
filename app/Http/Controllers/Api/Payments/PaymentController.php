@@ -37,7 +37,11 @@ class PaymentController extends Controller
     );
     TicketPaymentUITableFilters::make($request->all(), $query)->filterQuery();
     $query
-      ->with('eventPackage.event', 'eventPackage.seatSection')
+      ->with(
+        'eventPackage.event',
+        'eventPackage.seatSection',
+        'paymentReference'
+      )
       ->latest('ticket_payments.id');
 
     return $this->apiRes(paginateFromRequest($query));

@@ -31,7 +31,11 @@ class TicketPaymentUITableFilters extends BaseUITableFilter
   protected function generalSearch(string $search)
   {
     $this->baseQuery->where(
-      fn($q) => $q->where('ticket_payments.email', 'like', "%$search%")
+      fn($q) => $q
+        ->where('ticket_payments.email', 'like', "%$search%")
+        ->orWhere('ticket_payments.phone', 'like', "%$search%")
+        ->orWhere('ticket_payments.referral_code', 'like', "%$search%")
+        ->orWhere('payment_references.reference', 'like', "%$search%")
     );
     return $this;
   }
@@ -103,7 +107,7 @@ class TicketPaymentUITableFilters extends BaseUITableFilter
       )
       ->when(
         $this->requestGet('referral_code'),
-        fn($q, $value) => $q->where('payment_references.referral_code', $value)
+        fn($q, $value) => $q->where('ticket_payments.referral_code', $value)
       );
     return $this;
   }

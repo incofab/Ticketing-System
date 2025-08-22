@@ -20,7 +20,6 @@ class EventController extends Controller
    * @queryParam title string No-example
    * @queryParam start_time_from string No-example
    * @queryParam start_time_to string No-example
-   * @queryParam for_user boolean No-example
    * @queryParam for_upcoming boolean No-example
    * @queryParam for_past boolean No-example
    *
@@ -35,10 +34,10 @@ class EventController extends Controller
     $query = $eventSeason ? $eventSeason->events()->getQuery() : Event::query();
 
     $user = currentUser();
-    $forUser = $request->for_user && $user; // && !$user?->isAdmin();
+    // $forUser = $request->for_user && $user; // && !$user?->isAdmin();
     $query
       ->select('events.*')
-      ->when($forUser, fn($q) => $q->where('events.user_id', $user?->id))
+      ->when($user, fn($q) => $q->where('events.user_id', $user?->id))
       ->when($request->for_upcoming, fn($q) => $q->upcomingEvents())
       ->when($request->for_past, fn($q) => $q->pastEvents());
 
