@@ -60,11 +60,11 @@ paths:
                 date_from:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2025-08-22T17:52:53'
+                  example: '2025-09-11T17:44:47'
                 date_to:
                   type: string
                   description: 'Must be a valid date. This field is required when <code>date_from</code> is present. Must be a date after <code>date_from</code>.'
-                  example: '2071-08-29'
+                  example: '2109-08-25'
       security: []
     parameters:
       -
@@ -94,11 +94,11 @@ paths:
                 phone:
                   type: string
                   description: ''
-                  example: sint
+                  example: a
                 password:
                   type: string
                   description: ''
-                  example: '9Od>N&'
+                  example: VfN\=a7H!
               required:
                 - phone
                 - password
@@ -122,27 +122,27 @@ paths:
                 first_name:
                   type: integer
                   description: ''
-                  example: 17
+                  example: 6
                 last_name:
                   type: string
                   description: ''
-                  example: repudiandae
+                  example: deserunt
                 other_names:
                   type: string
                   description: ''
-                  example: perferendis
+                  example: culpa
                 phone:
                   type: string
                   description: ''
-                  example: temporibus
+                  example: ex
                 email:
                   type: string
                   description: ''
-                  example: grant.tamia@example.org
+                  example: xschoen@example.net
                 password:
                   type: string
                   description: ''
-                  example: '7k%p]8'
+                  example: '4?Z+DA'
               required:
                 - first_name
                 - last_name
@@ -211,11 +211,11 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: nxuetjfzwsrtmbwu
+                  example: zey
                 description:
                   type: string
                   description: ''
-                  example: 'Provident optio qui dolor et repudiandae voluptatem.'
+                  example: 'Ullam voluptatem vitae occaecati dicta aut.'
               required:
                 - title
       security: []
@@ -238,11 +238,11 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: psmbtmwwufrtuajbzw
+                  example: ep
                 description:
                   type: string
                   description: ''
-                  example: 'At et sit voluptatibus et quo.'
+                  example: 'Possimus eveniet et aliquid optio similique magni molestiae.'
               required:
                 - title
       security: []
@@ -344,7 +344,7 @@ paths:
         in: path
         name: eventImage_id
         description: 'The ID of the eventImage.'
-        example: 16
+        example: 7
         required: true
         schema:
           type: integer
@@ -930,19 +930,19 @@ paths:
                 seat_section_id:
                   type: string
                   description: ''
-                  example: corporis
+                  example: neque
                 price:
                   type: number
                   description: ''
-                  example: 241514.37295866
+                  example: 27.0
                 entry_gate:
                   type: string
                   description: ''
-                  example: eligendi
+                  example: voluptatem
                 notes:
                   type: string
                   description: ''
-                  example: ea
+                  example: ducimus
                 capacity:
                   type: integer
                   description: ''
@@ -950,7 +950,7 @@ paths:
                 title:
                   type: string
                   description: ''
-                  example: temporibus
+                  example: quae
               required:
                 - seat_section_id
                 - price
@@ -985,27 +985,27 @@ paths:
                 seat_section_id:
                   type: string
                   description: ''
-                  example: dolores
+                  example: voluptatem
                 price:
                   type: number
                   description: ''
-                  example: 11063.305263
+                  example: 6116.2
                 entry_gate:
                   type: string
                   description: ''
-                  example: illum
+                  example: ab
                 notes:
                   type: string
                   description: ''
-                  example: et
+                  example: earum
                 capacity:
                   type: integer
                   description: ''
-                  example: 4
+                  example: 14
                 title:
                   type: string
                   description: ''
-                  example: assumenda
+                  example: eum
               required:
                 - seat_section_id
                 - price
@@ -1317,19 +1317,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: pgxofplqpcbnihdguvnqk
+                  example: wqniroyibnobjvpvct
                 description:
                   type: string
                   description: ''
-                  example: 'Ut sint laudantium non et.'
+                  example: 'Sed qui necessitatibus in.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2025-08-22T17:52:53'
+                  example: '2025-09-11T17:44:47'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2060-11-10'
+                  example: '2072-07-31'
               required:
                 - title
       security: []
@@ -1361,19 +1361,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: myzicidlgvszccwbx
+                  example: jmqmbnqdlcjtqbu
                 description:
                   type: string
                   description: ''
-                  example: 'Aliquam consectetur labore quia omnis modi.'
+                  example: 'Iure inventore eum officiis ducimus eos sint maxime.'
                 date_from:
                   type: string
                   description: 'This field is required when <code>date_to</code> is present.  Must be a valid date.'
-                  example: '2025-08-22T17:52:53'
+                  example: '2025-09-11T17:44:47'
                 date_to:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>date_from</code>.'
-                  example: '2114-10-22'
+                  example: '2055-08-11'
               required:
                 - title
       security: []
@@ -2427,7 +2427,7 @@ paths:
                 event_packages:
                   type: array
                   description: 'Must have at least 1 items.'
-                  example: rquwpoktx
+                  example: ftbrufncmnlqumnwupuotegxxkznrzftwtwrzinfdohxpponinrtkaukxgmuytwgzpnaksvcttrkeiu
                   items:
                     type: string
       security: []
@@ -2615,1280 +2615,1056 @@ paths:
             description: string.
             example: null
       responses:
-        200:
+        500:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: ''
-                  data:
-                    current_page: 1
-                    data:
-                      -
-                        id: 11
-                        quantity: 1
-                        amount: null
-                        original_amount: null
-                        discount_amount: 0
-                        event_package_id: 1
-                        coupon_id: null
-                        user_id: null
-                        name: null
-                        phone: null
-                        email: my@gmail.com
-                        created_at: '2024-01-20T09:28:24.000000Z'
-                        updated_at: '2024-01-20T09:28:24.000000Z'
-                        processing: false
-                        referral_code: null
-                        receivers: null
-                        status: confirmed
-                        merchant: paystack
-                        event_package:
-                          id: 1
-                          event_id: 1
-                          seat_section_id: 5
-                          price: 3725.7
-                          quantity_sold: 1
-                          deleted_at: null
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-20T09:35:58.000000Z'
-                          entry_gate: null
-                          title: ''
-                          notes: null
-                          capacity: 0
-                          event:
-                            id: 1
-                            event_season_id: 1
-                            title: Free
-                            description: 'Sequi rerum aut magni ea qui est consequatur.'
-                            venue: 'International Conference Center (Enugu)'
-                            start_time: '2024-03-12T17:35:58.000000Z'
-                            end_time: '2024-04-12T17:35:58.000000Z'
-                            home_team: expedita
-                            away_team: unde
-                            deleted_at: null
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                            facebook: null
-                            instagram: null
-                            tiktok: null
-                            twitter: null
-                            youtube: null
-                            linkedin: null
-                            logo: null
-                            user_id: null
-                            payment_merchants: null
-                            expired: true
-                          seat_section:
-                            id: 5
-                            capacity: 708
-                            title: 'Sit est reprehenderit nisi quis ipsam inventore.'
-                            description: 'Quis est quibusdam et perferendis adipisci fugit laborum consequatur repellendus enim quis provident temporibus quasi.'
-                            features: 'Maxime qui eos nisi quam debitis occaecati modi voluptatem voluptatem.'
-                            deleted_at: null
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                        payment_reference:
-                          id: 6
-                          paymentable_type: ticket-payment
-                          paymentable_id: 11
-                          user_id: null
-                          reference: 97d907baeea44aa
-                          merchant: paystack
-                          amount: 3725.7
-                          charge: 0
-                          content: []
-                          status: confirmed
-                          created_at: '2024-01-20T09:28:24.000000Z'
-                          updated_at: '2024-01-20T09:35:58.000000Z'
-                          callback_url: null
-                      -
-                        id: 9
-                        quantity: 0
-                        amount: null
-                        original_amount: null
-                        discount_amount: 0
-                        event_package_id: 13
-                        coupon_id: null
-                        user_id: 13
-                        name: 'Ms. Celia Sanford'
-                        phone: +1-937-592-8181
-                        email: kstehr@yahoo.com
-                        created_at: '2024-01-12T17:35:58.000000Z'
-                        updated_at: '2024-01-12T17:35:58.000000Z'
-                        processing: false
-                        referral_code: null
-                        receivers: null
-                        status: confirmed
-                        merchant: paystack
-                        event_package:
-                          id: 13
-                          event_id: 13
-                          seat_section_id: 21
-                          price: 4331.2
-                          quantity_sold: 0
-                          deleted_at: null
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-12T17:35:58.000000Z'
-                          entry_gate: null
-                          title: ''
-                          notes: null
-                          capacity: 0
-                          event:
-                            id: 13
-                            event_season_id: 13
-                            title: 'Vitae ut quia aut quidem quia.'
-                            description: 'Magnam debitis ut ut deleniti et dolor et ex ut sequi.'
-                            venue: null
-                            start_time: '2024-03-12T17:35:58.000000Z'
-                            end_time: '2024-04-12T17:35:58.000000Z'
-                            home_team: cum
-                            away_team: similique
-                            deleted_at: null
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                            facebook: null
-                            instagram: null
-                            tiktok: null
-                            twitter: null
-                            youtube: null
-                            linkedin: null
-                            logo: null
-                            user_id: null
-                            payment_merchants: null
-                            expired: true
-                          seat_section:
-                            id: 21
-                            capacity: 269
-                            title: 'Alias esse amet reiciendis et.'
-                            description: 'Ut molestias unde aut vero quam qui sequi quis saepe porro veniam.'
-                            features: 'Fuga consequatur porro ut voluptatem rerum deleniti eaque nihil deleniti.'
-                            deleted_at: null
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                        payment_reference:
-                          id: 5
-                          paymentable_type: ticket-payment
-                          paymentable_id: 9
-                          user_id: 13
-                          reference: 9b13827b-af5d-4a56-b174-33bb71a2609b
-                          merchant: paystack
-                          amount: 79441.2
-                          charge: 0
-                          content: null
-                          status: confirmed
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-12T17:35:58.000000Z'
-                          callback_url: null
-                      -
-                        id: 7
-                        quantity: 9
-                        amount: null
-                        original_amount: null
-                        discount_amount: 0
-                        event_package_id: 10
-                        coupon_id: null
-                        user_id: 10
-                        name: 'Mekhi Conroy MD'
-                        phone: 352.795.5298
-                        email: hdare@bahringer.net
-                        created_at: '2024-01-12T17:35:58.000000Z'
-                        updated_at: '2024-01-12T17:35:58.000000Z'
-                        processing: false
-                        referral_code: null
-                        receivers: null
-                        status: confirmed
-                        merchant: paystack
-                        event_package:
-                          id: 10
-                          event_id: 10
-                          seat_section_id: 17
-                          price: 6388.9
-                          quantity_sold: 0
-                          deleted_at: null
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-12T17:35:58.000000Z'
-                          entry_gate: null
-                          title: ''
-                          notes: null
-                          capacity: 0
-                          event:
-                            id: 10
-                            event_season_id: 10
-                            title: 'Omnis eveniet eligendi explicabo optio quam quia sunt quia.'
-                            description: 'Eum autem quasi ipsa voluptatem quod nulla quia qui minus quia.'
-                            venue: null
-                            start_time: '2024-03-12T17:35:58.000000Z'
-                            end_time: '2024-04-12T17:35:58.000000Z'
-                            home_team: qui
-                            away_team: doloremque
-                            deleted_at: null
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                            facebook: null
-                            instagram: null
-                            tiktok: null
-                            twitter: null
-                            youtube: null
-                            linkedin: null
-                            logo: null
-                            user_id: null
-                            payment_merchants: null
-                            expired: true
-                          seat_section:
-                            id: 17
-                            capacity: 395
-                            title: 'Facilis doloremque impedit nihil tenetur mollitia cupiditate illum.'
-                            description: 'Voluptate aliquam aut et quasi culpa ipsa quibusdam et quisquam dolorum.'
-                            features: 'Facilis soluta dolorem sed perferendis qui non alias et ipsum.'
-                            deleted_at: null
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                        payment_reference:
-                          id: 4
-                          paymentable_type: ticket-payment
-                          paymentable_id: 7
-                          user_id: 10
-                          reference: 9b13827b-9ec9-406e-a083-db4f29b73f06
-                          merchant: paystack
-                          amount: 17741.92
-                          charge: 0
-                          content: null
-                          status: confirmed
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-12T17:35:58.000000Z'
-                          callback_url: null
-                      -
-                        id: 5
-                        quantity: 1
-                        amount: null
-                        original_amount: null
-                        discount_amount: 0
-                        event_package_id: 7
-                        coupon_id: null
-                        user_id: 7
-                        name: 'Summer Hoeger MD'
-                        phone: '+1 (534) 499-1341'
-                        email: alex.mayer@kling.org
-                        created_at: '2024-01-12T17:35:58.000000Z'
-                        updated_at: '2024-01-12T17:35:58.000000Z'
-                        processing: false
-                        referral_code: null
-                        receivers: null
-                        status: confirmed
-                        merchant: paystack
-                        event_package:
-                          id: 7
-                          event_id: 7
-                          seat_section_id: 13
-                          price: 1755.2
-                          quantity_sold: 0
-                          deleted_at: null
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-12T17:35:58.000000Z'
-                          entry_gate: null
-                          title: ''
-                          notes: null
-                          capacity: 0
-                          event:
-                            id: 7
-                            event_season_id: 7
-                            title: 'Alias cupiditate aut aut quo.'
-                            description: 'Nesciunt laboriosam aut maxime modi iste officiis eius.'
-                            venue: null
-                            start_time: '2024-03-12T17:35:58.000000Z'
-                            end_time: '2024-04-12T17:35:58.000000Z'
-                            home_team: et
-                            away_team: eos
-                            deleted_at: null
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                            facebook: null
-                            instagram: null
-                            tiktok: null
-                            twitter: null
-                            youtube: null
-                            linkedin: null
-                            logo: null
-                            user_id: null
-                            payment_merchants: null
-                            expired: true
-                          seat_section:
-                            id: 13
-                            capacity: 577
-                            title: 'Dolorem quae odit nesciunt nemo et facilis magnam aut.'
-                            description: 'Consequatur ut sed nesciunt fugit totam beatae reiciendis sed aut sed aut doloremque minima.'
-                            features: 'Qui velit a qui non rerum.'
-                            deleted_at: null
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                        payment_reference:
-                          id: 3
-                          paymentable_type: ticket-payment
-                          paymentable_id: 5
-                          user_id: 7
-                          reference: 9b13827b-8ef6-40df-bd30-28285978a784
-                          merchant: paystack
-                          amount: 31598.58
-                          charge: 0
-                          content: null
-                          status: confirmed
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-12T17:35:58.000000Z'
-                          callback_url: null
-                      -
-                        id: 3
-                        quantity: 4
-                        amount: null
-                        original_amount: null
-                        discount_amount: 0
-                        event_package_id: 4
-                        coupon_id: null
-                        user_id: 4
-                        name: 'Kolby Spinka'
-                        phone: 217-274-5233
-                        email: haylee45@hotmail.com
-                        created_at: '2024-01-12T17:35:58.000000Z'
-                        updated_at: '2024-01-12T17:35:58.000000Z'
-                        processing: false
-                        referral_code: null
-                        receivers: null
-                        status: cancelled
-                        merchant: paystack
-                        event_package:
-                          id: 4
-                          event_id: 4
-                          seat_section_id: 9
-                          price: 5039.9
-                          quantity_sold: 0
-                          deleted_at: null
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-12T17:35:58.000000Z'
-                          entry_gate: null
-                          title: ''
-                          notes: null
-                          capacity: 0
-                          event:
-                            id: 4
-                            event_season_id: 4
-                            title: 'Reiciendis officiis sunt quia omnis voluptates cupiditate laborum.'
-                            description: 'Ipsam aut tempore voluptatem et eos est eligendi illo quod dolorem quos.'
-                            venue: null
-                            start_time: '2024-03-12T17:35:58.000000Z'
-                            end_time: '2024-04-12T17:35:58.000000Z'
-                            home_team: enim
-                            away_team: quis
-                            deleted_at: null
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                            facebook: null
-                            instagram: null
-                            tiktok: null
-                            twitter: null
-                            youtube: null
-                            linkedin: null
-                            logo: null
-                            user_id: null
-                            payment_merchants: null
-                            expired: true
-                          seat_section:
-                            id: 9
-                            capacity: 919
-                            title: 'Saepe dolor culpa est enim voluptatem ea et similique.'
-                            description: 'Quia hic harum vel iure consequatur veritatis totam et officiis.'
-                            features: 'Molestiae praesentium autem est soluta recusandae nostrum sed et consequatur cum.'
-                            deleted_at: null
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                        payment_reference:
-                          id: 2
-                          paymentable_type: ticket-payment
-                          paymentable_id: 3
-                          user_id: 4
-                          reference: 9b13827b-7cf2-4a96-b339-6f087fc564a7
-                          merchant: paystack
-                          amount: 44835.04
-                          charge: 0
-                          content: null
-                          status: cancelled
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2025-07-28T20:57:20.000000Z'
-                          callback_url: null
-                      -
-                        id: 1
-                        quantity: 7
-                        amount: null
-                        original_amount: null
-                        discount_amount: 0
-                        event_package_id: 1
-                        coupon_id: null
-                        user_id: 1
-                        name: 'Ernestina Balistreri Jr.'
-                        phone: 551-275-8293
-                        email: katrina12@yahoo.com
-                        created_at: '2024-01-12T17:35:58.000000Z'
-                        updated_at: '2024-01-12T17:35:58.000000Z'
-                        processing: false
-                        referral_code: null
-                        receivers: null
-                        status: cancelled
-                        merchant: paystack
-                        event_package:
-                          id: 1
-                          event_id: 1
-                          seat_section_id: 5
-                          price: 3725.7
-                          quantity_sold: 1
-                          deleted_at: null
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2024-01-20T09:35:58.000000Z'
-                          entry_gate: null
-                          title: ''
-                          notes: null
-                          capacity: 0
-                          event:
-                            id: 1
-                            event_season_id: 1
-                            title: Free
-                            description: 'Sequi rerum aut magni ea qui est consequatur.'
-                            venue: 'International Conference Center (Enugu)'
-                            start_time: '2024-03-12T17:35:58.000000Z'
-                            end_time: '2024-04-12T17:35:58.000000Z'
-                            home_team: expedita
-                            away_team: unde
-                            deleted_at: null
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                            facebook: null
-                            instagram: null
-                            tiktok: null
-                            twitter: null
-                            youtube: null
-                            linkedin: null
-                            logo: null
-                            user_id: null
-                            payment_merchants: null
-                            expired: true
-                          seat_section:
-                            id: 5
-                            capacity: 708
-                            title: 'Sit est reprehenderit nisi quis ipsam inventore.'
-                            description: 'Quis est quibusdam et perferendis adipisci fugit laborum consequatur repellendus enim quis provident temporibus quasi.'
-                            features: 'Maxime qui eos nisi quam debitis occaecati modi voluptatem voluptatem.'
-                            deleted_at: null
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                        payment_reference:
-                          id: 1
-                          paymentable_type: ticket-payment
-                          paymentable_id: 1
-                          user_id: 1
-                          reference: 9b13827b-675d-472b-a574-73ffab64dca7
-                          merchant: paystack
-                          amount: 36789.18
-                          charge: 0
-                          content: null
-                          status: cancelled
-                          created_at: '2024-01-12T17:35:58.000000Z'
-                          updated_at: '2025-07-28T21:05:22.000000Z'
-                          callback_url: null
-                    first_page_url: 'http://localhost/api/payments/index?page=1'
-                    from: 1
-                    last_page: 1
-                    last_page_url: 'http://localhost/api/payments/index?page=1'
-                    links:
-                      -
-                        url: null
-                        label: '&laquo; Previous'
-                        active: false
-                      -
-                        url: 'http://localhost/api/payments/index?page=1'
-                        label: '1'
-                        active: true
-                      -
-                        url: null
-                        label: 'Next &raquo;'
-                        active: false
-                    next_page_url: null
-                    path: 'http://localhost/api/payments/index'
-                    per_page: 50
-                    prev_page_url: null
-                    to: 6
-                    total: 6
+                  message: "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rangers.ticket_receivers' doesn't exist (Connection: mysql, SQL: select * from `ticket_receivers` where `ticket_receivers`.`ticket_payment_id` in (1, 3, 5, 7, 9, 11))"
+                  exception: Illuminate\Database\QueryException
+                  file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+                  line: 801
+                  trace:
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+                      line: 755
+                      function: runQueryCallback
+                      class: Illuminate\Database\Connection
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+                      line: 407
+                      function: run
+                      class: Illuminate\Database\Connection
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
+                      line: 2751
+                      function: select
+                      class: Illuminate\Database\Connection
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
+                      line: 2740
+                      function: runSelect
+                      class: Illuminate\Database\Query\Builder
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
+                      line: 3294
+                      function: 'Illuminate\Database\Query\{closure}'
+                      class: Illuminate\Database\Query\Builder
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
+                      line: 2739
+                      function: onceWithColumns
+                      class: Illuminate\Database\Query\Builder
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php
+                      line: 735
+                      function: get
+                      class: Illuminate\Database\Query\Builder
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php
+                      line: 719
+                      function: getModels
+                      class: Illuminate\Database\Eloquent\Builder
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/Relation.php
+                      line: 203
+                      function: get
+                      class: Illuminate\Database\Eloquent\Builder
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/Relation.php
+                      line: 166
+                      function: get
+                      class: Illuminate\Database\Eloquent\Relations\Relation
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php
+                      line: 783
+                      function: getEager
+                      class: Illuminate\Database\Eloquent\Relations\Relation
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php
+                      line: 752
+                      function: eagerLoadRelation
+                      class: Illuminate\Database\Eloquent\Builder
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php
+                      line: 720
+                      function: eagerLoadRelations
+                      class: Illuminate\Database\Eloquent\Builder
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php
+                      line: 927
+                      function: get
+                      class: Illuminate\Database\Eloquent\Builder
+                      type: '->'
+                    -
+                      file: /var/www/html/app/helpers.php
+                      line: 52
+                      function: paginate
+                      class: Illuminate\Database\Eloquent\Builder
+                      type: '->'
+                    -
+                      file: /var/www/html/app/Http/Controllers/Api/Payments/PaymentController.php
+                      line: 48
+                      function: paginateFromRequest
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Controller.php
+                      line: 54
+                      function: index
+                      class: App\Http\Controllers\Api\Payments\PaymentController
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php
+                      line: 43
+                      function: callAction
+                      class: Illuminate\Routing\Controller
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php
+                      line: 259
+                      function: dispatch
+                      class: Illuminate\Routing\ControllerDispatcher
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php
+                      line: 205
+                      function: runController
+                      class: Illuminate\Routing\Route
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 799
+                      function: run
+                      class: Illuminate\Routing\Route
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 141
+                      function: 'Illuminate\Routing\{closure}'
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php
+                      line: 50
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Routing\Middleware\SubstituteBindings
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                      line: 159
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                      line: 125
+                      function: handleRequest
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                      line: 87
+                      function: handleRequestUsingNamedLimiter
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php
+                      line: 25
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 141
+                      function: 'Laravel\Sanctum\Http\Middleware\{closure}'
+                      class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php
+                      line: 24
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 798
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 777
+                      function: runRouteWithinStack
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 741
+                      function: runRoute
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 730
+                      function: dispatchToRoute
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 200
+                      function: dispatch
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 141
+                      function: 'Illuminate\Foundation\Http\{closure}'
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php
+                      line: 59
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Barryvdh\Debugbar\Middleware\InjectDebugbar
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                      line: 21
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
+                      line: 31
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                      line: 21
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
+                      line: 40
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TrimStrings
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
+                      line: 27
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
+                      line: 99
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
+                      line: 62
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Http\Middleware\HandleCors
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
+                      line: 39
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 180
+                      function: handle
+                      class: Illuminate\Http\Middleware\TrustProxies
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 175
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 144
+                      function: sendRequestThroughRouter
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 300
+                      function: handle
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 288
+                      function: callLaravelOrLumenRoute
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 91
+                      function: makeApiCall
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 44
+                      function: makeResponseCall
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 35
+                      function: makeResponseCallIfConditionsPass
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 236
+                      function: __invoke
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 163
+                      function: iterateThroughStrategies
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 95
+                      function: fetchResponses
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 125
+                      function: processRoute
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 72
+                      function: extractEndpointsInfoFromLaravelApp
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 50
+                      function: extractEndpointsInfoAndWriteToDisk
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
+                      line: 53
+                      function: get
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 36
+                      function: handle
+                      class: Knuckles\Scribe\Commands\GenerateDocumentation
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Util.php
+                      line: 41
+                      function: 'Illuminate\Container\{closure}'
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 93
+                      function: unwrapIfClosure
+                      class: Illuminate\Container\Util
+                      type: '::'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 35
+                      function: callBoundMethod
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php
+                      line: 662
+                      function: call
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                      line: 211
+                      function: call
+                      class: Illuminate\Container\Container
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/symfony/console/Command/Command.php
+                      line: 326
+                      function: execute
+                      class: Illuminate\Console\Command
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                      line: 180
+                      function: run
+                      class: Symfony\Component\Console\Command\Command
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/symfony/console/Application.php
+                      line: 1081
+                      function: run
+                      class: Illuminate\Console\Command
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/symfony/console/Application.php
+                      line: 320
+                      function: doRunCommand
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/symfony/console/Application.php
+                      line: 174
+                      function: doRun
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
+                      line: 201
+                      function: run
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /var/www/html/artisan
+                      line: 35
+                      function: handle
+                      class: Illuminate\Foundation\Console\Kernel
+                      type: '->'
                 properties:
                   message:
                     type: string
-                    example: ''
-                  data:
-                    type: object
-                    properties:
-                      current_page:
-                        type: integer
-                        example: 1
-                      data:
-                        type: array
-                        example:
-                          -
-                            id: 11
-                            quantity: 1
-                            amount: null
-                            original_amount: null
-                            discount_amount: 0
-                            event_package_id: 1
-                            coupon_id: null
-                            user_id: null
-                            name: null
-                            phone: null
-                            email: my@gmail.com
-                            created_at: '2024-01-20T09:28:24.000000Z'
-                            updated_at: '2024-01-20T09:28:24.000000Z'
-                            processing: false
-                            referral_code: null
-                            receivers: null
-                            status: confirmed
-                            merchant: paystack
-                            event_package:
-                              id: 1
-                              event_id: 1
-                              seat_section_id: 5
-                              price: 3725.7
-                              quantity_sold: 1
-                              deleted_at: null
-                              created_at: '2024-01-12T17:35:58.000000Z'
-                              updated_at: '2024-01-20T09:35:58.000000Z'
-                              entry_gate: null
-                              title: ''
-                              notes: null
-                              capacity: 0
-                              event:
-                                id: 1
-                                event_season_id: 1
-                                title: Free
-                                description: 'Sequi rerum aut magni ea qui est consequatur.'
-                                venue: 'International Conference Center (Enugu)'
-                                start_time: '2024-03-12T17:35:58.000000Z'
-                                end_time: '2024-04-12T17:35:58.000000Z'
-                                home_team: expedita
-                                away_team: unde
-                                deleted_at: null
-                                created_at: '2024-01-12T17:35:58.000000Z'
-                                updated_at: '2024-01-12T17:35:58.000000Z'
-                                facebook: null
-                                instagram: null
-                                tiktok: null
-                                twitter: null
-                                youtube: null
-                                linkedin: null
-                                logo: null
-                                user_id: null
-                                payment_merchants: null
-                                expired: true
-                              seat_section:
-                                id: 5
-                                capacity: 708
-                                title: 'Sit est reprehenderit nisi quis ipsam inventore.'
-                                description: 'Quis est quibusdam et perferendis adipisci fugit laborum consequatur repellendus enim quis provident temporibus quasi.'
-                                features: 'Maxime qui eos nisi quam debitis occaecati modi voluptatem voluptatem.'
-                                deleted_at: null
-                                created_at: '2024-01-12T17:35:58.000000Z'
-                                updated_at: '2024-01-12T17:35:58.000000Z'
-                            payment_reference:
-                              id: 6
-                              paymentable_type: ticket-payment
-                              paymentable_id: 11
-                              user_id: null
-                              reference: 97d907baeea44aa
-                              merchant: paystack
-                              amount: 3725.7
-                              charge: 0
-                              content: []
-                              status: confirmed
-                              created_at: '2024-01-20T09:28:24.000000Z'
-                              updated_at: '2024-01-20T09:35:58.000000Z'
-                              callback_url: null
-                          -
-                            id: 9
-                            quantity: 0
-                            amount: null
-                            original_amount: null
-                            discount_amount: 0
-                            event_package_id: 13
-                            coupon_id: null
-                            user_id: 13
-                            name: 'Ms. Celia Sanford'
-                            phone: +1-937-592-8181
-                            email: kstehr@yahoo.com
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                            processing: false
-                            referral_code: null
-                            receivers: null
-                            status: confirmed
-                            merchant: paystack
-                            event_package:
-                              id: 13
-                              event_id: 13
-                              seat_section_id: 21
-                              price: 4331.2
-                              quantity_sold: 0
-                              deleted_at: null
-                              created_at: '2024-01-12T17:35:58.000000Z'
-                              updated_at: '2024-01-12T17:35:58.000000Z'
-                              entry_gate: null
-                              title: ''
-                              notes: null
-                              capacity: 0
-                              event:
-                                id: 13
-                                event_season_id: 13
-                                title: 'Vitae ut quia aut quidem quia.'
-                                description: 'Magnam debitis ut ut deleniti et dolor et ex ut sequi.'
-                                venue: null
-                                start_time: '2024-03-12T17:35:58.000000Z'
-                                end_time: '2024-04-12T17:35:58.000000Z'
-                                home_team: cum
-                                away_team: similique
-                                deleted_at: null
-                                created_at: '2024-01-12T17:35:58.000000Z'
-                                updated_at: '2024-01-12T17:35:58.000000Z'
-                                facebook: null
-                                instagram: null
-                                tiktok: null
-                                twitter: null
-                                youtube: null
-                                linkedin: null
-                                logo: null
-                                user_id: null
-                                payment_merchants: null
-                                expired: true
-                              seat_section:
-                                id: 21
-                                capacity: 269
-                                title: 'Alias esse amet reiciendis et.'
-                                description: 'Ut molestias unde aut vero quam qui sequi quis saepe porro veniam.'
-                                features: 'Fuga consequatur porro ut voluptatem rerum deleniti eaque nihil deleniti.'
-                                deleted_at: null
-                                created_at: '2024-01-12T17:35:58.000000Z'
-                                updated_at: '2024-01-12T17:35:58.000000Z'
-                            payment_reference:
-                              id: 5
-                              paymentable_type: ticket-payment
-                              paymentable_id: 9
-                              user_id: 13
-                              reference: 9b13827b-af5d-4a56-b174-33bb71a2609b
-                              merchant: paystack
-                              amount: 79441.2
-                              charge: 0
-                              content: null
-                              status: confirmed
-                              created_at: '2024-01-12T17:35:58.000000Z'
-                              updated_at: '2024-01-12T17:35:58.000000Z'
-                              callback_url: null
-                          -
-                            id: 7
-                            quantity: 9
-                            amount: null
-                            original_amount: null
-                            discount_amount: 0
-                            event_package_id: 10
-                            coupon_id: null
-                            user_id: 10
-                            name: 'Mekhi Conroy MD'
-                            phone: 352.795.5298
-                            email: hdare@bahringer.net
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                            processing: false
-                            referral_code: null
-                            receivers: null
-                            status: confirmed
-                            merchant: paystack
-                            event_package:
-                              id: 10
-                              event_id: 10
-                              seat_section_id: 17
-                              price: 6388.9
-                              quantity_sold: 0
-                              deleted_at: null
-                              created_at: '2024-01-12T17:35:58.000000Z'
-                              updated_at: '2024-01-12T17:35:58.000000Z'
-                              entry_gate: null
-                              title: ''
-                              notes: null
-                              capacity: 0
-                              event:
-                                id: 10
-                                event_season_id: 10
-                                title: 'Omnis eveniet eligendi explicabo optio quam quia sunt quia.'
-                                description: 'Eum autem quasi ipsa voluptatem quod nulla quia qui minus quia.'
-                                venue: null
-                                start_time: '2024-03-12T17:35:58.000000Z'
-                                end_time: '2024-04-12T17:35:58.000000Z'
-                                home_team: qui
-                                away_team: doloremque
-                                deleted_at: null
-                                created_at: '2024-01-12T17:35:58.000000Z'
-                                updated_at: '2024-01-12T17:35:58.000000Z'
-                                facebook: null
-                                instagram: null
-                                tiktok: null
-                                twitter: null
-                                youtube: null
-                                linkedin: null
-                                logo: null
-                                user_id: null
-                                payment_merchants: null
-                                expired: true
-                              seat_section:
-                                id: 17
-                                capacity: 395
-                                title: 'Facilis doloremque impedit nihil tenetur mollitia cupiditate illum.'
-                                description: 'Voluptate aliquam aut et quasi culpa ipsa quibusdam et quisquam dolorum.'
-                                features: 'Facilis soluta dolorem sed perferendis qui non alias et ipsum.'
-                                deleted_at: null
-                                created_at: '2024-01-12T17:35:58.000000Z'
-                                updated_at: '2024-01-12T17:35:58.000000Z'
-                            payment_reference:
-                              id: 4
-                              paymentable_type: ticket-payment
-                              paymentable_id: 7
-                              user_id: 10
-                              reference: 9b13827b-9ec9-406e-a083-db4f29b73f06
-                              merchant: paystack
-                              amount: 17741.92
-                              charge: 0
-                              content: null
-                              status: confirmed
-                              created_at: '2024-01-12T17:35:58.000000Z'
-                              updated_at: '2024-01-12T17:35:58.000000Z'
-                              callback_url: null
-                          -
-                            id: 5
-                            quantity: 1
-                            amount: null
-                            original_amount: null
-                            discount_amount: 0
-                            event_package_id: 7
-                            coupon_id: null
-                            user_id: 7
-                            name: 'Summer Hoeger MD'
-                            phone: '+1 (534) 499-1341'
-                            email: alex.mayer@kling.org
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                            processing: false
-                            referral_code: null
-                            receivers: null
-                            status: confirmed
-                            merchant: paystack
-                            event_package:
-                              id: 7
-                              event_id: 7
-                              seat_section_id: 13
-                              price: 1755.2
-                              quantity_sold: 0
-                              deleted_at: null
-                              created_at: '2024-01-12T17:35:58.000000Z'
-                              updated_at: '2024-01-12T17:35:58.000000Z'
-                              entry_gate: null
-                              title: ''
-                              notes: null
-                              capacity: 0
-                              event:
-                                id: 7
-                                event_season_id: 7
-                                title: 'Alias cupiditate aut aut quo.'
-                                description: 'Nesciunt laboriosam aut maxime modi iste officiis eius.'
-                                venue: null
-                                start_time: '2024-03-12T17:35:58.000000Z'
-                                end_time: '2024-04-12T17:35:58.000000Z'
-                                home_team: et
-                                away_team: eos
-                                deleted_at: null
-                                created_at: '2024-01-12T17:35:58.000000Z'
-                                updated_at: '2024-01-12T17:35:58.000000Z'
-                                facebook: null
-                                instagram: null
-                                tiktok: null
-                                twitter: null
-                                youtube: null
-                                linkedin: null
-                                logo: null
-                                user_id: null
-                                payment_merchants: null
-                                expired: true
-                              seat_section:
-                                id: 13
-                                capacity: 577
-                                title: 'Dolorem quae odit nesciunt nemo et facilis magnam aut.'
-                                description: 'Consequatur ut sed nesciunt fugit totam beatae reiciendis sed aut sed aut doloremque minima.'
-                                features: 'Qui velit a qui non rerum.'
-                                deleted_at: null
-                                created_at: '2024-01-12T17:35:58.000000Z'
-                                updated_at: '2024-01-12T17:35:58.000000Z'
-                            payment_reference:
-                              id: 3
-                              paymentable_type: ticket-payment
-                              paymentable_id: 5
-                              user_id: 7
-                              reference: 9b13827b-8ef6-40df-bd30-28285978a784
-                              merchant: paystack
-                              amount: 31598.58
-                              charge: 0
-                              content: null
-                              status: confirmed
-                              created_at: '2024-01-12T17:35:58.000000Z'
-                              updated_at: '2024-01-12T17:35:58.000000Z'
-                              callback_url: null
-                          -
-                            id: 3
-                            quantity: 4
-                            amount: null
-                            original_amount: null
-                            discount_amount: 0
-                            event_package_id: 4
-                            coupon_id: null
-                            user_id: 4
-                            name: 'Kolby Spinka'
-                            phone: 217-274-5233
-                            email: haylee45@hotmail.com
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                            processing: false
-                            referral_code: null
-                            receivers: null
-                            status: cancelled
-                            merchant: paystack
-                            event_package:
-                              id: 4
-                              event_id: 4
-                              seat_section_id: 9
-                              price: 5039.9
-                              quantity_sold: 0
-                              deleted_at: null
-                              created_at: '2024-01-12T17:35:58.000000Z'
-                              updated_at: '2024-01-12T17:35:58.000000Z'
-                              entry_gate: null
-                              title: ''
-                              notes: null
-                              capacity: 0
-                              event:
-                                id: 4
-                                event_season_id: 4
-                                title: 'Reiciendis officiis sunt quia omnis voluptates cupiditate laborum.'
-                                description: 'Ipsam aut tempore voluptatem et eos est eligendi illo quod dolorem quos.'
-                                venue: null
-                                start_time: '2024-03-12T17:35:58.000000Z'
-                                end_time: '2024-04-12T17:35:58.000000Z'
-                                home_team: enim
-                                away_team: quis
-                                deleted_at: null
-                                created_at: '2024-01-12T17:35:58.000000Z'
-                                updated_at: '2024-01-12T17:35:58.000000Z'
-                                facebook: null
-                                instagram: null
-                                tiktok: null
-                                twitter: null
-                                youtube: null
-                                linkedin: null
-                                logo: null
-                                user_id: null
-                                payment_merchants: null
-                                expired: true
-                              seat_section:
-                                id: 9
-                                capacity: 919
-                                title: 'Saepe dolor culpa est enim voluptatem ea et similique.'
-                                description: 'Quia hic harum vel iure consequatur veritatis totam et officiis.'
-                                features: 'Molestiae praesentium autem est soluta recusandae nostrum sed et consequatur cum.'
-                                deleted_at: null
-                                created_at: '2024-01-12T17:35:58.000000Z'
-                                updated_at: '2024-01-12T17:35:58.000000Z'
-                            payment_reference:
-                              id: 2
-                              paymentable_type: ticket-payment
-                              paymentable_id: 3
-                              user_id: 4
-                              reference: 9b13827b-7cf2-4a96-b339-6f087fc564a7
-                              merchant: paystack
-                              amount: 44835.04
-                              charge: 0
-                              content: null
-                              status: cancelled
-                              created_at: '2024-01-12T17:35:58.000000Z'
-                              updated_at: '2025-07-28T20:57:20.000000Z'
-                              callback_url: null
-                          -
-                            id: 1
-                            quantity: 7
-                            amount: null
-                            original_amount: null
-                            discount_amount: 0
-                            event_package_id: 1
-                            coupon_id: null
-                            user_id: 1
-                            name: 'Ernestina Balistreri Jr.'
-                            phone: 551-275-8293
-                            email: katrina12@yahoo.com
-                            created_at: '2024-01-12T17:35:58.000000Z'
-                            updated_at: '2024-01-12T17:35:58.000000Z'
-                            processing: false
-                            referral_code: null
-                            receivers: null
-                            status: cancelled
-                            merchant: paystack
-                            event_package:
-                              id: 1
-                              event_id: 1
-                              seat_section_id: 5
-                              price: 3725.7
-                              quantity_sold: 1
-                              deleted_at: null
-                              created_at: '2024-01-12T17:35:58.000000Z'
-                              updated_at: '2024-01-20T09:35:58.000000Z'
-                              entry_gate: null
-                              title: ''
-                              notes: null
-                              capacity: 0
-                              event:
-                                id: 1
-                                event_season_id: 1
-                                title: Free
-                                description: 'Sequi rerum aut magni ea qui est consequatur.'
-                                venue: 'International Conference Center (Enugu)'
-                                start_time: '2024-03-12T17:35:58.000000Z'
-                                end_time: '2024-04-12T17:35:58.000000Z'
-                                home_team: expedita
-                                away_team: unde
-                                deleted_at: null
-                                created_at: '2024-01-12T17:35:58.000000Z'
-                                updated_at: '2024-01-12T17:35:58.000000Z'
-                                facebook: null
-                                instagram: null
-                                tiktok: null
-                                twitter: null
-                                youtube: null
-                                linkedin: null
-                                logo: null
-                                user_id: null
-                                payment_merchants: null
-                                expired: true
-                              seat_section:
-                                id: 5
-                                capacity: 708
-                                title: 'Sit est reprehenderit nisi quis ipsam inventore.'
-                                description: 'Quis est quibusdam et perferendis adipisci fugit laborum consequatur repellendus enim quis provident temporibus quasi.'
-                                features: 'Maxime qui eos nisi quam debitis occaecati modi voluptatem voluptatem.'
-                                deleted_at: null
-                                created_at: '2024-01-12T17:35:58.000000Z'
-                                updated_at: '2024-01-12T17:35:58.000000Z'
-                            payment_reference:
-                              id: 1
-                              paymentable_type: ticket-payment
-                              paymentable_id: 1
-                              user_id: 1
-                              reference: 9b13827b-675d-472b-a574-73ffab64dca7
-                              merchant: paystack
-                              amount: 36789.18
-                              charge: 0
-                              content: null
-                              status: cancelled
-                              created_at: '2024-01-12T17:35:58.000000Z'
-                              updated_at: '2025-07-28T21:05:22.000000Z'
-                              callback_url: null
-                        items:
-                          type: object
-                          properties:
-                            id:
-                              type: integer
-                              example: 11
-                            quantity:
-                              type: integer
-                              example: 1
-                            amount:
-                              type: string
-                              example: null
-                            original_amount:
-                              type: string
-                              example: null
-                            discount_amount:
-                              type: integer
-                              example: 0
-                            event_package_id:
-                              type: integer
-                              example: 1
-                            coupon_id:
-                              type: string
-                              example: null
-                            user_id:
-                              type: string
-                              example: null
-                            name:
-                              type: string
-                              example: null
-                            phone:
-                              type: string
-                              example: null
-                            email:
-                              type: string
-                              example: my@gmail.com
-                            created_at:
-                              type: string
-                              example: '2024-01-20T09:28:24.000000Z'
-                            updated_at:
-                              type: string
-                              example: '2024-01-20T09:28:24.000000Z'
-                            processing:
-                              type: boolean
-                              example: false
-                            referral_code:
-                              type: string
-                              example: null
-                            receivers:
-                              type: string
-                              example: null
-                            status:
-                              type: string
-                              example: confirmed
-                            merchant:
-                              type: string
-                              example: paystack
-                            event_package:
-                              type: object
-                              properties:
-                                id:
-                                  type: integer
-                                  example: 1
-                                event_id:
-                                  type: integer
-                                  example: 1
-                                seat_section_id:
-                                  type: integer
-                                  example: 5
-                                price:
-                                  type: number
-                                  example: 3725.7
-                                quantity_sold:
-                                  type: integer
-                                  example: 1
-                                deleted_at:
-                                  type: string
-                                  example: null
-                                created_at:
-                                  type: string
-                                  example: '2024-01-12T17:35:58.000000Z'
-                                updated_at:
-                                  type: string
-                                  example: '2024-01-20T09:35:58.000000Z'
-                                entry_gate:
-                                  type: string
-                                  example: null
-                                title:
-                                  type: string
-                                  example: ''
-                                notes:
-                                  type: string
-                                  example: null
-                                capacity:
-                                  type: integer
-                                  example: 0
-                                event:
-                                  type: object
-                                  properties:
-                                    id:
-                                      type: integer
-                                      example: 1
-                                    event_season_id:
-                                      type: integer
-                                      example: 1
-                                    title:
-                                      type: string
-                                      example: Free
-                                    description:
-                                      type: string
-                                      example: 'Sequi rerum aut magni ea qui est consequatur.'
-                                    venue:
-                                      type: string
-                                      example: 'International Conference Center (Enugu)'
-                                    start_time:
-                                      type: string
-                                      example: '2024-03-12T17:35:58.000000Z'
-                                    end_time:
-                                      type: string
-                                      example: '2024-04-12T17:35:58.000000Z'
-                                    home_team:
-                                      type: string
-                                      example: expedita
-                                    away_team:
-                                      type: string
-                                      example: unde
-                                    deleted_at:
-                                      type: string
-                                      example: null
-                                    created_at:
-                                      type: string
-                                      example: '2024-01-12T17:35:58.000000Z'
-                                    updated_at:
-                                      type: string
-                                      example: '2024-01-12T17:35:58.000000Z'
-                                    facebook:
-                                      type: string
-                                      example: null
-                                    instagram:
-                                      type: string
-                                      example: null
-                                    tiktok:
-                                      type: string
-                                      example: null
-                                    twitter:
-                                      type: string
-                                      example: null
-                                    youtube:
-                                      type: string
-                                      example: null
-                                    linkedin:
-                                      type: string
-                                      example: null
-                                    logo:
-                                      type: string
-                                      example: null
-                                    user_id:
-                                      type: string
-                                      example: null
-                                    payment_merchants:
-                                      type: string
-                                      example: null
-                                    expired:
-                                      type: boolean
-                                      example: true
-                                seat_section:
-                                  type: object
-                                  properties:
-                                    id:
-                                      type: integer
-                                      example: 5
-                                    capacity:
-                                      type: integer
-                                      example: 708
-                                    title:
-                                      type: string
-                                      example: 'Sit est reprehenderit nisi quis ipsam inventore.'
-                                    description:
-                                      type: string
-                                      example: 'Quis est quibusdam et perferendis adipisci fugit laborum consequatur repellendus enim quis provident temporibus quasi.'
-                                    features:
-                                      type: string
-                                      example: 'Maxime qui eos nisi quam debitis occaecati modi voluptatem voluptatem.'
-                                    deleted_at:
-                                      type: string
-                                      example: null
-                                    created_at:
-                                      type: string
-                                      example: '2024-01-12T17:35:58.000000Z'
-                                    updated_at:
-                                      type: string
-                                      example: '2024-01-12T17:35:58.000000Z'
-                            payment_reference:
-                              type: object
-                              properties:
-                                id:
-                                  type: integer
-                                  example: 6
-                                paymentable_type:
-                                  type: string
-                                  example: ticket-payment
-                                paymentable_id:
-                                  type: integer
-                                  example: 11
-                                user_id:
-                                  type: string
-                                  example: null
-                                reference:
-                                  type: string
-                                  example: 97d907baeea44aa
-                                merchant:
-                                  type: string
-                                  example: paystack
-                                amount:
-                                  type: number
-                                  example: 3725.7
-                                charge:
-                                  type: integer
-                                  example: 0
-                                content:
-                                  type: array
-                                  example: []
-                                status:
-                                  type: string
-                                  example: confirmed
-                                created_at:
-                                  type: string
-                                  example: '2024-01-20T09:28:24.000000Z'
-                                updated_at:
-                                  type: string
-                                  example: '2024-01-20T09:35:58.000000Z'
-                                callback_url:
-                                  type: string
-                                  example: null
-                      first_page_url:
-                        type: string
-                        example: 'http://localhost/api/payments/index?page=1'
-                      from:
-                        type: integer
-                        example: 1
-                      last_page:
-                        type: integer
-                        example: 1
-                      last_page_url:
-                        type: string
-                        example: 'http://localhost/api/payments/index?page=1'
-                      links:
-                        type: array
-                        example:
-                          -
-                            url: null
-                            label: '&laquo; Previous'
-                            active: false
-                          -
-                            url: 'http://localhost/api/payments/index?page=1'
-                            label: '1'
-                            active: true
-                          -
-                            url: null
-                            label: 'Next &raquo;'
-                            active: false
-                        items:
-                          type: object
-                          properties:
-                            url:
-                              type: string
-                              example: null
-                            label:
-                              type: string
-                              example: '&laquo; Previous'
-                            active:
-                              type: boolean
-                              example: false
-                      next_page_url:
-                        type: string
-                        example: null
-                      path:
-                        type: string
-                        example: 'http://localhost/api/payments/index'
-                      per_page:
-                        type: integer
-                        example: 50
-                      prev_page_url:
-                        type: string
-                        example: null
-                      to:
-                        type: integer
-                        example: 6
-                      total:
-                        type: integer
-                        example: 6
+                    example: "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rangers.ticket_receivers' doesn't exist (Connection: mysql, SQL: select * from `ticket_receivers` where `ticket_receivers`.`ticket_payment_id` in (1, 3, 5, 7, 9, 11))"
+                  exception:
+                    type: string
+                    example: Illuminate\Database\QueryException
+                  file:
+                    type: string
+                    example: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+                  line:
+                    type: integer
+                    example: 801
+                  trace:
+                    type: array
+                    example:
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+                        line: 755
+                        function: runQueryCallback
+                        class: Illuminate\Database\Connection
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+                        line: 407
+                        function: run
+                        class: Illuminate\Database\Connection
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
+                        line: 2751
+                        function: select
+                        class: Illuminate\Database\Connection
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
+                        line: 2740
+                        function: runSelect
+                        class: Illuminate\Database\Query\Builder
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
+                        line: 3294
+                        function: 'Illuminate\Database\Query\{closure}'
+                        class: Illuminate\Database\Query\Builder
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php
+                        line: 2739
+                        function: onceWithColumns
+                        class: Illuminate\Database\Query\Builder
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php
+                        line: 735
+                        function: get
+                        class: Illuminate\Database\Query\Builder
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php
+                        line: 719
+                        function: getModels
+                        class: Illuminate\Database\Eloquent\Builder
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/Relation.php
+                        line: 203
+                        function: get
+                        class: Illuminate\Database\Eloquent\Builder
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/Relation.php
+                        line: 166
+                        function: get
+                        class: Illuminate\Database\Eloquent\Relations\Relation
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php
+                        line: 783
+                        function: getEager
+                        class: Illuminate\Database\Eloquent\Relations\Relation
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php
+                        line: 752
+                        function: eagerLoadRelation
+                        class: Illuminate\Database\Eloquent\Builder
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php
+                        line: 720
+                        function: eagerLoadRelations
+                        class: Illuminate\Database\Eloquent\Builder
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php
+                        line: 927
+                        function: get
+                        class: Illuminate\Database\Eloquent\Builder
+                        type: '->'
+                      -
+                        file: /var/www/html/app/helpers.php
+                        line: 52
+                        function: paginate
+                        class: Illuminate\Database\Eloquent\Builder
+                        type: '->'
+                      -
+                        file: /var/www/html/app/Http/Controllers/Api/Payments/PaymentController.php
+                        line: 48
+                        function: paginateFromRequest
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Controller.php
+                        line: 54
+                        function: index
+                        class: App\Http\Controllers\Api\Payments\PaymentController
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php
+                        line: 43
+                        function: callAction
+                        class: Illuminate\Routing\Controller
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php
+                        line: 259
+                        function: dispatch
+                        class: Illuminate\Routing\ControllerDispatcher
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Route.php
+                        line: 205
+                        function: runController
+                        class: Illuminate\Routing\Route
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 799
+                        function: run
+                        class: Illuminate\Routing\Route
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 141
+                        function: 'Illuminate\Routing\{closure}'
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php
+                        line: 50
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Routing\Middleware\SubstituteBindings
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                        line: 159
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                        line: 125
+                        function: handleRequest
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php
+                        line: 87
+                        function: handleRequestUsingNamedLimiter
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php
+                        line: 25
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 141
+                        function: 'Laravel\Sanctum\Http\Middleware\{closure}'
+                        class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php
+                        line: 24
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 798
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 777
+                        function: runRouteWithinStack
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 741
+                        function: runRoute
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 730
+                        function: dispatchToRoute
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 200
+                        function: dispatch
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 141
+                        function: 'Illuminate\Foundation\Http\{closure}'
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php
+                        line: 59
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Barryvdh\Debugbar\Middleware\InjectDebugbar
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                        line: 21
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
+                        line: 31
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                        line: 21
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
+                        line: 40
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TrimStrings
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php
+                        line: 27
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
+                        line: 99
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
+                        line: 62
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Http\Middleware\HandleCors
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
+                        line: 39
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 180
+                        function: handle
+                        class: Illuminate\Http\Middleware\TrustProxies
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 175
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 144
+                        function: sendRequestThroughRouter
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 300
+                        function: handle
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 288
+                        function: callLaravelOrLumenRoute
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 91
+                        function: makeApiCall
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 44
+                        function: makeResponseCall
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 35
+                        function: makeResponseCallIfConditionsPass
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 236
+                        function: __invoke
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 163
+                        function: iterateThroughStrategies
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 95
+                        function: fetchResponses
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 125
+                        function: processRoute
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 72
+                        function: extractEndpointsInfoFromLaravelApp
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 50
+                        function: extractEndpointsInfoAndWriteToDisk
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
+                        line: 53
+                        function: get
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 36
+                        function: handle
+                        class: Knuckles\Scribe\Commands\GenerateDocumentation
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Util.php
+                        line: 41
+                        function: 'Illuminate\Container\{closure}'
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 93
+                        function: unwrapIfClosure
+                        class: Illuminate\Container\Util
+                        type: '::'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 35
+                        function: callBoundMethod
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php
+                        line: 662
+                        function: call
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                        line: 211
+                        function: call
+                        class: Illuminate\Container\Container
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/symfony/console/Command/Command.php
+                        line: 326
+                        function: execute
+                        class: Illuminate\Console\Command
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                        line: 180
+                        function: run
+                        class: Symfony\Component\Console\Command\Command
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/symfony/console/Application.php
+                        line: 1081
+                        function: run
+                        class: Illuminate\Console\Command
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/symfony/console/Application.php
+                        line: 320
+                        function: doRunCommand
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/symfony/console/Application.php
+                        line: 174
+                        function: doRun
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
+                        line: 201
+                        function: run
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /var/www/html/artisan
+                        line: 35
+                        function: handle
+                        class: Illuminate\Foundation\Console\Kernel
+                        type: '->'
+                    items:
+                      type: object
+                      properties:
+                        file:
+                          type: string
+                          example: /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+                        line:
+                          type: integer
+                          example: 755
+                        function:
+                          type: string
+                          example: runQueryCallback
+                        class:
+                          type: string
+                          example: Illuminate\Database\Connection
+                        type:
+                          type: string
+                          example: '->'
       tags:
         - Payments
       security: []
@@ -3906,7 +3682,7 @@ paths:
               schema:
                 type: object
                 example:
-                  message: 'No query results for model [App\Models\Coupon] 9'
+                  message: 'No query results for model [App\Models\Coupon] 14'
                   exception: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
                   file: /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php
                   line: 487
@@ -4298,7 +4074,7 @@ paths:
                 properties:
                   message:
                     type: string
-                    example: 'No query results for model [App\Models\Coupon] 9'
+                    example: 'No query results for model [App\Models\Coupon] 14'
                   exception:
                     type: string
                     example: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
@@ -4721,7 +4497,7 @@ paths:
         in: path
         name: code
         description: ''
-        example: 9
+        example: 14
         required: true
         schema:
           type: integer
@@ -4765,7 +4541,7 @@ paths:
                 code:
                   type: string
                   description: 'The coupon code'
-                  example: ea
+                  example: et
                 discount_type:
                   type: string
                   description: 'The type of discount. Possible values: percentage, fixed.'
@@ -4781,7 +4557,79 @@ paths:
                 expires_at:
                   type: date
                   description: 'The expiration date of the coupon (Leave blank if you dont want to coupon to expire)'
-                  example: enim
+                  example: tempore
+                usage_limit:
+                  type: integer
+                  description: 'The maximum number of times the coupon can be used.'
+                  example: 10
+                usage_count:
+                  type: integer
+                  description: 'The number of times the coupon has been used.'
+                  example: 0
+                event_id:
+                  type: integer
+                  description: 'The ID of the event this coupon is associated with.'
+                  example: 1
+                event_package_ids:
+                  type: array
+                  description: 'An array of event package IDs this coupon applies to. (Leave blank if you want it to apply to all)'
+                  example:
+                    - 1
+                    - 2
+                    - 3
+                  items:
+                    type: string
+              required:
+                - code
+                - discount_type
+                - discount_value
+                - event_id
+      security: []
+    parameters:
+      -
+        in: path
+        name: event_id
+        description: 'The ID of the event.'
+        example: 19
+        required: true
+        schema:
+          type: integer
+  '/api/coupons/{id}/update':
+    post:
+      summary: 'Updates an existing coupon'
+      operationId: updatesAnExistingCoupon
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Payments
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                code:
+                  type: string
+                  description: 'The coupon code'
+                  example: earum
+                discount_type:
+                  type: string
+                  description: 'The type of discount. Possible values: percentage, fixed.'
+                  example: percentage
+                discount_value:
+                  type: number
+                  description: 'The value of the discount.'
+                  example: 20.0
+                min_purchase:
+                  type: number
+                  description: 'The minimum purchase amount required to use the coupon.'
+                  example: 100.0
+                expires_at:
+                  type: date
+                  description: 'The expiration date of the coupon (Leave blank if you dont want to coupon to expire)'
+                  example: dolorem
                 usage_limit:
                   type: integer
                   description: 'The maximum number of times the coupon can be used.'
@@ -4812,81 +4660,9 @@ paths:
     parameters:
       -
         in: path
-        name: event_id
-        description: 'The ID of the event.'
-        example: 12
-        required: true
-        schema:
-          type: integer
-  '/api/coupons/{id}/update':
-    post:
-      summary: 'Updates an existing coupon'
-      operationId: updatesAnExistingCoupon
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Payments
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                code:
-                  type: string
-                  description: 'The coupon code'
-                  example: pariatur
-                discount_type:
-                  type: string
-                  description: 'The type of discount. Possible values: percentage, fixed.'
-                  example: percentage
-                discount_value:
-                  type: number
-                  description: 'The value of the discount.'
-                  example: 20.0
-                min_purchase:
-                  type: number
-                  description: 'The minimum purchase amount required to use the coupon.'
-                  example: 100.0
-                expires_at:
-                  type: date
-                  description: 'The expiration date of the coupon (Leave blank if you dont want to coupon to expire)'
-                  example: id
-                usage_limit:
-                  type: integer
-                  description: 'The maximum number of times the coupon can be used.'
-                  example: 10
-                usage_count:
-                  type: integer
-                  description: 'The number of times the coupon has been used.'
-                  example: 0
-                event_id:
-                  type: integer
-                  description: 'The ID of the event this coupon is associated with.'
-                  example: 9
-                event_package_ids:
-                  type: array
-                  description: 'An array of event package IDs this coupon applies to. (Leave blank if you want it to apply to all)'
-                  example:
-                    - 1
-                    - 2
-                    - 3
-                  items:
-                    type: string
-              required:
-                - code
-                - discount_type
-                - discount_value
-                - event_id
-      security: []
-    parameters:
-      -
-        in: path
         name: id
         description: 'The ID of the coupon.'
-        example: 18
+        example: 16
         required: true
         schema:
           type: integer
@@ -4905,7 +4681,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the coupon.'
-        example: 20
+        example: 2
         required: true
         schema:
           type: integer
@@ -6387,7 +6163,7 @@ paths:
                   type: array
                   description: 'An array of seats to create.'
                   example:
-                    - id
+                    - voluptate
                   items:
                     type: string
               required:
@@ -7648,19 +7424,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: vpzlihjwglqweyhouigcfva
+                  example: kpunbnd
                 description:
                   type: string
                   description: ''
-                  example: 'Minus sint illum totam repellat esse et.'
+                  example: 'Veniam cumque culpa unde quam ducimus blanditiis.'
                 features:
                   type: string
                   description: ''
-                  example: at
+                  example: autem
                 capacity:
                   type: integer
                   description: ''
-                  example: 15
+                  example: 10
                 seats:
                   type: object
                   description: 'Must have at least 1 items.'
@@ -7689,19 +7465,19 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: hpzkhsv
+                  example: liepvrecjoswtkldft
                 description:
                   type: string
                   description: ''
-                  example: 'Et accusamus et totam voluptas ut.'
+                  example: 'Similique numquam sed nam tenetur vitae.'
                 features:
                   type: string
                   description: ''
-                  example: excepturi
+                  example: sed
                 capacity:
                   type: integer
                   description: ''
-                  example: 2
+                  example: 1
               required:
                 - title
                 - capacity
@@ -7750,7 +7526,7 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: hschroeder@example.org
+                  example: landen.wolf@example.net
                 event_id:
                   type: string
                   description: ''
@@ -7758,7 +7534,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: officia
+                  example: eius
       security: []
   /api/event-attendees:
     get:
@@ -7811,7 +7587,7 @@ paths:
                 coupon_code:
                   type: string
                   description: ''
-                  example: assumenda
+                  example: sint
                 merchant:
                   type: string
                   description: 'The payment merchant to use.'
@@ -7842,9 +7618,8 @@ paths:
                   example: REF123
                 receivers:
                   type: array
-                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example:
-                    - sw
+                  description: 'Must have at least 1 items. Must not have more than 100 items.'
+                  example: pstbinfjegounupumhawzyuk
                   items:
                     type: string
               required:
@@ -7888,7 +7663,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: quo
+                  example: dignissimos
               required:
                 - reference
       security: []
@@ -7911,15 +7686,15 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: autem
+                  example: doloremque
                 quantity:
                   type: integer
                   description: 'Must be at least 1.'
-                  example: 86
+                  example: 52
                 seats:
                   type: array
                   description: 'Must have at least 1 items.'
-                  example: ibbgtkcagqqzxueekbjorvmager
+                  example: kvljqjmxubebfvddvfrzyniqlfemmwjdxgtkupoivygpiiprbjzieiztlwzxbm
                   items:
                     type: string
               required:
@@ -8834,11 +8609,11 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: rerum
+                  example: reiciendis
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: freeman78@example.net
+                  example: ferne02@example.org
               required:
                 - reference
                 - email
@@ -8862,23 +8637,23 @@ paths:
                 ticket_payment_id:
                   type: integer
                   description: ''
-                  example: 4
+                  example: 10
                 hash:
                   type: string
                   description: ''
-                  example: eos
+                  example: in
                 reference:
                   type: string
                   description: ''
-                  example: explicabo
+                  example: corporis
                 device_no:
                   type: string
                   description: ''
-                  example: doloribus
+                  example: ad
                 event_id:
                   type: integer
                   description: ''
-                  example: 5
+                  example: 13
               required:
                 - ticket_payment_id
                 - hash
@@ -8905,7 +8680,7 @@ paths:
                 reference:
                   type: string
                   description: ''
-                  example: pariatur
+                  example: et
               required:
                 - reference
       security: []
@@ -8928,19 +8703,19 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: lgddflfwltbbmpdfqlshn
+                  example: kgc
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: jared.smitham@example.net
+                  example: bjenkins@example.net
                 phone:
                   type: string
                   description: 'Must not be greater than 15 characters.'
-                  example: nuhhmd
+                  example: nidvotsua
                 address:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: rqvfjnpddwmoiwa
+                  example: vkuxc
               required:
                 - name
                 - email

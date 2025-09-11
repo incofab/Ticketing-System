@@ -114,6 +114,8 @@ class GenerateTicketFromPayment
     $existingTicketsGenerated = $this->ticketPayment->tickets()->count();
     DB::beginTransaction();
     foreach ($this->seatIds as $key => $seatId) {
+      $index = intval($key) + $existingTicketsGenerated;
+      $ticketReceiver = $this->ticketPayment->getReceiverByIndex($index);
       $ticketReference = Str::orderedUuid();
       $generatedTicket = $this->ticketPayment->tickets()->firstOrCreate(
         [
@@ -125,22 +127,23 @@ class GenerateTicketFromPayment
           'qr_code' => QrCode::format('svg')->generate(
             "$ticketReference|{$this->ticketPayment->id}"
           ),
-          'user_id' => $this->ticketPayment->user_id
+          'user_id' => $this->ticketPayment->user_id,
+          'ticket_receiver_id' => $ticketReceiver?->id
         ]
       );
+
       $generatedTicket->load(
         'seat',
         'eventPackage.seatSection',
         'eventPackage.event.eventSeason',
-        'ticketPayment'
+        'ticketPayment',
+        'ticketReceiver'
       );
 
       $this->recordAttendee($seatId, $generatedTicket);
 
       $tickets[] = $generatedTicket;
-      $email = $this->ticketPayment->getReceiverEmail(
-        intval($key) + $existingTicketsGenerated
-      );
+      $email = $ticketReceiver?->email ?? $this->ticketPayment->email; // $this->ticketPayment->getReceiverEmail($index);
       if ($email) {
         Mail::to($email)->queue(
           new TicketPurchaseMail($generatedTicket->fresh())

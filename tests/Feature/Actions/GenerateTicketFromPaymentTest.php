@@ -79,7 +79,7 @@ it('aborts if not enough seats 2', function () {
 
 it('generates tickets from payment', function () {
   $ticketPayment = TicketPayment::factory()
-    ->receiver(1)
+    ->ticketReceiver(2)
     ->create();
   $paymentReference = PaymentReference::factory()
     ->ticketPayment($ticketPayment)
@@ -131,11 +131,11 @@ it('generates tickets from payment', function () {
   Mail::assertQueuedCount($seats->count());
   Mail::assertQueued(
     TicketPurchaseMail::class,
-    fn($mail) => $mail->hasTo($ticketPayment->receivers[0])
+    fn($mail) => $mail->hasTo($ticketPayment->ticketReceivers[0]->email)
   );
   Mail::assertQueued(
     TicketPurchaseMail::class,
-    fn($mail) => $mail->hasTo($ticketPayment->email)
+    fn($mail) => $mail->hasTo($ticketPayment->ticketReceivers[1]->email)
   );
 });
 

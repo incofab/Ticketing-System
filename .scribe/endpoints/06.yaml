@@ -418,7 +418,7 @@ endpoints:
         name: event_packages
         description: 'Must have at least 1 items.'
         required: false
-        example: rquwpoktx
+        example: ftbrufncmnlqumnwupuotegxxkznrzftwtwrzinfdohxpponinrtkaukxgmuytwgzpnaksvcttrkeiu
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -427,7 +427,7 @@ endpoints:
         name: 'event_packages[].seat_section_id'
         description: ''
         required: true
-        example: qui
+        example: hic
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -436,7 +436,7 @@ endpoints:
         name: 'event_packages[].price'
         description: ''
         required: true
-        example: 934420152.1476
+        example: 1140.08
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -445,13 +445,13 @@ endpoints:
         name: 'event_packages[].title'
         description: ''
         required: true
-        example: alias
+        example: molestiae
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      event_packages: rquwpoktx
+      event_packages: ftbrufncmnlqumnwupuotegxxkznrzftwtwrzinfdohxpponinrtkaukxgmuytwgzpnaksvcttrkeiu
     fileParameters: []
     responses: []
     responseFields: []

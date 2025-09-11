@@ -22,14 +22,28 @@ class TicketPayment extends Model
     'processing' => 'boolean'
   ];
 
+  function saveReceivers($receivers)
+  {
+    $this->ticketReceivers()->delete();
+    foreach ($receivers as $data) {
+      $this->ticketReceivers()->create(TicketReceiver::prepareData($data));
+    }
+  }
+
   function markProcessing(bool $isProcessing)
   {
     $this->fill(['processing' => $isProcessing])->save();
   }
 
+  /** @deprecated No longer used */
   function getReceiverEmail($index = 0)
   {
-    return $this->receivers[$index] ?? $this->email;
+    return $this->ticketReceivers[$index]?->email ?? $this->email;
+  }
+
+  function getReceiverByIndex($index = 0): TicketReceiver|null
+  {
+    return $this->ticketReceivers[$index] ?? $this->ticketReceivers->first();
   }
 
   function eventPackage()
@@ -55,5 +69,10 @@ class TicketPayment extends Model
   function coupon()
   {
     return $this->belongsTo(Coupon::class);
+  }
+
+  function ticketReceivers()
+  {
+    return $this->hasMany(TicketReceiver::class);
   }
 }

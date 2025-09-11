@@ -67,7 +67,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: nxuetjfzwsrtmbwu
+        example: zey
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -76,14 +76,14 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Provident optio qui dolor et repudiandae voluptatem.'
+        example: 'Ullam voluptatem vitae occaecati dicta aut.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: nxuetjfzwsrtmbwu
-      description: 'Provident optio qui dolor et repudiandae voluptatem.'
+      title: zey
+      description: 'Ullam voluptatem vitae occaecati dicta aut.'
     fileParameters: []
     responses: []
     responseFields: []
@@ -128,7 +128,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: psmbtmwwufrtuajbzw
+        example: ep
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -137,14 +137,14 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'At et sit voluptatibus et quo.'
+        example: 'Possimus eveniet et aliquid optio similique magni molestiae.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: psmbtmwwufrtuajbzw
-      description: 'At et sit voluptatibus et quo.'
+      title: ep
+      description: 'Possimus eveniet et aliquid optio similique magni molestiae.'
     fileParameters: []
     responses: []
     responseFields: []

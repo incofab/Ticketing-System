@@ -99,7 +99,7 @@ it('returns already verified if the ticket is already verified', function () {
     ->postJson(route('api.tickets.verify'), $this->requestData)
     ->assertOk();
 
-  travelTo(now()->addSeconds(5));
+  travelTo(now()->addSeconds(2));
 
   // Verification still valid if called from same device and within time allowance
   actingAs($this->admin)

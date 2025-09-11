@@ -34,6 +34,7 @@ class TicketPaymentUITableFilters extends BaseUITableFilter
       fn($q) => $q
         ->where('ticket_payments.email', 'like', "%$search%")
         ->orWhere('ticket_payments.phone', 'like', "%$search%")
+        ->orWhere('ticket_payments.name', 'like', "%$search%")
         ->orWhere('ticket_payments.referral_code', 'like', "%$search%")
         ->orWhere('payment_references.reference', 'like', "%$search%")
     );
@@ -70,15 +71,30 @@ class TicketPaymentUITableFilters extends BaseUITableFilter
     return $this;
   }
 
+  private function joinTicketReceivers(): static
+  {
+    $this->callOnce(
+      'joinTicketReceivers',
+      fn() => $this->baseQuery->join(
+        'ticket_receivers',
+        'ticket_receivers.id',
+        'ticket_receivers.ticket_payment_id'
+      )
+    );
+    return $this;
+  }
+
   public function directQuery(): static
   {
-    $this->joinPaymentReference()->when(
-      $this->requestGet('event_id'),
-      fn($q, $value) => $q
-        ->joinEventPackage()
-        ->getQuery()
-        ->where('event_packages.event_id', $value)
-    );
+    $this->joinPaymentReference()
+      // ->joinTicketReceivers()
+      ->when(
+        $this->requestGet('event_id'),
+        fn($q, $value) => $q
+          ->joinEventPackage()
+          ->getQuery()
+          ->where('event_packages.event_id', $value)
+      );
 
     $this->baseQuery
       ->when(

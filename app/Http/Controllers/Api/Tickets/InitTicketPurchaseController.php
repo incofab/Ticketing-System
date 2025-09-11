@@ -98,10 +98,27 @@ class InitTicketPurchaseController extends Controller
       'phone' => ['nullable', 'string', 'max:255'],
       'email' => ['required', 'email', 'max:255'],
       'referral_code' => ['nullable', 'string', 'max:255'],
-      'receivers' => ['nullable', 'array'],
-      'receivers.*' => ['string', 'email', 'max:255']
+      'receivers' => ['nullable', 'array', 'min:1', 'max:100'],
+      'receivers.*.email' => ['required', 'email', 'max:255'],
+      'receivers.*.name' => ['nullable', 'string', 'max:255'],
+      'receivers.*.phone' => ['nullable', 'string', 'max:255'],
+      ...collect($eventPackage->event->meta['extra_user_data'] ?? [])
+        ->mapWithKeys(
+          fn($item) => [
+            'receivers.*.' . $item['name'] => [
+              $item['is_required'] ? 'required' : 'nullable',
+              match ($item['type']) {
+                'text', 'long-text' => 'string',
+                'integer' => 'integer',
+                'float' => 'numeric',
+                default => 'string'
+              },
+              'max:1000'
+            ]
+          ]
+        )
+        ->toArray()
     ]);
-
     abort_if($eventPackage->event->isExpired(), 403, 'Event is expired');
 
     /** @var Coupon $coupon */
@@ -122,6 +139,7 @@ class InitTicketPurchaseController extends Controller
       'original_amount' => $eventPackage->price * $data['quantity'],
       'discount_amount' => $unitDiscount * $data['quantity']
     ]);
+    $ticketPayment->saveReceivers($data['receivers'] ?? []);
     $reference = PaymentReference::generateReference();
     $paymentReferenceDto = new PaymentReferenceDto(
       merchant: $request->merchant,

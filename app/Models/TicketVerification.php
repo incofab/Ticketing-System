@@ -20,10 +20,10 @@ class TicketVerification extends Model
     if ($this->device_no !== $deviceNo) {
       return false;
     }
-    if ($this->reference !== $reference) {
-      return false;
-    }
-    $allowanceInSeconds = 4;
+    // if ($this->reference !== $reference) {
+    //   return false;
+    // }
+    $allowanceInSeconds = 3;
     return $this->created_at
       ->addSeconds($allowanceInSeconds)
       ->greaterThanOrEqualTo(now());

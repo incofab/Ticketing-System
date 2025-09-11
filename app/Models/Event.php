@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
+use App\Enums\ExtraUserDataType;
 use App\Enums\PaymentMerchantType;
+use Illuminate\Database\Eloquent\Casts\AsArrayObject;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -10,6 +12,15 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules\Enum;
 
+/**
+ * @property array{
+ *   extra_user_data: array {
+ *    name: string,
+ *    type: string,
+ *    is_required: bool
+ *   }[]
+ * }|null $meta
+ */
 class Event extends Model
 {
   use HasFactory, SoftDeletes;
@@ -21,7 +32,8 @@ class Event extends Model
     'event_season_id' => 'integer',
     'start_time' => 'datetime',
     'end_time' => 'datetime',
-    'payment_merchants' => 'array'
+    'payment_merchants' => 'array',
+    'meta' => AsArrayObject::class
   ];
 
   static function createRule($eventSeasonId, Event|null $event = null)
@@ -55,7 +67,15 @@ class Event extends Model
       'payment_merchants.*' => [
         'required',
         new Enum(PaymentMerchantType::class)
-      ]
+      ],
+      'meta' => ['nullable', 'array'],
+      'meta.extra_user_data' => ['nullable', 'array', 'min:1'],
+      'meta.extra_user_data.*.name' => ['required', 'string', 'max:255'],
+      'meta.extra_user_data.*.type' => [
+        'required',
+        new Enum(ExtraUserDataType::class)
+      ],
+      'meta.extra_user_data.*.is_required' => ['required', 'boolean']
     ];
   }
 

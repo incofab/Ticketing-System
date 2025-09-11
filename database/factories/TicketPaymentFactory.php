@@ -5,6 +5,7 @@ namespace Database\Factories;
 use App\Models\EventPackage;
 use App\Models\PaymentReference;
 use App\Models\TicketPayment;
+use App\Models\TicketReceiver;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -46,5 +47,16 @@ class TicketPaymentFactory extends Factory
         )
       ]
     );
+  }
+
+  function ticketReceiver($count = 1)
+  {
+    return $this->afterCreating(function (TicketPayment $ticketPayment) use (
+      $count
+    ) {
+      TicketReceiver::factory($count)
+        ->for($ticketPayment)
+        ->create();
+    });
   }
 }

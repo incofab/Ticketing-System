@@ -12,6 +12,7 @@ class Ticket extends Model
   protected $guarded = [];
   protected $casts = [
     'ticket_payment_id' => 'integer',
+    'ticket_receiver_id' => 'integer',
     'event_package_id' => 'integer',
     'seat_id' => 'integer',
     'user_id' => 'integer',
@@ -42,5 +43,9 @@ class Ticket extends Model
   function ticketVerification()
   {
     return $this->hasOne(TicketVerification::class);
+  }
+  function ticketReceiver()
+  {
+    return $this->belongsTo(TicketReceiver::class);
   }
 }

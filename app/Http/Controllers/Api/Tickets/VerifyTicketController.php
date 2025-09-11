@@ -38,7 +38,7 @@ class VerifyTicketController extends Controller
       ->first();
 
     if (!$ticket || $ticket->eventPackage->event_id !== $data['event_id']) {
-      return $this->res(false, self::SLUG_INVALID_TICKET, []);
+      return $this->res(false, self::SLUG_INVALID_TICKET);
     }
 
     /** @var TicketVerification $existingVerification */

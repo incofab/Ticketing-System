@@ -87,7 +87,14 @@ it('can initiate a ticket purchase for Paystack with coupon code', function () {
     'phone' => '123456789',
     'email' => 'john@example.com',
     'coupon_code' => $coupon->code,
-    'receivers' => ['john@example.com']
+    'receivers' => [
+      [
+        'name' => 'John Doe',
+        'phone' => '123456789',
+        'email' => 'john@example.com',
+        'Age' => 20
+      ]
+    ]
   ];
   postJson(
     route('api.tickets.init-payment', [$activeEventPackage]),

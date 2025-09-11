@@ -40,7 +40,8 @@ class PaymentController extends Controller
       ->with(
         'eventPackage.event',
         'eventPackage.seatSection',
-        'paymentReference'
+        'paymentReference',
+        'ticketReceivers'
       )
       ->latest('ticket_payments.id');
 

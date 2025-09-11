@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Enums\ExtraUserDataType;
 use App\Models\EventSeason;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -28,7 +29,21 @@ class EventFactory extends Factory
       'tiktok' => fake()->url(),
       'linkedin' => fake()->url(),
       'instagram' => fake()->url(),
-      'youtube' => fake()->url()
+      'youtube' => fake()->url(),
+      'meta' => [
+        'extra_user_data' => [
+          [
+            'name' => 'Age',
+            'type' => ExtraUserDataType::Integer->value,
+            'is_required' => true
+          ],
+          [
+            'name' => 'Notes',
+            'type' => ExtraUserDataType::LongText->value,
+            'is_required' => false
+          ]
+        ]
+      ]
     ];
   }
 
