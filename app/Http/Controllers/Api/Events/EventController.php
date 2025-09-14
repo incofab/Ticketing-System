@@ -76,6 +76,38 @@ class EventController extends Controller
     return $this->apiRes($event);
   }
 
+  /**
+   * @bodyParam title string required The title of the event. Example: My Event
+   * @bodyParam description string The description of the event. Example: This is a great event
+   * @bodyParam start_time datetime required The start time of the event. Example: 2024-12-31 12:00:00
+   * @bodyParam end_time datetime The end time of the event. Must be after start_time. Example: 2024-12-31 14:00:00
+   * @bodyParam home_team string The home team for the event. Example: Home Team
+   * @bodyParam away_team string The away team for the event. Example: Away Team
+   * @bodyParam venue string The venue of the event. Example: Event Hall
+   * @bodyParam phone string The contact phone number. Example: +1234567890
+   * @bodyParam email string The contact email address. Example: contact@example.com
+   * @bodyParam website string The event website. Example: https://www.example.com
+   * @bodyParam facebook string The Facebook page URL. Example: https://www.facebook.com/example
+   * @bodyParam twitter string The Twitter page URL. Example: https://www.twitter.com/example
+   * @bodyParam instagram string The Instagram page URL. Example: https://www.instagram.com/example
+   * @bodyParam youtube string The YouTube channel URL. Example: https://www.youtube.com/example
+   * @bodyParam tiktok string The TikTok profile URL. Example: https://www.tiktok.com/@example
+   * @bodyParam linkedin string The LinkedIn profile URL. Example: https://www.linkedin.com/in/example
+   * @bodyParam logo file The event logo image.
+   * @bodyParam payment_merchants array An array of payment merchant types. Example: ["paypal", "stripe"]
+   * @bodyParam payment_merchants.* string required A valid payment merchant type.
+   * @bodyParam meta array Additional metadata for the event.
+   * @bodyParam meta.extra_user_data array An array of extra data fields.
+   * @bodyParam meta.extra_user_data array An array of extra user data fields.
+   * @bodyParam meta.extra_user_data.*.name string required The name of the extra user data field. Example: Address
+   * @bodyParam meta.extra_user_data.*.type string required The type of the extra user data field. Example: must be one of: text, long-text, integer, float
+   * @bodyParam meta.extra_user_data.*.is_required boolean required Whether the extra user data field is required. Example: true
+   *
+   * @bodyParam event_packages array An array of event packages.
+   * @bodyParam event_packages.*.seat_section_id integer required The ID of the seat section.
+   * @bodyParam event_packages.*.price numeric required The price of the event package.
+   * @bodyParam event_packages.*.title string required The title of the event package. Example: VIP Package
+   */
   public function store(Request $request, EventSeason $eventSeason)
   {
     $data = $request->validate([
@@ -112,6 +144,33 @@ class EventController extends Controller
     $event->fill(['logo' => $publicUrl])->save();
   }
 
+  /**
+   * @bodyParam title string required The title of the event. Example: My Event
+   * @bodyParam description string The description of the event. Example: This is a great event
+   * @bodyParam start_time datetime required The start time of the event. Example: 2024-12-31 12:00:00
+   * @bodyParam end_time datetime The end time of the event. Must be after start_time. Example: 2024-12-31 14:00:00
+   * @bodyParam home_team string The home team for the event. Example: Home Team
+   * @bodyParam away_team string The away team for the event. Example: Away Team
+   * @bodyParam venue string The venue of the event. Example: Event Hall
+   * @bodyParam phone string The contact phone number. Example: +1234567890
+   * @bodyParam email string The contact email address. Example: contact@example.com
+   * @bodyParam website string The event website. Example: https://www.example.com
+   * @bodyParam facebook string The Facebook page URL. Example: https://www.facebook.com/example
+   * @bodyParam twitter string The Twitter page URL. Example: https://www.twitter.com/example
+   * @bodyParam instagram string The Instagram page URL. Example: https://www.instagram.com/example
+   * @bodyParam youtube string The YouTube channel URL. Example: https://www.youtube.com/example
+   * @bodyParam tiktok string The TikTok profile URL. Example: https://www.tiktok.com/@example
+   * @bodyParam linkedin string The LinkedIn profile URL. Example: https://www.linkedin.com/in/example
+   * @bodyParam logo file The event logo image.
+   * @bodyParam payment_merchants array An array of payment merchant types. Example: ["paypal", "stripe"]
+   * @bodyParam payment_merchants.* string required A valid payment merchant type.
+   * @bodyParam meta array Additional metadata for the event.
+   * @bodyParam meta.extra_user_data array An array of extra data fields.
+   * @bodyParam meta.extra_user_data array An array of extra user data fields.
+   * @bodyParam meta.extra_user_data.*.name string required The name of the extra user data field. Example: Address
+   * @bodyParam meta.extra_user_data.*.type string required The type of the extra user data field. Example: must be one of: text, long-text, integer, float
+   * @bodyParam meta.extra_user_data.*.is_required boolean required Whether the extra user data field is required. Example: true
+   */
   public function update(Request $request, Event $event)
   {
     $data = $request->validate(

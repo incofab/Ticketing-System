@@ -776,13 +776,13 @@ endpoints:
         name: code
         description: ''
         required: true
-        example: 14
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      code: 14
+      code: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -793,7 +793,7 @@ endpoints:
         status: 404
         content: |-
           {
-              "message": "No query results for model [App\\Models\\Coupon] 14",
+              "message": "No query results for model [App\\Models\\Coupon] 1",
               "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
               "file": "/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
               "line": 487,
@@ -1283,13 +1283,13 @@ endpoints:
         name: event_id
         description: 'The ID of the event.'
         required: true
-        example: 19
+        example: 6
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      event_id: 19
+      event_id: 6
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1346,7 +1346,7 @@ endpoints:
         name: code
         description: 'The coupon code'
         required: true
-        example: et
+        example: sint
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1382,7 +1382,7 @@ endpoints:
         name: expires_at
         description: 'The expiration date of the coupon (Leave blank if you dont want to coupon to expire)'
         required: false
-        example: tempore
+        example: quaerat
         type: date
         enumValues: []
         exampleWasSpecified: false
@@ -1409,7 +1409,7 @@ endpoints:
         name: event_id
         description: 'The ID of the event this coupon is associated with.'
         required: true
-        example: 1
+        example: 20
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -1427,14 +1427,14 @@ endpoints:
         exampleWasSpecified: true
         custom: []
     cleanBodyParameters:
-      code: et
+      code: sint
       discount_type: percentage
       discount_value: 20.0
       min_purchase: 100.0
-      expires_at: tempore
+      expires_at: quaerat
       usage_limit: 10
       usage_count: 0
-      event_id: 1
+      event_id: 20
       event_package_ids:
         - 1
         - 2
@@ -1468,13 +1468,13 @@ endpoints:
         name: id
         description: 'The ID of the coupon.'
         required: true
-        example: 16
+        example: 2
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 2
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -1482,7 +1482,7 @@ endpoints:
         name: code
         description: 'The coupon code'
         required: true
-        example: earum
+        example: sapiente
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1545,7 +1545,7 @@ endpoints:
         name: event_id
         description: 'The ID of the event this coupon is associated with.'
         required: true
-        example: 17
+        example: 8
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -1563,14 +1563,14 @@ endpoints:
         exampleWasSpecified: true
         custom: []
     cleanBodyParameters:
-      code: earum
+      code: sapiente
       discount_type: percentage
       discount_value: 20.0
       min_purchase: 100.0
       expires_at: dolorem
       usage_limit: 10
       usage_count: 0
-      event_id: 17
+      event_id: 8
       event_package_ids:
         - 1
         - 2
@@ -1604,13 +1604,13 @@ endpoints:
         name: id
         description: 'The ID of the coupon.'
         required: true
-        example: 2
+        example: 13
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 2
+      id: 13
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

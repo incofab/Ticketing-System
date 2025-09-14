@@ -31,6 +31,12 @@ use Illuminate\Validation\Rules\Enum;
  * @bodyParam phone string The phone number of the ticket purchaser. Example: 08012345678
  * @bodyParam email string required The email of the ticket purchaser. Example: john.doe@example.com
  * @bodyParam referral_code string The referral code used for the purchase. Example: REF123
+ * @bodyParam coupon_code string The coupon code to apply for a discount. Example: SAVE10
+ * @bodyParam receivers array An array of ticket receivers.
+ * @bodyParam receivers.*.email string required The email of the ticket receiver. Example: john.doe@example.com
+ * @bodyParam receivers.*.name string The name of the ticket receiver. Example: Jane Doe
+ * @bodyParam receivers.*.phone string The phone number of the ticket receiver. Example: 08087654321
+ * @bodyParam receivers.*.<ParamsInExtraUserData> string Additional fields as defined in the event's extra user data.
  */
 class InitTicketPurchaseController extends Controller
 {

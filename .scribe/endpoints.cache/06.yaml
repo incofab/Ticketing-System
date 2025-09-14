@@ -399,7 +399,7 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
+      Content-Type: multipart/form-data
       Accept: application/json
     urlParameters:
       eventSeason_id:
@@ -418,9 +418,10 @@ endpoints:
     bodyParameters:
       event_packages:
         name: event_packages
-        description: 'Must have at least 1 items.'
+        description: 'An array of event packages.'
         required: false
-        example: ftbrufncmnlqumnwupuotegxxkznrzftwtwrzinfdohxpponinrtkaukxgmuytwgzpnaksvcttrkeiu
+        example:
+          - fuga
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -429,7 +430,7 @@ endpoints:
         name: 'event_packages[].seat_section_id'
         description: ''
         required: true
-        example: hic
+        example: reiciendis
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -438,7 +439,7 @@ endpoints:
         name: 'event_packages[].price'
         description: ''
         required: true
-        example: 1140.08
+        example: 1426.25
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -447,14 +448,284 @@ endpoints:
         name: 'event_packages[].title'
         description: ''
         required: true
-        example: molestiae
+        example: sequi
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
+      title:
+        name: title
+        description: 'The title of the event.'
+        required: true
+        example: 'My Event'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      description:
+        name: description
+        description: 'The description of the event.'
+        required: false
+        example: 'This is a great event'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      start_time:
+        name: start_time
+        description: 'The start time of the event.'
+        required: true
+        example: '2024-12-31 12:00:00'
+        type: datetime
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      end_time:
+        name: end_time
+        description: 'The end time of the event. Must be after start_time.'
+        required: false
+        example: '2024-12-31 14:00:00'
+        type: datetime
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      home_team:
+        name: home_team
+        description: 'The home team for the event.'
+        required: false
+        example: 'Home Team'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      away_team:
+        name: away_team
+        description: 'The away team for the event.'
+        required: false
+        example: 'Away Team'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      venue:
+        name: venue
+        description: 'The venue of the event.'
+        required: false
+        example: 'Event Hall'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      phone:
+        name: phone
+        description: 'The contact phone number.'
+        required: false
+        example: '+1234567890'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      email:
+        name: email
+        description: 'The contact email address.'
+        required: false
+        example: contact@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      website:
+        name: website
+        description: 'The event website.'
+        required: false
+        example: 'https://www.example.com'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      facebook:
+        name: facebook
+        description: 'The Facebook page URL.'
+        required: false
+        example: 'https://www.facebook.com/example'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      twitter:
+        name: twitter
+        description: 'The Twitter page URL.'
+        required: false
+        example: 'https://www.twitter.com/example'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      instagram:
+        name: instagram
+        description: 'The Instagram page URL.'
+        required: false
+        example: 'https://www.instagram.com/example'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      youtube:
+        name: youtube
+        description: 'The YouTube channel URL.'
+        required: false
+        example: 'https://www.youtube.com/example'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      tiktok:
+        name: tiktok
+        description: 'The TikTok profile URL.'
+        required: false
+        example: 'https://www.tiktok.com/@example'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      linkedin:
+        name: linkedin
+        description: 'The LinkedIn profile URL.'
+        required: false
+        example: 'https://www.linkedin.com/in/example'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      logo:
+        name: logo
+        description: 'The event logo image.'
+        required: false
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      payment_merchants:
+        name: payment_merchants
+        description: 'An array of payment merchant types.'
+        required: false
+        example:
+          - paypal
+          - stripe
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      'payment_merchants.*':
+        name: 'payment_merchants.*'
+        description: 'A valid payment merchant type.'
+        required: true
+        example: qui
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      meta:
+        name: meta
+        description: 'Additional metadata for the event.'
+        required: false
+        example:
+          - in
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      meta.extra_user_data:
+        name: meta.extra_user_data
+        description: 'An array of extra user data fields.'
+        required: false
+        example:
+          - id
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      'meta.extra_user_data.*.name':
+        name: 'meta.extra_user_data.*.name'
+        description: 'The name of the extra user data field.'
+        required: true
+        example: Address
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      'meta.extra_user_data.*.type':
+        name: 'meta.extra_user_data.*.type'
+        description: 'The type of the extra user data field.'
+        required: true
+        example: 'must be one of: text, long-text, integer, float'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      'meta.extra_user_data.*.is_required':
+        name: 'meta.extra_user_data.*.is_required'
+        description: 'Whether the extra user data field is required.'
+        required: true
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      'event_packages.*.seat_section_id':
+        name: 'event_packages.*.seat_section_id'
+        description: 'The ID of the seat section.'
+        required: true
+        example: 4
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      'event_packages.*.price':
+        name: 'event_packages.*.price'
+        description: 'The price of the event package.'
+        required: true
+        example: voluptas
+        type: numeric
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      'event_packages.*.title':
+        name: 'event_packages.*.title'
+        description: 'The title of the event package.'
+        required: true
+        example: 'VIP Package'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
     cleanBodyParameters:
-      event_packages: ftbrufncmnlqumnwupuotegxxkznrzftwtwrzinfdohxpponinrtkaukxgmuytwgzpnaksvcttrkeiu
-    fileParameters: []
+      event_packages:
+        - fuga
+      title: 'My Event'
+      description: 'This is a great event'
+      start_time: '2024-12-31 12:00:00'
+      end_time: '2024-12-31 14:00:00'
+      home_team: 'Home Team'
+      away_team: 'Away Team'
+      venue: 'Event Hall'
+      phone: '+1234567890'
+      email: contact@example.com
+      website: 'https://www.example.com'
+      facebook: 'https://www.facebook.com/example'
+      twitter: 'https://www.twitter.com/example'
+      instagram: 'https://www.instagram.com/example'
+      youtube: 'https://www.youtube.com/example'
+      tiktok: 'https://www.tiktok.com/@example'
+      linkedin: 'https://www.linkedin.com/in/example'
+      payment_merchants:
+        - paypal
+        - stripe
+      meta:
+        - in
+    fileParameters:
+      logo: null
     responses: []
     responseFields: []
     auth: []
@@ -476,7 +747,7 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
+      Content-Type: multipart/form-data
       Accept: application/json
     urlParameters:
       id:
@@ -492,9 +763,251 @@ endpoints:
       id: 1
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: 'The title of the event.'
+        required: true
+        example: 'My Event'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      description:
+        name: description
+        description: 'The description of the event.'
+        required: false
+        example: 'This is a great event'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      start_time:
+        name: start_time
+        description: 'The start time of the event.'
+        required: true
+        example: '2024-12-31 12:00:00'
+        type: datetime
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      end_time:
+        name: end_time
+        description: 'The end time of the event. Must be after start_time.'
+        required: false
+        example: '2024-12-31 14:00:00'
+        type: datetime
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      home_team:
+        name: home_team
+        description: 'The home team for the event.'
+        required: false
+        example: 'Home Team'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      away_team:
+        name: away_team
+        description: 'The away team for the event.'
+        required: false
+        example: 'Away Team'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      venue:
+        name: venue
+        description: 'The venue of the event.'
+        required: false
+        example: 'Event Hall'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      phone:
+        name: phone
+        description: 'The contact phone number.'
+        required: false
+        example: '+1234567890'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      email:
+        name: email
+        description: 'The contact email address.'
+        required: false
+        example: contact@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      website:
+        name: website
+        description: 'The event website.'
+        required: false
+        example: 'https://www.example.com'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      facebook:
+        name: facebook
+        description: 'The Facebook page URL.'
+        required: false
+        example: 'https://www.facebook.com/example'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      twitter:
+        name: twitter
+        description: 'The Twitter page URL.'
+        required: false
+        example: 'https://www.twitter.com/example'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      instagram:
+        name: instagram
+        description: 'The Instagram page URL.'
+        required: false
+        example: 'https://www.instagram.com/example'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      youtube:
+        name: youtube
+        description: 'The YouTube channel URL.'
+        required: false
+        example: 'https://www.youtube.com/example'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      tiktok:
+        name: tiktok
+        description: 'The TikTok profile URL.'
+        required: false
+        example: 'https://www.tiktok.com/@example'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      linkedin:
+        name: linkedin
+        description: 'The LinkedIn profile URL.'
+        required: false
+        example: 'https://www.linkedin.com/in/example'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      logo:
+        name: logo
+        description: 'The event logo image.'
+        required: false
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      payment_merchants:
+        name: payment_merchants
+        description: 'An array of payment merchant types.'
+        required: false
+        example:
+          - paypal
+          - stripe
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      'payment_merchants.*':
+        name: 'payment_merchants.*'
+        description: 'A valid payment merchant type.'
+        required: true
+        example: minus
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      meta:
+        name: meta
+        description: 'Additional metadata for the event.'
+        required: false
+        example:
+          - delectus
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      meta.extra_user_data:
+        name: meta.extra_user_data
+        description: 'An array of extra user data fields.'
+        required: false
+        example:
+          - soluta
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      'meta.extra_user_data.*.name':
+        name: 'meta.extra_user_data.*.name'
+        description: 'The name of the extra user data field.'
+        required: true
+        example: Address
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      'meta.extra_user_data.*.type':
+        name: 'meta.extra_user_data.*.type'
+        description: 'The type of the extra user data field.'
+        required: true
+        example: 'must be one of: text, long-text, integer, float'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+      'meta.extra_user_data.*.is_required':
+        name: 'meta.extra_user_data.*.is_required'
+        description: 'Whether the extra user data field is required.'
+        required: true
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
+    cleanBodyParameters:
+      title: 'My Event'
+      description: 'This is a great event'
+      start_time: '2024-12-31 12:00:00'
+      end_time: '2024-12-31 14:00:00'
+      home_team: 'Home Team'
+      away_team: 'Away Team'
+      venue: 'Event Hall'
+      phone: '+1234567890'
+      email: contact@example.com
+      website: 'https://www.example.com'
+      facebook: 'https://www.facebook.com/example'
+      twitter: 'https://www.twitter.com/example'
+      instagram: 'https://www.instagram.com/example'
+      youtube: 'https://www.youtube.com/example'
+      tiktok: 'https://www.tiktok.com/@example'
+      linkedin: 'https://www.linkedin.com/in/example'
+      payment_merchants:
+        - paypal
+        - stripe
+      meta:
+        - delectus
+    fileParameters:
+      logo: null
     responses: []
     responseFields: []
     auth: []

@@ -213,7 +213,7 @@ endpoints:
         description: 'An array of seats to create.'
         required: true
         example:
-          - voluptate
+          - sint
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -222,7 +222,7 @@ endpoints:
         name: 'seats[].seat_no'
         description: 'The seat number (e.g., "A1", "B5").'
         required: true
-        example: laudantium
+        example: voluptatem
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -256,7 +256,7 @@ endpoints:
         custom: []
     cleanBodyParameters:
       seats:
-        - voluptate
+        - sint
     fileParameters: []
     responses: []
     responseFields: []
@@ -385,7 +385,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: kpunbnd
+        example: eyibmkzmrekrhdvfhxv
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -394,7 +394,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Veniam cumque culpa unde quam ducimus blanditiis.'
+        example: 'Quas voluptas unde consectetur perferendis officiis molestiae voluptate.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -412,7 +412,7 @@ endpoints:
         name: capacity
         description: ''
         required: true
-        example: 10
+        example: 9
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -427,10 +427,10 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: kpunbnd
-      description: 'Veniam cumque culpa unde quam ducimus blanditiis.'
+      title: eyibmkzmrekrhdvfhxv
+      description: 'Quas voluptas unde consectetur perferendis officiis molestiae voluptate.'
       features: autem
-      capacity: 10
+      capacity: 9
     fileParameters: []
     responses: []
     responseFields: []
@@ -474,7 +474,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: liepvrecjoswtkldft
+        example: ievmkzplboslqyuyi
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -483,7 +483,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Similique numquam sed nam tenetur vitae.'
+        example: 'Ea ab dolorum blanditiis est id.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -492,7 +492,7 @@ endpoints:
         name: features
         description: ''
         required: false
-        example: sed
+        example: est
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -501,16 +501,16 @@ endpoints:
         name: capacity
         description: ''
         required: true
-        example: 1
+        example: 8
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: liepvrecjoswtkldft
-      description: 'Similique numquam sed nam tenetur vitae.'
-      features: sed
-      capacity: 1
+      title: ievmkzplboslqyuyi
+      description: 'Ea ab dolorum blanditiis est id.'
+      features: est
+      capacity: 8
     fileParameters: []
     responses: []
     responseFields: []
