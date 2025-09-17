@@ -117,6 +117,10 @@ class InitTicketPurchaseController extends Controller
                 'text', 'long-text' => 'string',
                 'integer' => 'integer',
                 'float' => 'numeric',
+                'radio' => 'string',
+                'checkbox' => 'array',
+                'select' => 'string',
+                'multi-select' => 'array',
                 default => 'string'
               },
               'max:1000'

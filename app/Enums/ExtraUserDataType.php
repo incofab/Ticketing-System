@@ -12,4 +12,8 @@ enum ExtraUserDataType: string
   case LongText = 'long-text';
   case Integer = 'integer';
   case Float = 'float';
+  case Radio = 'radio';
+  case Checkbox = 'checkbox';
+  case Select = 'select';
+  case MultiSelect = 'multi-select';
 }
