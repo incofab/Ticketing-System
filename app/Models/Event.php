@@ -75,7 +75,8 @@ class Event extends Model
         'required',
         new Enum(ExtraUserDataType::class)
       ],
-      'meta.extra_user_data.*.is_required' => ['nullable', 'boolean']
+      'meta.extra_user_data.*.is_required' => ['nullable', 'boolean'],
+      'meta.email_footnote' => ['nullable', 'string', 'max:1000']
     ];
   }
 

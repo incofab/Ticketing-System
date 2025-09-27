@@ -17,6 +17,11 @@ Your reservation has been ticketed successfully.
 
 To view your ticket and confirm your attendance, RSVP at <a href="{{$viewTicketUrl}}">{{$viewTicketUrl}}</a> 
 
+@if ($event->meta['email_footnote'] ?? false)
+<br>
+{!! $event->meta['email_footnote'] !!}
+<br>
+@endif
 
 If you found this email in your Spam folder, please "Report not Spam".  
 
