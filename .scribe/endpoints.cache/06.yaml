@@ -421,7 +421,7 @@ endpoints:
         description: 'An array of event packages.'
         required: false
         example:
-          - fuga
+          - adipisci
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -430,7 +430,7 @@ endpoints:
         name: 'event_packages[].seat_section_id'
         description: ''
         required: true
-        example: reiciendis
+        example: ab
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -439,7 +439,7 @@ endpoints:
         name: 'event_packages[].price'
         description: ''
         required: true
-        example: 1426.25
+        example: 35289.0
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -448,7 +448,7 @@ endpoints:
         name: 'event_packages[].title'
         description: ''
         required: true
-        example: sequi
+        example: quia
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -621,7 +621,7 @@ endpoints:
         name: 'payment_merchants.*'
         description: 'A valid payment merchant type.'
         required: true
-        example: qui
+        example: nemo
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -631,7 +631,7 @@ endpoints:
         description: 'Additional metadata for the event.'
         required: false
         example:
-          - in
+          - placeat
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -641,7 +641,7 @@ endpoints:
         description: 'An array of extra user data fields.'
         required: false
         example:
-          - id
+          - ut
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -686,7 +686,7 @@ endpoints:
         name: 'event_packages.*.price'
         description: 'The price of the event package.'
         required: true
-        example: voluptas
+        example: dolorem
         type: numeric
         enumValues: []
         exampleWasSpecified: false
@@ -702,7 +702,7 @@ endpoints:
         custom: []
     cleanBodyParameters:
       event_packages:
-        - fuga
+        - adipisci
       title: 'My Event'
       description: 'This is a great event'
       start_time: '2024-12-31 12:00:00'
@@ -723,7 +723,7 @@ endpoints:
         - paypal
         - stripe
       meta:
-        - in
+        - placeat
     fileParameters:
       logo: null
     responses: []
@@ -932,7 +932,7 @@ endpoints:
         name: 'payment_merchants.*'
         description: 'A valid payment merchant type.'
         required: true
-        example: minus
+        example: similique
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -942,7 +942,7 @@ endpoints:
         description: 'Additional metadata for the event.'
         required: false
         example:
-          - delectus
+          - dolores
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -952,7 +952,7 @@ endpoints:
         description: 'An array of extra user data fields.'
         required: false
         example:
-          - soluta
+          - asperiores
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -1005,7 +1005,7 @@ endpoints:
         - paypal
         - stripe
       meta:
-        - delectus
+        - dolores
     fileParameters:
       logo: null
     responses: []

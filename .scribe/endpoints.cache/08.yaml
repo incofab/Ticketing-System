@@ -97,7 +97,7 @@ endpoints:
         name: seat_section_id
         description: ''
         required: true
-        example: ut
+        example: tempore
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -106,7 +106,7 @@ endpoints:
         name: price
         description: ''
         required: true
-        example: 7159.8994
+        example: 0.0
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -115,7 +115,7 @@ endpoints:
         name: entry_gate
         description: ''
         required: false
-        example: sit
+        example: et
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -124,7 +124,7 @@ endpoints:
         name: notes
         description: ''
         required: false
-        example: quo
+        example: porro
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -133,7 +133,7 @@ endpoints:
         name: capacity
         description: ''
         required: true
-        example: 20
+        example: 3
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -142,18 +142,18 @@ endpoints:
         name: title
         description: ''
         required: true
-        example: veritatis
+        example: et
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      seat_section_id: ut
-      price: 7159.8994
-      entry_gate: sit
-      notes: quo
-      capacity: 20
-      title: veritatis
+      seat_section_id: tempore
+      price: 0.0
+      entry_gate: et
+      notes: porro
+      capacity: 3
+      title: et
     fileParameters: []
     responses: []
     responseFields: []
@@ -197,7 +197,7 @@ endpoints:
         name: seat_section_id
         description: ''
         required: true
-        example: eius
+        example: non
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -206,7 +206,7 @@ endpoints:
         name: price
         description: ''
         required: true
-        example: 0.15
+        example: 9.3764
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -215,7 +215,7 @@ endpoints:
         name: entry_gate
         description: ''
         required: false
-        example: sint
+        example: ullam
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -224,7 +224,7 @@ endpoints:
         name: notes
         description: ''
         required: false
-        example: quibusdam
+        example: earum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -233,7 +233,7 @@ endpoints:
         name: capacity
         description: ''
         required: true
-        example: 5
+        example: 4
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -242,18 +242,18 @@ endpoints:
         name: title
         description: ''
         required: true
-        example: ducimus
+        example: consectetur
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      seat_section_id: eius
-      price: 0.15
-      entry_gate: sint
-      notes: quibusdam
-      capacity: 5
-      title: ducimus
+      seat_section_id: non
+      price: 9.3764
+      entry_gate: ullam
+      notes: earum
+      capacity: 4
+      title: consectetur
     fileParameters: []
     responses: []
     responseFields: []
