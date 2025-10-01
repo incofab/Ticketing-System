@@ -421,7 +421,7 @@ endpoints:
         description: 'An array of event packages.'
         required: false
         example:
-          - adipisci
+          - dolor
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -430,7 +430,7 @@ endpoints:
         name: 'event_packages[].seat_section_id'
         description: ''
         required: true
-        example: ab
+        example: ut
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -439,7 +439,7 @@ endpoints:
         name: 'event_packages[].price'
         description: ''
         required: true
-        example: 35289.0
+        example: 62126959.8081
         type: number
         enumValues: []
         exampleWasSpecified: false
@@ -448,7 +448,7 @@ endpoints:
         name: 'event_packages[].title'
         description: ''
         required: true
-        example: quia
+        example: qui
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -621,7 +621,7 @@ endpoints:
         name: 'payment_merchants.*'
         description: 'A valid payment merchant type.'
         required: true
-        example: nemo
+        example: optio
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -631,7 +631,7 @@ endpoints:
         description: 'Additional metadata for the event.'
         required: false
         example:
-          - placeat
+          - voluptatem
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -641,7 +641,7 @@ endpoints:
         description: 'An array of extra user data fields.'
         required: false
         example:
-          - ut
+          - ipsa
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -673,11 +673,20 @@ endpoints:
         enumValues: []
         exampleWasSpecified: true
         custom: []
+      meta.email_footnote:
+        name: meta.email_footnote
+        description: 'Any footnote message that will be added to ticket purchase email.'
+        required: false
+        example: 'Thanks for joining us'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
       'event_packages.*.seat_section_id':
         name: 'event_packages.*.seat_section_id'
         description: 'The ID of the seat section.'
         required: true
-        example: 4
+        example: 7
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -686,7 +695,7 @@ endpoints:
         name: 'event_packages.*.price'
         description: 'The price of the event package.'
         required: true
-        example: dolorem
+        example: est
         type: numeric
         enumValues: []
         exampleWasSpecified: false
@@ -702,7 +711,7 @@ endpoints:
         custom: []
     cleanBodyParameters:
       event_packages:
-        - adipisci
+        - dolor
       title: 'My Event'
       description: 'This is a great event'
       start_time: '2024-12-31 12:00:00'
@@ -723,7 +732,7 @@ endpoints:
         - paypal
         - stripe
       meta:
-        - placeat
+        - voluptatem
     fileParameters:
       logo: null
     responses: []
@@ -932,7 +941,7 @@ endpoints:
         name: 'payment_merchants.*'
         description: 'A valid payment merchant type.'
         required: true
-        example: similique
+        example: exercitationem
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -942,7 +951,7 @@ endpoints:
         description: 'Additional metadata for the event.'
         required: false
         example:
-          - dolores
+          - quam
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -952,7 +961,7 @@ endpoints:
         description: 'An array of extra user data fields.'
         required: false
         example:
-          - asperiores
+          - est
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -984,6 +993,15 @@ endpoints:
         enumValues: []
         exampleWasSpecified: true
         custom: []
+      meta.email_footnote:
+        name: meta.email_footnote
+        description: 'Any footnote message that will be added to ticket purchase email.'
+        required: false
+        example: 'Thanks for joining us'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        custom: []
     cleanBodyParameters:
       title: 'My Event'
       description: 'This is a great event'
@@ -1005,7 +1023,7 @@ endpoints:
         - paypal
         - stripe
       meta:
-        - dolores
+        - quam
     fileParameters:
       logo: null
     responses: []

@@ -102,6 +102,7 @@ class EventController extends Controller
    * @bodyParam meta.extra_user_data.*.name string required The name of the extra user data field. Example: Address
    * @bodyParam meta.extra_user_data.*.type string required The type of the extra user data field. Example: must be one of: text, long-text, integer, float
    * @bodyParam meta.extra_user_data.*.is_required boolean required Whether the extra user data field is required. Example: true
+   * @bodyParam meta.email_footnote string Any footnote message that will be added to ticket purchase email. Example: Thanks for joining us
    *
    * @bodyParam event_packages array An array of event packages.
    * @bodyParam event_packages.*.seat_section_id integer required The ID of the seat section.
@@ -170,6 +171,7 @@ class EventController extends Controller
    * @bodyParam meta.extra_user_data.*.name string required The name of the extra user data field. Example: Address
    * @bodyParam meta.extra_user_data.*.type string required The type of the extra user data field. Example: must be one of: text, long-text, integer, float
    * @bodyParam meta.extra_user_data.*.is_required boolean required Whether the extra user data field is required. Example: true
+   * @bodyParam meta.email_footnote string Any footnote message that will be added to ticket purchase email. Example: Thanks for joining us
    */
   public function update(Request $request, Event $event)
   {
@@ -178,11 +180,12 @@ class EventController extends Controller
     );
 
     $event
-      ->fill(
-        collect($data)
-          ->except('logo')
-          ->toArray()
-      )
+      ->fill([
+        ...collect($data)
+          ->except('logo', 'meta')
+          ->toArray(),
+        'meta' => [...$event->meta, ...$data['meta'] ?? []]
+      ])
       ->save();
 
     $this->uploadLogo($event, $request->logo);
