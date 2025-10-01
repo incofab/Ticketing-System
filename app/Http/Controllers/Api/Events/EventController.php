@@ -184,7 +184,7 @@ class EventController extends Controller
         ...collect($data)
           ->except('logo', 'meta')
           ->toArray(),
-        'meta' => [...$event->meta, ...$data['meta'] ?? []]
+        'meta' => [...$event->meta ?? [], ...$data['meta'] ?? []]
       ])
       ->save();
 
